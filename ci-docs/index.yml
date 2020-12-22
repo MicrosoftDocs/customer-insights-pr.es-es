@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Centro de ayuda de Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Encuentre artículos relevantes para comenzar con el contenido de ayuda.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407057"
+title: Documentación de Dynamics 365 Customer Insights
+summary: Encuentre recursos útiles para comenzar y aprender acerca de las características y capacidades de Customer Insights.
+landingContent:
+- title: Conocer Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: " Información general sobre Customer Insights"
+      url: overview.md
+    - text: Planes de versiones
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Obtener acceso al entorno
+      url: https://home.ci.ai.dynamics.com/
+- title: Comenzar con las informaciones de público
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Suscribirse para una prueba
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Novedades
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Documentación de informaciones de público
+      url: audience-insights/index.yml
+- title: Ponerse en contacto
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Unirse a la comunidad de Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Comparta sus ideas
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Notificar un problema
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Tutoriales de informaciones del público
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Crear un nuevo entorno
+      url: audience-insights/home.md
+    - text: Crear un perfil de cliente unificado
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Trabajar con la aplicación
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Exportar datos de informaciones del público
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar destinos de exportación
+      url: audience-insights/export-destinations.md
+    - text: Tarjetas de clientes en aplicaciones Dynamics 365
+      url: audience-insights/customer-card-add-in.md
+    - text: Conector de Power BI
+      url: audience-insights/export-power-bi.md
+- title: Administrar informaciones del público
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: audience-insights/system.md
+    - text: Definir los permisos de usuario
+      url: audience-insights/permissions.md
+    - text: Administrar varios entornos
+      url: audience-insights/manage-environments.md
+- title: Acerca de las informaciones de involucración (versión preliminar)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Información general sobre capacidad
+      url: engagement-insights/overview.md
+    - text: Conceptos y términos
+      url: engagement-insights/glossary.md
+    - text: Tareas iniciales
+      url: engagement-insights/get-started.md
+- title: Informes de información de involucración (versión preliminar)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ver informes
+      url: engagement-insights/view-reports.md
+    - text: Crear informes personalizados
+      url: engagement-insights/custom-reports.md
+    - text: Ver informe de perfiles unificados
+      url: engagement-insights/profile-reports.md
+- title: Eventos de información de involucración (versión preliminar)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear eventos refinados
+      url: engagement-insights/refined-events.md
+    - text: Exportar eventos
+      url: engagement-insights/export-events.md
+    - text: Eliminar y exportar datos personales
+      url: engagement-insights/delete-export-personal-data.md
