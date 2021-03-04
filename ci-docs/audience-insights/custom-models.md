@@ -4,16 +4,16 @@ description: Trabaje con modelos personalizados de Azure Machine Learning en Dyn
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668924"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267255"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -46,15 +46,15 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 
 1. Elija el servicio web Machine Learning Studio (clásico) o la canalización de Azure Machine Learning en el desplegable del **Servicio web que contiene su modelo**. A continuación, seleccione **Siguiente**.
    - Aprender más acerca de [publicar un servicio web en Machine Learning Studio (clásico)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Aprender más acerca de [publicar una canalización en Azure Machine Learning usando el diseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o el [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Su canalización debe publicarse en un [punto de conexión de canalización](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Aprender más acerca de [publicar una canalización en Azure Machine Learning usando el diseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o el [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Su canalización debe publicarse en un [punto de conexión de canalización](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada de servicio web**, seleccione **Entidad** correspondiente de información de público y seleccione **Siguiente**.
+   > [!NOTE]
+   > El flujo de trabajo del modelo personalizado aplicará heurística para asignar los campos de entrada del servicio web a los atributos de la entidad según el nombre y el tipo de datos del campo. Verá un error si un campo de servicio web no se puede asignar a una entidad.
 
    > [!div class="mx-imgBorder"]
    > ![Configurar un flujo de trabajo](media/intelligence-screen2-updated.png "Configurar un flujo de trabajo")
-
+   
 1. En el paso **Parámetros de salida del modelo**, establezca las siguientes propiedades:
    - Machine Learning Studio (clásico)
       1. Introduzca la salida **Nombre de la entidad** a la que desea que fluyan los resultados de salida del servicio web.
@@ -112,3 +112,6 @@ Su flujo de trabajo también se ejecuta automáticamente con cada actualización
 1. Seleccione **Eliminar** y confirme la eliminación.
 
 Su flujo de trabajo será eliminado. La [entidad](entities.md) que se creó cuando creó el flujo de trabajo persiste y se puede ver desde la página **Entidades**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

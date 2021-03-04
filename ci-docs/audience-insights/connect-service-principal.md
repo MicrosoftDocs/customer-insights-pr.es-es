@@ -1,20 +1,20 @@
 ---
 title: Conectarse a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio
 description: Use una entidad de servicio de Azure para que la información de público se conecte a su propio lago de datos al adjuntarlo a la información de público.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644109"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267743"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectarse a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure para obtener información de público
 
@@ -22,7 +22,9 @@ Las herramientas automatizadas que utilizan los servicios de Azure siempre deben
 
 Puede utilizar la entidad de servicio para [agregar o editar una carpeta de Common Data Model como origen de datos](connect-common-data-model.md) o [crear un entorno nuevo o actualizar uno existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Necesita permisos de administrador para su suscripción de Azure para crear la entidad de servicio.
+> [!IMPORTANT]
+> - La cuenta de almacenamiento de Azure Data Lake Gen2 que pretende usar la entidad de servicio debe tener habilitado el [Espacio de nombres jerárquico (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Necesita permisos de administrador para su suscripción de Azure para crear la entidad de servicio.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Crear una entidad de servicio de Azure para información de público
 
@@ -83,7 +85,7 @@ Adjunte una cuenta de almacenamiento de Azure Data Lake en la información de p�
 
 Siga los pasos a continuación para proporcionar la información requerida sobre el enfoque seleccionado.
 
-### <a name="resounce-based-storage-account-connection"></a>Conexión de cuenta de almacenamiento basada en recursos
+### <a name="resource-based-storage-account-connection"></a>Conexión de cuenta de almacenamiento basada en recursos
 
 1. Vaya al [Portal de administración de Azure](https://portal.azure.com), inicie sesión en su suscripción y abra la cuenta de almacenamiento.
 
@@ -108,7 +110,8 @@ Siga los pasos a continuación para proporcionar la información requerida sobre
 1. Revise la **Suscripción**, el **Grupo de recursos** y el **Nombre** de la cuenta de almacenamiento para asegurarse de seleccionar los valores correctos en la información de público.
 
 1. En la información de público, elija los valores o los campos correspondientes al adjuntar la cuenta de almacenamiento.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Introduzca el valor de id. de recurso de la cuenta de almacenamiento.":::
    
 1. Continúe con los pasos restantes en la información de público para adjuntar la cuenta de almacenamiento.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 09/28/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b7e834f5f2fd1328563139675d7f850008348734
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407039"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268569"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para fuentes de datos basadas en Power Query
 
@@ -54,3 +54,6 @@ Las informaciones de público permiten la actualización incremental de las fuen
    - **Buscar actualizaciones cada**: Especifique cuánto durará el periodo de tiempo de la actualización incremental.
 
 1. Seleccione **Guardar** para completar la creación del origen de datos. La actualización de datos inicial será una actualización completa. Posteriormente, la actualización incremental de datos se producirá como se configuró en el paso anterior.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

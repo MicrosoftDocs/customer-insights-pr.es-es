@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667250"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267453"
 ---
 # <a name="customer-activities"></a>Actividades del cliente
 
@@ -44,13 +44,13 @@ Sus orígenes de datos incluyen entidades con datos transaccionales y de activid
 
 1. En la sección **Configurar relación**, configure los detalles que se utilizarán para conectar los datos de actividad a su cliente correspondiente.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definir la relación de entidad](media/activities-entities-define.png "Definir la relación de entidad")
-
     - **Campo de entidad de actividad**: seleccione el campo en su entidad Actividad que se utilizará para establecer una relación con otra entidad.
     - **Entidad de cliente**: seleccione la entidad de cliente origen correspondiente con la que estará relacionada su entidad de actividad. Puede relacionarse solo con aquellas entidades de clientes de origen que se utilizan en el proceso de unificación de datos.
     - **Campo de entidad de cliente**: este campo muestra la clave principal de la entidad del cliente de origen seleccionada en el proceso de asignación. Este campo de clave principal en la entidad del cliente de origen se utiliza para establecer una relación con la entidad de actividad.
     - **Nombre**: si ya existe una relación entre esta entidad de actividad y la entidad de cliente de origen seleccionada, el nombre de la relación estará en modo de solo lectura. Si no existe tal relación, se creará una nueva relación con el nombre proporcionado aquí.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definir la relación de entidad](media/activities-entities-define.png "Definir la relación de entidad")
 
 1. Seleccione **Guardar** para aplicar los cambios.
 
@@ -82,3 +82,6 @@ Sus orígenes de datos incluyen entidades con datos transaccionales y de activid
 3. Seleccione el icono **Eliminar**.
 
 4. Confirme la eliminación.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

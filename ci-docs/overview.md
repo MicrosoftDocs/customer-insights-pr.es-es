@@ -1,28 +1,36 @@
 ---
 title: Información general del producto
 author: m-hartmann
-description: Obtenga una descripción general de Dynamics 365 Customer Insights y sus capacidades.
+description: Obtenga una descripción general de Dynamics 365 Customer Insights y sus funcionalidades.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407058"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476970"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Información general de Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights es parte de la plataforma de datos del cliente (CDP) de Microsoft que ayuda a ofrecer experiencias personalizadas al cliente. Unifique los datos de sus clientes de toda la gama de orígenes para obtener una vista única de los clientes. 
+Dynamics 365 Customer Insights es parte de la plataforma de datos del cliente (CDP) de Microsoft que ayuda a ofrecer experiencias personalizadas al cliente. Las funcionalidades de la plataforma brindan información sobre quiénes son sus clientes y cómo interactúan con su plataforma. Unifique los datos de sus clientes de múltiples orígenes para obtener una vista única de los clientes.
 
-Transforme su organización en una empresa centrada en el cliente donde los profesionales de marketing, ventas y servicios tengan los conocimientos que necesitan para personalizar las experiencias. Desarrolle un conocimiento más profundo de sus clientes. Conecte los datos de varias fuentes transaccionales, de comportamiento y de observación para crear un visión global de los clientes. Vea resultados más rápido con un CDP diseñado para brindar información sobre la que se puede actuar. 
 
-Obtenga información lista para usar con plantillas de inicio rápido. Cree, pruebe e implemente rápidamente modelos personalizados de AI/ML utilizando soluciones de análisis a escala. Active información en tiempo real para impulsar acciones. Mantenga un control total sobre los datos de sus clientes para garantizar el más alto nivel de gobernanza y cumplimiento de los datos. 
+- Las [informaciones de público](audience-insights/overview.md) le ayudan a transformar su negocio en una organización centrada en el cliente. Los profesionales de marketing, ventas y servicios tienen la información que necesitan para personalizar las experiencias. Conecte datos desde fuentes transaccionales, de comportamiento y de observación para crear una vista de cliente de 360 grados. Vea resultados más rápido con un CDP diseñado para brindar información sobre la que se puede actuar. 
 
-Hay dos capacidades principales: 
-
-- [Conclusiones del público](audience-insights/overview.md)
-- [Informaciones de involucración (versión preliminar)](engagement-insights/index.yml)
+- La [información sobre participación (versión preliminar)](engagement-insights/index.yml) le permite comprender de forma interactiva cómo sus clientes utilizan sus servicios y productos, tanto de forma individual como integral, en sitios web, aplicaciones móviles y productos conectados. Combine análisis de comportamiento con datos transaccionales, demográficos, de encuestas y de otro tipo desde Microsoft Dynamics 365 Customer Insights. Mantenga un control total sobre los datos de sus clientes para garantizar el más alto nivel de gobernanza y cumplimiento de los datos.
  
+## <a name="choose-a-capability"></a>Elegir una funcionalidad
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Página de información del cliente que le permite navegar a las informaciones de público o la información sobre participación.":::
+
+Para elegir una funcionalidad
+
+1. En el panel de navegación, seleccione **Todas las aplicaciones** para abrir la ventana **Elija su enfoque**.
+1. Seleccione **Ir ahora** para ir hasta la funcionalidad de su elección.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

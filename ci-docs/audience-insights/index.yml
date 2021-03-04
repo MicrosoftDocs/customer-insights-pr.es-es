@@ -6,16 +6,16 @@ metadata:
   description: Centro de ayuda con vínculos clave a informaciones de público.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4407040"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745742"
 landingContent:
 - title: Acerca de las informaciones de público
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Sitio de la comunidad
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Ingerir orígenes de datos
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Agregar orígenes de datos
-      url: data-sources.md
-    - text: Actualización incremental
-      url: incremental-refresh-data-sources.md
-    - text: Entender entidades
-      url: entities.md
 - title: Unificar datos
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Asignar
-      url: map-entities.md
-    - text: Coincidir
-      url: match-entities.md
-    - text: Fusionar mediante combinación
-      url: merge-entities.md
-- title: Restringir perfiles de clientes
+    - text: Información general de los orígenes de datos
+      url: data-sources.md
+    - text: Descripción general de la unificación
+      url: data-unification.md
+    - text: Entender entidades
+      url: entities.md
+- title: Enriquecer y refinar datos
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Enriquecer perfiles de clientes
+      url: enrichment-hub.md
     - text: Configurar relaciones
       url: relationships.md
     - text: Enumerar actividades del cliente
       url: activities.md
-    - text: Traer sus propios modelos de aprendizaje automático
-      url: custom-models.md
+- title: Obtener información
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear segmentos
+      url: segments.md
+    - text: Crear medidas
+      url: measures.md
+    - text: Completar datos con predicciones
+      url: predictions.md
 - title: Exportar datos de clientes
   linkLists:
   - linkListType: how-to-guide

@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643704"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269995"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Conector para Administrador de anuncios de Facebook (vista previa)
 
@@ -62,7 +62,16 @@ Exportar segmentos de perfiles de clientes unificados a Administrador de anuncio
 
 Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Limitaciones conocidas
+
+- Hasta 10 millones de perfiles de cliente por exportación al administrador de Facebook Ads 
+- La exportación al administrador de Facebook Ads está limitada a segmentos.
+- La exportación de segmentos con un total de 10 millón de perfiles puede tardar hasta 90 horas en completarse.
+
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 
 Cuando habilita Dynamics 365 Customer Insights para transmitir datos al Administrador de anuncios de Facebook, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluidos los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que los anuncios de Facebook cumplan con las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Su administrador de Dynamics 365 Customer Insights puede quitar este destino de exportación en cualquier momento para dejar de usar esta funcionalidad.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

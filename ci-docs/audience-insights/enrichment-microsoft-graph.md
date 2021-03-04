@@ -1,20 +1,20 @@
 ---
 title: Enriquecer los perfiles de los clientes con Microsoft Graph
 description: Utilice datos de propiedad de Microsoft Graph para enriquecer los datos de sus clientes con afinidades de marca e interés.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407016"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269351"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquezca los perfiles de los clientes con afinidades de marca e interés (versión preliminar)
 
@@ -35,16 +35,21 @@ Utilizamos los datos de búsqueda en línea de Microsoft Graph para encontrar af
 
 [Más información acerca de Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Puntuación y confianza de afinidad
+## <a name="affinity-level-and-score"></a>Nivel de afinidad y puntuación
 
-La **puntuación de afinidad** se calcula sobre una escala de 100 puntos, donde 100 representa el segmento que tiene la mayor afinidad por una marca o interés.
+En cada perfil de cliente enriquecido, proporcionamos dos valores relacionados: nivel de afinidad y puntuación de afinidad. Estos valores le ayudan a determinar el nivel de afinidad para el segmento demográfico de ese perfil, para una marca o interés, en comparación con otros segmentos demográficos.
 
-La **confianza de afinidad** también se calcula en una escala de 100 puntos. Indica el nivel de confianza del sistema para el que tiene afinidad un segmento para la marca o el interés. El nivel de confianza se basa en el tamaño del segmento y la granularidad del segmento. El tamaño del segmento está determinado por la cantidad de datos que tenemos para un segmento dado. La granularidad del segmento se determina por la cantidad de atributos (edad, sexo, ubicación) que están disponibles en un perfil.
+El *nivel de afinidad* consta de cuatro niveles y la *puntuación de afinidad* se calcula en una escala de 100 puntos que se asigna a los niveles de afinidad.
 
-No normalizamos las puntuaciones para su conjunto de datos. En consecuencia, es posible que no vea todos los posibles valores de puntuación de afinidad para su conjunto de datos. Por ejemplo, puede que no haya un perfil de cliente enriquecido con una puntuación de afinidad de 100 en sus datos. Eso es posible si no existen clientes en el segmento demográfico que obtuvieron una puntuación de 100 para una determinada marca o interés.
 
-> [!TIP]
-> Cuando [crea segmentos](segments.md) utilizando puntuaciones de afinidad, revise la distribución de puntuaciones de afinidad para su conjunto de datos antes de decidir los umbrales de puntuación apropiados. Por ejemplo, una puntuación de afinidad de 10 puede considerarse significativa en un conjunto de datos que tiene una puntuación de afinidad más alta de solo 25 para una marca o interés determinado.
+|Nivel de afinidad |Puntuación de afinidad  |
+|---------|---------|
+|Muy alto     | 85-100       |
+|Alto     | 70-84        |
+|Medio     | 35-69        |
+|Bajo     | 1-34        |
+
+Dependiendo de la granularidad que desee para medir la afinidad, puede utilizar el nivel de afinidad o la puntuación. La puntuación de afinidad le brinda un control más preciso.
 
 ## <a name="supported-countriesregions"></a>Países/regiones admitidos
 
@@ -54,17 +59,13 @@ Para seleccionar un país, abra **Enriquecimiento de marcas** o **Enriquecimient
 
 ### <a name="implications-related-to-country-selection"></a>Implicaciones relacionadas con la selección de países
 
-- Cuando esté [eligiendo sus propias marcas](#define-your-brands-or-interests), proporcionaremos sugerencias basadas en el país/región seleccionado.
+- A la hora de [elegir sus propias marcas](#define-your-brands-or-interests), el sistema proporciona sugerencias basadas en el país o región seleccionados.
 
-- Al [elegir una industria](#define-your-brands-or-interests), identificaremos las marcas o intereses más relevantes en función del país/región seleccionado.
+- Cuando [elige un sector](#define-your-brands-or-interests), obtendrá las marcas o los intereses más relevantes según el país o la región seleccionados.
 
-- Al [asignar sus campos](#map-your-fields), si el campo País/Región no está asignado, usaremos los datos de Microsoft Graph del país/región seleccionado para enriquecer los perfiles de sus clientes. También usaremos esa selección para enriquecer los perfiles de sus clientes que no tienen datos de país/región disponibles.
-
-- Cuando esté [enriqueciendo perfiles](#refresh-enrichment), enriqueceremos todos los perfiles de clientes para los que tenemos datos de Microsoft Graph disponibles para las marcas e intereses seleccionados, incluidos los perfiles que no se encuentran en el país/región seleccionado. Por ejemplo, si seleccionó Alemania, enriqueceremos los perfiles ubicados en los Estados Unidos si tenemos datos de Microsoft Graph disponibles para las marcas e intereses seleccionados en los Estados Unidos.
+- Cuando [enriquezca perfiles](#refresh-enrichment), enriqueceremos todos los perfiles de cliente para los que obtenemos datos para las marcas e intereses seleccionados. Incluyendo perfiles que no se encuentran en el país o región seleccionados. Por ejemplo, si seleccionó Alemania, enriqueceremos los perfiles ubicados en los Estados Unidos si tenemos datos de Microsoft Graph disponibles para las marcas e intereses seleccionados en los Estados Unidos.
 
 ## <a name="configure-enrichment"></a>Configurar enriquecimiento
-
-La configuración del enriquecimiento de marcas o intereses consta de dos pasos:
 
 ### <a name="define-your-brands-or-interests"></a>Defina sus marcas o intereses
 
@@ -75,9 +76,19 @@ Seleccione una de las siguientes opciones:
 
 Para agregar una marca o interés, especifíquelo en el área de entrada para obtener sugerencias basadas en términos coincidentes. Si no enumeramos una marca o interés que está buscando, envíenos sus comentarios utilizando el vínculo **Sugerir**.
 
+### <a name="review-enrichment-preferences"></a>Revisar la preferencias de enriquecimiento
+
+Revise sus preferencias de enriquecimiento predeterminadas y actualícelas según sea necesario.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de pantalla de la ventana de preferencias de enriquecimiento.":::
+
+### <a name="select-entity-to-enrich"></a>Seleccione la entidad que desea enriquecer
+
+Seleccione **Enriquecer entidad** y elija el conjunto de datos que desee enriquecer con datos empresariales de Microsoft Graph. Puede seleccionar la entidad Cliente para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
+
 ### <a name="map-your-fields"></a>Asignar sus campos
 
-Asigne campos desde su entidad de cliente unificada a al menos dos atributos para definir el segmento demográfico que desea que usemos para enriquecer los datos de sus clientes. Seleccione **Editar** para definir la asignación de campos y seleccione **Aplicar** cuando termine. Seleccione **Guardar** para completar la asignación de campos.
+Asigne campos de su entidad de cliente unificada para definir el segmento demográfico que desea que utilice el sistema para enriquecer los datos de sus clientes. Mapa del país o región y al menos los atributos de fecha de nacimiento o género. Además, debe asignar al menos una de las ciudades (y estado o provincia) o códigos postales. Seleccione **Editar** para definir la asignación de campos y seleccione **Aplicar** cuando termine. Seleccione **Guardar** para completar la asignación de campos.
 
 Se admiten los siguientes formatos y valores, los valores no distinguen entre mayúsculas y minúsculas:
 
@@ -120,3 +131,6 @@ Las afinidades de marcas e intereses también se pueden ver en tarjetas de clien
 ## <a name="next-steps"></a>Pasos siguientes
 
 Utilice los datos enriquecidos de sus clientes. Cree [Segmentos](segments.md), [Medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

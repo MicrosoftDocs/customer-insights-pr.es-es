@@ -1,20 +1,20 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644154"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270133"
 ---
 # <a name="manage-environments"></a>Administrar entornos
 
@@ -46,9 +46,9 @@ Hay dos formas de crear un entorno nuevo. Puede especificar una configuración c
 
 Para crear un entorno:
 
-1. Seleccione el símbolo **Configuración** en el encabezado de la aplicación.
+1. Seleccione el selector **Entorno** en el encabezado de la aplicación.
 
-1. Seleccione **Nuevo entorno**.
+1. Seleccione **Nuevo**.
 
    > [!div class="mx-imgBorder"]
    > ![Configuración del entorno](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Para crear un entorno:
 
    - Para la opción de Azure Data Lake Storage Gen2, puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). El nombre del **Contenedor** no se puede cambiar y será "customerinsights".
    
-   - Si quiere usar [predicciones](predictions.md), introduzca la URL de instancia de Common Data Service en el campo **Dirección del servidor**, en **Usar predicciones**.
+   - Si quiere usar [predicciones](predictions.md) o configurar el intercambio de datos con aplicaciones y soluciones basadas en Microsoft Dataverse, proporcione la URL del entorno Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
+
+     > [!NOTE]
+     > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
+     > - La [predicción de valores perdidos en una entidad](predictions.md) actualmente no se admite cuando habilita el uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Se crearán archivos de datos y archivos model.json, y se agregarán a las subcarpetas correspondientes según el proceso que se ejecute.
 
@@ -86,7 +93,7 @@ Para crear un entorno:
 Se copian los siguientes valores de configuración:
 
 - Configuración de características
-- Orígenes de datos ingeridos/importados
+- Fuentes de datos ingeridas e importadas
 - Configuración de unificación de datos (asignación, coincidencia, combinación)
 - Segmentos
 - Medidas
@@ -120,11 +127,11 @@ Cuando se haya completado la unificación de datos, vaya a **Medidas** y **Segme
 
 Puede editar algunos de los detalles de los entornos existentes.
 
-1. Vaya a **Administración** > **Sistema** > **Acerca de**.
+1.  Seleccione el selector **Entorno** en el encabezado de la aplicación.
 
-2. Seleccione **Editar**.
+2.  Seleccione el icono de **Editar**.
 
-3. Puede actualizar **Nombre para mostrar** del entorno, pero no puede cambiar la **Región** o el **Tipo**.
+3. En el cuadro **Editar entorno**, puede actualizar la opción **Nombre para mostrar** del entorno, pero no puede cambiar **Región** o **Tipo**.
 
 4. Si un entorno está configurado para almacenar datos en Azure Data Lake Storage Gen2, puede actualizar la **Clave de cuenta**. Sin embargo, no puede cambiar el **Nombre de cuenta** o el nombre de **Contenedor**.
 
@@ -132,19 +139,27 @@ Puede editar algunos de los detalles de los entornos existentes.
 
 ## <a name="reset-an-existing-environment"></a>Restablecimiento de un entorno existente
 
-Puede restablecer un entorno a un estado vacío si desea eliminar todas las configuraciones y eliminar los datos ingeridos.
+Como administrador, puede restablecer un entorno a un estado vacío si desea eliminar todas las configuraciones y eliminar los datos ingeridos.
 
-1.  Vaya a **Administración** > **Sistema** > **Acerca de**.
+1.  Seleccione el selector **Entorno** en el encabezado de la aplicación. 
 
-2.  Seleccione **Restablecer**. 
+2.  Seleccione el entorno que desee restablecer y seleccione los puntos suspensivos **...**. 
 
-3.  Para confirmar la eliminación, introduzca el nombre del entorno y seleccione **Restablecer**.
+3. Elija la opción **Restablecer**. 
+
+4.  Para confirmar la eliminación, introduzca el nombre del entorno y seleccione **Restablecer**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Eliminar un entorno existente (disponible solo para administradores)
+
+Como administrador, puede eliminar un entorno que administre.
+
+1.  Seleccione el selector **Entorno** en el encabezado de la aplicación.
+
+2.  Seleccione el entorno que desee restablecer y seleccione los puntos suspensivos **...**. 
+
+3. Elija la opción **Eliminar**. 
+
+4.  Para confirmar la eliminación, introduzca el nombre del entorno y seleccione **Eliminar**.
 
 
-## <a name="delete-an-existing-environment"></a>Eliminar un entorno existente
-
-1. Vaya a **Administración** > **Sistema** > **Acerca de**.
-
-1. Seleccione **Eliminar**.
-
-1. Para confirmar la eliminación, introduzca el nombre del entorno y seleccione **Eliminar**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

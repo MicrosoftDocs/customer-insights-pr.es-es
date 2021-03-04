@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689196"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270301"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingesta de datos en tiempo real (vista previa)
 
@@ -44,7 +44,7 @@ Debido a que las operaciones en tiempo real tienen lugar después de la unificac
 
 ## <a name="real-time-creation-of-activities"></a>Creación de actividades en tiempo real
 
-La API en tiempo real le permite publicar una nueva actividad desde su sistema de origen (un registro de origen individual) en un perfil de cliente unificado. La nueva actividad estará disponible como actividad unificada en la escala de tiempo de ese perfil de cliente unificado en cuestión de segundos. Puede ver la línea de tiempo en la vista de la tarjeta del cliente o cualquier otra integración de línea de tiempo que haya configurado.
+La API en tiempo real le permite publicar una nueva actividad desde su sistema de origen (un registro de origen individual) en un perfil de cliente unificado. La nueva actividad estará disponible como una actividad unificada en la línea de tiempo de ese perfil de cliente unificado en cuestión de segundos. Puede ver la línea de tiempo en la vista de la tarjeta del cliente o cualquier otra integración de línea de tiempo que haya configurado.
 
 > [!NOTE]
 >
@@ -83,6 +83,7 @@ Los detalles de esta API, incluidos los parámetros y las respuestas, se pueden 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendar el uso en tiempo real con telemetría
 
-Obtenga una descripción general del volumen de solicitudes a la API de tiempo real e información sobre los problemas que puede encontrar el sistema. Puede [acceder a la telemetría en tiempo real](system.md#api-usage-tab) desde **Administración** > **Sistema** > **Uso de API**. En la tabla **Operaciones**, las filas para las operaciones de la API que utilizan los métodos en tiempo real contienen un botón para ver el uso de la API en tiempo real. El botón se visualiza con un símbolo de binoculares. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.
+Obtenga una descripción general del volumen de solicitudes a la API de tiempo real e información sobre los problemas que puede encontrar el sistema. Puede [acceder a la telemetría en tiempo real](system.md#api-usage-tab). 
 
-Utilice el selector **Agrupar por** para elegir cómo presentar mejor sus interacciones en tiempo real en una línea de tiempo que va desde las últimas 24 horas hasta los últimos 30 días. Puede agrupar los datos por método de API, nombre calificado de entidad (entidad ingerida), creado por (origen del evento), resultado (éxito o error) o códigos de error. Los datos están disponibles como gráfico del historial y como tabla.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

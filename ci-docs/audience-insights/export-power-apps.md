@@ -1,20 +1,20 @@
 ---
 title: Conector de Power Apps
 description: Conectar con Power Apps y Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407006"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268937"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector de Microsoft Power Apps (vista previa)
 
@@ -31,7 +31,7 @@ Consulte la documentación de Power Apps para aprender a [agregar una conexión 
 Después de agregar Customer Insights como una conexión de datos, puede elegir las siguientes entidades en Power Apps:
 
 - Cliente: para utilizar datos del [perfil de cliente unificado](customer-profiles.md).
-- Actividad unificada del cliente: para mostrar la [escala de tiempo](activities.md) en la aplicación.
+- UnifiedActivity: para mostrar la [escala de tiempo de la actividad](activities.md) en la aplicación.
 
 ## <a name="limitations"></a>Limitaciones
 
@@ -72,3 +72,6 @@ Por ejemplo, agregue perfiles de cliente a un [control de galería](https://docs
 1. Para mostrar la escala de tiempo unificada para un cliente, agregue un elemento Galería y agregue la propiedad Items: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Ejemplo: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

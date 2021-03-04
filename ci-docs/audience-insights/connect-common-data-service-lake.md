@@ -4,17 +4,17 @@ description: Importar datos de un data lake administrado por Common Data Service
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643419"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267835"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Conéctese a los datos en un data lake administrado de Common Data Service
 
@@ -34,7 +34,10 @@ Los datos almacenados en servicios en línea como Azure Data Lake Storage pueden
 
 3. Seleccione **Conectar con Common Data Service** y, a continuación, seleccione **Siguiente**.
 
-4. Escriba un **Nombre** para el origen de datos y seleccione **Siguiente**.
+4. Escriba un **Nombre** para el origen de datos y seleccione **Siguiente**. Directrices de nomenclatura: 
+   - Empiece con una letra.
+   - Utilice solo letras y números. No se permiten caracteres especiales ni espacios.
+   - Utilice entre 3 y 64 caracteres.
 
 5. Especifique la **Dirección del servidor** de su organización de Common Data Service y seleccione **Iniciar sesión**.
 
@@ -65,3 +68,6 @@ Para conectarse a una instancia de Common Data Service distinta, puede [crear un
 3. Seleccione la opción **Editar** de la lista.
 
 4. Seleccione entidades adicionales de la lista de entidades disponibles y, a continuación, seleccione **Guardar**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

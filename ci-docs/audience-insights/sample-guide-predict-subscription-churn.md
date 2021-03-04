@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4654001"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269869"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de abandono de suscripción (versión preliminar)
 
@@ -46,10 +46,9 @@ Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importac
    - **DateOfBirth**: fecha
    - **CreatedOn**: fecha/hora/zona
 
-   [!div class="mx-imgBorder"]
-   ![Transformar DoB en Fecha](media/ecommerce-dob-date.PNG "transformar fecha de nacimiento a fecha")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar la fecha de nacimiento a fecha.":::
 
-1. En el campo 'Nombre' del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **eCommerceContacts**
+1. En el campo **Nombre** del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **eCommerceContacts**
 
 1. Guarde el origen de datos.
 
@@ -67,7 +66,7 @@ Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importac
    - **RewardsPoints**: número entero
    - **CreatedOn**: fecha/hora
 
-1. En el campo 'Nombre' del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **loyCustomers**.
+1. En el campo **Nombre** del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **loyCustomers**.
 
 1. Guarde el origen de datos.
 
@@ -90,7 +89,7 @@ Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importac
    - **Is_auto_renew**: verdadero/falso
    - **RecurringFrequencyInMonths**: número entero
 
-1. En el campo 'Nombre' del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **SubscriptionHistory**.
+1. En el campo **Nombre** del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **SubscriptionHistory**.
 
 1. Guarde el origen de datos.
 
@@ -230,3 +229,6 @@ Puede crear un nuevo segmento basado en la entidad creada por el modelo.
 Ahora tiene un segmento que se actualiza dinámicamente y que identifica a los clientes con alto riesgo de abandono para este negocio de suscripción.
 
 Para obtener más información, vea [Crear y administrar segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

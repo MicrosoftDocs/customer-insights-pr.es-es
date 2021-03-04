@@ -1,7 +1,7 @@
 ---
 title: Configuración del sistema en las informaciones de público
 description: Más información sobre la configuración del sistema en la capacidad de informaciones de público de Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407048"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267361"
 ---
 # <a name="system-configuration"></a>Configuración del sistema
 
-La página **Sistema** incluye cuatro pestañas: **Estado**, **Programación**, **Acerca de** y **General**.
+La página **Sistema** incluye las siguientes pestañas:
+- [Estado](#status-tab)
+- [Programación](#schedule-tab)
+- [Uso de API](#api-usage-tab)
+- [Acerca de](#about-tab)
+- [General](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Página del sistema](media/system-tabs.png "Página del sistema")
 
 ## <a name="status-tab"></a>Pestaña Estado
 
-La **pestaña Estado** le permite seguir el progreso de la ingesta de datos, exportaciones de datos y varios procesos importantes del producto. Revise la información de esta pestaña para asegurarse de que los procesos activos estén completos.
+La **Pestaña de estado** le permite realizar un seguimiento del progreso de la ingesta de datos, las exportaciones de datos y varios otros procesos de productos importantes. Revise la información de esta pestaña para asegurarse de que los procesos activos estén completos.
 
-Esta pestaña incluye tablas de estado para **Orígenes de datos**, **Procesos del sistema** y **Preparación de datos**. Cada tabla sigue el **Nombre** de la tarea y su entidad correspondiente, el **Estado** de su ejecución más reciente, y cuál fue la **Última actualización**.
+Esta pestaña incluye tablas con información del estado e información sobre el procesamiento para varios procesos. Cada tabla sigue el **Nombre** de la tarea y su entidad correspondiente, el **Estado** de su ejecución más reciente, y cuál fue la **Última actualización**.
 
 Vea los detalles de las últimas ejecuciones de las tareas seleccionando su nombre.
 
@@ -40,7 +45,7 @@ Existen seis tipos de estado para las tareas. Los siguientes tipos de estado tam
 - **Omitido:** La tarea se saltó. Uno o más de los procesos posteriores de los que depende esta tarea fallan o se omiten.
 - **Error:** El procesamiento de la tarea ha generado un error.
 - **Cancelado:** El procesamiento fue cancelado por el usuario antes de que terminara.
-- **En cola:** El procesamiento se pone en cola y comenzará una vez que se completen todas las tareas posteriores. Para obtener más información, consulte [Actualizar directivas](#refresh-policies).
+- **Puesto en cola**: el procesamiento está en cola y comenzará una vez que se completen todas las tareas anteriores. Para obtener más información, consulte [Actualizar directivas](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Directivas de actualización
 
@@ -89,4 +94,17 @@ Seleccione **Guardar** para confirmar las selecciones.
 
 ## <a name="api-usage-tab"></a>Pestaña de uso de API
 
-Busque detalles sobre el uso de la API en tiempo real y vea qué eventos ocurrieron en un intervalo de tiempo determinado. Para más información, consulte [Ingesta de datos en tiempo real](real-time-data-ingestion.md).
+Encuentre detalles sobre el uso de la API en tiempo real y vea qué eventos ocurrieron en un período de tiempo determinado. Elige el período de tiempo en el menú desplegable **Seleccionar un período de tiempo**. 
+
+El **Uso de API** contiene tres secciones: 
+- **Llamadas API**: un gráfico que visualiza el número agregado de llamadas API en el plazo de tiempo seleccionado.
+
+- **Transferencia de datos**: un gráfico que muestra la cantidad de datos que se transfirieron a través de la API en el período de tiempo seleccionado.
+
+-  **Operaciones**: una tabla con filas para cada operación de API disponible y detalles sobre el uso de las operaciones. Puede seleccionar un nombre de operación para ir a [la referencia de API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Las operaciones que utilizan la [ingesta de datos en tiempo real](real-time-data-ingestion.md) contienen un botón con un símbolo de binoculares para ver el uso de la API en tiempo real. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.   
+   Utilice el cuadro **Agrupar por** en el panel **Uso de API en tiempo real** para elegir la mejor forma de presentar sus interacciones en tiempo real. Puede agrupar los datos por método de API, nombre calificado de entidad (entidad ingerida), creado por (origen del evento), resultado (éxito o error) o códigos de error. Los datos están disponibles como gráfico del historial y como tabla.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

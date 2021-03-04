@@ -4,17 +4,17 @@ description: Asignar entidades para crear perfiles de cliente unificados.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407045"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267499"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -22,7 +22,7 @@ Después de completar la fase de asignación, está listo para hacer coincidir s
 
 ## <a name="specify-the-match-order"></a>Especifique el orden de coincidencia
 
-Vaya a **Unificar** > **Coincidencia** y seleccione **Establecer orden** para comenzar la fase de coincidencia.
+Vaya a **Datos** > **Unificar** > **Establecer coincidencia** y seleccione **Establecer orden** para iniciar la fase de coincidencia.
 
 Cada coincidencia unifica dos o más entidades en una sola entidad, mientras mantiene cada registro de cliente único. En el siguiente ejemplo, seleccionamos tres entidades: **ContactCSV: TestData** como entidad **Principal**, **WebAccountCSV: TestData** como **Entidad 2** y **CallRecordSmall: TestData** como **Entidad 3**. El diagrama sobre las selecciones ilustra cómo se ejecutará el orden de coincidencia.
 
@@ -136,7 +136,7 @@ Una vez que se identifica un registro desduplicado, ese registro se utilizará e
 
 1. La ejecución del proceso de coincidencia ahora agrupa los registros según las condiciones definidas en las reglas de desduplicación. Después de agrupar los registros, se aplica la política de combinación para identificar el registro ganador.
 
-1. Este registro ganador se pasa luego a la comparación entre entidades.
+1. Este registro elegido se pasa luego a la correspondencia entre entidades, junto con los registros no elegidos (por ejemplo, identificadores alternativos) para mejorar la calidad de la coincidencia.
 
 1. Las reglas de coincidencia personalizadas definidas para coincidir siempre y no coincidir nunca anulan las reglas de desduplicación. Si una regla de desduplicación identifica registros coincidentes y se establece una regla de coincidencia personalizada para no hacer coincidir nunca esos registros, estos dos registros no coincidirán.
 
@@ -157,6 +157,17 @@ El primer proceso de coincidencia da como resultado la creación de una entidad 
 
 > [!TIP]
 > Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
+
+## <a name="deduplication-output-as-an-entity"></a>Resultado de la desduplicación como entidad
+Además de la entidad maestra unificada creada como parte de la correspondencia entre entidades, el proceso de desduplicación también genera una nueva entidad para cada entidad a partir del orden de coincidencia para identificar los registros desduplicados. Estas entidades se pueden encontrar junto con **ConflationMatchPairs: CustomerInsights** en la sección **Sistema** en la página **Entidades**, con el nombre **Deduplication_Datasource_Entity**.
+
+Una entidad de resultado de la desduplicación contiene la siguiente información:
+- Identificadores y claves
+  - Campo de clave principal y su campo de identificadores alternativos. El campo de identificadores alternativos consta de todos los identificadores alternativos identificados para un registro.
+  - El campo Deduplication_GroupId muestra el grupo o clúster identificado dentro de una entidad que agrupa todos los registros similares según los campos de desduplicación especificados. Esto se utiliza para fines de procesamiento del sistema. Si no hay reglas de desduplicación manual especificadas y se aplican reglas de desduplicación definidas por el sistema, es posible que no encuentre este campo en la entidad de resultados de la desduplicación.
+  - Deduplication_WinnerId: este campo contiene el identificador del elemento elegido en los grupos o clústeres identificados. Si Deduplication_WinnerId es el mismo que el valor de la clave principal para un registro, significa que el registro es el elegido.
+- Campos utilizados para definir las reglas de desduplicación.
+- Los campos Regla y Puntuación indican cuál de las reglas de desduplicación se aplicó y la puntuación devuelta por el algoritmo de coincidencia.
 
 ## <a name="review-and-validate-your-matches"></a>Revisar y validar las coincidencias
 
@@ -200,6 +211,11 @@ Aumente la calidad reconfigurando algunos de sus parámetros de coincidencia:
   > [!div class="mx-imgBorder"]
   > ![Duplicar una regla](media/configure-data-duplicate-rule.png "Duplicar una regla")
 
+- **Desactivar una regla** es para conservar una regla de coincidencia y excluirla del proceso de coincidencia.
+
+  > [!div class="mx-imgBorder"]
+  > ![Desactivar una regla](media/configure-data-deactivate-rule.png "Desactivar una regla")
+
 - **Edite las reglas** seleccionando el símbolo **Editar**. Puede aplicar los cambios siguientes:
 
   - Cambiar atributos para una condición: seleccione nuevos atributos en la fila de condición específica.
@@ -229,6 +245,8 @@ Puede especificar condiciones que determinados registros siempre o nunca deben c
     - Entity2Key: 34567
 
    El mismo archivo de plantilla puede especificar registros de coincidencia personalizados de múltiples entidades.
+   
+   Si desea especificar una coincidencia personalizada para la desduplicación en una entidad, proporcione la misma entidad como Entity1 y Entity2 y configure los diferentes valores de clave principal.
 
 5. Después de agregar todas las anulaciones que desea aplicar, guarde el archivo de plantilla.
 
@@ -250,3 +268,6 @@ Puede especificar condiciones que determinados registros siempre o nunca deben c
 ## <a name="next-step"></a>Paso siguiente
 
 Después de completar el proceso de coincidencia para al menos un par de coincidencias, puede resolver posibles contradicciones en sus datos en el tema [**Combinación**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

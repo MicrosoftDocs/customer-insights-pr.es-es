@@ -5,16 +5,16 @@ ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 03299610fd41a7e142e3c9723fad56ce7f90e083
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407037"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267973"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot de Teams para Dynamics 365 Customer Insights (versión preliminar)
 
@@ -52,3 +52,6 @@ El bot proporciona capacidades de búsqueda para perfiles de clientes unificados
 - Si su organización mantiene varios entornos de Customer Insights en la misma organización, puede introducir **switchinstance** para elegir el entorno al que desea conectar el bot.
 
 - Escriba **ayuda** para ver una lista de comandos disponibles para el bot.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

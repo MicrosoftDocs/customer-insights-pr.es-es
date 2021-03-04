@@ -1,7 +1,7 @@
 ---
 title: Buscar y filtrar perfiles de clientes
 description: Encuentre rápidamente información sobre perfiles de clientes unificados y filtre los atributos especificados.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407051"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270087"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfiles de clientes: índice de búsqueda y filtro
 
@@ -28,14 +28,6 @@ El resultado de unificar los datos de sus clientes es una entidad Perfil del Cli
 Si es la primera vez que define atributos de búsqueda como administrador, primero debe definir los campos indexados. Le sugerimos que elija todos los atributos por los cuales los usuarios pueden buscar y filtrar clientes en la página **Clientes**. Solo puede especificar atributos que existan en la entidad Perfil del cliente que creó durante el proceso de unificación de datos.
 
 1. Abra la página **Clientes** y seleccione **Índice de Buscar y filtrar**.
-
-> [!NOTE]
-> Creamos una configuración de índice de búsqueda predeterminada en los atributos disponibles en la entidad Cliente a partir de los siguientes tipos semánticos tal como se definen en la página Mapa.
-> - Nombre de pila, Apellidos, Segundo nombre, Nombre de la persona
-> - Nombre de la organización
-> - Dirección de correo electrónico
-> - Número de teléfono
-> - Información de la ubicación
 
 2. Seleccione **+Agregar** para especificar los campos indexados.
 
@@ -65,3 +57,10 @@ El menú **Filtrar** de la página **Clientes** puede incluir un número variabl
 2. Seleccione **Guardar** para aplicar los cambios.
 
 3. Seleccione **Ejecutar** una vez que esté listo para aplicar su configuración.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Vaya a la página **Clientes** para buscar perfiles de clientes o utilice los campos indexados para ver un subconjunto de todos los perfiles de clientes.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

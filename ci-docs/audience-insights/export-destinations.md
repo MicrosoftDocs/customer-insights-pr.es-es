@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643884"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477154"
 ---
-# <a name="export-destinations-preview"></a>Destinos de exportación (vista previa)
+# <a name="export-destinations-preview-overview"></a>Descripción general de los destinos de exportación (versión preliminar)
 
 La página **Destinos de exportación** muestra todas las ubicaciones que ha configurado como destino de exportación de datos. También puede agregar nuevos destinos para exportación. Además, muestra las opciones de exportación disponibles actualmente. Obtenga información general rápida, una descripción y descubra lo que puede hacer con cada opción de extensibilidad. Exporte perfiles, medidas y segmentos unificados a aplicaciones compatibles relevantes para su negocio.
 
@@ -27,10 +27,13 @@ Vaya a **Administración** > **Exportar destinos** para encontrar las siguientes
 - [Power Automateconector](export-power-automate.md)
 - [Power Appsconector](export-power-apps.md)
 - [Power BIconector](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Dynamics 365 for Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob Storage](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Conector LiveRamp &reg;](export-liveramp.md)
 - [Bot para Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Para quitar un destino de exportación, empiece desde la página principal **Exp
 2. Seleccione **Quitar** del menú desplegable.
 
 3. Confirme la eliminación seleccionando **Quitar** en la pantalla de confirmación.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

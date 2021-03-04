@@ -1,20 +1,20 @@
 ---
 title: Exportar datos de Customer Insights a Dynamics 365 Marketing
 description: Aprenda a configurar la conexión a Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643794"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269075"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Conector para Dynamics 365 Marketing (versión preliminar)
 
@@ -24,7 +24,10 @@ Use los [segmentos](segments.md) creados para generar campañas y contactar con 
 
 ## <a name="prerequisite"></a>Requisito previo
 
-Registros de contactos [de Common Data Service ingeridos en Dynamics 365 Marketing](connect-power-query.md).
+- Los registros de contacto deben estar presentes en Dynamics 365 Marketing antes de poder exportar un segmento de Customer Insights a Marketing. Más información sobre cómo ingerir contactos en [Dynamics 365 Marketing usando Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > La exportación de segmentos de las informaciones de público a Marketing no creará nuevos registros de contactos en las instancias de Marketing. Los registros de contacto de Marketing deben ingerirse en las informaciones de público y usarse como origen de datos. También deben incluirse en la entidad Cliente unificada para asignar los identificadores de cliente a los identificadores de contacto antes de que se puedan exportar los segmentos.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurar el conector para Marketing
 
@@ -49,3 +52,6 @@ Registros de contactos [de Common Data Service ingeridos en Dynamics 365 Marketi
 ## <a name="export-the-data"></a>Exportar los datos
 
 Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

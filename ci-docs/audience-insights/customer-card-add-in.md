@@ -1,7 +1,7 @@
 ---
 title: Instalar y configurar el complemento de tarjeta de cliente
 description: Instale y configure el complemento de tarjeta de cliente para Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644064"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268065"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
@@ -92,10 +92,26 @@ La solución puede tardar un tiempo en instalarse en su entorno.
 
 1. En el cuadro de diálogo **Propiedades de campo**, desactive la casilla **Mostrar etiqueta en el formulario**.
 
-1. Selecciona la opción **Web** para el control. Para el control de enriquecimiento, seleccione qué tipo de enriquecimiento desea mostrar configurando el campo **enrichmentType**. Debe agregar un control de enriquecimiento separado para cada tipo de enriquecimiento.
+1. Selecciona la opción **Web** para el control. Para el control de enriquecimiento, seleccione qué tipo de enriquecimiento desea mostrar configurando el campo **enrichmentType**. Agregue un control de enriquecimiento independiente para cada tipo de enriquecimiento.
 
 1. Seleccione **Guardar** y **Publicar** para publicar el formulario de contacto actualizado.
 
 1. Vaya al formulario de contacto publicado. Verá el control recién agregado. Es posible que tenga que iniciar sesión la primera vez que lo use.
 
 1. Para personalizar lo que desea mostrar en el control personalizado, seleccione el botón de edición en la esquina superior derecha.
+
+## <a name="upgrade-customer-card-add-in"></a>Actualizar el complemento de tarjeta de cliente
+El complemento de tarjeta de cliente no se actualiza automáticamente. Para actualizar a la última versión, siga este procedimiento en la aplicación Dynamics 365 que tiene instalado el complemento.
+
+1. En la aplicación Dynamics 365, vaya a **Configuración** > **Personalización** y seleccione **Soluciones**.
+
+1. En la tabla de complementos, busque **CustomerInsightsCustomerCard** y seleccione la fila.
+
+1. Seleccione la opción **Aplicar actualización de la solución** en la barra de acciones.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizar la solución en el área de personalización de las aplicaciones de Dynamics 365":::
+
+1. Después de iniciar el proceso de actualización, verá un indicador de carga hasta que se complete la actualización. Si no hay una versión más reciente, la actualización mostrará un mensaje de error.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

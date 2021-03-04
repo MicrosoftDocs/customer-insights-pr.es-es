@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643974"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269719"
 ---
-# <a name="overview-about-data-sources"></a>Descripción general sobre orígenes de datos
+# <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -46,10 +46,10 @@ Podrá ver el nombre de cada origen de datos ingeridos, su estado y la última v
 |---------|---------|
 |Operación correcta   |El origen de datos se ingirió correctamente si se menciona una hora en la columna **Actualizado**.
 |Sin iniciar   |El origen de datos aún no tiene datos ingeridos o sigue en modo de borrador.         |
-|Actualizando    |La ingesta de datos está en curso. Para cancelar esta operación, seleccione **Detener la actualización** en la columna **Acciones**. Si se detiene la actualización de un origen de datos, se revertirá a su último estado de actualización.       |
+|Actualizando    |La ingesta de datos está en curso. Para cancelar esta operación, seleccione **Detener la actualización** en la columna **Acciones**. Al detener la actualización de un origen de datos se revertirá a su último estado de actualización.       |
 |Con errores     |Se han producido errores al ingerir datos.         |
 
-Seleccione **Actualizar estado** para revisar más detalles sobre el estado de actualización, incluidos los detalles del error y las actualizaciones del proceso posterior.
+Seleccione el valor en la columna **Estado** de cualquier origen de datos para revisar más detalles. En el panel **Detalles del progreso**, expanda **Fuentes de datos**. Seleccione **Ver detalles** para obtener más información sobre el estado de actualización, incluidos los detalles del error y las actualizaciones del proceso posterior.
 
 La carga de datos puede tardar bastante tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página **Entidades**. Para obtener más información, consulte [Entidades](entities.md).
 
@@ -76,3 +76,6 @@ Para actualizar un origen de datos a petición, siga estos pasos:
 2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea quitar y seleccione **Eliminar** desde el menú desplegable.
 
 3. Confirme la eliminación.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
