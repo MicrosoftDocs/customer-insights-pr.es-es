@@ -1,28 +1,36 @@
 ---
 title: Información general del producto
 author: m-hartmann
-description: Obtenga una descripción general de Dynamics 365 Customer Insights y sus capacidades.
+description: Obtenga una descripción general de Dynamics 365 Customer Insights y sus funcionalidades.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407058"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476970"
 ---
-# <a name="product-overview-for-dynamics-365-customer-insights"></a><span data-ttu-id="75021-103">Información general de Dynamics 365 Customer Insights</span><span class="sxs-lookup"><span data-stu-id="75021-103">Product overview for Dynamics 365 Customer Insights</span></span>
+# <a name="product-overview-for-dynamics-365-customer-insights"></a><span data-ttu-id="d7211-103">Información general de Dynamics 365 Customer Insights</span><span class="sxs-lookup"><span data-stu-id="d7211-103">Product overview for Dynamics 365 Customer Insights</span></span>
 
-<span data-ttu-id="75021-104">Dynamics 365 Customer Insights es parte de la plataforma de datos del cliente (CDP) de Microsoft que ayuda a ofrecer experiencias personalizadas al cliente.</span><span class="sxs-lookup"><span data-stu-id="75021-104">Dynamics 365 Customer Insights is a part of Microsoft's customer data platform (CDP) that helps deliver personalized customer experiences.</span></span> <span data-ttu-id="75021-105">Unifique los datos de sus clientes de toda la gama de orígenes para obtener una vista única de los clientes.</span><span class="sxs-lookup"><span data-stu-id="75021-105">Unify customer data across the full range of sources to get a single view of customers.</span></span> 
+<span data-ttu-id="d7211-104">Dynamics 365 Customer Insights es parte de la plataforma de datos del cliente (CDP) de Microsoft que ayuda a ofrecer experiencias personalizadas al cliente.</span><span class="sxs-lookup"><span data-stu-id="d7211-104">Dynamics 365 Customer Insights is a part of Microsoft's customer data platform (CDP) that helps deliver personalized customer experiences.</span></span> <span data-ttu-id="d7211-105">Las funcionalidades de la plataforma brindan información sobre quiénes son sus clientes y cómo interactúan con su plataforma.</span><span class="sxs-lookup"><span data-stu-id="d7211-105">The platform's capabilities provide insights into who your customers are and how they engage with your platform.</span></span> <span data-ttu-id="d7211-106">Unifique los datos de sus clientes de múltiples orígenes para obtener una vista única de los clientes.</span><span class="sxs-lookup"><span data-stu-id="d7211-106">Unify customer data across multiple sources to get a single view of customers.</span></span>
 
-<span data-ttu-id="75021-106">Transforme su organización en una empresa centrada en el cliente donde los profesionales de marketing, ventas y servicios tengan los conocimientos que necesitan para personalizar las experiencias.</span><span class="sxs-lookup"><span data-stu-id="75021-106">Transform into a customer-centric organization where marketing, sales, and service professionals have the insights they need to personalize experiences.</span></span> <span data-ttu-id="75021-107">Desarrolle un conocimiento más profundo de sus clientes.</span><span class="sxs-lookup"><span data-stu-id="75021-107">Build a deeper understanding of your customers.</span></span> <span data-ttu-id="75021-108">Conecte los datos de varias fuentes transaccionales, de comportamiento y de observación para crear un visión global de los clientes.</span><span class="sxs-lookup"><span data-stu-id="75021-108">Connect data from various transactional, behavioral, and observational sources to create a 360-degree customer view.</span></span> <span data-ttu-id="75021-109">Vea resultados más rápido con un CDP diseñado para brindar información sobre la que se puede actuar.</span><span class="sxs-lookup"><span data-stu-id="75021-109">See results faster with a CDP designed to deliver insights that can be acted upon.</span></span> 
 
-<span data-ttu-id="75021-110">Obtenga información lista para usar con plantillas de inicio rápido.</span><span class="sxs-lookup"><span data-stu-id="75021-110">Derive out-of-the-box insights with quick-start templates.</span></span> <span data-ttu-id="75021-111">Cree, pruebe e implemente rápidamente modelos personalizados de AI/ML utilizando soluciones de análisis a escala.</span><span class="sxs-lookup"><span data-stu-id="75021-111">Rapidly build, test, and deploy custom AI/ML models using analytics solutions at scale.</span></span> <span data-ttu-id="75021-112">Active información en tiempo real para impulsar acciones.</span><span class="sxs-lookup"><span data-stu-id="75021-112">Activate real-time insights to drive actions.</span></span> <span data-ttu-id="75021-113">Mantenga un control total sobre los datos de sus clientes para garantizar el más alto nivel de gobernanza y cumplimiento de los datos.</span><span class="sxs-lookup"><span data-stu-id="75021-113">Maintain full control over your customer data to ensure the highest level of data governance and compliance.</span></span> 
+- <span data-ttu-id="d7211-107">Las [informaciones de público](audience-insights/overview.md) le ayudan a transformar su negocio en una organización centrada en el cliente.</span><span class="sxs-lookup"><span data-stu-id="d7211-107">[Audience insights](audience-insights/overview.md) helps you transform your business into a customer-centric organization.</span></span> <span data-ttu-id="d7211-108">Los profesionales de marketing, ventas y servicios tienen la información que necesitan para personalizar las experiencias.</span><span class="sxs-lookup"><span data-stu-id="d7211-108">Marketing, sales, and service professionals have the insights they need to personalize experiences.</span></span> <span data-ttu-id="d7211-109">Conecte datos desde fuentes transaccionales, de comportamiento y de observación para crear una vista de cliente de 360 grados.</span><span class="sxs-lookup"><span data-stu-id="d7211-109">Connect data from transactional, behavioral, and observational sources to create a 360-degree customer view.</span></span> <span data-ttu-id="d7211-110">Vea resultados más rápido con un CDP diseñado para brindar información sobre la que se puede actuar.</span><span class="sxs-lookup"><span data-stu-id="d7211-110">See results faster with a CDP designed to deliver insights that can be acted upon.</span></span> 
 
-<span data-ttu-id="75021-114">Hay dos capacidades principales:</span><span class="sxs-lookup"><span data-stu-id="75021-114">There are two main capabilities:</span></span> 
-
-- [<span data-ttu-id="75021-115">Conclusiones del público</span><span class="sxs-lookup"><span data-stu-id="75021-115">Audience insights</span></span>](audience-insights/overview.md)
-- [<span data-ttu-id="75021-116">Informaciones de involucración (versión preliminar)</span><span class="sxs-lookup"><span data-stu-id="75021-116">Engagmement insights (preview)</span></span>](engagement-insights/index.yml)
+- <span data-ttu-id="d7211-111">La [información sobre participación (versión preliminar)](engagement-insights/index.yml) le permite comprender de forma interactiva cómo sus clientes utilizan sus servicios y productos, tanto de forma individual como integral, en sitios web, aplicaciones móviles y productos conectados.</span><span class="sxs-lookup"><span data-stu-id="d7211-111">[Engagement insights (preview)](engagement-insights/index.yml) enables you to understand interactively, how your customers are using your services and products – both individually and holistically – on websites, mobile apps, and connected products.</span></span> <span data-ttu-id="d7211-112">Combine análisis de comportamiento con datos transaccionales, demográficos, de encuestas y de otro tipo desde Microsoft Dynamics 365 Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="d7211-112">Combine behavioral analytics with transactional, demographic, survey, and other data types from Microsoft Dynamics 365 Customer Insights.</span></span> <span data-ttu-id="d7211-113">Mantenga un control total sobre los datos de sus clientes para garantizar el más alto nivel de gobernanza y cumplimiento de los datos.</span><span class="sxs-lookup"><span data-stu-id="d7211-113">Maintain full control over your customer data to ensure the highest level of data governance and compliance.</span></span>
  
+## <a name="choose-a-capability"></a><span data-ttu-id="d7211-114">Elegir una funcionalidad</span><span class="sxs-lookup"><span data-stu-id="d7211-114">Choose a capability</span></span>
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Página de información del cliente que le permite navegar a las informaciones de público o la información sobre participación.":::
+
+<span data-ttu-id="d7211-116">Para elegir una funcionalidad</span><span class="sxs-lookup"><span data-stu-id="d7211-116">To choose a capability</span></span>
+
+1. <span data-ttu-id="d7211-117">En el panel de navegación, seleccione **Todas las aplicaciones** para abrir la ventana **Elija su enfoque**.</span><span class="sxs-lookup"><span data-stu-id="d7211-117">In the navigation pane, select **All apps** to open the **Choose your focus** window.</span></span>
+1. <span data-ttu-id="d7211-118">Seleccione **Ir ahora** para ir hasta la funcionalidad de su elección.</span><span class="sxs-lookup"><span data-stu-id="d7211-118">Select **Go now** to navigate to the capability of your choice.</span></span>
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
