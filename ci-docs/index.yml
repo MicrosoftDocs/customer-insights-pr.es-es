@@ -7,12 +7,12 @@ metadata:
   ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
+  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4407057"
+  ms.lasthandoff: 03/15/2021
+  ms.locfileid: "5598496"
 title: Documentación de Dynamics 365 Customer Insights
 summary: Encuentre recursos útiles para comenzar y aprender acerca de las características y capacidades de Customer Insights.
 landingContent:
@@ -23,7 +23,7 @@ landingContent:
     - text: " Información general sobre Customer Insights"
       url: overview.md
     - text: Planes de versiones
-      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
     - text: Obtener acceso al entorno
       url: https://home.ci.ai.dynamics.com/
 - title: Comenzar con las informaciones de público
@@ -53,9 +53,9 @@ landingContent:
     - text: Crear un nuevo entorno
       url: audience-insights/home.md
     - text: Crear un perfil de cliente unificado
-      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+      url: /learn/modules/unified-customer-profile/
     - text: Trabajar con la aplicación
-      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+      url: /learn/modules/working-with-customer-insights/
 - title: Exportar datos de informaciones del público
   linkLists:
   - linkListType: how-to-guide
