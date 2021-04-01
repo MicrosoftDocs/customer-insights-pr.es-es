@@ -2,25 +2,25 @@
 title: Esquemas de entidades de Customer Insights en Common Data Model
 description: Trabajar con entidades en Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269305"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596382"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidad en Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) (CDS) es una especificación declarativa y una definición de entidades estándar que representan los conceptos y actividades más usados en una variedad de aplicaciones empresariales y de productividad. Este modelo se está extendiendo también a datos observacionales y analíticos. Common Data Model ofrece entidades empresariales bien definidas, modulares y extensibles como Cuenta, Unidad de negocio, Caso, Contacto, Cliente potencial, Oportunidad y Producto, así como interacciones y relaciones con proveedores, trabajadores y clientes, como actividades y acuerdos de nivel de servicio. Cualquiera puede añadir y ampliar las definiciones de Common Data Model para capturar ideas adicionales específicas del negocio.
+[Common Data Model](/common-data-model/) (CDS) es una especificación declarativa y una definición de entidades estándar que representan los conceptos y actividades más usados en una variedad de aplicaciones empresariales y de productividad. Este modelo se está extendiendo también a datos observacionales y analíticos. Common Data Model ofrece entidades empresariales bien definidas, modulares y extensibles como Cuenta, Unidad de negocio, Caso, Contacto, Cliente potencial, Oportunidad y Producto, así como interacciones y relaciones con proveedores, trabajadores y clientes, como actividades y acuerdos de nivel de servicio. Cualquiera puede añadir y ampliar las definiciones de Common Data Model para capturar ideas adicionales específicas del negocio.
 
 Se trata de un modelo de datos compartido que permite que las aplicaciones y los integradores de datos colaboren con más facilidad al proporcionar una definición de datos unificada. Common Data Model incluye un completo sistema de metadatos con entidades estándar, relaciones, jerarquías, características y mucho más. Se originó a partir de aplicaciones de Dynamics 365 y es de código abierto en GitHub con más de 260 entidades estándar. Un gran sistema de partners internos y externos aporta conceptos específicos del sector a Common Data Model.
 
@@ -32,13 +32,13 @@ Para establecer una vista integral del cliente y hacer que los modelos de Custom
 
 | Entidad | Descripción |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Una actividad realizada por un usuario que tiene un valor observacional para el negocio. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Una persona u organización que realizó o tiene el potencial de interactuar en actividades profesionales. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definición de KPI divididos por cero o más dimensiones (como usuarios activos mensuales, gasto total por cliente, coste promedio de adquisición del cliente) |
-|[Segmento ](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Define un grupo de miembros con rasgos comunes. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Miembros que participan en un segmento determinado. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Una actividad realizada por un usuario que tiene un valor observacional para el negocio. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Una persona u organización que realizó o tiene el potencial de interactuar en actividades profesionales. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definición de KPI divididos por cero o más dimensiones (como usuarios activos mensuales, gasto total por cliente, coste promedio de adquisición del cliente) |
+|[Segmento ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Define un grupo de miembros con rasgos comunes. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Miembros que participan en un segmento determinado. |
 
-Para obtener más información, consulte la documentación sobre los [Esquemas de entidad de Customer Insights en Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Para obtener más información, consulte la documentación sobre los [Esquemas de entidad de Customer Insights en Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Ver entidades utilizando el navegador para entidades de Common Data Model
 

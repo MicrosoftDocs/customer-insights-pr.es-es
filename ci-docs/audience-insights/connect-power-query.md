@@ -2,23 +2,23 @@
 title: Ingerir datos a través de un conector de Power Query
 description: Conectores para orígenes de datos basados en Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267795"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596934"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar un origen de datos de Power Query
 
-Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayoría de estos conectores son compatibles con Dynamics 365 Customer Insights. Agregar orígenes de datos basados en conectores de Power Query generalmente sigue los pasos descritos en la siguiente sección. Sin embargo, según el conector que utilice, se requiere información diferente. Para obtener más información, consulte la documentación sobre conectores individuales en la [Referencia del conector de Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayoría de estos conectores son compatibles con Dynamics 365 Customer Insights. Agregar orígenes de datos basados en conectores de Power Query generalmente sigue los pasos descritos en la siguiente sección. Sin embargo, según el conector que utilice, se requiere información diferente. Para obtener más información, consulte la documentación sobre conectores individuales en la [Referencia del conector de Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Crear un nuevo origen de datos
 
@@ -44,7 +44,7 @@ Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayor
    > [!div class="mx-imgBorder"]
    > ![Diálogo Editar consultas](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
 
-1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones de la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de transformación prediseñadas. Para obtener más información, vea [Transformaciones de Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones de la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de transformación prediseñadas. Para obtener más información, vea [Transformaciones de Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Puede agregar entidades adicionales a su origen de datos seleccionando **Obtener datos** en el cuadro de diálogo **Editar consultas**.
 
@@ -59,7 +59,7 @@ Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayor
 
 ## <a name="available-power-query-data-sources"></a>Orígenes de datos de Power Query disponibles
 
-Vea la [Referencia del conector de Power Query](https://docs.microsoft.com/power-query/connectors/) para obtener una lista actualizada de conectores que puede seleccionar para importar datos a Customer Insights. 
+Vea la [Referencia del conector de Power Query](/power-query/connectors/) para obtener una lista actualizada de conectores que puede seleccionar para importar datos a Customer Insights. 
 
 Los conectores con una marca de verificación en la columna **Customer Insights (flujos de datos)** están disponibles para crear nuevos orígenes de datos basados en Power Query. Revise la documentación de un conector específico para obtener más información sobre sus requisitos previos, limitaciones y otros detalles.
 

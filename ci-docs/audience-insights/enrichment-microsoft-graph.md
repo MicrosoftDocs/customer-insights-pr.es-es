@@ -2,19 +2,19 @@
 title: Enriquecer los perfiles de los clientes con Microsoft Graph
 description: Utilice datos de propiedad de Microsoft Graph para enriquecer los datos de sus clientes con afinidades de marca e interés.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269351"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596474"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquezca los perfiles de los clientes con afinidades de marca e interés (versión preliminar)
 
@@ -33,7 +33,7 @@ Para configurar el enriquecimiento de afinidades de intereses, vaya a la pestañ
 
 Utilizamos los datos de búsqueda en línea de Microsoft Graph para encontrar afinidades para marcas e intereses en varios segmentos demográficos (definidos por edad, género o ubicación). El volumen de búsqueda en línea de una marca o interés determina cuánta afinidad tiene un segmento demográfico, en comparación con otros segmentos, con esa marca o interés.
 
-[Más información acerca de Microsoft Graph](https://docs.microsoft.com/graph/overview).
+[Más información acerca de Microsoft Graph](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Nivel de afinidad y puntuación
 

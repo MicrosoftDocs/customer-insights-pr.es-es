@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270225"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598360"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Usar modelos basados en Azure Machine Learning Studio (clásico)
 
@@ -37,7 +37,7 @@ En un primer paso, necesitamos crear un espacio de trabajo y abrir Machine Learn
 
 1. Busque **Espacio de trabajo Machine Learning Studio** y seleccione **Crear**.
 
-1. Introduzca los detalles requeridos para [crear el espacio de trabajo](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Elija el **Nivel de precios del plan de servicio web** según la cantidad de datos que planea importar. Para un mejor rendimiento, seleccione la **Ubicación** geográficamente más cercana a usted.
+1. Introduzca los detalles requeridos para [crear el espacio de trabajo](/azure/machine-learning/studio/create-workspace). Elija el **Nivel de precios del plan de servicio web** según la cantidad de datos que planea importar. Para un mejor rendimiento, seleccione la **Ubicación** geográficamente más cercana a usted.
 
 1. Después de crear el recurso, aparecerá el panel del espacio de trabajo Machine Learning Studio. Seleccione **Ejecutar Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Ahora puede crear un nuevo experimento o importar una plantilla de experimento e
 
    ![Configurar un servicio web predictivo](media/predictive-webservice-control.png)
 
-1. Una vez que el experimento del servicio web predictivo tenga éxito, puede implementarlo para la programación automática. Para que el servicio web funcione con Customer Insights, seleccione **Implementar servicio web** > **Implementar servicio web [nuevo] Vista previa**. [Más información sobre implementar un servicio web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Una vez que el experimento del servicio web predictivo tenga éxito, puede implementarlo para la programación automática. Para que el servicio web funcione con Customer Insights, seleccione **Implementar servicio web** > **Implementar servicio web [nuevo] Vista previa**. [Más información sobre implementar un servicio web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Implementar un servicio web predictivo](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ La siguiente imagen muestra la canalización de evaluación y entrenamiento de m
 
 ![Modelo de abandono en Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-También aplicamos una técnica llamada **Importancia de la característica de permutación**, un aspecto importante de la optimización del modelo. Los modelos integrados tienen poca o ninguna información sobre el impacto de cualquier característica específica en la predicción final. La calculadora de importancia de características utiliza un algoritmo personalizado para calcular la influencia de características individuales en el resultado de un modelo específico. La importancia de la característica se normaliza entre +1 y -1. Una influencia negativa significa que la característica correspondiente tiene una influencia contraria a la intuición en el resultado y debe eliminarse del modelo. Una influencia positiva indica que la función está contribuyendo en gran medida a la predicción. Estos valores no son coeficientes de correlación, ya que son métricas diferentes. Para más información, consulte [Importancia de la característica de permutación](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+También aplicamos una técnica llamada **Importancia de la característica de permutación**, un aspecto importante de la optimización del modelo. Los modelos integrados tienen poca o ninguna información sobre el impacto de cualquier característica específica en la predicción final. La calculadora de importancia de características utiliza un algoritmo personalizado para calcular la influencia de características individuales en el resultado de un modelo específico. La importancia de la característica se normaliza entre +1 y -1. Una influencia negativa significa que la característica correspondiente tiene una influencia contraria a la intuición en el resultado y debe eliminarse del modelo. Una influencia positiva indica que la función está contribuyendo en gran medida a la predicción. Estos valores no son coeficientes de correlación, ya que son métricas diferentes. Para más información, consulte [Importancia de la característica de permutación](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 La totalidad del [experimento de abandono está disponible en Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ La totalidad del [experimento de recomendación de producto está disponible en 
 
 ## <a name="integrate-custom-models"></a>Integrar modelos personalizados
 
-Para utilizar estas predicciones en Customer Insights, debe **exportar** las predicciones junto con los id. de cliente. [Expórtelas a la misma ubicación de almacenamiento de Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) a la que exporta los datos de origen. El servicio web predictivo se puede programar para que se ejecute regularmente y actualice las puntuaciones.
+Para utilizar estas predicciones en Customer Insights, debe **exportar** las predicciones junto con los id. de cliente. [Expórtelas a la misma ubicación de almacenamiento de Azure Blob](/azure/storage/common/storage-import-export-data-from-blobs) a la que exporta los datos de origen. El servicio web predictivo se puede programar para que se ejecute regularmente y actualice las puntuaciones.
 
 Los datos generados por el modelo personalizado se pueden utilizar para enriquecer aún más los datos de sus clientes. Para más información, ver [Modelos personalizados de aprendizaje automático](custom-models.md).
 

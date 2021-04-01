@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267927"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597440"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos basados en Azure Machine Learning
 
@@ -29,9 +29,9 @@ Los datos unificados en Dynamics 365 Customer Insights son un origen para crear 
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurar el área de trabajo de Azure Machine Learning
 
-1. Consulte [Crear un espacio de trabajo de Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) para ver diferentes opciones para crear el área de trabajo. Para obtener el mejor rendimiento, cree el espacio de trabajo en una región de Azure que esté geográficamente más cerca de su entorno de Customer Insights.
+1. Consulte [Crear un espacio de trabajo de Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) para ver diferentes opciones para crear el área de trabajo. Para obtener el mejor rendimiento, cree el espacio de trabajo en una región de Azure que esté geográficamente más cerca de su entorno de Customer Insights.
 
-1. Acceda a su espacio de trabajo a través de [Azure Machine Learning Studio](https://ml.azure.com/). Hay varias [formas de interactuar](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) con su espacio de trabajo.
+1. Acceda a su espacio de trabajo a través de [Azure Machine Learning Studio](https://ml.azure.com/). Hay varias [formas de interactuar](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) con su espacio de trabajo.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Trabajar con el diseñador de Azure Machine Learning
 
@@ -39,13 +39,13 @@ El diseñador de Azure Machine Learning proporciona un lienzo visual donde puede
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Trabajo con el SDK de Azure Machine Learning
 
-Los científicos de datos y los desarrolladores de IA utilizan el [SDK de Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) para crear flujos de trabajo de aprendizaje automático. Actualmente, los modelos entrenados con el SDK no se pueden integrar directamente en Customer Insights. Se requiere una canalización de inferencia por lotes que use ese modelo para la integración con Customer Insights.
+Los científicos de datos y los desarrolladores de IA utilizan el [SDK de Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) para crear flujos de trabajo de aprendizaje automático. Actualmente, los modelos entrenados con el SDK no se pueden integrar directamente en Customer Insights. Se requiere una canalización de inferencia por lotes que use ese modelo para la integración con Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Requisitos de la canalización por lotes para integración con Customer Insights
 
 ### <a name="dataset-configuration"></a>Configuración del conjunto de datos
 
-Necesita crear conjuntos de datos para usar datos de entidad de Customer Insights en su canalización de inferencia por lotes. Estos conjuntos de datos deben registrarse en el espacio de trabajo. Actualmente, solo se admiten [conjuntos de datos tabulares](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en formato .csv. Los conjuntos de datos que corresponden a los datos de la entidad deben parametrizarse como un parámetro de canalización.
+Necesita crear conjuntos de datos para usar datos de entidad de Customer Insights en su canalización de inferencia por lotes. Estos conjuntos de datos deben registrarse en el espacio de trabajo. Actualmente, solo se admiten [conjuntos de datos tabulares](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) en formato .csv. Los conjuntos de datos que corresponden a los datos de la entidad deben parametrizarse como un parámetro de canalización.
    
 * Parámetros de conjunto de datos en Designer
    
@@ -76,7 +76,7 @@ Necesita crear conjuntos de datos para usar datos de entidad de Customer Insight
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importar datos de canalización a Customer Insights
 
-* El diseñador proporciona el [Módulo de exportación de datos](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar la salida de una canalización al almacenamiento de Azure. Actualmente, el módulo debe usar el tipo de almacén de datos **Almacenamiento de blobs de Azure** y parametrizar el **Almacén de datos** y la **Ruta** relativa. Customer Insights anula ambos parámetros durante la ejecución de la canalización con un almacén de datos y una ruta a la que puede acceder el producto.
+* El diseñador proporciona el [Módulo de exportación de datos](/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar la salida de una canalización al almacenamiento de Azure. Actualmente, el módulo debe usar el tipo de almacén de datos **Almacenamiento de blobs de Azure** y parametrizar el **Almacén de datos** y la **Ruta** relativa. Customer Insights anula ambos parámetros durante la ejecución de la canalización con un almacén de datos y una ruta a la que puede acceder el producto.
    > [!div class="mx-imgBorder"]
    > ![Exportar configuración de módulo de datos](media/intelligence-designer-importdata.png "Exportar configuración de módulo de datos")
    

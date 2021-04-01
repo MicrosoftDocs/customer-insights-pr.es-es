@@ -2,19 +2,19 @@
 title: Enriquecimiento con importación personalizada SFTP
 description: Información general sobre el enriquecimiento de importación personalizada SFTP.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269627"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595876"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquezca los perfiles de los clientes con datos personalizados (versión preliminar)
 
@@ -50,7 +50,7 @@ Para configurar la importación personalizada de SFTP, se deben cumplir los sigu
 
 ## <a name="defining-field-mappings"></a>Definición de asignaciones de campos 
 
-El directorio que contiene el archivo que se va a importar en el servidor SFTP también debe contener un archivo *model.json*. Este archivo define el esquema que se utilizará para importar los datos. El esquema tiene que usar [Common Data Model](https://docs.microsoft.com/common-data-model/) para especificar la asignación de campos. Un ejemplo sencillo de un archivo model.json tiene este aspecto:
+El directorio que contiene el archivo que se va a importar en el servidor SFTP también debe contener un archivo *model.json*. Este archivo define el esquema que se utilizará para importar los datos. El esquema tiene que usar [Common Data Model](/common-data-model/) para especificar la asignación de campos. Un ejemplo sencillo de un archivo model.json tiene este aspecto:
 
 ```
 {

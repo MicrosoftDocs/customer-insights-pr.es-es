@@ -1,31 +1,31 @@
 ---
 title: Idiomas admitidos para informaciones de público
 description: Comprender y configurar el soporte de idiomas.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268201"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595493"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Idiomas admitidos para capacidad de informaciones de público
 
-La capacidad de informaciones de público de Dynamics 365 Customer Insights admite una serie de idiomas. Este tema enumera los idiomas disponibles y proporciona soporte para cambiar entre ellos, así como una descripción general de qué contenido se traduce.
+Información de público para Dynamics 365 Customer Insights se traduce a muchos idiomas. La siguiente lista contiene los idiomas disponibles e información sobre lo que se traduce. También puede obtener más información sobre cómo cambiar la configuración de idioma. 
 
 ## <a name="languages"></a>Idiomas
 
 | Nombre del idioma (inglés)|  Nombre del idioma (idioma nativo) |
 | ------------- | ------------- |
 | Vasco | euskara |
-| Búlgaro | Български |
+| Búlgaro | български |
 | Catalán | català |
 | Chino (simplificado) | 中文(简体) |
 | Chino (tradicional) | 中文(繁體) |
@@ -42,20 +42,20 @@ La capacidad de informaciones de público de Dynamics 365 Customer Insights admi
 | Griego | Ελληνικά |
 | Hindi | हिंदी |
 | Húngaro | magyar |
-| Indonesio | Bahasa Indonesia |
+| Indonesio | Indonesia |
 | Italiano | italiano |
 | Japonés | 日本語 |
-| Kazajo | Қазақ |
+| Kazajo | қазақ тілі |
 | Coreano | 한국어 |
 | Letón | latviešu |
 | Lituano | lietuvių |
-| Malayo | Bahasa Melayu |
-| Noruego (bokmål) | norsk (bokmål) |
-| Polaco | Polski |
+| Malayo | Melayu |
+| Noruego (bokmål) | norsk bokmål |
+| Polaco | polski |
 | Portugués (Brasil) | português |
 | Portugués (Portugal) | português |
 | Rumano | română |
-| Ruso | Русский |
+| Ruso | pусский |
 | Serbio (cirílico) | српски |
 | Serbio (latino) | srpski |
 | Eslovaco | slovenčina |
