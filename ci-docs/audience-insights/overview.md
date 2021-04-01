@@ -2,19 +2,19 @@
 title: Informaciones de público para la información general de Dynamics 365 Customer Insights
 description: Informaciones de público para la información general de Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477016"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598651"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informaciones de público para la información general de Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Las informaciones de público le ayudan a comprender mejor a sus clientes. Conec
 - **Eliminar los silos de datos y unificar los datos de los clientes**
 
   - Conecte y unifique los datos fácilmente: reúna datos transaccionales, observacionales y de comportamiento de [orígenes de datos populares mediante los conectores predefinidos](data-sources.md).
-  - Transforme los datos de los clientes de forma inteligente: cree perfiles de clientes unificados que se ajusten al [Common Data Model](https://docs.microsoft.com/common-data-model/). Resuelva las identidades de los clientes con recomendaciones basadas en IA/ML.
+  - Transforme los datos de los clientes de forma inteligente: cree perfiles de clientes unificados que se ajusten al [Common Data Model](/common-data-model/). Resuelva las identidades de los clientes con recomendaciones basadas en IA/ML.
 
 - **Enriquecer con la inteligencia de audiencia que contiene Microsoft Graph**
 
@@ -42,7 +42,7 @@ Las informaciones de público le ayudan a comprender mejor a sus clientes. Conec
 - **Analistas y administradores de datos:**
 
   - Acceso a una rica colección de conectores de para ingerir todos los datos de sus clientes.
-  - Capacidad de unificar los datos del cliente y transformarlos al formato de [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Capacidad de unificar los datos del cliente y transformarlos al formato de [Common Data Model](/common-data-model/).
   - Enriquezca la información de los clientes con la información de inteligencia de audiencia que contiene Microsoft Graph, como la afinidad de marca y los intereses.
   - Experiencia de configuración y depuración "con clics y sin código", que le ayudará a configurar las informaciones de público y a identificar posibles problemas.
   - Limpie y normalice los datos de orígenes diversos de los clientes con recomendaciones basadas en IA.  

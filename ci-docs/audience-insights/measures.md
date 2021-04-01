@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269949"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654753"
 ---
 # <a name="define-and-manage-measures"></a>Definir y administrar medidas
 
@@ -72,8 +72,8 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
    1. Seleccione **Editar dimensiones** para agregar los atributos de datos según los cuales desea agrupar los valores de medida. Por ejemplo, ciudad o género. De forma predeterminada, la dimensión *CustomerID* se selecciona crear *medidas a nivel de cliente*. Puede eliminar la dimensión predeterminada si desea crear *medidas a nivel empresarial*.
    1. Seleccione **Listo** para agregar dimensiones a la medida.
 
-1. Si hay varias rutas entre la entidad de datos que asignó y la entidad Cliente, debe elegir una de las [rutas de relación de entidad](relationships.md) identificadas. Los resultados de la medición pueden variar según la ruta seleccionada.
-   1. Seleccione **Preferencias de datos** y elija la ruta de la entidad que se debe utilizar para identificar su medida.
+1. Si hay varias rutas entre la entidad de datos que asignó y la entidad *Cliente*, debe elegir una de las [rutas de relación de entidad identificadas](relationships.md). Los resultados de la medición pueden variar según la ruta seleccionada. 
+   1. Seleccione **Preferencias de datos** y elija la ruta de la entidad que se debe utilizar para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
    1. Seleccione **Listo** para aplicar su selección. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccione la ruta de la entidad para la medida.":::

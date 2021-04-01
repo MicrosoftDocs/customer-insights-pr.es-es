@@ -1,19 +1,20 @@
 ---
 title: Modelos personalizados de aprendizaje automático | Microsoft Docs
 description: Trabaje con modelos personalizados de Azure Machine Learning en Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267255"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700689"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267255"
 
 ## <a name="responsible-ai"></a>IA responsable
 
-Las predicciones ofrecen capacidades para crear mejores experiencias para los clientes, mejorar las capacidades comerciales y las secuencias de ingresos. Le recomendamos encarecidamente que equilibre el valor de su predicción con el impacto que tiene y los sesgos que pueden introducirse de manera ética. Obtenga más información sobre cómo Microsoft [aborda la IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). También puede aprender sobre [técnicas y procesos de aprendizaje automático responsable](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) específicos de Azure Machine Learning.
+Las predicciones ofrecen capacidades para crear mejores experiencias para los clientes, mejorar las capacidades comerciales y las secuencias de ingresos. Le recomendamos encarecidamente que equilibre el valor de su predicción con el impacto que tiene y los sesgos que pueden introducirse de manera ética. Obtenga más información sobre cómo Microsoft [aborda la IA responsable](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). También puede aprender sobre [técnicas y procesos de aprendizaje automático responsable](/azure/machine-learning/concept-responsible-ml) específicos de Azure Machine Learning.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Actualmente, esta característica admite servicios web publicados a través de [Machine Learning Studio (clásico)](https://studio.azureml.net) y [Canalizaciones por lotes de Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Actualmente, esta característica admite servicios web publicados a través de [Machine Learning Studio (clásico)](https://studio.azureml.net) y [Canalizaciones por lotes de Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
-- Necesita una cuenta de almacenamiento de Azure Data Lake Gen2 asociada con su instancia de Azure Studio para usar esta característica. Para más información, consulte [Crear una cuenta de almacenamiento de segunda generación de Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Necesita una cuenta de almacenamiento de Azure Data Lake Gen2 asociada con su instancia de Azure Studio para usar esta característica. Para más información, consulte [Crear una cuenta de almacenamiento de segunda generación de Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Para las áreas de trabajo de Azure Machine Learning con canalizaciones, necesita permisos de acceso de administrador de propietario o usuario al área de trabajo de Azure Machine Learning.
+
+   > [!NOTE]
+   > Los datos se transfieren entre sus instancias de Customer Insights y los servicios web o canalizaciones de Azure seleccionados en el flujo de trabajo. Al transferir datos a un servicio de Azure, asegúrese de que el servicio esté configurado para procesar los datos de la manera necesaria y en la ubicación necesaria a fin de su organización cumpla con los requisitos legales o normativos para esos datos.
 
 ## <a name="add-a-new-workflow"></a>Agregar un flujo de trabajo nuevo
 
@@ -45,8 +51,8 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 1. Selecciona las **Áreas de trabajo** asociadas con su servicio web. Se enumeran dos secciones, una para Azure Machine Learning v1 (Machine Learning Studio (clásico)) y Azure Machine Learning v2 (Azure Machine Learning). Si no está seguro de cuál es el espacio de trabajo adecuada para su servicio web Machine Learning Studio (clásico), seleccione **Cualquiera**.
 
 1. Elija el servicio web Machine Learning Studio (clásico) o la canalización de Azure Machine Learning en el desplegable del **Servicio web que contiene su modelo**. A continuación, seleccione **Siguiente**.
-   - Aprender más acerca de [publicar un servicio web en Machine Learning Studio (clásico)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Aprender más acerca de [publicar una canalización en Azure Machine Learning usando el diseñador](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o el [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Su canalización debe publicarse en un [punto de conexión de canalización](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Aprender más acerca de [publicar un servicio web en Machine Learning Studio (clásico)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Aprender más acerca de [publicar una canalización en Azure Machine Learning usando el diseñador](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o el [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Su canalización debe publicarse en un [punto de conexión de canalización](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada de servicio web**, seleccione **Entidad** correspondiente de información de público y seleccione **Siguiente**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 
    > [!div class="mx-imgBorder"]
    > ![Configurar un flujo de trabajo](media/intelligence-screen2-updated.png "Configurar un flujo de trabajo")
-   
+
 1. En el paso **Parámetros de salida del modelo**, establezca las siguientes propiedades:
    - Machine Learning Studio (clásico)
       1. Introduzca la salida **Nombre de la entidad** a la que desea que fluyan los resultados de salida del servicio web.
@@ -62,12 +68,12 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
       1. Introduzca la salida **Nombre de la entidad** a la que desea que fluyan los resultados de salida de la canalización.
       1. Seleccione el **Nombre del parámetro del almacén de datos de salida** de su canalización por lotes desde el menú desplegable.
       1. Seleccione el **Nombre del parámetro de la ruta de salida** de su canalización por lotes desde el menú desplegable.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Panel de parámetros de salida del modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de salida del modelo")
 
 1. Seleccione el atributo correspondiente de la lista desplegable **Resultados de id. de cliente** que identifica a los clientes y seleccione **Guardar**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Relacionar los resultados con el panel de datos de clientes](media/intelligence-screen4-relatetocustomer.png "Relacionar los resultados con el panel de datos de clientes")
 
@@ -95,7 +101,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
       1. Seleccione el **Nombre del parámetro de la ruta de salida** para su canalización de prueba.
 
 1. Seleccione el atributo correspondiente de la lista desplegable **Resultados de id. de cliente** que identifica a los clientes y seleccione **Guardar**.
-   Debe elegir un atributo de la salida de inferencia con valores similares a la columna de id. de cliente de la entidad Cliente. Si no tiene esa columna en su conjunto de datos, elija un atributo que identifique de forma exclusiva la fila.
+   Elija un atributo de la salida de inferencia con valores similares a la columna de identificador de cliente de la entidad Cliente. Si no tiene esa columna en su conjunto de datos, elija un atributo que identifique de forma exclusiva la fila.
 
 ## <a name="run-a-workflow"></a>Ejecutar un flujo de trabajo
 
@@ -113,5 +119,28 @@ Su flujo de trabajo también se ejecuta automáticamente con cada actualización
 
 Su flujo de trabajo será eliminado. La [entidad](entities.md) que se creó cuando creó el flujo de trabajo persiste y se puede ver desde la página **Entidades**.
 
+## <a name="results"></a>Resultados
+
+Los resultados de un flujo de trabajo se almacenan en la entidad configurada durante la fase de parámetro de salida del modelo. Puede acceder a estos datos desde la [página de entidades](entities.md) o con [acceso a la API](apis.md).
+
+### <a name="api-access"></a>Acceso API
+
+Para que la consulta de OData específica obtenga datos de una entidad de modelo personalizada, use el siguiente formato:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Sustituya `<your instance id>` con el identificador de su entorno de Customer Insights, que encontrará en la barra de direcciones de su navegador cuando acceda a Customer Insights.
+
+1. Reemplace `<custom model output entity>` con el nombre de entidad que proporcionó durante el paso Parámetros de salida del modelo de la configuración del modelo personalizado.
+
+1. Reemplace `<guid value>` con el identificador de cliente del cliente para el que desea acceder al registro. Por lo general, puede encontrar esta identificación en la [página de perfiles de clientes](customer-profiles.md) en el campo CustomerID.
+
+## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
+
+- ¿Por qué no puedo ver mi canalización al configurar un flujo de trabajo de modelo personalizado?    
+  Este problema suele deberse a un problema de configuración en la canalización. Asegúrese de que [el parámetro de entrada está configurado](azure-machine-learning-experiments.md#dataset-configuration), y el [parámetros de ruta y almacén de datos de salida](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) también están configurados.
+
+- ¿Qué significa el error "No se pudo guardar el flujo de trabajo de inteligencia"?    
+  Los usuarios suelen ver este mensaje de error si no tienen privilegios de propietario o acceso de usuario Administrador en el espacio de trabajo. El usuario necesita un nivel más alto de permisos para permitir que Customer Insights procese el flujo de trabajo como un servicio en lugar de usar las credenciales del usuario para ejecuciones posteriores del flujo de trabajo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
