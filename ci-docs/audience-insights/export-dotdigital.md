@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a DotDigital
-description: Aprenda a configurar la conexión a DotDigital.
-ms.date: 11/14/2020
+description: Aprenda a configurar la conexión y a exportar a DotDigital.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598038"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759980"
 ---
-# <a name="connector-for-dotdigital-preview"></a>Conector para DotDigital (versión preliminar)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Exportar listas de segmentos a DotDigital (versión preliminar)
 
 Exporte segmentos de perfiles de clientes unificados a las libretas de direcciones de DotDigital y utilícelos para campañas, marketing por correo electrónico y para crear segmentos de clientes con DotDigital. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-a-connection"></a>Requisitos previos para una conexión
 
 -   Tiene una [Cuenta de DotDigital](https://dotdigital.com/) y las credenciales de administrador correspondientes.
 -   Hay libretas de direcciones existentes en DotDigital y los id. correspondientes. El id. se puede encontrar en la URL cuando selecciona y abre una libreta de direcciones. Para más información, consulte [Libretas de direcciones de DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Tiene [segmentos configurados](segments.md) en la información de público.
 -   Los perfiles de clientes unificados en los segmentos exportados contienen un campo que representa una dirección de correo electrónico.
 
-## <a name="connect-to-dotdigital"></a>Conectarse a DotDigital
+## <a name="known-limitations"></a>Limitaciones conocidas
 
-1. Vaya a **Administración** > **Destinos de exportación**.
+- Hasta 1 millón de perfiles por exportación a DotDigital.
+- La exportación a DotDigital está limitada a segmentos.
+- La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 3 horas, debido a las limitaciones del proveedor. 
+- La cantidad de perfiles que puede exportar a DotDigital depende y está limitada a su contrato con DotDigital.
 
-1. En **DotDigital**, seleccione **Configurar**.
+## <a name="set-up-connection-to-dotdigital"></a>Configurar conexión a DotDigital
 
-1. Asigne a su destino de exportación un nombre reconocible en el campo **Nombre para mostrar**.
+1. Vaya a **Administrador** > **Conexiones**.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Panel de configuración para la exportación de DotDigital.":::
+1. Seleccione **Agregar conexión** y elija **DotDigital** para configurar la conexión.
+
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
+
+1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduzca su **nombre de usuario y contraseña de DotDigital**.
 
@@ -47,9 +54,18 @@ Exporte segmentos de perfiles de clientes unificados a las libretas de direccion
 
 1. Seleccione **Agregarse como usuario de exportación** y proporcione sus credenciales de Customer Insights.
 
-1. Seleccione **Siguiente** para configurar la exportación.
+1. Seleccione **Guardar** para completar la conexión. 
 
-## <a name="configure-the-connector"></a>Configurar el conector
+## <a name="configure-an-export"></a>Configurar una exportación
+
+Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaya a **Datos** > **Exportaciones**.
+
+1. Para crear una exportación nueva, seleccione **Agregar destino**.
+
+1. En el campo **Conexión para exportación**, elija una conexión de la sección DotDigital. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+
 
 1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Repita los mismos pasos para otros campos opcionales como **Nombre de pila**, **Apellido**, **Nombre completo**, **Género** y **Código postal**.
 
@@ -57,16 +73,12 @@ Exporte segmentos de perfiles de clientes unificados a las libretas de direccion
 
 1. Seleccione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar los datos
+Guardar una exportación no ejecuta la exportación inmediatamente.
 
-Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab). En DotDigital, ahora puede encontrar sus segmentos en [Libretas de direcciones de DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
+ 
+En DotDigital, ahora puede encontrar sus segmentos en [Libretas de direcciones de DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
-## <a name="known-limitations"></a>Limitaciones conocidas
-
-- Hasta 1 millón de perfiles por exportación a DotDigital.
-- La exportación a DotDigital está limitada a segmentos.
-- La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 3 horas, debido a las limitaciones del proveedor. 
-- La cantidad de perfiles que puede exportar a DotDigital depende y está limitada a su contrato con DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar medidas
 description: Defina medidas para analizar y reflejar el rendimiento y el estado de su negocio.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654753"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887961"
 ---
 # <a name="define-and-manage-measures"></a>Definir y administrar medidas
 
-Las medidas le ayudan a comprender mejor el comportamiento de los clientes y el rendimiento de la empresa recuperando valores relevantes de los [perfiles unificados](data-unification.md). Por ejemplo, una empresa quiere ver el *gasto total por cliente* para comprender el historial de compras de cada cliente. O medir las *ventas totales de la empresa* para comprender los ingresos a globales en la totalidad de la empresa.  
+Las medidas le ayudan a comprender mejor los comportamientos de los clientes y el desempeño comercial. Se fijan en valores relevantes de los [perfiles unificados](data-unification.md). Por ejemplo, una empresa quiere ver el *gasto total por cliente* para comprender el historial de compra de un cliente individual o medir las *ventas totales de la empresa* para comprender los ingresos a nivel agregado en todo el negocio.  
 
 Las medidas se crean utilizando el generador de medidas, una plataforma de consulta de datos con varios operadores y opciones de asignación sencillas. Le permite filtrar los datos, agrupar resultados, detectar [rutas de relaciones de entidades](relationships.md) y obtener una vista previa de los resultados.
 
 Utilice el generador de medidas para planificar actividades comerciales consultando datos de clientes y extraiga información. Por ejemplo, crear una medida del *gasto total por cliente* y el *retorno total por cliente* ayuda a identificar un grupo de clientes con un alto gasto pero que aporta alto rendimiento. Puede [crear un segmento](segments.md) para impulsar las acciones más convenientes. 
 
-## <a name="create-a-measure"></a>Crear una medida
+## <a name="build-your-own-measure-from-scratch"></a>Crear su propia medida desde cero
 
 Esta sección le guía a través de la creación de nuevas medidas desde cero. Puede crear una medida con atributos de datos a partir de entidades de datos que tengan una relación configurada para conectarse con la entidad Cliente. 
 
 1. En las informaciones de público, vaya a **Medidas**.
 
-1. Seleccione **Nuevo**.
+1. Seleccione **Nuevo** y elija **Crear el suyo propio**.
 
 1. Seleccione **Editar nombre** y proporcione un **Nombre** para la medida. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
    1. Seleccione **Editar dimensiones** para agregar los atributos de datos según los cuales desea agrupar los valores de medida. Por ejemplo, ciudad o género. De forma predeterminada, la dimensión *CustomerID* se selecciona crear *medidas a nivel de cliente*. Puede eliminar la dimensión predeterminada si desea crear *medidas a nivel empresarial*.
    1. Seleccione **Listo** para agregar dimensiones a la medida.
 
+1. Si hay valores en sus datos que necesita reemplazar con un número entero, por ejemplo, reemplace *NULL* con *0* y seleccione **Reglas**. Configure la regla y asegúrese de elegir solo números enteros como sustitución.
+
 1. Si hay varias rutas entre la entidad de datos que asignó y la entidad *Cliente*, debe elegir una de las [rutas de relación de entidad identificadas](relationships.md). Los resultados de la medición pueden variar según la ruta seleccionada. 
    1. Seleccione **Preferencias de datos** y elija la ruta de la entidad que se debe utilizar para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
    1. Seleccione **Listo** para aplicar su selección. 
@@ -88,9 +90,57 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
 
 1. Vaya a **Medidas** para ver la medida recién creada en la lista.
 
+## <a name="use-a-template-to-build-a-measure"></a>Usar una plantilla para construir una medida
+
+Puede utilizar plantillas predefinidas de medidas de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
+
+Plantillas de medida disponibles: 
+- Valor medio de transacción (ATV)
+- Valor total de la transacción
+- Ingresos medios diarios
+- Ingresos medios anuales
+- Recuento de transacciones
+- Puntos de fidelización ganados
+- Puntos de fidelización canjeados
+- Saldo de puntos de fidelización
+- Vida útil activa del cliente
+- Duración de suscripción de fidelización
+- Tiempo desde la última compra
+
+El siguiente procedimiento describe los pasos para crear una nueva medida usando una plantilla.
+
+1. En las informaciones de público, vaya a **Medidas**.
+
+1. Seleccione **Nuevo** y seleccione **Elegir una plantilla**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de pantalla del menú desplegable al crear una nueva medida con resaltado en la plantilla.":::
+
+1. Encuentre la plantilla que se adapte a sus necesidades y seleccione **Elegir plantilla**.
+
+1. Revise los datos requeridos y seleccione **Comenzar** si tiene todos los datos en su lugar.
+
+1. En el panel **Editar nombre**, establezca el nombre de su medida y la entidad de salida. 
+
+1. Seleccione **Listo**.
+
+1. En la sección **Establecer período de tiempo**, defina el período de tiempo de los datos a utilizar. Elija si desea que la nueva medida cubra todo el conjunto de datos entero seleccionando **Todo el tiempo**. O si desea que la medida se enfoque en un **Período de tiempo específico**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que muestra la sección del período de tiempo al configurar una medida a partir de una plantilla.":::
+
+1. En la siguiente sección, seleccione **Agregar datos** para elegir las actividades y asignar los datos correspondientes a partir de su entidad *Actividad unificada*.
+
+    1. Paso 1 de 2: En **Tipo de actividad**, elija el tipo de entidad que desea utilizar. Para **Actividades**, seleccione las entidades que desea asignar.
+    1. Paso 2 de 2: Elija el atributo de la entidad *Actividad unificada* para el componente requerido por la fórmula. Por ejemplo, para el valor de transacción promedio, es el atributo que representa el valor de la transacción. Para **Marca de tiempo de la actividad**, elija el atributo de la entidad Actividad unificada que representa la fecha y hora de la actividad.
+   
+1. Una vez que la asignación de datos se haya realizado correctamente, puede ver el estado como **Completo** y el nombre de las actividades y atributos asignadas.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Captura de pantalla de una configuración de plantilla de medida completa.":::
+
+1. Ahora puede seleccionar **Ejecutar** para calcular los resultados de la medida. Para refinarlo más tarde, seleccione **Guardar borrador**.
+
 ## <a name="manage-your-measures"></a>Administrar sus medidas
 
-Después de [crear una medida](#create-a-measure), verá una lista de medidas en la página **Medidas**.
+Puede encontrar la lista de medidas en la página **Medidas**.
 
 Encontrará información sobre el tipo de medida, el creador, la fecha de creación y el estado. Cuando selecciona una medida de la lista, puede obtener una vista previa del resultado y descargar un archivo .CSV.
 

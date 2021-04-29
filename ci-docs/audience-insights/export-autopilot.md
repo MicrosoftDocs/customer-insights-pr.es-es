@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Autopilot
-description: Aprenda a configurar la conexión a Autopilot.
-ms.date: 12/08/2020
+description: Aprenda a configurar la conexión y a exportar a Autopilot.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,54 +9,22 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d039c4afd84eaad942d214d4e6fb8ef7b1ec72a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e320a48d5b7c35b530e3a38567b226b804879e4e
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596152"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760164"
 ---
-# <a name="connector-for-autopilot-preview"></a>Conector para Autopilot (versión preliminar)
+# <a name="export-segments-to-autopilot-preview"></a>Exportar segmentos a Autopilot (versión preliminar)
 
 Exporte segmentos de perfiles de clientes unificados a Autopilot y utilícelos para marketing por correo electrónico en Autopilot. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-a-connection"></a>Requisitos previos para una conexión
 
 -   Tiene una [cuenta de Autopilot](https://www.autopilothq.com/) y las credenciales de administrador correspondientes.
 -   Tiene [segmentos configurados](segments.md) en la información de público.
 -   Los perfiles de clientes unificados en los segmentos exportados contienen un campo que representa una dirección de correo electrónico.
-
-## <a name="connect-to-autopilot"></a>Conectar a Autopilot
-
-1. Vaya a **Administración** > **Destinos de exportación**.
-
-1. En **Autopilot**, seleccione **Configurar**.
-
-1. Asigne a su destino de exportación un nombre reconocible en el campo **Nombre para mostrar**.
-
-   :::image type="content" source="media/export-autopilot.PNG" alt-text="Panel de configuración para la conexión de Autopilot.":::
-
-1. Especifique su **Clave de API de Autopilot** [Clave de API de Autopilot](https://autopilot.docs.apiary.io/#).
-
-1. Seleccione **Acepto** para confirmar **Privacidad y cumplimiento de datos**.
-
-1. Seleccione **Conectar** para inicializar la conexión a Autopilot.
-
-1. Seleccione **Agregarse como usuario de exportación** y proporcione sus credenciales de Customer Insights.
-
-1. Seleccione **Siguiente** para configurar la exportación.
-
-## <a name="configure-the-connector"></a>Configurar el conector
-
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Repita los mismos pasos para otros campos opcionales como **Nombre de pila** o **Apellido**.
-
-1. Seleccione los segmentos que desea exportar. Recomendamos encarecidamente **no exportar más de 100 000 perfiles de clientes en total** a Autopilot. 
-
-1. Seleccione **Guardar**.
-
-## <a name="export-the-data"></a>Exportar los datos
-
-Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
@@ -64,6 +32,46 @@ Puede [exportar datos a petición](export-destinations.md). La exportación tamb
 - La exportación a Autopilot está limitada a segmentos.
 - La exportación de hasta 100 000 perfiles a Autopilot puede tardar unas pocas horas en completarse. 
 - La cantidad de perfiles que puede exportar a Autopilot depende y está limitada a su contrato con Autopilot.
+
+## <a name="set-up-connection-to-autopilot"></a>Configurar conexión a Autopilot
+
+1. Vaya a **Administrador** > **Conexiones**.
+
+1. Seleccione **Agregar conexión** y elija **Autopilot** para configurar la conexión.
+
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
+
+1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+3. Escriba su [clave API de Autopilot](https://autopilot.docs.apiary.io/#).
+
+1. Seleccione **Acepto** para confirmar **Privacidad y cumplimiento de datos**.
+
+1. Seleccione **Conectar** para inicializar la conexión a Autopilot.
+
+1. Seleccione **Agregarse como usuario de exportación** y proporcione sus credenciales de Customer Insights.
+
+1. Seleccione **Guardar** para completar la conexión.
+
+## <a name="configure-an-export"></a>Configurar una exportación
+
+Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaya a **Datos** > **Exportaciones**.
+
+1. Para crear una exportación nueva, seleccione **Agregar destino**.
+
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Autopilot. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+
+3. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Repita los mismos pasos para otros campos opcionales como **Nombre de pila** o **Apellido**.
+
+1. Seleccione los segmentos que desea exportar. Recomendamos encarecidamente **no exportar más de 100 000 perfiles de clientes en total** a Autopilot. 
+
+1. Seleccione **Guardar**.
+
+Guardar una exportación no ejecuta la exportación inmediatamente.
+
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

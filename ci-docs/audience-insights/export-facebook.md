@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights al Administrador de anuncios de Facebook
-description: Aprenda a configurar la conexión al Administrador de anuncios de Facebook.
-ms.date: 06/05/2020
+description: Aprenda a configurar la conexión y a exportar a el administrador de anuncios de Facebook.
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596704"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906831"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Conector para Administrador de anuncios de Facebook (vista previa)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar lista de segmentos al administrador de anuncios de Facebook (versión preliminar)
 
 Exportar segmentos de perfiles de clientes unificados a Administrador de anuncios de Facebook para crear campañas en Facebook e Instagram.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
-- Necesita tener una [**cuenta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que incluya una [**cuenta de negocios de Facebook**](https://business.facebook.com/).
+- Debe tener una cuenta de [**anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que incluya una [**cuenta empresarial de Facebook**](https://business.facebook.com/).
 - Debe ser administrador en la [**Cuenta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-## <a name="connect-to-facebook-ads-manager"></a>Conectar a Administrador de anuncios de Facebook
+## <a name="known-limitations"></a>Limitaciones conocidas
 
-1. Vaya a **Administración** > **Destinos de exportación**.
+- Hasta 10 millones de perfiles de cliente por exportación al administrador de anuncios de Facebook.
+- La exportación al administrador de anuncios de Facebook está limitada a segmentos.
+- Cree o actualice audiencias personalizadas en Facebook solo de tipo *lista de clientes*.
+- La exportación de segmentos con un total de 10 millón de perfiles puede tardar hasta 90 horas en completarse.
 
-1. En **Administrador de anuncios de Facebook**, seleccione **Configurar**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar una conexión al administrador de anuncios de Facebook
 
-1. Asigne a su destino de exportación un nombre reconocible en el campo **Nombre para mostrar**.
+Antes de que los usuarios puedan crear una exportación, un administrador debe configurar la conexión al servicio y permitir que los colaboradores usen la conexión.
 
-1. Seleccione **Continuar con Facebook** para iniciar sesión en su Cuenta de anuncios de Facebook.
+1. Vaya a **Administrador** > **Conexiones**.
 
-1. Autorizar el permiso **ads_management** después de autenticarse con Facebook.
+1. Seleccione **Agregar conexión** y elija **Administrador de anuncios de Facebook** para configurar la conexión.
 
-1. Seleccione la **Cuenta de anuncios de Facebook** con la que desea trabajar.
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
 
-1. Seleccione un **Audiencia personalizado existente** de la lista desplegable o cree una **Nueva audiencia personalizada**. Para más información, vea [**Audiencias en Administrador de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será **Administradores**. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Seleccione **Acepto** para confirmar **Privacidad y cumplimiento de datos**.
+1. Autenticación con anuncios de Facebook: 
 
-1. Seleccione **Siguiente** para configurar la exportación.
+   1. Seleccione **Continuar con Facebook** para iniciar sesión en su Cuenta de anuncios de Facebook.
 
-## <a name="configure-the-connector"></a>Configurar el conector
+   1. Autorizar el permiso **ads_management** después de autenticarse con Facebook.
 
-1. En **Elija su campo de identificador de clave**, seleccione **Correo electrónico**, **Nombre y dirección** o **Teléfono** para enviar a Administrador de anuncios de Facebook.
+   1. Seleccione la **Cuenta de anuncios de Facebook** con la que desea trabajar.
+
+   1. Seleccione un **Audiencia personalizado existente** de la lista desplegable o cree una **Nueva audiencia personalizada**. Para más información, vea [**Audiencias en Administrador de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Solo puede crear o actualizar audiencias personalizadas en Facebook del tipo *lista de clientes* con esta exportación. En algunos casos, verá audiencias personalizadas de diferentes tipos en la lista desplegable. Si selecciona un tipo diferente a la *lista de clientes*, dará como resultado una exportación fallida. 
+
+1. Revise **Privacidad y cumplimiento de datos** y seleccione **Acepto**.
+
+1. Seleccione **Guardar** para completar la conexión.
+
+## <a name="configure-an-export"></a>Configurar una exportación
+
+Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaya a **Datos** > **Exportaciones**.
+
+1. Para crear una exportación nueva, seleccione **Agregar destino**. 
+
+1. En el campo **Conexión para exportación**, elija una conexión en la sección **Administrador de anuncios de Facebook**. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+
+1. En **Elija su campo de identificador de clave**, seleccione **Correo electrónico**, **Nombre y dirección** o **Teléfono** para enviar a Administrador de anuncios de Facebook. 
+
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**.
 
 1. Asigne los atributos correspondientes de su entidad de cliente unificado para el identificador clave seleccionado.
    > [SUGERENCIA] Las mejores posibilidades para que se produzca una coincidencia es seleccionar **Correo electrónico** como identificador clave Agregar identificadores adicionales puede mejorar la coincidencia.
 
-1. Seleccione **Agregar atributo** para asignar atributos adicionales para enviar a Administrador de anuncios de Facebook. Los atributos de Administrador de anuncios de Facebook se asignan a los siguientes nombres descriptivos: **FN** = **Nombre**, **LN** = **Apellidos**, **FI** = **Primera inicial**, **PHONE** = **Teléfono**, **GEN** = **Género**, **DOB** = **Fecha de nacimiento**, **ST** = **Estado**, **CT** = **Ciudad**, **ZIP** = **Código postal**, **COUNTRY** = **País / Región**
+1. Seleccione **Agregar atributo** para asignar más atributos para enviar al administrador de anuncios de Facebook. Los atributos de Administrador de anuncios de Facebook se asignan a los siguientes nombres descriptivos: **FN** = **Nombre**, **LN** = **Apellidos**, **FI** = **Primera inicial**, **PHONE** = **Teléfono**, **GEN** = **Género**, **DOB** = **Fecha de nacimiento**, **ST** = **Estado**, **CT** = **Ciudad**, **ZIP** = **Código postal**, **COUNTRY** = **País / Región**
 
 1. Seleccione los segmentos que desea exportar.
 
 1. Seleccione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar los datos
+Guardar una exportación no ejecuta la exportación inmediatamente.
 
-Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Limitaciones conocidas
-
-- Hasta 10 millones de perfiles de cliente por exportación al administrador de Facebook Ads 
-- La exportación al administrador de Facebook Ads está limitada a segmentos.
-- La exportación de segmentos con un total de 10 millón de perfiles puede tardar hasta 90 horas en completarse.
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

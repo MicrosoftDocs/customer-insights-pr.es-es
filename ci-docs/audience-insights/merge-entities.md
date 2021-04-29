@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597854"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896532"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -83,7 +83,7 @@ Si no fue la primera vez que ejecutó una fusión con éxito, todos los procesos
 
 ## <a name="next-step"></a>Paso siguiente
 
-Configure las [actividades](activities.md), el [enriquecimiento](enrichment-microsoft-graph.md) o las [relaciones](relationships.md) para obtener más información sobre sus clientes.
+Configure las [actividades](activities.md), el [enriquecimiento](enrichment-hub.md) o las [relaciones](relationships.md) para obtener más información sobre sus clientes.
 
 Si ya configuró las actividades, el enriquecimiento o las relaciones o si definió los segmentos, se procesarán automáticamente para usar los últimos datos del cliente.
 

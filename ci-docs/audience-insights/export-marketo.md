@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Marketo
-description: Aprenda a configurar la conexión a Marketo.
-ms.date: 11/12/2020
+description: Aprenda a configurar la conexión y a exportar a Marketo.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597992"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759842"
 ---
-# <a name="connector-for-marketo-preview"></a>Conector para Marketo (versión preliminar)
+# <a name="export-segments-to-marketo-preview"></a>Exportar segmentos a Marketo (versión preliminar)
 
 Exporte segmentos de perfiles de cliente unificados para generar campañas, ofrecer marketing por correo electrónico y usar grupos específicos de clientes con Marketo.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
 -   Tiene una [cuenta de Marketo](https://login.marketo.com/) y las credenciales de administrador correspondientes.
 -   Hay listas existentes en Marketo y los id. correspondientes. Para obtener más información, consulte las [listas de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Ha [configurado los segmentos](segments.md).
 -   Los perfiles de clientes unificados en los segmentos exportados contienen un campo que representa una dirección de correo electrónico.
-
-## <a name="connect-to-marketo"></a>Conectar a Marketo
-
-1. Vaya a **Administración** > **Destinos de exportación**.
-
-1. En **Marketo**, seleccione **Configurar**.
-
-1. Asigne a su destino de exportación un nombre reconocible en el campo **Nombre para mostrar**.
-
-1. Introduzca su **[Id. de cliente de Marketo, secreto de cliente y nombre de host de punto de conexión REST](https://developers.marketo.com/rest-api/authentication/)**.
-
-1. introduzca su **[ID de lista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
-
-1. Seleccione **Estoy de acuerdo** para confirmar la **Privacidad y cumplimiento de datos** y seleccione **Conectar** para inicializar la conexión a Marketo.
-
-1. Seleccione **Agregarse como usuario de exportación** y proporcione sus credenciales de Customer Insights.
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Exportar la captura de pantalla para conexión de Marketo":::
-
-1. Seleccione **Siguiente** para configurar la exportación.
-
-## <a name="configure-the-connector"></a>Configurar el conector
-
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. 
-
-1. Opcionalmente, puede exportar **Nombre de pila**, **Apellido**, **Ciudad**, **Estado** y **País/Región** como campos adicionales para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
-
-1. Seleccione los segmentos que desea exportar. Puede exportar hasta 1 millón de perfiles de clientes en total a Marketo.
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Seleccionar campos y segmentos para exportar a Marketo":::
-
-1. Seleccione **Guardar**.
-
-## <a name="export-the-data"></a>Exportar los datos
-
-Puede [exportar datos a petición](export-destinations.md). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab). En Marketo, ahora puede encontrar sus segmentos en [Listas de Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
@@ -69,6 +33,49 @@ Puede [exportar datos a petición](export-destinations.md). La exportación tamb
 - La exportación a Marketo está limitada a segmentos.
 - La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 3 horas. 
 - La cantidad de perfiles que puede exportar a Marketo depende y está limitada a su contrato con Marketo.
+
+## <a name="set-up-connection-to-marketo"></a>Configurar conexión a Marketo
+
+1. Vaya a **Administrador** > **Conexiones**.
+
+1. Seleccione **Agregar conexión** y elija **Marketo** para configurar la conexión.
+
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
+
+1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduzca su **[Id. de cliente de Marketo, secreto de cliente y nombre de host de punto de conexión REST](https://developers.marketo.com/rest-api/authentication/)**.
+
+1. Seleccione **Estoy de acuerdo** para confirmar la **Privacidad y cumplimiento de datos** y seleccione **Conectar** para inicializar la conexión a Marketo.
+
+1. Seleccione **Agregarse como usuario de exportación** y proporcione sus credenciales de Customer Insights.
+
+1. Seleccione **Guardar** para completar la conexión.
+
+## <a name="configure-an-export"></a>Configurar una exportación
+
+Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaya a **Datos** > **Exportaciones**.
+
+1. Para crear una exportación nueva, seleccione **Agregar destino**.
+
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Marketo. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+
+1. introduzca su **[ID de lista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. 
+
+1. Opcionalmente, puede exportar el **Nombre de pila**, el **Apellido**, la **Ciudad**, el **Estado** y el **País** para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
+
+1. Seleccione los segmentos que desea exportar. Puede exportar hasta 1 millón de perfiles de clientes en total a Marketo.
+
+1. Seleccione **Guardar**.
+
+Guardar una exportación no ejecuta la exportación inmediatamente.
+
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). En Marketo, ahora puede encontrar sus segmentos en [Listas de Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

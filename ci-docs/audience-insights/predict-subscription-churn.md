@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595677"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906923"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
 
@@ -49,6 +49,12 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
         - **Marca de tiempo:** La fecha y hora del evento identificado por la clave principal.
         - **Evento:** El nombre del evento que desea usar. Por ejemplo, un campo llamado "UserAction" en un servicio de transmisión de vídeo podría tener el valor de "Visto".
         - **Detalles:** Información detallada sobre el evento. Por ejemplo, un campo llamado "ShowTitle" en un servicio de transmisión de vídeo podría tener el valor de un vídeo que el cliente ha visto.
+- Características de los datos sugeridos
+    - Datos históricos suficientes: datos de suscripción de al menos el doble del período tiempo seleccionado. Preferiblemente, dos o tres años de datos de suscripciones.
+    - Estado de la suscripción: los datos incluyen suscripciones activas e inactivas para cada cliente, por lo que hay varias entradas por identificador de cliente.
+    - Número de clientes: al menos 10 perfiles clientes, preferiblemente más de 1000 clientes únicos. El modelo no funcionará con menos de 10 clientes y datos históricos insuficientes.
+    - Integridad de los datos: menos del 20 % de los valores que faltan en el campo de datos de la entidad proporcionada.
+   
    > [!NOTE]
    > Necesitará al menos dos registros de actividad para el 50% de los clientes para los que desea calcular el abandono.
 
@@ -67,7 +73,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 ### <a name="define-customer-churn"></a>Definir abandono de clientes
 
 1. Introduzca el número de **Días desde que finalizó la suscripción** que su empresa considera para que un cliente esté en un estado de pérdida. Este período suele equivaler a actividades comerciales como ofertas u otros esfuerzos de marketing que intentan evitar la pérdida del cliente.
-1. Ingrese el número de **Días para investigar el futuro para predecir el abandono** para establecer una ventana para predecir el abandono. Por ejemplo, para predecir el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono para períodos de tiempo más largos o más cortos puede hacer que sea más difícil abordar los factores en su perfil de riesgo de abandono, pero esto depende en gran medida de sus requisitos comerciales específicos. Seleccione **Siguiente** para continuar
+1. Ingrese el número de **Días para investigar el futuro para predecir el abandono** para establecer una ventana para predecir el abandono. Por ejemplo, para predecir el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono durante períodos de tiempo más largos o más cortos puede hacer que sean más difícil abordar los factores en el perfil de riesgo de abandono, en función de sus requisitos empresariales específicos. Seleccione **Siguiente** para continuar
    >[!TIP]
    > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
 
@@ -113,7 +119,8 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. Seleccione la predicción que desea revisar.
    - **Nombre de predicción:** El nombre de la predicción proporcionado al crearla.
    - **Tipo de predicción:** El tipo de modelo utilizado para la predicción
-   - **Entidad de salida:** Nombre de la entidad para almacenar la salida de la predicción. Puede encontrar una entidad con este nombre en **Datos** > **Entidades**.
+   - **Entidad de salida:** Nombre de la entidad para almacenar la salida de la predicción. Puede encontrar una entidad con este nombre en **Datos** > **Entidades**.    
+     En la entidad de salida, *ChurnScore* es la probabilidad pronosticada de abandono y *IsChurn* es una etiqueta binaria basada en *ChurnScore* con umbral de 0,5. Es posible que el umbral predeterminado no funcione para su escenario. [Cree un nuevo segmento](segments.md#create-a-new-segment) con su umbral preferido.
    - **Campo de predicción:** Este campo se completa solo para algunos tipos de predicciones, y no se usa en la predicción de pérdida de suscripciones.
    - **Estado:** el estado actual de la ejecución de la predicción.
         - **En cola:** La predicción está esperando que se ejecuten otros procesos.

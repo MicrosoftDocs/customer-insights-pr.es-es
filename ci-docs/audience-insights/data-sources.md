@@ -1,7 +1,7 @@
 ---
 title: Usar orígenes de datos para ingerir datos
 description: Aprenda a importar datos desde distintos orígenes.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595968"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887915"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -32,8 +32,15 @@ Puede agregar un origen de datos de tres formas principales:
 - [Desde una carpeta de Common Data Model](connect-common-data-model.md)
 - [Desde su propio lago de Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Todavía no puede agregar datos de orígenes de datos locales.
+## <a name="add-data-from-on-premises-data-sources"></a>Agregar datos de orígenes de datos locales
+
+La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Power Platform. Los flujos de datos se pueden habilitar en Customer Insights [proporcionando la dirección URL del entorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) al configurar el entorno.
+
+Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights utilizarán [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten la conectividad local mediante las puertas de enlace de datos. Quite y vuelva a crear los orígenes de datos que existían antes de que un entorno de Dataverse se asociara para utilizar las puertas de enlace de datos locales.
+
+Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Power Platform donde puede ver y configurar puertas de enlace de datos locales.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla de la página de orígenes de datos que muestra enlaces que apuntan al entorno de Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisar datos ingeridos
 
@@ -65,7 +72,7 @@ Para actualizar un origen de datos a petición, siga estos pasos:
 
 2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea actualizar y seleccione **Actualizar** en la lista desplegable.
 
-3. El origen de datos ahora se desencadena para una actualización manual. Actualizar un origen de datos actualizará tanto el esquema de entidad como los datos de todas las entidades especificadas en el origen de datos.
+3. El origen de datos ahora se desencadena para una actualización manual. Al actualizar un origen de datos, se actualizará tanto el esquema de la entidad como los datos para todas las entidades especificadas en el origen de datos.
 
 4. Seleccione **Dejar de actualizar** si desea cancelar una actualización existente y el origen de datos volverá a su último estado de actualización.
 

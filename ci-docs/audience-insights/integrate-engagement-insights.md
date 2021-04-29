@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597486"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896440"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrar datos web a partir de información sobre la participación con las informaciones de público
 
@@ -46,7 +46,7 @@ Consideraciones al crear eventos refinados:
     - Signal.Action.Name: para indica los detalles de la actividad
     - Signal.User.Id: se usa para asignarse con el Id. de cliente.
     - Signal.View.Uri: se usa como dirección web como base para segmentos o medidas
-    - Signal.Export.Id: se usa como clave principal para eventos <!-- system generated, do we need to list?-->
+    - Signal.Export.Id: se usa como clave principal para eventos
     - Signal.Timestamp: para determinar la fecha y hora de la actividad
 
 Seleccione los filtros para centrarse en los eventos y las páginas que son importantes para su caso de uso. En este ejemplo, usaremos el nombre de la acción "Promoción por correo electrónico".
