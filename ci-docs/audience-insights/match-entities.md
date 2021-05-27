@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595585"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085643"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -103,6 +103,18 @@ Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coin
 
 > [!NOTE]
 > El orden de las reglas importa. El algoritmo de coincidencia intenta coincidir en función de la primera regla y continuará con la segunda regla solo si no se identificaron coincidencias con la primera regla.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Cambiar el orden de las entidades en las reglas de coincidencia
+
+Puede reordenar las entidades para que las reglas de coincidencia cambien el orden en que se procesan. Se eliminarán las reglas que entren en conflicto debido a un cambio de orden. Tiene que volver a crear las reglas eliminadas con una configuración actualizada.
+
+1. Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Editar**.
+
+1. En el panel **Editar regla** panel, seleccione el control **Mover hacia arriba/abajo** o arrastre y suelte entidades para cambiar el orden.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opciones para cambiar el orden en que se procesan las entidades en la fase de coincidencia.":::
+
+1. Seleccione **Listo** para guardar la regla.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir la desduplicación en una entidad de coincidencia
 

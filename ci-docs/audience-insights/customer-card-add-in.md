@@ -1,7 +1,7 @@
 ---
-title: Instalar y configurar el complemento de tarjeta de cliente
-description: Instale y configure el complemento de tarjeta de cliente para Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365
+description: Muestre datos de conclusiones del público en aplicaciones de Dynamics 365 con este complemento.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597348"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059609"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones de Dynamics 365. Vea datos demográficos, información y cronogramas de actividades con el complemento de tarjeta de cliente.
+Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones de Dynamics 365. Con el complemento de tarjeta de cliente instalado en una aplicación de Dynamics 365 compatible, puede elegir mostrar datos demográficos, conocimientos y cronogramas de actividad. El complemento recuperará datos de Customer Insights sin afectar los datos en la aplicación de Dynamics 365 conectada. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Aplicación Dynamics 365 (como Centro de ventas o Centro de Customer Service), versión 9.0 y posterior con Interfaz unificada habilitada.
-- Perfiles de clientes [ingeridos desde la aplicación Dynamics 365 usando Common Data Service](connect-power-query.md).
-- Los usuarios del complemento de tarjeta de cliente deben estar [agregados como usuarios](permissions.md) en la información de público.
-- [Capacidades de búsqueda y filtrado configuradas](search-filter-index.md).
-- Control demográfico: los campos demográficos, como la edad o el sexo, están disponibles en el perfil de cliente unificado.
-- Control de enriquecimiento: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes.
-- Control de inteligencia: requiere datos generados con Azure Machine Learning ([Predicciones](predictions.md) o [Modelos personalizados](custom-models.md))
-- Control de medidas: Requiere [medidas configuradas](measures.md).
-- Control de línea de tiempo: requiere [actividades configuradas](activities.md).
+- El complemento solo funciona con aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
+- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de conclusiones del público, deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Common Data Service](connect-power-query.md).
+- Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en las conclusiones del público para poder ver los datos.
+- Se requieren [Capacidades de búsqueda y filtrado configuradas](search-filter-index.md) en las conclusiones del público para que funcione la búsqueda de datos.
+- Cada control de complemento se basa en datos específicos de las conclusiones del público:
+  - Control de medidas: Requiere [medidas configuradas](measures.md).
+  - Control de inteligencia: requiere datos generados usando [predicciones](predictions.md) o [modelos personalizados](custom-models.md).
+  - Control demográfico: los campos demográficos, como la edad o el sexo, están disponibles en el perfil de cliente unificado.
+  - Control de enriquecimiento: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes.
+  - Control de línea de tiempo: requiere [actividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar el complemento de tarjeta de cliente
 
@@ -56,9 +57,9 @@ La solución puede tardar un tiempo en instalarse en su entorno.
    > [!NOTE]
    > Compruebe que el bloqueador de elementos emergentes del navegador no bloquea la ventana de autenticación cuando selecciona el botón **Iniciar sesión**.
 
-1. Seleccione el entorno del que desea recuperar datos.
+1. Seleccione el entorno de Customer Insights del que desea capturar datos.
 
-1. Defina la asignación de campos a los registros en la aplicación Dynamics 365.
+1. Defina la asignación de campos a registros en la aplicación Dynamics 365. Dependiendo de sus datos en Customer Insights, puede elegir asignar las siguientes opciones:
    - Para asignarse a un contacto, seleccione el campo en la entidad cliente que coincida con el id. de su entidad de contacto.
    - Para asignarse a una cuenta, seleccione el campo en la entidad cliente que coincida con el id. de su entidad de cuenta.
 

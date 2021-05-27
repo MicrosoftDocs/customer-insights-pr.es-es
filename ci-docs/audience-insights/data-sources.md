@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887915"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085551"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -36,11 +36,9 @@ Puede agregar un origen de datos de tres formas principales:
 
 La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Power Platform. Los flujos de datos se pueden habilitar en Customer Insights [proporcionando la dirección URL del entorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) al configurar el entorno.
 
-Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights utilizarán [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten la conectividad local mediante las puertas de enlace de datos. Quite y vuelva a crear los orígenes de datos que existían antes de que un entorno de Dataverse se asociara para utilizar las puertas de enlace de datos locales.
+Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights utilizarán [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Quite y vuelva a crear los orígenes de datos que existían antes de que un entorno de Dataverse se asociara para [utilizar las puertas de enlace de datos locales](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Power Platform donde puede ver y configurar puertas de enlace de datos locales.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla de la página de orígenes de datos que muestra enlaces que apuntan al entorno de Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisar datos ingeridos
 

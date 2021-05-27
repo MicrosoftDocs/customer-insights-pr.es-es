@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596428"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049415"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades en la información de público
 
@@ -37,12 +37,12 @@ Seleccione una entidad para explorar los diferentes campos y registros incluidos
 > [!div class="mx-imgBorder"]
 > ![Seleccionar una entidad](media/data-manager-entities-data.png "Seleccionar una entidad")
 
-- La pestaña **Datos** está seleccionada de forma predeterminada y muestra una tabla con detalles sobre registros individuales de la entidad.
+- La pestaña **Datos** muestra una tabla que enumera detalles sobre los registros individuales de la entidad.
 
 > [!div class="mx-imgBorder"]
 > ![Tabla de campos](media/data-manager-entities-fields.PNG "Tabla de campos")
 
-- La pestaña **Campos** muestra una tabla para revisar los detalles de la entidad seleccionada, como nombres de campo, tipos de datos y tipos. La columna **Tipo** muestra los tipos asociados a Common Data Model, que son definidos automáticamente por el sistema o [asignados manualmente](map-entities.md) por los usuarios. Se trata de tipos semánticos que pueden diferir de los tipos de datos de los atributos: por ejemplo, el campo *Correo electrónico* siguiente tiene un tipo de datos *Texto*, pero su tipo de Common Data Model (semántico) puede ser *Email* o *EmailAddress*.
+- La pestaña **Atributos** está seleccionada de forma predeterminada y muestra una tabla para revisar los detalles de la entidad seleccionada, como nombres de campo, tipos de datos y tipos. La columna **Tipo** muestra los tipos asociados a Common Data Model, que son definidos automáticamente por el sistema o [asignados manualmente](map-entities.md) por los usuarios. Se trata de tipos semánticos que pueden diferir de los tipos de datos de los atributos: por ejemplo, el campo *Correo electrónico* siguiente tiene un tipo de datos *Texto*, pero su tipo de Common Data Model (semántico) puede ser *Email* o *EmailAddress*.
 
 > [!NOTE]
 > Ambas tablas muestran solo un ejemplo de los datos de la entidad. Para ver el conjunto de datos completo, vaya a la página **Orígenes de datos**, seleccione una entidad, seleccione **Editar** y, a continuación, vea los datos de esta entidad con el editor de Power Query como se explica en [Orígenes de datos](data-sources.md).

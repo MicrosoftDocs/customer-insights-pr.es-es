@@ -1,0 +1,103 @@
+---
+title: Abordar el enriquecimiento de la mejora
+description: Enriquezca y normalice la información de direcciones de los perfiles de los clientes con los modelos de Microsoft.
+ms.date: 04/21/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: how-to
+author: kishorem-ms
+ms.author: kishorem
+manager: shellyha
+ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
+ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "5965599"
+---
+# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
+
+Las direcciones de sus datos pueden no estar estructuradas, estar incompletas o ser incorrectas. Utilice los modelos de Microsoft para normalizar y enriquecer sus direcciones en el [Formato de Common Data Model](/common-data-model/schema/core/applicationcommon/address) para una mejor precisión y conocimientos.
+
+## <a name="how-we-enhance-addresses"></a>Cómo mejoramos las direcciones
+
+Nuestro modelo pasa por un proceso de dos pasos para mejorar una dirección. Primero, analiza la dirección para identificar sus componentes y los coloca en un formato estructurado. Luego, usamos inteligencia artificial para corregir, completar y estandarizar los valores en la dirección.
+
+### <a name="example"></a>Ejemplo
+
+La información de la dirección puede tener un formato no estándar y contener errores ortográficos. El modelo puede solucionar estos problemas y crear direcciones coherentes en perfiles de clientes unificados.
+
+```Input
+4567 w main stret californa missouri 54321 us
+```
+
+```Output
+- Street1: 4567 W Main St
+- City: California
+- StateOrProvince: MO
+- ZipOrPostalCode: 54321
+- CountryOrRegion: United States of America
+
+- Address: 4567 W Main St, California, MO, 54321, United States of America
+```
+
+### <a name="limitations"></a>Limitaciones
+
+Las direcciones mejoradas solo funcionan con los valores que ya existen en los datos de direcciones ingeridos. El modelo no hace lo siguiente: 
+
+1. Verificar si la dirección es una dirección válida.
+2. Verificar si alguno de los valores, como los códigos postales o nombres de calles, es válido.
+3. Cambiar valores que no reconoce.
+
+El modelo utiliza técnicas basadas en el aprendizaje automático para mejorar las direcciones. Si bien aplicamos un umbral de confianza alto para cuando el modelo cambia un valor de entrada, como con cualquier modelo basado en ML, no se garantiza una precisión del 100 %.
+
+## <a name="supported-countries-or-regions"></a>Países o regiones compatibles
+
+Actualmente admitimos direcciones enriquecidas en estos países o regiones: 
+
+- Australia
+- Canadá
+- Reino Unido
+- Estados Unidos
+
+Las direcciones deben contener un valor de país o región. No procesamos direcciones de países o regiones que no son compatibles ni direcciones que no tienen ningún país o región proporcionado.
+
+## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
+
+1. Vaya a **Datos** > **Enriquecimiento**.
+
+1. Seleccione **Enriquecer mis datos** en el mosaico **Direcciones mejoradas**.
+
+   :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Captura de pantalla del mosaico de direcciones mejoradas.":::
+
+1. Selecciona el **Conjunto de datos de clientes** y elija la entidad que contiene las direcciones que desea enriquecer. Puede seleccionar la entidad *Cliente* para enriquecer direcciones en todos sus perfiles de clientes o seleccionar una entidad de segmento para enriquecer direcciones solo en perfiles de clientes contenidos en ese segmento.
+
+1. Seleccione cómo se formatean las direcciones en el conjunto de datos. Escoja **Dirección de atributo único** si las direcciones de sus datos utilizan un solo campo. Escoja **Dirección de atributos múltiples** si las direcciones de sus datos utilizan más de un campo de datos.
+
+   > [!NOTE]
+   > El país o la región son obligatorios, tanto en la dirección de atributo único como en la de atributos múltiples. Las direcciones que no contienen valores de país o región válidos o admitidos no se enriquecerán
+
+1.  Asigne los campos de direcciones de su entidad de cliente unificada.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Página mejorada de asignación de campos de direcciones.":::
+
+1. Seleccione **Siguiente** para completar la asignación de campos.
+
+1. Proporcione un nombre para el enriquecimiento y la entidad de salida.
+
+1. Seleccione **Guardar enriquecimiento** después de revisar sus opciones.
+
+## <a name="enrichment-results"></a>Resultados del enriquecimiento
+
+Para iniciar el proceso de enriquecimiento, seleccione **Ejecutar** desde la barra de comandos. También puede dejar que el sistema ejecute el enriquecimiento automáticamente como parte de una [actualización programada](system.md#schedule-tab). El tiempo de procesamiento depende del tamaño de los datos de sus clientes.
+
+Una vez que se completa el proceso de enriquecimiento, puede revisar los datos de los perfiles de clientes recién enriquecidos en **Mis enriquecimientos**. Además, encontrará la hora de la última actualización y el número de perfiles enriquecidos.
+
+Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
