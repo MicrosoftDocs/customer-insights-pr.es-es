@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906785"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095577"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicción de recomendaciones del producto (versión preliminar)
 
@@ -205,33 +205,9 @@ A veces, solo ciertos productos son ventajosos o apropiados para el tipo de pred
        > [!div class="mx-imgBorder"]
        > ![Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales](media/product-recommendation-highconfidence.PNG "Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales")
 
-## <a name="fix-a-failed-prediction"></a>Corregir una predicción fallida
+## <a name="manage-predictions"></a>Administrar predicciones
 
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-
-1. Seleccione la predicción para cuyos registros de errores desea ver y seleccione **Registros**.
-
-1. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error del que no hay suficientes datos para predecir con precisión se resuelve normalmente cargando más datos en Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
-
-Las predicciones se actualizan automáticamente en el mismo [programa en que se actualizan sus datos](system.md#schedule-tab) según lo configurado en los ajustes.
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-Eliminar un predicción también elimina su entidad de salida.
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-
-1. Seleccione **Eliminar**.
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

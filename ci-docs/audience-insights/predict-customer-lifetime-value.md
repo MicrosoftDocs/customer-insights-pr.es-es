@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954600"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095531"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicción del valor de tiempo de vida del cliente (CLV) (versión preliminar)
 
@@ -149,7 +149,6 @@ Los datos que reflejan las interacciones clave del cliente (como la web, el serv
 
 1. Seleccione **Siguiente**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Revisar y ejecutar la configuración del modelo
 
 1. En el paso **Revisar los detalles de su modelo**, valide la configuración de la predicción. Puede volver a cualquier parte de la configuración de predicción seleccionando **Editar** debajo del valor mostrado. También puede seleccionar un paso de configuración en el indicador del progreso.
@@ -170,11 +169,10 @@ Los datos que reflejan las interacciones clave del cliente (como la web, el serv
 - **Estado**: estado de la ejecución de la predicción.
     - **Puesto en cola**: la predicción está esperando a que se completen otros procesos.
     - **Actualización**: la predicción se está ejecutando actualmente para crear resultados que fluirán hacia la entidad de salida.
-    - **Errores**: la ejecución de la predicción ha presentado errores. [Revise los registros](#troubleshoot-a-failed-prediction) para más detalles.
+    - **Errores**: la ejecución de la predicción ha presentado errores. [Revise los registros](manage-predictions.md#troubleshoot-a-failed-prediction) para más detalles.
     - **Correcta**: la predicción ha tenido éxito. Seleccione **Vista** en los puntos suspensivos verticales para revisar los resultados de la predicción.
 - **Editada**: la fecha en que se modificó la configuración para la predicción.
 - **Última actualización**: la fecha en que la predicción actualizó los resultados en la entidad de salida.
-
 
 ### <a name="review-prediction-results"></a>Revisar los resultados de la predicción
 
@@ -216,28 +214,8 @@ Hay tres secciones de datos principales en la página de resultados.
 
 - **Factores más influyentes**: se consideran varios factores al crear su predicción de CLV según los datos de entrada proporcionados al modelo de IA. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede utilizar estos factores para ayudar a validar los resultados de la predicción. Estos factores también brindan más información sobre los factores más influyentes que contribuyeron a predecir el CLV en todos sus clientes.
 
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
+## <a name="manage-predictions"></a>Administrar predicciones
 
-Las predicciones se actualizan automáticamente en el mismo [programa en que se actualizan sus datos](system.md#schedule-tab) según lo configurado en los ajustes. También puede actualizarlas manualmente.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-3. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-Eliminar un predicción también elimina su entidad de salida.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-3. Seleccione **Eliminar**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Solucionar problemas de una predicción con errores
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción para la que desea ver los registros de errores.
-3. Seleccione **Registros**.
-4. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error para el que no hay suficientes datos para predecir con precisión se resuelve normalmente cargando datos adicionales en las informaciones de público.
-
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

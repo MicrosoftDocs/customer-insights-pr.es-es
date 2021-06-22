@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595294"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129920"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de recomendaciones de producto (versión preliminar)
 
@@ -65,7 +65,7 @@ Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importac
 
 1. En el campo **Nombre** del panel lateral cambie el nombre de su origen de datos de **Consulta** a **eCommercePurchases**.
 
-1. Guarde el origen de datos.
+1. **Guarde** el origen de datos.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerir datos de clientes del esquema de fidelización
@@ -83,11 +83,11 @@ Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importac
 
 1. En el campo **Nombre** del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **loyCustomers**.
 
-1. Guarde el origen de datos.
+1. **Guarde** el origen de datos.
 
 ## <a name="task-2---data-unification"></a>Tarea 2: unificación de datos
 
-Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir, Fusionar** para crear un perfil de cliente unificado. Para obtener más información, consulte [Unificación de datos](data-unification.md).
+Después de ingerir los datos, ahora comenzamos el proceso de unificación de datos para crear un perfil de cliente unificado. Para obtener más información, consulte [Unificación de datos](data-unification.md).
 
 ### <a name="map"></a>Asignar
 
@@ -156,7 +156,7 @@ Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la p
 
    - **Número de productos**: establezca este valor en **5**. Esta configuración define cuántos productos desea recomendar a sus clientes.
 
-   - **¿Sugerir productos que los clientes hayan comprado recientemente?**: seleccione **sí** para indicar que desea incluir productos en la recomendación que sus clientes hayan comprado anteriormente.
+   - **Se espera que se repitan las compras**: seleccione **sí** para indicar que desea incluir productos en la recomendación que sus clientes hayan comprado anteriormente.
 
    - **Ventana para mirar atrás**: seleccione al menos **365 días**. Este valor define el período hacia el pasado de la actividad del cliente que va a contemplar el modelo para usarlo como entrada para sus recomendaciones.
    

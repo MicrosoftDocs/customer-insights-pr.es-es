@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906877"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095623"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predicción de abandono transaccional (versión preliminar)
 
@@ -144,7 +144,7 @@ La predicción de abandono transaccional ayuda a predecir si un cliente ya no co
    - **Estado:** estado de la ejecución de la predicción.
         - **Puesto en cola:** la predicción está esperando a que se ejecuten otros procesos.
         - **Actualización:** la predicción se está ejecutando actualmente para producir resultados que fluirán hacia la entidad de salida.
-        - **Errores:** la ejecución de la predicción ha presentado errores. [Revise los registros](#troubleshoot-a-failed-prediction) para más detalles.
+        - **Errores:** la ejecución de la predicción ha presentado errores. [Revise los registros](manage-predictions.md#troubleshoot-a-failed-prediction) para más detalles.
         - **Correcta:** la predicción ha tenido éxito. Seleccione **Ver** bajo los puntos suspensivos verticales para revisar la predicción
    - **Editada:** La fecha en que se modificó la configuración para la predicción.
    - **Última actualización:** La fecha en que la predicción actualizó los resultados en la entidad de salida.
@@ -168,35 +168,9 @@ La predicción de abandono transaccional ayuda a predecir si un cliente ya no co
        
     1. **Factores más influyentes:** Hay muchos factores que se tienen en cuenta al crear su predicción. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede usar estos factores para ayudar a validar sus resultados de predicción. O puede usar esta información más tarde para [crear segmentos](segments.md) que puedan ayudar a influir en el riesgo de pérdida de clientes.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Solucionar problemas de una predicción con errores
+## <a name="manage-predictions"></a>Administrar predicciones
 
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-
-1. Seleccione los puntos suspensivos verticales junto a la predicción para la que desea ver los registros de errores.
-
-1. Seleccione **Registros**.
-
-1. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error de que no hay suficientes datos para predecir con precisión generalmente se resuelve cargando datos adicionales en Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
-
-Las predicciones se actualizarán automáticamente en la misma [programación que actualizan sus datos](system.md#schedule-tab) definida en la configuración. También puede actualizarlas manualmente.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-Eliminar un predicción también elimina su entidad de salida.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-
-1. Seleccione **Eliminar**.
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

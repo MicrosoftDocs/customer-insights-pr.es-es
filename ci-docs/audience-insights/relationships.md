@@ -1,74 +1,110 @@
 ---
 title: Relaciones entre entidades y rutas de entidades
 description: Cree y administre relaciones entre entidades de múltiples fuentes de datos.
-ms.date: 04/14/2020
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: mukeshpo
-ms.author: mukeshpo
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: c25bfcb8e2a8223498dd1a5e8cfb3712a40ab85e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595233"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171185"
 ---
 # <a name="relationships-between-entities"></a>Relaciones entre entidades
 
-Las relaciones ayudan a conectar entidades y generar un gráfico de sus datos cuando las entidades comparten un identificador común (clave externa) al que se puede hacer referencia de una entidad a otra. Las entidades conectadas le permiten definir segmentos y medidas basadas en múltiples orígenes de datos.
+Las relaciones conectan entidades y definen un gráfico de sus datos cuando las entidades comparten un identificador común, una clave externa. Se puede hacer referencia a esta clave externa de una entidad a otra. Las entidades conectadas habilitan la definición de segmentos y medidas basadas en múltiples orígenes de datos.
 
-Existen dos tipos de relaciones: Relaciones del sistema no editables, que se crean automáticamente, y relaciones personalizadas creadas y configuradas por los usuarios.
+Hay tres tipos de relaciones: 
+- Sistema no editable de relaciones, creado por el sistema como parte del proceso de unificación de datos
+- Relaciones heredadas no editables, que se crean automáticamente a partir de la ingesta de fuentes de datos 
+- Relaciones personalizadas editables, creadas y configuradas por usuarios
 
-Durante los procesos de coincidencia y combinación, las relaciones del sistema se crean detrás de escena en función de la coincidencia inteligente. Estas relaciones ayudan a relacionar los registros del perfil del cliente con los registros de otras entidades correspondientes. El siguiente diagrama ilustra la creación de tres relaciones del sistema cuando la entidad de cliente coincide con entidades adicionales para producir la entidad Perfil de cliente final.
+## <a name="non-editable-system-relationships"></a>Relaciones no editables de sistema
 
-> [!div class="mx-imgBorder"]
-> ![Creación de relación](media/relationships-entities-merge.png "Creación de relación")
+Durante la unificación de datos, las relaciones del sistema se crean automáticamente en función de la comparación inteligente. Estas relaciones ayudan a relacionar los registros del perfil del cliente con los registros correspondientes. El siguiente diagrama ilustra la creación de tres relaciones basadas en el sistema. La entidad del cliente se empareja con otras entidades para producir la entidad unificada *Cliente*.
 
-- La **relación *CustomerToContact*** fue creada entre la entidad Cliente y la entidad Contacto. La entidad Cliente obtiene el campo de clave **Contact_contactId** para relacionarse con el campo de clave de la entidad Contacto **contactId**.
-- La **relación *CustomerToContact*** fue creada entre la entidad Cliente y la entidad Cuenta. La entidad Cliente obtiene el campo de clave **Account_accountId** para relacionarse con el campo de clave de la entidad Cuenta **accountId**.
-- La **relación *CustomerToWebAccount*** fue creada entre la entidad Cliente y la entidad WebAccount. La entidad Cliente obtiene el campo de clave **WebAccount_webaccountId** para relacionarse con el campo de clave de la entidad WebAccount **webaccountId**.
+:::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagrama con rutas de relación para la entidad cliente con tres 1-n Relaciones.":::
 
-## <a name="create-a-relationship"></a>Crear una relación
+- La **relación *CustomerToContact*** fue creada entre la entidad *Cliente* y la entidad *Contacto*. La entidad *Cliente* obtiene el campo de clave **Contact_contactID** para relacionarse con el campo de clave de la entidad *Contacto* **contactID**.
+- La **relación *CustomerToContact*** fue creada entre la entidad *Cliente* y la entidad *Cuenta*. La entidad *Cliente* obtiene el campo de clave **Account_accountId** para relacionarse con el campo de clave de la entidad *Cuenta* **accountID**.
+- La **relación *CustomerToWebAccount*** fue creada entre la entidad *Cliente* y la entidad *WebAccount*. La entidad *Cliente* obtiene el campo de clave **WebAccount_webaccountID** para relacionarse con el campo de clave de la entidad *WebAccount* **webaccountId**.
 
-Defina relaciones personalizadas en la página **Relaciones**. Cada relación consta de una entidad de origen (la entidad que posee la clave externa) y una entidad de destino (la entidad a la que apunta la clave externa de la entidad de origen).
+## <a name="non-editable-inherited-relationships"></a>Relaciones no editables heredadas
+
+Durante el proceso de ingestión de datos, el sistema verifica las fuentes de datos en busca de relaciones existentes. Si no existe ninguna relación, el sistema las crea automáticamente. Estos relaciones también se utilizan en procesos posteriores.
+
+## <a name="create-a-custom-relationship"></a>Crear una relación personalizada
+
+La relación consiste en una *entidad fuente* que contiene la clave externa y una *entidad objetivo* al que apunta la clave externa de la entidad de origen. 
 
 1. En las informaciones de público, vaya a **Datos** > **Relaciones**.
 
 2. Selecciona **Nueva relación**.
 
-3. En el panel **Agregar relación**, proporcione la siguiente información:
+3. En el panel **Nueva relación**, proporcione la siguiente información:
 
-   > [!div class="mx-imgBorder"]
-   > ![Escriba los detalles de la relación](media/relationships-add.png "Escriba los detalles de la relación")
+   :::image type="content" source="media/relationship-add.png" alt-text="Nuevo panel lateral de relaciones con campos de entrada vacíos.":::
 
-   - **Nombre de la relación**: Nombre que refleja el propósito de la relación (por ejemplo, **AccountWebLogs**).
+   - **Nombre de la relación**: nombre que refleja el propósito de la relación. Ejemplo: CustomerToSupportCase.
    - **Descripción**: Descripción de la relación.
-   - **Entidad de origen**: Seleccione la entidad que se utiliza como origen de la relación (por ejemplo, WebLog).
-   - **Cardinalidad** : Seleccione la cardinalidad de los registros de la entidad de origen. Por ejemplo, "muchos" significa que varios registros Weblog están relacionados con una WebAccount.
-   - **Campo de clave de origen**: Representa el campo de clave externa en la entidad de origen. Por ejemplo, WebLog tiene el campo de clave externa **accountId**.
-   - **Entidad de destino**: Seleccione la entidad que se utiliza como destino de la relación (por ejemplo, WebAccount).
-   - **Cardinalidad de destino**: Seleccione la cardinalidad de los registros de la entidad de destino. Por ejemplo, "uno" significa que varios registros Weblog están relacionados con una WebAccount.
-   - **Campo de clave de destino** : Este campo representa el campo de clave de la entidad de destino. Por ejemplo, WebAccount tiene el campo de clave **accountId**.
+   - **Entidad origen**: entidad que se utiliza como origen en la relación. Ejemplo: SupportCase.
+   - **Entidad destino**: entidad que se utiliza como destino en la relación. Ejemplo: Cliente.
+   - **Cardinalidad de fuente**: especifique la cardinalidad de la entidad fuente. La cardinalidad describe el número de elementos posibles en un conjunto. Siempre se relaciona con la cardinalidad del objetivo. Puedes elegir entre **Uno** y **Muchos**. Solo se admiten relaciones de varios a uno y de uno a uno.  
+     - Varios a uno: varios registros de origen pueden relacionarse con un registro de destino. Ejemplo: varios casos de soporte de un solo cliente.
+     - Uno a uno: un registro de origen único se relaciona con un registro de destino. Ejemplo: un ID de fidelidad para un solo cliente.
 
-> [!NOTE]
-> Solo se admiten relaciones de varios a uno y de uno a uno. Se pueden crear relaciones de varios a varios utilizando dos relaciones de varios a uno y una entidad de vínculo (una entidad que se utiliza para conectar la entidad de origen y la entidad de destino).
+     > [!NOTE]
+     > Puede crear una relación de varios a varios creando dos relaciones de varios a uno y una entidad de vinculación que conecte la entidad de origen y la entidad de destino.
 
-## <a name="delete-a-relationship"></a>Eliminar una relación
+   - **Cardinalidad de destino**: Seleccione la cardinalidad de los registros de la entidad de destino. 
+   - **Campo de clave de origen**: el campo de clave externa en la entidad de origen. Ejemplo: SupportCase podría usar CaseID como un campo de clave externa.
+   - **Campo clave de destino**: el campo clave de la entidad de destino. Ejemplo el cliente podría usar el campo clave **CustomerID** campo clave.
 
-1. En las informaciones de público, vaya a **Datos** > **Relaciones**.
+4. Seleccione **Guardar** para crear la relación personalizada.
 
-2. Active las casillas para las relaciones que desee eliminar.
+## <a name="view-relationships"></a>Vista de relaciones
 
-3. Seleccione **Eliminar** en la parte superior de la tabla **Relaciones**.
+La página Relaciones enumera todos los Relaciones que se han creado. Cada fila representa una relación, que también incluye detalles sobre la entidad de origen, la entidad de destino y la cardinalidad. 
 
-4. Confirme la eliminación.
+:::image type="content" source="media/relationships-list.png" alt-text="Lista de Relaciones y opciones en la barra de acciones de la página Relaciones.":::
 
-## <a name="next-step"></a>Paso siguiente
+Esta página ofrece un conjunto de opciones para relaciones existentes y nuevas: 
+- **Nueva relación**: [Crear una relación personalizada](#create-a-custom-relationship).
+- **Visualizador**: [Explore el visualizador de relaciones](#explore-the-relationship-visualizer) para ver un diagrama de red de relaciones existente y su cardinalidad.
+- **Filtrado por**: elija el tipo de Relaciones para mostrar en la lista.
+- **Buscar Relaciones**: utilice una búsqueda basada en texto en las propiedades de Relaciones.
 
-Las relaciones del sistema y personalizadas se utilizan para crear segmentos basados en varios orígenes de datos que ya no están en desconectados. Para más información, vea [Segmentos](segments.md).
+### <a name="explore-the-relationship-visualizer"></a>Explore el visualizador de relaciones
 
+El visualizador de relaciones muestra un diagrama de red de relaciones existente entre entidades conectadas y su cardinalidad.
+
+Para personalizar la vista, puede cambiar la posición de los cuadros arrastrándolos en el lienzo.
+
+:::image type="content" source="media/relationship-visualizer.png" alt-text="Captura de pantalla del diagrama de red del visualizador de relaciones con conexiones entre entidades relacionadas.":::
+
+Opciones disponibles: 
+- **Exportar como imagen**: guarda la vista actual como un archivo de imagen.
+- **Cambiar a diseño horizontal / vertical**: cambia la alineación de las entidades y relaciones.
+- **Editar**: actualiza las propiedades de relaciones personalizadas en el panel de edición y guarda los cambios.
+
+## <a name="manage-existing-relationships"></a>Administrar las relaciones existentes 
+
+En la página Relaciones, cada relación está representada por una fila. 
+
+Seleccione una relación y elija una de las siguientes opciones: 
+ 
+- **Editar**: actualiza las propiedades de relaciones personalizadas en el panel de edición y guarda los cambios.
+- **Eliminar**: elimina relaciones personalizadas.
+- **Vista**: ver relaciones creadas por el sistema y heredadas. 
+
+## <a name="next-step"></a>Siguiente paso
+
+Las relaciones del sistema y personalizadas se utilizan para [crear segmentos](segments.md) basados en varios orígenes de datos que ya no están en desconectados.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

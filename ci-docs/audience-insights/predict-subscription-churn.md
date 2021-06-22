@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906923"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095669"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
 
@@ -147,30 +147,9 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
        > [!div class="mx-imgBorder"]
        > ![Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.](media/subscription-churn-influentialfactors.PNG "Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.")
 
-## <a name="fix-a-failed-prediction"></a>Corregir una predicción fallida
+## <a name="manage-predictions"></a>Administrar predicciones
 
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione la predicción para cuyos registros de errores desea ver y seleccione **Registros**.
-   > [!div class="mx-imgBorder"]
-   > ![Vista de la barra de menú de resultados, incluidos los botones cerrar, editar modelo y registros](media/subscription-churn-logsbutton.PNG "Vista de la barra de menú de resultados, incluidos los botones cerrar, editar modelo y registros")
-1. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error para el que no hay suficientes datos para predecir con precisión se resuelve normalmente cargando datos adicionales.
-
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
-
-Las predicciones se actualizarán automáticamente en la misma [programación que actualizan sus datos](system.md#schedule-tab) definida en la configuración.
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-1. Seleccione **Eliminar**.
-
-> [!NOTE]
-> Eliminar una predicción eliminará su entidad de salida.
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

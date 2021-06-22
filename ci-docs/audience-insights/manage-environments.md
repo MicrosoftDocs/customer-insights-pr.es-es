@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888007"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259120"
 ---
 # <a name="manage-environments"></a>Administrar entornos
 
@@ -76,9 +76,9 @@ Para crear un entorno:
    > Solo admitimos cuentas de almacenamiento de Azure Data Lake Gen2 de la misma región de Azure que seleccionó al crear el entorno.
    > Solo admitimos cuentas de almacenamiento habilitadas para cuentas de Espacio de nombres jerárquicos (HNS) de Azure Data Lake Gen2.
 
-   - Para la opción de Azure Data Lake Storage Gen2, puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). El nombre del **Contenedor** no se puede cambiar y será "customerinsights".
+   - Para la opción de Azure Data Lake Storage Gen2, puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). El nombre del **Contenedor** no se puede cambiar y será `customerinsights`.
    
-   - Si quiere usar [predicciones](predictions.md), configurar el uso compartido de datos con aplicaciones y soluciones basadas en Microsoft Dataverse o habilitar la ingestión de datos en orígenes de datos locales, proporcione la dirección URL del entorno de Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
+   - Si quiere usar [predicciones](predictions.md), configurar el uso compartido de datos con Microsoft Dataverse o habilitar la ingestión de datos en orígenes de datos locales, proporcione la dirección URL del entorno de Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
 
      > [!NOTE]
      > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Para crear un entorno:
      > [!div class="mx-imgBorder"]
      > ![Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Se crearán archivos de datos y archivos model.json, y se agregarán a las subcarpetas correspondientes según el proceso que se ejecute.
+   Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Los archivos de datos y los archivos model.json se crearán y agregarán a carpetas según el nombre del proceso.
 
    Si crea varios entornos de Customer Insights y elige guardar las entidades de salida de esos entornos en su cuenta de almacenamiento, se crearán carpetas separadas para cada entorno, con ci_<environmentid> en el contenedor.
 
@@ -140,13 +140,13 @@ Puede editar algunos de los detalles de los entornos existentes.
 
 5. Opcionalmente, puede actualizar desde una conexión basada en clave de cuenta a una conexión basada en recursos o basada en suscripción. Una vez actualizado, no puede volver a la clave de cuenta después de la actualización. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). No puede cambiar la información de **Contenido** al actualizar la conexión.
 
-6. Opcionalmente, puede proporcionar una dirección URL del entorno Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Estas funcionalidades incluyen el uso compartido de datos con aplicaciones y soluciones basadas en Microsoft Dataverse, la ingesta de datos de orígenes datos locales, o el uso de [predicciones ](predictions.md). Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
+6. Opcionalmente, puede proporcionar una dirección URL del entorno Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Estas funcionalidades incluyen el uso compartido de datos con aplicaciones y soluciones basadas en Microsoft Dataverse, la ingesta de datos de orígenes datos locales, o el uso de [predicciones](predictions.md). Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
 
    > [!NOTE]
    > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
    > - La [predicción de valores que faltan en una entidad](predictions.md) actualmente no es compatible cuando habilita el uso compartido de datos con Data Lake gestionada de Microsoft Dataverse.
 
-   Una vez que habilita el uso compartido de datos con Microsoft Dataverse, se desencadenará una actualización completa de los orígenes de datos y otros procesos. Si los procesos están actualmente en ejecución y en cola, no verá la opción para habilitar el uso compartido de datos con Microsoft Dataverse. Puede esperar a que se completen esos procesos o cancelarlos para habilitar el uso compartido de datos. 
+   Tras habilitar el uso compartido de datos con Microsoft Dataverse, comenzará una actualización completa de los orígenes de datos y otros procesos. Si los procesos están actualmente en ejecución, no verá la opción para habilitar el uso compartido de datos con Microsoft Dataverse. Espere a que se completen esos procesos o cancelarlos para habilitar el uso compartido de datos. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
    
