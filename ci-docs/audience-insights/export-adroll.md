@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124386"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304855"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segmentos a AdRoll (versión preliminar)
 
@@ -28,11 +28,11 @@ Exporte segmentos de perfiles de clientes unificados a AdRoll y utilícelos para
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Puede exportar hasta 250 000 perfiles de clientes a AdRoll por exportación.
+- Puede exportar hasta 250 000 perfiles de cada vez para AdRoll.
 - No puede exportar segmentos con menos de 100 perfiles a AdRoll. 
 - La exportación a AdRoll está limitada a segmentos.
 - La exportación de hasta 250 000 perfiles a AdRoll puede tardar hasta 10 minutos en completarse. 
-- La cantidad de perfiles que puede exportar a AdRoll depende y está limitada a su contrato con AdRoll.
+- La cantidad de perfiles que puede exportar a AdRoll depende de su contrato con AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configurar la conexión a AdRoll
 
@@ -62,9 +62,9 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Para crear una exportación nueva, seleccione **Agregar destino**.
 
-1. En el campo **Conexión para exportación**, elija una conexión de la sección AdRoll. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+1. En el campo **Conexión para exportación**, elija una conexión de la sección AdRoll. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
 
-1. Indique su **identificador de anunciante de AdRoll**. Para más información, vea [Perfiles de anunciantes de AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Especifique su **Id. de anunciante de AdRoll**. Para obtener más información, consulte [Perfiles de anunciante de AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Es obligatorio para exportar segmentos a AdRoll.
 
@@ -74,7 +74,9 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 Guardar una exportación no ejecuta la exportación inmediatamente.
 
-La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). 
+
+Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos

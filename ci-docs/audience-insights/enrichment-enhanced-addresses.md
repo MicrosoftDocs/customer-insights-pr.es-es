@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965599"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305453"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
 
@@ -22,7 +22,7 @@ Las direcciones de sus datos pueden no estar estructuradas, estar incompletas o 
 
 ## <a name="how-we-enhance-addresses"></a>Cómo mejoramos las direcciones
 
-Nuestro modelo pasa por un proceso de dos pasos para mejorar una dirección. Primero, analiza la dirección para identificar sus componentes y los coloca en un formato estructurado. Luego, usamos inteligencia artificial para corregir, completar y estandarizar los valores en la dirección.
+Nuestro modelo pasa por un proceso de dos pasos para mejorar una dirección. Primero, analiza la dirección para identificar sus componentes y los coloca en un formato estructurado. Posteriormente, usamos la IA para corregir, completar y estandarizar los valores en la dirección.
 
 ### <a name="example"></a>Ejemplo
 
@@ -50,7 +50,7 @@ Las direcciones mejoradas solo funcionan con los valores que ya existen en los d
 2. Verificar si alguno de los valores, como los códigos postales o nombres de calles, es válido.
 3. Cambiar valores que no reconoce.
 
-El modelo utiliza técnicas basadas en el aprendizaje automático para mejorar las direcciones. Si bien aplicamos un umbral de confianza alto para cuando el modelo cambia un valor de entrada, como con cualquier modelo basado en ML, no se garantiza una precisión del 100 %.
+El modelo utiliza técnicas basadas en el aprendizaje automático para mejorar las direcciones. Si bien aplicamos un umbral de confianza alto para cuando el modelo cambie un valor de entrada, como con cualquier modelo basado en aprendizaje automático, no se garantiza una precisión al cien por cien.
 
 ## <a name="supported-countries-or-regions"></a>Países o regiones compatibles
 
@@ -76,7 +76,7 @@ Las direcciones deben contener un valor de país o región. No procesamos direcc
 1. Seleccione cómo se formatean las direcciones en el conjunto de datos. Escoja **Dirección de atributo único** si las direcciones de sus datos utilizan un solo campo. Escoja **Dirección de atributos múltiples** si las direcciones de sus datos utilizan más de un campo de datos.
 
    > [!NOTE]
-   > El país o la región son obligatorios, tanto en la dirección de atributo único como en la de atributos múltiples. Las direcciones que no contienen valores de país o región válidos o admitidos no se enriquecerán
+   > El país o región es obligatorio tanto en las direcciones de atributo único como en las de atributos múltiples. Las direcciones que no contienen valores de país o región válidos o admitidos no se enriquecerán.
 
 1.  Asigne los campos de direcciones de su entidad de cliente unificada.
 
@@ -98,6 +98,6 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
+Utilice los datos enriquecidos de sus clientes. Crear [segmentos](segments.md) y [medidas](measures.md) e incluso [exportar los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

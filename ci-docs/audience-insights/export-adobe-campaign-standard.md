@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760302"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305407"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Usar los segmentos de Customer Insights en Adobe Campaign Standard (vista previa)
 
-Como usuario de información de público para Dynamics 365 Customer Insights, es posible que haya creado segmentos para hacer que sus campañas de marketing sean más eficientes al dirigirse a públicos relevantes. Para utilizar un segmento de información de público en Adobe Experience Platform y aplicaciones como Adobe Campaign Standard, debe seguir los pasos descritos en este artículo.
+Como usuario de Audience Insights en Dynamics 365 Customer Insights, es posible que haya creado segmentos para hacer que sus campañas de marketing sean más eficientes al dirigirse a audiencias relevantes. Para utilizar un segmento de información de público en Adobe Experience Platform y aplicaciones como Adobe Campaign Standard, debe seguir los pasos descritos en este artículo.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de proceso de los pasos descritos en este artículo.":::
 
@@ -80,7 +80,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Para crear una nueva exportación, **Agregar exportación**.
 
-1. En el campo **Conexión para exportación**, elija una conexión de la sección Adobe Campaign. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Adobe Campaign. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
 
 1. Elija el segmento que desea exportar. En este ejemplo, es **ChurnProneCustomers**.
 
@@ -106,7 +106,7 @@ Ahora puede [exportar el segmento bajo demanda](export-destinations.md#run-expor
 > [!NOTE]
 > Asegúrese de que la cantidad de registros en el segmento exportado esté dentro del límite permitido de su licencia de Adobe Campaign Standard.
 
-Los datos exportados se almacenan en el contenedor de almacenamiento de Azure Blob que configuró anteriormente. La siguiente ruta de carpeta se crea automáticamente en su contenedor:
+Los datos exportados se almacenan en el contenedor Azure Blob Storage que configuró anteriormente. La siguiente ruta de carpeta se crea automáticamente en su contenedor:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -118,7 +118,7 @@ Cuando se exporta un segmento de información de público, contiene las columnas
 
 Para utilizar el segmento en Adobe Campaign Standard, necesitamos ampliar el esquema de perfil en Adobe Campaign Standard para incluir dos campos adicionales. Aprenda a [extender el recurso de perfil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con nuevos campos en Adobe Campaign Standard.
 
-En nuestro ejemplo, estos campos son *Nombre del segmento y Fecha del segmento (opcional).*
+En nuestro ejemplo, estos campos son *Nombre del segmento y Fecha del segmento (opcional)*.
 
 Usaremos estos campos para identificar los perfiles en Adobe Campaign Standard a los que queremos dirigirnos para esta campaña.
 
@@ -128,7 +128,7 @@ Si no hay otros registros en Adobe Campaign Standard, además de los que va a im
 
 Ahora que todo está en su lugar, debemos importar los datos preparados de audiencia de la información de audiencia en Adobe Campaign Standard para crear perfiles. Aprenda [cómo importar perfiles en Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) usando un flujo de trabajo.
 
-El flujo de trabajo de importación de la imagen siguiente se ha configurado para ejecutarse cada 8 horas y busca segmentos de información de público exportados (archivo .csv en Azure Blob Storage). El flujo de trabajo extrae el contenido del archivo .csv en un orden de columna específico. Este flujo de trabajo se ha creado para realizar una gestión básica de errores y garantizar que cada registro tenga una dirección de correo electrónico antes de hidratar los datos en Adobe Campaign Standard. El flujo de trabajo también extrae el nombre del segmento del nombre del archivo antes de insertarlo en los datos del perfil ACS.
+El flujo de trabajo de importación en la imagen a continuación se configuró para ejecutarse cada ocho horas y buscar segmentos de Audience Insights exportados (archivo .csv en Azure Blob Storage). El flujo de trabajo extrae el contenido del archivo .csv en un orden de columna específico. Este flujo de trabajo se ha creado para realizar una gestión básica de errores y garantizar que cada registro tenga una dirección de correo electrónico antes de hidratar los datos en Adobe Campaign Standard. El flujo de trabajo también extrae el nombre del segmento del nombre del archivo antes de insertarlo en los datos del perfil de Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Captura de pantalla de un flujo de trabajo de importación en la interfaz de usuario de Adobe Campaign Standard.":::
 

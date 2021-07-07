@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866428"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304947"
 ---
 # <a name="customer-activities"></a>Actividades del cliente
 
@@ -53,23 +53,23 @@ Sus orígenes de datos pueden incluir entidades con datos transaccionales y de a
 
 1. En el paso **Unificación de actividades**, elija el evento de la actividad y la hora de inicio de su actividad. 
    - **Campos obligatorios**
-      1. **Actividad del evento**: campo que es el evento para esta actividad.
-      2. **Marca de tiempo**: campo que representa la hora de inicio de su actividad.
+      - **Actividad del evento**: campo que es el evento para esta actividad.
+      - **Marca de tiempo**: campo que representa la hora de inicio de su actividad.
 
    - **Campos opcionales**
-      1. **Detalle adicional**: campo con información relevante para esta actividad.
-      2. **Icono**: icono que mejor representa este tipo de actividad.
-      3. **Dirección web**: campo que contiene una dirección URL con información sobre esta actividad. Por ejemplo, el sistema transaccional que origina esta actividad. Esta URL puede ser cualquier campo de origen de datos, o puede construirse como un nuevo campo utilizando una transformación de Power Query. Los datos de la dirección URL se almacenarán en la entidad *Actividad unificada*, que se puede consumir subsiguientemente utilizando las [API](apis.md).
+      - **Detalle adicional**: campo con información relevante para esta actividad.
+      - **Icono**: icono que mejor representa este tipo de actividad.
+      - **Dirección web**: campo que contiene una dirección URL con información sobre esta actividad. Por ejemplo, el sistema transaccional que origina esta actividad. Esta URL puede ser cualquier campo de origen de datos, o puede construirse como un nuevo campo utilizando una transformación de Power Query. Los datos de la dirección URL se almacenarán en la entidad *Actividad unificada*, que se puede consumir subsiguientemente utilizando las [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique los datos de la actividad del cliente en una entidad Actividad unificada.":::
 
 1. Seleccione **Siguiente** para ir al siguiente paso. Puede elegir **Terminar y revisar** para guardar la actividad ahora con el tipo de actividad configurado en **Otros**. 
 
-1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Suscripción* y *SalesOrderLine* se pueden asignar semánticamente después de aceptar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
+1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Suscripción* y *SalesOrderLine* se pueden asignar semánticamente después de acordar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
 
 1. Seleccione **Siguiente** para ir al siguiente paso. 
 
-1. En el paso **Revisar**, verifique sus selecciones. Vuelve a cualquiera de los pasos anteriores y actualice la información si es necesario.
+1. En el paso **Revisar**, verifique sus selecciones. Vuelva a cualquiera de los pasos anteriores y actualice la información si es necesario.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Revise los campos especificados para una actividad.":::
    
@@ -89,7 +89,7 @@ Las siguientes acciones están disponibles cuando selecciona una actividad.
 
 - **Editar**: abre la configuración de la actividad en el paso de revisión. Puede cambiar parte o toda la configuración actual desde este paso. Después de cambiar la configuración, seleccione **Guardar actividad** y luego seleccione **Ejecutar** para procesar los cambios.
 
-- **Cambiar nombre**: abre un cuadro de diálogo donde especificar un nombre diferente para la actividad seleccionada. Seleccione **Guardar** para aplicar los cambios.
+- **Cambiar nombre**: abre un cuadro de diálogo en el que puede introducir un nombre diferente para la actividad seleccionada. Seleccione **Guardar** para aplicar los cambios.
 
 - **Eliminar**: abre un cuadro de diálogo para confirmar la eliminación de la actividad seleccionada. También puede eliminar más de una actividad a la vez seleccionando las actividades y luego seleccionando el icono de eliminar. Seleccione **Eliminar** para confirmar la eliminación.
 

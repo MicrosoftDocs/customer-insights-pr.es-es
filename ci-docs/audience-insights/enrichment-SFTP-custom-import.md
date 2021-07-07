@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896302"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304671"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquezca los perfiles de los clientes con datos personalizados (versión preliminar)
 
-La importación personalizada del protocolo seguro de transferencia de archivos (SFTP) le permite importar datos que no tienen que pasar por el proceso de unificación de datos. Es una forma flexible, segura y fácil de incorporar sus datos. La importación personalizada SFTP se puede utilizar en combinación con la [Exportación SFTP](export-sftp.md) que le permite exportar los datos del perfil del cliente necesarios para el enriquecimiento. Luego, los datos se pueden procesar, enriquecer y la importación personalizada de SFTP se puede utilizar para devolver los datos enriquecidos a la capacidad de información de público de Dynamics 365 Customer Insights.
+La importación personalizada del Protocolo de transferencia segura de archivos (SFTP) le permite importar datos que no tienen que pasar por el proceso de unificación de datos. Es una forma flexible, segura y fácil de incorporar sus datos. La importación personalizada SFTP se puede utilizar en combinación con la [Exportación SFTP](export-sftp.md) que le permite exportar los datos del perfil del cliente necesarios para el enriquecimiento. Luego, los datos se pueden procesar y enriquecer, y la importación personalizada SFTP se puede utilizar para devolver los datos enriquecidos a la función Audiencie Insights de Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para configurar la importación personalizada de SFTP, se deben cumplir los siguientes requisitos previos:
 
-- Tiene el nombre de archivo y la ubicación (ruta) del archivo que se va a importar en el host SFTP.
+- Tiene el nombre del archivo y la ubicación (ruta) del archivo que se va a importar en el host SFTP.
 - Hay un archivo *model.json* que especifica [el esquema de Common Data Model](/common-data-model/) para que los datos se importen. Este archivo debe estar en el mismo directorio que el archivo que se va a importar.
 - Una conexión SFTP ya ha sido configurada por un administrador *o* tiene permisos de [administrador](permissions.md#administrator). Necesitará las credenciales de usuario, la dirección URL y el número de puerto para la ubicación SFTP desde la que desea importar los datos.
 
@@ -37,11 +37,11 @@ Para configurar la importación personalizada de SFTP, se deben cumplir los sigu
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Ventana de importación personalizada de SFTP.":::
 
-1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión** y eligiendo **Importación personalizada** en el menú desplegable.
+1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión** y eligiendo **Importación personalizada de SFTP** en la lista desplegable.
 
 1. Seleccione **Conectar a importación personalizada** para confirmar la conexión seleccionada.
 
-1.  Seleccione **Siguiente** y escriba el **Nombre del archivo** y la **Ruta** del archivo de datos que desea importar.
+1.  Seleccione **Siguiente** y especifique la **Ruta** y el **Nombre del archivo** del archivo de datos que desea importar.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de pantalla al especificar la ubicación de los datos.":::
 
@@ -55,21 +55,21 @@ Debe ser un administrador para configurar las conexiones. Seleccione **Agregar c
 
 1. Indique un nombre para la conexión el cuadro **Nombre ara mostrar**.
 
-1. Indique un nombre de usuario, contraseña y dirección URL de host válidos para el servidor STFP donde residen los datos que se importarán.
+1. Especifique un nombre de usuario y contraseña y una dirección URL de host válidos para el servidor SFTP en el que residen los datos que se importarán.
 
 1. Revise y proporcione su consentimiento para la **Privacidad y cumplimiento de datos**. Para ello, active la casilla **Acepto**.
 
 1. Seleccione **Verificar** para validar la configuración.
 
-1. Una vez que se ha completado la verificación, la conexión se puede guardar haciendo clic en **Guardar**.
+1. Una vez que se ha completado la verificación, la conexión se puede guardar seleccionando **Guardar**.
 
-> [!div class="mx-imgBorder"]
-   > ![Página de configuración de conexión de Experian](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian")
+   > [!div class="mx-imgBorder"]
+   > ![Página de configuración de conexión de Experian](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian").
 
 
 ## <a name="defining-field-mappings"></a>Definición de asignaciones de campos 
 
-El directorio que contiene el archivo que se va a importar en el servidor SFTP también debe contener un archivo *model.json*. Este archivo define el esquema que se utilizará para importar los datos. El esquema tiene que usar [Common Data Model](/common-data-model/) para especificar la asignación de campos. Un ejemplo sencillo de un archivo model.json tiene este aspecto:
+El directorio que contiene el archivo que se va a importar en el servidor SFTP también debe contener un archivo *model.json*. Este archivo define el esquema que se utilizará para importar los datos. El esquema tiene que usar [Common Data Model](/common-data-model/) para especificar la asignación de campo. Un ejemplo sencillo de un archivo model.json tiene este aspecto:
 
 ```
 {
@@ -123,6 +123,6 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) y [exporte los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
+Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md) y [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
-title: Enriquecimiento con el enriquecimiento de terceros Experian
-description: Información general sobre el enriquecimiento de terceros de Experian.
+title: Enriquecimiento con el enriquecimiento de terceros de Experian
+description: Información general sobre el enriquecimiento de Experian de terceros.
 ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,24 +9,28 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
+ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896394"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "6309841"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquezca los perfiles de los clientes con datos demográficos de Experian (vista previa)
 
-Experian es un líder mundial en informes crediticios y servicios de marketing para consumidores y empresas. Con los servicios de enriquecimiento de datos de Experian, puede desarrollar una comprensión más profunda de sus clientes enriqueciendo los perfiles de sus clientes con datos demográficos como el tamaño del hogar, los ingresos y más.
+Experian es líder mundial en informes crediticios y servicios de marketing para consumidores y empresas. Con los servicios de enriquecimiento de datos de Experian, puede desarrollar una comprensión más a fondo de sus clientes al enriquecer los perfiles de sus clientes con datos demográficos como el tamaño del hogar, los ingresos y más.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para configurar Experian deben cumplirse los siguientes requisitos previos:
+Para configurar Experian, deben cumplirse los siguientes requisitos previos:
 
-- Tener una suscripción de Experian activa. Para obtener una suscripción, [póngase en contacto con Experian](https://www.experian.com/marketing-services/contact) directamente. [Más información sobre el enriquecimiento de datos de Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+- Tiene una suscripción de Experian activa. Para obtener una suscripción, [póngase en contacto con Experian](https://www.experian.com/marketing-services/contact) directamente. [Más información sobre el enriquecimiento de datos de Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Una conexión de Experian ya ha sido configurada por un administrador *o* tiene permisos de [administrador](permissions.md#administrator). También necesita el identificador de usuario, el identificador de parte y el número de modelo para su cuenta de transporte seguro (ST) habilitada para SSH que haya creado Experian por usted.
+- Una conexión Experian ya ha sido configurada por un administrador *o* tiene permisos de [administrador](permissions.md#administrator). También necesita la identificación de usuario, la identificación de parte y el número de modelo para su cuenta de transporte seguro (ST) habilitada para SSH que haya creado Experian por usted.
+
+## <a name="supported-countriesregions"></a>Países/regiones admitidos
+
+Actualmente, solo admitimos el enriquecimiento de perfiles de clientes en los Estados Unidos.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
 
@@ -35,25 +39,25 @@ Para configurar Experian deben cumplirse los siguientes requisitos previos:
 1. Seleccione **Enriquecer mis datos** en la ventana de Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Ventana de Experian](media/experian-tile.png "Ventana de Experian")
+   > ![Experian mosaico](media/experian-tile.png "Experian tile")
    > 
 
-1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión** y eligiendo Experian en el menú desplegable. 
+1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión** y eligiendo Experian en la lista desplegable. 
 
-1. Seleccione **Conectarse a Experian** para confirmar la selección de la conexión.
+1. Seleccione **Conectar a Experian** para confirmar la selección de conexión.
 
-1.  Seleccione **Siguiente** y elija el **Conjunto de datos del cliente** que desea enriquecer con datos demográficos de Experian. Puede seleccionar la entidad **Cliente** para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
+1.  Seleccione **próximo** y elija el **conjunto de datos Cliente** que desee enriquecer con datos demográficos de Experian. Puede seleccionar la entidad **Cliente** para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captura de pantalla cuando se elige el conjunto de datos del cliente.":::
 
 1. Seleccione **Siguiente** y defina qué tipo de campos de sus perfiles unificados deben usarse para buscar datos demográficos coincidentes de Experian. Es obligatorio al menos uno de los campos **Nombre y dirección**, **Teléfono**, o **Correo electrónico**. Para una mayor precisión de correspondencia, se pueden agregar hasta otros dos campos. Esta selección afectará a los campos de asignación a los que tiene acceso en el siguiente paso.
 
     > [!TIP]
-    > Más atributos de identificadores clave enviados a Experian probablemente produzcan una tasa de coincidencia más alta.
+    > Si se envían más atributos de identificadores de claves enviados a Experian, probablemente se genere un índice de coincidencia más alto.
 
 1. Seleccione **Siguiente** para iniciar la asignación de campos.
 
-1. Defina qué campos de sus perfiles unificados deben usarse para buscar datos demográficos coincidentes de Experian. Los campos obligatorios están marcados.
+1. Definir qué tipo de campos de sus perfiles unificados deben usarse para buscar datos demográficos coincidentes de Experian. Los campos obligatorios están marcados.
 
 1. Proporcione un nombre para el enriquecimiento y un nombre para la entidad de salida.
 
@@ -61,21 +65,21 @@ Para configurar Experian deben cumplirse los siguientes requisitos previos:
 
 ## <a name="configure-the-connection-for-experian"></a>Configurar la conexión para Experian 
 
-Debe ser un administrador para configurar las conexiones. Seleccione **Agregar conexión** cuando configure un enriquecimiento *o* vaya a **Administración** > **Conexiones** y seleccione **Configurar** en la ventana de Experian.
+Debe ser un administrador para configurar las conexiones. Seleccione **Agregar conexión** al configurar un enriquecimiento *o* vaya a **Administración** > **Conexiones** y seleccione **Configurar** en la ventana de Experian.
 
 1. Seleccione **Comenzar**.
 
 1. Indique un nombre para la conexión el cuadro **Nombre ara mostrar**.
 
-1. Ingrese un identificador de usuario válido, un identificador de parte y un número de modelo para su cuenta de transporte seguro de Experian.
+1. Identifique un identificador de usuario, un identificador de parte de grupo y un número de modelo válidos para su cuenta de transporte seguro de Experian.
 
-1. Revise y proporcione su consentimiento para la **Privacidad y cumplimiento de datos**. Para ello, active la casilla **Acepto**.
+1. Revise y proporcione su consentimiento para **Privacidad y cumplimiento de datos** seleccionando **Estoy de acuerdo**.
 
 1. Seleccione **Verificar** para validar la configuración.
 
 1. Después de completar la verificación, seleccione **Guardar**.
    
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Panel de configuración de conexión de Experian.":::
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Panel de configuración de conexión de Experian":::.
 
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
 
@@ -87,11 +91,11 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
+Utilice los datos enriquecidos de sus clientes. Crear [segmentos](segments.md) y [medidas](measures.md) e incluso [exportar los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 
-Cuando habilita Dynamics 365 Customer Insights para transmitir datos a Experian, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluidos los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que Experian cumpla con las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Cuando habilite Dynamics 365 Customer Insights para transmitir datos a Experian, permita la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluyendo los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que Experian cumple las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimiento en cualquier momento para dejar de usar esta funcionalidad.
 
 

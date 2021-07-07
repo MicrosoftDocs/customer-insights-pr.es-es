@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049271"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304827"
 ---
 # <a name="define-and-manage-measures"></a>Definir y administrar medidas
 
-Las medidas le ayudan a comprender mejor los comportamientos de los clientes y el desempeño comercial. Se fijan en valores relevantes de los [perfiles unificados](data-unification.md). Por ejemplo, una empresa quiere ver el *gasto total por cliente* para comprender el historial de compra de un cliente individual o medir las *ventas totales de la empresa* para comprender los ingresos a nivel agregado en todo el negocio.  
+Las medidas le ayudan a comprender mejor los comportamientos de los clientes y el desempeño comercial. Se fijan en valores relevantes de los [perfiles unificados](data-unification.md). Por ejemplo, una empresa quiere ver el *gasto total por cliente* para comprender el historial o la medida de compra de un cliente individual de *ventas totales de la empresa* para comprender los ingresos a nivel agregado en toda la empresa.  
 
 Las medidas se crean utilizando el generador de medidas, una plataforma de consulta de datos con varios operadores y opciones de asignación sencillas. Le permite filtrar los datos, agrupar resultados, detectar [rutas de relaciones de entidades](relationships.md) y obtener una vista previa de los resultados.
 
@@ -69,12 +69,14 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
    1. Seleccione **Aplicar** para agregar los filtros para la medida.
 
 1. Para agregar dimensiones, seleccione la opción **Dimensión** en el área de configuración. Las dimensiones se mostrarán a modo de columnas en la entidad de los resultados de la medida.
+ 
    1. Seleccione **Editar dimensiones** para agregar los atributos de datos según los cuales desea agrupar los valores de medida. Por ejemplo, ciudad o género. De forma predeterminada, la dimensión *CustomerID* se selecciona crear *medidas a nivel de cliente*. Puede eliminar la dimensión predeterminada si desea crear *medidas a nivel empresarial*.
    1. Seleccione **Listo** para agregar dimensiones a la medida.
 
 1. Si hay valores en sus datos que necesita reemplazar con un número entero, por ejemplo, reemplace *NULL* con *0* y seleccione **Reglas**. Configure la regla y asegúrese de elegir solo números enteros como sustitución.
 
 1. Si hay varias rutas entre la entidad de datos que asignó y la entidad *Cliente*, debe elegir una de las [rutas de relación de entidad identificadas](relationships.md). Los resultados de la medición pueden variar según la ruta seleccionada. 
+   
    1. Seleccione **Preferencias de datos** y elija la ruta de la entidad que se debe utilizar para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
    1. Seleccione **Listo** para aplicar su selección. 
 
@@ -123,7 +125,7 @@ El siguiente procedimiento describe los pasos para crear una nueva medida usando
 
 1. Seleccione **Listo**.
 
-1. En la sección **Establecer período de tiempo**, defina el período de tiempo de los datos a utilizar. Elija si desea que la nueva medida cubra todo el conjunto de datos entero seleccionando **Todo el tiempo**. O si desea que la medida se enfoque en un **Período de tiempo específico**.
+1. En la sección **Establecer período de tiempo**, defina el período de tiempo de los datos a utilizar. Elija si desea que la nueva medida cubra todo el conjunto de datos seleccionando **Todo el tiempo** o si desea que la medida se centre en un **Período de tiempo específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que muestra la sección del período de tiempo al configurar una medida a partir de una plantilla.":::
 
@@ -142,12 +144,12 @@ El siguiente procedimiento describe los pasos para crear una nueva medida usando
 
 Puede encontrar la lista de medidas en la página **Medidas**.
 
-Encontrará información sobre el tipo de medida, el creador, la fecha de creación y el estado. Cuando selecciona una medida de la lista, puede obtener una vista previa del resultado y descargar un archivo .CSV.
+Encontrará información sobre el tipo de medida, el creador, la fecha de creación y el estado. Cuando selecciona una medida de la lista, puede obtener una vista previa del resultado y descargar un archivo CSV.
 
 Para actualizar todas sus medidas al mismo tiempo, seleccione **Actualizar todo** sin seleccionar una medida específica.
 
 > [!div class="mx-imgBorder"]
-> ![Acciones para gestionar medidas individuales](media/measure-actions.png "Acciones para gestionar medidas individuales")
+> ![Acciones para gestionar medidas individuales](media/measure-actions.png "Acciones para gestionar medidas individuales.").
 
 Seleccione una medida de la lista para las siguientes opciones:
 
@@ -159,11 +161,11 @@ Seleccione una medida de la lista para las siguientes opciones:
 - **Activar** o **Desactivar**. Las medidas inactivas no se actualizarán durante una [actualización programada](system.md#schedule-tab).
 
 > [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
+> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, la última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
 
 ## <a name="next-step"></a>Siguiente paso
 
-Puede utilizar medidas existentes para crear [un segmento de cliente](segments.md).
+Puede utilizar medidas existentes para crear [un segmento de clientes](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

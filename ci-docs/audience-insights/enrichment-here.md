@@ -1,5 +1,5 @@
 ---
-title: Enriquecimiento con el enriquecimiento de terceros HERE Technologies
+title: Enriquecimiento con el enriquecimiento de terceros de HERE Technologies
 description: Información general sobre el enriquecimiento de terceros HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896072"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305315"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimiento de perfiles de clientes con HERE Technologies (versión preliminar)
 
@@ -26,7 +26,7 @@ Para configurar los enriquecimientos de HERE Technologies, se deben cumplir los 
 
 - Debe disponer de una suscripción activa de HERE Technologies. Para obtener una suscripción, puede [registrarse aquí](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) o [ponerse en contacto con HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) directamente. [Obtenga más información sobre el enriquecimiento de ubicación de HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Hay una [conexión](connections.md) a HERE disponible *o* tiene permisos de [administrador](permissions.md#administrator) y la clave API de HERE Technologies.
+- Se encuentra disponible una [conexión](connections.md) a HERE *o* tiene permisos de [Administrador](permissions.md#administrator) y la clave API de HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
 
@@ -37,7 +37,7 @@ Para configurar los enriquecimientos de HERE Technologies, se deben cumplir los 
    > [!div class="mx-imgBorder"]
    > ![Mosaico de HERE Technologies](media/HERE-tile.png "Mosaico de HERE Technologies")
 
-1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión**. Elija **HERE Technologies** desde el menú desplegable. 
+1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión**. Seleccione **HERE Technologies** en la lista desplegable. 
 
 1. Seleccione **Conectarse a HERE Technologies** para confirmar la selección.
 
@@ -66,13 +66,13 @@ Debe ser un administrador para configurar las conexiones. Seleccione **Agregar c
 
 1. Proporcione una clave API de HERE Technologies válida.
 
-1. Revise y proporcione su consentimiento para la **Privacidad y cumplimiento de datos**. Para ello, active la casilla **Acepto**.
+1. Revise y proporcione su consentimiento para **Privacidad y cumplimiento de datos** seleccionando **Estoy de acuerdo**.
 
 1. Seleccione **Verificar** para validar la configuración.
 
 1. Después de completar la verificación, seleccione **Guardar**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Página de configuración de la conexión de HERE Technologies](media/enrichment-HERE-connection.png "Página de configuración de la conexión de HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
@@ -85,7 +85,7 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
+Utilice los datos enriquecidos de sus clientes. Crear [segmentos](segments.md) y [medidas](measures.md) e incluso [exportar los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

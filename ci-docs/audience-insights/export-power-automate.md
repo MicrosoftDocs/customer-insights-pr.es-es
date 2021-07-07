@@ -1,7 +1,7 @@
 ---
 title: Conector para Power Automate | Microsoft Docs
 description: Crear flujos en Microsoft Power Automate desde Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976109"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305085"
 ---
 # <a name="power-automate-connector-preview"></a>Conector de Power Automate (vista previa)
 
@@ -28,12 +28,13 @@ Utilice desencadenadores para crear flujos de nube y automatizar tareas repetiti
 - Desencadenador cuando una actualización de origen de datos se realiza correctamente.
 - Desencadenador cuando se cruza un umbral en un segmento. El desencadenador se limita a cruzar por encima del umbral.
 - Desencadenador cuando se cruza un umbral en una medida empresarial. Solo se admiten medidas empresariales sin dimensión. El desencadenador se limita a cruzar por encima del umbral.
-- Desencadene cuando se completa una actualización (fuentes de datos, segmentos, medidas, ...).
+- Desencadene cuando se completa una actualización (orígenes de datos, segmentos, medidas,...).
 - Se desencadena cuando se completa una actualización del proceso de unificación (mapa, coincidencia, fusión).
 
 [Configurar los desencadenadores en Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Acciones de Power Automate
+
 El conector Power Automate proporciona otras acciones además de los desencadenantes disponibles. Para obtener más información, vea el [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Crea un flujo de Power Automate

@@ -1,7 +1,7 @@
 ---
 title: Integrar datos web a partir de información sobre la participación con las informaciones de público
 description: Transmita información web sobre los clientes, desde la información sobre la participación hasta las informaciones de público.
-ms.date: 12/17/2020
+ms.date: 06/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896440"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305039"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrar datos web a partir de información sobre la participación con las informaciones de público
 
-Los clientes suelen realizar sus transacciones diarias en línea a través de sitios web. La funcionalidad de información sobre participación de Dynamics 365 Customer Insights es un práctico método para integrar datos web como fuente. Además de los datos transaccionales, demográficos o de comportamiento, podemos ver actividades en la web en perfiles de clientes unificados. Podemos usar este perfil para obtener información adicional como segmentos, medidas o predicciones para la activación del público.
+Los clientes suelen realizar sus transacciones diarias en línea a través de sitios web. La función de conocimientos sobre la interactuación (vista previa) en Dynamics 365 Customer Insights es una solución práctica para integrar los datos web como origen. Además de los datos transaccionales, demográficos o de comportamiento, podemos ver actividades en la web en perfiles de clientes unificados. Podemos usar estos perfiles para obtener conocimientos adicional como segmentos, medidas o predicciones para la activación de público.
 
 En este artículo se describen los pasos para transmitir los datos de la actividad web de sus clientes de la información sobre participación a su entorno existente de informaciones de público.
 
@@ -30,30 +30,30 @@ Ahora queremos saber si un cliente visita nuestras propiedades web y comprende s
 
 Para integrar los datos a partir de la información sobre la participación, se deben cumplir algunos requisitos previos: 
 
-- Integre el SDK de información sobre la participación en su sitio web. Para obtener más información, consulte [Empezar a utilizar el SDK web](../engagement-insights/instrument-website.md).
-- La exportación de eventos web a partir de la información sobre participación requiere acceso a una cuenta de almacenamiento de ADLS Gen 2 que se utilizará para ingerir los datos de eventos web a las informaciones de público. Para obtener más información, consulte [Exportar eventos](../engagement-insights/export-events.md).
+- Integre el SDK de información sobre la participación en su sitio web. Para obtener más información, consulte [Información general para desarrolladores](../engagement-insights/developer-resources.md).
+- La exportación de eventos web a partir de conocimientos sobre la interactuación requiere acceso a una cuenta de Azure Data Lake Storage que se utilizará para ingerir los datos de eventos web en Audience Insights. Para obtener más información, consulte [Exportar eventos](../engagement-insights/export-events.md).
 
 ## <a name="configure-refined-events-in-engagement-insights"></a>Configurar eventos refinados en la información sobre participación
 
-Después de que un Administrador implemente un sitio web con el SDK de información sobre participación, se recopilan los *eventos básicos* cuando un usuario visualiza una página web o hace clic en algún lugar. Los eventos básicos suelen contener numerosos detalles. Dependiendo de su caso de uso, solo necesitará un subconjunto de los datos en un evento básico. Las estadísticas de participación le permiten crear *eventos refinados* que contienen solo las propiedades de un evento básico que seleccione.     
+Después de que un administrador instrumente un sitio web con el SDK de estadísticas de interactuación, se recopilan *eventos base* cuando un usuario ve una página web o hace clic en algún lugar. Los eventos básicos suelen contener numerosos detalles. Dependiendo de su caso de uso, solo necesitará un subconjunto de los datos en un evento básico. Las estadísticas de participación le permiten crear *eventos refinados* que contienen solo las propiedades de un evento básico que seleccione.     
 
 Para obtener más información, consulte [Crear y modificar eventos refinados](../engagement-insights/refined-events.md).
 
 Consideraciones al crear eventos refinados: 
 
-- Proporcione un nombre descriptivo para el evento refinado. Se utilizará como nombre de actividad en las informaciones de público.
+- Proporcione un nombre descriptivo para el evento refinado. Se utilizará como nombre de actividad en Audiencia Insights.
 - Seleccione al menos las siguientes propiedades para crear una actividad en las informaciones de público: 
-    - Signal.Action.Name: para indica los detalles de la actividad
+    - Signal.Action.Name: indica los detalles de la actividad.
     - Signal.User.Id: se usa para asignarse con el Id. de cliente.
-    - Signal.View.Uri: se usa como dirección web como base para segmentos o medidas
-    - Signal.Export.Id: se usa como clave principal para eventos
-    - Signal.Timestamp: para determinar la fecha y hora de la actividad
+    - Signal.View.Uri: se usa como dirección web como base para segmentos o medidas.
+    - Signal.Export.Id: se utiliza como clave principal para eventos.
+    - Signal.Timestamp: determina la fecha y hora de la actividad de la actividad.
 
 Seleccione los filtros para centrarse en los eventos y las páginas que son importantes para su caso de uso. En este ejemplo, usaremos el nombre de la acción "Promoción por correo electrónico".
 
 ## <a name="export-the-refined-web-events"></a>Exportar los eventos web refinados 
 
-Después de definir el evento refinado, debe configurar la exportación de los datos del evento a una instancia de Azure Data Lake Storage, que se puede configurar como origen de datos para la ingesta de informaciones de público. Las exportaciones se producen constantemente a medida que los eventos fluyen desde la propiedad web.
+Después de definir el evento refinado, debe configurar la exportación de los datos del evento a Azure Data Lake Storage, que se puede configurar como origen de datos para la ingesta en Audience Insights. Las exportaciones se producen constantemente a medida que los eventos fluyen desde la propiedad web.
 
 Para obtener más información, consulte [Exportar eventos](../engagement-insights/export-events.md).
 
@@ -61,7 +61,7 @@ Para obtener más información, consulte [Exportar eventos](../engagement-insigh
 
 Ahora que ha definido el evento refinado y configurado su exportación, pasamos a la ingesta de datos en informaciones de público. Debe crear un nuevo origen de datos basado en una carpeta de Common Data Model. Especifique los detalles de la cuenta de almacenamiento a la que exporta los eventos. En el archivo *default.cdm.json*, seleccione el evento refinado para ingerir y crear la entidad en las informaciones de público.
 
-Para más información, vea [Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake](connect-common-data-model.md)
+Para más información, vea [Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake](connect-common-data-model.md).
 
 
 ## <a name="relate-refined-event-data-as-an-activity-of-a-customer-profile"></a>Relacionar los datos de eventos refinados como una actividad de un perfil de cliente
@@ -80,19 +80,18 @@ Configure la nueva actividad con la siguiente asignación:
 
 - **Evento**: Signal.Name, nombre del evento que desea rastrear.
 
-- **Dirección web**: Signal.View.Uri que se refiere al URI de la página que creó el evento.
+- **Dirección web**: Signal.View.Uri se refiere a la URI de la página que creó el evento.
 
 - **Detalles**: Signal.Action.Name para representar la información a asociar con el evento. La propiedad seleccionada en este caso indica que el evento es para promoción por correo electrónico.
 
-- **Tipo de actividad**: en este ejemplo, elegimos el tipo de actividad WebLog existente. Esta selección es una opción de filtro útil para ejecutar modelos de predicción o crear segmentos basados en este tipo de actividad.
+- **Tipo de actividad**: en este ejemplo, elegimos el WebLog del tipo de actividad existente. Esta selección es una opción de filtro útil para ejecutar modelos de predicción o crear segmentos basados en este tipo de actividad.
 
-- **Definir relación**: este importante parámetro vincula la actividad a los perfiles de clientes existentes. **Signal.User.Id** es el identificador configurado en el SDK que se recopilará y que se relaciona con el identificador de usuario en otras fuentes de datos que se configuran en las informaciones de público. En este ejemplo, configuramos la relación entre Signal.User.Id y RetailCustomers:CustomerRetailId, que es la clave principal que se definió en el paso de asignación del proceso de unificación de datos.
-
+- **Definir relación**: este importante parámetro vincula la actividad a los perfiles de clientes existentes. **Signal.User.Id** es el identificador configurado en el SDK que se recopilará y que se relaciona con el identificador de usuario en otras fuentes de datos que se configuran en las informaciones de público. En este ejemplo, configuramos la relación entre Signal.User.Id y RetailCustomers:CustomerRetailId, que es la clave principal que se identificó en el paso de la asignación del proceso de unificación de datos.
 
 Después de procesar las actividades, puede revisar los registros de los clientes y abrir una tarjeta de cliente para ver las actividades a partir de la información sobre participación en la escala de tiempo. 
 
 > [!TIP]
-> Para encontrar un identificador de cliente que tenga una actividad de información sobre participación, vaya a **Entidades** y obtenga una vista previa de los datos para la entidad UnifiedActivity. ActivityTypeDisplay = WebLog contiene la actividad de información sobre participación configurada en el ejemplo anterior. Copie el identificador del cliente para uno de esos registros y para ese identificador en la página **Clientes**.
+> Para encontrar un identificador de cliente que tenga una actividad de información sobre participación, vaya a **Entidades** y obtenga una vista previa de los datos para la entidad UnifiedActivity. ActivityTypeDisplay = WebLog contiene la actividad de los conocimientos sobre la interactuación configurada en el ejemplo anterior. Copie el identificador del cliente para uno de esos registros y para ese identificador en la página **Clientes**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

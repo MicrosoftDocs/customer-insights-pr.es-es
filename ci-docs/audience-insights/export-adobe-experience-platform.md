@@ -1,6 +1,6 @@
 ---
 title: Exportar datos de Customer Insights a Adobe Experience Platform
-description: Descubra cómo utilizar los segmentos de información de público en Adobe Experience Platform.
+description: Aprenda a utilizar los segmentos de Audience Insights en Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760122"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305545"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Usar los segmentos de Customer Insights en Adobe Experience Platform (vista previa)
 
-Como usuario de información de público para Dynamics 365 Customer Insights, es posible que haya creado segmentos para hacer que sus campañas de marketing sean más eficientes al dirigirse a públicos relevantes. Para utilizar un segmento de información de público en Adobe Experience Platform y aplicaciones como Adobe Campaign Standard, debe seguir los pasos descritos en este artículo.
+Como usuario de Audience Insights en Dynamics 365 Customer Insights, es posible que haya creado segmentos para hacer que sus campañas de marketing sean más eficientes al dirigirse a audiencias relevantes. Para utilizar un segmento de información de público en Adobe Experience Platform y aplicaciones como Adobe Campaign Standard, debe seguir los pasos descritos en este artículo.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de proceso de los pasos descritos en este artículo.":::
 
@@ -55,9 +55,9 @@ Con nuestro público objetivo identificado, podemos configurar la exportación d
 
 1. Vaya a **Administrador** > **Conexiones**.
 
-1. Seleccione **Agregar conexión** y elija **Azure Blob Storage** o seleccione **Configurar** en la ventana **Azure Blob Storage**:
+1. Seleccione **Agregar conexión** y elija **Azure Blob Storage** para configurar la conexión o seleccione **Configurar** en la ventana **Azure Blob Storage** para configurar la conexión.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Mosaico de configuración para Azure Blob Storage."::: para configurar la conexión.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Mosaico de configuración para Azure Blob Storage."::: 
 
 1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
 
@@ -80,7 +80,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Para crear una nueva exportación, **Agregar exportación**.
 
-1. En el campo **Conexión para exportación**, elija una conexión de la sección Azure Blob Storage. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Azure Blob Storage. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
 
 1. Elija el segmento que desea exportar. En este ejemplo, es **ChurnProneCustomers**.
 
@@ -95,7 +95,7 @@ Ahora puede [exportar el segmento bajo demanda](export-destinations.md#run-expor
 > [!NOTE]
 > Asegúrese de que la cantidad de registros en el segmento exportado esté dentro del límite permitido de su licencia de Adobe Campaign Standard.
 
-Los datos exportados se almacenan en el contenedor de almacenamiento de Azure Blob que configuró anteriormente. La siguiente ruta de carpeta se crea automáticamente en su contenedor:
+Los datos exportados se almacenan en el contenedor Azure Blob Storage que configuró anteriormente. La siguiente ruta de carpeta se crea automáticamente en su contenedor:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -123,7 +123,8 @@ Tras definir la conexión de origen, [configure un flujo de datos](https://exper
 
 Para enviar el correo electrónico de esta campaña, usaremos Adobe Campaign Standard. Tras importar los datos a Adobe Experience Platform, necesitamos [crear un público](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) en Adobe Campaign Standard utilizando los datos en Adobe Experience Platform.
 
-Aprenda a [usar el constructor de segmentos](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) en Adobe Campaign Standard para definir un público basado en los datos de Adobe Experience Platform.
+
+Aprenda a [usar el constructor de segmentos](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) en Adobe Campaign Standard para definir un público basado en los datos de Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Crear y enviar el correo electrónico con Adobe Campaign Standard
 

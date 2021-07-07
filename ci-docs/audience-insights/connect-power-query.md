@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596934"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305912"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar un origen de datos de Power Query
 
@@ -72,7 +72,7 @@ Los conectores con una marca de verificación en la columna **Customer Insights 
 
 1. En informaciones del público, vaya a **Datos** > **Orígenes de datos**.
 
-2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea cambiar y seleccione **Editar** desde el menú desplegable.
+2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea cambiar y seleccione **Editar** en la lista desplegable.
 
    > [!div class="mx-imgBorder"]
    > ![Editar opción](media/edit-option-data-sources.png "Editar opción")

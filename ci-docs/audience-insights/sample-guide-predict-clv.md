@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129966"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306370"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de muestra de la predicción (CLV) del valor de por vida del cliente
 
@@ -123,9 +123,9 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-1. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
+1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
 
-1. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
+1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
 
    ![Unifique la coincidencia de comercio electrónico y fidelización.](media/unify-match-order.png)
 
@@ -133,9 +133,9 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 1. Agregue su primera condición con FullName.
 
-   - Para eCommerceContacts seleccione **FullName** en la lista desplegable.
-   - Para loyCustomers, seleccione **FullName** en la lista desplegable.
-   - Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
+   - Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
+   - Para loyCustomers, seleccione **FullName** en el menú desplegable.
+   - Seleccione el menú desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección, ...)**.
    - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 
 1. Introduzca el nombre **FullName, Email** para la nueva regla.

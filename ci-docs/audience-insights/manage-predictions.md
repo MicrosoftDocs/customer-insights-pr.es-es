@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095754"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315899"
 ---
 # <a name="manage-predictions"></a>Administrar predicciones
 
@@ -35,9 +35,6 @@ Este artículo analiza algunas de las tareas que comparten la mayoría de los es
 El informe de usabilidad de datos de entrada proporciona una vista consolidada de los errores y advertencias que pueden estar generando sus predicciones listas para usar. También ofrece recomendaciones sobre cómo mejorar el rendimiento del modelo.
 
 El informe está disponible después de que un modelo haya completado su proceso de formación. Se crea para cada modelo por separado, independientemente de si se completó correctamente o no.
-
-> [!NOTE]
-> Actualmente, esta función solo funciona para el modelo Transaction Churn.
 
 ### <a name="view-the-input-data-usability-report"></a>Ver informe de facilidad de uso de datos de entrada
 

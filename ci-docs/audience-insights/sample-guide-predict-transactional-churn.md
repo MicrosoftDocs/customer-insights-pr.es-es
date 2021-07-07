@@ -9,16 +9,16 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595447"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306141"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción (versión preliminar)
 
-Esta guía le llevará por un ejemplo completo de predicción de cancelación de transacción en Customer Insights, utilizando los datos de ejemplo que se proporcionan a continuación. Todos los datos utilizados en esta guía no son datos reales de clientes y forman parte del conjunto de datos Contoso que se encuentra en el entorno *Demostración* de su suscripción a Customer Insights.
+Esta guía le llevará por un ejemplo completo de predicción de cancelación de transacción en Customer Insights, utilizando los datos de ejemplo que se proporcionan a continuación. Todos los datos utilizados en esta guía no son datos reales del cliente y forman parte del conjunto de datos Contoso encontrado en el entorno *Demostración* de la suscripción a Customer Insights.
 
 ## <a name="scenario"></a>Escenario
 
@@ -109,9 +109,9 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-1. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
+1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
 
-1. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
+1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifique la coincidencia de comercio electrónico y fidelización.":::
 
@@ -119,8 +119,8 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 1. Agregue su primera condición con FullName.
 
-   * Para eCommerceContacts seleccione **FullName** en la lista desplegable.
-   * Para loyCustomers, seleccione **FullName** en la lista desplegable.
+   * Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
+   * Para loyCustomers, seleccione **FullName** en el menú desplegable.
    * Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
    * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 

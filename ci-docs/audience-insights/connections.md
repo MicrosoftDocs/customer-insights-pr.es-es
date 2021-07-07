@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896118"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304993"
 ---
 # <a name="connections-preview-overview"></a>Información general sobre conexiones (versión preliminar)
 
@@ -74,7 +74,9 @@ Al configurar o editar una conexión de exportación, usted elige qué usuarios 
 
 ## <a name="remove-a-connection"></a>Quitar una conexión
 
-Si los enriquecimientos o exportaciones utilizan la conexión que está quitando, primero debe desconectarlos o quitarlos. El cuadro de diálogo para quitar le llevará a los enriquecimientos o exportaciones relevantes. Los enriquecimientos y exportaciones que se han desconectado se vuelven inactivos. Se reactivan agregándoles otra conexión en la página [Enriquecimientos](enrichment-hub.md) o [Exportaciones](export-destinations.md).
+Si los enriquecimientos o exportaciones utilizan la conexión que está quitando, primero debe desconectarlos o quitarlos. El cuadro de diálogo para quitar le llevará a los enriquecimientos o exportaciones relevantes. 
+
+Los enriquecimientos y exportaciones que se han desconectado se vuelven inactivos. Se reactivan agregándoles otra conexión en la página [Enriquecimientos](enrichment-hub.md) o [Exportaciones](export-destinations.md).
 
 1. Vaya a **Administrador** > **Conexiones (versión preliminar)**.
 

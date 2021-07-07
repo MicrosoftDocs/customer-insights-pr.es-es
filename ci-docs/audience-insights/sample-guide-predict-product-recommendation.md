@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129920"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306187"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de recomendaciones de producto (versión preliminar)
 
@@ -105,9 +105,9 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-2. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
+2. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
 
-3. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
+3. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
 
    ![Unifique la coincidencia de comercio electrónico y fidelización.](media/unify-match-order.png)
 
@@ -115,8 +115,8 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 5. Agregue su primera condición con FullName.
 
-   - Para eCommerceContacts seleccione **FullName** en la lista desplegable.
-   - Para loyCustomers, seleccione **FullName** en la lista desplegable.
+   - Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
+   - Para loyCustomers, seleccione **FullName** en el menú desplegable.
    - Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
    - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595355"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306095"
 ---
 # <a name="segment-insights-preview"></a>Información detallada de segmentos (vista previa)
 
@@ -50,7 +50,7 @@ Seleccione una información para ver los resultados del análisis:
 
 - El número de miembros que se superponen a los segmentos seleccionados para el análisis.
 - El número de miembros incluidos en uno de los segmentos pero no en el resto de los segmentos.
-- Si seleccionó campos mientras configuraba el análisis de superposición, los encontrará en las pestañas correspondientes. Puede usar el menú desplegable de filtro para seleccionar cualquier nivel de atributo de interés y la tabla en la parte inferior mostrará los datos correspondientes.
+- Si seleccionó campos mientras configuraba el análisis de superposición, los encontrará en las pestañas correspondientes. Puede utilizar el menú desplegable de filtros para seleccionar cualquier nivel de atributo de interés y la tabla en la parte inferior mostrará los datos correspondientes.
 
 ## <a name="segment-differentiators"></a>Diferenciadores de segmentos
 

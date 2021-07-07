@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700689"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305679"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -72,7 +72,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
       > [!div class="mx-imgBorder"]
       > ![Panel de parámetros de salida del modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de salida del modelo")
 
-1. Seleccione el atributo correspondiente de la lista desplegable **Resultados de id. de cliente** que identifica a los clientes y seleccione **Guardar**.
+1. Seleccione el atributo correspondiente de la lista desplegable **Id. de cliente en los resultados** que identifica clientes y seleccione **Guardar**.
 
    > [!div class="mx-imgBorder"]
    > ![Relacionar los resultados con el panel de datos de clientes](media/intelligence-screen4-relatetocustomer.png "Relacionar los resultados con el panel de datos de clientes")
@@ -100,7 +100,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
       1. Seleccione el **Nombre del parámetro del almacén de datos de salida** para su canalización de prueba.
       1. Seleccione el **Nombre del parámetro de la ruta de salida** para su canalización de prueba.
 
-1. Seleccione el atributo correspondiente de la lista desplegable **Resultados de id. de cliente** que identifica a los clientes y seleccione **Guardar**.
+1. Seleccione el atributo correspondiente de la lista desplegable **Id. de cliente en los resultados** que identifica clientes y seleccione **Guardar**.
    Elija un atributo de la salida de inferencia con valores similares a la columna de identificador de cliente de la entidad Cliente. Si no tiene esa columna en su conjunto de datos, elija un atributo que identifique de forma exclusiva la fila.
 
 ## <a name="run-a-workflow"></a>Ejecutar un flujo de trabajo

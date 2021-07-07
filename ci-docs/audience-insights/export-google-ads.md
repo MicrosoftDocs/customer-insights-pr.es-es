@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976339"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305361"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
-Exporte segmentos de perfiles de clientes unificados a la lista de público de Google Ads y utilícelos para anunciar en Búsqueda de Google, Gmail, YouTube y la Red de visualización de Google. 
+Exporte segmentos de perfiles de clientes unificados a una lista de público de Google Ads y utilícelos para anunciar en la Google Search, Gmail, YouTube y la Red de Display de Google. 
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
 -   Tiene una [cuenta de Google Ads](https://ads.google.com/) y las credenciales de administrador correspondientes.
--   Tiene un [símbolo (token) de desarrollador de Google Ads aprobado](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Cumple los requisitos de la [Directiva de asignación de clientes](https://support.google.com/adspolicy/answer/6299717)
--   Cumple los requisitos de los [tamaños de listas de marketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Tiene un [símbolo (token) de desarrollador de Google Ads aprobado](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Cumple los requisitos de la [Directiva de asignación de clientes](https://support.google.com/adspolicy/answer/6299717).
+-   Cumple los requisitos de los [tamaños de listas de marketing](https://support.google.com/google-ads/answer/7558048).
 -   Hay públicos existentes en Google Ads y los id. correspondientes. Para más información, consulte [Audiencias de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Ha [configurado los segmentos](segments.md)
--   Los perfiles de clientes unificados en los segmentos exportados contienen campos que representan una dirección de correo electrónico, un nombre de pila y los apellidos
+-   Ha [configurado los segmentos](segments.md).
+-   Los perfiles de clientes unificados en los segmentos exportados contienen campos que representan una dirección de correo electrónico, un nombre de pila y los apellidos.
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
@@ -68,7 +67,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Para crear una exportación nueva, seleccione **Agregar destino**.
 
-1. En el campo **Conexión para exportación**, elija una conexión de la sección Google Ads. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Google Ads. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
 
 1. Introduzca su **[Id. de público de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** y seleccione **Conectar** para inicializar la conexión a Google Ads.
 
@@ -78,7 +77,9 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 Guardar una exportación no ejecuta la exportación inmediatamente.
 
-La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). 
+
+Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 
