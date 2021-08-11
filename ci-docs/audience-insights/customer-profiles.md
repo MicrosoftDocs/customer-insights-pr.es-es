@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304625"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554639"
 ---
 # <a name="customer-profiles"></a>Perfiles de clientes
 
@@ -23,7 +23,7 @@ La página **Clientes** muestra una vista combinada de sus clientes, basada en l
 Los clientes pueden ser individuos u organizaciones (versión preliminar). Cada perfil de cliente u organización está representado por una ventana. Seleccione una ventana para ver información adicional sobre ese cliente u organización específico. Utilice los controles de paginación en la parte inferior de la lista para ver registros adicionales.
 
 > [!div class="mx-imgBorder"] 
-> ![Perfiles de cliente B2C](media/profiles-customers.png "Perfiles de cliente B2C")
+> ![Perfiles de cliente B2C.](media/profiles-customers.png "Perfiles de cliente B2C")
 
 Organizaciones (vista previa)
 > [!div class="mx-imgBorder"] 
@@ -47,7 +47,7 @@ Puede filtrar clientes por los campos de entidad Perfil de cliente. Al igual que
 2. Active las casillas situadas junto a los atributos por los que desea filtrar clientes.
 
    > [!div class="mx-imgBorder"] 
-   > ![Perfiles de clientes](media/profiles-customers3.png "Perfiles de clientes")
+   > ![Perfiles de clientes.](media/profiles-customers3.png "Perfiles de clientes")
 
 3. Elimine sus filtros seleccionando **Limpiar filtros** en la página **Clientes**.
 

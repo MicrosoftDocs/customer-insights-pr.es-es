@@ -1,7 +1,7 @@
 ---
 title: Conector de Power BI
 description: Aprenda a usar el conector de Dynamics 365 Customer Insights en Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596060"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661123"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector para Power BI (vista previa)
 
@@ -39,7 +39,7 @@ Cree visualizaciones para sus datos con Power BI Desktop. Genere información ad
 
 1. En el cuadro de diálogo **Navegador**. puede ver la lista de todos los entornos a los que tiene acceso. Expanda un entorno y abra cualquiera de las carpetas (entidades, medidas, segmentos, enriquecimientos). Por ejemplo, abra la carpeta **Entidades** para ver todas las entidades que puede importar.
 
-   ![Navegador de conectores de Power BI](media/power-bi-navigator.png "Navegador de conectores de Power BI")
+   ![Navegador de conectores de Power BI.](media/power-bi-navigator.png "Navegador de conectores de Power BI")
 
 1. Seleccione las casillas de verificación junto a las entidades que quiere incluir y **Cargar**. Puede seleccionar varias entidades de múltiples entornos.
 
@@ -68,5 +68,11 @@ Puede identificar y eliminar las relaciones duplicadas.
 3. Elimine las relaciones duplicadas identificadas que haya.
 
 Después de eliminar las relaciones duplicadas, intente volver a configurar el conector de Power BI. El entorno debería estar disponible ahora.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Errores en los campos de fecha al cargar entidades en Power BI Desktop
+
+Al cargar entidades que contienen campos con un formato de fecha como MM/DD/AAAA, puede encontrar errores debidos a formatos de configuración regional no coincidentes. Esta discrepancia ocurre cuando el archivo de Power BI Desktop está configurado para otra configuración regional que no sea inglés (Estados Unidos), ya que los campos de fecha las conclusiones del público se guardan con el formato de EE. UU.
+
+El archivo de Power BI Desktop tiene una configuración regional única, que se aplica al recuperar datos. Para que se interpreten correctamente estos campos de fecha, establezca la configuración regional del archivo .BPI en inglés (Estados Unidos). [Aprenda a cambiar la configuración regional de un archivo de Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

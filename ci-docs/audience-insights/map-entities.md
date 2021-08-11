@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596014"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555144"
 ---
 # <a name="map-entities-and-attributes"></a>Correlacionar entidades y atributos
 
@@ -35,14 +35,14 @@ Para obtener más información sobre el flujo general de unificación de datos, 
 3. Seleccione las entidades y atributos que desea utilizar en las fases *coincidencia* y *combinación*. Puede seleccionar los atributos requeridos individualmente de una entidad o incluir todos los atributos de una entidad seleccionando la casilla **Incluir todos los campos** en el nivel de entidad. Se recomienda seleccionar al menos dos entidades para beneficiarse del proceso de unificación de datos.
 
    > [!div class="mx-imgBorder"]
-   > ![Ejemplo de agregar entidades](media/data-manager-configure-map-add-entities-example.png "Ejemplo de agregar entidades")
+   > ![Ejemplo de agregar entidades.](media/data-manager-configure-map-add-entities-example.png "Ejemplo de agregar entidades")
 
    En este ejemplo, agregamos las entidades **eCommerceContactos** y **loyCustomers**. Al elegir estas entidades, puede obtener información sobre cuáles de los clientes comerciales en línea son miembros del programa de fidelización.
    
    Puede buscar palabras clave en todos los atributos y entidades para seleccionar los atributos necesarios que desea asignar.
    
      > [!div class="mx-imgBorder"]
-   > ![Ejemplo de campos de búsqueda](media/data-manager-configure-map-search-fields-example.png "Ejemplo de campos de búsqueda")
+   > ![Ejemplo de campos de búsqueda.](media/data-manager-configure-map-search-fields-example.png "Ejemplo de campos de búsqueda")
 
 4. Seleccione **Aplicar** para confirmar sus selecciones.
 
@@ -55,7 +55,7 @@ Después de seleccionar sus entidades, la página **Mapa** enumera las entidades
 - **Tipo semántico de atributo**: Categorías de los atributos, como dirección de correo electrónico o nombre. Para usar modelos de IA para predicción inteligente de semántica, ahorrar tiempo y mejorar la precisión, configure **Asignación inteligente** a **Activada**. La asignación inteligente destaca la recomendación de semántica basada en IA en el campo **Tipo**. Si lo configura en **Desactivado**, verá nuestras recomendaciones de asignación regular. Puede seleccionar cualquier tipo semántico de la lista de opciones disponibles y anular la selección sugerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipo de atributo y predicción de semántica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo y predicción de semántica")
+> ![Tipo de atributo y predicción de semántica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo y predicción de semántica")
 
 También es posible agregar un tipo semántico personalizado. Seleccione el campo de tipo para un atributo y escriba el nombre de tipo semántico personalizado. De esta forma, también puede cambiar los tipos de atributos que el sistema identificó.
 
@@ -64,7 +64,7 @@ Todos los atributos para los que se identifica automáticamente un tipo semánti
 Los atributos que no se asignan automáticamente a un tipo semántico se agrupan en la sección **Definir los datos en los campos sin asignar**. Seleccione el campo de tipo semántico para los atributos sin asignar, o introduzca su nombre de tipo de atributo personalizado.
 
 > [!div class="mx-imgBorder"]
-> ![Clave principal y tipo de atributo](media/data-manager-configure-map-add-attributes.png "Clave principal y tipo de atributo")
+> ![Clave principal y tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Clave principal y tipo de atributo")
 
 > [!NOTE]
 > Un campo se debe asignar al tipo semántico Person.FullName para completar el nombre del cliente en la tarjeta del cliente. De lo contrario, las tarjetas de cliente aparecerán sin nombre. 
@@ -76,7 +76,7 @@ Los atributos que no se asignan automáticamente a un tipo semántico se agrupan
 2. En el panel **Editar campos**, agregue o quite atributos y entidades. Utilice la búsqueda o desplácese para buscar y seleccionar sus atributos y entidades de interés. No puede eliminar un atributo o una entidad si ya se han asociado.
 
    > [!div class="mx-imgBorder"]
-   > ![Agregar o quitar atributos](media/configure-data-map-edit.png "Agregar o quitar atributos")
+   > ![Agregar o quitar atributos.](media/configure-data-map-edit.png "Agregar o quitar atributos")
 
 3. Seleccione **Aplicar**.
 
@@ -96,7 +96,7 @@ Para las organizaciones (versión preliminar), el tipo de atributo debe asignars
 > [!div class="mx-imgBorder"]
 > ![Clave principal y tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Clave principal y tipo de atributo B2B")
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-step"></a>Siguiente paso
 
 Como parte del proceso de unificación de datos, vaya a la página **Coincidencia**. Visite [**Coincidencia**](match-entities.md) para obtener información sobre esta fase.
 

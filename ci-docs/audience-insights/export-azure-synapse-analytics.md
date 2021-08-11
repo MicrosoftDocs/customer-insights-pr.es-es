@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977398"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327385"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar datos a Azure Synapse Analytics (versión preliminar)
 
@@ -74,8 +74,10 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 1. Proporcione un **Nombre para mostrar** reconocible para la exportación y un **Nombre de base de datos**.
 
 1. Seleccione a qué entidades desea exportar Azure Synapse Analytics.
+   > [!NOTE]
+   > No se admiten orígenes de datos basados en una [carpeta de Common Data Model](connect-common-data-model.md).
 
-1. Seleccione **Guardar**.
+2. Seleccione **Guardar**.
 
 Guardar una exportación no ejecuta la exportación inmediatamente.
 

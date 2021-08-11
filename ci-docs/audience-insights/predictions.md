@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595922"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692548"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Complete sus datos parciales con predicciones
 
@@ -31,11 +31,11 @@ Las predicciones le permiten crear fácilmente valores de predicción que pueden
 
 Antes de que su organización pueda usar la característica de predicciones, se deben cumplir los siguientes requisitos previos:
 
-1. Tu organización tiene una instancia [establecida en Common Data Service](/ai-builder/build-model#prerequisites) y está en la misma organización que Customer Insights.
+1. Su organización tiene una instancia [configurada en Microsoft Dataverse](/ai-builder/build-model#prerequisites) y está en la misma organización que Customer Insights.
 
-2. Tu entorno está unido a tu instancia de Common Data Service.
+2. Su entorno de conclusiones del público está conectado a su instancia de Dataverse.
 
-Si está [creando un nuevo entorno](manage-environments.md), configúrelo en el cuadro de diálogo **Crear un entorno** y seleccione **Avanzado**. Si ya ha creado un entorno, vaya a su configuración y seleccione **Avanzado**. De cualquier manera, en la sección **Usar predicciones**, introduzca la URL de instancia de Common Data Service a la que desea adjuntar su entorno.
+Si está [creando un nuevo entorno](get-started-paid.md), configúrelo en el cuadro de diálogo **Crear un entorno** y seleccione **Avanzado**. Si ya ha creado un entorno, vaya a su configuración y seleccione **Avanzado**. De cualquier manera, en la sección **Usar predicciones**, introduzca la URL de instancia de Dataverse a la que desea adjuntar su entorno.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Crear una predicción en la entidad de cliente
 
@@ -47,17 +47,17 @@ Si está [creando un nuevo entorno](manage-environments.md), configúrelo en el 
 
 4. Busque el nombre del atributo para el que desea predecir valores y, a continuación, seleccione el icono **Información general** en la columna **Resumen**.
    > [!div class="mx-imgBorder"]
-   > ![Icono de visión general](media/intelligence-overviewicon.png "Icono de visión general")
+   > ![Icono de visión general.](media/intelligence-overviewicon.png "Icono de visión general")
 
 5. Si hay una alta tasa de valores que faltan para el atributo, seleccione **Predecir valores que faltan** para continuar con la predicción.
    > [!div class="mx-imgBorder"]
-   > ![Estado de resumen con el botón predecir valores que faltan](media/intelligence-overviewpredictmissingvalues.png "Estado de resumen con el botón predecir valores que faltan")
+   > ![Estado de resumen con el botón predecir valores que faltan.](media/intelligence-overviewpredictmissingvalues.png "Estado de resumen con el botón predecir valores que faltan")
 
 6. Proporcione un **Nombre para mostrar** y un **Nombre de entidad de salida** para los resultados de la predicción.
 
 7. Una lista de opciones rellenada previamente mostrará dónde puede asignar los valores a una categoría de predicción. En este caso, las únicas opciones de categoría serán 0 o 1, ya que se asignan a la naturaleza verdadera/falsa o binaria de la predicción. En la columna Categoría, asigne los valores de campo que desea clasificar como "0" en la predicción final a "0" y los elementos que desea clasificar como "1" en la predicción final a "1".
    > [!div class="mx-imgBorder"]
-   > ![Ejemplo que muestra valores de campo asignados a categorías](media/intelligence-categorymapping.png "Ejemplo que muestra valores de campo asignados a categorías")
+   > ![Ejemplo que muestra valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Ejemplo que muestra valores de campo asignados a categorías")
 
 8. Seleccione **Listo** y se procesará la predicción. El procesamiento llevará algún tiempo, dependiendo del tamaño y la complejidad de los datos. Los resultados estarán disponibles en una nueva entidad basada en el **Nombre de entidad de salida** de la predicción que ha creado.
 
@@ -77,7 +77,7 @@ Como parte de este flujo, elegirá un atributo específico en el que basar el se
 
 5. Si el segmento que ha creado tiene datos incompletos en el campo de origen, puede elegir predecir los valores que faltan.
    > [!div class="mx-imgBorder"]
-   > ![Botón Predicción](media/segments-predictoption.png "Botón Predicción")
+   > ![Botón Predicción.](media/segments-predictoption.png "Botón Predicción")
 
 6. Proporcione un **Nombre para mostrar** y un **Nombre de entidad de salida** para los resultados de la predicción.
 
@@ -93,7 +93,7 @@ Como parte de este flujo, elegirá un atributo específico en el que basar el se
 
 4. Verá una serie de puntos de datos en la vista de la predicción.
    > [!div class="mx-imgBorder"]
-   > ![Página de predicciones](media/intelligence-predictionsviewpage.png "Página de predicciones")
+   > ![Página de predicciones.](media/intelligence-predictionsviewpage.png "Página de predicciones")
 
    - **Valores de predicción** muestra la asignación que creó durante la fase de asignación de valor de campo a categoría. Estos son los valores del conjunto de datos que se han asignado a una categoría específica.
    -**Principales influencias** son los factores del conjunto de datos que probablemente influyeron en la confianza de la predicción de que el valor de campo se asignara a una categoría específica.
@@ -139,7 +139,7 @@ La siguiente ejecución de la predicción usará el modelo actualizado que ha cr
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Si no puede completar el proceso de Common Data Service de conexión debido a un error, puede intentar completar el proceso manualmente. Hay dos problemas conocidos que pueden producirse en el proceso de conexión:
+Si no puede completar el proceso de Dataverse de conexión debido a un error, puede intentar completar el proceso manualmente. Hay dos problemas conocidos que pueden producirse en el proceso de conexión:
 
 - La solución de complemento de tarjeta de cliente no está instalada.
     1. Complete las instrucciones para [instalar y configurar la solución](customer-card-add-in.md).

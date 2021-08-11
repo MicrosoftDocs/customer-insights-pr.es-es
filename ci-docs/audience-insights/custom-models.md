@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305679"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554869"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -42,7 +42,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 1. Asigne el modelo personalizado a un nombre reconocible en el campo **Nombre**.
 
    > [!div class="mx-imgBorder"]
-   > ![Captura de pantalla del Nuevo panel de flujo de trabajo](media/new-workflowv2.png "Captura de pantalla del Nuevo panel de flujo de trabajo")
+   > ![Captura de pantalla del panel Nuevo flujo de trabajo.](media/new-workflowv2.png "Captura de pantalla del Nuevo panel de flujo de trabajo")
 
 1. Seleccione la organización que contiene el servicio web en **Inquilino que contiene su servicio web**.
 
@@ -59,7 +59,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
    > El flujo de trabajo del modelo personalizado aplicará heurística para asignar los campos de entrada del servicio web a los atributos de la entidad según el nombre y el tipo de datos del campo. Verá un error si un campo de servicio web no se puede asignar a una entidad.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar un flujo de trabajo](media/intelligence-screen2-updated.png "Configurar un flujo de trabajo")
+   > ![Configurar un flujo de trabajo.](media/intelligence-screen2-updated.png "Configurar un flujo de trabajo")
 
 1. En el paso **Parámetros de salida del modelo**, establezca las siguientes propiedades:
    - Machine Learning Studio (clásico)
@@ -70,12 +70,12 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
       1. Seleccione el **Nombre del parámetro de la ruta de salida** de su canalización por lotes desde el menú desplegable.
 
       > [!div class="mx-imgBorder"]
-      > ![Panel de parámetros de salida del modelo](media/intelligence-screen3-outputparameters.png "Panel de parámetros de salida del modelo")
+      > ![Panel de parámetros de salida del modelo.](media/intelligence-screen3-outputparameters.png "Panel de parámetros de salida del modelo")
 
 1. Seleccione el atributo correspondiente de la lista desplegable **Id. de cliente en los resultados** que identifica clientes y seleccione **Guardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Relacionar los resultados con el panel de datos de clientes](media/intelligence-screen4-relatetocustomer.png "Relacionar los resultados con el panel de datos de clientes")
+   > ![Relacionar los resultados con el panel Datos de clientes.](media/intelligence-screen4-relatetocustomer.png "Relacionar los resultados con el panel de datos de clientes")
 
 1. Verá la pantalla **Flujo de trabajo guardado** con detalles sobre el flujo de trabajo.    
    Si configuró un flujo de trabajo para una canalización de Azure Machine Learning, la información de público se adjuntará al espacio de trabajo que contiene la canalización. La información de público obtendrá un rol de **Colaborador** en el área de trabajo de Azure.

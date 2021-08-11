@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059609"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692226"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
@@ -25,7 +25,7 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
 ## <a name="prerequisites"></a>Requisitos previos
 
 - El complemento solo funciona con aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
-- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de conclusiones del público, deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Common Data Service](connect-power-query.md).
+- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de conclusiones del público, deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md).
 - Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en las conclusiones del público para poder ver los datos.
 - Se requieren [Capacidades de búsqueda y filtrado configuradas](search-filter-index.md) en las conclusiones del público para que funcione la búsqueda de datos.
 - Cada control de complemento se basa en datos específicos de las conclusiones del público:
@@ -50,7 +50,7 @@ La solución puede tardar un tiempo en instalarse en su entorno.
 1. Seleccione el vínculo del **Nombre para mostrar** para la solución del **Complemento de la tarjeta de cliente Dynamics 365 Customer Insights (versión preliminar)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Seleccionar nombre para mostrar](media/select-display-name.png "Seleccionar nombre para mostrar")
+   > ![Seleccionar nombre para mostrar.](media/select-display-name.png "Seleccionar nombre para mostrar")
 
 1. Seleccione **iniciar sesión** y especifique las credenciales para la cuenta de administrador que usa para configurar Customer Insights.
 
@@ -64,7 +64,7 @@ La solución puede tardar un tiempo en instalarse en su entorno.
    - Para asignarse a una cuenta, seleccione el campo en la entidad cliente que coincida con el id. de su entidad de cuenta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo de identificador de contacto](media/contact-id-field.png "Campo de identificador de contacto")
+   > ![Campo de identificador de contacto.](media/contact-id-field.png "Campo de identificador de contacto")
 
 1. Seleccione **Guardar configuración** para guardar la configuración.
 
@@ -83,7 +83,7 @@ La solución puede tardar un tiempo en instalarse en su entorno.
 1. Seleccione el formulario de contacto al que desea agregar los controles de tarjeta de cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccionar formulario de contacto](media/contact-active-forms.png "Seleccionar formulario de contacto")
+    > ![Seleccionar formulario de contacto.](media/contact-active-forms.png "Seleccionar formulario de contacto")
 
 1. Para agregar un control demográfico, en el editor de formularios, arrastre cualquier campo desde el **Explorador de campos** hasta el lugar en el que desee que aparezca el control demográfico.
 
@@ -110,7 +110,7 @@ El complemento de tarjeta de cliente no se actualiza automáticamente. Para actu
 
 1. Seleccione la opción **Aplicar actualización de la solución** en la barra de acciones.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizar la solución en el área de personalización de las aplicaciones de Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizar la solución en el área de personalización de las aplicaciones de Dynamics 365.":::
 
 1. Después de iniciar el proceso de actualización, verá un indicador de carga hasta que se complete la actualización. Si no hay una versión más reciente, la actualización mostrará un mensaje de error.
 

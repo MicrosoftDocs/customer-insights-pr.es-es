@@ -1,7 +1,7 @@
 ---
 title: Abordar el enriquecimiento de la mejora
 description: Enriquezca y normalice la información de direcciones de los perfiles de los clientes con los modelos de Microsoft.
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305453"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692274"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
 
@@ -47,17 +47,21 @@ La información de la dirección puede tener un formato no estándar y contener 
 Las direcciones mejoradas solo funcionan con los valores que ya existen en los datos de direcciones ingeridos. El modelo no hace lo siguiente: 
 
 1. Verificar si la dirección es una dirección válida.
-2. Verificar si alguno de los valores, como los códigos postales o nombres de calles, es válido.
-3. Cambiar valores que no reconoce.
+2. Verificar si alguno de los valores, como los códigos postales o los nombres de calles, son válidos.
+3. Cambiar los valores que no reconoce.
 
 El modelo utiliza técnicas basadas en el aprendizaje automático para mejorar las direcciones. Si bien aplicamos un umbral de confianza alto para cuando el modelo cambie un valor de entrada, como con cualquier modelo basado en aprendizaje automático, no se garantiza una precisión al cien por cien.
 
 ## <a name="supported-countries-or-regions"></a>Países o regiones compatibles
 
-Actualmente admitimos direcciones enriquecidas en estos países o regiones: 
+Actualmente admitimos direcciones mejoradas en estos países o regiones: 
 
 - Australia
 - Canadá
+- Francia
+- Alemania
+- Italia
+- Japón
 - Reino Unido
 - Estados Unidos
 

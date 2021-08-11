@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305912"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554714"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar un origen de datos de Power Query
 
@@ -42,7 +42,7 @@ Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayor
 1. El diálogo **Power Query - Editar consultas** le permite revisar y refinar los datos. Las entidades que los sistemas identificaron en el origen de datos seleccionado se muestran en el panel izquierdo.
 
    > [!div class="mx-imgBorder"]
-   > ![Diálogo Editar consultas](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
+   > ![Diálogo Editar consultas.](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
 
 1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones de la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de transformación prediseñadas. Para obtener más información, vea [Transformaciones de Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Los conectores con una marca de verificación en la columna **Customer Insights 
 2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea cambiar y seleccione **Editar** en la lista desplegable.
 
    > [!div class="mx-imgBorder"]
-   > ![Editar opción](media/edit-option-data-sources.png "Editar opción")
+   > ![Editar opción.](media/edit-option-data-sources.png "Editar opción")
 
 3. Aplique sus cambios y transformaciones en el diálogo **Power Query - Editar consultas** como se describe en la sección [Crear un origen de datos nuevo](#create-a-new-data-source).
 

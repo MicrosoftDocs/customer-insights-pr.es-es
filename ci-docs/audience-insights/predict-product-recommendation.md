@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095577"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556145"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicción de recomendaciones del producto (versión preliminar)
 
@@ -64,7 +64,7 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 
 1. Seleccione el mosaico **Modelo de recomendaciones de producto (versión preliminar)** y seleccione **Utilizar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Mosaico del Modelo de recomendaciones de producto con el botón Usar este modelo](media/product-recommendation-usethismodel.PNG "Mosaico del Modelo de recomendaciones de producto con el botón Usar este modelo")
+   > ![Icono del modelo de recomendaciones de producto con el botón Usar este modelo.](media/product-recommendation-usethismodel.PNG "Mosaico del Modelo de recomendaciones de producto con el botón Usar este modelo")
 
 1. Revise la información sobre los requisitos del modelo. Si tiene los datos requeridos, seleccione **Comenzar**.
 
@@ -93,7 +93,7 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 
 1. Asigne los campos semánticos a los atributos dentro de su entidad de historial de compras y seleccione **Siguiente**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definir la relación de entidad](media/product-recommendation-purchasehistorymapping.PNG "Página del historial de compras que muestra los atributos semánticos que se asignan a los campos de la entidad del historial de compras seleccionada")
+   > ![Defina la relación de entidad.](media/product-recommendation-purchasehistorymapping.PNG "Página del historial de compras que muestra los atributos semánticos que se asignan a los campos de la entidad del historial de compras seleccionada")
 
 1. Si los campos no están rellenos, configure la relación entre su entidad de historial de compras y la entidad *Cliente*.
     1. Seleccione la **Entidad de historial de compras**.
@@ -145,7 +145,7 @@ A veces, solo ciertos productos son ventajosos o apropiados para el tipo de pred
 
 1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de la página Mis predicciones](media/product-recommendation-mypredictions.PNG "Vista de la página Mis predicciones")
+   > ![Vista de la página Mis predicciones.](media/product-recommendation-mypredictions.PNG "Vista de la página Mis predicciones")
 
 1. Seleccione la predicción que desea revisar.
    - **Nombre de predicción:** El nombre de la predicción proporcionado al crearla.
@@ -163,7 +163,7 @@ A veces, solo ciertos productos son ventajosos o apropiados para el tipo de pred
 
 1. Seleccione los puntos suspensivos verticales junto a la predicción cuyos resultados desea revisar y seleccione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar](media/product-recommendation-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
+   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar.](media/product-recommendation-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
 
 1. Hay cinco secciones principales de datos dentro de la página de resultados:
     1. **Rendimiento del modelo de entrenamiento:** A, B o C son puntuaciones posibles. Esta puntuación indica el rendimiento de la predicción y puede ayudarle a tomar la decisión de usar los resultados almacenados en la entidad de salida.
@@ -173,13 +173,13 @@ A veces, solo ciertos productos son ventajosos o apropiados para el tipo de pred
             - **C**: el modelo será considerado de calidad **c** si la métrica "Success @ K" es menor que el valor de referencia.
                
                > [!div class="mx-imgBorder"]
-               > ![Vista del resultado del rendimiento del modelo](media/product-recommendation-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
+               > ![Vista del resultado del rendimiento del modelo.](media/product-recommendation-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
             - **Valor de referencia**: el modelo toma los productos más recomendados por el recuento de compras en todos los clientes y utiliza reglas aprendidas identificadas por el modelo para crear un conjunto de recomendaciones para los clientes. Luego, las predicciones se comparan con los productos destacados, calculados según el número de clientes que compraron el producto. Si un cliente tiene al menos un producto en sus productos recomendados que también se vio en los productos destacados, se considera parte del valor de referencia. Si hubiera 10 de estos clientes que tuvieran un producto recomendado comprado de un total de 100 clientes, el valor de referencia sería 10 %.
             - **Success @ K**: con un conjunto de períodos de tiempo de validación de transacciones, se crean recomendaciones para todos los clientes y se comparan con el conjunto de validación de transacciones. Por ejemplo, en un período de 12 meses, el mes 12 podría reservarse como un conjunto de datos de validación. Si el modelo predice al menos una cosa que compraría en el mes 12 basándose en lo que aprendió de los 11 meses anteriores, el cliente aumentaría la métrica "Success @ K".
     
     1. **Productos más sugeridos (con recuento)**: los cinco productos principales que se predijeron para sus clientes.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico que muestra los 5 productos más recomendados](media/product-recommendation-topproducts.PNG "Gráfico que muestra los 5 productos más recomendados")
+       > ![Gráfico que muestra los 5 productos más recomendados.](media/product-recommendation-topproducts.PNG "Gráfico que muestra los 5 productos más recomendados")
     
     1. **Factores clave de recomendación** el modelo utiliza el historial de transacciones de los clientes para hacer recomendaciones de productos. Aprende patrones basados en compras pasadas y encuentra similitudes entre clientes y productos. Estas similitudes se utilizan luego para generar recomendaciones de productos.
     Los siguientes son los factores que podrían influir en una recomendación de producto generada por el modelo. 
@@ -190,20 +190,20 @@ A veces, solo ciertos productos son ventajosos o apropiados para el tipo de pred
         Cada recomendación de producto está influenciada por uno o más de estos factores. El porcentaje de recomendaciones en las que cada factor influyente jugó un papel se representa en un gráfico. En el siguiente ejemplo, el 100 % de las recomendaciones fueron influenciadas por transacciones pasadas, el 60 % por la similitud de clientes y el 22 % por similitud de productos. Desplácese sobre las barras del gráfico para ver el porcentaje exacto en el que contribuyeron los factores influyentes.
 
         > [!div class="mx-imgBorder"]
-        > ![Factores clave de recomendación](media/product-recommendation-keyrecommendationfactors.png "Factores de recomendación clave aprendidos por el modelo para generar recomendaciones de productos")
+        > ![Factores clave de recomendación.](media/product-recommendation-keyrecommendationfactors.png "Factores de recomendación clave aprendidos por el modelo para generar recomendaciones de productos")
        
      
    1. **Estadísticas de datos**: ofrece una descripción general del número de transacciones, clientes y productos que tuvo en cuenta el modelo. Se basa en los datos de entrada que se utilizaron para aprender patrones y generar recomendaciones de productos.
 
       > [!div class="mx-imgBorder"]
-      > ![Estadísticas de datos](media/product-recommendation-datastatistics.png "Estadísticas de datos en torno a los datos de entrada y salida utilizados por el modelo para aprender patrones")
+      > ![Estadísticas de datos.](media/product-recommendation-datastatistics.png "Estadísticas de datos en torno a los datos de entrada y salida utilizados por el modelo para aprender patrones")
 
       Esta sección muestra estadísticas sobre los puntos de datos que fueron utilizados por el modelo para aprender patrones y generar recomendaciones de productos. El filtrado, tal como se configura en la configuración del modelo, se aplicará a la salida generada por el modelo. Sin embargo, el modelo usa todos los datos disponibles para aprender patrones. Por lo tanto, si utiliza el filtrado de productos en la configuración del modelo, esta sección mostrará la cantidad total de productos que el modelo analizó para aprender patrones, que pueden diferir de la cantidad de productos que coinciden con los criterios de filtrado definidos.
 
    1. **Recomendaciones de productos de alta confianza**: una muestra de recomendaciones proporcionadas a sus clientes que el modelo cree que es probable que el cliente compre.    
       Si se agrega un catálogo de productos, los identificadores de productos se reemplazan por nombres de productos. Los nombres de los productos proporcionan información más procesable e intuitiva sobre las predicciones.
        > [!div class="mx-imgBorder"]
-       > ![Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales](media/product-recommendation-highconfidence.PNG "Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales")
+       > ![Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales.](media/product-recommendation-highconfidence.PNG "Lista que muestra sugerencias de alta confianza para un grupo selecto de clientes individuales")
 
 ## <a name="manage-predictions"></a>Administrar predicciones
 

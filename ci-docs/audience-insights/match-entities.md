@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306049"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650339"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -118,11 +118,11 @@ Puede reordenar las entidades para que las reglas de coincidencia cambien el ord
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir la desduplicación en una entidad de coincidencia
 
-Además de [reglas de coincidencia entre entidades](#define-rules-for-match-pairs), también puede especificar reglas de deduplicación. *Deduplicación* es otro proceso al comparar registros. Identifica registros duplicados y los fusiona en un solo registro. Los registros de origen se vinculan al registro combinado con identificadores alternativos.
+Además de [reglas de coincidencia entre entidades](#define-rules-for-match-pairs), también puede especificar reglas de deduplicación. *Deduplicación* es otro proceso al comparar registros. Identifica registros duplicados y los combina en un solo registro. Los registros de origen se vinculan al registro combinado con id. alternativos.
 
-Los registros deduplicados se utilizarán en el proceso de comparación entre entidades. La deduplicación ocurre en entidades individuales y se puede configurar cada entidad utilizada en pares de coincidencias.
+Los registros desduplicados se utilizarán en el proceso de coincidencia entre entidades. La desduplicación tiene lugar en entidades individuales y se puede configurar cada entidad utilizada en pares de coincidencias.
 
-No es obligatorio especificar reglas de desduplicación. Si no se configuran tales reglas, se aplican las reglas definidas por el sistema. Combinan todos los registros en un solo registro antes de pasar los datos de la entidad a la comparación entre entidades para mejorar el rendimiento.
+No es obligatorio especificar reglas de desduplicación. Si no se configuran esas reglas, se aplican las reglas definidas por el sistema. Combinan todos los registros en un solo registro antes de pasar los datos de la entidad a la comparación entre entidades para mejorar el rendimiento.
 
 ### <a name="add-deduplication-rules"></a>Agregar reglas de desduplicación
 
@@ -133,12 +133,12 @@ No es obligatorio especificar reglas de desduplicación. Si no se configuran tal
 1. En el panel **Preferencias de fusión**, elija las entidades en las que desea ejecutar la deduplicación.
 
 1. Especifique cómo combinar los registros duplicados y elija una de las tres opciones:
-   - **Más lleno**: identifica el registro con la más campos de atributo rellenados como el registro ganador. Es la opción de configuración predeterminada.
+   - **Más lleno**: identifica el registro con la más campos de atributo rellenados como el registro ganador. Es la opción de combinación predeterminada.
    - **Más reciente**: identifica el registro ganador basado en el más reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
    - **Menos reciente**: identifica el registro ganador basado en el menos reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
  
    > [!div class="mx-imgBorder"]
-   > ![Paso 1 de reglas de desduplicación](media/match-selfconflation.png "Paso 1 de reglas de desduplicación")
+   > ![Paso 1 de reglas de desduplicación.](media/match-selfconflation.png "Paso 1 de reglas de desduplicación")
  
 1. Una vez que se seleccionan las entidades y se establece su preferencia de fusión, seleccione **Agregar regla** para definir las reglas de deduplicación a nivel de entidad.
    - **Seleccionar campo** enumera todos los campos disponibles de esa entidad. Elija el campo en el que desea verificar si hay duplicados. Elija campos que probablemente sean únicos para cada cliente. Por ejemplo, una dirección de correo electrónico o la combinación de nombre, ciudad y número de teléfono.
@@ -146,7 +146,7 @@ No es obligatorio especificar reglas de desduplicación. Si no se configuran tal
    - Defina más condiciones adicionales seleccionando **Agregar condición**.
  
    > [!div class="mx-imgBorder"]
-   > ![Paso 2 de reglas de desduplicación](media/match-selfconflation-rules.png "Paso 2 de reglas de desduplicación")
+   > ![Paso 2 de reglas de desduplicación.](media/match-selfconflation-rules.png "Paso 2 de reglas de desduplicación")
 
   Puede crear varias reglas de desduplicación para una entidad. 
 
@@ -179,7 +179,9 @@ Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Ejecutar** par
 Encontrará el resultado de una ejecución exitosa, la entidad de perfil de cliente unificado, en la página **Entidades**. Su entidad cliente unificada se llama **Clientes** en la sección **Perfiles**. La primera ejecución de coincidencia exitosa crea la entidad unificada *Cliente*. Todas las ejecuciones de coincidencias posteriores expanden esa entidad.
 
 > [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
+> Después de ejecutar el proceso de detección de coincidencia, seleccione el estado del proceso para abrir el panel **Detalles de la tarea**. Ofrece una descripción general sobre el tiempo de procesamiento, la última fecha de procesamiento y todos los errores y advertencias asociados con la tarea. Seleccione **Ver detalles** para ver qué entidades participaron en el proceso de coincidencia, qué reglas se les aplicaron y si las actualizaciones se publicaron correctamente.  
+> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
 
 ## <a name="review-and-validate-your-matches"></a>Revisar y validar las coincidencias
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598176"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554134"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector de Microsoft Power Apps (vista previa)
 
@@ -56,12 +56,12 @@ Por ejemplo, agregue perfiles de cliente a un [control de galería](/powerapps/m
 1. Agregue un control de **Galería** a una aplicación que esté creando.
 
 > [!div class="mx-imgBorder"]
-> ![Agregar un elemento de galería](media/connector-powerapps9.png "Agregar un elemento de galería")
+> ![Agregar un elemento de galería.](media/connector-powerapps9.png "Agregar un elemento de galería")
 
 1. Seleccione **Cliente** como origen de datos para elementos.
 
     > [!div class="mx-imgBorder"]
-    > ![Seleccionar un origen de datos](media/choose-datasource-powerapps.png "Seleccionar un origen de datos")
+    > ![Seleccionar un origen de datos.](media/choose-datasource-powerapps.png "Seleccionar un origen de datos")
 
 1. Puede cambiar el panel de datos a la derecha para seleccionar qué campo mostrará la entidad de Cliente en la galería.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304671"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555420"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquezca los perfiles de los clientes con datos personalizados (versión preliminar)
 
@@ -64,7 +64,7 @@ Debe ser un administrador para configurar las conexiones. Seleccione **Agregar c
 1. Una vez que se ha completado la verificación, la conexión se puede guardar seleccionando **Guardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Página de configuración de conexión de Experian](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian").
+   > ![Página de configuración de conexión de Experian.](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definición de asignaciones de campos 

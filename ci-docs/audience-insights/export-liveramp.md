@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760348"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555466"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segmentos a LiveRamp&reg; (versión preliminar)
 
@@ -56,7 +56,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. En el campo **Elegir su identificador clave**, seleccione **Correo electrónico**, **Nombre y dirección** o **Teléfono** para enviar estos datos a LiveRamp para la resolución de identidad.
    > [!div class="mx-imgBorder"]
-   > ![Conector para LiveRamp con asignación de atributos](media/export-liveramp-segments.png "Conector para LiveRamp con asignación de atributos")
+   > ![Conector para LiveRamp con asignación de atributos.](media/export-liveramp-segments.png "Conector para LiveRamp con asignación de atributos")
 
 1. Asigne los atributos correspondientes de su entidad de cliente unificado para el identificador clave seleccionado.
 

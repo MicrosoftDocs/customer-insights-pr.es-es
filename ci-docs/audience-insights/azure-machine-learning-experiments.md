@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597440"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554456"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos basados en Azure Machine Learning
 
@@ -52,7 +52,7 @@ Necesita crear conjuntos de datos para usar datos de entidad de Customer Insight
      En el diseñador, abra **Seleccionar columnas en conjunto de datos** y seleccione **Establecer como parámetro de canalización**, donde proporciona un nombre para el parámetro.
 
      > [!div class="mx-imgBorder"]
-     > ![Parámetrización de conjunto de datos en el diseñador](media/intelligence-designer-dataset-parameters.png "Parámetrización de conjunto de datos en el diseñador")
+     > ![Parametrización de conjunto de datos en el diseñador.](media/intelligence-designer-dataset-parameters.png "Parámetrización de conjunto de datos en el diseñador")
    
 * Parámetro de conjunto de datos en SDK (Python)
    
@@ -78,7 +78,7 @@ Necesita crear conjuntos de datos para usar datos de entidad de Customer Insight
 
 * El diseñador proporciona el [Módulo de exportación de datos](/azure/machine-learning/algorithm-module-reference/export-data) que permite exportar la salida de una canalización al almacenamiento de Azure. Actualmente, el módulo debe usar el tipo de almacén de datos **Almacenamiento de blobs de Azure** y parametrizar el **Almacén de datos** y la **Ruta** relativa. Customer Insights anula ambos parámetros durante la ejecución de la canalización con un almacén de datos y una ruta a la que puede acceder el producto.
    > [!div class="mx-imgBorder"]
-   > ![Exportar configuración de módulo de datos](media/intelligence-designer-importdata.png "Exportar configuración de módulo de datos")
+   > ![Exportar configuración de módulo de datos.](media/intelligence-designer-importdata.png "Exportar configuración de módulo de datos")
    
 * Al escribir la salida de la inferencia utilizando código, puede cargar la salida en una ruta dentro de un *almacén de datos registrado* del área de trabajo. Si la ruta y el almacén de datos están parametrizados en la canalización, Customer Insights podrá leer e importar la salida de la inferencia. Actualmente, se admite una única salida tabular en formato csv. La ruta debe incluir el directorio y el nombre del archivo.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306095"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555006"
 ---
 # <a name="segment-insights-preview"></a>Información detallada de segmentos (vista previa)
 
@@ -44,7 +44,7 @@ También puede analizar cómo cambia la superposición para atributos específic
 Después de completar el análisis, busque detalles sobre esta información en **Segmentos** > **Información (vista previa)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalles de información de superposición de segmentos":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalles de información de superposición de segmentos.":::
 
 Seleccione una información para ver los resultados del análisis:
 
@@ -77,9 +77,9 @@ Los diferenciadores de segmento lo ayudan a descubrir qué diferencia un segment
 Después de completar el análisis, busque detalles sobre esta información en **Segmentos** > **Información (vista previa)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalles de información de diferenciador de segmentos":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalles de información de diferenciador de segmentos.":::
 
-Seleccione una información para ver los resultados del análisis. Un análisis de diferenciador incluye dos pestañas. La pestaña **Atributos** enumera los atributos de perfil considerados como diferenciadores. La pestaña **Medidas** enumera los diferenciadores. Cada pestaña incluye los siguientes detalles:
+Seleccione una información para ver los resultados del análisis. Un análisis diferenciador incluye dos pestañas. La pestaña **Atributos** enumera los atributos de perfil considerados como diferenciadores. La pestaña **Medidas** enumera los diferenciadores. Cada pestaña incluye los siguientes detalles:
 
 - Lista clasificada de diferenciadores, ordenados por puntuación de diferencia.
 - La **Puntuación de diferencia** para cada diferenciador. La puntuación de diferencia representa el grado de diferencia de un atributo entre dos segmentos. Cuanto mayor sea la puntuación de diferencia, más difieren los atributos entre los dos segmentos. Seleccione una puntuación para abrir el panel **Puntuación de diferencia** con las distribuciones de valores para ese atributo.

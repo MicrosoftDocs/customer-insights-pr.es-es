@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259212"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650063"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabajar con datos de Customer Insights en Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights ofrece la opción de hacer que las entidades de salida estén 
 
 **Organizaciones con entornos Dataverse existentes**
 
-Organizaciones que ya usan Dataverse pueden [utilizar uno de sus entornos Dataverse existentes](manage-environments.md#create-an-environment-in-an-existing-organization) cuando un Administrador configura informaciones de público. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Para garantizar el mejor rendimiento posible, los entornos de Customer Insights y Dataverse deben estar alojados en la misma región.
+Organizaciones que ya usan Dataverse pueden [utilizar uno de sus entornos Dataverse existentes](get-started-paid.md) cuando un Administrador configura informaciones de público. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Para garantizar el mejor rendimiento posible, los entornos de Customer Insights y Dataverse deben estar alojados en la misma región.
 
 Para adjuntar un entorno Dataverse, expanda **Ajustes avanzados** al crear el entorno de información de público. Proporcione la **URL de entorno de Microsoft Dataverse** y seleccione la casilla de verificación para **Habilitar el intercambio de datos**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nueva organización**
 

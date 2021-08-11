@@ -9,24 +9,24 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 32bb89b02947350c056c8ce8adbe37500d2099a1
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305731"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556099"
 ---
 # <a name="system-configuration"></a>Configuración del sistema
 
 La página **Sistema** incluye las siguientes pestañas:
-- [Estado](#status-tab)
+- [Estado de ejecución](#status-tab)
 - [Programación](#schedule-tab)
 - [Uso de API](#api-usage-tab)
 - [Acerca de](#about-tab)
 - [General](#general-tab)
 
 > [!div class="mx-imgBorder"]
-> ![Página del sistema](media/system-tabs.png "Página del sistema")
+> ![Página del sistema.](media/system-tabs.png "Página del sistema")
 
 ## <a name="status-tab"></a>Pestaña Estado
 

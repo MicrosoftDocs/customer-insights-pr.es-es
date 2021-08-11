@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596566"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554915"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake
 
@@ -45,7 +45,7 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
 
 1. Puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). Introduzca la información del **Contenedor** y seleccione **Siguiente**.
    > [!div class="mx-imgBorder"]
-   > ![Cuadro de diálogo para ingresar nuevos detalles de conexión para Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Cuadro de diálogo para especificar nuevos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Necesita uno de los siguientes roles, ya sea para el contenedor o la cuenta de almacenamiento mencionada anteriormente, para poder conectarse y crear un origen de datos:
    >  - Lector de datos de blobs de almacenamiento
@@ -58,11 +58,11 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
 
 1. Obtendrá una lista de entidades disponibles en el archivo model.json o manifest.json seleccionado. Puede revisar y seleccionar de la lista de entidades disponibles y seleccionar **Guardar**. Todas las entidades seleccionadas se ingerirán desde el nuevo origen de datos.
    > [!div class="mx-imgBorder"]
-   > ![Cuadro de diálogo que muestra una lista de entidades de un archivo model.json](media/review-entities.png)
+   > ![Cuadro de diálogo que muestra una lista de entidades de un archivo model.json.](media/review-entities.png)
 
 8. Indique en qué entidades de datos desea habilitar la generación de perfiles de datos y seleccione **Guardar**. La generación de perfiles de datos habilita el análisis y otras capacidades. Puede seleccionar la entidad completa, que selecciona todos los atributos de la entidad, o seleccionar ciertos atributos de su elección. De forma predeterminada, ninguna entidad está habilitada para la creación de perfiles de datos.
    > [!div class="mx-imgBorder"]
-   > ![Cuadro de diálogo que muestra un perfil de datos](media/dataprofiling-entities.png)
+   > ![Cuadro de diálogo que muestra un perfil de datos.](media/dataprofiling-entities.png)
 
 9. Después de guardar sus selecciones, se abre la página **Orígenes de datos**. Ahora debería ver la conexión de la carpeta de Common Data Model como origen de datos.
 
@@ -81,12 +81,12 @@ Puede actualizar la clave de acceso para la cuenta de almacenamiento que contien
 
 4. Opcionalmente, actualice la **Clave de acceso** y seleccione **Siguiente**.
 
-   ![Diálogo para editar y actualizar una clave de acceso para un origen de datos existente](media/edit-access-key.png)
+   ![Cuadro de diálogo para editar y actualizar una clave de acceso para un origen de datos existente.](media/edit-access-key.png)
 
 5. Opcionalmente, puede actualizar desde una conexión de clave de cuenta a una conexión basada en recursos o basada en suscripción. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). No puede cambiar la información de **Contenido** al actualizar la conexión.
    > [!div class="mx-imgBorder"]
 
-   > ![Cuadro de diálogo para especificar los detalles de la conexión de Azure Data Lake a una cuenta de almacenamiento existente](media/enter-existing-storage-details.png)
+   > ![Cuadro de diálogo para especificar los detalles de la conexión de Azure Data Lake a una cuenta de almacenamiento existente.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Necesita uno de los siguientes roles, ya sea para el contenedor o la cuenta de almacenamiento mencionada anteriormente, para poder conectarse y crear un origen de datos:

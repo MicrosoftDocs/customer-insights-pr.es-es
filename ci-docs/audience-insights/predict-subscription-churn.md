@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095669"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556328"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
 
@@ -63,9 +63,9 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. En las informaciones de público, vaya a **Inteligencia** > **Predicciones**.
 1. Seleccione la ventana **Modelo de pérdida de suscripciones (vista previa)** y seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Ventana Modelo de pérdida de suscripciones con botón Usar este modelo](media/subscription-churn-usethismodel.PNG "Ventana Modelo de pérdida de suscripciones con botón Usar este modelo")
+   > ![Ventana Modelo de pérdida de suscripciones con botón Usar este modelo.](media/subscription-churn-usethismodel.PNG "Ventana Modelo de pérdida de suscripciones con botón Usar este modelo")
 
-### <a name="name-model"></a>Nombre del modelo
+### <a name="name-model"></a>Modelo de nombre
 
 1. Proporcione un nombre para el modelo para distinguirlo de otros modelos.
 1. Proporcione un nombre para la entidad de salida utilizando solo letras y números, sin espacios. Ese es el nombre que usará la entidad del modelo. A continuación, seleccione **Siguiente**.
@@ -86,11 +86,11 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
     1. Seleccione la **Entidad de cliente** que coincida con su entidad de cliente principal.
     1. Escriba un nombre que describa la relación.
        > [!div class="mx-imgBorder"]
-       > ![Página del historial de suscripciones que muestra la creación de una relación con el cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página del historial de suscripciones que muestra la creación de una relación con el cliente")
+       > ![Página del historial de suscripciones que muestra la creación de una relación con el cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página del historial de suscripciones que muestra la creación de una relación con el cliente")
 1. Seleccione **Siguiente**.
 1. Asigne los campos semánticos a atributos en la entidad del historial de suscripciones y seleccione **Guardar**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada](media/subscription-churn-subscriptionhistorymapping.PNG "Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada")
+   > ![Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada.](media/subscription-churn-subscriptionhistorymapping.PNG "Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada")
 1. Seleccione **Agregar datos** para **Actividades del cliente** y elija la entidad que proporciona la información de actividad del cliente como se describe en los prerrequisitos.
 1. Seleccione un tipo de actividad que coincida con el tipo de actividad del cliente que está configurando.  Seleccione **Crear nuevo** y proporcione un nombre si no ve una opción que coincida con el tipo de actividad que necesita.
 1. Deberá configurar la relación desde la entidad de actividad del cliente hasta la entidad de cliente.
@@ -101,10 +101,10 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. Asigne los campos semánticos a atributos en la entidad de actividad de cliente y seleccione **Guardar**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
 1. (Opcional) Si tiene otras actividades de clientes que le gustaría incluir, repita los pasos anteriores.
    > [!div class="mx-imgBorder"]
-   > ![Definir la relación de entidad](media/subscription-churn-customeractivitiesmapping.PNG "Página de actividades del cliente que muestra los atributos semánticos que se asignan a campos en la entidad de actividad del cliente seleccionada")
+   > ![Defina la relación de entidad.](media/subscription-churn-customeractivitiesmapping.PNG "Página de actividades del cliente que muestra los atributos semánticos que se asignan a campos en la entidad de actividad del cliente seleccionada")
 1. Seleccione **Siguiente**.
 
-### <a name="set-schedule-and-review-configuration"></a>Establecer programación y revisar la configuración
+### <a name="set-schedule-and-review-configuration"></a>Establecer la programación y revisar la configuración
 
 1. Establezca una frecuencia para volver a entrenar su modelo. Esta configuración es importante para actualizar la precisión de las predicciones a medida que se ingieren nuevos datos en las informaciones de público. La mayoría de las empresas pueden volver a entrenarse una vez al mes y obtener una buena precisión para sus predicciones.
 1. Seleccione **Siguiente**.
@@ -115,7 +115,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 
 1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de la página Mis predicciones](media/subscription-churn-mypredictions.PNG "Vista de la página Mis predicciones")
+   > ![Vista de la página Mis predicciones.](media/subscription-churn-mypredictions.PNG "Vista de la página Mis predicciones")
 1. Seleccione la predicción que desea revisar.
    - **Nombre de predicción:** El nombre de la predicción proporcionado al crearla.
    - **Tipo de predicción:** El tipo de modelo utilizado para la predicción
@@ -131,7 +131,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
    - **Última actualización:** La fecha en que la predicción actualizó los resultados en la entidad de salida.
 1. Seleccione los puntos suspensivos verticales junto a la predicción cuyos resultados desea revisar y seleccione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar](media/subscription-churn-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
+   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar.](media/subscription-churn-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
 1. Hay tres secciones de datos principales en la página de resultados:
     1. **Rendimiento del modelo de entrenamiento:** A, B o C son puntuaciones posibles. Esta puntuación indica el rendimiento de la predicción y puede ayudarle a tomar la decisión de usar los resultados almacenados en la entidad de salida.
         - Las puntuaciones se determinan según las siguientes reglas:
@@ -139,13 +139,13 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
             - **B** cuando el modelo predijo con precisión al menos el 50% de las predicciones totales, y cuando el porcentaje de predicciones precisas para los clientes que abandonaron es hasta un 10% mayor que la tasa de abandono media histórica de la tasa de abandono media histórica.
             - **C** cuando el modelo predijo con precisión menos del 50% de las predicciones totales, o cuando el porcentaje de predicciones precisas para los clientes que abandonaron es menor que la tasa de abandono media histórica.
                > [!div class="mx-imgBorder"]
-               > ![Vista del resultado del rendimiento del modelo](media/subscription-churn-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
+               > ![Vista del resultado del rendimiento del modelo.](media/subscription-churn-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
     1. **Probabilidad de pérdida (número de clientes):** Grupos de clientes según su riesgo de pérdida previsto. Estos datos pueden ayudarle más adelante si desea crear un segmento de clientes con alto riesgo de pérdida. Dichos segmentos ayudan a comprender dónde debe estar el corte para la pertenencia del segmento.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%](media/subscription-churn-resultdistribution.PNG "Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%")
+       > ![Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100 %](media/subscription-churn-resultdistribution.PNG "Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%")
     1. **Factores más influyentes:** Hay muchos factores que se tienen en cuenta al crear su predicción. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede usar estos factores para ayudar a validar sus resultados de predicción. O puede usar esta información más tarde para [crear segmentos](segments.md) que puedan ayudar a influir en el riesgo de pérdida de clientes.
        > [!div class="mx-imgBorder"]
-       > ![Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.](media/subscription-churn-influentialfactors.PNG "Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.")
+       > ![Lista que muestra los factores influyentes y su importancia para predecir el resultado de abandono.](media/subscription-churn-influentialfactors.PNG "Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.")
 
 ## <a name="manage-predictions"></a>Administrar predicciones
 
