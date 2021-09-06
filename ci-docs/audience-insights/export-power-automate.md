@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 95e0fcbfb43f2b3e7e2d0e8a1690dc7ff5a44433402b7ef3d437710eb0efff15
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305085"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035620"
 ---
 # <a name="power-automate-connector-preview"></a>Conector de Power Automate (vista previa)
 
@@ -31,7 +31,7 @@ Utilice desencadenadores para crear flujos de nube y automatizar tareas repetiti
 - Desencadene cuando se completa una actualización (orígenes de datos, segmentos, medidas,...).
 - Se desencadena cuando se completa una actualización del proceso de unificación (mapa, coincidencia, fusión).
 
-[Configurar los desencadenadores en Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Configurar los desencadenadores en Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Acciones de Power Automate
 

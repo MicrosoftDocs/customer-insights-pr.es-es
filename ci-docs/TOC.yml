@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Límites de servicio
       href: engagement-insights/quotas.md
-- name: Póngase en contacto con el soporte técnico
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integrar Conclusiones de público y Conclusiones sobre la interacción
+  items:
+    - name: Vincular las conclusiones sobre la interacción y las conclusiones de público
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Usar segmentos de conclusiones del público en informes de conclusiones sobre la interacción
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Usar dimensiones demográficas para dividir datos de comportamiento
+      href: engagement-insights/curate-dimensions.md
+- name: Obtener de soporte técnico
+  href: 'https://dynamics.microsoft.com/en-us/support/'

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171185"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035252"
 ---
 # <a name="relationships-between-entities"></a>Relaciones entre entidades
 
@@ -82,7 +82,7 @@ Esta página ofrece un conjunto de opciones para relaciones existentes y nuevas:
 
 ### <a name="explore-the-relationship-visualizer"></a>Explore el visualizador de relaciones
 
-El visualizador de relaciones muestra un diagrama de red de relaciones existente entre entidades conectadas y su cardinalidad.
+El visualizador de relaciones muestra un diagrama de red de relaciones existente entre entidades conectadas y su cardinalidad. También visualiza la ruta de la relación.
 
 Para personalizar la vista, puede cambiar la posición de los cuadros arrastrándolos en el lienzo.
 
@@ -92,6 +92,20 @@ Opciones disponibles:
 - **Exportar como imagen**: guarda la vista actual como un archivo de imagen.
 - **Cambiar a diseño horizontal / vertical**: cambia la alineación de las entidades y relaciones.
 - **Editar**: actualiza las propiedades de relaciones personalizadas en el panel de edición y guarda los cambios.
+
+### <a name="relationship-path"></a>Ruta de relación
+
+La ruta de la relación describe las entidades que están conectadas con relaciones entre una entidad de origen y una entidad de destino. Se utiliza al crear un segmento o una medida que incluye otras entidades además de la entidad de perfil unificado y existen múltiples opciones para llegar a la entidad de perfil unificado.
+
+La ruta de la relación informa al sistema sobre las relaciones para tener acceso a la entidad de perfil unificado. Diferentes rutas de relación pueden producir resultados diferentes.
+
+Por ejemplo, la entidad *eCommerce_eCommercePurchases* tiene las siguientes relaciones con la entidad *Cliente* del perfil unificado:
+
+- eCommerce_eCommercePurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
+
+La ruta de la relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases), en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
 
 ## <a name="manage-existing-relationships"></a>Administrar las relaciones existentes 
 
@@ -105,6 +119,6 @@ Seleccione una relación y elija una de las siguientes opciones:
 
 ## <a name="next-step"></a>Siguiente paso
 
-Las relaciones del sistema y personalizadas se utilizan para [crear segmentos](segments.md) basados en varios orígenes de datos que ya no están en desconectados.
+El sistema y las relaciones personalizadas se usan para [crear segmentos](segments.md) y [medidas](measures.md) basándose en múltiples orígenes de datos que ya no están aislados.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
