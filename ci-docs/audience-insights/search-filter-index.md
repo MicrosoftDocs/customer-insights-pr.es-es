@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554042"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029420"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfiles de clientes: índice de búsqueda y filtro
 
@@ -60,7 +60,7 @@ El menú **Filtrar** de la página **Clientes** puede incluir un número variabl
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Vaya a la página **Clientes** para buscar perfiles de clientes o utilice los campos indexados para ver un subconjunto de todos los perfiles de clientes.
+Revise la [página de perfiles unificados](customer-profiles.md) para buscar perfiles o usar los campos indexados para ver un subconjunto de todos los perfiles unificados.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
