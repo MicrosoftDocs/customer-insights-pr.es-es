@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Funcionalidades de las conclusiones sobre la interacción (versión preliminar) en Dynamics 365 Customer Insights
+summary: Recopile datos para sus sitios web. Comprenda las interacciones y el uso de los clientes en sus sitios, de forma interactiva. Utilice la profunda integración entre las conclusiones sobre la interacción y las conclusiones del público para enriquecer sus análisis de comportamiento en tiempo real con informes de perfil de cliente. Enriquezca los perfiles de los clientes con actividades web para obtener datos de comportamiento en tiempo real junto con datos relevantes de los clientes. Transforme su negocio para obtener valor inmediato de los datos de sus clientes.
+metadata:
+  title: Documentación de las conclusiones sobre la interacción (versión preliminar)
+  description: Centro de ayuda con enlaces clave para las conclusiones sobre la interacción.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036259"
+landingContent:
+- title: Acerca de
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Información general sobre capacidad
+      url: overview.md
+    - text: Conceptos y términos
+      url: glossary.md
+    - text: Descubrir conclusiones sobre la interacción
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Incorporación
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Comenzar
+      url: get-started.md
+    - text: Crear un área de trabajo
+      url: create-workspace.md
+    - text: Instrumentar el sitio web
+      url: instrument-website.md
+- title: Informes
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ver informes
+      url: view-reports.md
+    - text: Crear informes personalizados
+      url: custom-reports.md
+    - text: Ver informe de perfiles unificados
+      url: profile-reports.md
+    - text: Crear informes de embudo
+      url: funnel-reports.md
+- title: Eventos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Crear eventos refinados
+      url: refined-events.md
+    - text: Exportar eventos
+      url: export-events.md
+    - text: Eliminar y exportar datos personales
+      url: delete-export-personal-data.md
+- title: Recursos para desarrolladores
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Recursos para desarrolladores
+      url: developer-resources.md
+    - text: Muestra de WebSDK
+      url: websdk-sample.md
+    - text: Escenarios SDK web avanzados
+      url: advanced-SDK-implementation.md
+    - text: Ejemplo de SDK de Android
+      url: get-started-android.md
+    - text: Ejemplo de SDK de iOS
+      url: get-started-ios.md
+- title: Administración
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Administrar entornos y áreas de trabajo
+      url: manage-environments-workspaces.md
+    - text: Conectarse a las conclusiones del público
+      url: configure-connections.md
+    - text: Gestionar cookies y consentimiento del usuario
+      url: user-consent-storage.md
