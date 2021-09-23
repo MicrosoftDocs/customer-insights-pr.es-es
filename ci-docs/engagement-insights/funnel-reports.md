@@ -4,17 +4,17 @@ description: Cómo utilizar los informes de embudo para comprender cómo el púb
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032276"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498663"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Cree y administre informes de embudo
 
@@ -158,4 +158,21 @@ Puede cambiar el nombre de un informe de embudo, eliminarlo o modificar los paso
 1. Seleccione un nombre para abrir el informe.
 
 1. Seleccione el paso que desee eliminar y seleccione **Eliminar**.
+
+## <a name="funnel-insights"></a>Conclusiones del embudo 
+
+Las conclusiones de involucración ahora ofrecen información sobre el embudo para los clientes. Utilice la información del embudo para obtener una visión más profunda del comportamiento del cliente en los pasos del informe del embudo. Cuando crea y guarda un nuevo informe de embudo, las estadísticas del embudo se generan automáticamente para su informe. 
+
+Puede ver información sobre el embudo de conversión de las siguientes categorías, tanto en el nivel principal como en el de los pasos: 
+
+ - Tasa de conversión 
+ - Tiempo de transición 
+ - Tiempo de finalización 
+
+Utilice esta información para explorar más profundamente el comportamiento del cliente y comprender mejor los puntos de abandono y las conversiones para su informe de embudo. 
+
+Las conclusiones del embudo se vuelven a calcular cada 24 horas o al **Guardar** el informe de embudo. 
+
+> [!NOTE]
+> Para ver las estadísticas del embudo, debe guardar su informe cada vez que realice cambios. 
 

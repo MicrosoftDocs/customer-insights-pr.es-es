@@ -1,7 +1,7 @@
 ---
 title: Fusionar entidades en la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035023"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494340"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -66,7 +66,7 @@ Cambie el nombre para mostrar de los atributos combinados. No puede cambiar el n
 
 Excluya un atributo del perfil de cliente unificado. Si el campo se utiliza en otros procesos, por ejemplo en un segmento, elimínelo de estos procesos antes de excluirlo del perfil del cliente. 
 
-1. Seleccione el campo combinado.
+1. Seleccione un campo combinado.
   
 1. Seleccione **Mostrar más** y elija **Excluir**.
 
@@ -76,17 +76,40 @@ Excluya un atributo del perfil de cliente unificado. Si el campo se utiliza en o
 
 En la página **Combinar**, seleccione **Campos excluidos** para ver la lista de todos los campos excluidos. Este panel le permite volver a agregar campos excluidos.
 
+## <a name="edit-a-merged-field"></a>Editar un campo combinado
+
+1.  Seleccione un campo combinado.
+
+1.  Seleccione **Mostrar más** y elija **Editar**.
+
+1.  Especifique cómo combinar o fusionar los campos de una de estas tres opciones:
+    - **Importancia**: identifica el valor ganador según el rango de importancia especificado para los campos participantes. Es la opción de combinación predeterminada. Seleccione **Mover hacia arriba/hacia abajo** para establecer la clasificación de importancia.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opción Importancia en el diálogo de campos de combinación."::: 
+    - **Más reciente**: identifica el valor ganador basado en el más reciente. Requiere una fecha o un campo numérico para cada entidad participante en el ámbito de los campos de combinación para definir la antigüedad.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opción de menor antigüedad en el diálogo de campos de combinación.":::
+    - **Menos reciente**: identifica el valor ganador basado en el menos reciente. Requiere una fecha o un campo numérico para cada entidad participante en el ámbito de los campos de combinación para definir la antigüedad.
+
+1.  Puede agregar campos adicionales para participar en el proceso de fusión.
+
+1.  También puede cambiar el nombre del campo combinado.
+
+1. Seleccione **Listo** para aplicar los cambios.
+
+1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
+
 ## <a name="manually-combine-fields"></a>Combinar campos manualmente
 
 Especifique un atributo combinado manualmente. 
 
 1. En la página **Combinar**, seleccione **Combinar campos**.
 
-1. Proporcione un **Nombre** y un **Nombre del campo de salida**.
+1. Especifique la política del ganador de la combinación en el desplegable **Combinar campos por**.
 
 1. Elija un campo a agregar. Seleccione **Agregar campos** para combinar más campos.
 
-1. Confirme la exclusión.
+1. Proporcione un **Nombre** y un **Nombre del campo de salida**.
+
+1. Seleccione **Listo** para aplicar los cambios.
 
 1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
 
@@ -103,6 +126,27 @@ Algunas entidades contienen más detalles que otras. Si una entidad incluye los 
 1. Confirme el cambio.
 
 1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
+
+## <a name="configure-customer-id-generation"></a>Configurar la generaciónde id. de cliente 
+
+Después de configurar los campos de combinación, puede definir cómo generar valores CustomerId, los identificadores únicos de perfil de cliente. El paso de combinación en el proceso de unificación de datos genera el identificador de perfil de cliente único. El identificador es el CustomerId de la entidad *Cliente* que resulta del proceso de unificación de datos. 
+
+El CustomerId de la entidad Cliente se basa en un hash del primer valor de las claves primarias ganadoras no nulas. Estas claves provienen de las entidades utilizadas en la fase de coincidencia y fusión y están influenciadas por el orden de coincidencia. Por lo tanto, el CustomerID generado puede cambiar cuando cambia un valor de clave principal en la entidad principal del orden de coincidencia. En consecuencia, es posible que el valor de la clave principal no siempre represente al mismo cliente.
+
+La configuración de un id. de cliente estable le permite evitar ese comportamiento.
+
+**Configurar un id. de cliente único**
+
+1. Vaya a **Unificar** > **Combinar**.
+
+1. En la página **Combinar**, seleccione la pestaña **Claves**. 
+
+1. Coloque el cursor sobre la fila **CustomerId** y seleccione la opción **Configurar**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Control para personalizar la generación de id.":::
+
+1. Seleccione hasta cinco campos que incluirán un id. de cliente único y serán más estables. Los registros que no coinciden con su configuración utilizan un id. configurado por el sistema en su lugar.  
+
+1. Seleccione **Listo** y ejecute el proceso de combinación para aplicar sus cambios.
 
 ## <a name="run-your-merge"></a>Ejecutar la combinación
 

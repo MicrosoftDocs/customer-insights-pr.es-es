@@ -1,31 +1,34 @@
 ---
-title: Regiones de disponibilidad de conclusiones sobre la interacción
+title: Opciones de disponibilidad de Dynamics 365 Customer Insights
 description: Obtenga más información sobre las regiones y geografías en las que se implementa el servicio.
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 07/15/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: engagement-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: ca7a921e1ea2f612949c1243a3dc5ee0f4f3c3974305af344c77b870db3e00a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036214"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483318"
 ---
-# <a name="regional-availability-for-engagement-insights"></a>Disponibilidad regional de las conclusiones sobre la interacción
+# <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilidad regional de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Las conclusiones sobre la interacción, una funcionalidad de Dynamics 365 Customer Insights, introduce gradualmente más regiones en las que los clientes pueden elegir almacenar sus datos. Los administradores pueden elegir una región al [crear un entorno nuevo](manage-environments-workspaces.md#create-an-environment). Si una organización configura conclusiones sobre la interacción por primera vez, elige la región mientras realiza la [experiencia guiada de primera ejecución](quickstart.md). Posteriormente, cada nuevo entorno permitirá elegir la región en la que se almacenarán los datos.
+Las conclusiones sobre la involucración, una funcionalidad de Dynamics 365 Customer Insights, introduce gradualmente más regiones en las que los clientes pueden elegir almacenar sus datos. Los administradores pueden elegir una región al [crear un entorno nuevo](manage-environments-workspaces.md#create-an-environment). 
 
-En la versión preliminar pública hay dos geografías: EE. UU. y Europa. Los usuarios pueden elegir entre la región del oeste de EE. UU. y la región del norte de Europa.
+Al configurar conclusiones sobre involucración por primera vez, puede elegir la región mientras realiza la [experiencia guiada de primera ejecución](quickstart.md). Posteriormente, cada nuevo entorno le permitirá elegir la región en la que se almacenarán los datos.
+
+Actualmente hay dos geografías: EE. UU. y Europa. Los usuarios pueden elegir entre la región del oeste de EE. UU. y la región del norte de Europa.
 
 Una organización puede mantener entornos en distintas regiones. Por ejemplo, el Entorno A almacena datos en el oeste de EE. UU. y el Entorno B en el norte de Europa.
 
-> [!TIP]
+> [!NOTE]
 > Una vez que haya elegido una región durante la creación del entorno, no podrá cambiar esa configuración. Para cambiar la región, un administrador de entorno debe [eliminar el entorno](manage-environments-workspaces.md#delete-an-environment) y crear un nuevo entorno con la configuración regional actualizada.
 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

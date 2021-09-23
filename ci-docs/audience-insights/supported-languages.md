@@ -1,24 +1,23 @@
 ---
-title: Idiomas admitidos para informaciones de público
+title: Idiomas compatibles con Dynamics 365 Customer Insights
 description: Comprender y configurar el soporte de idiomas.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035160"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483363"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Idiomas admitidos para capacidad de informaciones de público
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Idiomas compatibles con Dynamics 365 Customer Insights
 
-Información de público para Dynamics 365 Customer Insights se traduce a muchos idiomas. La siguiente lista contiene los idiomas disponibles e información sobre lo que se traduce. También puede obtener más información sobre cómo cambiar la configuración de idioma. 
+Dynamics 365 Customer Insights está traducido a muchos idiomas. La siguiente lista contiene los idiomas disponibles e información sobre lo que se traduce. También puede obtener más información sobre cómo cambiar la configuración de idioma. 
 
 ## <a name="languages"></a>Idiomas
 
@@ -69,7 +68,7 @@ Información de público para Dynamics 365 Customer Insights se traduce a muchos
 
 ## <a name="whats-translated"></a>Qué está traducido
 
-La aplicación usa su preferencia de idioma para mostrar elementos como el menú, el texto de etiquetas y los mensajes del sistema en su idioma preferido.
+Customer Insights utiliza su preferencia de idioma para mostrar elementos como el menú, el texto de etiqueta y mensajes del sistema en su idioma preferido.
 
 Debido a que la mayoría de las funciones se basan en sus datos, algunos elementos permanecen en su idioma original. Por ejemplo:
 

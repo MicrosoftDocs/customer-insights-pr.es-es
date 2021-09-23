@@ -1,19 +1,19 @@
 ---
 title: Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción
 description: Cree un vínculo entre las conclusiones del público y las conclusiones sobre la interacción para permitir el intercambio bidireccional de datos.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461034"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487128"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción
 
@@ -26,14 +26,14 @@ Use perfiles y segmentos unificados de conclusiones del público para obtener m�
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Los perfiles de conclusiones del público se deben almacenar en una cuenta de Azure Data Lake Storage que posea o en un lago de datos almacenado de [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-
+- Su entorno de conclusiones del público debe tener un entorno de Dataverse asociado. Y si ese entorno también está usando Dataverse para el almacenamiento de datos, asegúrese de marcar la opción **Habilitar el uso compartido de datos** opción en las conclusiones del público. Para más información, consulte [Creary configurar un entorno de pago en las conclusiones del público](../audience-insights/get-started-paid.md).
 - Necesita permisos de administrador para los entornos de conclusiones sobre la interacción y conclusiones del público.
-
 - Los entornos vinculados deben estar en la misma región geográfica.
 
 > [!NOTE]
 > - Si su suscripción a conclusiones del público es una prueba que usa un lago de datos administrado internamente de conclusiones del público, póngase en contacto con [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obtener asistencia. 
-> - Si su entorno de conclusiones del público usa su propio Azure Data Lake Storage para almacenar datos, debe agregar una entidad de servicio de Azure de conclusiones sobre la interacción a su cuenta de almacenamiento. Para obtener más detalles, vaya a [Conectar con una cuenta de Azure Data Lake Storage con una entidad de servicio de Azure para conclusiones del público](../audience-insights/connect-service-principal.md). Asimismo, su entorno de conclusiones del público deben tener un [entorno de Dataverse](../audience-insights/get-started-paid.md) asociado. 
+> - Si su entorno de conclusiones del público usa su propio Azure Data Lake Storage para almacenar datos, debe agregar una entidad de servicio de Azure de conclusiones sobre la interacción a su cuenta de almacenamiento. Para obtener más detalles, vaya a [Conectar con una cuenta de Azure Data Lake Storage con una entidad de servicio de Azure para conclusiones del público](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Crear un vínculo de entorno
 
@@ -75,6 +75,7 @@ Después de vincular entornos, ahora puede seleccionar funciones opcionales para
 
    > [!IMPORTANT]
    > Si no agrega usuarios explícitamente en este paso, los datos se ocultarán a los usuarios en las conclusiones sobre la interacción.
+   > Para que los segmentos de conclusiones del público se muestren en conclusiones sobre la interacción, primero debe [ejecutar la combinación y los procesos subsiguientes](../audience-insights/merge-entities.md). Los procesos posteriores son importantes porque generan una tabla única que prepara los segmentos de iconclusiones del público para compartir con las conclusiones sobre la interacción. (Si se programa una actualización del sistema, incluirá automáticamente los procesos posteriores).
 
 1. Revise su selección y, a continuación, seleccione **Finalizar**.
 

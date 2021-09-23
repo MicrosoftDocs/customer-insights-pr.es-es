@@ -4,17 +4,17 @@ description: Cómo crear, renombrar y eliminar áreas de trabajo y entornos.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034063"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486056"
 ---
 # <a name="manage-environments-and-workspaces"></a>Administrar entornos y áreas de trabajo
 
@@ -85,13 +85,11 @@ La eliminación de un área de trabajo eliminará permanentemente todo su conten
 
 1. Seleccione **Añadir miembros** para dar acceso y [asignar roles](user-roles.md). Actualmente, solo está disponible **Administrador del área de trabajo**.
 
-1. Si configura una [conexión con las conclusiones del público](configure-connections.md), puede seleccionar **Permitir el acceso a los datos del perfil** para permitir que el miembro vea informes basados en [perfiles de usuario](profile-reports.md).
-
 1. Seleccione **Añadir miembros** para agregarlos a su área de trabajo.
 
 ## <a name="manage-an-environment"></a>Administrar un entorno
 
-Como administrador del entorno, puede acceder a un entorno desde el panel de navegación izquierdo. Puede configurar los ajustes del entorno, otros administradores del entorno, espacios de trabajo y [conexiones con conclusiones del público](configure-connections.md). Seleccione las pestañas para moverse entre diferentes áreas en el centro de administración.
+Como administrador del entorno, puede acceder a un entorno desde el panel de navegación izquierdo. Puede configurar los ajustes del entorno, otros administradores del entorno y espacios de trabajo. Seleccione las pestañas para moverse entre diferentes áreas en el centro de administración.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centro de administración del entorno.":::
 
@@ -123,8 +121,6 @@ Como administrador del entorno, puede acceder a un entorno desde el panel de nav
 
 1. Seleccione **Añadir miembros** para actualizar miembros y [asignar roles](user-roles.md). Actualmente, solo está disponible **Administrador del entorno**.
 
-1. Si configura una [conexión con las conclusiones del público](configure-connections.md), puede seleccionar **Permitir el acceso a los datos del perfil** para permitir que el miembro vea informes basados en [perfiles de usuario](profile-reports.md).
-
 1. Seleccione **Añadir miembros** para agregarlos a su entorno.
 
 ### <a name="delete-an-environment"></a>Eliminar un entorno
@@ -143,7 +139,7 @@ Los administradores de entornos pueden eliminar entornos. Para poder eliminar un
 
 Establecer conexiones con conclusiones del público le permite ver informes en conclusiones sobre la interacción basados en perfiles de clientes unificados. 
 
-Para obtener más información, consulte [Configurar conexiones](configure-connections.md).
+Para más información, consulte [Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gestionar datos personales
 

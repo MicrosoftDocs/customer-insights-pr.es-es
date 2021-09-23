@@ -1,7 +1,7 @@
 ---
-title: Crear y gestionar segmentos
+title: Crear segmentos con el generador de segmentos
 description: Cree segmentos de clientes para agruparlos en función de diversos atributos.
-ms.date: 07/18/2021
+ms.date: 09/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,104 +9,86 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: 7f7bd0e7e581305836287bd503ef273a2d556bff
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377809"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494568"
 ---
-# <a name="create-and-manage-segments"></a>Crear y gestionar segmentos
+# <a name="create-segments"></a>Crear segmentos
 
-> [!IMPORTANT]
-> En septiembre de 2021 se implementarán varios cambios en la experiencia de creación de segmentos: 
-> - El generador de segmentos tendrá un aspecto ligeramente diferente, con elementos rediseñados y un flujo de usuarios mejorado.
-> - Los nuevos operadores de fecha y hora y un selector de fechas mejorado están habilitados en el generador de segmentos.
-> - Puede agregar o quitar condiciones y reglas de segmentos. 
-> - Estarán disponibles las reglas anidadas que comiencen por una condición OR. Ya no necesita una condición AND en la capa más externa.
-> - Un panel lateral para seleccionar atributos estará disponible constantemente.
-> - Una opción para seleccionar rutas de acceso de relación de entidad.
-> Para probar el generador de segmentos, envíe a cihelp [at] microsoft.com un correo electrónico con el asunto "Solicitud para habilitar el nuevo generador de segmentos". Incluya el nombre de su organización y el id. de su entorno de espacio aislado.
-> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementos del constructor de segmentos." lightbox="media/segment-builder-overview.png":::
->
-> 1 - Organice su segmento con reglas y subreglas. Cada regla o subregla consta de condiciones. Combinar las condiciones con operadores lógicos
->
-> 2 - Elija la [ruta de la relación](relationships.md) entre entidades que se aplica a una regla. La ruta de la relación determina qué atributos se pueden usar en una condición.
->
-> 3 - Gestione reglas y subreglas. Cambie la posición de una regla o elimínela.
->
-> 4 - Agregue condiciones y construya el nivel correcto de anidamiento usando subreglas.
->
-> 5 - Aplique operaciones de conjunto a reglas conectadas.
->
-> 6 - Use el panel de atributos para agregar atributos de entidad disponibles o crear condiciones basadas en atributos. El panel muestra la lista de entidades y atributos, según la ruta de relación seleccionada, que están disponibles para la regla seleccionada.
->
-> 7 - Agregue condiciones basadas en atributos a reglas y subreglas existentes o agréguelas a una nueva regla.
->
-> 8 - Deshaga y rehaga cambios mientras construye el segmento.
+Defina filtros complejos basados en la entidad de cliente unificado y sus entidades relacionadas. Cada segmento, después del procesamiento, crea un conjunto de registros de entidades del cliente que puede exportar y sobre los que puede actuar. Los segmentos se gestionan en la página **Segmentos**. Usted puede [crear nuevos segmentos](#create-a-new-segment) utilizando el [generador de segmentos](#segment-builder) o [crear segmentos rápidos](#quick-segments) de otras áreas de la aplicación.
 
-Defina filtros complejos basados en la entidad de cliente unificado y sus entidades relacionadas. Cada segmento, después del procesamiento, crea un conjunto de registros de entidades del cliente que puede exportar y sobre los que puede actuar. Los segmentos se gestionan en la página **Segmentos**. 
+## <a name="segment-builder"></a>Generador de segmentos
 
-El siguiente ejemplo ilustra la capacidad de segmentación. Hemos definido un segmento para clientes que pidieron bienes por una cantidad mínima de $500 en los últimos 90 días *y* que participaron en una llamada de servicio al cliente que se escaló.
+La siguiente imagen ilustra los diversos aspectos del generador de segmentos. Muestra un segmento que da como resultado un grupo de clientes. Los clientes pidieron productos en un período de tiempo específico y obtuvieron una serie de puntos de recompensa o gastaron una cierta cantidad de dinero. 
 
-:::image type="content" source="media/segmentation-group1-2.png" alt-text="Captura de pantalla de la UI del generador de segmentos con dos grupos que especifican un segmento de clientes.":::
+:::image type="content" source="media/segment-builder-overview.png" alt-text="Elementos del constructor de segmentos." lightbox="media/segment-builder-overview.png":::
+
+1 - Organice su segmento con reglas y subreglas. Cada regla o subregla consta de condiciones. Combinar las condiciones con operadores lógicos
+
+2 - Elija la [ruta de la relación](relationships.md) entre entidades que se aplica a una regla. La ruta de la relación determina qué atributos se pueden usar en una condición.
+
+3 - Gestione reglas y subreglas. Cambie la posición de una regla o elimínela.
+
+4 - Agregue condiciones y construya el nivel correcto de anidamiento usando subreglas.
+
+5 - Aplique operaciones de conjunto a reglas conectadas.
+
+6 - Use el panel de atributos para agregar atributos de entidad disponibles o crear condiciones basadas en atributos. El panel muestra la lista de entidades y atributos, según la ruta de relación seleccionada, que están disponibles para la regla seleccionada.
+
+7 - Agregue condiciones basadas en atributos a reglas y subreglas existentes o agréguelas a una nueva regla.
+
+8 - Deshaga y rehaga cambios mientras construye el segmento.
+
+El ejemplo anterior ilustra la capacidad de segmentación. Hemos definido un segmento para los clientes que compraron al menos 500 $ de productos en línea *y* tienen interés en el desarrollo de software.
 
 ## <a name="create-a-new-segment"></a>Crear un nuevo segmento
 
-Hay múltiples formas de crear un nuevo segmento. Esta sección describe cómo crear un *segmento en blanco* desde cero. También puede crear un *segmento rápido* basado en entidades existentes o hacer uso de modelos de aprendizaje automático para obtener *segmentos sugeridos*. Más información: [Información general sobre los segmentos](segments.md).
+Hay múltiples formas de crear un nuevo segmento. Esta sección describe cómo construir su propio segmento desde cero. También puede crear un *segmento rápido* basado en entidades existentes o hacer uso de modelos de aprendizaje automático para obtener *segmentos sugeridos*. Más información: [Información general sobre los segmentos](segments.md).
 
 Mientras crea un segmento, puede guardar un borrador. Se guardará como un segmento inactivo y no se podrá activar si termina con una configuración válida.
 
 1. Vaya a la página **Segmentos**.
 
-1. Seleccione **Nuevo** > **Segmento en blanco**.
+1. Seleccione **Nuevo** > **Generar el suyo**.
 
-1. En el panel **Nuevo segmento**, elija un tipo de segmento:
+1. En la página del generador de segmentos, defina la primera regla. Una regla consta de una o más condiciones y define un conjunto de clientes.
 
-   - [Actualizar](segments.md#refresh-segments) **segmentos dinámicos** con programación periódica.
-   - Los **segmentos estáticos** se ejecutan una vez, al crearlos.
+1. En la sección **Regla 1**, elija un atributo de una entidad por la que desee filtrar clientes. Hay dos formas de elegir atributos: 
+   - Revise la lista de entidades y atributos disponibles en el panel **Agregar a la regla** y seleccione el icono **+** próximo al atributo a agregar. Elija si desea agregar el atributo a una regla existente o utilizarlo para crear una nueva regla.
+   - Escriba el nombre del atributo en la sección de reglas para ver sugerencias coincidentes.
 
-1. Facilite un **Nombre de la entidad de salida** para el segmento. Opcionalmente, proporcione un nombre y una descripción que ayude a identificar el segmento.
+1. Elija los operadores para especificar los valores coincidentes de la condición. El atributo puede tener uno de entre cuatro tipos de datos como valor: numérico, cadena, fecha o booleano. Dependiendo del tipo de datos del atributo, hay diferentes operadores disponibles para especificar la condición. 
 
-1. Seleccione **Siguiente** para llegar a la página **Generador de segmentos**, donde define un grupo. Un grupo es un conjunto de clientes.
+1. Seleccione **Agregar condición** para agregar más condiciones a una regla. Para crear una regla bajo la regla actual, seleccione **Agregar subregla**.
 
-1. Elija la entidad que incluye el atributo por la que desea segmentar.
+1. Si una regla usa otras entidades distintas a la entidad *Cliente*, debe establecer la ruta de la relación. La ruta de la relación es necesaria para informar al sistema sobre las relaciones que desea que tengan acceso a la entidad de cliente unificado. Seleccione **Establecer ruta de relación** para mapear la entidad seleccionada a la entidad cliente unificada. Si solo hay una ruta de relación posible, el sistema la seleccionará automáticamente. Diferentes rutas de relación pueden producir resultados diferentes. Cada regla puede tener su propia ruta de relación.
 
-1. Elija el atributo de segmentación. Este atributo puede tener uno de los cuatro tipos de valores siguientes: numérico, cadena, fecha o booleano.
+   :::image type="content" source="media/relationship-path.png" alt-text="Ruta de relación potencial al crear una regla basada en una entidad asignada a la entidad cliente unificada.":::
 
-1. Elija un operador y un valor para el atributo seleccionado.
+   Por ejemplo, la entidad *eCommerce_eCommercePurchases* de la captura de pantalla tiene cuatro opciones de asignación a la entidad del *Cliente*: 
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Cliente
+   - eCommerce_eCommercePurchases > Cliente
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
+   - eCommerce_eCommercePurchases> eCommerce_eCommerceContacts> POS_posPurchases> loyaltyScheme_loyCustomers> Cliente Al elegir la última opción, podemos incluir atributos de todas las entidades listadas en las condiciones de la regla. Es probable que obtengamos menos resultados porque los registros de clientes coincidentes deben ser parte de todas las entidades. En este ejemplo, se deben haber comprado productos a través de comercio electrónico (*eCommerce_eCommercePurchases*), en un punto de venta (*POS_posPurchases*) y participar en nuestro programa de fidelización (*loyaltyScheme_loyCustomers*). Al elegir la segunda opción, solo podemos elegir atributos de *eCommerce_eCommercePurchases* y la entidad *Cliente*. Esto probablemente dará por resultado más perfiles de clientes resultantes.
 
-   > [!div class="mx-imgBorder"]
-   > ![Filtro de grupo personalizado.](media/customer-group-numbers.png "Filtro de grupo del cliente")
+1. Si tiene varias condiciones en una regla, puede elegir qué operador lógico las conecta.
 
-   |Número |Definición  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atributo          |
-   |3    |Operador         |
-   |4    |valor         |
+   - Operador **Y**: deben cumplirse todas las condiciones para incluir un registro en el segmento. Esta opción es más útil cuando define condiciones en diferentes entidades.
 
-   1. Para agregar más condiciones a un grupo, puede usar dos operadores lógicos:
+   - Operador **O**: debe cumplirse cualquiera de las condiciones para incluir un registro en el segmento. Esta opción es más útil cuando define varias condiciones para la misma entidad.
 
-      - Operador **AND**: Ambas condiciones deben cumplirse como parte del proceso de segmentación. Esta opción es más útil cuando define condiciones en diferentes entidades.
+   :::image type="content" source="media/segmentation-either-condition.png" alt-text="Regla con dos condiciones Y.":::
 
-      - Operador **OR**: Cualquiera de las condiciones debe cumplirse como parte del proceso de segmentación. Esta opción es más útil cuando define varias condiciones para la misma entidad.
+   Cuando se usa el operador O, todas las condiciones deben basarse en entidades incluidas en la ruta de la relación.
 
-      > [!div class="mx-imgBorder"]
-      > ![Operador OR donde cualquiera de las condiciones debe cumplirse.](media/segmentation-either-condition.png "Operador OR donde cualquiera de las condiciones debe cumplirse")
+   1. Puede crear varias reglas para crear diferentes conjuntos de registros de clientes. Puede combinar grupos para incluir los clientes necesarios para su caso comercial. Para crear una regla nueva, seleccione **Agregar regla**. Específicamente, si no puede incluir una entidad en una regla debido a la ruta de relación especificada, debe crear una nueva regla para elegir los atributos que la forman.
 
-      Actualmente es posible anidar una operador **OR** bajo un operador **AND**, pero no al revés.
-
-   1. Cada grupo coincide con un conjunto de clientes. Puede combinar grupos para incluir los clientes necesarios para su caso comercial.    
-   Seleccione **Agregar grupo**.
-
-      > [!div class="mx-imgBorder"]
-      > ![Grupo de clientes agregar grupo.](media/customer-group-add-group.png "Grupo de clientes agregar grupo")
+      :::image type="content" source="media/segment-rule-grouping.png" alt-text="Agregue una nueva regla a un segmento y elija el operador del conjunto.":::
 
    1. Seleccione uno de los operadores establecidos: **Unión**, **Intersección** o **Excepto**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Grupo de clientes agregar unión.](media/customer-group-union.png "Grupo de clientes agregar unión")
 
    - **Unión** une los dos grupos.
 
@@ -114,25 +96,29 @@ Mientras crea un segmento, puede guardar un borrador. Se guardará como un segme
 
    - **Exceptuar** combina los dos grupos. Solo se retienen en el grupo A los datos que *no son comunes* a los datos del grupo B.
 
-1. Si la entidad está conectada a la entidad unificada del cliente a través de [relaciones](relationships.md), debe definir la ruta de relación para crear un segmento válido. Agregue las entidades de la ruta de relación hasta que pueda seleccionar la entidad **Customer : CustomerInsights** del menú desplegable. Entonces, escoja **Todos los registros** para cada paso.
+1. De forma predeterminada, los segmentos generan la entidad de salida que contiene todos los atributos de los perfiles de clientes que coinciden con los filtros definidos. Si un segmento se basa en otras entidades distintas a la entidad *Cliente*, puede agregar más atributos de estas entidades a la entidad de salida. Seleccione **Atributos del proyecto** para elegir los atributos que se agregarán a la entidad de salida.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Ruta de relación durante la creación del segmento.](media/segments-multiple-relationships.png "Ruta de relación durante la creación del segmento")
-
-1. De forma predeterminada, los segmentos generan una entidad de salida que contiene todos los atributos de los perfiles de clientes que coinciden con los filtros definidos. Si un segmento se basa en otras entidades distintas a la entidad *Cliente*, puede agregar más atributos de estas entidades a la entidad de salida. Seleccione **Atributos del proyecto** para elegir los atributos que se agregarán a la entidad de salida.  
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Ejemplo de atributos proyectados seleccionados en el panel lateral para agregarlos a la entidad de salida.":::
   
-   Ejemplo: un segmento se basa en una entidad que contiene datos de actividad del cliente que están relacionados con la entidad *Cliente*. El segmento busca a todos los clientes que llamaron a la mesa de ayuda en los últimos 60 días. Puede optar por agregar la duración de la llamada y el número de llamadas a todos los registros de clientes coincidentes en la entidad de salida. Esta información puede resultar útil para enviar un correo electrónico con vínculos útiles a artículos de ayuda en línea y preguntas frecuentes a los clientes que llaman con frecuencia.
+   Ejemplo: un segmento se basa en una entidad que contiene datos de compra, que están relacionados con la entidad *Cliente*. El segmento busca todos los clientes de España que compraron bienes en el año en curso. Puede optar por agregar atributos, como el precio de los productos, o la fecha de compra a todos los registros de clientes coincidentes en la entidad de salida. Esta información puede resultar útil para analizar las correlaciones estacionales con el gasto total.
 
    > [!NOTE]
    > - Los atributos proyectados solo funcionan para entidades que tienen una relación de uno a varios con la entidad del cliente. Por ejemplo, un cliente puede tener varias suscripciones.
-   > - Solo puede proyectar atributos de una entidad que se utiliza en cada grupo de consulta de segmento que está creando.
+   > - Solo puede proyectar atributos de una entidad que se utiliza en todas las reglas de consulta de segmento que está creando.
    > - Los atributos proyectados se tienen en cuenta al utilizar operadores de conjuntos.
 
-1. Seleccione **Guardar** para guardar el segmento. Su segmento se guardará y procesará si se validan todos los requisitos. De lo contrario, se guardará como borrador.
+1. Antes de guardar y ejecutar el segmento, seleccione **Editar detalles** junto al nombre del segmento. Proporcione un nombre para su segmento y actualice el **Nombre de la entidad de salida** sugerido para el segmento. También puede agregar una descripción al segmento.
+
+1. Seleccione **Ejecutar** para guardar y procesar su segmento si todos los requisitos están validados. De lo contrario, se guardará como borrador de segmento inactivo.
 
 1. Seleccione **Volver a Segmentos** para volver a la página **Segmentos**.
 
-
+> [!TIP]
+> - El generador de segmentos no sugerirá valores válidos de entidades al configurar los operadores para las condiciones. Puedes ir a **Datos** > **Entidades** y descargar los datos de la entidad para ver qué valores están disponibles.
+> - Las condiciones basadas en las fechas le permiten cambiar entre fechas fijas y un rango de fechas flotante.
+> - Si tiene varias reglas para su segmento, encontrará una barra azul alrededor de la regla que está editando.
+> - Puede mover reglas y condiciones a otros lugares en la definición del segmento. Seleccione [...] junto a una regla o condición y elija cómo y dónde moverla.
+> - Los controles **Deshacer** y **Rehacer** de la barra de comandos le permiten revertir los cambios.
 
 ## <a name="quick-segments"></a>Segmentos rápidos
 
@@ -146,7 +132,7 @@ Los segmentos rápidos le permiten crear segmentos simples con un solo operador 
 
 2. En el cuadro de diálogo **Nuevo segmento rápido**, seleccione un atributo en el campo desplegable **Campo**.
 
-3. El sistema proporcionará información adicional que le ayudará a crear mejores segmentos de sus clientes.
+3. El sistema proporcionará más información que le ayudará a crear mejores segmentos de sus clientes.
    - Para los campos categóricos, mostraremos los 10 principales recuentos de clientes. Elija un **Valor** y seleccione **Revisar**.
 
    - Para un atributo numérico, el sistema mostrará qué valor de atributo corresponde al percentil de cada cliente. Elija un **Operador** y un **Valor**, luego seleccione **Revisar**.

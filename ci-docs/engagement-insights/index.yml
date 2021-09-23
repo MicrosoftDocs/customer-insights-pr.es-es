@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Funcionalidades de las conclusiones sobre la interacción (versión preliminar) en Dynamics 365 Customer Insights
+title: Capacidad de conclusiones sobre involucración en Dynamics 365 Customer Insights (versión preliminar)
 summary: Recopile datos para sus sitios web. Comprenda las interacciones y el uso de los clientes en sus sitios, de forma interactiva. Utilice la profunda integración entre las conclusiones sobre la interacción y las conclusiones del público para enriquecer sus análisis de comportamiento en tiempo real con informes de perfil de cliente. Enriquezca los perfiles de los clientes con actividades web para obtener datos de comportamiento en tiempo real junto con datos relevantes de los clientes. Transforme su negocio para obtener valor inmediato de los datos de sus clientes.
 metadata:
-  title: Documentación de las conclusiones sobre la interacción (versión preliminar)
+  title: Documentación de las conclusiones sobre la involucración (versión preliminar)
   description: Centro de ayuda con enlaces clave para las conclusiones sobre la interacción.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036259"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494205"
 landingContent:
 - title: Acerca de
   linkLists:
   - linkListType: overview
     links:
-    - text: Información general sobre capacidad
+    - text: Beneficios de capacidad
       url: overview.md
-    - text: Conceptos y términos
+    - text: Glosario de términos
       url: glossary.md
-    - text: Descubrir conclusiones sobre la interacción
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Características nuevas y actualizadas
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Incorporación
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Instrumentar el sitio web
       url: instrument-website.md
-- title: Informes
+- title: Ver y filtrar informes
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Ver informes
       url: view-reports.md
-    - text: Crear informes personalizados
-      url: custom-reports.md
     - text: Ver informe de perfiles unificados
       url: profile-reports.md
-    - text: Crear informes de embudo
-      url: funnel-reports.md
-- title: Eventos
+    - text: Utilizar segmentos de audiencia para filtrar informes
+      url: integrate-audience-insights-segments.md
+- title: Analizar
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Crear informes de embudo
+      url: funnel-reports.md
+    - text: Analizar datos conductuales
+      url: curate-dimensions.md
+    - text: Crear informes personalizados
+      url: custom-reports.md
     - text: Crear eventos refinados
       url: refined-events.md
     - text: Exportar eventos
       url: export-events.md
-    - text: Eliminar y exportar datos personales
-      url: delete-export-personal-data.md
-- title: Recursos para desarrolladores
+- title: Recursos de desarrollador
   linkLists:
   - linkListType: reference
     links:
-    - text: Recursos para desarrolladores
+    - text: Recursos de desarrollador
       url: developer-resources.md
     - text: Muestra de WebSDK
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Administrar entornos y áreas de trabajo
       url: manage-environments-workspaces.md
     - text: Conectarse a las conclusiones del público
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gestionar cookies y consentimiento del usuario
       url: user-consent-storage.md
+    - text: Eliminar y exportar datos personales
+      url: delete-export-personal-data.md
+    - text: Límites de servicio
+      url: ../service-limits.md

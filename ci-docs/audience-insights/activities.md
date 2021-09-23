@@ -1,20 +1,20 @@
 ---
 title: Actividades del cliente
-description: Defina las actividades del cliente y visualícelas en la escala de tiempo del cliente.
-ms.date: 04/07/2021
+description: Defina las actividades de los clientes y visualícelas en una línea de tiempo en los perfiles de los clientes.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033652"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494432"
 ---
 # <a name="customer-activities"></a>Actividades del cliente
 
@@ -60,12 +60,15 @@ Sus orígenes de datos pueden incluir entidades con datos transaccionales y de a
       - **Detalle adicional**: campo con información relevante para esta actividad.
       - **Icono**: icono que mejor representa este tipo de actividad.
       - **Dirección web**: campo que contiene una dirección URL con información sobre esta actividad. Por ejemplo, el sistema transaccional que origina esta actividad. Esta URL puede ser cualquier campo de origen de datos, o puede construirse como un nuevo campo utilizando una transformación de Power Query. Los datos de la dirección URL se almacenarán en la entidad *Actividad unificada*, que se puede consumir subsiguientemente utilizando las [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique los datos de la actividad del cliente en una entidad Actividad unificada.":::
+
+   - **Mostrar en escala de tiempo**
+      - Elija si desea mostrar esta actividad en la vista de escala de tiempo de los perfiles de cliente. Seleccione **Sí** para mostrar la actividad en la línea de tiempo o **No** para ocultarla.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique los datos de la actividad del cliente en una entidad Actividad unificada.":::
 
 1. Seleccione **Siguiente** para ir al siguiente paso. Puede elegir **Terminar y revisar** para guardar la actividad ahora con el tipo de actividad configurado en **Otros**. 
 
-1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Suscripción* y *SalesOrderLine* se pueden asignar semánticamente después de acordar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
+1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Comentarios*, *Fidelidad*, *SalesOrder*, *SalesOrderLine* y *Subscripción* se pueden asignar semánticamente después de acordar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
 
 1. Seleccione **Siguiente** para ir al siguiente paso. 
 
