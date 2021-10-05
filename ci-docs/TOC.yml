@@ -242,7 +242,7 @@
   items:
     - name: Centro de ayuda
       href: engagement-insights/index.yml
-    - name: Información general sobre capacidad
+    - name: Acerca de las conclusiones sobre la interacción
       href: engagement-insights/overview.md
     - name: Comenzar
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Disponibilidad regional
       href: engagement-insights/regional-availability.md
-- name: Integrar Conclusiones de público y Conclusiones sobre la interacción
+- name: Compartir datos entre capacidades
   items:
     - name: Vincular las conclusiones sobre la interacción y las conclusiones de público
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Derechos y solicitudes de DSR
   href: dsr-rights-requests.md
-- name: Obtener de soporte técnico
-  href: 'https://dynamics.microsoft.com/support/'

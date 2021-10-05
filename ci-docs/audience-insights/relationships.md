@@ -1,20 +1,20 @@
 ---
 title: Relaciones entre entidades y rutas de entidades
 description: Cree y administre relaciones entre entidades de múltiples fuentes de datos.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035252"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557373"
 ---
 # <a name="relationships-between-entities"></a>Relaciones entre entidades
 
@@ -93,11 +93,11 @@ Opciones disponibles:
 - **Cambiar a diseño horizontal / vertical**: cambia la alineación de las entidades y relaciones.
 - **Editar**: actualiza las propiedades de relaciones personalizadas en el panel de edición y guarda los cambios.
 
-### <a name="relationship-path"></a>Ruta de relación
+## <a name="relationship-paths"></a>Rutas de relación
 
-La ruta de la relación describe las entidades que están conectadas con relaciones entre una entidad de origen y una entidad de destino. Se utiliza al crear un segmento o una medida que incluye otras entidades además de la entidad de perfil unificado y existen múltiples opciones para llegar a la entidad de perfil unificado.
+Una ruta de relación describe las entidades que están conectadas con Relaciones entre una entidad de origen y una entidad de destino. Se utiliza al crear un segmento o una medida que incluye otras entidades además de la entidad de perfil unificado y existen múltiples opciones para llegar a la entidad de perfil unificado. 
 
-La ruta de la relación informa al sistema sobre las relaciones para tener acceso a la entidad de perfil unificado. Diferentes rutas de relación pueden producir resultados diferentes.
+Una ruta de relación informa al sistema sobre qué Relaciones acceder a la entidad de perfil unificado. Diferentes rutas de relación pueden producir resultados diferentes.
 
 Por ejemplo, la entidad *eCommerce_eCommercePurchases* tiene las siguientes relaciones con la entidad *Cliente* del perfil unificado:
 
@@ -105,7 +105,43 @@ Por ejemplo, la entidad *eCommerce_eCommercePurchases* tiene las siguientes rela
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
 
-La ruta de la relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases), en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
+Una ruta de relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases), en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
+
+### <a name="direct-relationship"></a>Relación directa
+
+Una relación se clasifica como **relación directa** cuando una entidad fuente se relaciona con una entidad objetivo con una sola relación.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchases* se conecta a una entidad objetivo *eCommerce_eCommerceContacts* a través de *ContactId* solo, es una relación directa.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="La entidad de origen se conecta directamente a la entidad de destino.":::
+
+#### <a name="multi-path-relationship"></a>Relación de múltiples rutas
+
+Una **relación de múltiples rutas** es un tipo especial de relación directa que conecta una entidad de origen con más de una entidad de destino.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchases* se relaciona con dos entidades objetivo, ambas *eCommerce_eCommerceContacts* y *loyaltyScheme_loyCustomers*, es una relación de múltiples rutas.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="La entidad de origen se conecta directamente a más de una entidad de destino a través de una relación de varios saltos.":::
+
+### <a name="indirect-relationship"></a>Relación indirecta
+
+Una relación se clasifica como **relación indirecta** cuando una entidad fuente se relaciona con una o más entidades adicionales antes de relacionarse con una entidad de destino.
+
+#### <a name="multi-hop-relationship"></a>Relación de múltiples saltos
+
+Una *relación de varios saltos* es una *relación indirecta* que le permite conectar una entidad de origen a una entidad de destino a través de una o más entidades intermediarias.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchasesWest* se conecta a una entidad intermedia llamada *eCommerce_eCommercePurchasesEast* y luego se conecta a una entidad de destino llamada *eCommerce_eCommerceContacts*, es una relación de varios saltos.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="La entidad de origen se conecta directamente a una entidad de destino con una entidad intermedia.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relación de múltiples saltos y rutas
+
+Las relaciones de múltiples saltos y rutas se pueden usar juntas para crear **relaciones de múltiples saltos y rutas**. Este tipo especial combina las funciones de las relaciones de **múltiples saltos** y **múltiples rutas**. Le permite conectarse a más de una entidad de destino mientras usa entidades intermedias.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchasesWest* se conecta a una entidad intermedia llamada *eCommerce_eCommercePurchasesEast* y luego se conecta a una entidad de destino llamada *eCommerce_eCommerceContacts* y *loyaltyScheme_loyCustomers*, es una relación de varias rutas y saltos.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="La entidad de origen se conecta directamente a una entidad de destino y se conecta a otra entidad de destino a través de una entidad intermedia.":::
 
 ## <a name="manage-existing-relationships"></a>Administrar las relaciones existentes 
 

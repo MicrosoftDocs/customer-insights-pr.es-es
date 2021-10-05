@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487128"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559039"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción
 
@@ -54,6 +54,9 @@ Puede crear un vínculo de entorno actualizando la configuración de **Administr
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Habilitar atributos y segmentos del perfil unificado de conclusiones del público
 
 Después de vincular entornos, ahora puede seleccionar funciones opcionales para los entornos vinculados. Estas funciones permiten atributos y segmentos de perfil unificados a partir de las conclusiones del público para el análisis interactivo de los datos de los clientes.
+
+> [!IMPORTANT]
+> Para que los segmentos de conclusiones del público se muestren en conclusiones sobre la interacción, primero debe [ejecutar la combinación y los procesos subsiguientes](../audience-insights/merge-entities.md). Los procesos posteriores son importantes porque generan una tabla única que prepara los segmentos de iconclusiones del público para compartir con las conclusiones sobre la interacción. (Si se programa una actualización del sistema, incluirá automáticamente los procesos posteriores).
 
 **Analizar datos web en conclusiones sobre la interacción**
 

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035436"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558846"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurar un entorno de prueba 
 
@@ -95,7 +95,7 @@ Ahora puede utilizar los datos ingeridos para adaptar Customer Insights a su esc
 
 - Las versiones de prueba están activas durante 30 días de forma predeterminada. Sin embargo, puede ampliar la duración después del día 23, al iniciar sesión en la versión de prueba.
 - No puede usar su propia cuenta de almacenamiento de Azure Data Lake para almacenar datos de salida durante una prueba. Sin embargo, puede ingerir datos de una cuenta de almacenamiento de Data Lake.
-- Puede almacenar hasta 3 GB de datos en el entorno Dataverse que se aprovisiona automáticamente al iniciar una prueba de Customer Insights.
+- Puede almacenar hasta 3 GB de datos en el entorno de Dataverse que se aprovisiona automáticamente cuando inicia una prueba de Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Copiar datos de una versión de prueba a una suscripción de pago
 

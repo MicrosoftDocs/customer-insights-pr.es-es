@@ -4,17 +4,17 @@ description: Cómo utilizar los informes de embudo para comprender cómo el púb
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498663"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558963"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Cree y administre informes de embudo
 
@@ -163,13 +163,23 @@ Puede cambiar el nombre de un informe de embudo, eliminarlo o modificar los paso
 
 Las conclusiones de involucración ahora ofrecen información sobre el embudo para los clientes. Utilice la información del embudo para obtener una visión más profunda del comportamiento del cliente en los pasos del informe del embudo. Cuando crea y guarda un nuevo informe de embudo, las estadísticas del embudo se generan automáticamente para su informe. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Conclusiones del embudo.":::
+
+> [!NOTE]
+> Las estadísticas del embudo solo se pueden generar para los pasos del embudo que **no** incluir dimensiones personalizadas. Para generar estadísticas de embudo para todos los pasos de su embudo, use las dimensiones de estadísticas de participación listas para usar para crear sus pasos de embudo. 
+
 Puede ver información sobre el embudo de conversión de las siguientes categorías, tanto en el nivel principal como en el de los pasos: 
 
- - Tasa de conversión 
+ - Tasa de conversión
+ -    La tasa de conversión entre Checkout y Buy es 22 %.
  - Tiempo de transición 
+ -    El tiempo medio de transición entre Cart y Checkout es de 23 minutos. 
  - Tiempo de finalización 
+ -    La cantidad media de tiempo que tardan los clientes en completar el embudo es de 47 minutos. 
 
 Utilice esta información para explorar más profundamente el comportamiento del cliente y comprender mejor los puntos de abandono y las conversiones para su informe de embudo. 
+
+Para comparar estadísticas en diferentes pasos, seleccione **Ver desglose de pasos** o **Comparar con otros pasos** de las tarjetas de información. Estos mostrarán un gráfico de barras que compara métricas para cada paso del embudo. 
 
 Las conclusiones del embudo se vuelven a calcular cada 24 horas o al **Guardar** el informe de embudo. 
 
