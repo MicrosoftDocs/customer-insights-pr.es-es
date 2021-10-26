@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c54f6a00cb28b0ab11716c02aa8761dfa382f07e3360183b5d38b9720e890c21
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fabc3cc9faf4e11f46c396782b561ef61cd0f6d5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032641"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618542"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquezca los perfiles de los clientes con datos demográficos de Experian (vista previa)
 
@@ -79,7 +79,7 @@ Debe ser un administrador para configurar las conexiones. Seleccione **Agregar c
 
 1. Después de completar la verificación, seleccione **Guardar**.
    
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Panel de configuración de conexión de Experian":::.
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Panel de configuración de conexión de Experian.":::
 
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
 
@@ -91,7 +91,7 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Crear [segmentos](segments.md) y [medidas](measures.md) e incluso [exportar los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

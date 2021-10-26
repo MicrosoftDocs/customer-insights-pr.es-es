@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465226"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606137"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Actualizaciones de septiembre de 2021
+
+Las actualizaciones de septiembre de 2021 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="activities"></a>Actividades
+
+- **Mejoras de la escala de tiempo de actividad** Hemos ampliado los filtros para la escala de tiempo de actividad en los perfiles de clientes. Además, puede utilizar el nuevo panel de filtro para filtrar por tipo de actividad y por fecha. Las fechas se pueden filtrar usando diferentes condiciones. Para más información, vea [Ver escala de tiempo de actividad en perfiles de clientes](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relaciones
+
+- **Compatibilidad con relaciones de múltiples saltos** Utilice relaciones de múltiples saltos al configurar actividades y definir relaciones entre entidades. Las relaciones de múltiples saltos usan una entidad intermedia para conectar dos entidades. Al configurar una actividad, puede utilizar una relación de múltiples saltos para conectar su entidad de actividad a una entidad intermedia y luego a una entidad de cliente. Puede combinar relaciones de múltiples saltos con relaciones de múltiples rutas. Para más información, vea [Relaciones de múltiples saltos](relationships.md#multi-hop-relationship).
+
+- **Compatibilidad con relaciones de múltiples rutas** Utilice relaciones de múltiples rutas al configurar actividades y definir relaciones entre entidades. Las relaciones de múltiples rutas relacionan una entidad de origen con más de una entidad. Al configurar una actividad, puede utilizar una relación de múltiples rutas para conectar su entidad de actividad a varias entidades de cliente. Puede combinar relaciones de múltiples rutas con relaciones de múltiples saltos. Para más información, vea [Relaciones de múltiples rutas](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Actualizaciones de agosto de 2021
 

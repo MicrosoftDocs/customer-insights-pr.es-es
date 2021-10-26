@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558993"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617944"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
@@ -35,9 +35,9 @@ Exporte segmentos de perfiles de clientes unificados a una lista de público de 
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 1 millón de perfiles por exportación a Google Ads.
+- Hasta 1 millón de perfiles de clientes por exportación a Google Ads.
 - La exportación a Google Ads está limitada a segmentos.
-- La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 5 minutos debido a las limitaciones del lado del proveedor. 
+- La exportación de segmentos con un total de 1 millón de perfiles de clientes puede tardar hasta 5 minutos debido a las limitaciones del lado del proveedor. 
 - La coincidencia en Google Ads puede tardar hasta 48 horas.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurar conexión a Google Ads
@@ -74,7 +74,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Introduzca su **[Id. de público de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** y seleccione **Conectar** para inicializar la conexión a Google Ads.
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente.
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente.
 
 1. Seleccione los segmentos que desea exportar. Puede exportar hasta 1 millón de perfiles de clientes en total a Google Ads.
 

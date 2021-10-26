@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032871"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645376"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -35,7 +35,7 @@ Puede agregar un origen de datos de tres formas principales:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Agregar datos de orígenes de datos locales
 
-La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Microsoft Power Platform. Los flujos de datos se pueden habilitar en Customer Insights [proporcionando la dirección URL del entorno de Microsoft Dataverse](get-started-paid.md) al configurar el entorno.
+La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Microsoft Power Platform. Los flujos de datos se pueden habilitar en Customer Insights [proporcionando la dirección URL del entorno de Microsoft Dataverse](create-environment.md) al configurar el entorno.
 
 Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights utilizarán [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Quite y vuelva a crear los orígenes de datos que existían antes de que un entorno de Dataverse se asociara para [utilizar las puertas de enlace de datos locales](/data-integration/gateway/service-gateway-app).
 

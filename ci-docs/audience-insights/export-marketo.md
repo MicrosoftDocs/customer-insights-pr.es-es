@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Marketo
 description: Aprenda a configurar la conexión y a exportar a Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033514"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619186"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos a Marketo (versión preliminar)
 
@@ -29,10 +29,10 @@ Exporte segmentos de perfiles de cliente unificados para generar campañas, ofre
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 1 millón de perfiles por exportación a Marketo.
+- Hasta 1 millón de perfiles de clientes por exportación a Marketo.
 - La exportación a Marketo está limitada a segmentos.
-- La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 3 horas. 
-- La cantidad de perfiles que puede exportar a Marketo depende y está limitada a su contrato con Marketo.
+- La exportación de segmentos con un total de 1 millones de perfiles de clientes puede tardar hasta 3 horas. 
+- La cantidad de perfiles de clientes que puede exportar a Marketo depende y está limitada por su contrato con Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configurar conexión a Marketo
 
@@ -64,7 +64,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. introduzca su **[Id. de lista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. El id. de la lista es un valor puramente numérico. Por ejemplo, si su id. de lista de Marketo es ST12345A7, elimine el carácter de antes y después de los números e introduzca `12345`. 
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. 
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. 
 
 1. Opcionalmente, puede exportar el **Nombre de pila**, el **Apellido**, la **Ciudad**, el **Estado** y el **País** para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
 

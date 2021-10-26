@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Sendinblue
 description: Aprenda a configurar la conexión y exportar a Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036076"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617806"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Exportar segmentos a Sendinblue (versión preliminar)
 
@@ -29,10 +29,10 @@ Exportar segmentos de perfiles de cliente unificados para generar campañas, ofr
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 1 millón de perfiles por exportación a Sendinblue.
+- Hasta 1 millón de perfiles de clientes por exportación a Sendinblue.
 - La exportación a Sendinblue está limitada a segmentos.
-- La exportación de segmentos con un total de 1 millón de perfiles puede tardar hasta 90 minutos. 
-- La cantidad de perfiles que puede exportar a Sendinblue depende de su contrato con Sendinblue y queda limitada a lo que en se especifique en dicho contrato.
+- La exportación de segmentos con un total de 1 millones de perfiles de clientes puede tardar hasta 90 minutos. 
+- La cantidad de perfiles de clientes que puede exportar a Sendinblue depende y está limitada por su contrato con Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Configurar la conexión a Sendinblue
 
@@ -64,7 +64,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Indique su **Id. de lista de Sendinblue**. 
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. 
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. 
 
 1. Opcionalmente, puede exportar **Nombre de pila**, **Apellido**, y **Teléfono** para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
 

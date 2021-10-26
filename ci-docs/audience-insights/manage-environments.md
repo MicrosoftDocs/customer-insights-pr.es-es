@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034198"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645147"
 ---
 # <a name="manage-environments"></a>Administrar ambientes
 
@@ -26,7 +26,7 @@ Seleccione el control **Entorno** en la esquina superior derecha de la página p
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de pantalla del control para cambiar de entorno.":::
 
-Los administradores pueden [crear](get-started-paid.md) y administrar entornos.
+Los administradores pueden [crear](create-environment.md) y administrar entornos.
 
 ## <a name="edit-an-existing-environment"></a>Editar un entorno existente
 
@@ -36,23 +36,9 @@ Puede editar algunos de los detalles de los entornos existentes.
 
 2.  Seleccione el icono de **Editar**.
 
-3. En el cuadro **Editar entorno**, puede actualizar la opción **Nombre para mostrar** del entorno, pero no puede cambiar **Región** o **Tipo**.
+3. En el cuadro **Editar entorno** puede actualizar la configuración del entorno.
 
-4. Si un entorno está configurado para almacenar datos en Azure Data Lake Storage, puede actualizar la **Clave de cuenta**. Sin embargo, no puede cambiar el **Nombre de cuenta** o el nombre de **Contenedor**.
-
-5. Opcionalmente, puede actualizar desde una conexión basada en clave de cuenta a una conexión basada en recursos o basada en suscripción. Una vez actualizado, no puede volver a la clave de cuenta después de la actualización. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). No puede cambiar la información de **Contenido** al actualizar la conexión.
-
-6. Opcionalmente, puede proporcionar una dirección URL del entorno Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Estas funcionalidades incluyen el uso compartido de datos con aplicaciones y soluciones basadas en Microsoft Dataverse, la ingesta de datos de orígenes datos locales, o el uso de [predicciones](predictions.md). Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
-
-   > [!NOTE]
-   > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
-   > - Actualmente no se admiten la [predicción de valores que faltan en una entidad](predictions.md) ni los informes de PowerBI Embedded en las conclusiones para el público (si están habilitados en el entorno) al habilitar el uso compartido de datos con el lago de datos administrado por Microsoft Dataverse .
-
-   Tras habilitar el uso compartido de datos con Microsoft Dataverse, comenzará una actualización completa de los orígenes de datos y otros procesos. Si los procesos están actualmente en ejecución, no verá la opción para habilitar el uso compartido de datos con Microsoft Dataverse. Espere a que se completen esos procesos o cancelarlos para habilitar el uso compartido de datos. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
-   
-   Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Los archivos de datos y los archivos model.json se crearán y agregarán a las subcarpetas respectivas, según el proceso que ejecute.
+Para obtener más información sobre la configuración del entorno, consulte [Crear un nuevo entorno](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar el entorno de configuración
 

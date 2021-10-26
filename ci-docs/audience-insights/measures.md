@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar medidas
 description: Defina medidas para analizar y reflejar el rendimiento y el estado de su negocio.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037029"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623053"
 ---
 # <a name="define-and-manage-measures"></a>Definir y administrar medidas
 
@@ -26,15 +26,15 @@ Utilice el generador de medidas para planificar actividades comerciales consulta
 
 ## <a name="build-your-own-measure-from-scratch"></a>Crear su propia medida desde cero
 
-Esta sección le guía a través de la creación de nuevas medidas desde cero. Puede crear una medida con atributos de datos a partir de entidades de datos que tengan una relación configurada para conectarse con la entidad Cliente. 
+Esta sección le guía a través de la creación de nuevas medidas desde cero. Puede crear una medida con atributos de datos a partir de entidades de datos que tienen una relación configurada para conectarse con la entidad de perfil de cliente unificado.
+
+# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
 
 1. En las informaciones de público, vaya a **Medidas**.
 
 1. Seleccione **Nuevo** y elija **Crear el suyo propio**.
 
 1. Seleccione **Editar nombre** y proporcione un **Nombre** para la medida. 
-   > [!NOTE]
-   > Si su nueva configuración de medida tiene solo dos campos, por ejemplo, CustomerID y un cálculo, la salida se agregará como una nueva columna a la entidad generada por el sistema llamada Customer_Measure. Y podrá ver el valor de la medida en el perfil del cliente unificado. Otras medidas generarán sus entidades propias.
 
 1. En el área de configuración, elija la función de agregación en el menú desplegable **Seleccionar función**. Las funciones de agregación incluyen: 
    - **Sum**
@@ -53,7 +53,7 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
    1. Seleccione la pestaña **Atributos**. 
    1. Entidad de datos: elija la entidad que incluye el atributo que desea medir. 
    1. Atributo de datos: elija el atributo que desea utilizar en la función de suma para calcular la medida. Puede seleccionar solo un atributo a la vez.
-   1. También puede seleccionar un atributo de datos en una medida existente seleccionando la pestaña **Medidas**. O bien, puede buscar una entidad o nombre de medida. 
+   1. También puede seleccionar un atributo de datos en una medida existente seleccionando la pestaña **Medidas** o bien, puede buscar una entidad o nombre de medida. 
    1. Seleccione **Agregar** para agregar el atributo seleccionado a la medida.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Seleccione un atributo para usar en los cálculos.":::
@@ -73,11 +73,11 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
    1. Seleccione **Editar dimensiones** para agregar los atributos de datos según los cuales desea agrupar los valores de medida. Por ejemplo, ciudad o género. De forma predeterminada, la dimensión *CustomerID* se selecciona crear *medidas a nivel de cliente*. Puede eliminar la dimensión predeterminada si desea crear *medidas a nivel empresarial*.
    1. Seleccione **Listo** para agregar dimensiones a la medida.
 
-1. Si hay valores en sus datos que necesita reemplazar con un número entero, por ejemplo, reemplace *NULL* con *0* y seleccione **Reglas**. Configure la regla y asegúrese de elegir solo números enteros como sustitución.
+1. Si hay valores en sus datos que necesita reemplazar con un número entero, seleccione **Reglas**. Configure la regla y asegúrese de elegir solo números enteros como sustitución. Por ejemplo, reemplace *null* con *0*.
 
 1. Si hay varias rutas entre la entidad de datos que asignó y la entidad *Cliente*, debe elegir una de las [rutas de relación de entidad identificadas](relationships.md). Los resultados de la medición pueden variar según la ruta seleccionada. 
    
-   1. Seleccione **Preferencias de datos** y elija la ruta de la entidad que se debe utilizar para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
+   1. Seleccione **Ruta de relación** y elija la ruta de la entidad que debe usarse para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
    1. Seleccione **Listo** para aplicar su selección. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccione la ruta de la entidad para la medida.":::
@@ -92,7 +92,79 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
 
 1. Vaya a **Medidas** para ver la medida recién creada en la lista.
 
+# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+
+1. En las informaciones de público, vaya a **Medidas**.
+
+1. Seleccione **Nuevo** y elija **Crear el suyo propio**.
+
+1. Seleccione **Editar nombre** y proporcione un **Nombre** para la medida. 
+
+1. En el área de configuración, elija la función de agregación en el menú desplegable **Seleccionar función**. Las funciones de agregación incluyen: 
+   - **Sum**
+   - **Media**
+   - **Contar**
+   - **Contar únicos**
+   - **Max**
+   - **Min**
+   - **First**: toma el primer valor del registro de datos.
+   - **Último**: toma el último valor que se agregó al registro de datos
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Operadores para cálculos de medidas.":::
+
+1. Seleccione **Agregar atributo** para seleccionar los datos que necesita para crear esta medida.
+   
+   1. Seleccione la pestaña **Atributos**. 
+   1. Entidad de datos: elija la entidad que incluye el atributo que desea medir. 
+   1. Atributo de datos: elija el atributo que desea utilizar en la función de suma para calcular la medida. Puede seleccionar solo un atributo a la vez.
+   1. También puede seleccionar un atributo de datos en una medida existente seleccionando la pestaña **Medidas** o bien, puede buscar una entidad o nombre de medida. 
+   1. Seleccione **Agregar** para agregar el atributo seleccionado a la medida.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Seleccione un atributo para usar en los cálculos.":::
+
+1. Para construir medidas más complejas, puede agregar más atributos o usar operadores matemáticos en su función de medida.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Cree una medida compleja con operadores matemáticos.":::
+
+1. Para agregar filtros, seleccione la opción **Filtrar** en el área de configuración. 
+  
+   1. En la sección **Agregar atributo** del panel **Filtros**, seleccione el atributo que desea utilizar para crear filtros.
+   1. Configure los operadores de filtro para definir el filtro para cada atributo seleccionado.
+   1. Seleccione **Aplicar** para agregar los filtros para la medida.
+
+1. Para agregar dimensiones, seleccione la opción **Dimensión** en el área de configuración. Las dimensiones se mostrarán a modo de columnas en la entidad de los resultados de la medida.
+ 
+   1. Seleccione **Editar dimensiones** para agregar los atributos de datos según los cuales desea agrupar los valores de medida. Por ejemplo, ciudad o género. De forma predeterminada, la dimensión *CustomerID* se selecciona crear *medidas a nivel de cliente*. Puede eliminar la dimensión predeterminada si desea crear *medidas a nivel empresarial*.
+   1. Seleccione **Listo** para agregar dimensiones a la medida.
+
+1. Si hay valores en sus datos que necesita reemplazar con un número entero, seleccione **Reglas**. Configure la regla y asegúrese de elegir solo números enteros como sustitución. Por ejemplo, reemplace *null* con *0*.
+
+1. Puede usar el botón de alternancia **Subir subcuentas** si [usa cuentas con jerarquías](relationships.md#set-up-account-hierarchies).
+   - Si está configurado como **Apagado**, la medida se calcula para cada cuenta. Cada cuenta tiene su propio resultado.
+   - Si está configurado como **Activado**, seleccione **Editar** para elegir la jerarquía de cuentas de acuerdo con las jerarquías ingeridas. La medida arrojará un solo resultado porque está agregada con subcuentas.
+
+1. Si hay varias rutas entre la entidad de datos que asignó y la entidad *Cliente*, debe elegir una de las [rutas de relación de entidad identificadas](relationships.md). Los resultados de la medición pueden variar según la ruta seleccionada. 
+   
+   1. Seleccione **Ruta de relación** y elija la ruta de la entidad que debe usarse para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
+   1. Seleccione **Listo** para aplicar su selección. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleccione la ruta de la entidad para la medida.":::
+
+1. Seleccione **...** en el cálculo para **Duplicar**, **Cambiar el nombre**, o **Eliminar** un cálculo de una medida.
+
+1. En el área **Vista previa**, verá el esquema de datos de la entidad de los resultados de la medida, incluidos los filtros y las dimensiones. La vista previa reacciona dinámicamente a los cambios en la configuración.
+
+1. Seleccione **Ejecutar** para calcular los resultados de la medida configurada. Seleccione **Guardar y cerrar** si desea mantener la configuración actual y ejecutar la medida más tarde.
+
+1. Vaya a **Medidas** para ver la medida recién creada en la lista.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Usar una plantilla para construir una medida
+
+Puede utilizar plantillas predefinidas de medidas de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
+
+# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
 
 Puede utilizar plantillas predefinidas de medidas de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
 
@@ -140,6 +212,12 @@ El siguiente procedimiento describe los pasos para crear una nueva medida usando
 
 1. Ahora puede seleccionar **Ejecutar** para calcular los resultados de la medida. Para refinarlo más tarde, seleccione **Guardar borrador**.
 
+# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+
+Esta función solo está disponible para medidas creadas en entornos con clientes individuales como público de destino principal.
+
+---
+
 ## <a name="manage-your-measures"></a>Administrar sus medidas
 
 Puede encontrar la lista de medidas en la página **Medidas**.
@@ -166,6 +244,5 @@ Seleccione una medida de la lista para las siguientes opciones:
 ## <a name="next-step"></a>Siguiente paso
 
 Puede utilizar medidas existentes para crear [un segmento de clientes](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

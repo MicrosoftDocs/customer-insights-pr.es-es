@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Mailchimp
 description: Aprenda a configurar la conexión y a exportar a Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033560"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618635"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos a Mailchimp (versión preliminar)
 
@@ -29,10 +29,10 @@ Exporte segmentos de perfiles de clientes unificados a Mailchimp para crear bole
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 1 millón de perfiles por exportación a Mailchimp.
+- Hasta 1 millón de perfiles de clientes por exportación a Mailchimp.
 - La exportación a Mailchimp está limitada a segmentos.
-- La exportación de segmentos con un millón de perfiles puede tardar hasta tres horas. 
-- La cantidad de perfiles que puede exportar a Mailchimp depende y está limitada a su contrato con Mailchimp.
+- La exportación de segmentos con 1 millón de perfiles de clientes puede tardar hasta tres horas. 
+- La cantidad de perfiles de clientes que puede exportar a Mailchimp depende y está limitada por su contrato con Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Configurar conexión a Mailchimp
 
@@ -66,7 +66,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Escriba su **[identificador de audiencia de Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. 
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. 
 
 1. Opcionalmente, puede exportar el **Nombre de pila** y el **Apellido** para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
 

@@ -2,8 +2,14 @@
   href: index.yml
 - name: Información general del producto
   href: overview.md
-- name: Crear una versión de prueba
-  href: audience-insights/get-started-trial.md
+- name: Prueba gratuita
+  items:
+    - name: Registrarse para obtener una versión de prueba gratuita
+      href: trial-signup.md
+    - name: Preguntas más frecuentes de la prueba
+      href: trial-FAQ.md
+- name: Comenzar con una licencia pagada
+  href: paid-license.md
 - name: Obtener acceso al entorno
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Conclusiones del público
@@ -19,9 +25,11 @@
         - name: Guía de inicio rápido
           href: audience-insights/get-started.md
         - name: Crear un nuevo entorno
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Explorar las conclusiones del público
           href: audience-insights/home.md
+    - name: Trabajar con cuentas de negocio
+      href: audience-insights/work-with-business-accounts.md
     - name: Módulos de aprendizaje
       items:
         - name: Ingerir datos
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Enumerar actividades del cliente
           href: audience-insights/activities.md
+        - name: Definir asignaciones semánticas
+          href: audience-insights/semantic-mappings.md
     - name: Enriquecimiento de datos
       items:
         - name: Enriquecer perfiles de clientes
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predecir el abandono de suscripción
               href: audience-insights/predict-subscription-churn.md
-            - name: Predecir abandono transaccional
+            - name: Predicir abandono de transacciones
               href: audience-insights/predict-transactional-churn.md
             - name: Use modelos personalizados de Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Guía de ejemplo de predicción de abandono de suscripción
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Guía de ejemplo de predicción de abandono de transacción
+            - name: Guía de ejemplo para la predicción del abandono de transacciones
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Guía de ejemplo para la predicción de recomendaciones de producto
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Administrar varios entornos
           href: audience-insights/manage-environments.md
-        - name: Conectarse a una cuenta de almacenamiento de ADLS con una entidad de servicio
-          href: audience-insights/connect-service-principal.md
         - name: Idiomas compatibles
           href: audience-insights/supported-languages.md
+        - name: Seguridad
+          items:
+            - name: Traiga su propia Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Conectarse a una cuenta de almacenamiento de ADLS con una entidad de servicio
+              href: audience-insights/connect-service-principal.md
     - name: Extensibilidad
       items:
         - name: Integrar datos web a partir de conocimientos de participación
@@ -248,6 +262,8 @@
       items:
         - name: Guía de inicio rápido
           href: engagement-insights/get-started.md
+        - name: Crear un entorno
+          href: engagement-insights/create-new-environment.md
         - name: Crear un área de trabajo
           href: engagement-insights/create-workspace.md
         - name: Capturar eventos desde sitios web y aplicaciones móviles

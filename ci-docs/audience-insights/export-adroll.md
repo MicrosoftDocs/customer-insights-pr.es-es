@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a AdRoll
 description: Aprenda a configurar la conexión y a exportar a AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032092"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617420"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segmentos a AdRoll (versión preliminar)
 
@@ -28,11 +28,11 @@ Exporte segmentos de perfiles de clientes unificados a AdRoll y utilícelos para
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Puede exportar hasta 250 000 perfiles de cada vez para AdRoll.
-- No puede exportar segmentos con menos de 100 perfiles a AdRoll. 
+- Puede exportar hasta 250.000 perfiles de clientes a la vez a AdRoll.
+- No puede exportar segmentos con menos de 100 perfiles de clientes a AdRoll. 
 - La exportación a AdRoll está limitada a segmentos.
-- La exportación de hasta 250 000 perfiles a AdRoll puede tardar hasta 10 minutos en completarse. 
-- La cantidad de perfiles que puede exportar a AdRoll depende de su contrato con AdRoll.
+- La exportación de hasta 250.000 perfiles de clientes a AdRoll puede tardar hasta 10 minutos en completarse. 
+- La cantidad de perfiles de clientes que puede exportar a AdRoll depende de su contrato con AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configurar la conexión a AdRoll
 
@@ -66,7 +66,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Especifique su **Id. de anunciante de AdRoll**. Para obtener más información, consulte [Perfiles de anunciante de AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Es obligatorio para exportar segmentos a AdRoll.
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. Es obligatorio para exportar segmentos a AdRoll.
 
 1. Seleccione los segmentos que desea exportar. Seleccione un segmento con al menos 100 miembros. No puede exportar segmentos más pequeños. Además, el tamaño máximo de un segmento para exportar es de 250 000 miembros por exportación. 
 

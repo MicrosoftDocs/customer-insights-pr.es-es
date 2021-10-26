@@ -1,7 +1,7 @@
 ---
 title: Fusionar entidades en la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494340"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648275"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -89,7 +91,7 @@ En la página **Combinar**, seleccione **Campos excluidos** para ver la lista de
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opción de menor antigüedad en el diálogo de campos de combinación.":::
     - **Menos reciente**: identifica el valor ganador basado en el menos reciente. Requiere una fecha o un campo numérico para cada entidad participante en el ámbito de los campos de combinación para definir la antigüedad.
 
-1.  Puede agregar campos adicionales para participar en el proceso de fusión.
+1.  Puede agregar más campos para participar en el proceso de combinación.
 
 1.  También puede cambiar el nombre del campo combinado.
 
@@ -131,15 +133,15 @@ Algunas entidades contienen más detalles que otras. Si una entidad incluye los 
 
 Después de configurar los campos de combinación, puede definir cómo generar valores CustomerId, los identificadores únicos de perfil de cliente. El paso de combinación en el proceso de unificación de datos genera el identificador de perfil de cliente único. El identificador es el CustomerId de la entidad *Cliente* que resulta del proceso de unificación de datos. 
 
-El CustomerId de la entidad Cliente se basa en un hash del primer valor de las claves primarias ganadoras no nulas. Estas claves provienen de las entidades utilizadas en la fase de coincidencia y fusión y están influenciadas por el orden de coincidencia. Por lo tanto, el CustomerID generado puede cambiar cuando cambia un valor de clave principal en la entidad principal del orden de coincidencia. En consecuencia, es posible que el valor de la clave principal no siempre represente al mismo cliente.
+El CustomerId de la entidad Cliente se basa en un hash del primer valor de las claves primarias ganadoras no nulas. Estas claves provienen de las entidades utilizadas en la fase de coincidencia y fusión y están influenciadas por el orden de coincidencia. Por lo tanto, el CustomerID generado puede cambiar cuando cambia un valor de clave principal en la entidad principal del orden de coincidencia. Por tanto, es posible que el valor de clave principal no siempre represente al mismo cliente.
 
-La configuración de un id. de cliente estable le permite evitar ese comportamiento.
+La configuración de un Id. de cliente estable le permite evitar ese comportamiento.
 
 **Configurar un id. de cliente único**
 
 1. Vaya a **Unificar** > **Combinar**.
 
-1. En la página **Combinar**, seleccione la pestaña **Claves**. 
+1. Seleccione la pestaña **Claves**. 
 
 1. Coloque el cursor sobre la fila **CustomerId** y seleccione la opción **Configurar**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Control para personalizar la generación de id.":::
@@ -147,6 +149,30 @@ La configuración de un id. de cliente estable le permite evitar ese comportamie
 1. Seleccione hasta cinco campos que incluirán un id. de cliente único y serán más estables. Los registros que no coinciden con su configuración utilizan un id. configurado por el sistema en su lugar.  
 
 1. Seleccione **Listo** y ejecute el proceso de combinación para aplicar sus cambios.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfiles en hogares o clústeres
+
+Como parte del proceso de configuración de generación de perfiles de cliente, puede definir reglas para agrupar perfiles relacionados en un clúster. Actualmente, hay dos tipos de clústeres disponibles: clústeres de hogar y personalizados. El sistema elige automáticamente un hogar con reglas predefinidas si la entidad *Cliente* contiene los campos semánticos *Person.LastName* y *Location.Address*. También puede crear un clúster con sus propias reglas y condiciones, similares a las [reglas de coincidencia](match-entities.md#define-rules-for-match-pairs).
+
+**Definir un hogar o un clúster**
+
+1. Vaya a **Unificar** > **Combinar**.
+
+1. En la pestaña **Combinar**, seleccione **Avanzado** > **Crear clúster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Control para crear un clúster nuevo.":::
+
+1. Elija entre un clúster de **Hogar** o **Personalizado**. Si existen los campos semánticos *Person.LastName* y *Location.Address* en la entidad *Cliente*, el hogar se selecciona automáticamente.
+
+1. Proporcione un nombre para el clúster y seleccione **Hecho**.
+
+1. Seleccione la pestaña **Clústeres** para encontrar el clúster que creó.
+
+1. Especifique las reglas y condiciones para definir su clúster.
+
+1. Seleccione **Ejecutar** para ejecutar el proceso de combinación y crear el clúster.
+
+Después de ejecutar el proceso de combinación, los identificadores de clúster se agregan como nuevos campos a la entidad *Cliente*.
 
 ## <a name="run-your-merge"></a>Ejecutar la combinación
 

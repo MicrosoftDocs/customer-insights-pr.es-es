@@ -1,7 +1,7 @@
 ---
 title: 'Conector LiveRamp '
 description: Aprenda a configurar la conexión y a exportar a LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035666"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618956"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segmentos a LiveRamp&reg; (versión preliminar)
 
@@ -58,7 +58,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
    > [!div class="mx-imgBorder"]
    > ![Conector para LiveRamp con asignación de atributos.](media/export-liveramp-segments.png "Conector para LiveRamp con asignación de atributos")
 
-1. Asigne los atributos correspondientes de su entidad de cliente unificado para el identificador clave seleccionado.
+1. Asigne los atributos correspondientes de su entidad *Cliente* para el identificador de clave seleccionado.
 
 1. Seleccione **Agregar atributo** para asignar más atributos para enviar a LiveRamp.
 

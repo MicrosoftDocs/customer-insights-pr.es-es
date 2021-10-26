@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557373"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623190"
 ---
 # <a name="relationships-between-entities"></a>Relaciones entre entidades
 
@@ -68,6 +68,20 @@ La relación consiste en una *entidad fuente* que contiene la clave externa y un
 
 4. Seleccione **Guardar** para crear la relación personalizada.
 
+## <a name="set-up-account-hierarchies"></a>Configurar jerarquías de cuenta
+
+Los entornos que están configurados para usar cuentas de negocio como público de destino principal pueden configurar jerarquías de cuentas para cuentas comerciales relacionadas. Por ejemplo, una empresa que tiene unidades de negocio independientes. 
+
+Las organizaciones crean jerarquías de cuentas para administrar mejor las cuentas y sus relaciones entre sí. La capacidad de conclusiones del público admite jerarquías de cuentas primarias-secundarias que ya existen en los datos de clientes ingeridos. Por ejemplo, cuentas de Dynamics 365 Sales. Estas jerarquías se pueden configurar en la página **Relaciones** en conclusiones del público, en la pestaña de jerarquía de cuentas.
+
+1. Vaya a **Datos** > **Relaciones**.
+1. Seleccione la pestaña **Jerarquía de cuenta**.
+1. Seleccione **Nueva jerarquía de cuenta**. 
+1. En el panel **Jerarquía de cuentas**, proporcione un nombre para la jerarquía. El sistema crea un nombre para la entidad de salida. Puede modificar el nombre de la entidad de nombre de salida.
+1. Seleccione la entidad que contiene la jerarquía de cuentas. Suele estar en la misma entidad que contiene las cuentas.
+1. Seleccione el **ID de cuenta** y el **Id. de cuenta primaria** de la entidad seleccionada 
+1. Seleccione **Guardar** para aplicar la configuración y finalizar la jerarquía de cuentas.
+
 ## <a name="view-relationships"></a>Vista de relaciones
 
 La página Relaciones enumera todos los Relaciones que se han creado. Cada fila representa una relación, que también incluye detalles sobre la entidad de origen, la entidad de destino y la cardinalidad. 
@@ -105,7 +119,7 @@ Por ejemplo, la entidad *eCommerce_eCommercePurchases* tiene las siguientes rela
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
 
-Una ruta de relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases), en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
+Una ruta de relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases) en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
 
 ### <a name="direct-relationship"></a>Relación directa
 

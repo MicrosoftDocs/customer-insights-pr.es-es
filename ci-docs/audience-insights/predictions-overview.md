@@ -1,7 +1,7 @@
 ---
 title: Descripción general de los escenarios predicción admitidos
 description: Predicción escenarios y opciones cubiertos por la aplicación Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036030"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618864"
 ---
 # <a name="predictions-overview"></a>Vista preliminar de predicciones
 
@@ -24,10 +24,20 @@ Dynamics 365 Customer Insights viene con una variedad de opciones que aprovechan
 ## <a name="out-of-box-models"></a>Modelos listos para usar
 
 La forma más fácil de comenzar a predecir datos son los modelos predefinidos, a menudo denominados modelos listos para usar. Solo requieren ciertos datos y estructura para generar información rápidamente. Actualmente, están disponibles los siguientes modelos: 
-- [Valor de por vida del cliente](predict-customer-lifetime-value.md): predice los ingresos potenciales de un cliente durante toda la interacción con una empresa. 
+
+# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
+
+- [Valor de por vida del cliente](predict-customer-lifetime-value.md): predice los ingresos potenciales de un cliente durante toda la interacción con una empresa.
 - [Recomendación de producto](predict-product-recommendation.md): sugiere conjuntos de recomendaciones de productos predictivas basadas en el comportamiento de compra y los clientes con patrones de compra similares.
 - [Abandono de suscripción](predict-subscription-churn.md): predice si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía.
 - [Abandono transaccional](predict-transactional-churn.md): predice si un cliente ya no comprará sus productos o servicios en un determinado período de tiempo.
+
+# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+
+- [Abandono transaccional](predict-transactional-churn.md): predice si un cliente ya no comprará sus productos o servicios en un determinado período de tiempo.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integración con Azure Machine Learning
 

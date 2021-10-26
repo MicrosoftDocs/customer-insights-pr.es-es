@@ -1,7 +1,7 @@
 ---
 title: Datos de Customer Insights en Microsoft Dataverse
 description: Utilice entidades de Customer Insights como tablas en Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032917"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645239"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabajar con datos de Customer Insights en Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights ofrece la opción de hacer que las entidades de salida estén 
 
 **Organizaciones con entornos Dataverse existentes**
 
-Organizaciones que ya usan Dataverse pueden [utilizar uno de sus entornos Dataverse existentes](get-started-paid.md) cuando un Administrador configura informaciones de público. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Para garantizar el mejor rendimiento posible, los entornos de Customer Insights y Dataverse deben estar alojados en la misma región.
-
-Para adjuntar un entorno Dataverse, expanda **Ajustes avanzados** al crear el entorno de información de público. Proporcione la **URL de entorno de Microsoft Dataverse** y seleccione la casilla de verificación para **Habilitar el intercambio de datos**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Organizaciones que ya usan Dataverse pueden [utilizar uno de sus entornos Dataverse existentes](create-environment.md) cuando un Administrador configura informaciones de público. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Para garantizar el mejor rendimiento posible, los entornos de Customer Insights y Dataverse deben estar alojados en la misma región.
 
 **Nueva organización**
 

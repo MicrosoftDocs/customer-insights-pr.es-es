@@ -1,7 +1,7 @@
 ---
 title: Página de inicio en informaciones de público
 description: Comience a explorar la aplicación en la página Inicio.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470038"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617716"
 ---
 # <a name="explore-audience-insights"></a>Explorar las conclusiones del público
 
@@ -23,7 +23,7 @@ La página **Inicio** muestra una descripción general de los segmentos, las med
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de pantalla de la pantalla de inicio que muestra información de ejemplo.":::
 
-1: cambie entre las capacidades de Customer Insights 2: utilice el panel izquierdo para navegar entre las diferentes áreas 3: descubra en qué entorno trabaja y administre los entornos como administrador 4: especifique la configuración personal para Customer Insights
+1 - Cambie entre las capacidades de Customer Insights 2 - Use el panel izquierdo para navegar entre diferentes áreas y elija el público de destino principal 3 - Descubra en qué entorno trabaja y administre los entornos como administrador 4 - Especifique la configuración personal para Customer Insights
 
 En **Segmentos recientes** verá grupos de clientes según los atributos demográficos, de comportamiento o transaccionales que haya definido. La [creación de segmentos](segments.md) le ayuda a agrupar su base de clientes y orientar mejor sus actividades comerciales.
 

@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Constant Contact
 description: Aprenda a configurar la conexión y a exportar a Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031862"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619140"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segmentos a Constant Contact (versión preliminar)
 
@@ -28,10 +28,10 @@ Exporte segmentos de perfiles de clientes unificados a Constant Contact y utilí
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Puede exportar hasta 1 millón de perfiles por exportación a Constant Contact.
+- Puede exportar hasta 1 millón de perfiles de clientes por exportación a Constant Contact.
 - La exportación a Constant Contact está limitada a segmentos.
-- La exportación de hasta 1 millón de perfiles a Constant Contact puede tardar hasta 1 hora en completarse. 
-- La cantidad de perfiles que puede exportar a Constant Contact depende y está limitada en su contrato con Constant Contact.
+- La exportación de hasta 1 millón de perfiles de clientes a Constant Contact puede tardar hasta 1 hora en completarse. 
+- La cantidad de perfiles de clientes que puede exportar a Constant Contact depende y está limitada por su contrato con Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Configurar la conexión a Constant Contact
 
@@ -65,7 +65,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Escriba su [**identificador de la lista de Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Abra una lista en Constant Contact para encontrar el identificador de la lista en la dirección URL.
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a Constant Contact.
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a Constant Contact.
 
 1. Opcionalmente, puede exporta Nombre de pila y Apellido como campos adicionales para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
 
