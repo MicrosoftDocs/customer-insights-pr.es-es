@@ -1,7 +1,7 @@
 ---
 title: Segmentos sugeridos con tecnología de aprendizaje automático
 description: Deje que el aprendizaje automático le ayude a encontrar segmentos nuevos e interesantes según los atributos del cliente.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028381"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673204"
 ---
 # <a name="suggested-segments-preview"></a>Segmentos sugeridos (versión preliminar)
 
@@ -23,7 +23,7 @@ Descubra segmentos interesantes de sus clientes con la ayuda de un modelo de IA.
 > [!NOTE]
 > La función de segmentos sugeridos utiliza medios automatizados para evaluar datos y hacer predicciones basadas en esos datos y, por lo tanto, tiene la capacidad de usarse como un método de elaboración de perfiles, tal como ese término se define en el Reglamento general de protección de datos ("RGPD"). El uso que haga de esta función para procesar datos puede estar sujeto al RGPD u otras leyes o regulaciones. Usted es responsable de garantizar que el uso de Dynamics 365 Customer Insights, incluida esta característica, cumpla con todas las leyes y regulaciones aplicables, incluidas las leyes relacionadas con la privacidad, los datos personales, los datos biométricos, la protección de datos y la confidencialidad de las comunicaciones.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Página de segmentos sugeridos en Customer Insights que muestra los detalles de una sugerencia en un panel lateral.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Página de segmentos sugeridos que muestra detalles de una sugerencia en un panel lateral.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmentos sugeridos para mejorar sus KPI
 
@@ -49,7 +49,7 @@ Las sugerencias de segmentos son diferentes si elige un atributo numérico o un 
 
 Con un atributo numérico como *ingresos anuales* o *período de pertenencia* como atributo principal, el sistema sugiere segmentos que tienen un valor promedio mayor o menor del atributo numérico en comparación con todos los clientes.
 
-Un atributo categórico como *satisfacción del cliente* como atributo principal da como resultado segmentos sugeridos que tienen un porcentaje mayor o menor de clientes que pertenecen a una categoría en particular en comparación con el porcentaje de todos los clientes que pertenecen a esa misma categoría. Por ejemplo, *satisfacción del cliente* se elige como el atributo principal y consta de tres categorías (*Baja*, *Media* y *Alta*). Para cada categoría, se sugerirán segmentos que tengan un porcentaje significativamente mayor o menor de clientes que pertenecen a esa categoría en comparación con la proporción de todos los clientes en la misma categoría. Si el 22 % de todos los clientes tiene satisfacción *Alta*, solo los segmentos que tienen una proporción significativamente mayor o menor de clientes con una satisfacción *Alta* en comparación con el 22 % se sugerirán para esa categoría. Del mismo modo, se sugerirán segmentos para cada una de las otras categorías (*Baja* y *Media*) si son estadísticamente significativos.
+Un atributo categórico como *satisfacción del cliente* como atributo principal da como resultado segmentos sugeridos que tienen un porcentaje mayor o menor de clientes que pertenecen a una categoría en particular en comparación con el porcentaje de todos los clientes que pertenecen a esa misma categoría. Por ejemplo, *satisfacción del cliente* se elige como el atributo principal y consta de tres categorías (*Baja*, *Media* y *Alta*). Para cada categoría, se sugerirán segmentos que tengan un porcentaje mayor o menor de clientes que pertenecen a esa categoría en comparación con la proporción de todos los clientes en la misma categoría. Si el 22 % de todos los clientes tienen satisfacción *Alta*, entonces, solo los segmentos que tienen una mayor o menor proporción de clientes con una satisfacción *Alta* en comparación con el 22 % se sugerirán para esa categoría. Del mismo modo, se sugerirán segmentos para cada una de las otras categorías (*Baja* y *Media*) si son estadísticamente significativos.
 
 > [!NOTE]
 > Actualmente, solo admitimos atributos categóricos primarios que tienen hasta 10 categorías. Si desea ver sugerencias de segmentos basadas en un atributo principal con más de 10 categorías, recomendamos agrupar algunas de las categorías para reducir el número de categorías a 10 o menos. Esta limitación solo se aplica a los atributos primarios. Para influir en los atributos categóricos, actualmente admitimos un máximo de 100 categorías.
@@ -77,7 +77,7 @@ Un atributo categórico como *satisfacción del cliente* como atributo principal
 
 Una vez que el modelo de IA haya generado las sugerencias, las encontrará enumeradas en **Segmentos** > **Sugerencias (vista previa)**.
  
-Seleccione un segmento sugerido para revisar los detalles de esa sugerencia, incluida una comparación del valor promedio y el número de miembros del segmento. También puede revisar los valores de los atributos o las reglas que el modelo de IA aprendió para sugerir el segmento seleccionado.
+Seleccione un segmento sugerido para revisar los detalles de esa sugerencia. También puede revisar los valores de los atributos o las reglas que el modelo de IA aprendió para sugerir el segmento seleccionado.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Guardar una sugerencia como segmento
 

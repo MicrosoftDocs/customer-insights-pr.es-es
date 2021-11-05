@@ -1,7 +1,7 @@
 ---
 title: Configuración del sistema en las informaciones de público
 description: Más información sobre la configuración del sistema en la capacidad de informaciones de público de Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035937"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651861"
 ---
 # <a name="system-configuration"></a>Configuración del sistema
 
@@ -24,9 +24,9 @@ La página **Sistema** incluye las siguientes pestañas:
 - [Uso de API](#api-usage-tab)
 - [Acerca de](#about-tab)
 - [General](#general-tab)
+- [Seguridad](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Página del sistema.](media/system-tabs.png "Página del sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Pestañas de configuración en la página del sistema.":::
 
 ## <a name="status-tab"></a>Pestaña Estado
 
@@ -84,9 +84,15 @@ La pestaña **Acerca de** contiene el **Nombre para mostrar** de la organizació
 
 ## <a name="general-tab"></a>Pestaña General
 
-Hay dos opciones en la pestaña **General**, **Idioma** y **Formato de país o región**.
+Puede cambiar el idioma y el formato de país/región en la pestaña **General**.
 
-La aplicación [admite varios idiomas](supported-languages.md). Para cambiar el idioma preferido, elija un **Idioma** en el menú desplegable.
+Customer Insights [da soporte a varios idiomas](/dynamics365/get-started/availability). La aplicación usa su preferencia de idioma para mostrar elementos como el menú, el texto de etiquetas y los mensajes del sistema en su idioma preferido.
+
+Los datos importados y la información que introdujo manualmente no se traducen.
+
+### <a name="update-the-settings"></a>Actualizar la configuración
+
+Para cambiar el idioma preferido, elija un **Idioma** en el menú desplegable.
 
 Para cambiar su formato preferido de fechas, hora y números, use el menú desplegable **Formato de país o región**. Se muestra una vista previa de formato debajo de este campo. El sistema sugerirá automáticamente una selección cuando elija un nuevo idioma.
 
@@ -105,6 +111,13 @@ El **Uso de API** contiene tres secciones:
 
    Las operaciones que utilizan la [ingesta de datos en tiempo real](real-time-data-ingestion.md) contienen un botón con un símbolo de binoculares para ver el uso de la API en tiempo real. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.   
    Utilice el cuadro **Agrupar por** en el panel **Uso de API en tiempo real** para elegir la mejor forma de presentar sus interacciones en tiempo real. Puede agrupar los datos por método de API, nombre calificado de entidad (entidad ingerida), creado por (origen del evento), resultado (éxito o error) o códigos de error. Los datos están disponibles como gráfico del historial y como tabla.
+
+## <a name="security-tab"></a>Pestaña de seguridad
+
+La pestaña **Seguridad** le permite vincular y administrar su propia [Azure Key Vault](/azure/key-vault/general/basic-concepts) al entorno.
+El almacén de claes dedicado se puede utilizar para organizar y utilizar secretos en el límite de cumplimiento de una organización. Conclusiones del público puede usar los secretos de Azure Key Vault para [configurar conexiones](connections.md) a sistemas de terceros.
+
+Para obtener más información, consulte [Traer su propia Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

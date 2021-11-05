@@ -1,7 +1,7 @@
 ---
 title: Comenzar con cuentas de negocio como público de destino principal
 description: Obtenga más información sobre cuentas de negocio como público de destino principal en Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645009"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673708"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Trabajar con cuentas de negocio en conclusiones del público
 
-La capacidad de conclusiones del público en Dynamics 365 Customer Insights le permite configurar su entorno para diferentes públicos de destino principales: clientes individuales (B2C) y cuentas de negocio (B2B). En escenarios B2C, los datos se centran en personas. Para B2B, los públicos de destino principales son cuentas (organizaciones o empresas) y contactos. Este artículo le ayuda a comenzar con un entorno para cuentas comerciales. Enumera las diferencias para las áreas de funciones en conclusiones del público, según el enfoque de su entorno. Para obtener más información sobre las diferencias, revise los documentos de las áreas de funciones. 
+La capacidad de conclusiones del público en Dynamics 365 Customer Insights le permite configurar su entorno para diferentes públicos de destino principales: consumidores individuales (B2C) y cuentas de negocio (B2B). En escenarios B2C, los datos se centran en personas. Para B2B, los públicos de destino principales son cuentas (organizaciones o empresas) y contactos. Este artículo le ayuda a comenzar con un entorno para cuentas comerciales. Enumera las diferencias para las áreas de funciones en conclusiones del público, según el enfoque de su entorno. Para obtener más información sobre las diferencias, revise los documentos de las áreas de funciones. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Crear un entorno para cuentas de negocio
 
@@ -32,7 +32,7 @@ Después de unificar los datos, [especifique jerarquías de cuentas](relationshi
 
 Si su organización mantiene entornos para clientes individuales y cuentas de negocio, puede usar el conmutador en el panel izquierdo para elegir el público de destino principal.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Conmutador para cambiar el público de destino principal entre clientes individuales y cuentas de negocio.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Conmutador para cambiar el público de destino principal entre clientes individuales y cuentas de negocio.":::
 
 ## <a name="supported-feature-areas"></a>Áreas de características admitidas
 

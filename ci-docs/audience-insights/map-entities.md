@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648184"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673296"
 ---
 # <a name="map-entities-and-attributes"></a>Correlacionar entidades y atributos
 
@@ -96,7 +96,7 @@ Continúe con los pasos de unificación y asegúrese de que el atributo que cont
 
 Para las organizaciones (versión preliminar), el tipo de atributo debe asignarse a "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Clave principal y tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Clave principal y tipo de atributo B2B")
+> ![Tipo de atributo y clave principal B2B.](media/configure-data-map-edit-b2b.png "Tipo de atributo y clave principal B2B.")
 
 ## <a name="next-step"></a>Siguiente paso
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623053"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673524"
 ---
 # <a name="define-and-manage-measures"></a>Definir y administrar medidas
 
@@ -28,7 +28,7 @@ Utilice el generador de medidas para planificar actividades comerciales consulta
 
 Esta sección le guía a través de la creación de nuevas medidas desde cero. Puede crear una medida con atributos de datos a partir de entidades de datos que tienen una relación configurada para conectarse con la entidad de perfil de cliente unificado.
 
-# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
 
 1. En las informaciones de público, vaya a **Medidas**.
 
@@ -92,7 +92,7 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
 
 1. Vaya a **Medidas** para ver la medida recién creada en la lista.
 
-# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
 1. En las informaciones de público, vaya a **Medidas**.
 
@@ -164,7 +164,7 @@ Esta sección le guía a través de la creación de nuevas medidas desde cero. P
 
 Puede utilizar plantillas predefinidas de medidas de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
 
-# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
 
 Puede utilizar plantillas predefinidas de medidas de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
 
@@ -212,7 +212,7 @@ El siguiente procedimiento describe los pasos para crear una nueva medida usando
 
 1. Ahora puede seleccionar **Ejecutar** para calcular los resultados de la medida. Para refinarlo más tarde, seleccione **Guardar borrador**.
 
-# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
 Esta función solo está disponible para medidas creadas en entornos con clientes individuales como público de destino principal.
 

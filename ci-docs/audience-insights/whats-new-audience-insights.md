@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606137"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673885"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Las actualizaciones de marzo de 2021 incluyen varias funciones, mejoras de rendi
 - **Exportar segmentos a Constant Contact**. Hemos ampliado nuestros destinos de exportación para incluir Constant Contact. Ahora puede exportar segmentos de Customer Insights a las listas de Constant Contact y utilizarlos como valor de referencia para sus campañas de marketing.   
    Para obtener más información, consulte [Exportar a Constant Contact](export-constant-contact.md).
 
-- **Exportar segmentos a RollWorks**. Hemos ampliado nuestros destinos de exportación para incluir RollWorks. Ahora puede exportar segmentos de Customer Insights a las audiencias de RollWorks y utilizarlos como valor de referencia para sus anuncios B2B.    
+- **Exportar segmentos a RollWorks**. Hemos ampliado nuestros destinos de exportación para incluir RollWorks. Ahora puede exportar segmentos de Customer Insights a los públicos de RollWorks y utilizarlos como referencia para su publicidad B2B.    
    Para obtener más información, consulte [Exportar a RollWorks](export-rollworks.md).
 
 - **Exportar segmentos a Snapchat**. Hemos ampliado nuestros destinos de exportación para incluir Snapchat. Ahora puede exportar segmentos de Customer Insights a las audiencias de Snapchat y utilizarlos como valor de referencia para sus anuncios.     

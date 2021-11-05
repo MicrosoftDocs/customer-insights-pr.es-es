@@ -1,7 +1,7 @@
 ---
 title: Predicción de abandono de transacciones
 description: Predizca si un cliente está en riesgo de dejar de comprar sus productos o servicios.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643432"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673066"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predicción de abandono de suscripción (versión preliminar)
 
@@ -28,6 +28,32 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
 > Pruebe el tutorial para una predicción de abandono de transacciones usando datos de ejemplo: [Guía de ejemplo de predicción de abandono de transacciones (versión preliminar)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
+
+- Al menos [Permisos de colaborador](permissions.md) en Customer Insights.
+- Conocimiento del negocio para comprender lo que significa la pérdida de suscripciones para su negocio. Admitimos definiciones de abandono basadas en el tiempo, lo que significa que se considera que un cliente ha abandonado después de un período sin compras.
+- Datos sobre sus transacciones/compras y su historial:
+    - Identificadores de transacciones para distinguir compras/transacciones.
+    - Identificadores de clientes para hacer coincidir las transacciones con sus clientes.
+    - Fechas de eventos de transacción, que definen las fechas en las que ocurrió la transacción.
+    - El esquema de datos semánticos para compras/transacciones requiere la siguiente información:
+        - **Id. de transacción**: un identificador único de una compra o transacción.
+        - **Fecha de transacción**: la fecha de la compra o transacción.
+        - **Valor de la transacción**: el importe en moneda/valor numérico de la transacción o el artículo.
+        - (Opcional) **Id. de producto único**: el id. del producto o servicio adquirido si sus datos se encuentran en el nivel de artículo de línea.
+        - (Opcional) **Si esta transacción fue una devolución**: un campo de verdadero/falso que identifica si la transacción fue una devolución o no. Si el **Valor de la transacción** es negativo, también usaremos esta información para inferir una devolución.
+- (Opcional) Datos sobre las actividades del cliente:
+    - Identificadores de actividad para distinguir actividades del mismo tipo.
+    - Identificadores de clientes para asignar actividades a sus clientes.
+    - Información de actividad que contiene el nombre y la fecha de la actividad.
+    - El esquema de datos semánticos para actividades del cliente incluye:
+        - **Clave principal:** Un identificador único para una actividad. Por ejemplo, una visita a un sitio web o un registro de uso que muestre que el cliente probó una muestra de su producto.
+        - **Marca de tiempo:** La fecha y hora del evento identificado por la clave principal.
+        - **Evento:** El nombre del evento que desea usar. Por ejemplo, un campo llamado "UserAction" en una tienda de comestibles podría ser un cupón utilizado por el cliente.
+        - **Detalles:** Información detallada sobre el evento. Por ejemplo, un campo llamado "CouponValue" en una tienda de comestibles podría ser el valor en metálico del cupón.
+
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
 - Al menos [Permisos de colaborador](permissions.md) en Customer Insights.
 - Conocimiento del negocio para comprender lo que significa la pérdida de suscripciones para su negocio. Admitimos definiciones de abandono basadas en el tiempo, lo que significa que se considera que un cliente ha abandonado después de un período sin compras.
@@ -59,6 +85,9 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
         - **País:** el país de un cliente.
         - **Sector:** el tipo de sector de un cliente. Por ejemplo, un campo llamado "Sector" en un tostador de café podría indicar si el cliente era minorista.
         - **Clasificación:** la categorización de un cliente para su negocio. Por ejemplo, un campo llamado "ValueSegment" en un tostador de café podría ser el nivel de cliente según el tamaño del cliente.
+
+---
+
 - Características de los datos sugeridos
     - Datos históricos suficientes: datos de transacciones de al menos el doble del período tiempo seleccionado. Preferiblemente, dos o tres años de historial de transacciones. 
     - Varias compras por cliente: lo idóneo es que sean al menos dos transacciones por cliente.
@@ -114,6 +143,32 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
 
 1. Seleccione **Siguiente**.
 
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Agregar datos adicionales (opcional)
+
+Configure la relación en la entidad de actividad de cliente para la entidad *Cliente*.
+
+1. Seleccione el campo que identifica al cliente en la tabla de actividad de compras. Puede estar directamente relacionado con el identificador de cliente principal de su entidad de *Cliente*.
+
+1. Seleccione la entidad que es su principal entidad *Cliente*.
+
+1. Escriba un nombre que describa la relación.
+
+#### <a name="customer-activities"></a>Actividades del cliente
+
+1. Opcionalmente, seleccione **Agregar datos** para **Actividades del cliente**.
+
+1. Seleccione el tipo de actividad semántica que contiene los datos que le gustaría usar, luego seleccione una o más actividades en la sección **Actividades**.
+
+1. Seleccione un tipo de actividad que coincida con el tipo de actividad del cliente que está configurando. Seleccione **Crear nuevo** y elija un tipo de actividad disponible o cree un nuevo tipo.
+
+1. Seleccione **Siguiente** y, a continuación, **Guardar**.
+
+1. Si tiene otras actividades de clientes que le gustaría incluir, repita los pasos anteriores.
+
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Seleccione el nivel de predicción
 
 La mayoría de las predicciones se crean a nivel de cliente. En algunas situaciones, es posible que eso no sea lo suficientemente detallado para satisfacer sus necesidades comerciales. Puede utilizar esta función para predecir el abandono de una sucursal de un cliente, por ejemplo, en lugar de para el cliente en su conjunto.
@@ -122,9 +177,9 @@ La mayoría de las predicciones se crean a nivel de cliente. En algunas situacio
 
 1. Expanda las entidades de las que le gustaría elegir el nivel secundario, o use el cuadro de filtro de búsqueda para filtrar las opciones seleccionadas.
 
-1. Elija el atributo que le gustaría usar como nivel secundario, luego seleccione **Agregar**
+1. Elija el atributo que le gustaría usar como nivel secundario, luego seleccione **Agregar**.
 
-1. Seleccione **Siguiente**
+1. Seleccione **Siguiente**.
 
 > [!NOTE]
 > Las entidades disponibles en esta sección se muestran porque tienen una relación con la entidad que eligió en la sección anterior. Si no ve la entidad que desea agregar, asegúrese de que tenga una relación válida presente en **Relaciones**. Para esta configuración solo son válidas las relaciones de varios a uno y de uno a uno.
@@ -159,7 +214,7 @@ Configure la relación en la entidad de actividad de cliente para la entidad *Cl
 
 1. Seleccione **Siguiente**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Proporcione una lista opcional de cuentas de referencia (solo cuentas comerciales)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Proporcione una lista opcional de cuentas de referencia
 
 Agregue una lista de sus clientes y cuentas comerciales que desea utilizar como puntos de referencia. Obtendrá [detalles de estas cuentas de referencia](#review-a-prediction-status-and-results) incluida su puntuación de abandono y las características más influyentes que afectaron a su predicción de abandono.
 
@@ -168,6 +223,8 @@ Agregue una lista de sus clientes y cuentas comerciales que desea utilizar como 
 1. Elija los clientes que actúen como referencia.
 
 1. Seleccione **Siguiente** para continuar.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Establecer la programación y revisar la configuración
 
@@ -201,6 +258,25 @@ Agregue una lista de sus clientes y cuentas comerciales que desea utilizar como 
 1. Seleccione los puntos suspensivos verticales junto a la predicción cuyos resultados desea revisar y seleccione **Ver**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Vea el control para ver los resultados de una predicción.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
+
+1. Hay tres secciones de datos principales en la página de resultados:
+   - **Rendimiento del modelo de entrenamiento**: A, B o C son puntuaciones posibles. Esta puntuación indica el rendimiento de la predicción y puede ayudarle a tomar la decisión de usar los resultados almacenados en la entidad de salida. Las puntuaciones se determinan según las siguientes reglas: 
+        - **A** cuando el modelo predijo con precisión al menos el 50 % de las predicciones totales, y cuando el porcentaje de predicciones precisas para los clientes que abandonaron es mayor que la tasa de referencia en al menos un 10 %.
+            
+        - **B** cuando el modelo predijo con precisión al menos el 50 % de las predicciones totales, y cuando el porcentaje de predicciones precisas para los clientes que abandonaron es hasta un 10 % mayor que la referencia.
+            
+        - **C** cuando el modelo predijo con precisión menos del 50 % de las predicciones totales, o cuando el porcentaje de predicciones precisas para los clientes que abandonaron es inferior a la referencia.
+               
+        - **Referencia** toma la entrada de ventana de tiempo predicción para el modelo (por ejemplo, un año) y el modelo crea diferentes fracciones de tiempo dividiendo por 2 hasta que llega a un mes o menos. Utiliza estas fracciones para crear una regla de negocio para los clientes que no han comprado en este plazo de tiempo. Estos clientes se consideran abandonados. La regla de negocio basada en el tiempo con la mayor capacidad para predecir quién es probable que abandone se elige como modelo de referencia.
+            
+    - **Probabilidad de pérdida (número de clientes)**: Grupos de clientes según su riesgo de pérdida previsto. Estos datos pueden ayudarle más adelante si desea crear un segmento de clientes con alto riesgo de pérdida. Dichos segmentos ayudan a comprender dónde debe estar el corte para la pertenencia del segmento.
+       
+    - **Factores más influyentes**: Hay muchos factores que se tienen en cuenta al crear su predicción. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede usar estos factores para ayudar a validar sus resultados de predicción, o puede usar esta información más adelante para [crear segmentos](segments.md) que podrían ayudar a influir en el riesgo de abandono de los clientes.
+
+
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
 1. Hay tres secciones de datos principales en la página de resultados:
    - **Rendimiento del modelo de entrenamiento**: A, B o C son puntuaciones posibles. Esta puntuación indica el rendimiento de la predicción y puede ayudarle a tomar la decisión de usar los resultados almacenados en la entidad de salida. Las puntuaciones se determinan según las siguientes reglas: 
@@ -237,6 +313,11 @@ Agregue una lista de sus clientes y cuentas comerciales que desea utilizar como 
        Cuando predice el abandono a nivel de cuenta, todas las cuentas se tienen en consideración al calcular los valores promedio de las funciones para los segmentos de abandono. Para predicciones de abandono en el nivel secundario para cada cuenta, el cálculo de los segmentos de abandono depende del nivel secundario del elemento seleccionado en el panel lateral. Por ejemplo, si un artículo tiene un nivel secundario de categoría de producto = material de oficina, solo se considerarán los artículos que tengan material de oficina como categoría de producto al calcular los valores de característica promedio para los segmentos de abandono. Esta lógica se aplica para garantizar una comparación justa de los valores de característica del artículo con los valores promedio en los segmentos de bajo, medio y alto riesgo de abandono.
 
        En algunos casos, el valor medio de los segmentos de bajo, medio o alto riesgo de abandono está vacío o no está disponible porque no hay elementos que pertenezcan a los segmentos de abandono correspondientes según la definición anterior.
+       
+       > [!NOTE]
+       > La interpretación de los valores en las columnas promedio bajo, medio y alto es diferente para características categóricas como región o industria. Debido a que la noción de valor de característica "promedio" no se aplica a las características categóricas, los valores en estas columnas son la proporción de clientes en los segmentos de abandono alto, medio o bajo que tienen el mismo valor de la característica categórica en comparación con el elemento. seleccionado en el panel lateral.
+
+---
 
 ## <a name="manage-predictions"></a>Administrar predicciones
 

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645732"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673412"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorno en conclusiones del público
 
@@ -46,7 +46,7 @@ En el paso **Información básica**, elija si desea crear un entorno desde cero 
 
 Especifique los detalles siguientes:
    - **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo.
-   - **Elija su negocio**: Elija el público principal para el nuevo entorno. Puede trabajar con clientes individuales (B2C) o [cuentas de negocio](work-with-business-accounts.md) (B2B).
+   - **Elija su negocio**: Elija el público principal para el nuevo entorno. Puede trabajar con consumidores individuales (B2C) o [cuentas empresariales](work-with-business-accounts.md) (B2B).
    - **Tipo**: seleccione si desea crear un entorno de producción o de espacio aislado. Los entornos de espacio aislado no permiten la actualización de datos programada y están pensados para la implementación previa y las pruebas. Los entornos de espacio aislado utilizan el mismo público principal que el entorno de producción que está seleccionado actualmente.
    - **Región**: la región en la que se implementa y hospeda el servicio.
 
@@ -54,7 +54,7 @@ Especifique los detalles siguientes:
 
 En el paso **Almacenamiento de datos**, elija dónde almacenar los datos de conclusiones del público.
 
-Tendrá dos opciones: **Almacenamiento de Customer Insights** (Azure Data Lake administrado por el equipo de Customer Insights) y **Azure Data Lake Storage** (su propio Azure Data Lake Storage). De forma predeterminada, la opción de almacenamiento de Customer Insights está seleccionada.
+Tendrá dos opciones: **Almacenamiento de Customer Insights** (lago de datos de Azure administrado por el equipo de Customer Insights) y **Azure Data Lake Storage** (su propio Azure Data Lake Storage). De forma predeterminada, la opción de almacenamiento de Customer Insights está seleccionada.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Elija Azure Data Lake Storage para almacenar sus datos de conclusiones del público.":::
 
@@ -66,7 +66,7 @@ Al guardar datos en Azure Data Lake Storage, usted acepta que los datos se trans
 > - Las cuentas de Azure Data Lake Storage de la misma región de Azure que seleccionó al crear el entorno.
 > - Las cuentas de Azure Data Lake Storage que tienen *espacio de nombres jerárquico* habilitado.
 
-Para la opción Azure Data Lake Storage, puede elegir entre una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). El nombre de **Contenedor** será `customerinsights` y no se puede cambiar.
+Para la opción Azure Data Lake Storage, puede elegir entre una opción basada en recursos y una opción basada en suscripción para la autenticación. Para obtener más información, consulte [Conectarse a una cuenta de Azure Data Lake Storage mediante el uso de una entidad de servicio de Azure](connect-service-principal.md). El nombre de **Contenedor** será `customerinsights` y no se puede cambiar.
 
 Cuando se completan procesos del sistema, como ingestión de datos, el sistema crea las carpetas correspondientes en la cuenta de almacenamiento que especificó. Los archivos de datos y los archivos *model.json* se crean y se agregan a carpetas cuyo nombre se basa en el del proceso.
 
@@ -76,14 +76,14 @@ Si crea varios entornos de Customer Insights y elige guardar las entidades de sa
    
 El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse.
 
-Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Dataverse.
+Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de lago de datos gestionada de Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights no admite los siguientes escenarios de uso compartido de datos:
-> - Si guarda todos los datos en su propio Azure Data Lake Storage, no podrá habilitar el uso compartido de datos con un Data Lake administrado por Microsoft Dataverse.
-> - Si habilita el uso compartido de datos con un Data Lake administrado por Microsoft Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
+> - Si guarda todos los datos en su propio Azure Data Lake Storage, no podrá habilitar el uso compartido de datos con un lago de datos administrado por Dataverse.
+> - Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Paso 4: Finalizar la configuración
 
@@ -93,10 +93,10 @@ También puede cambiar la mayoría de las configuraciones más tarde. Para más 
 
 ## <a name="work-with-your-new-environment"></a>Trabajar con su nuevo entorno
 
-Revise los siguientes artículos que le ayudarán a comenzar a configurar Customer Insights. 
+Revise los siguientes artículos para ayudarle a comenzar a configurar Customer Insights: 
 
 - [Agregar más usuarios y asignar permisos](permissions.md).
 - [Ingerir los orígenes de datos](data-sources.md) y ejecutarlos a través del [proceso de unificación de datos](data-unification.md) para obtener [perfiles de cliente unificados](customer-profiles.md).
 - [Enriquecer los perfiles de cliente unificados](enrichment-hub.md) o [ejecutar modelos predictivos](predictions-overview.md).
-- [Crear segmentos](segments.md) para agrupar clientes y KPI de revisión de [medidas](measures.md).
+- [Crear segmentos](segments.md) para agrupar clientes y [medidas](measures.md) para revisar los KPI.
 - [Configurar conexiones](connections.md) y [exportaciones](export-destinations.md) para procesar subconjuntos de los datos en otras aplicaciones.

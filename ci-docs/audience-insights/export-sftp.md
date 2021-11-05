@@ -9,16 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035482"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673937"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos y otros datos a SFTP (versión preliminar)
 
 Utilice los datos de sus clientes en aplicaciones de terceros exportándolos a una ubicación del protocolo seguro de transferencia de archivos (SFTP).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
