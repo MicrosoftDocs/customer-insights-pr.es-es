@@ -1,7 +1,7 @@
 ---
 title: Enriquecer los perfiles de los clientes con datos de Microsoft
-description: Utilice datos propios de Microsoft para enriquecer los datos de sus clientes con afinidades de marca e intereses.
-ms.date: 11/01/2021
+description: Utilice datos de propiedad de Microsoft para enriquecer los datos de sus clientes con afinidades y Cuota de presencia.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732563"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793724"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquezca los perfiles de los clientes con afinidades de marca e interés (versión preliminar)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquezca los perfiles de los clientes con afinidades y Cuota de presencia (vista previa)
 
-Utilice datos propios de Microsoft para enriquecer los datos de sus clientes con afinidades de marca e intereses. Estas afinidades se basan en los datos de personas con datos demográficos similares a sus clientes. Esta información le ayuda a comprender y segmentar mejor a sus clientes en función de sus afinidades con marcas e intereses específicos.
+Utilice datos de propiedad de Microsoft para enriquecer los datos de sus clientes con afinidades de marca, intereses y Cuota de presencia (SoV). Estas afinidades y SoV se basan en datos de un público con demográficas similares a las de sus clientes. Esta información le ayuda a comprender y segmentar mejor a sus clientes en función de sus afinidades o SoV con marcas e intereses específicos.
 
 En la información de público, vaya a **Datos** > **Enriquecimiento** para [configurar y ver enriquecimientos](enrichment-hub.md).
 
-Para configurar el enriquecimiento de afinidades de marca, vaya a la pestaña **Descubrir** y seleccione **Enriquecer mis datos** en la ventana **Marcas**.
+Para configurar las afinidades de marca y el enriquecimiento de SoV, vaya a la pestaña **Descubrir** y seleccione **Enriquecer mis datos** en el mosaico **Marcas**.
 
-Para configurar el enriquecimiento de afinidades de intereses, vaya a la pestaña **Descubrir** y seleccione **Enriquecer mis datos** en la ventana **Intereses**.
+Para configurar las afinidades de interés y el enriquecimiento de SoV, vaya a la pestaña **Descubrir** y seleccione **Enriquecer mis datos** en el mosaico **Intereses**.
 
    > [!div class="mx-imgBorder"]
    > ![Ventanas de marcas e intereses.](media/BrandsInterest-tile-Hub.png "Ventanas de marcas e intereses")
 
-## <a name="how-we-determine-affinities"></a>Cómo determinamos las afinidades
+## <a name="how-we-determine-affinities-and-sov"></a>Cómo determinamos las afinidades y el SoV
 
-Usamos los datos de búsqueda en línea de Microsoft para encontrar afinidades por marcas e intereses en varios segmentos demográficos (definidos por edad, género o ubicación). El volumen de búsqueda en línea de una marca o interés determina cuánta afinidad tiene un segmento demográfico, en comparación con otros segmentos, con esa marca o interés.
+Usamos los datos de búsqueda en línea de Microsoft para encontrar afinidades y SoV para marcas e intereses en varios segmentos demográficos (definidos por edad, género o ubicación). El volumen de búsqueda en línea de una marca o interés constituye la base para determinar la afinidad o SoV. Sin embargo, cada uno proporciona una perspectiva diferente para comprender a sus clientes.
+
+- La afinidad es una comparación entre segmentos demográficos. Puede utilizar esta información para identificar los segmentos demográficos que tienen la mayor afinidad por una marca o interés determinados, en comparación con otros segmentos.
+
+- Cuota de presencia es una comparación entre sus marcas o intereses seleccionados. Puede utilizar esta información para identificar qué marca o interés tiene la mayor participación en un segmento demográfico determinado, en comparación con otras marcas o intereses que seleccionó.
 
 ## <a name="affinity-level-and-score"></a>Nivel de afinidad y puntuación
 
@@ -48,6 +52,10 @@ El *nivel de afinidad* consta de cuatro niveles y la *puntuación de afinidad* s
 |Bajo     | 1-34        |
 
 Dependiendo de la granularidad que desee para medir la afinidad, puede utilizar el nivel de afinidad o la puntuación. La puntuación de afinidad le brinda un control más preciso.
+
+## <a name="share-of-voice-sov"></a>Cuota de presencia (SoV)
+
+Calculamos la SoV en una escala de 100 puntos. La SoV total en todas las marcas o intereses para cada perfil de cliente enriquecido suma 100. A diferencia de las afinidades, SoV es relativa a las marcas e intereses que seleccione. Por ejemplo, los valores de SoV para 'Microsoft' pueden ser diferentes si las marcas seleccionadas son ('Microsoft', 'GitHub') versus ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Países/regiones admitidos
 
@@ -82,7 +90,7 @@ Revise sus preferencias de enriquecimiento predeterminadas y actualícelas segú
 
 ### <a name="select-entity-to-enrich"></a>Seleccione la entidad que desea enriquecer
 
-Seleccione **Entidad enriquecida** y elija el conjunto de datos del cliente que desea enriquecer con datos de Microsoft. Puede seleccionar la entidad Cliente para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
+Seleccione **Entidad enriquecida** y elija el conjunto de datos que desea enriquecer con datos de Microsoft. Puede seleccionar la entidad Cliente para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
 
 ### <a name="map-your-fields"></a>Asignar sus campos
 
@@ -124,13 +132,11 @@ Después de ejecutar el proceso de enriquecimiento, vaya a **Mis enriquecimiento
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Vista previa de resultados después de ejecutar el proceso de enriquecimiento.":::
 
-Revise los datos enriquecidos seleccionando **Ver datos enriquecidos** en el gráfico. Los datos enriquecidos para las marcas van a la entidad **MarcaAffinityDeMicrosoft**. Los datos de intereses están en la entidad **InterésAfinidadDeMicrosoft**. También encontrará estas entidades indicadas en el grupo **Enriquecimiento** en **Datos** > **Entidades**.
-
-Verá un gráfico con la cantidad de perfiles de clientes enriquecidos a lo largo del tiempo y una vista previa de la entidad enriquecida. Seleccione **Mostrar más** en el mosaico de vista previa para abrir la entidad enriquecida.
+Encontrará un gráfico con la cantidad de perfiles de clientes enriquecidos a lo largo del tiempo y vistas previas de las entidades enriquecidas. Revise los datos enriquecidos seleccionando **Ver más** en los gráficos **Nivel de afinidad** o **Cuota de presencia**. Los datos enriquecidos de las marcas van a las entidades **BrandAffinityFromMicrosoft** y **BrandShareOfVoiceFromMicrosoft**. Los datos de intereses están en las entidades **InterestAffinityFromMicrosoft** y **InterestShareOfVoiceFromMicrosoft**. También encontrará estas entidades indicadas en el grupo **Enriquecimiento** en **Datos** > **Entidades**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Vea datos de enriquecimiento en la tarjeta del cliente
 
-Las afinidades de marcas e intereses también se pueden ver en tarjetas de clientes individuales. Vaya a **Clientes** y seleccione un perfil de cliente. En la tarjeta del cliente, encontrará gráficos de las marcas o intereses por los que las personas del perfil demográfico de ese cliente tienen afinidad.
+La SoV de marca e interés también se puede ver en tarjetas de clientes individuales. Vaya a **Clientes** y seleccione un perfil de cliente. En la ficha de cliente encontrará gráficos para la SoV de marca o interés según el perfil demográfico del cliente.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Tarjeta de cliente con datos enriquecidos.":::
 

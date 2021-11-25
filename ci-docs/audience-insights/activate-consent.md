@@ -1,6 +1,6 @@
 ---
-title: Activar reglas de consentimiento para segmentos en audiencia insights
-description: Pasos para vincular los datos de consentimiento y activar las verificaciones de consentimiento en audiencia insights.
+title: Activar reglas de consentimiento para segmentos
+description: Siga estos pasos para vincular los datos de consentimiento y activar las verificaciones de consentimiento en audiencia insights. Un administrador también puede deshabilitar las verificaciones de consentimiento.
 ms.date: 11/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,20 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 33ec3a684c2ca47badb4e5461f069d1b2e4a4f3d
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753082"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790796"
 ---
 # <a name="activate-consent-rules"></a>Activar reglas de consentimiento
 
-[Centro de consentimiento (vista previa)](../consent-management/overview.md) le ayuda a armonizar los datos de consentimiento de diversas fuentes. Usa la entidad unificada *Consentimiento* para aplicar comprobaciones de consentimiento por defecto. Después de importar los datos de consentimiento en el Centro de consentimiento y configurar las reglas para los datos de consentimiento importados, la entidad *Consentimiento* se sincroniza automáticamente con audiencia insights.
+El [Centro de consentimiento (vista previa)](../consent-management/overview.md) le ayuda a armonizar los datos de consentimiento de diversas fuentes. Usa la entidad unificada *Consentimiento* para aplicar comprobaciones de consentimiento por defecto. Después de importar los datos de consentimiento en el Centro de consentimiento y configurar las reglas para los datos, la entidad *Consentimiento* se sincroniza automáticamente con la información de audiencia.
 
 ## <a name="enable-consent-checks"></a>Habilitar comprobaciones de consentimiento
 
-Con los datos de consentimiento importados al Centro de consentimiento (vista previa) y las reglas configuradas, puede habilitar las verificaciones de consentimiento en audiencia insights. 
+Con los datos de consentimiento importados al Centro de consentimiento (vista previa) y las reglas configuradas, puede habilitar las verificaciones de consentimiento. 
 
 :::image type="content" source="../consent-management/media/enable-consent-checks-audience-insights.png" alt-text="Pestaña de consentimiento en la configuración de audiencia insights con datos de consentimiento activados.":::
 
@@ -30,7 +30,7 @@ Con los datos de consentimiento importados al Centro de consentimiento (vista pr
 
 1. Seleccione la pestaña **Consentimiento (versión preliminar)**.
 
-1. En la sección **Habilitar verificaciones de consentimiento**, configure el interruptor para el área que desea habilitar como **Activado**.
+1. En la sección **Habilitar verificaciones de consentimiento**, configure el interruptor para las áreas que desea habilitar como **Activado**.
 
 1. Seleccione la casilla **Permitir anular las reglas de consentimiento predeterminadas** para eliminar las comprobaciones de consentimiento predeterminadas que se aplican a un segmento en particular. 
 

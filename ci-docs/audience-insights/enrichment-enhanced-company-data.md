@@ -1,7 +1,7 @@
 ---
 title: Mejora de datos de empresa
 description: Enriquezca y normalice los datos de la empresa con los modelos de Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770191"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813938"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecimiento de los perfiles de la empresa con datos empresariales mejorados
 
@@ -51,7 +51,8 @@ Existen algunas limitaciones con los datos mejorados. Los elementos de la lista 
 
 1.  Confirme la identidad de la empresa. No verificamos si la entrada es una organización existente o si una empresa usa la salida como su nombre estándar.
 2.  Cobertura integral de empresas a nivel mundial. Los datos de la empresa compilados de Microsoft tienen cobertura global, pero ofrecen la mayor cobertura en Australia, Canadá, Reino Unido y Estados Unidos.
-3.  Garantizar la exactitud o actualidad de los datos. Como la información empresarial cambia a menudo, no podemos garantizar que los datos mejorados de la empresa proporcionados sean siempre exactos o estén actualizados.
+3.  Estandarice las direcciones de las empresas a nivel mundial. Actualmente admitimos la estandarización de direcciones en estos países o regiones: Australia, Canadá, Francia, Alemania, Italia, Japón, Reino Unido y Estados Unidos.
+4.  Garantizar la exactitud o actualidad de los datos. Como la información empresarial cambia a menudo, no podemos garantizar que los datos mejorados de la empresa proporcionados sean siempre exactos o estén actualizados.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
 
