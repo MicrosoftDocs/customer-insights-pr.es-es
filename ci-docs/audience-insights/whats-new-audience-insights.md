@@ -1,7 +1,7 @@
 ---
 title: Características nuevas y mejoradas
 description: Información sobre nuevas funciones, mejoras y correcciones de errores.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673885"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753138"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Actualizaciones de octubre de 2021
+
+Las actualizaciones de octubre de 2021 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="b-to-b"></a>B-to-B
+
+A partir de octubre de 2021, puede trabajar con cuentas comerciales y sus contactos relacionados en Customer Insights. Antes, la aplicación se adaptaba principalmente a consumidores individuales. Se actualizaron varias áreas de funciones para admitir escenarios B-to-B además de un nuevo tipo de entorno. Para obtener una descripción general de las funciones B-to-B compatibles, consulte [Trabajar con cuentas comerciales en audiencia insights](work-with-business-accounts.md).
+
+Las siguientes secciones destacan algunas de las áreas clave que se adaptaron para respaldar las cuentas comerciales y los consumidores individuales.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Exportar segmentos basados en cuentas comerciales
+
+Todas las exportaciones de segmentos en audiencia insights están disponibles en el contexto de las cuentas comerciales. La mayoría de las exportaciones de segmentos requieren configuración adicional e [información de contacto proyectada](segment-builder.md#create-a-new-segment) en los segmentos subyacentes para que sean válidas para las cuentas de negocio. Para obtener más información, consulte [Exportar segmentos](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilice la exportación de anuncios de LinkedIn con cuentas comerciales
+
+La exportación de anuncios de LinkedIn ahora está disponible para la segmentación de contactos y empresas en el contexto de cuentas comerciales. Al seleccionar la orientación de la empresa como su enfoque principal de la exportación de LinkedIn, puede exportar segmentos creados en cuentas comerciales sin la necesidad de proyectar la información de contacto. Para obtener más información, consulte la documentación sobre [Exportación de anuncios de LinkedIn](export-linkedin-ads.md) y la diferencia entre [segmentación de contactos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) y [segmentación de la empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Crear medidas basadas en cuentas comerciales y su jerarquía
+
+El generador de medidas le permite crear medidas en torno a cuentas comerciales y, opcionalmente, utilizar la información de jerarquía. La información de jerarquía se utiliza para acumular un cálculo de medida en una cuenta y todas sus subcuentas relacionadas. Por ejemplo, puede crear medidas como los ingresos totales para cada grupo de cuentas comerciales identificadas por su jerarquía. Para obtener más información, consulte [Definir y administrar medidas](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Crear segmentos basados en cuentas comerciales y su jerarquía
+
+El generador de segmentos le permite crear segmentos de cuentas comerciales que opcionalmente incluyen información de contacto para cada cuenta en un segmento. Si ha configurado la jerarquía de cuentas, puede utilizar la información de la jerarquía de cuentas en la creación de segmentos. Para obtener más información, consulte [Crear un nuevo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conserve sus cuentas comerciales con conocimientos profundos sobre su tendencia a la deserción
+
+El modelo de abandono de clientes predicción ahora también admite cuentas comerciales. Puede evaluar el riesgo de abandono no solo para una cuenta, sino también para una combinación de una cuenta y una categoría de producto o servicio que le compren. Esta adición le ayuda a comprender si es más probable que una cuenta deje de comprarle en general o solo para una determinada categoría de bienes o servicios. Para ayudarlo aún más a usar este modelo de inteligencia artificial, también enumera las razones por las que es probable que una cuenta se pierda. Para más información, vea [Cancelación de transacciones predicción (vista previa)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ver los contactos de una cuenta comercial en la vista Cliente
+
+Si las cuentas comerciales están asignadas a cuentas relacionadas, la aplicación Customer Insights muestra estos contactos relacionados como parte de la vista de detalles del cliente. Para obtener más información, consulte [Perfiles de cliente](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Actualizaciones de septiembre de 2021
 

@@ -1,7 +1,7 @@
 ---
 title: Fusionar entidades en la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648275"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732793"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
@@ -187,10 +187,9 @@ Escoja **Ejecutar procesos de combinación y posteriores** para actualizar el si
 
 Para realizar más cambios y volver a ejecutar el paso, puede cancelar una combinación en curso. Seleccione **Actualizando...** y seleccione **Cancelar trabajo** en el panel lateral que aparece.
 
-> [!TIP]
-> Después de ejecutar el proceso de combinación, seleccione el estado del proceso para abrir el panel **Detalles de la tarea**. Ofrece una descripción general sobre el tiempo de procesamiento, la última fecha de procesamiento y todos los errores y advertencias asociados con la tarea. Seleccione **Ver detalles** para ver qué entidades participaron en el proceso de coincidencia, si la resolución del conflicto tuvo éxito y si las actualizaciones se publicaron correctamente.  
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
 
 ## <a name="next-step"></a>Paso siguiente
 

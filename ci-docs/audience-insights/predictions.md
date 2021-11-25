@@ -1,7 +1,7 @@
 ---
 title: Completar datos parciales usando predicciones
 description: Utilice predicciones para completar datos incompletos del cliente.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645055"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732453"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Complete sus datos parciales con predicciones
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete sus datos parciales con predicciones (obsoleto)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Esta característica estará **obsoleta** a partir del **5 de noviembre de 2021**. Las implementaciones actuales seguirán funcionando hasta que se elimine la función, pero no podrá crear nuevas integraciones con las instrucciones a continuación.
 
 Las predicciones le permiten crear fácilmente valores de predicción que pueden mejorar su comprensión de un cliente. En la página **Inteligencia** > **Predicciones**, puede seleccionar **Mis predicciones** para ver las predicciones que ha configurado en otras partes de las informaciones de público y poder personalizarlas aún más.
 
@@ -60,6 +61,8 @@ Para obtener más información, consulte [Crear un nuevo entorno](create-environ
    > ![Ejemplo que muestra valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Ejemplo que muestra valores de campo asignados a categorías")
 
 8. Seleccione **Listo** y se procesará la predicción. El procesamiento llevará algún tiempo, dependiendo del tamaño y la complejidad de los datos. Los resultados estarán disponibles en una nueva entidad basada en el **Nombre de entidad de salida** de la predicción que ha creado.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear una predicción al crear un segmento
 

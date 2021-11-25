@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights
 description: Administrar exportaciones para compartir datos.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673344"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732184"
 ---
 # <a name="exports-preview-overview"></a>Información general del exportaciones (versión preliminar)
 
@@ -97,7 +97,9 @@ Después de crear los destinos de la exportación, se enumeran en **Datos** > **
 
 Cada exportación que configure tiene un programa de actualización. Durante una actualización, el sistema busca datos nuevos o actualizados para incluirlos en una exportación. De forma predeterminada, las exportaciones se ejecutan como parte de cada [actualización programada del sistema](system.md#schedule-tab). Puede personalizar el programa de actualización o desactivarlo para ejecutar exportaciones manualmente.
 
-Los programas de exportación dependen del estado de su entorno. Si hay actualizaciones en curso en [dependencias](system.md#refresh-policies) cuando debe comenzar una exportación programada, el sistema primero completará las actualizaciones y luego ejecutará la exportación. Puede ver cuándo se actualizó por última vez una exportación en la columna **Actualizado**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Los programas de exportación dependen del estado de su entorno. Si hay actualizaciones en curso en [dependencias](system.md#refresh-processes) cuando debe comenzar una exportación programada, el sistema primero completará las actualizaciones y luego ejecutará la exportación. Puede ver cuándo se actualizó por última vez una exportación en la columna **Actualizado**.
 
 ### <a name="schedule-exports"></a>Programar exportaciones
 

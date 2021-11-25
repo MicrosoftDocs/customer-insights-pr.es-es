@@ -1,7 +1,7 @@
 ---
 title: Usar orígenes de datos para ingerir datos
 description: Aprenda a importar datos desde distintos orígenes.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645376"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732188"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -48,14 +48,7 @@ Podrá ver el nombre de cada origen de datos ingeridos, su estado y la última v
 > [!div class="mx-imgBorder"]
 > ![Origen de datos agregado.](media/configure-data-datasource-added.png "Origen de datos agregado")
 
-|Estado de ejecución  |Descripción  |
-|---------|---------|
-|Operación correcta   |El origen de datos se ingirió correctamente si se menciona una hora en la columna **Actualizado**.
-|Sin iniciar   |El origen de datos aún no tiene datos ingeridos o sigue en modo de borrador.         |
-|Actualizando    |La ingesta de datos está en curso. Para cancelar esta operación, seleccione **Detener la actualización** en la columna **Acciones**. Al detener la actualización de un origen de datos se revertirá a su último estado de actualización.       |
-|Con errores     |Se han producido errores al ingerir datos.         |
-
-Seleccione el valor en la columna **Estado** de cualquier origen de datos para revisar más detalles. En el panel **Detalles del progreso**, expanda **Fuentes de datos**. Seleccione **Ver detalles** para obtener más información sobre el estado de actualización, incluidos los detalles del error y las actualizaciones del proceso posterior.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 La carga de datos puede llevar tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página **Entidades**. Para obtener más información, consulte [Entidades](entities.md).
 

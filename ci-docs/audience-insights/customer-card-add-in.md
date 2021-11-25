@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643469"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792047"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
@@ -34,7 +34,7 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
   - **Control de medidas**: Requiere [medidas configuradas](measures.md) de atributos de tipo de cliente.
   - **Control de inteligencia**: requiere datos generados usando [predicciones](predictions.md) o [modelos personalizados](custom-models.md).
   - **Control de detalles del cliente**: Todos los campos del perfil están disponibles en el perfil de cliente unificado.
-  - **Control de enriquecimiento**: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes.
+  - **Control de enriquecimiento**: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes. El complemento de la tarjeta admite estos enriquecimientos: [Marcas](enrichment-microsoft.md) proporcionado por Microsoft, [Intereses](enrichment-microsoft.md) proporcionado por Microsoft.
   - **Control de contactos**: Requiere definición de entidad semántica de tipo contactos.
   - **Control de escala de tiempo**: requiere [actividades configuradas](activities.md).
 

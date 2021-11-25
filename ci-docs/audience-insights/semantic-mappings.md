@@ -1,7 +1,7 @@
 ---
 title: Asignaciones semánticas (versión preliminar)
 description: Descripción general de las asignaciones semánticas y cómo usarlas.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622956"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731964"
 ---
 # <a name="semantic-mappings"></a>Asignaciones semánticas
 
@@ -75,8 +75,7 @@ Las asignaciones semánticas le permiten asignar sus datos de no actividad a esq
 
 1. Para ejecutar una asignación semántica en un punto posterior, seleccione la asignación semántica y seleccione **Actualizar**.
 
-> [!TIP]
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Administrar asignaciones semánticas existentes
 
@@ -91,5 +90,6 @@ En **Datos** > **Asignaciones semánticas (versión preliminar)**, puede ver tod
 - **Cambiar nombre**: Abre un cuadro de diálogo en el que puede introducir un nombre diferente para la asignación semántica seleccionada. Seleccione **Guardar** para aplicar los cambios.
 
 - **Eliminar**: Abre un cuadro de diálogo para confirmar la eliminación de la asignación semántica seleccionada. También puede eliminar más de una asignación semántica a la vez seleccionando las asignaciones semánticas y el icono de eliminación. Seleccione **Eliminar** para confirmar la eliminación.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

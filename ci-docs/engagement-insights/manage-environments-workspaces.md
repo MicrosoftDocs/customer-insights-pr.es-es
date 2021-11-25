@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645467"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673818"
 ---
 # <a name="manage-environments-and-workspaces"></a>Administrar entornos y áreas de trabajo
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645467"
 
 Este tema analiza cómo administrar áreas de trabajo y entornos una vez que ya se han creado. 
 
-- Un *área de trabajo* es un espacio para almacenar y administrar eventos e informes. Es donde puede ver la actividad del usuario en tiempo real. Cuando crea un área de trabajo, usted selecciona el tipo de datos que se envían al área de trabajo. Actualmente, se admiten datos web y aplicaciones móviles. Para más información, vea [Crear un área de trabajo y agregar miembros](create-workspace.md).
+- Un *área de trabajo* es un espacio para almacenar y administrar eventos e informes. Es donde puede ver la actividad del usuario en tiempo real. Cuando crea un área de trabajo, usted selecciona el tipo de datos que se envían al área de trabajo. Actualmente, se admiten datos web y aplicaciones móviles. Para más información, vea [Crear un nuevo área de trabajo y agregar miembros](create-workspace.md).
 
 - Un *entorno* es un espacio donde gestiona sus áreas de trabajo y conexiones. Para obtener más información, consulte [Crear un nuevo entorno](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Puede mantener varias áreas de trabajo simultáneamente en un entorno. Su [rol]
 
 ### <a name="delete-a-workspace"></a>Eliminar un área de trabajo
 
-La eliminación de un área de trabajo eliminará permanentemente todo su contenido, datos, configuración y permisos. Esta acción no se puede deshacer.
+La eliminación de un área de trabajo elimina permanentemente todo su contenido, datos, configuración y permisos. Esta acción no se puede deshacer.
 
 1. Vaya a **Administración** > **Área de trabajo** y seleccione **Configuración**.
 
@@ -71,19 +71,11 @@ Como administrador del entorno, puede acceder a un entorno desde el panel de nav
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centro de administración del entorno.":::
 
-### <a name="rename-an-environment"></a>Cambiar nombre a un entorno
+### <a name="edit-an-environment-name"></a>Editar un nombre de entorno
 
 1. Vaya a **Administración** > **Entorno** y seleccione **Configuración**.
 
 1. Actualice el **Nombre del entorno** y seleccione **Guardar** para aplicar los cambios.
-
-### <a name="manage-environment-members"></a>Gestionar miembros del entorno
-
-1. Vaya a **Administración** > **Entorno** y seleccione **Miembros**.
-
-1. Seleccione **Añadir miembros** para actualizar miembros y [asignar roles](user-roles.md). Actualmente, solo está disponible **Administrador del entorno**.
-
-1. Seleccione **Añadir miembros** para agregarlos a su entorno.
 
 ### <a name="delete-an-environment"></a>Eliminar un entorno
 
@@ -97,6 +89,14 @@ Los administradores de entornos pueden eliminar entornos. Para poder eliminar un
 
 1. Seleccione **Eliminar** para eliminar el entorno de forma irreversible.
 
+### <a name="manage-environment-members"></a>Gestionar miembros del entorno
+
+1. Vaya a **Administración** > **Entorno** y seleccione **Miembros**.
+
+1. Seleccione **Añadir miembros** para actualizar miembros y [asignar roles](user-roles.md). Actualmente, solo está disponible **Administrador del entorno**.
+
+1. Seleccione **Añadir miembros** para agregarlos a su entorno.
+
 ## <a name="manage-connections"></a>Administrar conexiones
 
 Establecer conexiones con conclusiones del público le permite ver informes en conclusiones sobre la interacción basados en perfiles de clientes unificados. 
@@ -107,7 +107,6 @@ Para más información, consulte [Crear un vínculo entre las conclusiones del p
 
 Para proteger los datos personales de su cliente, puede eliminar o exportar datos identificables del usuario final.
 
-Para obtener más información, consulte [Eliminar y exportar datos de eventos que contienen información personal](delete-export-personal-data.md).
-
+Para obtener más información, consulte [Eliminar y exportar datos de eventos que contienen información personal](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

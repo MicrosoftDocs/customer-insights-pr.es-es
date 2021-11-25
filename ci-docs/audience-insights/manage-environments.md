@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673765"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799656"
 ---
 # <a name="manage-environments"></a>Administrar ambientes
 
@@ -39,6 +39,19 @@ Puede editar algunos de los detalles de los entornos existentes.
 3. En el cuadro **Editar entorno** puede actualizar la configuración del entorno.
 
 Para obtener más información sobre la configuración del entorno, consulte [Crear un nuevo entorno](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Conectar con Microsoft Dataverse
+   
+El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse.
+
+Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de lago de datos gestionada de Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights no admite los siguientes escenarios de uso compartido de datos:
+> - Si guarda todos los datos en su propio Azure Data Lake Storage, no podrá habilitar el uso compartido de datos con un lago de datos administrado por Dataverse.
+> - Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar el entorno de configuración
 

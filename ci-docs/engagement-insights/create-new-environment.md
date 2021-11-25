@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648138"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673663"
 ---
 # <a name="create-a-new-environment"></a>Crear un nuevo entorno 
 
@@ -42,11 +42,11 @@ Un entorno es un espacio donde gestiona sus áreas de trabajo y conexiones. La f
 
 1. Escriba un **Nombre del área de trabajo**, que le permite recopilar datos para sitios web o aplicaciones específicos. Para obtener más información, consulte [Crear un área de trabajo](create-workspace.md).
 
-1. Elija el **Tipo de área de trabajo** (Web o móvil) que desea crear. 
+1. Elija el **Tipo de área de trabajo** (web o móvil) que desea crear. 
 
 1. Seleccione **Mostrar configuración avanzada** para habilitar o deshabilitar estas configuraciones opcionales:
 
-   - Active **Desconocido a conocido** para asociar eventos web con usuarios que se autenticaron previamente. Para más información, vea [Reconocer eventos web de visitantes previamente autenticados](unknown-to-known.md)
+   - Active **Desconocido a conocido** para asociar eventos web con usuarios que se autenticaron previamente. Para más información, vea [Reconocer eventos web de visitantes previamente autenticados](unknown-to-known.md).
    - Active **Filtrar tráfico de bots** para quitar el tráfico web de los bots para esta área de trabajo. 
 
 1. Seleccione **Completo** cuando haya terminado. 

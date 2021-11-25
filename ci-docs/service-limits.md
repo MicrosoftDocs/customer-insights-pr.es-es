@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483711"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792001"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Límites de servicio en capacidades de Customer Insights
 
@@ -26,7 +26,7 @@ En este artículo se describen los límites integrados en el servicio de Custome
 
 | Región  | Límites  | Notas |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentos y medidas | 100 segmentos o medidas. | El número total de activos [segmentos](audience-insights/segments.md) y [medidas](audience-insights/measures.md) combinados no pueden exceder de 100.  |
+| Segmentos, medidas y predicciones | 300  | El numero total de [segmentos](audience-insights/segments.md), [medidas](audience-insights/measures.md), y [predicciones](audience-insights/predictions.md) combinadas no pueden pasar de 300.  |
 | Relaciones | 20 niveles de profundidad en relaciones de rutas de entidad. | Al crear [segmentos](audience-insights/segments.md) o [medidas](audience-insights/measures.md) mediante la interfaz del generador, las rutas de las entidades pueden tener hasta 20 saltos de relación entre la entidad de inicio y la entidad de destino.  |
 
 

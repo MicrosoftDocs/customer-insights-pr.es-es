@@ -1,7 +1,7 @@
 ---
 title: Buscar y filtrar perfiles de clientes
 description: Encuentre rápidamente información sobre perfiles de clientes unificados y filtre los atributos especificados.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470040"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732055"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfiles de clientes: índice de búsqueda y filtro
 
 El resultado de unificar los datos de sus clientes es una entidad Perfil del Cliente que proporciona una vista unificada de su base total de clientes. Para [encontrar rápidamente información sobre un cliente específico o un grupo de clientes](customer-profiles.md), puede configurar las funciones **Buscar** y **Filtrar** en la página **Clientes**. Siga leyendo para aprender cómo los administradores pueden editar los atributos en la página **Índice de Buscar y filtrar**, que están disponibles para que los usuarios puedan buscarlos y filtrarlos.
 
-> [!div class="mx-imgBorder"]
-> ![Filtro de búsqueda.](media/search-filter.png "Filtro de búsqueda")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtro de búsqueda":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Agregar campos y especificar atributos
 

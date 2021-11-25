@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035344"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799748"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
 
 La predicción de pérdida de suscripciones ayuda a predecir si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía. Puede crear una nueva predicción de pérdida de suscripciones en la página **Inteligencia** > **Predicciones**. Seleccione **Mis predicciones** para ver otras predicciones que ha creado.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Pruebe el tutorial para una predicción de cancelación de suscripción con datos de ejemplo: [Guía de ejemplo de predicción de cancelación de suscripción](sample-guide-predict-subscription-churn.md).

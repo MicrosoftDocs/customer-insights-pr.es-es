@@ -1,7 +1,7 @@
 ---
 title: Tareas compartidas para escenarios predicción
 description: Aprenda a administrar, solucionar problemas y perfeccionar las predicciones.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036486"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732009"
 ---
 # <a name="manage-predictions"></a>Administrar predicciones
 
@@ -50,12 +50,12 @@ Las siguientes columnas del informe contienen información útil para mejorar lo
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ejemplo de un informe de usabilidad de datos de entrada que muestra una tabla con errores, advertencias y recomendaciones.":::
 
-- Nombre: nombre descriptivo del error, advertencia o recomendación.
-- Paso: Fase de modelo, formación o puntuación, a la que se refiere la información.
-- Estado: Gravedad de la información (error, advertencia, recomendación).
-- Nombre de la columna: columna de una entidad que debe modificarse para mejorar el rendimiento del modelo.
-- Nombre de la entidad: nombre de la entidad que debe modificarse para mejorar el rendimiento del modelo.
-- Detalles: detalles sobre el error, la advertencia o la recomendación.
+- **Nombre**: nombre descriptivo del error, advertencia o recomendación.
+- **Paso**: Fase de modelo, formación o puntuación, a la que se refiere la información.
+- **Estado**: Gravedad de la información (error, advertencia, recomendación).
+- **Nombre de la columna**: columna de una entidad que debe modificarse para mejorar el rendimiento del modelo.
+- **Nombre de la entidad**: nombre de la entidad que debe modificarse para mejorar el rendimiento del modelo.
+- **Detalles**: detalles sobre el error, la advertencia o la recomendación.
 
 ## <a name="refresh-a-prediction"></a>Actualizar una predicción
 
@@ -66,6 +66,8 @@ Las predicciones se actualizarán automáticamente en la misma [programación qu
 1. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
 
 1. Seleccione **Actualizar**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Eliminar una predicción
 

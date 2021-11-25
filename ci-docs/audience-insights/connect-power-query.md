@@ -1,7 +1,7 @@
 ---
 title: Ingerir datos a través de un conector de Power Query
 description: Conectores para orígenes de datos basados en Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643515"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732239"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar un origen de datos de Power Query
 
@@ -79,6 +79,8 @@ Los conectores con una marca de verificación en la columna **Customer Insights 
    > [!div class="mx-imgBorder"]
    > ![Editar opción.](media/edit-option-data-sources.png "Editar opción")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Aplique sus cambios y transformaciones en el diálogo **Power Query - Editar consultas** como se describe en la sección [Crear un origen de datos nuevo](#create-a-new-data-source).
 
 4. Seleccione **Guardar** en Power Query después de completar sus ediciones para guardar sus cambios.

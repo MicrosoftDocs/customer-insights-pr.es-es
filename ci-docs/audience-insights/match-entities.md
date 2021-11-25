@@ -1,7 +1,7 @@
 ---
 title: Asignar entidades para la unificación de datos
 description: Asocie entidades para combinar conjuntos de datos y crear perfiles de clientes unificados.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648229"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732655"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -180,10 +180,7 @@ Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Ejecutar** par
 
 Encontrará el resultado de una ejecución exitosa, la entidad de perfil de cliente unificado, en la página **Entidades**. Su entidad cliente unificada se llama **Clientes** en la sección **Perfiles**. La primera ejecución de coincidencia exitosa crea la entidad unificada *Cliente*. Todas las ejecuciones de coincidencias posteriores expanden esa entidad.
 
-> [!TIP]
-> Después de ejecutar el proceso de detección de coincidencia, seleccione el estado del proceso para abrir el panel **Detalles de la tarea**. Ofrece una descripción general sobre el tiempo de procesamiento, la última fecha de procesamiento y todos los errores y advertencias asociados con la tarea. Seleccione **Ver detalles** para ver qué entidades participaron en el proceso de coincidencia, qué reglas se les aplicaron y si las actualizaciones se publicaron correctamente.  
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Revisar y validar las coincidencias
 
