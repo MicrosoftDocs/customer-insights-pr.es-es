@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights al Administrador de anuncios de Facebook
+title: Exportar datos de Customer Insights al Administrador de anuncios de Facebook (Vídeo)
 description: Aprenda a configurar la conexión y a exportar a el administrador de anuncios de Facebook.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb74e35799410b92b64e48e065b45efda82490ca
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 4b2dc2ff8e5286209bd2ec94df42e82f0944715c
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672974"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904185"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar lista de segmentos al administrador de anuncios de Facebook (versión preliminar)
 

@@ -1,7 +1,7 @@
 ---
 title: Conectar con una cuenta de Azure Data Lake Storage mediante una entidad de servicio
 description: Use una entidad de servicio de Azure para conectar con su propio lago de datos.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645193"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900296"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar con una cuenta de Azure Data Lake Storage mediante una entidad de servicio de Azure
 
-Las herramientas automatizadas que utilizan los servicios de Azure siempre deben tener permisos restringidos. En lugar de que las aplicaciones inicien sesión como un usuario con todos los privilegios, Azure ofrece entidades de servicio. Siga leyendo para aprender cómo conectar Dynamics 365 Customer Insights con una cuenta de Azure Data Lake Storage mediante una entidad de servicio de Azure en lugar de las claves de la cuenta de almacenamiento. 
+Este artículo explica cómo conectar Dynamics 365 Customer Insights con una cuenta de Azure Data Lake Storage mediante el uso de una entidad de servicio de Azure en lugar de claves de cuenta de almacenamiento. 
 
-Puede usar la entidad de servicio para [agregar o editar una carpeta de Common Data Model como origen de datos](connect-common-data-model.md) o [crear o actualizar un entorno](create-environment.md) de forma segura.
+Las herramientas automatizadas que utilizan los servicios de Azure siempre deben tener permisos restringidos. En lugar de que las aplicaciones inicien sesión como un usuario con todos los privilegios, Azure ofrece entidades de servicio. Puede utilizar las entidades de servicio para [agregar o editar una carpeta de modelo de datos común como origen de datos](connect-common-data-model.md) o [crear o actualizar un entorno](create-environment.md).
 
 > [!IMPORTANT]
 > - La cuenta de Data Lake Storage que usará la entidad de servicio debe tener [habilitado el espacio de nombres jerárquico](/azure/storage/blobs/data-lake-storage-namespace).
-> - Necesita permisos de administrador para su suscripción de Azure para crear la entidad de servicio.
+> - Necesita permisos de administrador para su suscripción de Azure para crear una entidad de servicio.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entidad de servicio de Azure para Customer Insights
 
-Antes de crear una nueva entidad de servicio para conclusiones del público o conclusiones sobre la interacción, verifique si ya existe en su organización.
+Antes de crear una nueva entidad de servicio para Customer Insights, verifique si ya existe en su organización.
 
 ### <a name="look-for-an-existing-service-principal"></a>Buscar una entidad de servicio existente
 

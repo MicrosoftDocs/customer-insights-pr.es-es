@@ -1,7 +1,7 @@
 ---
 title: Conectar datos de Common Data Model a una cuenta de Azure Data Lake
 description: Trabajar con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033147"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900218"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake
 
@@ -30,7 +30,7 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
 
 - El Azure Data Lake desde el que desea conectar e ingerir datos debe estar en la misma región de Azure que el entorno Dynamics 365 Customer Insights. No se admiten las conexiones a una carpeta de Common Data Model desde un lago de datos en una región de Azure diferente. Para conocer la región de Azure del entorno, vaya a **Administrador** > **Sistema** > **Acerca de** en la información de público.
 
-- Los datos almacenados en servicios en línea pueden almacenarse en una ubicación diferente a la que se procesan o almacenan en Dynamics 365 Customer Insights. Al importar o conectarse a datos almacenados en servicios en línea, acepta que los datos pueden transferirse y almacenarse con Dynamics 365 Customer Insights. [Obtenga más información en el Centro de confianza de Microsoft.](https://www.microsoft.com/trust-center)
+- Los datos almacenados en servicios en línea pueden almacenarse en una ubicación diferente a la que se procesan o almacenan en Dynamics 365 Customer Insights. Al importar o conectarse a datos almacenados en servicios en línea, acepta que los datos pueden transferirse y almacenarse con Dynamics 365 Customer Insights. [Obtenga más información en el Centro de confianza de Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Conectar a una carpeta de Common Data Model
 
@@ -38,12 +38,11 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
 
 1. Seleccione **Agregar origen de datos**.
 
-1. Seleccione **Conectarse a una carpeta de Common Data Model**, introduzca un **Nombre** como origen de datos y seleccione **Siguiente**. Directrices de nomenclatura: 
-   - Empiece con una letra.
-   - Utilice solo letras y números. No se permiten caracteres especiales ni espacios.
-   - Utilice entre 3 y 64 caracteres.
+1. Seleccione **Azure Data Lake Storage**, introduzca un **Nombre** para el origen de datos, luego seleccione **Siguiente**.
 
-1. Puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). Introduzca la información del **Contenedor** y seleccione **Siguiente**.
+   - Si se le solicita, seleccione uno de los conjuntos de datos de muestra que pertenecen a su industria, luego seleccione **Siguiente**. 
+
+1. Puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). Introduzca la **Dirección del servidor**, seleccione **Iiniciar sesión** y luego seleccione **Siguiente**.
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo para especificar nuevos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
    > [!NOTE]
    > Cualquier archivo model.json o manifest.json asociado con otro origen de datos del entorno no se mostrará en la lista.
 
-1. Obtendrá una lista de entidades disponibles en el archivo model.json o manifest.json seleccionado. Puede revisar y seleccionar de la lista de entidades disponibles y seleccionar **Guardar**. Todas las entidades seleccionadas se ingerirán desde el nuevo origen de datos.
+1. Verá una lista de entidades disponibles en el archivo de manifiesto model.json o manifest.json. Revise y seleccione en la lista de entidades disponibles desplegable y luego elija **Guardar**. Todas las entidades seleccionadas se ingerirán desde el nuevo origen de datos.
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo que muestra una lista de entidades de un archivo model.json.](media/review-entities.png)
 
-8. Indique en qué entidades de datos desea habilitar la generación de perfiles de datos y seleccione **Guardar**. La generación de perfiles de datos habilita el análisis y otras capacidades. Puede seleccionar la entidad completa, que selecciona todos los atributos de la entidad, o seleccionar ciertos atributos de su elección. De forma predeterminada, ninguna entidad está habilitada para la creación de perfiles de datos.
+8. Indique en qué entidades de datos desea habilitar la generación de perfiles de datos y luego seleccione **Guardar**. La generación de perfiles de datos habilita el análisis y otras capacidades. Puede seleccionar la entidad completa, que selecciona todos los atributos de la entidad, o seleccionar ciertos atributos de su elección. De forma predeterminada, ninguna entidad está habilitada para la creación de perfiles de datos.
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo que muestra un perfil de datos.](media/dataprofiling-entities.png)
 

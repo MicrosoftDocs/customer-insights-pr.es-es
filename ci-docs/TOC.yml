@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Direcciones mejoradas
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Mejorar datos de empresa
+        - name: Datos de empresa mejorados
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriquezca con Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Enriquecer con Experian
           href: audience-insights/enrichment-experian.md
+        - name: Enriquecer con datos de Office 365
+          href: audience-insights/enrichment-office.md
         - name: Enriquecer con importación personalizada SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmentos
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimentos con Azure Machine Learning
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Experimentos con Azure Machine Learning Studio
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Administrar predicciones
           href: audience-insights/manage-predictions.md
         - name: Crear segmentos basados en predicciones
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Conectarse a una cuenta de almacenamiento de ADLS con una entidad de servicio
               href: audience-insights/connect-service-principal.md
+            - name: Exportar registros de diagnóstico
+              href: audience-insights/diagnostics.md
     - name: Extensibilidad
       items:
         - name: Integrar datos web a partir de conocimientos de participación

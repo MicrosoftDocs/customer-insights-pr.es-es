@@ -1,7 +1,7 @@
 ---
 title: Características nuevas y mejoradas
 description: Información sobre nuevas funciones, mejoras y correcciones de errores.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753138"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884283"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
@@ -26,6 +26,18 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Actualizaciones de noviembre de 2021
+
+Las actualizaciones de noviembre de 2021 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Membresía de segmento ahora disponible en Dataverse
+
+La información de membresía de segmento para perfiles de clientes ahora está disponible en Dataverse junto con los perfiles y conocimientos de los clientes. Las aplicaciones de acción de Dynamics 365 y las aplicaciones basadas en modelos pueden usar estos datos para buscar detalles de membresía de segmento para un cliente determinado.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Las actividades admiten detalles a nivel de contacto para cuentas comerciales
+
+Ahora puede configurar, mostrar y filtrar actividades para contactos en los cronogramas de actividad de su cuenta comercial para comprender mejor qué contactos de la cuenta participaron en actividades específicas.
 
 ## <a name="october-2021-updates"></a>Actualizaciones de octubre de 2021
 
