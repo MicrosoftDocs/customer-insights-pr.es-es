@@ -1,7 +1,7 @@
 ---
 title: Predicción de recomendaciones del producto
 description: Prediga los productos que es probable que un cliente compre o con los que interactúe.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494560"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967860"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicción de recomendaciones del producto (versión preliminar)
 
@@ -79,11 +79,11 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 1. Establezca el **Número de productos** que desea recomendar a un cliente. Este valor depende de cómo su método de entrega rellena los datos. Si puede recomendar tres productos, establezca este valor en consecuencia.
    
    >[!TIP]
-   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
+   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
 
-1. Elija si desea **Sugerir productos que los clientes han comprado recientemente**.
+1. Elija si desea incluir productos que los clientes hayan comprado recientemente en el campo **Se esperan compras repetidas**.
 
-1. Si ha seleccionado *no* recomendar productos comprados recientemente, configure la **Ventana para mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
+1. Establecer la **Ventana de mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
 
 1. Seleccione **Siguiente**
 

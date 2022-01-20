@@ -1,7 +1,7 @@
 ---
-title: Predicción de abandono de transacciones (Vídeo)
+title: Predicción de abandono de transacciones (contiene vídeo)
 description: Predizca si un cliente está en riesgo de dejar de comprar sus productos o servicios.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904093"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967768"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predicción de abandono de suscripción (versión preliminar)
 
@@ -103,10 +103,10 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
 
 1. Seleccione el mosaico **Modelo de abandono de clientes (versión preliminar)** y seleccione **Utilizar este modelo**.
 
-1. En el panel **Modelo de abandono de clientes**, elija **Transacción** y seleccione **Comenzar**.
+1. En el panel **Modelo de abandono de clientes (vista previa)**, elija **Transacción** y seleccione **Comenzar**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de pantalla con la opción de transacción seleccionada en el panel Modelo de abandono de clientes.":::
-
+ 
 ### <a name="name-model"></a>Modelo de nombre
 
 1. Proporcione un nombre para el modelo para distinguirlo de otros modelos.
@@ -117,11 +117,11 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
 
 ### <a name="define-customer-churn"></a>Definir abandono de clientes
 
-1. Establezca una ventana de días para predecir el abandono en el campo **Identificar los clientes que pueden abandonar a la siguiente**. Por ejemplo, predizca el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono durante un período de tiempo más largo o más corto puede hacer que sea más difícil abordar los factores en su perfil de riesgo de abandono, pero depende de sus requisitos comerciales específicos.
+1. Establecer la **Ventana de predicción**. Por ejemplo, predizca el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono durante un período de tiempo más largo o más corto puede hacer que sea más difícil abordar los factores en su perfil de riesgo de abandono, pero depende de sus requisitos comerciales específicos.
    >[!TIP]
-   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
+   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
 
-1. Introduzca el número de días para definir el abandono en el campo **Un cliente ha abandonado si no ha realizado compras en:**. Por ejemplo, si un cliente no ha realizado compras en los últimos 30 días, es posible que considere que se ha agotado para su negocio. 
+1. Introduzca el número de días para definir el abandono en el campo **Definición de abandono**. Por ejemplo, si un cliente no ha realizado compras en los últimos 30 días, es posible que considere que se ha agotado para su negocio. 
 
 1. Seleccione **Siguiente** para continuar.
 
@@ -129,19 +129,16 @@ Para entornos basados en cuentas comerciales, podemos predecir la pérdida de tr
 
 1. Seleccione **Agregar datos** y elija el tipo de actividad en el panel lateral que contiene la transacción requerida o la información del historial de compras.
 
-1. En **Elegir actividades**, elija las actividades específicas de la actividad seleccionada en las que le gustaría que se centrara el cálculo.
+1. En **Seleccionar actividades**, elija las actividades específicas del tipo de actividad seleccionado en las que desea que se centre el cálculo.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel lateral que muestra la elección de actividades específicas de tipo semántico.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Panel lateral que muestra la elección de actividades específicas de tipo semántico.":::
 
-1. Si aún no ha asignado la actividad a un tipo semántico, seleccione **Editar** para hacerlo. Se abre la experiencia guiada para mapear actividades semánticas. Mapee los datos a los campos correspondientes del tipo de actividad seleccionado.
+   Si aún no ha asignado la actividad a un tipo semántico, seleccione **Editar** para hacerlo. Se abre la experiencia guiada para mapear actividades semánticas. Mapee los datos a los campos correspondientes del tipo de actividad seleccionado.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de actividad de configuración de página.":::
+1. Asigne los atributos semánticos a los campos necesarios para ejecutar el modelo. Si los campos a continuación no están rellenos, configure la relación entre su entidad de historial de compras y la entidad *Cliente*. Seleccione **Guardar**.
 
-1. Después de asignar la actividad al tipo semántico correspondiente, seleccione **Siguiente** para continuar
+1. En el paso **Agregar datos requeridos**, seleccione **Siguiente** para continuar si no desea agregar más actividades.
 
-1. Asigne los atributos semánticos a los campos necesarios para ejecutar el modelo. Si los campos a continuación no están rellenos, configure la relación entre su entidad de historial de compras y la entidad *Cliente*.
-
-1. Seleccione **Siguiente**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
 

@@ -3,18 +3,19 @@ title: Introducción al SDK de iOS
 description: Aprenda a personalizar y ejecutar el SDK de iOS
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 879a71175a2e7d44a54d25fd8efb9f12927cea5a
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494251"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977544"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Introducción al SDK de iOS
 

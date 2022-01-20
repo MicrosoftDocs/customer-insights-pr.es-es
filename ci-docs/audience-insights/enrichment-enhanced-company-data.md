@@ -1,7 +1,7 @@
 ---
 title: Mejora de datos de empresa
 description: Enriquezca y normalice los datos de la empresa con los modelos de Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813938"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927603"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecimiento de los perfiles de la empresa con datos empresariales mejorados
 
@@ -83,6 +83,16 @@ Para iniciar el proceso de enriquecimiento, seleccione **Ejecutar** desde la bar
 Una vez que se completa el proceso de enriquecimiento, puede revisar los datos de los perfiles de clientes recién enriquecidos en **Mis enriquecimientos**. Además, encontrará la hora de la última actualización y el número de perfiles enriquecidos.
 
 Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+
+### <a name="overview-card"></a>Tarjeta de descripción general
+
+La tarjeta de descripción general muestra detalles sobre la cobertura del enriquecimiento. 
+
+* **Clientes procesados y cambiados**: el número de perfiles de clientes que se enriquecieron con éxito.
+
+* **Clientes procesados y no cambiados**: el número de perfiles de clientes que se reconocieron pero no cambiaron. Por lo general, sucede cuando los datos de entrada son válidos y no se pueden mejorar mediante el enriquecimiento.
+
+* **Clientes no procesados y no cambiados**: el número de perfiles que no se reconocieron. Por lo general, para datos de entrada que no son válidos o no son compatibles con el enriquecimiento.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

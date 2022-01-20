@@ -1,7 +1,7 @@
 ---
-title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (Vídeo)
+title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (contiene vídeo)
 description: Muestre datos de conclusiones del público en aplicaciones de Dynamics 365 con este complemento.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904034"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945448"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
@@ -27,12 +27,12 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
 ## <a name="prerequisites"></a>Requisitos previos
 
 - El complemento solo funciona con aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
-- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de conclusiones del público, deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md).
+- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de conclusiones del público, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que `contactid` (o `accountid`) se establece como el campo [clave principal para ese origen de datos en el paso de asignación del proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en las conclusiones del público para poder ver los datos.
 - Se requieren [Capacidades de búsqueda y filtrado configuradas](search-filter-index.md) en las conclusiones del público para que funcione la búsqueda de datos.
 - Cada control de complemento se basa en datos específicos de las conclusiones del público. Algunos datos y controles solo están disponibles en entornos de tipos específicos. La configuración del complemento le informará si un control no está disponible debido al tipo de entorno seleccionado. Más información sobre [casos de uso del entorno](work-with-business-accounts.md).
   - **Control de medidas**: Requiere [medidas configuradas](measures.md) de atributos de tipo de cliente.
-  - **Control de inteligencia**: requiere datos generados usando [predicciones](predictions.md) o [modelos personalizados](custom-models.md).
+  - **Control de inteligencia**: requiere datos generados usando [predicciones o modelos personalizados](predictions-overview.md).
   - **Control de detalles del cliente**: Todos los campos del perfil están disponibles en el perfil de cliente unificado.
   - **Control de enriquecimiento**: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes. El complemento de la tarjeta admite estos enriquecimientos: [Marcas](enrichment-microsoft.md) proporcionadas por Microsoft, [Intereses](enrichment-microsoft.md) proporcionadas por Microsoft y [Datos de interacción con la oficina](enrichment-office.md) proporcionados por Microsoft.
   - **Control de contactos**: Requiere definición de entidad semántica de tipo contactos.

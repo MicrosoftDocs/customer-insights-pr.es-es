@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617622"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967840"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot de Teams para Dynamics 365 Customer Insights (versión preliminar)
 
@@ -33,6 +33,8 @@ Para preparar y configurar el bot deben cumplirse los siguientes requisitos prev
 - Customer Insights y Teams están en la misma organización.
 - Su entorno tiene el público de destino principal configurado para clientes individuales. No se admiten las cuentas empresariales.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurar el bot
 
 1. En las informaciones de público, vaya a **Administrador** > **Destinos de exportación**.
