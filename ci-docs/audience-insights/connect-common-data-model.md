@@ -1,7 +1,7 @@
 ---
 title: Conectar datos de Common Data Model a una cuenta de Azure Data Lake
 description: Trabajar con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900218"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake
 
 Este artículo proporciona información sobre cómo ingerir datos de una carpeta de Common Data Model usando su cuenta de Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ Este artículo proporciona información sobre cómo ingerir datos de una carpeta
 - Los datos de su Azure Data Lake deben seguir el estándar de Common Data Model. Otros formatos no son compatibles en este momento.
 
 - La ingestión de datos admite solo cuentas de almacenamiento de Azure Data Lake *Gen2*. No puede usar cuentas de almacenamiento de Azure Data Lake Gen1 para ingerir datos.
+
+- La cuenta de Azure Data Lake Storage debe tener un [espacio de nombres jerárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Para autenticarse con una entidad de servicio de Azure, asegúrese de que esté configurada en su inquilino. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md).
 

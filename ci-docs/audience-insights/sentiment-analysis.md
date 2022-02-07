@@ -1,5 +1,5 @@
 ---
-title: Análisis semántico para comentarios del cliente
+title: Análisis de sentimiento para comentarios del cliente
 description: Aprenda a usar un modelo de análisis de sentimientos sobre los comentarios de los clientes en Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951090"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizar el sentimiento en los comentarios de los clientes (versión preliminar)
 
 Los clientes esperan productos, servicios y experiencias de alta calidad en estos días. Especialmente los clientes que comparten sus comentarios. Es muy complicado para las organizaciones analizar un volumen cada vez mayor de datos sin disminuir la precisión y sin aumentar el costo de mano de obra. Dynamics 365 Customer Insights ofrece un modelo de análisis de sentimientos para los comentarios de los clientes que permite a las organizaciones analizar sus datos con mayor precisión y a un costo menor.
@@ -38,7 +33,7 @@ Para garantizar que pueda confiar en los resultados de los modelos, proporcionam
 
 Usamos dos **Modelos de procesamiento de lenguaje natural (NLP)**: el primero asigna a cada comentario de opinión una puntuación de sentimiento. El segundo modelo asocia cada comentario con todos los aspectos comerciales aplicables. Los modelos están formados en datos públicos de fuentes en redes sociales, comercio minorista, restaurantes, productos de consumo e industrias automotrices.    
   
-- Los aspectos comerciales predefinidos para que el modelo se asocie con los datos de comentarios incluyen:
+Los aspectos comerciales predefinidos para que el modelo se asocie con los datos de comentarios incluyen:
 -   Administración de cuentas
 -   Finalizar la compra y pagar
 -   Asistencia al cliente

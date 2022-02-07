@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380764"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidad en Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) (CDS) es una especificación declarativa y una definición de entidades estándar que representan los conceptos y actividades más usados en una variedad de aplicaciones empresariales y de productividad. Este modelo se está extendiendo también a datos observacionales y analíticos. Common Data Model ofrece entidades empresariales bien definidas, modulares y extensibles como Cuenta, Unidad de negocio, Caso, Contacto, Cliente potencial, Oportunidad y Producto, así como interacciones y relaciones con proveedores, trabajadores y clientes, como actividades y acuerdos de nivel de servicio. Cualquiera puede añadir y ampliar las definiciones de Common Data Model para capturar ideas adicionales específicas del negocio.
 

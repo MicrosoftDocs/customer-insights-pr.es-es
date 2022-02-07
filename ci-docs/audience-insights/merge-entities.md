@@ -1,7 +1,7 @@
 ---
 title: Fusionar entidades en la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732793"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Combinar entidades
 
 La fase de combinación es la última fase del proceso de unificación de datos. Su propósito es conciliar datos en conflicto. Los ejemplos de datos en conflicto podrían incluir un nombre de cliente que se encuentra en dos de sus conjuntos de datos pero que se muestra de manera un poco diferente en cada uno ("Grant Marshall" y "Grant Marshal"), o un número de teléfono que difiere en formato (617-803-091X y 617803091X). La combinación de esos puntos de datos en conflicto se realiza atributo por atributo.
@@ -99,11 +94,13 @@ En la página **Combinar**, seleccione **Campos excluidos** para ver la lista de
 
 1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
 
-## <a name="manually-combine-fields"></a>Combinar campos manualmente
+## <a name="combine-fields-manually"></a>Combinar campos manualmente
 
-Especifique un atributo combinado manualmente. 
+Especifique un atributo combinado manualmente.
 
-1. En la página **Combinar**, seleccione **Combinar campos**.
+1. En la página **Combinar**, seleccione **Combinar**.
+
+1. Elija la opción **Campos**.
 
 1. Especifique la política del ganador de la combinación en el desplegable **Combinar campos por**.
 
@@ -114,6 +111,26 @@ Especifique un atributo combinado manualmente.
 1. Seleccione **Listo** para aplicar los cambios.
 
 1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
+
+## <a name="combine-a-group-of-fields"></a>Combinar un grupo de campos
+
+Tratar un grupo de campos como una sola unidad. Por ejemplo, cuando nuestros registros contienen los campos Dirección1, Dirección2, Ciudad, Estado y Código postal. Es probable que no queramos fusionar la Dirección2 de un registro diferente, pensando que haría que nuestros datos fueran más completos
+
+1. En la página **Combinar**, seleccione **Combinar**.
+
+1. Elija la opción **Grupo de campos**.
+
+1. Especifique la política del ganador de la combinación en el desplegable **Clasificar grupos**.
+
+1. Seleccione **Agregar** y elija si desea agregar más campos o grupos adicionales a los campos.
+
+1. Proporcione un **Nombre** y un **Nombre de salida** para cada campo combinado.
+
+1. Proporcione un **Nombre** para el grupo de campos. 
+
+1. Seleccione **Listo** para aplicar los cambios.
+
+1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
 
 ## <a name="change-the-order-of-fields"></a>Cambiar el orden de los campos
 

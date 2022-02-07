@@ -1,7 +1,7 @@
 ---
 title: Características nuevas y mejoradas
-description: Información sobre nuevas funciones, mejoras y correcciones de errores.
-ms.date: 12/02/2021
+description: 'Información sobre nuevas funciones, mejoras y correcciones de errores.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884283"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ¡Estamos entusiasmados de anunciar nuestras actualizaciones más recientes! Este artículo resume las características de vista previa pública, las mejoras de disponibilidad general y las actualizaciones de características. Para ver los planes de características a largo plazo, eche un vistazo a los [planes de lanzamiento de Dynamics 365 y Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Actualizaciones de diciembre de 2021
+
+Las actualizaciones de diciembre de 2021 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Reenviar registros de Customer Insights a Azure Monitor
+
+Customer Insights proporciona una integración directa con Azure Monitor. Esta característica incluye eventos de auditoría y eventos operativos. Los registros de recursos de Azure Monitor le permiten supervisar y enviar registros a Azure Storage, Azure Log Analytics o transmitirlos a centros de eventos de Azure.
+
+Para más información, vea [Reenvío de registro en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquezca los perfiles de los clientes con datos de interacciones
+
+Usar datos de Microsoft Office 365 para enriquecer los perfiles de su cuenta de cliente con información sobre los compromisos a través de aplicaciones de Office 365. Los datos de participación consisten en el correo electrónico y la actividad de la reunión, que se agrega a nivel de cuenta. Por ejemplo, la cantidad de correos electrónicos de una cuenta comercial o la cantidad de reuniones con la cuenta. No se comparten datos sobre usuarios individuales. Este enriquecimiento está disponibles en las regiones siguientes: Reino Unido, Europa y Norteamérica.
+
+Para más información, vea [Enriquezca los perfiles de los clientes con datos de participación (versión preliminar)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Funciones avanzadas de unificación de datos
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Habilite las políticas de resolución de conflictos en el nivel de atributo individual
+
+Al deduplicar registros de clientes dentro de una entidad, es posible que no desee tener que elegir un registro completo como ganador. Ahora le permitimos fusionar los mejores campos de varios registros según las reglas para cada atributo. Por ejemplo, puede optar por mantener el correo electrónico más reciente Y la dirección más completa de diferentes registros. 
+
+Ahora puede definir reglas de combinación separadas para atributos individuales al deduplicar y combinar registros dentro de una sola entidad. Anteriormente, solo le permitíamos seleccionar una sola regla de combinación (mantener registros basados en la integridad de los datos recientes) y esa regla se aplicaba a nivel de registro a todos los atributos. Eso no es ideal cuando algunos de los datos que desea conservar se encuentran en el registro A y otros buenos datos se encuentran en el registro B.
+
+Para más información, consulte [Definir la deduplicación en una entidad coincidente](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Reglas personalizadas para coincidencias
+
+Hay momentos en los que necesita especificar una excepción a las reglas generales para NO hacer coincidir los registros. Esto puede suceder cuando varios individuos comparten suficiente información para que el sistema los relacione como un solo individuo. Por ejemplo, gemelos con el mismo apellido, viviendo en la misma ciudad y compartiendo la fecha de nacimiento.
+
+Las excepciones garantizan que la unificación de datos incorrecta se pueda abordar en las reglas de unificación. Puede agregar varias excepciones a una regla.
+
+Para más información, consulte [Agregar excepciones a una regla](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Proporcione directivas de resolución de conflictos adicionales y habilite la agrupación de atributos
+
+Esta característica le permite tratar un grupo de campos como una sola unidad. Por ejemplo, cuando nuestros registros contienen los campos Dirección1, Dirección2, Ciudad, Estado y Código postal. Es probable que no queramos fusionar la Dirección2 de un registro diferente, pensando que haría que nuestros datos fueran más completos.
+
+Ahora puede combinar un grupo de campos relacionados y aplicar una única directiva de combinación al grupo. 
+
+Para más información, vea [Combinar un grupo de campos](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Actualizaciones de noviembre de 2021
 
