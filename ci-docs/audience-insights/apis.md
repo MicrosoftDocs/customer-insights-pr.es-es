@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732285"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100161"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabajar con las API de Customer Insights
 
@@ -35,7 +35,7 @@ Este artículo describe cómo acceder a las API de Customer Insights, crear un r
  
    La habilitación de las API crea una clave de suscripción primaria y secundaria para su instancia que se usa en las solicitudes de API. Puede regenerar las claves seleccionando **Regenerar primaria** o **Regenerar secundaria** en **Administración** > **Permisos** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar las API de Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Seleccione **Explorar nuestras API** para [probar las API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Este artículo describe cómo acceder a las API de Customer Insights, crear un r
 
 La respuesta HTTP pronto aparecerá a continuación.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Cómo probar las API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Crear un registro de nueva aplicación en Azure Portal
 
@@ -65,7 +65,7 @@ Estos pasos lo ayudarán a comenzar a usar las API de Customer Insights en una a
 
 1. En el registro de su nueva aplicación, vaya a **Permisos de API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Cómo configurar los permisos de la API en el registro de la aplicación.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Seleccione **Agregar permiso** y seleccione **Customer Insights** en el panel lateral.
 
@@ -77,7 +77,7 @@ Estos pasos lo ayudarán a comenzar a usar las API de Customer Insights en una a
 
 Puede utilizar la aplicación/id. de cliente para el registro de esta aplicación con la biblioteca de autenticación de Microsoft (MSAL) para obtener un token de portador para enviar con su solicitud a la API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cómo conceder consentimiento del administrador.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Para obtener más información sobre MSAL, consulte [Descripción general de la biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ La [sección de registro de aplicaciones](#create-a-new-app-registration-in-the-
 
 1. Seleccione **Otorgar consentimiento de administrador para...** para completar el registro de la aplicación.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cómo conceder consentimiento del administrador.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Para concluir, tenemos que agregar el nombre del registro de la aplicación como usuario en Customer Insights.  
    
@@ -129,7 +129,7 @@ Obtenga información sobre cómo comenzar a usar las bibliotecas de cliente de C
  
    Alternativamente, ejecute este comando en la **Consola del administrador de paquetes de NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Agregar un paquete de NuGet a un proyecto de Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Usar la biblioteca de cliente de C#
 
@@ -141,7 +141,7 @@ Obtenga información sobre cómo comenzar a usar las bibliotecas de cliente de C
 
 1. Pase este `HttpClient` a la construcción del cliente de `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Ejemplo de httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Realice llamadas con el cliente a los "métodos de extensión", por ejemplo, `GetAllInstancesAsync`. Si el acceso al `Microsoft.Rest.HttpOperationResponse` subyacente es preferible, utilice los "métodos de mensaje http", por ejemplo `GetAllInstancesWithHttpMessagesAsync`.
 

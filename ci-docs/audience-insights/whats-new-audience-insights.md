@@ -1,7 +1,7 @@
 ---
 title: Características nuevas y mejoradas
-description: 'Información sobre nuevas funciones, mejoras y correcciones de errores.'
-ms.date: 01/27/2022
+description: Información sobre nuevas funciones, mejoras y correcciones de errores.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088306"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Actualizaciones de enero de 2022
+
+Las actualizaciones de enero de 2022 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análisis de sentimiento de los comentarios del cliente
+
+Customer Insights proporciona una nueva función impulsada por IA para sintetizar las opiniones del cliente e identificar aspectos comerciales específicos como oportunidades para mejoras específicas. Al analizar los comentarios escritos de sus clientes, puede obtener información precisa a bajo coste. Análisis de sentimientos impulsado por modelos de procesamiento de lenguaje natural (NLP) que generan dos informaciones derivadas para cada id. de cliente. Una puntuación de opinión (de -5 a 5) y una lista de aspectos comerciales aplicables. 
+
+Para obtener más información, consulte [Analizar la opinión en los comentarios de los clientes (versión preliminar)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Actualizaciones de diciembre de 2021
@@ -37,7 +53,7 @@ Para más información, vea [Reenvío de registro en Dynamics 365 Customer Insig
 
 Usar datos de Microsoft Office 365 para enriquecer los perfiles de su cuenta de cliente con información sobre los compromisos a través de aplicaciones de Office 365. Los datos de participación consisten en el correo electrónico y la actividad de la reunión, que se agrega a nivel de cuenta. Por ejemplo, la cantidad de correos electrónicos de una cuenta comercial o la cantidad de reuniones con la cuenta. No se comparten datos sobre usuarios individuales. Este enriquecimiento está disponibles en las regiones siguientes: Reino Unido, Europa y Norteamérica.
 
-Para más información, vea [Enriquezca los perfiles de los clientes con datos de participación (versión preliminar)](enrichment-office.md)
+Para más información, vea [Enriquecer los perfiles de los clientes con datos de participación (versión preliminar)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funciones avanzadas de unificación de datos
 

@@ -9,18 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934999"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092093"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Conectar un origen de datos de Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Conectarse a un origen de datos en Power Query
 
 Power Query ofrece un amplio conjunto de conectores para ingerir datos. La mayoría de estos conectores son compatibles con Dynamics 365 Customer Insights. 
 
-Agregar fuentes de datos basadas en conectores Power Query generalmente sigue los pasos descritos en esta sección. Sin embargo, según el conector que utilice, se requiere información diferente. Para obtener más información, consulte la documentación sobre conectores individuales en la [Referencia del conector Power Query](/power-query/connectors/).
+Agregar fuentes de datos basadas en conectores de Power Query generalmente sigue los pasos descritos en esta sección. Sin embargo, según el conector que utilice, se requiere información diferente. Para obtener más información, consulte la documentación sobre conectores individuales en la [Referencia del conector Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -30,7 +30,7 @@ Agregar fuentes de datos basadas en conectores Power Query generalmente sigue lo
 
 1. Seleccione **Agregar origen de datos**.
 
-1. Seleccione **Microsoft Power Query**, luego seleccione **Próximo**.
+1. Seleccione **Microsoft Power Query**.
 
 1. Proporcione un **Nombre** para el origen de datos y seleccione **Siguiente** para crear el origen de datos.
 
@@ -40,25 +40,25 @@ Agregar fuentes de datos basadas en conectores Power Query generalmente sigue lo
 
 1. Seleccione **Transformar datos**. En este paso va a agregar entidades a su origen de datos. Las entidades son conjuntos de datos. Si tiene una base de datos que incluye múltiples conjuntos de datos, cada conjunto de datos es su propia entidad.
 
-1. El diálogo **Power Query - Editar consultas** le permite revisar y refinar los datos. Las entidades que los sistemas identificaron en el origen de datos seleccionado se muestran en el panel izquierdo.
+1. El cuadro de diálogo **Power Query - Editar consultas** le permite revisar y refinar los datos. Las entidades que los sistemas identificaron en el origen de datos seleccionado se muestran en el panel izquierdo.
 
    > [!div class="mx-imgBorder"]
    > ![Diálogo Editar consultas.](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
 
-1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones de la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de transformación prediseñadas. Para obtener más información, vea [Transformaciones de Power Query](/power-query/power-query-what-is-power-query#transformations).
-
-1. Puede agregar entidades adicionales a su origen de datos seleccionando **Obtener datos** en el cuadro de diálogo **Editar consultas**.
+1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones en la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de transformación preconstruidas. Para obtener más información, consulte [Transformaciones de Power Query](/power-query/power-query-what-is-power-query#transformations).
 
    Recomendamos que use las siguientes transformaciones:
 
-   - Si está ingiriendo datos de un archivo CSV, la primera fila suele contener encabezados. Vaya a **Transformar tabla** y seleccione **Usar encabezados como primera fila**.
-   - Asegúrese de que el tipo de datos esté configurado correctamente.
+   - Si está ingiriendo datos de un archivo CSV, la primera fila suele contener encabezados. Vaya a **Transformar** y seleccione **Usar la primera fila como encabezados**.
+   - Asegúrese de que el tipo de datos esté configurado correctamente. Por ejemplo, para los campos de fecha, seleccione un tipo de fecha.
 
-1. Seleccione **Guardar** en la esquina inferior derecha de la ventana Power Query para guardar las transformaciones. Después de guardar, encontrará su origen de datos en **Datos** > **Orígenes de datos**.
+1. Para agregar entidades adicionales a su origen de datos en el cuadro de diálogo **Editar consultas**, vaya a **Inicio** y seleccione **Obtener datos**.
+
+1. Seleccione **Guardar** en la parte inferior de la ventana Power Query para guardar las transformaciones. Después de guardar, encontrará su origen de datos en **Datos** > **Orígenes de datos**.
 
 1. En la página **Orígenes de datos** observará que el nuevo origen de datos está en estado **Actualizando**.
 
-## <a name="available-power-query-data-sources"></a>Orígenes de datos de Power Query disponibles
+## <a name="available-power-query-data-sources"></a>Orígenes de datos Power Query disponibles
 
 Vea la [referencia del conector de Power Query](/power-query/connectors/) para obtener una lista de conectores que puede utilizar para importar datos a Customer Insights. 
 
@@ -80,7 +80,7 @@ Los conectores con una marca de verificación en la columna **Customer Insights 
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Aplique sus cambios y transformaciones en el diálogo **Power Query - Editar consultas** como se describe en la sección [Crear un origen de datos nuevo](#create-a-new-data-source).
+3. Aplique sus cambios y transformaciones en el cuadro de diálogo **Power Query - Editar consultas** como se describe en la sección [Crear un nuevo origen de datos](#create-a-new-data-source).
 
 4. Seleccione **Guardar** en Power Query después de completar sus ediciones para guardar sus cambios.
 

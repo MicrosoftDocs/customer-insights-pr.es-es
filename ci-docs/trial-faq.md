@@ -3,18 +3,18 @@ title: Preguntas más frecuentes de la prueba - Dynamics 365 Customer Insights
 description: Soluciones a preguntas comunes relacionadas con la administración y la configuración de la versión de prueba de Customer Insights. Aprenda a resolver problemas específicos de la plataforma y la aplicación.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642914"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115989"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas frecuentes sobre la versión de prueba de Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642914"
 
 Esta aplicación es un servicio basado en la nube que no requiere software especial más allá de un explorador web actualizado, aunque se aplican algunas restricciones. Para obtener la mejor experiencia de prueba, evite acceder al sitio de prueba en modo incógnito y elija la ubicación de prueba más cercana a usted. [Más información acerca de los requisitos de aplicaciones web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>¿Cómo me registro para la prueba sin un inquilino de Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>¿Cómo puedo registrarme para la prueba sin un inquilino de Microsoft 365?
 
 Puede ingresar una dirección de correo electrónico que no sea del trabajo y crearemos una cuenta y un inquilino para usted.
 
@@ -43,7 +43,7 @@ Cuando se registre para la prueba, recibirá un correo electrónico con los deta
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>¿Cómo agrego más usuarios a una prueba?
 
-Para agregar usuarios, vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) utilizando la cuenta de administrador de prueba. Siga las [instrucciones del centro de administración](/microsoft-365/admin/add-users/add-users) para agregar usuarios hasta el límite de la licencia de prueba. Si el usuario que está agregando ya tiene una cuenta de Microsoft 365, asígnele un rol de seguridad apropiado en la organización de prueba. Para más información, vea [Asignar un rol de seguridad a un usuario](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Para agregar usuarios, vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) utilizando la cuenta de administrador de la prueba. Siga las [instrucciones del centro de administración](/microsoft-365/admin/add-users/add-users) para agregar usuarios hasta el límite de la licencia de prueba. Si el usuario que está agregando ya tiene una cuenta de Microsoft 365, asígnele un rol de seguridad apropiado en la organización de prueba. Para más información, consulte [Asignar un rol de seguridad a un usuario](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>¿Cuántos usuarios puedo agregar a mi entorno de prueba?
 
@@ -63,7 +63,7 @@ Puede extender la prueba en la aplicación directamente. Puede extender su prueb
 
 Por lo general, recomendamos comenzar de cero con sus propios datos al actualizar a la versión de pago de Customer Insights. 
 
-Opcionalmente, si solo usa conclusiones del público, puede copiar sus datos desde un entorno de prueba si compra Customer Insights. Debe ser administrador de la versión de prueba de Customer Insights y administrador global de su inquilino de Microsoft 365, o administrador de Dynamics 365 en su organización para poder migrar la configuración de un entorno de prueba a un entorno de pago. 
+Opcionalmente, si solo usa conclusiones del público, puede copiar sus datos desde un entorno de prueba si compra Customer Insights. Debe ser el administrador de la versión de prueba de Customer Insights y el administrador global de su inquilino de Microsoft 365 o administrador de Dynamics 365 en su organización para migrar la configuración de un entorno de prueba a un entorno de pago. 
 
 Cuando inicie sesión por primera vez en su instancia de pago de Customer Insights, se le pedirá que cree un entorno nuevo. En este proceso, puede optar por copiar la configuración de un entorno existente y migrar la mayoría de las opciones de configuraciones. Si tiene los permisos mencionados anteriormente, el entorno de prueba se mostrará en esta lista. Para obtener más información, consulte [Copiar la configuración del entorno](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Después de registrarse para la prueba, llegará a la pantalla principal de la a
 
 La mayoría de las funciones de las capacidades de Customer Insights están disponibles en la versión de prueba.
 
-Esta característica no está disponible: 
+Las características siguientes **no están disponibles**: 
 - No puede crear nuevos entornos que usen su propia cuenta de Azure Data Lake storage.
+- No puede eliminar el entorno de la prueba. 
 
 ### <a name="how-long-does-the-trial-last"></a>¿Cuál es la duración de la prueba?
 

@@ -1,7 +1,7 @@
 ---
 title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (contiene vídeo)
 description: Muestre datos de conclusiones del público en aplicaciones de Dynamics 365 con este complemento.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085269"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
 
 
@@ -113,5 +118,26 @@ El complemento de tarjeta de cliente no se actualiza automáticamente. Para actu
 
 1. Después de iniciar el proceso de actualización, verá un indicador de carga hasta que se complete la actualización. Si no hay una versión más reciente, la actualización mostrará un mensaje de error.
 
+## <a name="troubleshooting"></a>Solución de problemas
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Los controles del complemento de tarjeta de cliente no encuentran datos
+
+**Problema:**
+
+Incluso con campos de id. configurados correctamente, los controles no pueden encontrar datos para ningún cliente.  
+
+**Resolución**
+
+1. Asegúrese de haber configurado el complemento de la tarjeta de acuerdo con las instrucciones: [Configurar el complemento de tarjeta de cliente](#configure-the-customer-card-add-in) 
+
+1. Revise la configuración de ingesta de datos. Edite el origen de datos para el sistema Dynamics 365 que contiene el GUID de id. de contacto. Si el GUID del id. de contacto se muestra con caracteres en mayúsculas en el editor de Power Query, intente lo siguiente: 
+    1. Edite el origen de datos para abrir el origen de datos en el editor de Power Query.
+    1. Seleccione la columna Id. de contacto.
+    1. Seleccione **Transformar** en la barra de encabezado para ver las acciones disponibles.
+    1. Seleccione **minúscula**. Valide si los GUID de la tabla ahora están en minúsculas.
+    1. Guarde el origen de datos.
+    1. Ejecute la ingesta de datos, la unificación y los procesos posteriores para propagar los cambios en el GUID. 
+
+Después de completar la actualización completa, los controles del complemento de tarjeta de cliente deberían mostrar los datos esperados. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

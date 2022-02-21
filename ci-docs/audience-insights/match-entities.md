@@ -1,7 +1,7 @@
 ---
 title: Asignar entidades para la unificación de datos
 description: Asignar entidades para crear perfiles de cliente unificados.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098856"
 ---
-
 # <a name="match-entities"></a>Coincidir entidades
 
 La fase de coincidencia especifica cómo combinar sus conjuntos de datos en un conjunto de datos de perfil de cliente unificado. Después de completar el [paso de asignación](map-entities.md) en el proceso de unificación de datos, está listo para hacer coincidir sus entidades. La fase de coincidencia requiere al menos dos entidades asignadas.
@@ -24,13 +29,7 @@ La página de coincidencias consta de tres secciones:
 
 ## <a name="specify-the-match-order"></a>Especifique el orden de coincidencia
 
-Vaya a **Datos** > **Unificar** > **Establecer coincidencia** y seleccione **Establecer orden** para iniciar la fase de coincidencia.
-
-Cada coincidencia unifica dos o más entidades en una sola entidad consolidada. Al mismo tiempo, mantiene registros de clientes únicos. Por ejemplo, seleccionamos dos entidades: **eCommerce:eCommerceContacts** como entidad primaria y **LoyaltyScheme:loyCustomers** como segunda entidad. El orden de las entidades especifica en qué orden el sistema intentará hacer coincidir los registros.
-
-:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla de la página Coincidir en el área Unificar del proceso de unificación de datos.":::
-  
-La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la siguiente entidad *LoyaltyScheme: loyCustomers*. El conjunto de datos que resulta del primer paso de coincidencia se compara con la siguiente entidad si tiene más de dos entidades.
+Cada coincidencia unifica dos o más entidades en una sola entidad consolidada. Al mismo tiempo, mantiene registros de clientes únicos. El orden de coincidencia indica el orden en que el sistema intenta hacer coincidir los registros.
 
 > [!IMPORTANT]
 > La entidad que elige como entidad principal servirá de base para el conjunto de datos de perfiles unificado. Las entidades adicionales que se seleccionen durante la fase de coincidencia se agregarán a esta entidad. Esto no significa que la entidad unificada incluirá *todos* los datos incluidos en esta entidad.
@@ -40,7 +39,16 @@ La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la sigu
 > - Elija la entidad con los datos de perfil más completos y fiables sobre sus clientes como entidad principal.
 > - Elija la entidad que tiene varios atributos en común con otras entidades (por ejemplo, nombre, número de teléfono o dirección de correo electrónico) como entidad principal.
 
-Después de especificar el orden de coincidencia, verá los pares de coincidencias definidos en la sección **Detalles de registros coincidentes** en **Datos** > **Unificar** > **Coincidencia**. Las métricas clave estarán vacías hasta que se complete el proceso de coincidencia.
+1. Vaya a **Datos** > **Unificar** > **Establecer coincidencia** y seleccione **Establecer orden** para iniciar la fase de coincidencia.
+1. Seleccione **Orden de la entidad**. Por ejemplo, seleccione **eCommerce:eCommerceContacts** como entidad principal y **LoyaltyScheme:loyCustomers** como entidad secundaria. 
+1. Para tener cada registro en la entidad como un cliente único y que coincida con todas las siguientes entidades, seleccione **Incluir todos**.
+1. Seleccione **Listo**. 
+
+Después de especificar el orden de coincidencia, los pares de coincidencia definidos se muestran en la sección **Detalles de registros coincidentes** en **Datos** > **Unificar** > **Coincidir**. Las métricas clave están vacías hasta que se completa el proceso de coincidencia.
+
+:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla de la página Coincidir en el área Unificar del proceso de unificación de datos.":::
+  
+La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la siguiente entidad *LoyaltyScheme: loyCustomers*. El conjunto de datos que resulta del primer paso de coincidencia se compara con la siguiente entidad si tiene más de dos entidades.
 
 ## <a name="define-rules-for-match-pairs"></a>Definir reglas para los pares de coincidencias
 
@@ -50,7 +58,7 @@ La advertencia **Necesita reglas** junto al nombre de una entidad sugiere que no
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Captura de pantalla de la sección Detalles de registros coincidentes con control para agregar reglas resaltadas.":::
 
-1. Seleccione **Agregar reglas** bajo una entidad en la sección **Detalles de registros coincidentes** para definir las reglas de coincidencia.
+1. Seleccione **Añadir regla** en una entidad en la sección **Detalles de registros coincidentes** para definir las reglas de coincidencia.
 
 1. En el panel **Crear regla**, configure las condiciones para la regla.
 
@@ -61,15 +69,15 @@ La advertencia **Necesita reglas** junto al nombre de una entidad sugiere que no
    - **Entidad / Campo (segunda fila)**: elija un atributo que se relacione con el atributo de la entidad especificada en la primera fila.
 
    - **Normalizar**: seleccione entre las siguientes opciones de normalización para los atributos seleccionados. 
-     - Espacio en blanco: elimina todos los espacios. *Hola Mundo* se convierte en *HolaMundo*.
+     - Números: convierte otros sistemas numéricos, como números romanos, en números arábigos. *VIII* se convierte en *8*.
      - Símbolos: elimina todos los símbolos y caracteres especiales. *Cabeza&hombros* se convierte en *Cabezahombros*.
      - Texto a minúsculas: convierte todos los caracteres a minúsculas. *TODAS LAS MAYÚSCULAS y el título* se convierte en *todas las mayúsculas y el título*.
+     - Tipo (Teléfono, Nombre, Dirección, Organización): estandariza nombres, títulos, números de teléfono, direcciones, etc. 
      - Unicode a ASCII: convierte la notación Unicode en caracteres ASCII. */u00B2* se convierte en *2*.
-     - Números: convierte otros sistemas numéricos, como números romanos, en números arábigos. *VIII* se convierte en *8*.
-     - Tipos semánticos: estandariza nombres, títulos, números de teléfono, direcciones, etc. 
+     - Espacio en blanco: elimina todos los espacios. *Hola Mundo* se convierte en *HolaMundo*.
 
    - **Precisión**: establece el nivel de precisión que se aplicará a esta condición. 
-     - **Básico**: se escoge entre *Bajo*, *Medio*, *Alto*, y *Exacto*. Seleccione **Exacto** para hacer coincidir solo los registros que coinciden al 100 por ciento. Seleccione uno de los otros niveles para que coincidan los registros que no son 100 por ciento idénticos.
+     - **Básico**: se escoge entre *Bajo*, *Medio*, *Alto*, y *Exacto*. Seleccione **Exacto** para hacer coincidir solo los registros que coincidan al 100 por ciento. Seleccione uno de los otros niveles para que coincidan los registros que no son 100 por ciento idénticos.
      - **Personalizado**: establezca el porcentaje con el que los registros deben coincidir. El sistema solo hará coincidir los registros que superen este umbral.
 
 1. Especifique un **Nombre** para la regla.
@@ -92,7 +100,7 @@ Para hacer coincidir entidades solo si los atributos cumplen varias condiciones,
 
 ### <a name="add-rules-to-a-match-pair"></a>Agregar reglas a un par de coincidencias
 
-Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coincidir entidades mediante condiciones basadas en varios atributos, agregue más reglas
+Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coincidir entidades mediante condiciones basadas en varios atributos, agregue más reglas.
 
 1.  Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Agregar regla** en la entidad a la que desea agregar reglas.
 
@@ -117,7 +125,7 @@ Puede reordenar las entidades de las reglas de coincidencia para cambiar el orde
 
 Además de [reglas de coincidencia entre entidades](#define-rules-for-match-pairs), también puede especificar reglas de deduplicación. *Deduplicación* es otro proceso al comparar registros. Identifica registros duplicados y los combina en un solo registro. Los registros de origen se vinculan al registro combinado con id. alternativos.
 
-Los registros desduplicados se utilizarán en el proceso de coincidencia entre entidades. La desduplicación tiene lugar en entidades individuales y se puede configurar cada entidad utilizada en pares de coincidencias.
+Los registros desduplicados se usan en el proceso de coincidencia entre entidades. La desduplicación tiene lugar en entidades individuales y se puede configurar para cada entidad utilizada en pares de coincidencias.
 
 No es obligatorio especificar reglas de desduplicación. Si no se configuran esas reglas, se aplican las reglas definidas por el sistema. Combinan todos los registros en un solo registro antes de pasar los datos de la entidad a la comparación entre entidades para mejorar el rendimiento.
 

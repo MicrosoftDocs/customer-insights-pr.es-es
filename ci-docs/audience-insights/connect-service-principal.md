@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900296"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088168"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar con una cuenta de Azure Data Lake Storage mediante una entidad de servicio de Azure
 
@@ -23,7 +23,7 @@ Este artículo explica cómo conectar Dynamics 365 Customer Insights con una cue
 Las herramientas automatizadas que utilizan los servicios de Azure siempre deben tener permisos restringidos. En lugar de que las aplicaciones inicien sesión como un usuario con todos los privilegios, Azure ofrece entidades de servicio. Puede utilizar las entidades de servicio para [agregar o editar una carpeta de modelo de datos común como origen de datos](connect-common-data-model.md) o [crear o actualizar un entorno](create-environment.md).
 
 > [!IMPORTANT]
-> - La cuenta de Data Lake Storage que usará la entidad de servicio debe tener [habilitado el espacio de nombres jerárquico](/azure/storage/blobs/data-lake-storage-namespace).
+> - La cuenta de Data Lake Storage que usará la entidad de servicio debe ser de 2.ª generación y tener el [espacio de nombres jerárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace). Las cuentas de almacenamiento de Azure Data Lake de 1.ª generación no son compatibles.
 > - Necesita permisos de administrador para su suscripción de Azure para crear una entidad de servicio.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Crear una entidad de servicio de Azure para Customer Insights
