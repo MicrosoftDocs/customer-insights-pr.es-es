@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010930"
 ---
-
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
 
 Las direcciones de sus datos pueden no estar estructuradas, estar incompletas o ser incorrectas. Utilice los modelos de Microsoft para normalizar y enriquecer sus direcciones en el [Formato de Common Data Model](/common-data-model/schema/core/applicationcommon/address) para una mejor precisión y conocimientos.

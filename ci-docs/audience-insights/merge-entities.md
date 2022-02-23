@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046643"
 ---
-
 # <a name="merge-entities"></a>Combinar entidades
 
 La fase de combinación es la última fase del proceso de unificación de datos. Su propósito es conciliar datos en conflicto. Los ejemplos de datos en conflicto podrían incluir un nombre de cliente que se encuentra en dos de sus conjuntos de datos pero que se muestra de manera un poco diferente en cada uno ("Grant Marshall" y "Grant Marshal"), o un número de teléfono que difiere en formato (617-803-091X y 617803091X). La combinación de esos puntos de datos en conflicto se realiza atributo por atributo.
