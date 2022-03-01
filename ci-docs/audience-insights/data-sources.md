@@ -1,24 +1,24 @@
 ---
 title: Usar orígenes de datos para ingerir datos
 description: Aprenda a importar datos desde distintos orígenes.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046619"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887915"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 La capacidad de información de público de Dynamics 365 Customer Insights se conecta a datos de un amplio conjunto de orígenes. Conectarse a un origen de datos a menudo se conoce como el proceso de *ingesta de datos*. Después de ingerir los datos, puede [unificar](data-unification.md) y actuar sobre ellos.
 
@@ -26,33 +26,39 @@ La capacidad de información de público de Dynamics 365 Customer Insights se co
 
 Consulte los artículos detallados sobre cómo agregar un origen de datos, según la opción que elija.
 
-Puede agregar los siguientes orígenes de datos:
+Puede agregar un origen de datos de tres formas principales:
 
-- [Conectores de Power Query](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Lago de Microsoft Dataverse](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Si está utilizando la versión de prueba, la sección de métodos de importación incluye una opción **Biblioteca de datos de Customer Insights**. Elija esta opción para seleccionar una muestra conjunto de datos disponible para varias industrias. Para obtener más información, consulte la [prueba de Dynamics 365 Customer Insights](../trial-signup.md).
+- [A través de decenas de conectores de Power Query](connect-power-query.md)
+- [Desde una carpeta de Common Data Model](connect-common-data-model.md)
+- [Desde su propio lago de Common Data Service](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Agregar datos de orígenes de datos locales
 
-La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Microsoft Power Platform. Puede habilitar los flujos de datos en Customer Insights [proporcionando la URL del entorno de Microsoft Dataverse](create-environment.md) al configurar el entorno.
+La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Power Platform. Los flujos de datos se pueden habilitar en Customer Insights [proporcionando la dirección URL del entorno de Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) al configurar el entorno.
 
-Las fuentes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights usan [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Puede eliminar y volver a crear fuentes de datos que existían antes de asociar un entorno de Dataverse [usando pasarelas de datos locales](/data-integration/gateway/service-gateway-app).
+Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights utilizarán [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten la conectividad local mediante las puertas de enlace de datos. Quite y vuelva a crear los orígenes de datos que existían antes de que un entorno de Dataverse se asociara para utilizar las puertas de enlace de datos locales.
 
-Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Microsoft Power Platform donde puede ver y configurar puertas de enlace de datos locales.
+Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Power Platform donde puede ver y configurar puertas de enlace de datos locales.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de pantalla de la página de orígenes de datos que muestra enlaces que apuntan al entorno de Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Revisar datos ingeridos
 
 Podrá ver el nombre de cada origen de datos ingeridos, su estado y la última vez que se actualizaron los datos para ese origen. Puede ordenar la lista de orígenes de datos por cada columna.
 
 > [!div class="mx-imgBorder"]
-> ![Origen de datos agregado.](media/configure-data-datasource-added.png "Origen de datos agregado")
+> ![Origen de datos agregado](media/configure-data-datasource-added.png "Origen de datos agregado")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Estado  |Descripción  |
+|---------|---------|
+|Operación correcta   |El origen de datos se ingirió correctamente si se menciona una hora en la columna **Actualizado**.
+|Sin iniciar   |El origen de datos aún no tiene datos ingeridos o sigue en modo de borrador.         |
+|Actualizando    |La ingesta de datos está en curso. Para cancelar esta operación, seleccione **Detener la actualización** en la columna **Acciones**. Al detener la actualización de un origen de datos se revertirá a su último estado de actualización.       |
+|Con errores     |Se han producido errores al ingerir datos.         |
 
-La carga de datos puede llevar tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página **Entidades**. Para obtener más información, consulte [Entidades](entities.md).
+Seleccione el valor en la columna **Estado** de cualquier origen de datos para revisar más detalles. En el panel **Detalles del progreso**, expanda **Fuentes de datos**. Seleccione **Ver detalles** para obtener más información sobre el estado de actualización, incluidos los detalles del error y las actualizaciones del proceso posterior.
+
+La carga de datos puede tardar bastante tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página **Entidades**. Para obtener más información, consulte [Entidades](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Actualizar un origen de datos
 
@@ -62,7 +68,7 @@ Vaya a **Administrador** > **Sistema** > [**Programación**](system.md#schedule-
 
 Para actualizar un origen de datos a petición, siga estos pasos:
 
-1. En informaciones del público, vaya a **Datos** > **Orígenes de datos**.
+1. En informaciones de público, vaya a **Datos** > **Orígenes de datos**
 
 2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea actualizar y seleccione **Actualizar** en la lista desplegable.
 
@@ -74,7 +80,7 @@ Para actualizar un origen de datos a petición, siga estos pasos:
 
 1. En informaciones del público, vaya a **Datos** > **Orígenes de datos**.
 
-2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea quitar y seleccione **Eliminar** en la lista desplegable.
+2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea quitar y seleccione **Eliminar** desde el menú desplegable.
 
 3. Confirme la eliminación.
 

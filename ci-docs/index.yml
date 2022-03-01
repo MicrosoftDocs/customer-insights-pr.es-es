@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Encuentre artículos relevantes para comenzar con el contenido de ayuda.
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107220"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407057"
 title: Documentación de Dynamics 365 Customer Insights
-summary: Encuentre recursos útiles para comenzar y conocer las características y capacidades de Customer Insights.
+summary: Encuentre recursos útiles para comenzar y aprender acerca de las características y capacidades de Customer Insights.
 landingContent:
 - title: Conocer Customer Insights
   linkLists:
@@ -23,41 +23,19 @@ landingContent:
     - text: " Información general sobre Customer Insights"
       url: overview.md
     - text: Planes de versiones
-      url: /dynamics365/release-plans/
-    - text: Detección de CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
-  - linkListType: learn
-    links:
-    - text: Ruta de aprendizaje de Customer Insights
-      url: /learn/paths/build-customer-insights/
-- title: Introducción a Customer Insights
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Obtener acceso al entorno
+      url: https://home.ci.ai.dynamics.com/
+- title: Comenzar con las informaciones de público
   linkLists:
   - linkListType: get-started
     links:
     - text: Suscribirse para una prueba
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Novedades en conocimientos del público
+    - text: Novedades
       url: audience-insights/whats-new-audience-insights.md
-    - text: Guía de inicio rápido
-      url: audience-insights/get-started.md
-  - linkListType: learn
-    links:
-    - text: Tareas iniciales
-      url: /learn/modules/get-started-customer-data-platform/
-- title: Administrar informaciones del público
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Configurar el sistema
-      url: audience-insights/system.md
-    - text: Definir los permisos de usuario
-      url: audience-insights/permissions.md
-    - text: Administrar varios entornos
-      url: audience-insights/manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Administrar Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+    - text: Documentación de informaciones de público
+      url: audience-insights/index.yml
 - title: Ponerse en contacto
   linkLists:
   - linkListType: overview
@@ -68,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Notificar un problema
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Compartir datos entre capacidades
+- title: Tutoriales de informaciones del público
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: tutorial
     links:
-    - text: Crear un vínculo entre capacidades
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Crear segmentos para usar en informes
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Utilizar las propiedades del perfil para análisis interactivo
-      url: engagement-insights/curate-dimensions.md
+    - text: Crear un nuevo entorno
+      url: audience-insights/home.md
+    - text: Crear un perfil de cliente unificado
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Trabajar con la aplicación
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
 - title: Exportar datos de informaciones del público
   linkLists:
   - linkListType: how-to-guide
@@ -88,6 +66,16 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Conector de Power BI
       url: audience-insights/export-power-bi.md
+- title: Administrar informaciones del público
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar el sistema
+      url: audience-insights/system.md
+    - text: Definir los permisos de usuario
+      url: audience-insights/permissions.md
+    - text: Administrar varios entornos
+      url: audience-insights/manage-environments.md
 - title: Acerca de las informaciones de involucración (versión preliminar)
   linkLists:
   - linkListType: overview

@@ -1,20 +1,20 @@
 ---
 title: Administrar permisos de usuario
 description: Más información sobre permisos y roles de usuario.
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 430ad902a5a75552243bc4a094361a749364383717278f687dd6e8ef33749c6f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028335"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689241"
 ---
 # <a name="user-permissions"></a>Permisos de usuario
 
@@ -31,7 +31,7 @@ Hay tres tipos de roles:
 - Ver y explorar página **Enriquecimiento**.
 - Explore y exporte entidades mediante la página **Entidades**.
 - Vea el estado de los procesos del sistema mediante la página **Sistema**.
-- Vea las exportaciones en la página **Exportaciones**.
+- Exportar segmentos de la página **Segmentos**.
 - Instale y use el panel **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Colaborador
@@ -43,7 +43,6 @@ Hay tres tipos de roles:
 - Cree segmentos mediante la página **Segmentos**.
 - Cree medidas mediante la página **Medidas**.
 - Administre la configuración y enriquezca los perfiles de clientes desde la página **Enriquecimiento** (solo para enriquecimientos de primera parte).
-- Administre y cree exportaciones basadas en conexiones compartidas con colaboradores. [Obtenga más información sobre cómo los administradores permiten que los colaboradores utilicen una conexión para las exportaciones.](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrador
 
@@ -51,9 +50,8 @@ Hay tres tipos de roles:
 - Cambie la configuración de la página **Sistema**, incluido el idioma de trabajo y las programaciones de actualización de los procesos del sistema.
 - Vea y agregue permisos mediante la página **Permisos**.
 - Establezca definiciones de buscar y filtrar para la página Clientes mediante la página **Índice de búsqueda y filtros** (accesible a través de la página **Clientes**).
-- Administre las conexiones y permítalas para otros roles de usuario en la página **Conexiones**.
+- Defina destinos de segmento de Dynamics 365 Sales mediante la página **Exportación destinos**.
 - Administre la configuración y enriquezca los perfiles de clientes desde la página **Enriquecimiento** (para todos los enriquecimientos).
-- Gestione y cree exportaciones en la página **Exportaciones**.
 - Instale y utilice el **Complemento de tarjeta de cliente**.
 - Agregue y use el conector de **Power Apps**.
 - Habilitar el uso de las [API de Customer Insights](apis.md).
@@ -76,6 +74,3 @@ En las informaciones de públicos, vaya a **Administrador** > **Permisos** para 
 - Los roles se especifican en la columna **Rol**.
 - Seleccione cualquier título de columna para ordenar los resultados por el valor de esa columna.
 - Utilice el campo **Buscar** en la parte superior de la página para localizar usuarios específicos.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

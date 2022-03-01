@@ -4,26 +4,26 @@ description: Obtenga más información sobre las regiones y geografías en las q
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/28/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645422"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483318"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilidad regional de Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Las conclusiones sobre la involucración, una funcionalidad de Dynamics 365 Customer Insights, introduce gradualmente más regiones en las que los clientes pueden elegir almacenar sus datos. Los administradores pueden elegir una región al [crear un entorno nuevo](create-new-environment.md). 
+Las conclusiones sobre la involucración, una funcionalidad de Dynamics 365 Customer Insights, introduce gradualmente más regiones en las que los clientes pueden elegir almacenar sus datos. Los administradores pueden elegir una región al [crear un entorno nuevo](manage-environments-workspaces.md#create-an-environment). 
 
-Al configurar conclusiones sobre involucración por primera vez, puede elegir la región mientras realiza la [experiencia guiada de primera ejecución](quickstart.md). Más tarde, cada nuevo entorno le permite elegir la región en la que se almacenarán los datos.
+Al configurar conclusiones sobre involucración por primera vez, puede elegir la región mientras realiza la [experiencia guiada de primera ejecución](quickstart.md). Posteriormente, cada nuevo entorno le permitirá elegir la región en la que se almacenarán los datos.
 
-Actualmente apoyamos las geografías de EE. UU. Y Europa. Los usuarios pueden elegir entre estas regiones: Oeste de EE. UU., Este de EE. UU., Norte de Europa y Europa occidental.
+Actualmente hay dos geografías: EE. UU. y Europa. Los usuarios pueden elegir entre la región del oeste de EE. UU. y la región del norte de Europa.
 
 Una organización puede mantener entornos en distintas regiones. Por ejemplo, el Entorno A almacena datos en el oeste de EE. UU. y el Entorno B en el norte de Europa.
 

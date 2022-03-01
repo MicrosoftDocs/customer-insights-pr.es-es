@@ -1,7 +1,7 @@
 ---
 title: Fusionar entidades en la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
-ms.date: 01/28/2022
+ms.date: 04/16/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,214 +9,85 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-merge
-ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046643"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896532"
 ---
 # <a name="merge-entities"></a>Combinar entidades
 
 La fase de combinación es la última fase del proceso de unificación de datos. Su propósito es conciliar datos en conflicto. Los ejemplos de datos en conflicto podrían incluir un nombre de cliente que se encuentra en dos de sus conjuntos de datos pero que se muestra de manera un poco diferente en cada uno ("Grant Marshall" y "Grant Marshal"), o un número de teléfono que difiere en formato (617-803-091X y 617803091X). La combinación de esos puntos de datos en conflicto se realiza atributo por atributo.
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Página de combinación en el proceso de unificación de datos que muestra una tabla con campos combinados que definen el perfil de cliente unificado.":::
-
 Después de completar la [fase de coincidencia](match-entities.md), comience la fase de combinación seleccionando la ventana **Combinar** en la página **Unificar**.
 
 ## <a name="review-system-recommendations"></a>Revisar recomendaciones del sistema
 
-En **Datos** > **Unificar** > **Combinar**, elija y excluya atributos a fusionar dentro de su entidad de perfil de cliente unificado. El perfil de cliente unificado es el resultado del proceso de unificación de datos. El sistema combina automáticamente algunos atributos.
+En la página **Combinar**, puede elegir y excluir los atributos que se combinarán en la entidad de perfil de cliente unificado (el resultado del proceso de configuración). El sistema combina automáticamente algunos atributos.
 
-Para ver los atributos que se incluyen en uno de sus atributos combinados automáticamente, seleccione ese atributo combinado en la pestaña **Campos de clientes** de la tabla. Los dos atributos que componen ese atributo combinado aparecen en dos filas nuevas debajo del atributo combinado.
+### <a name="view-merged-attributes"></a>Ver atributos combinados
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Separar, renombrar, excluir y editar campos combinados
+Para ver los atributos que se incluyen en uno de sus atributos combinados automáticamente, seleccione ese atributo combinado. Los dos atributos que componen ese atributo combinado aparecen en dos filas nuevas debajo del atributo combinado.
 
-Puede cambiar la forma en que el sistema procesa los atributos combinados para generar el perfil de cliente unificado. Seleccione **Mostrar más** y elija lo que quiere cambiar.
+> [!div class="mx-imgBorder"]
+> ![Seleccionar atributo combinado](media/configure-data-merge-profile-attributes.png "Seleccionar atributo combinado")
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opciones en el menú desplegable Mostrar más para administrar atributos combinados.":::
+### <a name="separate-merged-attributes"></a>Separar atributos combinados
 
-Para obtener más información, consulte las secciones siguientes.
+Para separar o combinar cualquiera de los atributos combinados automáticamente, busque el atributo en la tabla **Atributos del perfil**.
 
-## <a name="separate-merged-fields"></a>Separar campos combinados
-
-Para separar los campos combinados, busque el atributo en la tabla. Los campos separados se muestran como puntos de datos individuales en el perfil de cliente unificado. 
-
-1. Seleccione el campo combinado.
+1. Seleccione el botón de puntos suspensivos (...).
   
-1. Seleccione **Mostrar más** y elija **Separar campos**.
- 
-1. Confirme la separación.
+2. En la lista desplegable, seleccione **Campos separados**.
 
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
+### <a name="remove-merged-attributes"></a>Quitar atributos combinados
 
-## <a name="rename-merged-fields"></a>Cambiar el nombre de los campos combinados
+Para excluir un atributo de la entidad del perfil del cliente final, búsquelo en la tabla **Atributos de perfil**.
 
-Cambie el nombre para mostrar de los atributos combinados. No puede cambiar el nombre de la entidad de salida.
-
-1. Seleccione el campo combinado.
+1. Seleccione el botón de puntos suspensivos (...).
   
-1. Seleccione **Mostrar más** y elija **Renombrar**.
+2. En la lista desplegable, seleccione **No combinar**.
 
-1. Confirme el nombre para mostrar cambiado. 
+   El atributo pasa a la sección **Quitado de los registros de cliente**.
 
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
+## <a name="manually-add-a-merged-attribute"></a>Agregar manualmente un atributo combinado
 
-## <a name="exclude-merged-fields"></a>Excluir campos combinados
+Para agregar un atributo combinado, vaya a la página **Combinar**.
 
-Excluya un atributo del perfil de cliente unificado. Si el campo se utiliza en otros procesos, por ejemplo en un segmento, elimínelo de estos procesos antes de excluirlo del perfil del cliente. 
+1. Seleccione **Agregar atributo combinado**.
 
-1. Seleccione un campo combinado.
-  
-1. Seleccione **Mostrar más** y elija **Excluir**.
+2. Proporcione un **Nombre** para identificarlo en la página **Combinar** más tarde.
 
-1. Confirme la exclusión.
+3. Opcionalmente, proporcione un **Nombre para mostrar** que aparece en la entidad del perfil de cliente unificado.
 
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
+4. Configure **Seleccionar atributos duplicados** para seleccionar los atributos que desea combinar desde las entidades coincidentes. También puede buscar atributos.
 
-En la página **Combinar**, seleccione **Campos excluidos** para ver la lista de todos los campos excluidos. Este panel le permite volver a agregar campos excluidos.
-
-## <a name="edit-a-merged-field"></a>Editar un campo combinado
-
-1.  Seleccione un campo combinado.
-
-1.  Seleccione **Mostrar más** y elija **Editar**.
-
-1.  Especifique cómo combinar o fusionar los campos de una de estas tres opciones:
-    - **Importancia**: identifica el valor ganador según el rango de importancia especificado para los campos participantes. Es la opción de combinación predeterminada. Seleccione **Mover hacia arriba/hacia abajo** para establecer la clasificación de importancia.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Opción Importancia en el diálogo de campos de combinación."::: 
-    - **Más reciente**: identifica el valor ganador basado en el más reciente. Requiere una fecha o un campo numérico para cada entidad participante en el ámbito de los campos de combinación para definir la antigüedad.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Opción de menor antigüedad en el diálogo de campos de combinación.":::
-    - **Menos reciente**: identifica el valor ganador basado en el menos reciente. Requiere una fecha o un campo numérico para cada entidad participante en el ámbito de los campos de combinación para definir la antigüedad.
-
-1.  Puede agregar más campos para participar en el proceso de combinación.
-
-1.  También puede cambiar el nombre del campo combinado.
-
-1. Seleccione **Listo** para aplicar los cambios.
-
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
-
-## <a name="combine-fields-manually"></a>Combinar campos manualmente
-
-Especifique un atributo combinado manualmente.
-
-1. En la página **Combinar**, seleccione **Combinar**.
-
-1. Elija la opción **Campos**.
-
-1. Especifique la política del ganador de la combinación en el desplegable **Combinar campos por**.
-
-1. Elija un campo a agregar. Seleccione **Agregar campos** para combinar más campos.
-
-1. Proporcione un **Nombre** y un **Nombre del campo de salida**.
-
-1. Seleccione **Listo** para aplicar los cambios.
-
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios. 
-
-## <a name="combine-a-group-of-fields"></a>Combinar un grupo de campos
-
-Tratar un grupo de campos como una sola unidad. Por ejemplo, cuando nuestros registros contienen los campos Dirección1, Dirección2, Ciudad, Estado y Código postal. Es probable que no queramos fusionar la Dirección2 de un registro diferente, pensando que haría que nuestros datos fueran más completos
-
-1. En la página **Combinar**, seleccione **Combinar**.
-
-1. Elija la opción **Grupo de campos**.
-
-1. Especifique la política del ganador de la combinación en el desplegable **Clasificar grupos**.
-
-1. Seleccione **Agregar** y elija si desea agregar más campos o grupos adicionales a los campos.
-
-1. Proporcione un **Nombre** y un **Nombre de salida** para cada campo combinado.
-
-1. Proporcione un **Nombre** para el grupo de campos. 
-
-1. Seleccione **Listo** para aplicar los cambios.
-
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
-
-## <a name="change-the-order-of-fields"></a>Cambiar el orden de los campos
-
-Algunas entidades contienen más detalles que otras. Si una entidad incluye los datos más recientes sobre un campo, puede priorizarlo sobre otras entidades al combinar valores.
-
-1. Seleccione el campo combinado.
-  
-1. Seleccione **Mostrar más** y elija **Editar**.
-
-1. En el panel **Combinar campos**, seleccione **Mover hacia arriba/abajo** para establecer el orden o arrastrarlos y soltarlos en la posición deseada.
-
-1. Confirme el cambio.
-
-1. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
-
-## <a name="configure-customer-id-generation"></a>Configurar la generaciónde id. de cliente 
-
-Después de configurar los campos de combinación, puede definir cómo generar valores CustomerId, los identificadores únicos de perfil de cliente. El paso de combinación en el proceso de unificación de datos genera el identificador de perfil de cliente único. El identificador es el CustomerId de la entidad *Cliente* que resulta del proceso de unificación de datos. 
-
-El CustomerId de la entidad Cliente se basa en un hash del primer valor de las claves primarias ganadoras no nulas. Estas claves provienen de las entidades utilizadas en la fase de coincidencia y fusión y están influenciadas por el orden de coincidencia. Por lo tanto, el CustomerID generado puede cambiar cuando cambia un valor de clave principal en la entidad principal del orden de coincidencia. Por tanto, es posible que el valor de clave principal no siempre represente al mismo cliente.
-
-La configuración de un Id. de cliente estable le permite evitar ese comportamiento.
-
-**Configurar un id. de cliente único**
-
-1. Vaya a **Unificar** > **Combinar**.
-
-1. Seleccione la pestaña **Claves**. 
-
-1. Coloque el cursor sobre la fila **CustomerId** y seleccione la opción **Configurar**.
-   :::image type="content" source="media/customize-stable-id.png" alt-text="Control para personalizar la generación de id.":::
-
-1. Seleccione hasta cinco campos que incluirán un id. de cliente único y serán más estables. Los registros que no coinciden con su configuración utilizan un id. configurado por el sistema en su lugar.  
-
-1. Seleccione **Listo** y ejecute el proceso de combinación para aplicar sus cambios.
-
-## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfiles en hogares o clústeres
-
-Como parte del proceso de configuración de generación de perfiles de cliente, puede definir reglas para agrupar perfiles relacionados en un clúster. Actualmente, hay dos tipos de clústeres disponibles: clústeres de hogar y personalizados. El sistema elige automáticamente un hogar con reglas predefinidas si la entidad *Cliente* contiene los campos semánticos *Person.LastName* y *Location.Address*. También puede crear un clúster con sus propias reglas y condiciones, similares a las [reglas de coincidencia](match-entities.md#define-rules-for-match-pairs).
-
-**Definir un hogar o un clúster**
-
-1. Vaya a **Unificar** > **Combinar**.
-
-1. En la pestaña **Combinar**, seleccione **Avanzado** > **Crear clúster**.
-
-   :::image type="content" source="media/create-cluster.png" alt-text="Control para crear un clúster nuevo.":::
-
-1. Elija entre un clúster de **Hogar** o **Personalizado**. Si existen los campos semánticos *Person.LastName* y *Location.Address* en la entidad *Cliente*, el hogar se selecciona automáticamente.
-
-1. Proporcione un nombre para el clúster y seleccione **Hecho**.
-
-1. Seleccione la pestaña **Clústeres** para encontrar el clúster que creó.
-
-1. Especifique las reglas y condiciones para definir su clúster.
-
-1. Seleccione **Ejecutar** para ejecutar el proceso de combinación y crear el clúster.
-
-Después de ejecutar el proceso de combinación, los identificadores de clúster se agregan como nuevos campos a la entidad *Cliente*.
+5. Establezca **Clasificar por importancia** para priorizar un atributo sobre los demás. Por ejemplo, si la entidad *WebAccountCSV* incluye los datos más precisos sobre el atributo *Nombres completos*, podría priorizar esta entidad sobre *ContactCSV* seleccionando *WebAccountCSV*. Por ello, *WebAccountCSV* pasa a primera prioridad, mientras que *ContactCSV* pasa a la segunda prioridad al extraer valores para el atributo *Nombre completo*.
 
 ## <a name="run-your-merge"></a>Ejecutar la combinación
 
 Tanto si combina manualmente atributos como si deja que el sistema los combine, siempre puede ejecutar su combinación. Seleccione **Ejecutar** en la página **Combinación** para iniciar el proceso.
 
 > [!div class="mx-imgBorder"]
-> ![Guardar y ejecutar combinación de datos.](media/configure-data-merge-save-run.png "Guardar y ejecutar combinación de datos")
+> ![Guardar y ejecutar combinación de datos](media/configure-data-merge-save-run.png "Guardar y ejecutar combinación de datos")
 
-Escoja **Ejecutar solo la combinación** si solo desea ver la salida reflejada en la entidad de cliente unificada. Los procesos posteriores se actualizarán como esté [definido en el programa de actualización](system.md#schedule-tab).
+Para realizar cambios adicionales y volver a ejecutar el paso, puede cancelar una fusión en curso. Seleccione **Actualizando...** y seleccione **Cancelar trabajo** en el panel lateral que aparece.
 
-Escoja **Ejecutar procesos de combinación y posteriores** para actualizar el sistema con sus cambios. Todos los procesos, incluido el enriquecimiento, los segmentos y las medidas, se volverán a ejecutar automáticamente. Una vez finalizados todos los procesos posteriores, los perfiles del cliente reflejan cualquier cambio que haya realizado.
+Después de **Actualizando...**, los cambios del texto cambian a **Correcto**. La fusión se ha completado y se han resuelto las contradicciones en los datos de acuerdo con las directivas que definió. Los atributos fusionados y no fusionados se incluyen en la entidad de perfil unificada. Los atributos excluidos no se incluyen en la entidad de perfil unificada.
 
-Para realizar más cambios y volver a ejecutar el paso, puede cancelar una combinación en curso. Seleccione **Actualizando...** y seleccione **Cancelar trabajo** en el panel lateral que aparece.
+Si no fue la primera vez que ejecutó una fusión con éxito, todos los procesos posteriores, incluidos el enriquecimiento, la segmentación y las medidas, se volverán a ejecutar automáticamente. Después de que se hayan vuelto a ejecutar todos los procesos posteriores, los perfiles de los clientes reflejan los cambios que haya realizado.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
+> [!TIP]
+> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
 
 ## <a name="next-step"></a>Paso siguiente
 
 Configure las [actividades](activities.md), el [enriquecimiento](enrichment-hub.md) o las [relaciones](relationships.md) para obtener más información sobre sus clientes.
 
-Si ya configuró actividades, enriquecimiento o segmentos, se procesarán automáticamente para utilizar los datos más recientes del cliente.
+Si ya configuró las actividades, el enriquecimiento o las relaciones o si definió los segmentos, se procesarán automáticamente para usar los últimos datos del cliente.
+
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

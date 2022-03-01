@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673514"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645331"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Creación de una nueva área de trabajo de la aplicación y adición de miembros
 
@@ -26,9 +26,9 @@ Cuando crea un área de trabajo, selecciona el tipo de datos en el que desea cen
 
 ## <a name="create-a-new-workspace"></a>Crear una nueva área de trabajo
 
-El proceso de creación de un área de trabajo incluye la configuración del *entorno* para organizar su área de trabajo. Un entorno es un espacio que puede contener una o más áreas de trabajo. Puede utilizar un entorno para administrar sus espacios de trabajo y conexiones a la capacidad de información audiencia.
+El proceso de creación de un área de trabajo incluye la configuración del *entorno* para organizar su área de trabajo. Un entorno es un espacio que puede contener una o más áreas de trabajo. Puede utilizar un entorno para administrar sus áreas de trabajo y conexiones para la funcionalidad de conclusiones del público de Customer Insights.
 
-1. Seleccione **+Nuevo** desde el selector de área de trabajo.
+1. Seleccione **Nuevo** desde el selector de área de trabajo.
 
    :::image type="content" source="media/new-workspace.png" alt-text="Página de Customer Insights con una llamada en el panel de navegación y una descripción.":::
 
@@ -36,7 +36,7 @@ El proceso de creación de un área de trabajo incluye la configuración del *en
 
    :::image type="content" source="media/workspace-name.png" alt-text="Escriba un nombre de área de trabajo.":::
 
-1. Elija el tipo de plataforma (web o móvil) que desea medir.
+1. Elija el tipo de plataforma (Web o móvil) que desea medir.
 
 1. Seleccione **Mostrar configuración avanzada** para habilitar o deshabilitar estas configuraciones opcionales:
 

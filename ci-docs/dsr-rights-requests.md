@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732701"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483710"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes del interesado (DSR) en el contexto del RGPD
 
@@ -79,14 +79,7 @@ Un administrador de inquilinos puede seguir estos pasos para exportar datos:
 2. Acepte la confirmación para exportar los datos del usuario solicitado.
 3. Reciba los datos exportados a través de la dirección de correo electrónico del administrador del inquilino.
 
-## <a name="consent-management-preview"></a>Administración de consentimientos (vista previa)
-
-La capacidad de gestión del consentimiento no recopila datos del usuario directamente. Solo importa y procesa los datos de consentimiento proporcionados por los usuarios en otras aplicaciones.
-
-Para eliminar datos de consentimiento sobre usuarios específicos, elimínelos en las fuentes de datos ingeridas a la capacidad de gestión de consentimiento. Después de actualizar el origen de datos, los datos eliminados también se eliminarán en el Centro de consentimiento. Las aplicaciones que utilizan la entidad de consentimiento también eliminarán los datos que se eliminaron en la fuente después de una [actualización](audience-insights/system.md#refresh-processes). Recomendamos actualizar las fuentes de datos rápidamente después de responder a una solicitud del interesado para eliminar los datos del usuario de todos los demás procesos y aplicaciones.
-
-
-## <a name="engagement-insights-preview"></a>Conclusiones sobre la interacción (versión preliminar)
+## <a name="engagement-insights"></a>Conclusiones sobre la interacción
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Eliminar y exportar datos de eventos que contienen información identificable del usuario final
 

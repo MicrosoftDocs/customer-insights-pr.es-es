@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977758"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304993"
 ---
 # <a name="connections-preview-overview"></a>Información general sobre conexiones (versión preliminar)
 
@@ -47,7 +47,6 @@ Para agregar conexiones, debe tener [permisos de administrador](permissions.md).
 1. En el panel **Configurar conexión**, proporcione los detalles requeridos. 
    1. El **Nombre para mostrar** y el tipo de conexión describe una conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de esta conexión.
    1. Los campos exactos dependen del servicio al que se esté conectando. Puede obtener información sobre los detalles de un tipo de conexión específico en el artículo sobre el servicio de destino.
-   1. Si usted [usa tu propio Key Vault](use-azure-key-vault.md) para almacenar secretos, active **Usar Key Vault** y elija el secreto de la lista.
 
 1. Para crear la conexión, seleccione **Guardar**.
 
@@ -94,6 +93,3 @@ Los enriquecimientos y exportaciones que se han desconectado se vuelven inactivo
 
 1. Para confirmar la eliminación, seleccione **Quitar**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configure conexiones con secretos administrados por su propio Key Vault
-
-Algunas conexiones necesitan secretos como claves API o contraseñas. Algunas conexiones admiten secretos almacenados en su propio Key Vault. Obtenga más información sobre conexiones admitidas y cómo configurar [su propio Key Vault para conclusiones del público](use-azure-key-vault.md).

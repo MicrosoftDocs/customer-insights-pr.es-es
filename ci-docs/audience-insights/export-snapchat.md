@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a Snapchat
 description: Aprenda a configurar la conexión y a exportar a Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618704"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760640"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Exportar segmentos a Snapchat (versión preliminar)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Exportar listas de segmentos a Snapchat (versión preliminar)
 
 Exporte segmentos de perfiles de clientes unificados a Snapchat y utilícelos para actividades de publicidad. 
 
@@ -29,7 +29,7 @@ Exporte segmentos de perfiles de clientes unificados a Snapchat y utilícelos pa
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
 - La exportación a Snapchat está limitada a segmentos.
-- La exportación de hasta 1 millón de perfiles de clientes a Snapchat puede tardar hasta 15 minutos en completarse. 
+- La exportación de hasta 1 millón de perfiles a Snapchat puede tardar hasta 15 minutos en completarse. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurar conexión a Snapchat
 
@@ -63,7 +63,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Indique el [**identificador de audiencia de Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a Snapchat.
+1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a Snapchat.
 
 1. Seleccione los segmentos que desea exportar. 
 

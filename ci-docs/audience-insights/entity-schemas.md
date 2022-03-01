@@ -1,7 +1,7 @@
 ---
 title: Esquemas de entidades de Customer Insights en Common Data Model
 description: Trabajar con entidades en Common Data Model.
-ms.date: 08/13/2021
+ms.date: 04/17/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2cdbe11a1c0cc5d65434fb2ae3a3f38c18f31cf4
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046538"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692326"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidad en Common Data Model
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 [Common Data Model](/common-data-model/) (CDS) es una especificación declarativa y una definición de entidades estándar que representan los conceptos y actividades más usados en una variedad de aplicaciones empresariales y de productividad. Este modelo se está extendiendo también a datos observacionales y analíticos. Common Data Model ofrece entidades empresariales bien definidas, modulares y extensibles como Cuenta, Unidad de negocio, Caso, Contacto, Cliente potencial, Oportunidad y Producto, así como interacciones y relaciones con proveedores, trabajadores y clientes, como actividades y acuerdos de nivel de servicio. Cualquiera puede añadir y ampliar las definiciones de Common Data Model para capturar ideas adicionales específicas del negocio.
 
@@ -42,7 +42,7 @@ Para obtener más información, consulte la documentación sobre los [Esquemas d
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Ver entidades utilizando el navegador para entidades de Common Data Model
 
-Puede ver entidades en el [Navegador de entidades de Common Data Model](https://microsoft.github.io/CDM/). Seleccione una entidad de la sección de la aplicación Insights para obtener la lista de entidades de Customer Insights y sus definiciones.
+Puede ver entidades en el [Navegador de entidades de Common Data Model](https://microsoft.github.io/CDM/). Seleccione el botón **Cargar desde GitHub!** y vaya a **foundationCommon** > **crmCommon** > **soluciones** > **customerInsights** donde encontrará la lista de entidades de Customer Insights y sus definiciones.
 > [!div class="mx-imgBorder"]
 > ![Navegador para entidades de CDM que muestra la entidad CustomerActivity.](media/CDM-entity-navigator.png "Navegador para entidades de CDM que muestra la entidad CustomerActivity")
 

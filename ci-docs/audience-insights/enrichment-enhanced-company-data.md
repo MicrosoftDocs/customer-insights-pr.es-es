@@ -1,7 +1,7 @@
 ---
 title: Mejora de datos de empresa
 description: Enriquezca y normalice los datos de la empresa con los modelos de Microsoft.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010950"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813938"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecimiento de los perfiles de la empresa con datos empresariales mejorados
 
@@ -82,17 +82,7 @@ Para iniciar el proceso de enriquecimiento, seleccione **Ejecutar** desde la bar
 
 Una vez que se completa el proceso de enriquecimiento, puede revisar los datos de los perfiles de clientes recién enriquecidos en **Mis enriquecimientos**. Además, encontrará la hora de la última actualización y el número de perfiles enriquecidos.
 
-Puede ver una muestra de los datos enriquecidos en el mosaico **Vista previa de clientes enriquecidos**. Seleccione **Ver más** y seleccione la pestaña **Datos** para acceder a una vista detallada de cada perfil enriquecido.
-
-### <a name="overview-card"></a>Tarjeta de descripción general
-
-La tarjeta de descripción general muestra detalles sobre la cobertura del enriquecimiento. 
-
-* **Compañías procesadas y cambiadas**: el número de perfiles de compañías que se enriquecieron con éxito.
-
-* **Compañías procesadas y no cambiadas**: el número de perfiles de compañías de clientes que se reconocieron pero no cambiaron. Esto suele suceder cuando los datos de entrada son válidos y no se pueden mejorar mediante el enriquecimiento.
-
-* **Compañías mo procesadas y no cambiadas**: el número de perfiles de compañías de clientes que no se reconocieron. Por lo general, para datos de entrada que no son válidos o no son compatibles con el enriquecimiento.
+Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

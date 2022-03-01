@@ -1,7 +1,7 @@
 ---
 title: Asignaciones semánticas (versión preliminar)
 description: Descripción general de las asignaciones semánticas y cómo usarlas.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881851"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622956"
 ---
-# <a name="semantic-mappings-preview"></a>Asignaciones semánticas (versión preliminar)
+# <a name="semantic-mappings"></a>Asignaciones semánticas
 
 Las asignaciones semánticas le permiten asignar sus datos de no actividad a esquemas predefinidos. Estos esquemas ayudan a conclusiones del público a comprender mejor los atributos de sus datos. La asiganción semántica y los datos proporcionados permiten nuevos conocimientos y funciones en conclusiones del público. Para asignar los datos de su actividad a los esquemas, revise la documentación de [actividades](activities.md).
 
@@ -75,7 +75,8 @@ Las asignaciones semánticas le permiten asignar sus datos de no actividad a esq
 
 1. Para ejecutar una asignación semántica en un punto posterior, seleccione la asignación semántica y seleccione **Actualizar**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
 
 ## <a name="manage-existing-semantic-mappings"></a>Administrar asignaciones semánticas existentes
 
@@ -90,41 +91,5 @@ En **Datos** > **Asignaciones semánticas (versión preliminar)**, puede ver tod
 - **Cambiar nombre**: Abre un cuadro de diálogo en el que puede introducir un nombre diferente para la asignación semántica seleccionada. Seleccione **Guardar** para aplicar los cambios.
 
 - **Eliminar**: Abre un cuadro de diálogo para confirmar la eliminación de la asignación semántica seleccionada. También puede eliminar más de una asignación semántica a la vez seleccionando las asignaciones semánticas y el icono de eliminación. Seleccione **Eliminar** para confirmar la eliminación.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilice una asignación de entidad semántica de ContactProfile para crear actividades a nivel de contacto
-
-Después de crear un mapeo de entidades semánticas *ContactProfile*, puede capturar actividades de contactos. Le permite ver en el cronograma de actividad de una cuenta qué contacto fue responsable de cada actividad. La mayoría de los pasos siguen la configuración típica de mapeo de actividades.
-
-   > [!NOTE]
-   > Para que las actividades a nivel de contacto funcionen, debe tener los atributos **AccountID** y **ContactID** para cada registro dentro de los datos de su actividad.
-
-1. [Definir una asignación de entidad semántica de *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Y ejecutar la asignación semántica.
-
-1. En informaciones del público, vaya a **Datos** > **Ocupaciones**.
-
-1. Seleccione **Agregar actividad** para crear una nueva actividad.
-
-1. Nombre la actividad, seleccione la entidad de actividad de origen y seleccione la clave principal de la entidad de actividad.
-
-1. En el paso **Relaciones**, cree una relación indirecta entre los datos de la fuente de su actividad y las cuentas, utilizando sus datos de contacto como una entidad intermediaria. Para obtener más información, vea [rutas de relaciones directas e indirectas](relationships.md#relationship-paths).
-   - Relación de ejemplo para una actividad llamada *Compras*:
-      - **Datos de actividad de origen de compras** > **Datos de contacto** en el atributo **ContactID**
-      - **Datos de contacto** > **Datos de cuenta** en el atributo **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ejemplo de configuración de relaciones.":::
-
-1. Después de configurar Relaciones, seleccione **Siguiente** y complete la configuración de su mapeo de actividades. Para conocer los pasos detallados sobre la creación de actividades, consulte [definir una actividad](activities.md).
-
-1. Ejecute sus asignaciones de actividad.
-
-1. Sus actividades a nivel de contacto ahora serán visibles en la línea de tiempo de su cliente.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final después de configurar las actividades de contacto":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtrado de línea de tiempo de actividad a nivel de contacto
-
-Después de configurar un mapeo de actividad a nivel de contacto y ejecutarlo, se actualizará la línea de tiempo de actividad para sus clientes. Incluye sus ID o nombres, según su configuración de *ContactProfile*, para las actividades en las que actuaron. Puede filtrar actividades por contactos en la línea de tiempo para ver contactos específicos que le interesan. Además, puede ver todas las actividades que no están asignadas a un contacto específico seleccionando **Actividades no asignadas a un contacto**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opciones de filtrado disponibles para actividades a nivel de contacto.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035206"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129920"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de recomendaciones de producto (versión preliminar)
 
@@ -105,9 +105,9 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-2. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
+2. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
 
-3. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
+3. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
 
    ![Unifique la coincidencia de comercio electrónico y fidelización.](media/unify-match-order.png)
 
@@ -115,8 +115,8 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 5. Agregue su primera condición con FullName.
 
-   - Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
-   - Para loyCustomers, seleccione **FullName** en el menú desplegable.
+   - Para eCommerceContacts seleccione **FullName** en la lista desplegable.
+   - Para loyCustomers, seleccione **FullName** en la lista desplegable.
    - Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
    - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 

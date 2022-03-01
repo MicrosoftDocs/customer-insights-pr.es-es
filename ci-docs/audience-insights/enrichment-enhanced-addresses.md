@@ -1,7 +1,7 @@
 ---
 title: Enriquecimiento de mejora de direcciones (contiene vídeo)
 description: Enriquezca y normalice la información de direcciones de los perfiles de los clientes con los modelos de Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010930"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934944"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
 
@@ -100,17 +100,17 @@ Para iniciar el proceso de enriquecimiento, seleccione **Ejecutar** desde la bar
 
 Una vez que se completa el proceso de enriquecimiento, puede revisar los datos de los perfiles de clientes recién enriquecidos en **Mis enriquecimientos**. Además, encontrará la hora de la última actualización y el número de perfiles enriquecidos.
 
-Puede ver una muestra de los datos enriquecidos en el mosaico **Vista previa de clientes enriquecidos**. Seleccione **Ver más** y seleccione la pestaña **Datos** para acceder a una vista detallada de cada perfil enriquecido.
+Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
 
 ### <a name="overview-card"></a>Tarjeta de descripción general
 
 La tarjeta de descripción general muestra detalles sobre la cobertura del enriquecimiento. 
 
-* **Direcciones procesadas y cambiadas**: el número de perfiles de cliente con direcciones que se enriquecieron con éxito.
+* **Clientes procesados y cambiados**: el número de perfiles de clientes que se enriquecieron con éxito.
 
-* **Direcciones procesadas y no cambiadas**: el número de perfiles de clientes con direcciones que se reconocieron pero no cambiaron. Por lo general, sucede cuando los datos de entrada son válidos y no se pueden mejorar mediante el enriquecimiento.
+* **Clientes procesados y no cambiados**: el número de perfiles de clientes que se reconocieron pero no cambiaron. Por lo general, sucede cuando los datos de entrada son válidos y no se pueden mejorar mediante el enriquecimiento.
 
-* **Direcciones no procesadas y no cambiadas**: el número de perfiles con direcciones que no se reconocieron. Por lo general, para datos de entrada que no son válidos o no son compatibles con el enriquecimiento.
+* **Clientes no procesados y no cambiados**: el número de perfiles que no se reconocieron. Por lo general, para datos de entrada que no son válidos o no son compatibles con el enriquecimiento.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

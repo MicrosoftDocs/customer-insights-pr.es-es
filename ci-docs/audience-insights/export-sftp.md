@@ -1,5 +1,5 @@
 ---
-title: Exportar datos de Customer Insights a hosts SFTP (contiene vídeo)
+title: Exportar datos de Customer Insights a servidores SFTP
 description: Aprenda a configurar la conexión y a exportar a una ubicación de SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934952"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035482"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos y otros datos a SFTP (versión preliminar)
 
 Utilice los datos de sus clientes en aplicaciones de terceros exportándolos a una ubicación del protocolo seguro de transferencia de archivos (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
@@ -28,7 +26,6 @@ Utilice los datos de sus clientes en aplicaciones de terceros exportándolos a u
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Los destinos SFTP detrás de firewalls no son compatibles actualmente. 
 - El tiempo de ejecución de una exportación depende del rendimiento de su sistema. Recomendamos dos núcleos de CPU y 1 Gb de memoria como configuración mínima de su servidor. 
 - Exportar entidades con hasta 100 millones de perfiles de clientes puede prolongarse durante 90 minutos cuando se utiliza la configuración mínima recomendada de dos núcleos de CPU y 1 Gb de memoria. 
 

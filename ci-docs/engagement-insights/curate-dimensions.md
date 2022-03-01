@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466369"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461124"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Usar dimensiones demográficas para dividir datos de comportamiento
 
@@ -29,7 +29,7 @@ Mediante el uso de dimensiones demográficas de perfil unificado, los usuarios d
 - Un entorno de conclusiones sobre la interacción en el que tiene datos de perfil de cliente vinculados al entorno de conclusiones del público donde se crean los perfiles de cliente. Para más información: [Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Después de crear un vínculo entre los entornos de conclusiones del público y conclusiones sobre la interacción, es posible que solo desee datos específicos de las propiedades del perfil del cliente, que pueden ser útiles como dimensiones en conclusiones sobre la interacción. Para obtener más información, vaya a [Habilitar atributos y segmentos del perfil unificado de conclusiones del público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Después de crear un vínculo entre los entornos de conclusiones del público y conclusiones sobre la interacción, es posible que solo desee datos específicos de las propiedades del perfil del cliente, que pueden ser útiles como dimensiones en conclusiones sobre la interacción. Para obtener más información, vaya a [Habilitar atributos y segmentos del perfil unificado de conclusiones del público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Crear un nuevo informe personalizado
 

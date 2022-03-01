@@ -1,5 +1,5 @@
 ---
-title: Predicción de abandono de suscripciones (contiene vídeo)
+title: Cancelación de predicción de suscripción
 description: Prediga si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967722"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799748"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
 
@@ -77,7 +77,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. Introduzca el número de **Días desde que finalizó la suscripción** que su empresa considera para que un cliente esté en un estado de pérdida. Este período suele equivaler a actividades comerciales como ofertas u otros esfuerzos de marketing que intentan evitar la pérdida del cliente.
 1. Ingrese el número de **Días para investigar el futuro para predecir el abandono** para establecer una ventana para predecir el abandono. Por ejemplo, para predecir el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono durante períodos de tiempo más largos o más cortos puede hacer que sean más difícil abordar los factores en el perfil de riesgo de abandono, en función de sus requisitos empresariales específicos. Seleccione **Siguiente** para continuar
    >[!TIP]
-   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
+   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
 
 ### <a name="add-required-data"></a>Agregar datos necesarios
 

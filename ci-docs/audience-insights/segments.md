@@ -1,20 +1,20 @@
 ---
 title: Segmentos de conclusiones del público
 description: Descripción general de los segmentos y cómo crearlos y gestionarlos.
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978080"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617396"
 ---
 # <a name="segments-overview"></a>Información general de los segmentos
 
@@ -26,7 +26,7 @@ Los perfiles de clientes que coinciden con los filtros de una definición de seg
 
 Hay múltiples formas de crear un nuevo segmento: 
 
-# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[Clientes individuales (B2C)](#tab/b2c)
 
 - Segmento complejo con generador de segmentos: [Crear el nuestro](segment-builder.md#create-a-new-segment) 
 - Segmentos simples con un operador: [Segmento rápido](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Hay múltiples formas de crear un nuevo segmento:
 - Sugerencias con tecnología de IA basadas en medidas o atributos: [Segmentos sugeridos para mejorar las medidas](suggested-segments.md) 
 - Sugerencias basadas en actividades: [Segmentos sugeridos basados en la actividad del cliente](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
 - Segmento complejo con generador de segmentos: [Crear el nuestro](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ Las siguientes acciones están disponibles cuando selecciona un segmento:
 
 Puede actualizar todos los segmentos a la vez seleccionando **Actualizar todo** en la página **Segmentos** o puede actualizar uno o varios segmentos cuando los selecciona y elige **Actualizar** desde las opciones. Alternativamente, puede configurar una actualización periódica en **Administración** > **Sistema** > **Programar**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies). Puede seleccionar el estado de un proceso para ver los detalles en el progreso de todo el trabajo. Después de seleccionar **Ver detalles** para una de las tareas del trabajo, encontrará información adicional: tiempo de procesamiento, última fecha de procesamiento y todos los errores y advertencias asociados con la tarea.
 
 ## <a name="export-segments"></a>Exportar segmentos
 
@@ -104,6 +105,5 @@ La parte inferior contiene una lista de los miembros del segmento.
 > Los campos que aparecen en esta lista se basan en los atributos de las entidades de su segmento.
 >
 >La lista es una vista previa de los miembros del segmento coincidentes y muestra los primeros 100 registros de su segmento para que pueda evaluarlo rápidamente y revisar sus definiciones si es necesario. Para ver todos los registros coincidentes, debe [exportar el segmento](export-destinations.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

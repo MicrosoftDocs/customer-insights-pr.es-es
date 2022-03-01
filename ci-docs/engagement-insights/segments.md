@@ -4,17 +4,17 @@ description: Cómo crear, editar y eliminar segmentos y dónde usarlos.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623608"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036169"
 ---
 # <a name="view-and-create-segments"></a>Ver y crear segmentos
 
@@ -44,27 +44,22 @@ Esta sección describe cómo crear un *segmento en blanco* desde cero.
 
 1. Seleccione **Nuevo segmento**.
 
-1. En la **Biblioteca de recursos**, seleccione el (+) junto al atributo por el que desea filtrar. Actualmente, solo puede crear segmentos basados en dimensiones.
+1. En la **Biblioteca de recursos**, elija el atributo por el que desea filtrar. Actualmente, solo puede crear segmentos basados en dimensiones.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Cree un nuevo segmento.":::
-
-1. En la sección **Regla**, elija un operador y un valor para el atributo seleccionado. Se admiten las siguientes operaciones.
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Elija un operador para su nuevo segmento.":::
-
+1. Elija un operador y un valor para el atributo seleccionado. Se admiten las siguientes operaciones.
    - **es**: requiere una coincidencia exacta para incluir valores. Usa **igual a** para un solo valor o **cualquiera de** para incluir varios valores.
    - **no es**: requiere una coincidencia exacta para excluir valores. Usa **igual a** para un solo valor o **cualquiera de** para incluir varios valores.
    - **comienza con**: una cadena con la que comienzan los valores coincidentes.
    - **termina con**: una cadena con la que terminan los valores coincidentes.
    - **contiene**: una cadena contenida en valores coincidentes.
 
-1. Para agregar más condiciones a un grupo, puede utilizar operadores lógicos. Los atributos proyectados se tienen en cuenta al utilizar operadores de conjuntos.
+1. Para agregar más condiciones a un grupo, puede usar dos operadores lógicos. Los atributos proyectados se tienen en cuenta al utilizar operadores de conjuntos.
    - Operador **AND**: Ambas condiciones deben cumplirse como parte del proceso de segmentación. Esta opción es más útil cuando define condiciones en diferentes entidades.
    - Operador **OR**: Cualquiera de las condiciones debe cumplirse como parte del proceso de segmentación. Esta opción es más útil cuando define varias condiciones para la misma entidad.
 
 1. Seleccione **Guardar** y ponga nombre al segmento. 
 
-El segmento aparecerá en la página **Segmentos** y puede aplicarlo a todos los informes y embudos en el espacio de trabajo.
+El segmento aparecerá en la página Segmentos y puede aplicarlo a todos los informes y embudos en el espacio de trabajo.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Utilice un segmento en un informe o embudo
 
@@ -72,7 +67,7 @@ Puede aplicar segmentos a un informe o un embudo para filtrarlos según las cond
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Un informe de vistas de página con una lista desplegable ampliada para elegir qué segmentos aplicar.":::
 
-Para aplicar un segmento, abra el informe o el embudo. Seleccione **+ Agregar condición** y elija **Filtrar por segmento**. Elija el segmento de la lista que quiera aplicar. El segmento se aplicará al informe. Si un gráfico no es compatible con el segmento, muestra un error. Para obtener más información, vea [Crear y administrar informes de embudo](funnel-reports.md).
+Para aplicar un segmento, abra el informe o el embudo. Seleccione **Agregar condición** y elija **Filtrar por segmento**. Elija el segmento de la lista que quiera aplicar. El segmento se aplicará al informe. Si un gráfico no es compatible con el segmento, muestra un error.
  
 Puede aplicar *hasta tres segmentos* a un informe o embudo.
 
@@ -96,7 +91,5 @@ Puede aplicar *hasta tres segmentos* a un informe o embudo.
 1. En la lista de segmentos, seleccione **Más [...]**. 
 1. En el menú desplegable, elija **Eliminar**.
 1. Seleccione **Eliminar** para confirmar.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

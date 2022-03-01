@@ -1,7 +1,7 @@
 ---
 title: Exportar datos de Customer Insights a ActiveCampaign
 description: Aprenda a configurar la conexión y exportar a ActiveCampaign.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618174"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314680"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exportar segmentos a ActiveCampaign (versión preliminar)
 
@@ -28,9 +28,9 @@ Exporte segmentos de perfiles de clientes unificados a ActiveCampaign y utilíce
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Puede exportar hasta 1 millón de perfiles de clientes por exportación a ActiveCampaign y puede tardar hasta 90 minutos en completarse.
+- Puede exportar hasta 1 millón de perfiles por exportación a ActiveCampaign y puede tardar hasta 90 minutos en completarse.
 - La exportación a ActiveCampaign está limitada a segmentos.
-- La cantidad de perfiles de clientes que puede exportar a ActiveCampaign depende de su contrato con ActiveCampaign.
+- La cantidad de perfiles que puede exportar a ActiveCampaign depende de su contrato con ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Configurar la conexión a ActiveCampaign
 
@@ -64,7 +64,7 @@ Puede configurar una exportación si tiene acceso a una conexión de este tipo. 
 
 1. Indique su [**Id. de lista de ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a ActiveCampaign. Opcionalmente, puede exportar Nombre de pila, Apellido, y Teléfono para crear correos electrónicos más personalizados. Seleccione Agregar atributo para asignar estos campos.
+3. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo en su perfil de cliente unificado que representa la dirección de correo electrónico de un cliente. Es obligatorio exportar segmentos a ActiveCampaign. Opcionalmente, puede exportar Nombre de pila, Apellido, y Teléfono para crear correos electrónicos más personalizados. Seleccione Agregar atributo para asignar estos campos.
 
 1. Seleccione **Guardar**.
 
