@@ -3,20 +3,24 @@ title: Predicción del valor de la vida del cliente (CLV)
 description: Predecir el potencial de ingresos de los clientes activos en el futuro.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035390"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355810"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicción del valor de tiempo de vida del cliente (CLV) (versión preliminar)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predicción del valor de la vida del cliente (CLV)
 
 Predecir el valor potencial (ingresos) que los clientes activos individuales aportarán a su negocio durante un período de tiempo futuro definido. Esta función puede ayudarle a lograr varios objetivos: 
 - Identificar clientes de alto valor y procesar esta información
@@ -74,7 +78,7 @@ Los siguientes datos son obligatorios y, cuando se marcan como opcionales, es qu
 
 1. Seleccione el icono **Valor de por vida del cliente** y seleccione **Modelo de uso**. 
 
-1. En el panel **Valor de por vida del cliente (vista previa)**, seleccione **Empezar**.
+1. En el panel **Valor de tiempo de vida del cliente**, seleccione **Comenzar**.
 
 1. Asigne un nombre a **este modelo** y a la **entidad de salida** para distinguirlos de otros modelos o entidades.
 

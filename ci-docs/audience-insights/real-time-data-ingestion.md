@@ -2,19 +2,21 @@
 title: Ingestión y limitaciones de datos en tiempo real
 description: Información general sobre las capacidades en tiempo real en las informaciones de público.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689196"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355496"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingesta de datos en tiempo real (vista previa)
 
@@ -44,7 +46,7 @@ Debido a que las operaciones en tiempo real tienen lugar después de la unificac
 
 ## <a name="real-time-creation-of-activities"></a>Creación de actividades en tiempo real
 
-La API en tiempo real le permite publicar una nueva actividad desde su sistema de origen (un registro de origen individual) en un perfil de cliente unificado. La nueva actividad estará disponible como actividad unificada en la escala de tiempo de ese perfil de cliente unificado en cuestión de segundos. Puede ver la línea de tiempo en la vista de la tarjeta del cliente o cualquier otra integración de línea de tiempo que haya configurado.
+La API en tiempo real le permite publicar una nueva actividad desde su sistema de origen (un registro de origen individual) en un perfil de cliente unificado. La nueva actividad estará disponible como una actividad unificada en la línea de tiempo de ese perfil de cliente unificado en cuestión de segundos. Puede ver la línea de tiempo en la vista de la tarjeta del cliente o cualquier otra integración de línea de tiempo que haya configurado.
 
 > [!NOTE]
 >
@@ -54,7 +56,7 @@ La API en tiempo real le permite publicar una nueva actividad desde su sistema d
 
 Hay dos formas de conectar con la API de tiempo real:
 
-- [indirectamente](#connect-via-the-dynamics-365-customer-insights-connector), utilizando el [conector de Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirectamente](#connect-via-the-dynamics-365-customer-insights-connector), utilizando el [conector de Dynamics 365 Customer Insights](/connectors/customerinsights/)
 - [directamente](#connect-directly-to-the-real-time-api), con código
 
 Ambas formas comparten los siguientes requisitos previos:
@@ -66,13 +68,13 @@ Ambas formas comparten los siguientes requisitos previos:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Conectarse a través del conector de Dynamics 365 Customer Insights
 
-La API en tiempo real puede ingerir datos de un conector de Power Platform exclusivo, el [conector de Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), sin la necesidad de escribir e implementar ningún código.    
-El conector puede realizar las mismas acciones en tiempo real que la API. Necesita una licencia válida para conectores premium. Para obtener más información, consulte [Preguntas más frecuentes sobre licencias de Power Apps y Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+La API en tiempo real puede ingerir datos de un conector de Power Platform exclusivo, el [conector de Dynamics 365 Customer Insights](/connectors/customerinsights/), sin la necesidad de escribir e implementar ningún código.    
+El conector puede realizar las mismas acciones en tiempo real que la API. Necesita una licencia válida para conectores premium. Para obtener más información, consulte [Preguntas más frecuentes sobre licencias de Power Apps y Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- [Power Apps o Power Automate](https://docs.microsoft.com/connectors/) de Power Platform
-- [Aplicaciones lógicas](https://docs.microsoft.com/azure/connectors/apis-list) de Azure
+- [Power Apps o Power Automate](/connectors/) de Power Platform
+- [Aplicaciones lógicas](/azure/connectors/apis-list) de Azure
 
-Para obtener detalles sobre la creación de flujos, consulte la [documentación de Power Automate](https://docs.microsoft.com/power-automate/).
+Para obtener detalles sobre la creación de flujos, consulte la [documentación de Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Conectarse directamente a la API en tiempo real
 
@@ -83,6 +85,7 @@ Los detalles de esta API, incluidos los parámetros y las respuestas, se pueden 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendar el uso en tiempo real con telemetría
 
-Obtenga una descripción general del volumen de solicitudes a la API de tiempo real e información sobre los problemas que puede encontrar el sistema. Puede [acceder a la telemetría en tiempo real](system.md#api-usage-tab) desde **Administración** > **Sistema** > **Uso de API**. En la tabla **Operaciones**, las filas para las operaciones de la API que utilizan los métodos en tiempo real contienen un botón para ver el uso de la API en tiempo real. El botón se visualiza con un símbolo de binoculares. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.
+Obtenga una descripción general del volumen de solicitudes a la API de tiempo real e información sobre los problemas que puede encontrar el sistema. Puede [acceder a la telemetría en tiempo real](system.md#api-usage-tab). 
 
-Utilice el selector **Agrupar por** para elegir cómo presentar mejor sus interacciones en tiempo real en una línea de tiempo que va desde las últimas 24 horas hasta los últimos 30 días. Puede agrupar los datos por método de API, nombre calificado de entidad (entidad ingerida), creado por (origen del evento), resultado (éxito o error) o códigos de error. Los datos están disponibles como gráfico del historial y como tabla.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

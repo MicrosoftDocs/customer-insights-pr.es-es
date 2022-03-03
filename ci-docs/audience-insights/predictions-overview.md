@@ -1,21 +1,19 @@
 ---
 title: Descripción general de los escenarios predicción admitidos
 description: Predicción escenarios y opciones cubiertos por la aplicación Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036030"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228265"
 ---
 # <a name="predictions-overview"></a>Vista preliminar de predicciones
 
@@ -24,15 +22,26 @@ Dynamics 365 Customer Insights viene con una variedad de opciones que aprovechan
 ## <a name="out-of-box-models"></a>Modelos listos para usar
 
 La forma más fácil de comenzar a predecir datos son los modelos predefinidos, a menudo denominados modelos listos para usar. Solo requieren ciertos datos y estructura para generar información rápidamente. Actualmente, están disponibles los siguientes modelos: 
-- [Valor de por vida del cliente](predict-customer-lifetime-value.md): predice los ingresos potenciales de un cliente durante toda la interacción con una empresa. 
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
+
+- [Valor de por vida del cliente](predict-customer-lifetime-value.md): predice los ingresos potenciales de un cliente durante toda la interacción con una empresa.
 - [Recomendación de producto](predict-product-recommendation.md): sugiere conjuntos de recomendaciones de productos predictivas basadas en el comportamiento de compra y los clientes con patrones de compra similares.
 - [Abandono de suscripción](predict-subscription-churn.md): predice si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía.
 - [Abandono transaccional](predict-transactional-churn.md): predice si un cliente ya no comprará sus productos o servicios en un determinado período de tiempo.
+- [Análisis de sentimiento](sentiment-analysis.md): analice el sentimiento de los comentarios de los clientes e identifique los aspectos comerciales que se mencionan con frecuencia.
+
+# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+
+- [Abandono transaccional](predict-transactional-churn.md): predice si un cliente ya no comprará sus productos o servicios en un determinado período de tiempo.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integración con Azure Machine Learning
 
 Si una organización ya usa escenarios Aprendizaje automático basados en experimentos Azure Machine Learning, la característica de modelos personalizados en Customer Insights ayuda a conectar los puntos. Cree flujos de trabajo que le ayudan a elegir los datos de los que desea generar información y asignar los resultados a sus perfiles de cliente unificado. Para más información, ver [Modelos personalizados de aprendizaje automático](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predicción AI Builder
+## <a name="ai-builder-prediction"></a>Predicción de AI Builder
 
 A veces, los conjuntos de datos están incompletos y faltan algunos valores. Customer Insights puede ayudar a predecir los valores perdidos para la entidad y los segmentos del Cliente. Para obtener más información, consulte [Complete sus datos parciales con predicciones](predictions.md).

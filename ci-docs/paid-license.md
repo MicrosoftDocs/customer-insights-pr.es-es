@@ -4,22 +4,21 @@ author: m-hartmann
 description: Familiarícese con la experiencia de primera ejecución en Dynamics 365 Customer Insights y explore sus capacidades.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645731"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350152"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Comenzar después de comprar Customer Insights
 
 Este artículo explica cómo dar sus primeros pasos en Dynamics 365 Customer Insights después de que su organización haya comprado una suscripción. Si desea adquirir Customer Insights, nuestras opciones de contacto se muestra en el [sitio web de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Tras adquirir una licencia de suscripción de Customer Insights, el administrador global del inquilino de Microsoft 365 recibirá un correo electrónico que le invitará a crear el entorno. 
+Después de comprar una licencia de suscripción para Customer Insights, el administrador global del inquilino de Microsoft 365 recibe un correo electrónico que lo invita a crear el entorno. 
 
 Customer Insights tiene licencia por inquilino e incluye múltiples capacidades. Puede comprar más capacidad y licencias para aumentar la cuota predeterminada. 
 - [Información general de precios](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ La experiencia de primera ejecución lo ayuda a elegir su enfoque inicial con Cu
 
 ## <a name="create-your-own-environment"></a>Crear su propio entorno
 
-Después de su primer inicio de sesión, verá un entorno con datos de ejemplo. Puede usar esos datos para explorar funciones y familiarizarse con la aplicación. Para utilizar sus propios datos, debe crear un entorno con la capacidad en la que desea trabajar.
-
-- [Crear un entorno en conclusiones del público.](audience-insights/get-started-paid.md)
-- [Crear un entorno en conclusiones sobre la interacción.](engagement-insights/create-new-environment.md) 
+Después de su primer inicio de sesión, verá un entorno con datos de ejemplo. Puede usar esos datos para explorar funciones y familiarizarse con la aplicación. Para usar sus propios datos, debe [crear un entorno](audience-insights/get-started-paid.md).
 
 
 

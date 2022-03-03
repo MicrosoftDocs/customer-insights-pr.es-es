@@ -1,24 +1,28 @@
 ---
 title: Completar datos parciales usando predicciones
 description: Utilice predicciones para completar datos incompletos del cliente.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645055"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354024"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Complete sus datos parciales con predicciones
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete sus datos parciales con predicciones (obsoleto)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Esta característica estará **obsoleta** a partir del **5 de noviembre de 2021**. Las implementaciones actuales seguirán funcionando hasta que se elimine la función, pero no podrá crear nuevas integraciones con las instrucciones a continuación.
 
 Las predicciones le permiten crear fácilmente valores de predicción que pueden mejorar su comprensión de un cliente. En la página **Inteligencia** > **Predicciones**, puede seleccionar **Mis predicciones** para ver las predicciones que ha configurado en otras partes de las informaciones de público y poder personalizarlas aún más.
 
@@ -60,6 +64,8 @@ Para obtener más información, consulte [Crear un nuevo entorno](create-environ
    > ![Ejemplo que muestra valores de campo asignados a categorías.](media/intelligence-categorymapping.png "Ejemplo que muestra valores de campo asignados a categorías")
 
 8. Seleccione **Listo** y se procesará la predicción. El procesamiento llevará algún tiempo, dependiendo del tamaño y la complejidad de los datos. Los resultados estarán disponibles en una nueva entidad basada en el **Nombre de entidad de salida** de la predicción que ha creado.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Crear una predicción al crear un segmento
 
@@ -110,7 +116,7 @@ Como parte de este flujo, elegirá un atributo específico en el que basar el se
 
 ## <a name="edit-a-prediction"></a>Editar una predicción
 
-Después de crear una predicción, puede personalizar el modelo en el AI Builder para aumentar la eficacia del modelo.  
+Después de crear una predicción, puede personalizar el modelo en el AI Builder para aumentar la eficacia de su modelo.  
 
 1. En las informaciones de público, vaya a **Inteligencia** > **Predicciones** > **Mis predicciones**.
 
@@ -125,7 +131,7 @@ Después de crear una predicción, puede personalizar el modelo en el AI Builder
 La siguiente ejecución de la predicción usará el modelo actualizado que ha creado.
 
 > [!NOTE]
-> Los nuevos modelos creados en AI Builder no se mostrarán en las informaciones de público a menos que el modelo se haya creado a partir de las experiencias enumeradas anteriormente.
+> Los nuevos modelos creados en el AI Builder no se mostrarán en los conocimientos de la audiencia a menos que el modelo se haya creado a partir de las experiencias indicadas anteriormente.
 
 ## <a name="remove-a-prediction"></a>Quitar una predicción
 

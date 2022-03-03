@@ -2,21 +2,23 @@
 title: Integrar datos web a partir de información sobre la participación con las informaciones de público
 description: Transmita información web sobre los clientes, desde la información sobre la participación hasta las informaciones de público.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2789a7d1379e0cf56511b272a763c904d8a3d347058ea9e029aaff0f723a028
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033790"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350566"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrar datos web a partir de información sobre la participación con las informaciones de público
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Los clientes suelen realizar sus transacciones diarias en línea a través de sitios web. La función de conocimientos sobre la interactuación (vista previa) en Dynamics 365 Customer Insights es una solución práctica para integrar los datos web como origen. Además de los datos transaccionales, demográficos o de comportamiento, podemos ver actividades en la web en perfiles de clientes unificados. Podemos usar estos perfiles para obtener conocimientos adicional como segmentos, medidas o predicciones para la activación de público.
 

@@ -1,104 +1,73 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 06/15/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304901"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354300"
 ---
-# <a name="manage-environments"></a>Administrar entornos
+# <a name="manage-environments"></a>Administrar ambientes
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Este artículo explica cómo crear una nueva organización y cómo aprovisionar un entorno.
 
-## <a name="sign-up-and-create-an-organization"></a>Registrarse y crear una organización
+## <a name="switch-environments"></a>Cambiar entornos
 
-1. Vaya al sitio web de [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+Seleccione el control **Entorno** en la esquina superior derecha de la página para cambiar entornos.
 
-2. Seleccione **Comenzar**.
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de pantalla del control para cambiar de entorno.":::
 
-3. Elija su escenario de registro preferido y seleccione el vínculo correspondiente.
+Los administradores pueden [crear](create-environment.md) y administrar entornos.
 
-4. Acepte los términos y condiciones y seleccione **Continuar** para empezar a crear la organización.
+## <a name="edit-an-existing-environment"></a>Editar un entorno existente
 
-5. Una vez creado el entorno, se le redirigirá a [Customer Insights](https://home.ci.ai.dynamics.com).
+Puede editar algunos de los detalles de los entornos existentes.
 
-6. Use el entorno de demostración para explorar la aplicación o cree un nuevo entorno siguiendo los pasos de la siguiente sección.
+1.  Seleccione el selector **Entorno** en el encabezado de la aplicación.
 
-7. Después de especificar la configuración del entorno, seleccione **Crear**.
+2.  Seleccione el icono de **Editar**.
 
-8. Iniciará sesión después de que el entorno se haya creado correctamente.
+3. En el cuadro **Editar entorno** puede actualizar la configuración del entorno.
 
-## <a name="create-an-environment-in-an-existing-organization"></a>Crear un entorno en una organización existente
+Para obtener más información sobre la configuración del entorno, consulte [Crear un nuevo entorno](create-environment.md).
 
-Hay dos formas de crear un entorno nuevo. Puede especificar una configuración completamente nueva o copiar algunos valores de configuración de un entorno existente.
+## <a name="connect-to-microsoft-dataverse"></a>Conectar con Microsoft Dataverse
+   
+El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse.
+
+Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización.
+
+> [!IMPORTANT]
+> Customer Insights y Dataverse tienen que estar en la misma región para permitir el intercambio de datos.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
 
 > [!NOTE]
-> Las organizaciones pueden crear *dos* entornos para cada licencia de Customer Insights. Si su organización compra más de una licencia, [contacte con nuestro equipo de soporte técnico](https://go.microsoft.com/fwlink/?linkid=2079641) para aumentar el número de entornos disponibles. Para obtener más información sobre la capacidad y la capacidad adicional, descargue la [Guía de licencias de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+> Customer Insights no admite los siguientes escenarios de uso compartido de datos:
+> - Si guarda todos los datos en su propio Azure Data Lake Storage, no podrá habilitar el uso compartido de datos con un lago de datos administrado por Dataverse.
+> - Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
 
-Para crear un entorno:
+## <a name="copy-the-environment-configuration"></a>Copiar el entorno de configuración
 
-1. Seleccione el selector **Entorno** en el encabezado de la aplicación.
+Al crear un entorno nuevo, puede optar por copiar la configuración de un entorno existente. 
 
-1. Seleccione **Nuevo**.
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Captura de pantalla de las opciones de configuración en la configuración del entorno.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Configuración del entorno](media/environment-settings-dialog.png).
-
-1. En cuadro de diálogo **Crear un entorno**, seleccione **Nuevo entorno**.
-
-   Si quiere [copiar datos del entorno actual](#considerations-for-copy-configuration-preview), seleccione **Copiar desde entorno existente**. Verá una lista de todos los entornos disponibles de su organización desde los que puede copiar datos.
-
-1. Especifique los detalles siguientes:
-   - **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo.
-   - **Tipo**: Seleccione si desea crear un entorno de producción o de espacio aislado.
-   - **Región**: la región en la que se implementa y hospeda el servicio.
-   
-1. De manera opcional, puede seleccionar **Configuración avanzada**:
-
-   - **Guardar todos los datos en**: Especifica dónde desea almacenar los datos de salida generados a partir de Customer Insights. Tendrá dos opciones: **Almacenamiento de Customer Insights** (Azure Data Lake administrado por el equipo de Customer Insights) y **Azure Data Lake Storage** (su propio Azure Data Lake Storage). De forma predeterminada, la opción de almacenamiento de Customer Insights está seleccionada.
-
-     > [!NOTE]
-     > Al guardar datos en Azure Data Lake Storage, acepta que los datos se transferirán a la ubicación geográfica adecuada y se almacenarán en ella para esa cuenta de almacenamiento de Azure, que puede ser distinta del lugar en el que se almacenan los datos en Dynamics 365 Customer Insights. [Obtenga más información en el Centro de confianza de Microsoft.](https://www.microsoft.com/trust-center)
-     >
-     > Actualmente, las entidades ingeridas siempre se almacenan en el lago de datos administrados de Customer Insights. 
-     > 
-     > Solo admitimos cuentas de Azure Data Lake Storage de la misma región de Azure que seleccionó al crear el entorno. 
-     > 
-     > Solo admitimos cuentas de Azure Data Lake Storage que tienen habilitado el espacio de nombres jerárquico.
-
-
-   - Para la opción Azure Data Lake Storage, puede elegir entre una opción basada en recursos y una opción basada en suscripción para la autenticación. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). El nombre del **Contenedor** no se puede cambiar y será `customerinsights`.
-   
-   - Si quiere usar [predicciones](predictions.md), configurar el uso compartido de datos con Microsoft Dataverse o habilitar la ingestión de datos en orígenes de datos locales, proporcione la dirección URL del entorno de Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
-
-     > [!NOTE]
-     > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
-     > - La [predicción de valores perdidos en una entidad](predictions.md) actualmente no se admite cuando habilita el uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse.
-
-     > [!div class="mx-imgBorder"]
-     > ![Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
-
-   Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Los archivos de datos y los archivos model.json se crearán y agregarán a carpetas según el nombre del proceso.
-
-   Si crea varios entornos de Customer Insights y elige guardar las entidades de salida de esos entornos en su cuenta de almacenamiento, se crearán carpetas separadas para cada entorno, con ci_<environmentid> en el contenedor.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Consideraciones para la configuración de copias (versión preliminar)
+Verá una lista de todos los entornos disponibles de su organización desde los que puede copiar datos.
 
 Se copian los siguientes valores de configuración:
 
-- Configuración de características
 - Fuentes de datos ingeridas e importadas
 - Configuración de unificación de datos (asignación, coincidencia, combinación)
 - Segmentos
@@ -112,48 +81,22 @@ Se copian los siguientes valores de configuración:
 - Administración de modelos
 - Asignaciones de roles
 
-Los siguientes valores de configuración *no* se copian:
+El flujo de datos *no* se copia:
 
 - Perfiles de clientes.
 - Credenciales del origen de datos. Debe especificar las credenciales para cada origen de datos y actualizar los orígenes de datos manualmente.
-- Orígenes de datos de la carpeta Common Data Model y el lago de datos gestionado de Dataverse. Tendrá que crear esos orígenes de datos manualmente con el mismo nombre que en el entorno de origen.
+
+- Orígenes de datos de la carpeta Common Data Model y el lago de datos administrado por Dataverse. Tendrá que crear esos orígenes de datos manualmente con el mismo nombre que en el entorno de origen.
 
 Al copiar un entorno, verá un mensaje de confirmación de que se ha creado el nuevo entorno. Seleccione **Ir a orígenes de datos** para ver la lista de orígenes de datos.
 
 Todos los orígenes de datos mostrarán un estado de **Credenciales necesarias**. Edite los orígenes de datos e introduzca las credenciales para actualizarlas.
 
-> [!div class="mx-imgBorder"]
-> ![Orígenes de datos copiados](media/data-sources-copied.png).
+:::image type="content" source="media/data-sources-copied.png" alt-text="Lista de orígenes de datos que se copiaron y necesitan autenticación.":::
 
 Después de actualizar los orígenes de datos, vaya a **Datos** > **Unificar**. Aquí encontrará configuraciones del entorno de origen. Edítelos si es necesario o seleccione **Ejecutar** para iniciar el proceso de unificación de datos y crear la entidad de cliente unificado.
 
 Cuando se haya completado la unificación de datos, vaya a **Medidas** y **Segmentos** para actualizarlos también.
-
-## <a name="edit-an-existing-environment"></a>Editar un entorno existente
-
-Puede editar algunos de los detalles de los entornos existentes.
-
-1.  Seleccione el selector **Entorno** en el encabezado de la aplicación.
-
-2.  Seleccione el icono de **Editar**.
-
-3. En el cuadro **Editar entorno**, puede actualizar la opción **Nombre para mostrar** del entorno, pero no puede cambiar **Región** o **Tipo**.
-
-4. Si un entorno está configurado para almacenar datos en Azure Data Lake Storage, puede actualizar la **Clave de cuenta**. Sin embargo, no puede cambiar el **Nombre de cuenta** o el nombre de **Contenedor**.
-
-5. Opcionalmente, puede actualizar desde una conexión basada en clave de cuenta a una conexión basada en recursos o basada en suscripción. Una vez actualizado, no puede volver a la clave de cuenta después de la actualización. Para más información, consulte [Conectar la información de público a una cuenta de Azure Data Lake Storage Gen2 con una entidad de servicio de Azure](connect-service-principal.md). No puede cambiar la información de **Contenido** al actualizar la conexión.
-
-6. Opcionalmente, puede proporcionar una dirección URL del entorno Microsoft Dataverse en **Configurar el uso compartido de datos con Microsoft Dataverse y habilitar funcionalidades adicionales**. Estas funcionalidades incluyen el uso compartido de datos con aplicaciones y soluciones basadas en Microsoft Dataverse, la ingesta de datos de orígenes datos locales, o el uso de [predicciones](predictions.md). Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de Data Lake gestionada de Microsoft Dataverse.
-
-   > [!NOTE]
-   > - El uso compartido de datos con una instancia de Data Lake gestionada de Microsoft Dataverse no se admite en estos momentos cuando almacene todos los datos en su propia instancia de Azure Data Lake Storage.
-   > - La [predicción de valores que faltan en una entidad](predictions.md) actualmente no es compatible cuando habilita el uso compartido de datos con Data Lake gestionada de Microsoft Dataverse.
-
-   Tras habilitar el uso compartido de datos con Microsoft Dataverse, comenzará una actualización completa de los orígenes de datos y otros procesos. Si los procesos están actualmente en ejecución, no verá la opción para habilitar el uso compartido de datos con Microsoft Dataverse. Espere a que se completen esos procesos o cancelarlos para habilitar el uso compartido de datos. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
-   
-   Cuando ejecuta procesos, como la ingestión de datos o la creación de segmentos, las carpetas correspondientes se crearán en la cuenta de almacenamiento que especificó anteriormente. Los archivos de datos y los archivos model.json se crearán y agregarán a las subcarpetas respectivas, según el proceso que ejecute.
 
 ## <a name="reset-an-existing-environment"></a>Restablecimiento de un entorno existente
 

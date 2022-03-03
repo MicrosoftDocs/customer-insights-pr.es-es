@@ -1,20 +1,23 @@
 ---
-title: Asignar entidades para la unificación de datos
-description: Mapa de datos para crear perfiles de cliente unificados.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Asignar entidades y atributos para unificación de datos
+description: Seleccione entidades, atributos, claves principales y tipos semánticos para asignar datos al perfil de cliente unificado.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+ms.topic: tutorial
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407041"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354979"
 ---
 # <a name="map-entities-and-attributes"></a>Correlacionar entidades y atributos
 
@@ -35,14 +38,14 @@ Para obtener más información sobre el flujo general de unificación de datos, 
 3. Seleccione las entidades y atributos que desea utilizar en las fases *coincidencia* y *combinación*. Puede seleccionar los atributos requeridos individualmente de una entidad o incluir todos los atributos de una entidad seleccionando la casilla **Incluir todos los campos** en el nivel de entidad. Se recomienda seleccionar al menos dos entidades para beneficiarse del proceso de unificación de datos.
 
    > [!div class="mx-imgBorder"]
-   > ![Ejemplo de agregar entidades](media/data-manager-configure-map-add-entities-example.png "Ejemplo de agregar entidades")
+   > ![Ejemplo de agregar entidades.](media/data-manager-configure-map-add-entities-example.png "Ejemplo de agregar entidades")
 
    En este ejemplo, agregamos las entidades **eCommerceContactos** y **loyCustomers**. Al elegir estas entidades, puede obtener información sobre cuáles de los clientes comerciales en línea son miembros del programa de fidelización.
    
    Puede buscar palabras clave en todos los atributos y entidades para seleccionar los atributos necesarios que desea asignar.
    
      > [!div class="mx-imgBorder"]
-   > ![Ejemplo de campos de búsqueda](media/data-manager-configure-map-search-fields-example.png "Ejemplo de campos de búsqueda")
+   > ![Ejemplo de campos de búsqueda.](media/data-manager-configure-map-search-fields-example.png "Ejemplo de campos de búsqueda")
 
 4. Seleccione **Aplicar** para confirmar sus selecciones.
 
@@ -55,7 +58,7 @@ Después de seleccionar sus entidades, la página **Mapa** enumera las entidades
 - **Tipo semántico de atributo**: Categorías de los atributos, como dirección de correo electrónico o nombre. Para usar modelos de IA para predicción inteligente de semántica, ahorrar tiempo y mejorar la precisión, configure **Asignación inteligente** a **Activada**. La asignación inteligente destaca la recomendación de semántica basada en IA en el campo **Tipo**. Si lo configura en **Desactivado**, verá nuestras recomendaciones de asignación regular. Puede seleccionar cualquier tipo semántico de la lista de opciones disponibles y anular la selección sugerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipo de atributo y predicción de semántica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo y predicción de semántica")
+> ![Tipo de atributo y predicción de semántica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo y predicción de semántica")
 
 También es posible agregar un tipo semántico personalizado. Seleccione el campo de tipo para un atributo y escriba el nombre de tipo semántico personalizado. De esta forma, también puede cambiar los tipos de atributos que el sistema identificó.
 
@@ -64,7 +67,7 @@ Todos los atributos para los que se identifica automáticamente un tipo semánti
 Los atributos que no se asignan automáticamente a un tipo semántico se agrupan en la sección **Definir los datos en los campos sin asignar**. Seleccione el campo de tipo semántico para los atributos sin asignar, o introduzca su nombre de tipo de atributo personalizado.
 
 > [!div class="mx-imgBorder"]
-> ![Clave principal y tipo de atributo](media/data-manager-configure-map-add-attributes.png "Clave principal y tipo de atributo")
+> ![Clave principal y tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Clave principal y tipo de atributo")
 
 > [!NOTE]
 > Un campo se debe asignar al tipo semántico Person.FullName para completar el nombre del cliente en la tarjeta del cliente. De lo contrario, las tarjetas de cliente aparecerán sin nombre. 
@@ -76,7 +79,7 @@ Los atributos que no se asignan automáticamente a un tipo semántico se agrupan
 2. En el panel **Editar campos**, agregue o quite atributos y entidades. Utilice la búsqueda o desplácese para buscar y seleccionar sus atributos y entidades de interés. No puede eliminar un atributo o una entidad si ya se han asociado.
 
    > [!div class="mx-imgBorder"]
-   > ![Agregar o quitar atributos](media/configure-data-map-edit.png "Agregar o quitar atributos")
+   > ![Agregar o quitar atributos.](media/configure-data-map-edit.png "Agregar o quitar atributos")
 
 3. Seleccione **Aplicar**.
 
@@ -94,11 +97,14 @@ Continúe con los pasos de unificación y asegúrese de que el atributo que cont
 
 Para las organizaciones (versión preliminar), el tipo de atributo debe asignarse a "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Clave principal y tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Clave principal y tipo de atributo B2B")
+> ![Tipo de atributo y clave principal B2B.](media/configure-data-map-edit-b2b.png "Tipo de atributo y clave principal B2B.")
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-step"></a>Siguiente paso
 
 Como parte del proceso de unificación de datos, vaya a la página **Coincidencia**. Visite [**Coincidencia**](match-entities.md) para obtener información sobre esta fase.
 
 > [!TIP]
 > Mira el siguiente video: [Primeros pasos: crear un perfil de cliente unificado](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

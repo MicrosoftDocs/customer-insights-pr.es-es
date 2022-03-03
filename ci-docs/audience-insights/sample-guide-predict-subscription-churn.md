@@ -3,20 +3,22 @@ title: Guía de ejemplo de predicción de abandono de suscripción
 description: Utilice esta guía de muestra para probar el modelo de predicción de cancelación de suscripción de uso inmediato.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306324"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355634"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de abandono de suscripción (versión preliminar)
+# <a name="subscription-churn-prediction-sample-guide"></a>Guía de ejemplo de predicción de abandono de suscripción
 
 Le explicaremos un ejemplo completo de predicción de cancelación de suscripción utilizando los datos de muestra que se proporcionan a continuación. 
 
@@ -31,7 +33,7 @@ Contoso es una empresa que produce café y máquinas de café de alta calidad, q
 
 ## <a name="task-1---ingest-data"></a>Tarea 1: ingerir datos
 
-Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
+Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir datos de clientes de una plataforma de comercio electrónico
 
@@ -168,7 +170,7 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarea 3: configurar la predicción de abandono de suscripciones
 
-Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de cancelación de suscripción (versión preliminar)](predict-subscription-churn.md). 
+Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de abandono de suscripciones](predict-subscription-churn.md). 
 
 1. Vaya a **Inteligencia** > **Descubrir** y seleccione usar el **Modelo de abandono de clientes**.
 

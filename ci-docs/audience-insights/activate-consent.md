@@ -2,19 +2,18 @@
 title: Activar reglas de consentimiento para segmentos
 description: Siga estos pasos para vincular los datos de consentimiento y activar las verificaciones de consentimiento en audiencia insights. Un administrador también puede deshabilitar las verificaciones de consentimiento.
 ms.date: 11/12/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 4b55c82229b1a6189c0dd67d145386344286df8a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884095"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227514"
 ---
 # <a name="activate-consent-rules"></a>Activar reglas de consentimiento
 

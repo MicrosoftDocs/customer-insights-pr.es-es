@@ -2,19 +2,25 @@
 title: Configuración del sistema en las informaciones de público
 description: Más información sobre la configuración del sistema en la capacidad de informaciones de público de Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732391"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354254"
 ---
 # <a name="system-configuration"></a>Configuración del sistema
 
@@ -85,6 +91,10 @@ Seleccione el estado de un proceso para ver los detalles del progreso de todo el
 ## <a name="schedule-tab"></a>Pestaña Programación
 
 Utilice la pestaña **Programación** para programar actualizaciones automáticas de todos sus [orígenes de datos ingeridos](data-sources.md). Las actualizaciones automáticas ayudan a garantizar que las actualizaciones desde sus orígenes de datos se reflejan en sus perfiles de clientes unificados.
+
+> [!NOTE]
+> Los orígenes de datos gestionadas por usted se actualizan en sus propias programaciones. Para programar la actualización de los orígenes de datos gestionadas por usted, configure los ajustes de actualización en ese origen de datos específico desde la página **Orígenes de datos**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Configuración de actualización del flujo de datos de Power Platform.":::
 
 1. En las informaciones de público, vaya a **Administrador** > **Sistema** y seleccione la pestaña **Programación**.
 

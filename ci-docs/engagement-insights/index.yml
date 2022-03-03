@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Capacidad de conclusiones sobre involucración en Dynamics 365 Customer Insights (versión preliminar)
-summary: Recopile datos para sus sitios web. Comprenda las interacciones y el uso de los clientes en sus sitios, de forma interactiva. Utilice la profunda integración entre las conclusiones sobre la interacción y las conclusiones del público para enriquecer sus análisis de comportamiento en tiempo real con informes de perfil de cliente. Enriquezca los perfiles de los clientes con actividades web para obtener datos de comportamiento en tiempo real junto con datos relevantes de los clientes. Transforme su negocio para obtener valor inmediato de los datos de sus clientes.
+title: La versión preliminar de las conclusiones sobre la interacción finaliza
+summary: La versión preliminar de las conclusiones sobre la interacción de Dynamics 365 Customer Insights finalizaron el 15 de febrero de 2022. Este cambio significa que la experiencia de prueba de Customer Insights ya no incluye la posibilidad de crear embudos ni otras funcionalidades de informes. Le invitamos a explorar y evaluar las muchas otras características de Customer Insights, la plataforma de datos de clientes (CDP) de Microsoft. Póngase en contacto directamente con el equipo de su cuenta Microsoft si tiene preguntas sobre el fin de la versión preliminar de capacidades. Su equipo de cuentas le mantendrá al tanto de los próximos lanzamientos. Gracias."
 metadata:
   title: Documentación de las conclusiones sobre la involucración (versión preliminar)
   description: Centro de ayuda con enlaces clave para las conclusiones sobre la interacción.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494205"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350520"
 landingContent:
-- title: Acerca de
+- title: Ponerse en contacto
   linkLists:
   - linkListType: overview
     links:
-    - text: Beneficios de capacidad
-      url: overview.md
-    - text: Glosario de términos
-      url: glossary.md
-    - text: Características nuevas y actualizadas
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Incorporación
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Comenzar
-      url: get-started.md
-    - text: Crear un área de trabajo
-      url: create-workspace.md
-    - text: Instrumentar el sitio web
-      url: instrument-website.md
-- title: Ver y filtrar informes
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Ver informes
-      url: view-reports.md
-    - text: Ver informe de perfiles unificados
-      url: profile-reports.md
-    - text: Utilizar segmentos de audiencia para filtrar informes
-      url: integrate-audience-insights-segments.md
-- title: Analizar
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Crear informes de embudo
-      url: funnel-reports.md
-    - text: Analizar datos conductuales
-      url: curate-dimensions.md
-    - text: Crear informes personalizados
-      url: custom-reports.md
-    - text: Crear eventos refinados
-      url: refined-events.md
-    - text: Exportar eventos
-      url: export-events.md
-- title: Recursos de desarrollador
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Recursos de desarrollador
-      url: developer-resources.md
-    - text: Muestra de WebSDK
-      url: websdk-sample.md
-    - text: Escenarios SDK web avanzados
-      url: advanced-SDK-implementation.md
-    - text: Ejemplo de SDK de Android
-      url: get-started-android.md
-    - text: Ejemplo de SDK de iOS
-      url: get-started-ios.md
-- title: Administración
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Administrar entornos y áreas de trabajo
-      url: manage-environments-workspaces.md
-    - text: Conectarse a las conclusiones del público
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Gestionar cookies y consentimiento del usuario
-      url: user-consent-storage.md
-    - text: Eliminar y exportar datos personales
-      url: delete-export-personal-data.md
-    - text: Límites de servicio
-      url: ../service-limits.md
+    - text: Unirse a la comunidad de Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Comparta sus ideas
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Notificar un problema
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

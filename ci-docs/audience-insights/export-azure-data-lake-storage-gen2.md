@@ -1,43 +1,64 @@
 ---
 title: Exportar datos de Customer Insights a Azure Data Lake Storage Gen2
 description: Aprenda a configurar la conexión a Azure Data Lake Storage Gen2.
-ms.date: 02/04/2021
-ms.reviewer: sthe
-ms.service: customer-insights
+ms.date: 10/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477200"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231695"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Conector para Azure Data Lake Storage Gen2 (versión preliminar)
+# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportar lista de segmentos y otros datos a Azure Data Lake Storage Gen2 (versión preliminar)
 
-Almacene los datos de Customer Insights en Azure Data Lake Storage Gen2 o utilícelo para transferir los datos a otras aplicaciones.
+Almacene los datos de Customer Insights en una cuenta de Data Lake Storage Gen2 o utilícelo para transferir los datos a otras aplicaciones.
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Configure el conector para Azure Data Lake Storage Gen2
+## <a name="known-limitations"></a>Limitaciones conocidas
 
-1. En las informaciones del público, vaya a **Administrador** > **Destinos de exportación**.
+1. Para Azure Data Lake Storage Gen2 puede elegir entre [nivel de rendimiento estándar y rendimiento premium](/azure/storage/blobs/create-data-lake-storage-account) cuando crea una cuenta de almacenamiento para su lago de datos. Si elige el nivel de rendimiento Premium, seleccione los blobs de bloque premium como tipo de cuenta. 
 
-1. En **Azure Data Lake Storage Gen2**, seleccione **Configurar**.
 
-1. Asigne a su destino un nombre reconocible en el campo **Nombre para mostrar**.
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar la conexión con Azure Data Lake Storage Gen2 
+
+
+1. Vaya a **Administrador** > **Conexiones**.
+
+1. Seleccione **Agregar conexión** y elija **Azure Data Lake Gen2** para configurar la conexión.
+
+1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
+
+1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Especifique el **Nombre de la cuenta**, la **Clave de cuenta**, y el **Contenedor** para Azure Data Lake Storage Gen2.
-    - Para aprender a crear una cuenta de almacenamiento para usar con Azure Data Lake Storage Gen2, vea [Crear cuenta de almacenamiento](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Para obtener más información sobre cómo encontrar el nombre de la cuenta de almacenamiento y la clave de la cuenta de Azure Data Lake Gen2, consulte [Administrar la configuración de la cuenta de almacenamiento en Azure Portal](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Para aprender a crear una cuenta de almacenamiento para usar con Azure Data Lake Storage Gen2, vea [Crear cuenta de almacenamiento](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Para obtener más información sobre cómo encontrar el nombre y la clave de la cuenta de Azure Data Lake Storage Gen2, consulte [Administrar la configuración de la cuenta de almacenamiento en Azure Portal](/azure/storage/common/storage-account-manage).
 
-1. Seleccione **Siguiente**.
+1. Seleccione **Guardar** para completar la conexión. 
+
+## <a name="configure-an-export"></a>Configurar una exportación
+
+Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+
+1. Vaya a **Datos** > **Exportaciones**.
+
+1. Para crear una nueva exportación, **Agregar exportación**.
+
+1. En el campo **Conexión para exportación**, elija una conexión de la sección **Azure Data Lake**. Si no ve este nombre de sección, es que no hay conexiones de este tipo disponibles para usted.
 
 1. Seleccione la casilla junto a cada una de las entidades que desea exportar a este destino.
 
 1. Seleccione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar los datos
+Guardar una exportación no ejecuta la exportación inmediatamente.
 
-Puede [exportar datos a petición](export-destinations.md#export-data-on-demand). La exportación también se ejecutará con cada [actualización programada](system.md#schedule-tab).
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
+
+Los datos exportados se almacenan en el contenedor de almacenamiento de Azure Data Lake Storage Gen2 que configuró. 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

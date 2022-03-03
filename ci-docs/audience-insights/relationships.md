@@ -1,20 +1,32 @@
 ---
 title: Relaciones entre entidades y rutas de entidades
 description: Cree y administre relaciones entre entidades de múltiples fuentes de datos.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171185"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355726"
 ---
 # <a name="relationships-between-entities"></a>Relaciones entre entidades
 
@@ -68,6 +80,20 @@ La relación consiste en una *entidad fuente* que contiene la clave externa y un
 
 4. Seleccione **Guardar** para crear la relación personalizada.
 
+## <a name="set-up-account-hierarchies"></a>Configurar jerarquías de cuenta
+
+Los entornos que están configurados para usar cuentas de negocio como público de destino principal pueden configurar jerarquías de cuentas para cuentas comerciales relacionadas. Por ejemplo, una empresa que tiene unidades de negocio independientes. 
+
+Las organizaciones crean jerarquías de cuentas para administrar mejor las cuentas y sus relaciones entre sí. La capacidad de conclusiones del público admite jerarquías de cuentas primarias-secundarias que ya existen en los datos de clientes ingeridos. Por ejemplo, cuentas de Dynamics 365 Sales. Estas jerarquías se pueden configurar en la página **Relaciones** en conclusiones del público, en la pestaña de jerarquía de cuentas.
+
+1. Vaya a **Datos** > **Relaciones**.
+1. Seleccione la pestaña **Jerarquía de cuenta**.
+1. Seleccione **Nueva jerarquía de cuenta**. 
+1. En el panel **Jerarquía de cuentas**, proporcione un nombre para la jerarquía. El sistema crea un nombre para la entidad de salida. Puede modificar el nombre de la entidad de nombre de salida.
+1. Seleccione la entidad que contiene la jerarquía de cuentas. Suele estar en la misma entidad que contiene las cuentas.
+1. Seleccione el **ID de cuenta** y el **Id. de cuenta primaria** de la entidad seleccionada 
+1. Seleccione **Guardar** para aplicar la configuración y finalizar la jerarquía de cuentas.
+
 ## <a name="view-relationships"></a>Vista de relaciones
 
 La página Relaciones enumera todos los Relaciones que se han creado. Cada fila representa una relación, que también incluye detalles sobre la entidad de origen, la entidad de destino y la cardinalidad. 
@@ -82,7 +108,7 @@ Esta página ofrece un conjunto de opciones para relaciones existentes y nuevas:
 
 ### <a name="explore-the-relationship-visualizer"></a>Explore el visualizador de relaciones
 
-El visualizador de relaciones muestra un diagrama de red de relaciones existente entre entidades conectadas y su cardinalidad.
+El visualizador de relaciones muestra un diagrama de red de relaciones existente entre entidades conectadas y su cardinalidad. También visualiza la ruta de la relación.
 
 Para personalizar la vista, puede cambiar la posición de los cuadros arrastrándolos en el lienzo.
 
@@ -92,6 +118,56 @@ Opciones disponibles:
 - **Exportar como imagen**: guarda la vista actual como un archivo de imagen.
 - **Cambiar a diseño horizontal / vertical**: cambia la alineación de las entidades y relaciones.
 - **Editar**: actualiza las propiedades de relaciones personalizadas en el panel de edición y guarda los cambios.
+
+## <a name="relationship-paths"></a>Rutas de relación
+
+Una ruta de relación describe las entidades que están conectadas con Relaciones entre una entidad de origen y una entidad de destino. Se utiliza al crear un segmento o una medida que incluye otras entidades además de la entidad de perfil unificado y existen múltiples opciones para llegar a la entidad de perfil unificado. 
+
+Una ruta de relación informa al sistema sobre qué Relaciones acceder a la entidad de perfil unificado. Diferentes rutas de relación pueden producir resultados diferentes.
+
+Por ejemplo, la entidad *eCommerce_eCommercePurchases* tiene las siguientes relaciones con la entidad *Cliente* del perfil unificado:
+
+- eCommerce_eCommercePurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
+
+Una ruta de relación determina qué entidades puede usar al crear reglas para medidas o segmentos. La elección de la opción con la ruta de relación más larga probablemente producirá menos resultados porque los registros coincidentes deben ser parte de todas las entidades. En este ejemplo, un cliente debe haber comprado productos a través de comercio electrónico (eCommerce_eCommercePurchases) en un punto de venta (POS_posPurchases) y participar en nuestro programa de fidelización (loyaltyScheme_loyCustomers). Al elegir la primera opción, es probable que obtenga más resultados porque los clientes solo necesitan existir en una entidad adicional.
+
+### <a name="direct-relationship"></a>Relación directa
+
+Una relación se clasifica como **relación directa** cuando una entidad fuente se relaciona con una entidad objetivo con una sola relación.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchases* se conecta a una entidad objetivo *eCommerce_eCommerceContacts* a través de *ContactId* solo, es una relación directa.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="La entidad de origen se conecta directamente a la entidad de destino.":::
+
+#### <a name="multi-path-relationship"></a>Relación de múltiples rutas
+
+Una **relación de múltiples rutas** es un tipo especial de relación directa que conecta una entidad de origen con más de una entidad de destino.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchases* se relaciona con dos entidades objetivo, ambas *eCommerce_eCommerceContacts* y *loyaltyScheme_loyCustomers*, es una relación de múltiples rutas.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="La entidad de origen se conecta directamente a más de una entidad de destino a través de una relación de varios saltos.":::
+
+### <a name="indirect-relationship"></a>Relación indirecta
+
+Una relación se clasifica como **relación indirecta** cuando una entidad fuente se relaciona con una o más entidades adicionales antes de relacionarse con una entidad de destino.
+
+#### <a name="multi-hop-relationship"></a>Relación de múltiples saltos
+
+Una *relación de varios saltos* es una *relación indirecta* que le permite conectar una entidad de origen a una entidad de destino a través de una o más entidades intermediarias.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchasesWest* se conecta a una entidad intermedia llamada *eCommerce_eCommercePurchasesEast* y luego se conecta a una entidad de destino llamada *eCommerce_eCommerceContacts*, es una relación de varios saltos.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="La entidad de origen se conecta directamente a una entidad de destino con una entidad intermedia.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relación de múltiples saltos y rutas
+
+Las relaciones de múltiples saltos y rutas se pueden usar juntas para crear **relaciones de múltiples saltos y rutas**. Este tipo especial combina las funciones de las relaciones de **múltiples saltos** y **múltiples rutas**. Le permite conectarse a más de una entidad de destino mientras usa entidades intermedias.
+
+Por ejemplo, si una entidad de actividad llamada *eCommerce_eCommercePurchasesWest* se conecta a una entidad intermedia llamada *eCommerce_eCommercePurchasesEast* y luego se conecta a una entidad de destino llamada *eCommerce_eCommerceContacts* y *loyaltyScheme_loyCustomers*, es una relación de varias rutas y saltos.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="La entidad de origen se conecta directamente a una entidad de destino y se conecta a otra entidad de destino a través de una entidad intermedia.":::
 
 ## <a name="manage-existing-relationships"></a>Administrar las relaciones existentes 
 
@@ -105,6 +181,6 @@ Seleccione una relación y elija una de las siguientes opciones:
 
 ## <a name="next-step"></a>Siguiente paso
 
-Las relaciones del sistema y personalizadas se utilizan para [crear segmentos](segments.md) basados en varios orígenes de datos que ya no están en desconectados.
+El sistema y las relaciones personalizadas se usan para [crear segmentos](segments.md) y [medidas](measures.md) basándose en múltiples orígenes de datos que ya no están aislados.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

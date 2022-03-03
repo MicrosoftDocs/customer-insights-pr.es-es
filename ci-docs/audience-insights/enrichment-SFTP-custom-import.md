@@ -3,18 +3,17 @@ title: Enriquecimiento con importación personalizada SFTP
 description: Información general sobre el enriquecimiento de importación personalizada SFTP.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304671"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229659"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquezca los perfiles de los clientes con datos personalizados (versión preliminar)
 
@@ -45,6 +44,8 @@ Para configurar la importación personalizada de SFTP, se deben cumplir los sigu
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de pantalla al especificar la ubicación de los datos.":::
 
+1. Seleccione **Siguiente** y elija el cliente conjunto de datos. Puede ser todos los perfiles de clientes o un segmento.
+
 1. Seleccione **Siguiente** y proporcione un nombre para el enriquecimiento y un nombre para la entidad de salida. 
 
 1. Seleccione **Guardar enriquecimiento** después de revisar sus opciones.
@@ -64,7 +65,7 @@ Debe ser un administrador para configurar las conexiones. Seleccione **Agregar c
 1. Una vez que se ha completado la verificación, la conexión se puede guardar seleccionando **Guardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Página de configuración de conexión de Experian](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian").
+   > ![Página de configuración de conexión de Experian.](media/enrichment-SFTP-connection.png "Página de configuración de conexión de Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definición de asignaciones de campos 
@@ -123,6 +124,6 @@ Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **V
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md) y [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para brindar experiencias personalizadas a sus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

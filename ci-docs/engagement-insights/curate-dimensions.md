@@ -2,18 +2,17 @@
 title: Usar dimensiones demográficas para dividir datos de comportamiento (dimensiones mantenidas)
 description: Use dimensiones mantenidas de perfil unificado para habilitar las propiedades de perfil de cliente de conclusiones del público.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461124"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233068"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Usar dimensiones demográficas para dividir datos de comportamiento
 
@@ -29,7 +28,7 @@ Mediante el uso de dimensiones demográficas de perfil unificado, los usuarios d
 - Un entorno de conclusiones sobre la interacción en el que tiene datos de perfil de cliente vinculados al entorno de conclusiones del público donde se crean los perfiles de cliente. Para más información: [Crear un vínculo entre las conclusiones del público y las conclusiones sobre la interacción](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Después de crear un vínculo entre los entornos de conclusiones del público y conclusiones sobre la interacción, es posible que solo desee datos específicos de las propiedades del perfil del cliente, que pueden ser útiles como dimensiones en conclusiones sobre la interacción. Para obtener más información, vaya a [Habilitar atributos y segmentos del perfil unificado de conclusiones del público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Después de crear un vínculo entre los entornos de conclusiones del público y conclusiones sobre la interacción, es posible que solo desee datos específicos de las propiedades del perfil del cliente, que pueden ser útiles como dimensiones en conclusiones sobre la interacción. Para obtener más información, vaya a [Habilitar atributos y segmentos del perfil unificado de conclusiones del público](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crear un nuevo informe personalizado
 

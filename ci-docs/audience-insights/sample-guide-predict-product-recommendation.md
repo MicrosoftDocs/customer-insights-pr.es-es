@@ -3,20 +3,23 @@ title: Guía de ejemplo de predicción de recomendaciones de producto
 description: Utilice esta guía de ejemplo para probar el modelo de predicción de recomendaciones de producto predefinida.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129920"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354668"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de recomendaciones de producto (versión preliminar)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guía de ejemplo de predicción de recomendaciones de producto
 
 Le explicaremos un ejemplo completo de predicción de recomendaciones de producto utilizando los datos de muestra que se proporcionan a continuación.
 
@@ -31,7 +34,7 @@ Contoso es una empresa que produce café y máquinas de café de alta calidad, q
 
 ## <a name="task-1---ingest-data"></a>Tarea 1: ingerir datos
 
-Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general.
+Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir datos de clientes de una plataforma de comercio electrónico
 
@@ -105,9 +108,9 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-2. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
+2. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
 
-3. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
+3. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
 
    ![Unifique la coincidencia de comercio electrónico y fidelización.](media/unify-match-order.png)
 
@@ -115,8 +118,8 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 5. Agregue su primera condición con FullName.
 
-   - Para eCommerceContacts seleccione **FullName** en la lista desplegable.
-   - Para loyCustomers, seleccione **FullName** en la lista desplegable.
+   - Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
+   - Para loyCustomers, seleccione **FullName** en el menú desplegable.
    - Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
    - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 

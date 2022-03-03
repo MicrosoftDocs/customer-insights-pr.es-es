@@ -2,18 +2,17 @@
 title: Usar segmentos de conclusiones del público para filtrar informes de conclusiones sobre la interacción
 description: Use los segmentos de conclusiones del público en los análisis interactivos de los datos de comportamiento capturados por las conclusiones sobre la interacción en el sitio web de un cliente.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bdd5641bb17384725491f22f70ae967ad90b1696
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 9c8c7a1a9216e04ebee100c548afbc745af396ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461079"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230507"
 ---
 # <a name="use-audience-insights-segments-to-filter-engagement-insights-reports"></a>Usar segmentos de conclusiones del público para filtrar informes de conclusiones sobre la interacción
 

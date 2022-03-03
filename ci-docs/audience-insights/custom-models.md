@@ -3,18 +3,20 @@ title: Modelos personalizados de aprendizaje automático | Microsoft Docs
 description: Trabaje con modelos personalizados de Azure Machine Learning en Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881805"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355107"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -40,6 +42,8 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 
    > [!NOTE]
    > Los datos se transfieren entre sus instancias de Customer Insights y los servicios web o canalizaciones de Azure seleccionados en el flujo de trabajo. Al transferir datos a un servicio de Azure, asegúrese de que el servicio esté configurado para procesar los datos de la manera necesaria y en la ubicación necesaria a fin de su organización cumpla con los requisitos legales o normativos para esos datos.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Agregar un flujo de trabajo nuevo
 

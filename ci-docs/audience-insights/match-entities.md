@@ -1,8 +1,7 @@
 ---
 title: Asignar entidades para la unificación de datos
-description: Asocie entidades para combinar conjuntos de datos y crear perfiles de clientes unificados.
-ms.date: 02/23/2021
-ms.service: customer-insights
+description: Asignar entidades para crear perfiles de cliente unificados.
+ms.date: 02/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -11,12 +10,15 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+- ci-merge
+- ci-map
+- customerInsights
+ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648229"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355174"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -29,13 +31,7 @@ La página de coincidencias consta de tres secciones:
 
 ## <a name="specify-the-match-order"></a>Especifique el orden de coincidencia
 
-Vaya a **Datos** > **Unificar** > **Establecer coincidencia** y seleccione **Establecer orden** para iniciar la fase de coincidencia.
-
-Cada coincidencia unifica dos o más entidades en una sola entidad consolidada. Al mismo tiempo, mantiene registros de clientes únicos. Por ejemplo, seleccionamos dos entidades: **eCommerce:eCommerceContacts** como entidad primaria y **LoyaltyScheme:loyCustomers** como segunda entidad. El orden de las entidades especifica en qué orden el sistema intentará hacer coincidir los registros.
-
-:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla de la página Coincidir en el área Unificar del proceso de unificación de datos.":::
-  
-La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la siguiente entidad *LoyaltyScheme: loyCustomers*. El conjunto de datos que resulta del primer paso de coincidencia se empareja con la siguiente entidad si tiene más de dos entidades.
+Cada coincidencia unifica dos o más entidades en una sola entidad consolidada. Al mismo tiempo, mantiene registros de clientes únicos. El orden de coincidencia indica el orden en que el sistema intenta hacer coincidir los registros.
 
 > [!IMPORTANT]
 > La entidad que elige como entidad principal servirá de base para el conjunto de datos de perfiles unificado. Las entidades adicionales que se seleccionen durante la fase de coincidencia se agregarán a esta entidad. Esto no significa que la entidad unificada incluirá *todos* los datos incluidos en esta entidad.
@@ -45,7 +41,16 @@ La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la sigu
 > - Elija la entidad con los datos de perfil más completos y fiables sobre sus clientes como entidad principal.
 > - Elija la entidad que tiene varios atributos en común con otras entidades (por ejemplo, nombre, número de teléfono o dirección de correo electrónico) como entidad principal.
 
-Después de especificar el orden de coincidencia, verá los pares de coincidencias definidos en la sección **Detalles de registros coincidentes** en **Datos** > **Unificar** > **Coincidencia**. Las métricas clave estarán vacías hasta que se complete el proceso de coincidencia.
+1. Vaya a **Datos** > **Unificar** > **Establecer coincidencia** y seleccione **Establecer orden** para iniciar la fase de coincidencia.
+1. Seleccione **Orden de la entidad**. Por ejemplo, seleccione **eCommerce:eCommerceContacts** como entidad principal y **LoyaltyScheme:loyCustomers** como entidad secundaria. 
+1. Para tener cada registro en la entidad como un cliente único y que coincida con todas las siguientes entidades, seleccione **Incluir todos**.
+1. Seleccione **Listo**. 
+
+Después de especificar el orden de coincidencia, los pares de coincidencia definidos se muestran en la sección **Detalles de registros coincidentes** en **Datos** > **Unificar** > **Coincidir**. Las métricas clave están vacías hasta que se completa el proceso de coincidencia.
+
+:::image type="content" source="media/match-page.png" alt-text="Captura de pantalla de la página Coincidir en el área Unificar del proceso de unificación de datos.":::
+  
+La entidad primaria *eCommerce: eCommerceContacts* se hace coincidir con la siguiente entidad *LoyaltyScheme: loyCustomers*. El conjunto de datos que resulta del primer paso de coincidencia se compara con la siguiente entidad si tiene más de dos entidades.
 
 ## <a name="define-rules-for-match-pairs"></a>Definir reglas para los pares de coincidencias
 
@@ -55,7 +60,7 @@ La advertencia **Necesita reglas** junto al nombre de una entidad sugiere que no
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Captura de pantalla de la sección Detalles de registros coincidentes con control para agregar reglas resaltadas.":::
 
-1. Seleccione **Agregar reglas** bajo una entidad en la sección **Detalles de registros coincidentes** para definir las reglas de coincidencia.
+1. Seleccione **Añadir regla** en una entidad en la sección **Detalles de registros coincidentes** para definir las reglas de coincidencia.
 
 1. En el panel **Crear regla**, configure las condiciones para la regla.
 
@@ -66,15 +71,15 @@ La advertencia **Necesita reglas** junto al nombre de una entidad sugiere que no
    - **Entidad / Campo (segunda fila)**: elija un atributo que se relacione con el atributo de la entidad especificada en la primera fila.
 
    - **Normalizar**: seleccione entre las siguientes opciones de normalización para los atributos seleccionados. 
-     - Espacio en blanco: elimina todos los espacios. *Hola Mundo* se convierte en *HolaMundo*.
+     - Números: convierte otros sistemas numéricos, como números romanos, en números arábigos. *VIII* se convierte en *8*.
      - Símbolos: elimina todos los símbolos y caracteres especiales. *Cabeza&hombros* se convierte en *Cabezahombros*.
      - Texto a minúsculas: convierte todos los caracteres a minúsculas. *TODAS LAS MAYÚSCULAS y el título* se convierte en *todas las mayúsculas y el título*.
+     - Tipo (Teléfono, Nombre, Dirección, Organización): estandariza nombres, títulos, números de teléfono, direcciones, etc. 
      - Unicode a ASCII: convierte la notación Unicode en caracteres ASCII. */u00B2* se convierte en *2*.
-     - Números: convierte otros sistemas numéricos, como números romanos, en números arábigos. *VIII* se convierte en *8*.
-     - Tipos semánticos: estandariza nombres, títulos, números de teléfono, direcciones, etc. 
+     - Espacio en blanco: elimina todos los espacios. *Hola Mundo* se convierte en *HolaMundo*.
 
    - **Precisión**: establece el nivel de precisión que se aplicará a esta condición. 
-     - **Básico**: se escoge entre *Bajo*, *Medio*, *Alto*, y *Exacto*. Seleccione **Exacto** para hacer coincidir solo los registros que coinciden al 100 por ciento. Seleccione uno de los otros niveles para que coincidan los registros que no son 100 por ciento idénticos.
+     - **Básico**: se escoge entre *Bajo*, *Medio*, *Alto*, y *Exacto*. Seleccione **Exacto** para hacer coincidir solo los registros que coincidan al 100 por ciento. Seleccione uno de los otros niveles para que coincidan los registros que no son 100 por ciento idénticos.
      - **Personalizado**: establezca el porcentaje con el que los registros deben coincidir. El sistema solo hará coincidir los registros que superen este umbral.
 
 1. Especifique un **Nombre** para la regla.
@@ -97,7 +102,7 @@ Para hacer coincidir entidades solo si los atributos cumplen varias condiciones,
 
 ### <a name="add-rules-to-a-match-pair"></a>Agregar reglas a un par de coincidencias
 
-Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coincidir entidades mediante condiciones basadas en varios atributos, agregue más reglas
+Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coincidir entidades mediante condiciones basadas en varios atributos, agregue más reglas.
 
 1.  Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Agregar regla** en la entidad a la que desea agregar reglas.
 
@@ -108,7 +113,7 @@ Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coin
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Cambiar el orden de las entidades en las reglas de coincidencia
 
-Puede reordenar las entidades para que las reglas de coincidencia cambien el orden en que se procesan. Se eliminarán las reglas que entren en conflicto debido a un cambio de orden. Tiene que volver a crear las reglas eliminadas con una configuración actualizada.
+Puede reordenar las entidades de las reglas de coincidencia para cambiar el orden en que se procesan. Se eliminarán las reglas que entren en conflicto debido a un cambio de orden. Tiene que volver a crear las reglas eliminadas con una configuración actualizada.
 
 1. Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Editar**.
 
@@ -122,7 +127,7 @@ Puede reordenar las entidades para que las reglas de coincidencia cambien el ord
 
 Además de [reglas de coincidencia entre entidades](#define-rules-for-match-pairs), también puede especificar reglas de deduplicación. *Deduplicación* es otro proceso al comparar registros. Identifica registros duplicados y los combina en un solo registro. Los registros de origen se vinculan al registro combinado con id. alternativos.
 
-Los registros desduplicados se utilizarán en el proceso de coincidencia entre entidades. La desduplicación tiene lugar en entidades individuales y se puede configurar cada entidad utilizada en pares de coincidencias.
+Los registros desduplicados se usan en el proceso de coincidencia entre entidades. La desduplicación tiene lugar en entidades individuales y se puede configurar para cada entidad utilizada en pares de coincidencias.
 
 No es obligatorio especificar reglas de desduplicación. Si no se configuran esas reglas, se aplican las reglas definidas por el sistema. Combinan todos los registros en un solo registro antes de pasar los datos de la entidad a la comparación entre entidades para mejorar el rendimiento.
 
@@ -130,17 +135,21 @@ No es obligatorio especificar reglas de desduplicación. Si no se configuran esa
 
 1. Vaya a **Datos** > **Unificar** > **Coincidencia**.
 
-1. En la sección **Duplicados fusionados**, seleccione **Establecer entidades**. En caso de que ya se hayan creado reglas de deduplicación, seleccione **Editar**.
+1. En la sección **Detalles de registros deduplicados**, seleccione **Establecer entidades**. En caso de que ya se hayan creado reglas de deduplicación, seleccione **Editar**.
 
 1. En el panel **Preferencias de fusión**, elija las entidades en las que desea ejecutar la deduplicación.
 
-1. Especifique cómo combinar los registros duplicados y elija una de las tres opciones:
-   - **Más lleno**: identifica el registro con la más campos de atributo rellenados como el registro ganador. Es la opción de combinación predeterminada.
-   - **Más reciente**: identifica el registro ganador basado en el más reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
-   - **Menos reciente**: identifica el registro ganador basado en el menos reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
+   1. Especifique cómo combinar los registros duplicados y elija una de las tres opciones:
+      - **Más lleno**: identifica el registro con la más campos de atributo rellenados como el registro ganador. Es la opción de combinación predeterminada.
+      - **Más reciente**: identifica el registro ganador basado en el más reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
+      - **Menos reciente**: identifica el registro ganador basado en el menos reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
+
+   1. Opcionalmente, seleccione **Avanzado** para definir reglas de deduplicación en atributos individuales de una entidad. Por ejemplo, puede optar por mantener el correo electrónico más reciente Y la dirección más completa de diferentes registros. Expanda la entidad para ver todos sus atributos y defina qué opción usar para atributos individuales. Si elige una opción basada en la antigüedad, también debe especificar un campo de fecha/hora que defina la antigüedad. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Paso 1 de reglas de desduplicación.](media/match-selfconflation.png "Paso 1 de reglas de desduplicación")
+      > [!div class="mx-imgBorder"]
+      > ![Paso 1 de reglas de desduplicación.](media/match-selfconflation.png "Paso 1 de reglas de desduplicación")
+
+   1. Seleccione **Hecho** para aplicar sus preferencias de combinación para la desduplicación.
  
 1. Una vez que se seleccionan las entidades y se establece su preferencia de fusión, seleccione **Agregar regla** para definir las reglas de deduplicación a nivel de entidad.
    - **Seleccionar campo** enumera todos los campos disponibles de esa entidad. Elija el campo en el que desea verificar si hay duplicados. Elija campos que probablemente sean únicos para cada cliente. Por ejemplo, una dirección de correo electrónico o la combinación de nombre, ciudad y número de teléfono.
@@ -158,7 +167,7 @@ No es obligatorio especificar reglas de desduplicación. Si no se configuran esa
 
 1. Cualquier regla de coincidencia personalizada definida sobrescribe las reglas de deduplicación. Si una regla de desduplicación identifica registros coincidentes y se establece una regla de coincidencia personalizada para no hacer coincidir nunca esos registros, estos dos registros no coincidirán.
 
-1. Después de [ejecutar el proceso de coincidencia](#run-the-match-process), verá las estadísticas de deduplicación en el mosaico de métricas clave.
+1. Tras [ejecutar el proceso de coincidencia](#run-the-match-process), verá las estadísticas de deduplicación en los mosaicos de métricas clave.
 
 ### <a name="deduplication-output-as-an-entity"></a>Resultado de la desduplicación como entidad
 
@@ -180,10 +189,7 @@ Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Ejecutar** par
 
 Encontrará el resultado de una ejecución exitosa, la entidad de perfil de cliente unificado, en la página **Entidades**. Su entidad cliente unificada se llama **Clientes** en la sección **Perfiles**. La primera ejecución de coincidencia exitosa crea la entidad unificada *Cliente*. Todas las ejecuciones de coincidencias posteriores expanden esa entidad.
 
-> [!TIP]
-> Después de ejecutar el proceso de detección de coincidencia, seleccione el estado del proceso para abrir el panel **Detalles de la tarea**. Ofrece una descripción general sobre el tiempo de procesamiento, la última fecha de procesamiento y todos los errores y advertencias asociados con la tarea. Seleccione **Ver detalles** para ver qué entidades participaron en el proceso de coincidencia, qué reglas se les aplicaron y si las actualizaciones se publicaron correctamente.  
-> Existen [seis tipos de estado](system.md#status-types) para tareas/procesos. Además, la mayoría de los procesos [dependen de otros procesos posteriores](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Ruta de exploración en profundidad para acceder a los detalles del proceso desde el vínculo de estado de la tarea.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Revisar y validar las coincidencias
 
@@ -225,19 +231,42 @@ Puede reconfigurar y ajustar la mayoría de los parámetros de coincidencia.
 
 - **Elimine una regla** seleccionando el símbolo **Eliminar**.
 
-## <a name="specify-custom-match-conditions"></a>Especificar condiciones de coincidencia personalizadas
+## <a name="advanced-options"></a>Opciones avanzadas
 
-Puede especificar condiciones que determinados registros siempre o nunca deben coincidir. Estas reglas se pueden cargar para anular el proceso de coincidencia estándar. Por ejemplo, si hay John Doe I y John Doe II en nuestros registros, el sistema podría compararlos como una sola persona. Las reglas de coincidencia personalizadas le permiten especificar que sus perfiles se refieren a diferentes personas. 
+### <a name="add-exceptions-to-a-rule"></a>Agregar excepciones a una regla
+
+En la mayoría de los casos, la coincidencia de entidades conduce a perfiles de usuario únicos con datos consolidados. Para abordar dinámicamente los casos excepcionales de falsos positivos y falsos negativos, puede definir excepciones para una regla de coincidencia. Las excepciones se aplican después de procesar las reglas de coincidencia y evitan la coincidencia de todos los registros que cumplen los criterios de excepción.
+
+Por ejemplo, si su regla de coincidencia combina apellido, ciudad y fecha de nacimiento, el sistema identificaría a los gemelos con el mismo apellido que viven en la misma ciudad que el mismo perfil. Puede especificar una excepción que no coincida con los perfiles si nombre de pila en las entidades que combina no son iguales.
+
+1. Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Editar** en la regla a la que desea agregar condiciones.
+
+1. En el panel **Editar regla**, seleccione **Añadir excepción**.
+
+1. Especifique los criterios de excepción. 
+
+1. Seleccione **Listo** para guardar la regla.
+
+### <a name="specify-custom-match-conditions"></a>Especificar condiciones de coincidencia personalizadas
+
+Puede especificar condiciones que anulen la lógica de coincidencia predeterminada. Existen cuatro opciones disponibles: 
+
+|Opción  |Description |Ejemplo  |
+|---------|---------|---------|
+|Coincidir siempre     | Define valores que siempre coinciden.         |  Siempre coincidir *Mike* y *MikeR*.       |
+|No coincidir nunca     | Define valores que nunca coinciden.        | Nunca coincidir *John* y *Jonathan*.        |
+|Omisión personalizada     | Define valores que el sistema siempre debe ignorar en la fase de coincidencia. |  Ignora los valores *11111* y *Desconocido* durante la coincidencia.        |
+|Asignación de alias    | Definición de valores que el sistema debe considerar como un mismo valor.         | Considerar *Joe* igual a *Joseph*.        |
 
 1. Vaya a **Datos** > **Unificar** > **Coincidencia** y seleccione **Coincidencia personalizada** en la sección **Detalles de registros coincidentes**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Captura de pantalla de la sección reglas de coincidencia con el control de personalizar coincidencia resaltado.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Captura de pantalla de la sección reglas de coincidencia con el control de personalizar coincidencia resaltado.":::
 
-1. Si no ha establecido reglas de coincidencia personalizadas, verá un panel nuevo **Coincidencia personalizada** con más detalles.
+1. En el panel **Personalizado**, vaya a la pestaña **Registros**.
 
-1. Seleccione **Rellene la plantilla** para obtener un archivo de plantilla que puede especificar qué registros de qué entidades siempre o nunca deben coincidir. Deberá rellenar por separado los registros de "coincidir siempre" y "coincidir nunca" en dos archivos diferentes.
+1. Elija la opción de coincidencia personalizada del menú desplegable **Tipo personalizado** y seleccione **Descargar plantilla**. Necesita una plantilla separada para cada opción de coincidencia.
 
-1. La plantilla contiene campos para especificar los valores de entidad y clave principal de la entidad que se utilizarán en la coincidencia personalizada. Por ejemplo, si desea una clave principal *12345* de la entidad *Ventas* para que siempre coincida con la clave principal *34567* de la entidad *Contacto*, complete la plantilla:
+1. Abra el archivo de plantilla descargado y complete los detalles. La plantilla contiene campos para especificar los valores de entidad y clave principal de la entidad que se utilizarán en la coincidencia personalizada. Por ejemplo, si desea una clave principal *12345* de la entidad *Ventas* para que siempre coincida con la clave principal *34567* de la entidad *Contacto*, complete la plantilla:
     - Entidad 1: Ventas
     - Entity1Key: 12345
     - Entity2: Contacto
@@ -247,26 +276,32 @@ Puede especificar condiciones que determinados registros siempre o nunca deben c
    
    Si desea especificar una coincidencia personalizada para la desduplicación en una entidad, proporcione la misma entidad como Entity1 y Entity2 y configure los diferentes valores de clave principal.
 
-1. Después de agregar todas las anulaciones que desea aplicar, guarde el archivo de plantilla.
+1. Después de agregar todas las modificaciones, guarde el archivo de plantilla.
 
-1. Vaya a **Datos** > **Orígenes de datos** e ingiera los archivos de plantilla como nuevas entidades. Una vez procesados, puede usarlos para especificar la configuración de coincidencia.
+1. Vaya a **Datos** > **Orígenes de datos** e ingiera los archivos de plantilla como nuevas entidades.
 
-1. Después de cargar los archivos y de que las entidades estén disponibles, seleccione la opción **Coincidencia personalizada** de nuevo. Verá opciones para especificar las entidades que desea incluir. Seleccione las entidades requeridas en el menú desplegable.
+1. Después de cargar los archivos y de que las entidades estén disponibles, seleccione la opción **Coincidencia personalizada** de nuevo. Verá opciones para especificar las entidades que desea incluir. Seleccione las entidades requeridas del menú desplegable y seleccione **Hecho**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de pantalla del cuadro de diálogo para elegir anulaciones para un escenario de partido personalizado.":::
 
-1. Seleccione las entidades que desea usar para **Coincidir siempre** y **No coincidir nunca**, seleccione **Listo**.
+1. La aplicación de la coincidencia personalizada depende de la opción de coincidencia que desee utilizar. 
+
+   - Para **Siempre coincidir** o **Nunca coincidir**, continúe con el siguiente paso.
+   - Para **Bypass personalizado** o **Asignación de alias**, seleccione **Editar** en una regla de coincidencia existente o cree una nueva regla. En el menú desplegable Normalizaciones, elija la opción **Bypass personalizado** o **Asignación de alias** y seleccione **Hecho**.
 
 1. Seleccione **Guardar** en la página **Coincidencia** para aplicar la configuración de coincidencia personalizada.
 
 1. Seleccione **Ejecutar** en la página **Coincidencia** para iniciar el proceso de coincidencia. Otras reglas de coincidencia especificadas se anulan mediante la configuración de coincidencia personalizada.
 
-> [!TIP]
-> Vaya a **Datos** > **Entidades** y revise la entidad **ConflationMatchPair** para confirmar que se aplican las anulaciones.
+#### <a name="known-issues"></a>Problemas conocidos
+
+- La autoconflación no muestra los datos normalizados en las entidades de deduplicación. Sin embargo, aplica la normalización internamente durante la deduplicación. Está diseñado para todas las normalizaciones. 
+- Si la configuración de tipo semántico se elimina en la fase **Asignar** cuando una regla de coincidencia utiliza la asignación de alias o la omisión personalizada, la normalización no se aplicará. Solo sucede si borra el tipo semántico después de configurar la normalización en la regla de coincidencia porque el tipo semántico será desconocido.
+
 
 ## <a name="next-step"></a>Siguiente paso
 
-Después de completar el proceso de coincidencia para al menos un par de coincidencias, puede resolver posibles contradicciones en sus datos en el tema [**Combinación**](merge-entities.md).
+Después de completar el proceso de emparejamiento para al menos un par de emparejamientos, continúe con el paso [**Unir**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

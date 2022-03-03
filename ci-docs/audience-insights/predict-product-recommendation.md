@@ -1,22 +1,21 @@
 ---
 title: Predicción de recomendaciones del producto
 description: Prediga los productos que es probable que un cliente compre o con los que interactúe.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494560"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355818"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predicción de recomendaciones del producto (versión preliminar)
+# <a name="product-recommendation-prediction"></a>Predicción de recomendaciones del producto
 
 El modelo de recomendación de productos crea conjuntos de recomendaciones de productos predictivas. Las recomendaciones se basan en el comportamiento de compra anterior y en clientes con patrones de compra similares. Puede crear nuevas predicciones de recomendación de productos en la página **Inteligencia** > **Predicciones**. Seleccione **Mis predicciones** para ver otras predicciones que ha creado.
 
@@ -62,7 +61,7 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 
 1. En Customer Insights, vaya a **Inteligencia** > **Predicciones**.
 
-1. Seleccione el mosaico **Modelo de recomendaciones de producto (versión preliminar)** y seleccione **Utilizar este modelo**.
+1. Seleccione la ventana **Modelo de recomendaciones de producto** y seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
    > ![Icono del modelo de recomendaciones de producto con el botón Usar este modelo.](media/product-recommendation-usethismodel.PNG "Mosaico del Modelo de recomendaciones de producto con el botón Usar este modelo")
 
@@ -79,11 +78,11 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 1. Establezca el **Número de productos** que desea recomendar a un cliente. Este valor depende de cómo su método de entrega rellena los datos. Si puede recomendar tres productos, establezca este valor en consecuencia.
    
    >[!TIP]
-   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
+   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
 
-1. Elija si desea **Sugerir productos que los clientes han comprado recientemente**.
+1. Elija si desea incluir productos que los clientes hayan comprado recientemente en el campo **Se esperan compras repetidas**.
 
-1. Si ha seleccionado *no* recomendar productos comprados recientemente, configure la **Ventana para mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
+1. Establecer la **Ventana de mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
 
 1. Seleccione **Siguiente**
 

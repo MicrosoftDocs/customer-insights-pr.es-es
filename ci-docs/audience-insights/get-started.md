@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645285"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353748"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Comenzar con la capacidad de conclusiones del público en Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ La primera vez que inicie sesión en las conclusiones del público, puede config
 
 Los perfiles unificados son la base para obtener información y tomar medidas sobre los datos. Traiga datos de diversos orígenes y ejecute el proceso de unificación de datos para combinar perfiles unificados. Especifique relaciones entre las entidades ingeridas y use funciones de enriquecimiento para agregar información a los perfiles. 
 
-1. Ingiera datos creando orígenes de datos a partir de múltiples opciones. Escoja entre [Conectores de Power Query](connect-power-query.md), una [carpeta de Common Data Model](connect-common-data-model.md) o [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Ingiera datos creando orígenes de datos a partir de múltiples opciones. Elija entre [Conectores de Power Query](connect-power-query.md), una [carpeta de Common Data Model](connect-common-data-model.md) o [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Ejecute el [proceso de unificación de datos](data-unification.md) pasando por las fases de [mapa](map-entities.md), [coincidencia](match-entities.md) y [combinación](merge-entities.md).
 

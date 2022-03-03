@@ -3,18 +3,17 @@ title: Guía de muestra de la predicción del valor de por vida del cliente
 description: Utilice esta guía de muestra para probar el modelo de valor de vida útil del cliente predicción.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306370"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354852"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de muestra de la predicción (CLV) del valor de por vida del cliente
 
@@ -22,7 +21,7 @@ Esta guía le explicará un ejemplo de extremo a extremo de la predicción del v
 
 ## <a name="scenario"></a>Escenario
 
-Contoso es una empresa que produce café y cafeteras de alta calidad. Venden los productos a través de su Sitio web de café Contoso. La empresa quiere comprender el valor (ingresos) que sus clientes pueden generar en los próximos 12 meses. Conocer el valor esperado de sus clientes en los próximos 12 meses les ayudará a dirigir sus esfuerzos de marketing hacia clientes de alto valor.
+Contoso es una empresa que produce café y máquinas de café de alta calidad. Venden los productos a través de su sitio web Contoso Coffee. La empresa quiere comprender el valor (ingresos) que sus clientes pueden generar en los próximos 12 meses. Conocer el valor esperado de sus clientes en los próximos 12 meses les ayudará a dirigir sus esfuerzos de marketing hacia clientes de alto valor.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -31,7 +30,7 @@ Contoso es una empresa que produce café y cafeteras de alta calidad. Venden los
 
 ## <a name="task-1---ingest-data"></a>Tarea 1: ingerir datos
 
-Revisa los artículos [sobre la ingesta de datos](data-sources.md) e [importar fuentes de datos usando conectores Power Query](connect-power-query.md). La siguiente información asume que está familiarizado con la ingesta de datos en general.
+Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md). La siguiente información asume que está familiarizado con la ingesta de datos en general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir datos de clientes de una plataforma de comercio electrónico
 
@@ -164,7 +163,7 @@ Después de ingerir los datos, ahora comenzamos el proceso de unificación de da
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarea 3: configurar el valor de vida útil del cliente predicción
 
-Con los perfiles de cliente unificados en su lugar, ahora podemos ejecutar el valor de vida útil del cliente predicción. Para conocer los pasos detallados, consulte [Predicción de vida útil del cliente (versión preliminar)](predict-customer-lifetime-value.md).
+Con los perfiles de cliente unificados en su lugar, ahora podemos ejecutar el valor de vida útil del cliente predicción. Para conocer los pasos detallados, vea [Predicción del valor de vida del cliente](predict-customer-lifetime-value.md).
 
 1. Vaya a **Inteligencia**  > **Predicciones** y seleccione el **Modelo de valor de vida útil**.
 

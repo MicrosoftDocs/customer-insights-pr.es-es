@@ -3,22 +3,21 @@ title: Guía de ejemplo de predicción de abandono de transacción
 description: Utilice esta guía de ejemplo para probar el modelo de predicción de cancelación de transacción de uso inmediato.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029466"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354622"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción (versión preliminar)
+# <a name="transactional-churn-prediction-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción
 
-Esta guía le llevará por un ejemplo completo de predicción de cancelación de transacción en Customer Insights, utilizando los datos de ejemplo que se proporcionan a continuación. Todos los datos utilizados en esta guía no son datos reales del cliente y forman parte del conjunto de datos Contoso encontrado en el entorno *Demostración* de la suscripción a Customer Insights.
+Esta guía le llevará por un ejemplo completo de predicción de cancelación de transacción en Customer Insights, utilizando los datos de ejemplo que se proporcionan a continuación. Todos los datos utilizados en esta guía no son datos reales de clientes y forman parte del conjunto de datos Contoso que se encuentra en el entorno *Demostración* de su suscripción a Customer Insights.
 
 ## <a name="scenario"></a>Escenario
 
@@ -31,7 +30,7 @@ Contoso es una empresa que produce café y máquinas de café de alta calidad, q
 
 ## <a name="task-1---ingest-data"></a>Tarea 1: ingerir datos
 
-Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
+Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir datos de clientes de una plataforma de comercio electrónico
 
@@ -149,7 +148,7 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarea 3: configurar la predicción de abandono de transacciones
 
-Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de cancelación de suscripción (versión preliminar)](predict-subscription-churn.md). 
+Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de abandono de suscripciones](predict-subscription-churn.md). 
 
 1. Vaya a **Inteligencia** > **Descubrir** y seleccione usar el **Modelo de abandono de clientes**.
 

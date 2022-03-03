@@ -3,18 +3,20 @@ title: Página de inicio en informaciones de público
 description: Comience a explorar la aplicación en la página Inicio.
 ms.date: 10/19/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 3a9f3ed596d45a300161a1226faa5b51d36a2d54
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 7915a9c447b6c957ef4078380f578c1fb0a2ecb8
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673112"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354760"
 ---
 # <a name="explore-audience-insights"></a>Explorar las conclusiones del público
 
