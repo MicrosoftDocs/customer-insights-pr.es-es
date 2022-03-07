@@ -3,17 +3,18 @@ title: Exportar datos de Customer Insights a Constant Contact
 description: Aprenda a configurar la conexión y a exportar a Constant Contact.
 ms.date: 10/08/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226424"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619140"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segmentos a Constant Contact (versión preliminar)
 

@@ -1,23 +1,25 @@
 ---
 title: Informaciones de público para la información general de Dynamics 365 Customer Insights
 description: Informaciones de público para la información general de Dynamics 365 Customer Insights.
-ms.date: 08/04/2021
+ms.date: 01/18/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.custom: intro-internal
+ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
+ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230757"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "6539136"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Informaciones de público para la información general de Dynamics 365 Customer Insights
 
-[Conclusiones del público, una capacidad de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) le ayuda a comprender mejor a sus clientes. Conecte los datos de varias fuentes transaccionales, de comportamiento y de observación para crear un visión global de los clientes. Utilice esta información para impulsar experiencias y procesos centrados en el cliente. Unifique y conozca los datos de sus clientes y aprovéchelos para extraer conocimientos y acciones inteligentes.
+Las informaciones de público le ayudan a comprender mejor a sus clientes. Conecte los datos de varias fuentes transaccionales, de comportamiento y de observación para crear un visión global de los clientes. Utilice esta información para impulsar experiencias y procesos centrados en el cliente. Unifique y conozca los datos de sus clientes y aprovéchelos para extraer conocimientos y acciones inteligentes.
 
 ## <a name="main-benefits"></a>Principales beneficios 
 
@@ -32,9 +34,9 @@ ms.locfileid: "8230757"
 
 - **Impulse sus procesos de negocio y las experiencias personalizadas de los clientes**
 
-  - Impulse la participación personalizada en todos los canales: capacite a los profesionales de marketing, ventas y servicios. Use conclusiones y tarjetas de perfil de cliente listas para usar y adaptadas que se integren con las aplicaciones empresariales que ya usan.
-  - Automatice las experiencias y los procesos basándose en perfiles personalizables, medidas de negocio y segmentos.
-  - Habilite y amplíe las experiencias de línea de negocio basadas en [Microsoft Power Platform](https://powerplatform.microsoft.com/). Cree aplicaciones rápidamente con conocimientos integrados utilizando un potente enfoque de poco código de Power Apps.  
+  - Impulse la interacción personalizada a través de los canales: potencie a los profesionales de marketing, ventas y servicios con información de cliente contextual lista para usar y tarjetas de perfil de cliente personalizadas integradas en las aplicaciones empresariales que ya utilizan todos los días
+  - Automatice las experiencias y los procesos centrados en el cliente basándose en perfiles personalizables, medidas de negocio y segmentos.
+  - Habilite y amplíe las experiencias de línea de negocio basadas en [Microsoft Power Platform](https://powerplatform.microsoft.com/). Cree aplicaciones rápidamente con conocimientos integrados utilizando un potente enfoque de poco código de PowerApps.  
 
 ## <a name="key-audiences"></a>Público principal
 
@@ -48,12 +50,13 @@ ms.locfileid: "8230757"
 
 - **Usuarios empresariales:**
 
-  - Información completa de perfiles de cliente y vistas integrales de recorridos del cliente.
+  - Información completa de perfiles de cliente y vistas integrales del recorrido del cliente.
   - Vea todos los datos de los clientes dentro de los procesos empresariales de Dynamics 365 con paquetes predefinidos.
 
 - **Analistas de negocios:**
 
   - Cree perfiles personalizables, defina medidas y cree segmentos y benefíciese del análisis predictivo para obtener una vista integral de su cliente, específica de su organización.  
-  - Utilice conectores listos para usar para varias aplicaciones o API de Microsoft y de terceros para procesar la información.
+  - Utilice conectores listos para usar para varias aplicaciones o API de Microsoft y de terceros para procesar en mayor profundidad la información.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

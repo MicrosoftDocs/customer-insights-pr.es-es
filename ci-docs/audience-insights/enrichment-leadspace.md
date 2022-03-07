@@ -1,78 +1,54 @@
 ---
 title: Enriquecimiento de los perfiles de la empresa con el enriquecimiento de terceros de Leadspace
 description: Información general sobre el enriquecimiento de terceros de Leadspace.
-ms.date: 09/30/2021
+ms.date: 11/24/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230655"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597670"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecimiento de perfiles de empresa con Leadspace (vista previa)
 
-Leadspace es una empresa de ciencia de datos que proporciona una plataforma de datos del cliente B2B. Permite entornos con perfiles de clientes unificados basados en cuentas para enriquecer sus datos. Enriquezca *Perfiles de clientes* con atributos como tamaño de la empresa, ubicación o sector. Enriquezca *Perfiles de contacto* con atributos como título, persona o verificación de correo electrónico.
+Leadspace es una empresa de ciencia de datos que proporciona una plataforma de datos de clientes B2B. Permite a los clientes con perfiles de clientes unificados enriquecer sus datos de empresa. Los enriquecimientos incluyen atributos adicionales, como el tamaño de la compañía, la ubicación, el sector y mucho más.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para configurar Leadspace deben cumplirse los siguientes requisitos previos:
 
-- Debe tener una licencia activa de Leadspace.
-- Usted tiene [perfiles de clientes unificados](customer-profiles.md) basados en cuentas.
-- Una conexión de Leadspace ya ha sido configurada por un administrador o tiene permisos de [administrador](permissions.md#administrator) y la "clave perpetua" (denominada **Token de Leadspace**). Póngase en contacto directamente con [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) para obtener detalles sobre su producto.
+- Tiene una licencia Leadspace activa y la “clave perpetua” (denominada **Token de Leadspace**). Contacte directamente con [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) para detalles sobre su producto.
+- Tiene permisos de [Administrador](permissions.md#administrator).
+- Usted tiene [perfiles de clientes unificados](customer-profiles.md) para empresas.
 
-## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
+## <a name="configuration"></a>Configuración
 
 1. En las informaciones de público, vaya a **Datos** > **Enriquecimiento**.
 
-1. Seleccione **Enriquecer mis datos** en la ventana de Leadspace y seleccione **Comenzar**.
+1. Seleccione **Enriquecer mis datos** en la ventana Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Captura de pantalla del mosaico de Leadspace.":::
 
-1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un administrador, puede crear una conexión seleccionando **Agregar conexión** y elija **Leadspace**. 
+1. Seleccione **Comenzar** y luego introduzca un **Token de Leadspace** activo (clave perpetua). Revise y proporcione su consentimiento para la **Privacidad y cumplimiento de datos**. Para ello, active la casilla **Acepto**. Confirme ambas entradas seleccionando **Conectarse a Leadspace**.
 
-1. Seleccione **Conectarse a Leadspace** para confirmar la selección de la conexión.
+1. Seleccione **Agregar datos** y elija el conjunto de datos de cliente que desee enriquecer con datos empresariales de Leadspace. Puede seleccionar la entidad *Cliente* para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
 
-1. Seleccione **Siguiente** y elija el **Conjunto de datos del cliente** que desea enriquecer con datos empresariales de Leadspace. Puede seleccionar la entidad **Cliente** para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes contenidos en ese segmento.
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Elija entre el perfil del cliente y el enriquecimiento del segmento.":::
 
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Captura de pantalla cuando se elige el conjunto de datos del cliente.":::
-
-1. Seleccione **Siguiente** y defina qué campos de sus perfiles unificados se usan para buscar datos empresariales coincidentes de Leadspace. Se requiere el campo **Nombre de la compañía**. Para una mayor precisión de coincidencia, pueden añadirse hasta otros dos campos, **Sitio web de la compañía** y **Ubicación de la compañía**.
+1. Haga clic en **Siguiente** y defina qué campos de sus perfiles unificados se deben utilizar para buscar datos de empresa coincidentes en Leadspace. Se requiere el campo **Nombre de la compañía**. Para una mayor precisión de coincidencia, pueden añadirse hasta otros dos campos, **Sitio web de la compañía** y **Ubicación de la compañía**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panel de asignación de campos de Leadspace.":::
-
-1. Seleccione **Siguiente** para completar la asignación de campos.
-
-1. Seleccione la casilla de verificación si tiene *Perfiles de contacto* que le gustaría enriquecer. Conclusiones del público asignará automáticamente los campos obligatorios.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Enriquecimiento de registros de contacto de Leadspace.":::
- 
-1. Proporcione un nombre para el enriquecimiento y seleccione **Guardar enriquecimiento** después de revisar sus opciones.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Configurar la conexión para Leadspace 
-
-Debe ser un administrador para configurar las conexiones. Seleccione **Agregar conexión** cuando configure un enriquecimiento *o* vaya a **Administración** > **Conexiones** y seleccione **Configurar** en la ventana de Leadspace.
-
-1. Seleccione **Comenzar**. 
-
-1. Indique un nombre para la conexión el cuadro **Nombre ara mostrar**.
-
-1. Proporcionar su token de Leadspace válido.
-
-1. Revise y proporcione su consentimiento para **Privacidad y cumplimiento de datos** seleccionando **Estoy de acuerdo**.
-
-1. Seleccione **Verificar** para validar la configuración.
-
-1. Después de completar la verificación, seleccione **Guardar**.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Página de configuración de la conexión de Leadspace.":::
+1. Seleccione **Aplicar** para completar la asignación de campos.
+
+1. Seleccione **Ejecutar** para enriquecer los perfiles de la empresa. La duración de un enriquecimiento depende de la cantidad de perfiles de clientes unificados.
 
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
 
@@ -84,8 +60,7 @@ Para obtener más información, vea [API de Leadspace](https://support.leadspace
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Utilice los datos enriquecidos de sus clientes. Cree [segmentos](segments.md), [medidas](measures.md) e incluso [exporte los datos](export-destinations.md) para entregar experiencias personalizadas a sus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

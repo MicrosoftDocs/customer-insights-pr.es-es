@@ -1,29 +1,24 @@
 ---
-title: Encuentre clientes similares con IA (contiene vídeo)
+title: Buscar clientes similares con IA
 description: Busque segmentos de clientes similares con inteligencia artificial.
 ms.date: 06/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-segment-builder
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355266"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554226"
 ---
 # <a name="similar-customers-preview"></a>Clientes similares (vista previa)
 
 Esta característica le permite buscar clientes similares en su base de clientes utilizando inteligencia artificial. Debe tener al menos un segmento creado para usar esta función. Ampliar los criterios de un segmento existente ayuda a encontrar clientes que sean similares a ese segmento.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Buscar clientes similares* utiliza medios automatizados para evaluar datos y hacer predicciones basadas en esos datos y, por lo tanto, tiene la capacidad de usarse como método de creación de perfiles, tal como lo define el Reglamento General de Protección de Datos ("RGPD"). El uso de esta función por parte del cliente para procesar datos puede estar sujeto al RGPD u otras leyes o regulaciones. Usted es responsable de garantizar que el uso de Dynamics 365 Customer Insights, incluidas las predicciones, cumple con todas las leyes y regulaciones aplicables, incluidas las leyes relacionadas con la privacidad, los datos personales, los datos biométricos, la protección de datos y la confidencialidad de las comunicaciones.

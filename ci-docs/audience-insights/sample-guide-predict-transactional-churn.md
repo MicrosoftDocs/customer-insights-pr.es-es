@@ -2,20 +2,21 @@
 title: Guía de ejemplo de predicción de abandono de transacción
 description: Utilice esta guía de ejemplo para probar el modelo de predicción de cancelación de transacción de uso inmediato.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354622"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269811"
 ---
-# <a name="transactional-churn-prediction-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción
+# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción (versión preliminar)
 
 Esta guía le llevará por un ejemplo completo de predicción de cancelación de transacción en Customer Insights, utilizando los datos de ejemplo que se proporcionan a continuación. Todos los datos utilizados en esta guía no son datos reales de clientes y forman parte del conjunto de datos Contoso que se encuentra en el entorno *Demostración* de su suscripción a Customer Insights.
 
@@ -30,7 +31,7 @@ Contoso es una empresa que produce café y máquinas de café de alta calidad, q
 
 ## <a name="task-1---ingest-data"></a>Tarea 1: ingerir datos
 
-Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
+Revise los articulos [sobre la ingesta de datos](data-sources.md) y la [importación de orígenes de datos usando conectores de Power Query](connect-power-query.md) específicamente. La siguiente información asume que está familiarizado con la ingesta de datos en general. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir datos de clientes de una plataforma de comercio electrónico
 
@@ -45,7 +46,8 @@ Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [
    - **DateOfBirth**: fecha
    - **CreatedOn**: fecha/hora/zona
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar DoB en Fecha.":::
+   [!div class="mx-imgBorder"]
+   ![Transformar DoB en Fecha](media/ecommerce-dob-date.PNG "transformar fecha de nacimiento a fecha")
 
 1. En el campo **Nombre** del panel de la derecha, cambie el nombre de su origen de datos de **Consulta** a **eCommerceContacts**
 
@@ -107,9 +109,9 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
 
-1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
+1. En la lista desplegable **Principal**, elija **eCommerceContacts : eCommerce** como el origen principal e incluya todos los registros.
 
-1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
+1. En la lista desplegable **Entidad 2**, elija **loyCustomers : LoyaltyScheme** e incluya todos los registros.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifique la coincidencia de comercio electrónico y fidelización.":::
 
@@ -117,8 +119,8 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 1. Agregue su primera condición con FullName.
 
-   * Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
-   * Para loyCustomers, seleccione **FullName** en el menú desplegable.
+   * Para eCommerceContacts seleccione **FullName** en la lista desplegable.
+   * Para loyCustomers, seleccione **FullName** en la lista desplegable.
    * Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
    * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
 
@@ -148,7 +150,7 @@ Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir,
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarea 3: configurar la predicción de abandono de transacciones
 
-Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de abandono de suscripciones](predict-subscription-churn.md). 
+Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de cancelación de suscripción (versión preliminar)](predict-subscription-churn.md). 
 
 1. Vaya a **Inteligencia** > **Descubrir** y seleccione usar el **Modelo de abandono de clientes**.
 

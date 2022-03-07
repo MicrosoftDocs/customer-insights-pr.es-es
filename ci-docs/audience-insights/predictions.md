@@ -2,22 +2,19 @@
 title: Completar datos parciales usando predicciones
 description: Utilice predicciones para completar datos incompletos del cliente.
 ms.date: 11/01/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354024"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732453"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete sus datos parciales con predicciones (obsoleto)
 
@@ -116,7 +113,7 @@ Como parte de este flujo, elegirá un atributo específico en el que basar el se
 
 ## <a name="edit-a-prediction"></a>Editar una predicción
 
-Después de crear una predicción, puede personalizar el modelo en el AI Builder para aumentar la eficacia de su modelo.  
+Después de crear una predicción, puede personalizar el modelo en el AI Builder para aumentar la eficacia del modelo.  
 
 1. En las informaciones de público, vaya a **Inteligencia** > **Predicciones** > **Mis predicciones**.
 
@@ -131,7 +128,7 @@ Después de crear una predicción, puede personalizar el modelo en el AI Builder
 La siguiente ejecución de la predicción usará el modelo actualizado que ha creado.
 
 > [!NOTE]
-> Los nuevos modelos creados en el AI Builder no se mostrarán en los conocimientos de la audiencia a menos que el modelo se haya creado a partir de las experiencias indicadas anteriormente.
+> Los nuevos modelos creados en AI Builder no se mostrarán en las informaciones de público a menos que el modelo se haya creado a partir de las experiencias enumeradas anteriormente.
 
 ## <a name="remove-a-prediction"></a>Quitar una predicción
 

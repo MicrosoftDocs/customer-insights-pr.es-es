@@ -1,34 +1,26 @@
 ---
 title: Configuración del sistema en las informaciones de público
 description: Más información sobre la configuración del sistema en la capacidad de informaciones de público de Dynamics 365 Customer Insights.
-ms.date: 11/01/2021
+ms.date: 10/15/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-system-status
-- ci-system-schedule
-- ci-system-about
-- ci-system-general
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354254"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651861"
 ---
 # <a name="system-configuration"></a>Configuración del sistema
 
-Para acceder a las configuraciones del sistema en audiencia insights, en la barra de navegación izquierda, seleccione **Administración** > **Sistema** para ver una lista de tareas y procesos del sistema.
-
 La página **Sistema** incluye las siguientes pestañas:
 - [Estado de ejecución](#status-tab)
-- [Programa](#schedule-tab)
+- [Programación](#schedule-tab)
 - [Uso de API](#api-usage-tab)
 - [Acerca de](#about-tab)
 - [General](#general-tab)
@@ -38,63 +30,43 @@ La página **Sistema** incluye las siguientes pestañas:
 
 ## <a name="status-tab"></a>Pestaña Estado
 
-La **pestaña Estado** le permite realizar un seguimiento del progreso de las tareas, la ingesta de datos, las exportaciones de datos y varios otros procesos de productos importantes. Revise la información de esta pestaña para asegurarse de que sus tareas y procesos activos estén completos.
+La **Pestaña de estado** le permite realizar un seguimiento del progreso de la ingesta de datos, las exportaciones de datos y varios otros procesos de productos importantes. Revise la información de esta pestaña para asegurarse de que los procesos activos estén completos.
 
-Esta pestaña incluye tablas con información del estado e información sobre el procesamiento para varios procesos. Cada tabla sigue el **Nombre** de la tarea y su entidad correspondiente, el **Estado** de su ejecución más reciente, y cuál fue la **Última actualización**. Puede ver los detalles de las últimas ejecuciones seleccionando la tarea o el nombre del proceso. 
+Esta pestaña incluye tablas con información del estado e información sobre el procesamiento para varios procesos. Cada tabla sigue el **Nombre** de la tarea y su entidad correspondiente, el **Estado** de su ejecución más reciente, y cuál fue la **Última actualización**.
 
-Seleccione el estado junto a la tarea o proceso en la columna **Estado** para abrir el panel **Detalles de progreso**.
+Vea los detalles de las últimas ejecuciones de las tareas seleccionando su nombre.
 
-   :::image type="content" source="media/system-progress-details.png" alt-text="Panel de detalles del progreso del sistema":::
+### <a name="status-types"></a>Tipos de estado
 
-### <a name="status-definitions"></a>Definiciones de estado
+Existen seis tipos de estado para las tareas. Los siguientes tipos de estado también se muestran en las páginas *Coincidir*, *Combinar*, *Orígenes de datos*, *Segmentos*, *Medidas*, *Enriquecimiento*, *Actividades* y *Predicciones*:
 
-El sistema utiliza los siguientes estados para tareas y procesos:
+- **Procesando:** La tarea está en progreso. El estado puede cambiar a Correcto o Error.
+- **Correcto:** Tarea completada con éxito.
+- **Omitido:** La tarea se saltó. Uno o más de los procesos posteriores de los que depende esta tarea fallan o se omiten.
+- **Error:** El procesamiento de la tarea ha generado un error.
+- **Cancelado:** El procesamiento fue cancelado por el usuario antes de que terminara.
+- **Puesto en cola**: el procesamiento está en cola y comenzará una vez que se completen todas las tareas anteriores. Para obtener más información, consulte [Actualizar directivas](#refresh-policies).
 
-|Estado de ejecución  |Definición  |
-|---------|---------|
-|Cancelada |El usuario canceló el procesamiento antes de que finalizara.   |
-|Con errores   |Se han producido errores al ingerir datos.         |
-|Error  |El procesamiento ha fallado.  |
-|Sin iniciar   |El origen de datos aún no tiene datos ingeridos o sigue en modo de borrador.         |
-|Procesamiento  |La tarea o el proceso está en curso.  |
-|Actualizando    |La ingesta de datos está en curso. Para cancelar esta operación, seleccione **Detener la actualización** en la columna **Acciones**. Al detener la actualización de un origen de datos se revertirá a su último estado de actualización.       |
-|Omitida  |Se omitió la tarea o el proceso. Uno o más de los procesos posteriores de los que depende esta tarea fallan o se omiten.|
-|Operación correcta  |La tarea o el proceso finalizó correctamente. Para las fuentes de datos, indica que los datos se han ingerido correctamente si se menciona una hora en la columna **Refrescado**.|
-|En cola | El procesamiento está en cola y comenzará una vez que se completen todas las tareas y procesos anteriores. Para obtener más información, consulte [Procesos de actualización](#refresh-processes).|
+### <a name="refresh-policies"></a>Directivas de actualización
 
-### <a name="refresh-processes"></a>Procesos de actualización
+Esta lista muestra las políticas de actualización para cada uno de los procesos principales:
 
-La actualización de tareas y procesos se ejecuta de acuerdo con el [horario configurado](#schedule-tab). 
+- **Orígenes de datos:** Funciona de acuerdo con el [horario configurado](#schedule-tab). No depende de ningún otro proceso. La coincidencia depende de la finalización exitosa de este proceso.
+- **Coincidencia:** Funciona de acuerdo con el [horario configurado](#schedule-tab). Depende del procesamiento de los orígenes de datos utilizados en la definición de coincidencia. La combinación depende de la finalización exitosa de este proceso.
+- **Combinar:** Funciona de acuerdo con el [horario configurado](#schedule-tab). Depende de la finalización del proceso de coincidencia. Los segmentos, las medidas, el enriquecimiento, la búsqueda, las actividades, las predicciones y la preparación de datos dependen de la finalización exitosa de este proceso.
+- **Segmentos**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación. El conocimiento profundo depende de su procesamiento.
+- **Medidas**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación.
+- **Actividades**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación.
+- **Enriquecimiento**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación.
+- **Buscar**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación.
+- **Preparación de datos:** Funciona de acuerdo con el [horario configurado](#schedule-tab). Depende de la combinación.
+- **Conocimiento profundo**: Se ejecuta manualmente (actualización única) y de acuerdo con el [horario configurado](#schedule-tab). Depende de los segmentos.
 
-|Proceso  |Descripción  |
-|---------|---------|
-|Actividad  |Se ejecuta manualmente (actualización única). Depende del proceso de fusión. El conocimiento profundo depende de su procesamiento.|
-|Vinculación del análisis |Se ejecuta manualmente (actualización única). Depende de los segmentos.  |
-|Preparación del análisis |Se ejecuta manualmente (actualización única). Depende de los segmentos.  |
-|Preparación de datos   |Depende de la combinación.   |
-|Orígenes de datos   |No depende de ningún otro proceso. La coincidencia depende de la finalización exitosa de este proceso.  |
-|Enriquecimientos   |Se ejecuta manualmente (actualización única). Depende del proceso de fusión. |
-|Destinos de exportación |Se ejecuta manualmente (actualización única). Depende de los segmentos.  |
-|Información |Se ejecuta manualmente (actualización única). Depende de los segmentos.  |
-|Inteligencia   |Depende de la combinación.   |
-|Coincidir |Depende del procesamiento de los orígenes de datos utilizados en la definición de coincidencia.      |
-|Medidas  |Se ejecuta manualmente (actualización única). Depende del proceso de fusión.  |
-|Combinar   |Depende de la finalización del proceso de coincidencia. Los segmentos, las medidas, el enriquecimiento, la búsqueda, las actividades, las predicciones y la preparación de datos dependen de la finalización exitosa de este proceso.   |
-|Perfiles   |Se ejecuta manualmente (actualización única). Depende del proceso de fusión. |
-|Buscar   |Se ejecuta manualmente (actualización única). Depende del proceso de fusión. |
-|Segmentos  |Se ejecuta manualmente (actualización única). Depende del proceso de fusión. El conocimiento profundo depende de su procesamiento.|
-|Sistema   |Depende de la finalización del proceso de coincidencia. Los segmentos, las medidas, el enriquecimiento, la búsqueda, las actividades, las predicciones y la preparación de datos dependen de la finalización exitosa de este proceso.   |
-|Usuario  |Se ejecuta manualmente (actualización única). Depende de las entidades.  |
-
-Seleccione el estado de un proceso para ver los detalles del progreso de todo el trabajo en el que se encontraba. Los procesos de actualización anteriores pueden ayudarlo a comprender qué puede hacer para abordar una tarea o proceso **Omitidos** o **Puestos en cola**.
+Seleccione el estado de una tarea para ver los detalles del progreso de todo el trabajo en el que se encontraba. Las directivas de actualización anteriores pueden ayudarlo a comprender lo que puede hacer para abordar una tarea que se ha **Omitido** o **Puesto en cola**.
 
 ## <a name="schedule-tab"></a>Pestaña Programación
 
 Utilice la pestaña **Programación** para programar actualizaciones automáticas de todos sus [orígenes de datos ingeridos](data-sources.md). Las actualizaciones automáticas ayudan a garantizar que las actualizaciones desde sus orígenes de datos se reflejan en sus perfiles de clientes unificados.
-
-> [!NOTE]
-> Los orígenes de datos gestionadas por usted se actualizan en sus propias programaciones. Para programar la actualización de los orígenes de datos gestionadas por usted, configure los ajustes de actualización en ese origen de datos específico desde la página **Orígenes de datos**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Configuración de actualización del flujo de datos de Power Platform.":::
 
 1. En las informaciones de público, vaya a **Administrador** > **Sistema** y seleccione la pestaña **Programación**.
 
@@ -114,7 +86,7 @@ La pestaña **Acerca de** contiene el **Nombre para mostrar** de la organizació
 
 Puede cambiar el idioma y el formato de país/región en la pestaña **General**.
 
-Customer Insights [admite muchos idiomas](/dynamics365/get-started/availability). La aplicación usa su preferencia de idioma para mostrar elementos como el menú, el texto de etiquetas y los mensajes del sistema en su idioma preferido.
+Customer Insights [da soporte a varios idiomas](/dynamics365/get-started/availability). La aplicación usa su preferencia de idioma para mostrar elementos como el menú, el texto de etiquetas y los mensajes del sistema en su idioma preferido.
 
 Los datos importados y la información que introdujo manualmente no se traducen.
 
@@ -137,7 +109,7 @@ El **Uso de API** contiene tres secciones:
 
 -  **Operaciones**: una tabla con filas para cada operación de API disponible y detalles sobre el uso de las operaciones. Puede seleccionar un nombre de operación para ir a [la referencia de API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operaciones que utilizan la [ingesta de datos en tiempo real](real-time-data-ingestion.md) contienen un botón con un símbolo binocular para ver el uso de la API en tiempo real. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.   
+   Las operaciones que utilizan la [ingesta de datos en tiempo real](real-time-data-ingestion.md) contienen un botón con un símbolo de binoculares para ver el uso de la API en tiempo real. Seleccione el botón para abrir un panel lateral que contiene detalles para el uso de la API de tiempo real en el entorno actual.   
    Utilice el cuadro **Agrupar por** en el panel **Uso de API en tiempo real** para elegir la mejor forma de presentar sus interacciones en tiempo real. Puede agrupar los datos por método de API, nombre calificado de entidad (entidad ingerida), creado por (origen del evento), resultado (éxito o error) o códigos de error. Los datos están disponibles como gráfico del historial y como tabla.
 
 ## <a name="security-tab"></a>Pestaña de seguridad

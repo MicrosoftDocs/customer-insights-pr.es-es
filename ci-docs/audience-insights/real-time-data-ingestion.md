@@ -3,20 +3,18 @@ title: Ingestión y limitaciones de datos en tiempo real
 description: Información general sobre las capacidades en tiempo real en las informaciones de público.
 ms.date: 10/27/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355496"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598590"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingesta de datos en tiempo real (vista previa)
 
