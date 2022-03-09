@@ -1,24 +1,26 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 11/12/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799656"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354300"
 ---
 # <a name="manage-environments"></a>Administrar ambientes
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Cambiar entornos
 
@@ -44,9 +46,12 @@ Para obtener más información sobre la configuración del entorno, consulte [Cr
    
 El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse.
 
-Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización. Seleccione **Habilitar el uso compartido de datos** para compartir los datos de salida de Customer Insights con una instancia de lago de datos gestionada de Dataverse.
+Para usar [modelos predicción predefinidos](predictions-overview.md#out-of-box-models), configure el intercambio de datos con Dataverse. O puede habilitar la ingestión de datos desde orígenes de datos locales, proporcionando la dirección URL del entorno de Microsoft Dataverse que administra su organización.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Customer Insights y Dataverse tienen que estar en la misma región para permitir el intercambio de datos.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opciones de configuración para permitir el uso compartido de datos con Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights no admite los siguientes escenarios de uso compartido de datos:

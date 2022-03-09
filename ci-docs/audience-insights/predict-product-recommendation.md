@@ -1,22 +1,21 @@
 ---
 title: Predicción de recomendaciones del producto
 description: Prediga los productos que es probable que un cliente compre o con los que interactúe.
-ms.date: 03/17/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556145"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355818"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predicción de recomendaciones del producto (versión preliminar)
+# <a name="product-recommendation-prediction"></a>Predicción de recomendaciones del producto
 
 El modelo de recomendación de productos crea conjuntos de recomendaciones de productos predictivas. Las recomendaciones se basan en el comportamiento de compra anterior y en clientes con patrones de compra similares. Puede crear nuevas predicciones de recomendación de productos en la página **Inteligencia** > **Predicciones**. Seleccione **Mis predicciones** para ver otras predicciones que ha creado.
 
@@ -62,7 +61,7 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 
 1. En Customer Insights, vaya a **Inteligencia** > **Predicciones**.
 
-1. Seleccione el mosaico **Modelo de recomendaciones de producto (versión preliminar)** y seleccione **Utilizar este modelo**.
+1. Seleccione la ventana **Modelo de recomendaciones de producto** y seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
    > ![Icono del modelo de recomendaciones de producto con el botón Usar este modelo.](media/product-recommendation-usethismodel.PNG "Mosaico del Modelo de recomendaciones de producto con el botón Usar este modelo")
 
@@ -79,33 +78,34 @@ Si está interesado en probar esta función pero no tiene datos para completar l
 1. Establezca el **Número de productos** que desea recomendar a un cliente. Este valor depende de cómo su método de entrega rellena los datos. Si puede recomendar tres productos, establezca este valor en consecuencia.
    
    >[!TIP]
-   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
+   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador predicción en la pestaña **Mis predicciones**.
 
-1. Elija si desea **Sugerir productos que los clientes han comprado recientemente**.
+1. Elija si desea incluir productos que los clientes hayan comprado recientemente en el campo **Se esperan compras repetidas**.
 
-1. Si ha seleccionado *no* recomendar productos comprados recientemente, configure la **Ventana para mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
+1. Establecer la **Ventana de mirar atrás**. Esta configuración especifica el plazo de tiempo que el modelo considera antes de recomendar el producto al usuario nuevamente. Por ejemplo, indique que un cliente compra un portátil cada dos años. Esta ventana verá el historial de compras de los últimos dos años y, si encuentran un artículo, el artículo se filtrará de las recomendaciones.
 
 1. Seleccione **Siguiente**
 
 ### <a name="add-required-data"></a>Agregar datos necesarios
 
-1. Seleccione **Agregar datos** para **Historial de transacciones del cliente** y elija la entidad que proporciona la información del historial de transacciones/compras, como se describe en los [requisitos previos](#prerequisites).
+1. Seleccione **Agregar datos** y elija el tipo de actividad en el panel lateral que contiene la transacción requerida o la información del historial de compras.
 
-1. Asigne los campos semánticos a los atributos dentro de su entidad de historial de compras y seleccione **Siguiente**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Defina la relación de entidad.](media/product-recommendation-purchasehistorymapping.PNG "Página del historial de compras que muestra los atributos semánticos que se asignan a los campos de la entidad del historial de compras seleccionada")
+1. En **Elegir actividades**, elija las actividades específicas de la actividad seleccionada en las que le gustaría que se centrara el cálculo.
 
-1. Si los campos no están rellenos, configure la relación entre su entidad de historial de compras y la entidad *Cliente*.
-    1. Seleccione la **Entidad de historial de compras**.
-    1. Seleccione el **Campo** que identifica al cliente en la entidad de historial de compras. Debe relacionarse con el identificador de cliente principal de su entidad *Cliente*.
-    1. Seleccione la **Entidad de cliente** que coincida con su entidad de cliente principal.
-    1. Escriba un nombre que describa la relación.
-       > [!div class="mx-imgBorder"]
-       > ![Página del historial de compras que muestra la creación de una relación con el cliente.](media/model-purchase-join.png "Página del historial de compras que muestra la creación de una relación con el cliente")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel lateral que muestra la elección de actividades específicas de tipo semántico.":::
+
+1. Si aún no ha asignado la actividad a un tipo semántico, seleccione **Editar** para hacerlo. Se abre la experiencia guiada para mapear actividades semánticas. Mapee los datos a los campos correspondientes del tipo de actividad seleccionado.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de actividad de configuración de página.":::
+
+1. Después de asignar la actividad al tipo semántico correspondiente, seleccione **Siguiente** para continuar 
+ 
+1. Asigne los atributos semánticos a los campos necesarios para ejecutar el modelo.
 
 1. Seleccione **Guardar**.
 
 1. Seleccione **Siguiente**.
+
 
 ### <a name="configure-product-filters"></a>Configurar filtros de producto
 

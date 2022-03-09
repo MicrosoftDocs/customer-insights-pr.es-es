@@ -1,24 +1,25 @@
 ---
-title: Cancelación de predicción de suscripción
+title: Predicción de abandono de suscripciones (contiene vídeo)
 description: Prediga si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906923"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354718"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predicción de pérdida de suscripciones (vista previa)
+# <a name="subscription-churn-prediction"></a>Cancelación de predicción de suscripción
 
 La predicción de pérdida de suscripciones ayuda a predecir si un cliente está en peligro por dejar de usar los productos o servicios de suscripción de su compañía. Puede crear una nueva predicción de pérdida de suscripciones en la página **Inteligencia** > **Predicciones**. Seleccione **Mis predicciones** para ver otras predicciones que ha creado.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Pruebe el tutorial para una predicción de cancelación de suscripción con datos de ejemplo: [Guía de ejemplo de predicción de cancelación de suscripción](sample-guide-predict-subscription-churn.md).
@@ -61,11 +62,11 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 ## <a name="create-a-subscription-churn-prediction"></a>Crear una predicción de pérdida de suscripciones
 
 1. En las informaciones de público, vaya a **Inteligencia** > **Predicciones**.
-1. Seleccione la ventana **Modelo de pérdida de suscripciones (vista previa)** y seleccione **Usar este modelo**.
+1. Seleccione la ventana **Modelo de abandono de suscripción** y seleccione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Ventana Modelo de pérdida de suscripciones con botón Usar este modelo](media/subscription-churn-usethismodel.PNG "Ventana Modelo de pérdida de suscripciones con botón Usar este modelo")
+   > ![Ventana Modelo de pérdida de suscripciones con botón Usar este modelo.](media/subscription-churn-usethismodel.PNG "Ventana Modelo de pérdida de suscripciones con botón Usar este modelo")
 
-### <a name="name-model"></a>Nombre del modelo
+### <a name="name-model"></a>Modelo de nombre
 
 1. Proporcione un nombre para el modelo para distinguirlo de otros modelos.
 1. Proporcione un nombre para la entidad de salida utilizando solo letras y números, sin espacios. Ese es el nombre que usará la entidad del modelo. A continuación, seleccione **Siguiente**.
@@ -75,7 +76,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. Introduzca el número de **Días desde que finalizó la suscripción** que su empresa considera para que un cliente esté en un estado de pérdida. Este período suele equivaler a actividades comerciales como ofertas u otros esfuerzos de marketing que intentan evitar la pérdida del cliente.
 1. Ingrese el número de **Días para investigar el futuro para predecir el abandono** para establecer una ventana para predecir el abandono. Por ejemplo, para predecir el riesgo de abandono de sus clientes durante los próximos 90 días para alinearse con sus esfuerzos de retención de marketing. Predecir el riesgo de abandono durante períodos de tiempo más largos o más cortos puede hacer que sean más difícil abordar los factores en el perfil de riesgo de abandono, en función de sus requisitos empresariales específicos. Seleccione **Siguiente** para continuar
    >[!TIP]
-   > Puede elegir **Guardar y cerrar** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
+   > Puedes elegir **Guardar borrador** en cualquier momento para guardar la predicción como borrador. Encontrará el borrador de predicción en la pestaña **Mis predicciones** para continuar.
 
 ### <a name="add-required-data"></a>Agregar datos necesarios
 
@@ -86,11 +87,11 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
     1. Seleccione la **Entidad de cliente** que coincida con su entidad de cliente principal.
     1. Escriba un nombre que describa la relación.
        > [!div class="mx-imgBorder"]
-       > ![Página del historial de suscripciones que muestra la creación de una relación con el cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página del historial de suscripciones que muestra la creación de una relación con el cliente")
+       > ![Página del historial de suscripciones que muestra la creación de una relación con el cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página del historial de suscripciones que muestra la creación de una relación con el cliente")
 1. Seleccione **Siguiente**.
 1. Asigne los campos semánticos a atributos en la entidad del historial de suscripciones y seleccione **Guardar**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada](media/subscription-churn-subscriptionhistorymapping.PNG "Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada")
+   > ![Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada.](media/subscription-churn-subscriptionhistorymapping.PNG "Página del historial de suscripciones que muestra los atributos semánticos que se asignan a campos en la entidad del historial de suscripciones seleccionada")
 1. Seleccione **Agregar datos** para **Actividades del cliente** y elija la entidad que proporciona la información de actividad del cliente como se describe en los prerrequisitos.
 1. Seleccione un tipo de actividad que coincida con el tipo de actividad del cliente que está configurando.  Seleccione **Crear nuevo** y proporcione un nombre si no ve una opción que coincida con el tipo de actividad que necesita.
 1. Deberá configurar la relación desde la entidad de actividad del cliente hasta la entidad de cliente.
@@ -101,10 +102,10 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 1. Asigne los campos semánticos a atributos en la entidad de actividad de cliente y seleccione **Guardar**. Para obtener descripciones de los campos, eche un vistazo a los [prerrequisitos](#prerequisites).
 1. (Opcional) Si tiene otras actividades de clientes que le gustaría incluir, repita los pasos anteriores.
    > [!div class="mx-imgBorder"]
-   > ![Definir la relación de entidad](media/subscription-churn-customeractivitiesmapping.PNG "Página de actividades del cliente que muestra los atributos semánticos que se asignan a campos en la entidad de actividad del cliente seleccionada")
+   > ![Defina la relación de entidad.](media/subscription-churn-customeractivitiesmapping.PNG "Página de actividades del cliente que muestra los atributos semánticos que se asignan a campos en la entidad de actividad del cliente seleccionada")
 1. Seleccione **Siguiente**.
 
-### <a name="set-schedule-and-review-configuration"></a>Establecer programación y revisar la configuración
+### <a name="set-schedule-and-review-configuration"></a>Establecer la programación y revisar la configuración
 
 1. Establezca una frecuencia para volver a entrenar su modelo. Esta configuración es importante para actualizar la precisión de las predicciones a medida que se ingieren nuevos datos en las informaciones de público. La mayoría de las empresas pueden volver a entrenarse una vez al mes y obtener una buena precisión para sus predicciones.
 1. Seleccione **Siguiente**.
@@ -115,7 +116,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
 
 1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de la página Mis predicciones](media/subscription-churn-mypredictions.PNG "Vista de la página Mis predicciones")
+   > ![Vista de la página Mis predicciones.](media/subscription-churn-mypredictions.PNG "Vista de la página Mis predicciones")
 1. Seleccione la predicción que desea revisar.
    - **Nombre de predicción:** El nombre de la predicción proporcionado al crearla.
    - **Tipo de predicción:** El tipo de modelo utilizado para la predicción
@@ -131,7 +132,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
    - **Última actualización:** La fecha en que la predicción actualizó los resultados en la entidad de salida.
 1. Seleccione los puntos suspensivos verticales junto a la predicción cuyos resultados desea revisar y seleccione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar](media/subscription-churn-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
+   > ![Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar.](media/subscription-churn-verticalellipses.PNG "Vista de opciones en el menú de puntos suspensivos verticales para una predicción que incluye editar, actualizar, ver, registrar y eliminar")
 1. Hay tres secciones de datos principales en la página de resultados:
     1. **Rendimiento del modelo de entrenamiento:** A, B o C son puntuaciones posibles. Esta puntuación indica el rendimiento de la predicción y puede ayudarle a tomar la decisión de usar los resultados almacenados en la entidad de salida.
         - Las puntuaciones se determinan según las siguientes reglas:
@@ -139,38 +140,17 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
             - **B** cuando el modelo predijo con precisión al menos el 50% de las predicciones totales, y cuando el porcentaje de predicciones precisas para los clientes que abandonaron es hasta un 10% mayor que la tasa de abandono media histórica de la tasa de abandono media histórica.
             - **C** cuando el modelo predijo con precisión menos del 50% de las predicciones totales, o cuando el porcentaje de predicciones precisas para los clientes que abandonaron es menor que la tasa de abandono media histórica.
                > [!div class="mx-imgBorder"]
-               > ![Vista del resultado del rendimiento del modelo](media/subscription-churn-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
+               > ![Vista del resultado del rendimiento del modelo.](media/subscription-churn-modelperformance.PNG "Vista del resultado del rendimiento del modelo")
     1. **Probabilidad de pérdida (número de clientes):** Grupos de clientes según su riesgo de pérdida previsto. Estos datos pueden ayudarle más adelante si desea crear un segmento de clientes con alto riesgo de pérdida. Dichos segmentos ayudan a comprender dónde debe estar el corte para la pertenencia del segmento.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%](media/subscription-churn-resultdistribution.PNG "Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%")
+       > ![Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100 %](media/subscription-churn-resultdistribution.PNG "Gráfico que muestra la distribución de los resultados de pérdida, desglosada en rangos de 0-100%")
     1. **Factores más influyentes:** Hay muchos factores que se tienen en cuenta al crear su predicción. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede usar estos factores para ayudar a validar sus resultados de predicción. O puede usar esta información más tarde para [crear segmentos](segments.md) que puedan ayudar a influir en el riesgo de pérdida de clientes.
        > [!div class="mx-imgBorder"]
-       > ![Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.](media/subscription-churn-influentialfactors.PNG "Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.")
+       > ![Lista que muestra los factores influyentes y su importancia para predecir el resultado de abandono.](media/subscription-churn-influentialfactors.PNG "Lista que muestra los factores influyentes y su importancia para predecir el resultado de pérdida.")
 
-## <a name="fix-a-failed-prediction"></a>Corregir una predicción fallida
+## <a name="manage-predictions"></a>Administrar predicciones
 
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione la predicción para cuyos registros de errores desea ver y seleccione **Registros**.
-   > [!div class="mx-imgBorder"]
-   > ![Vista de la barra de menú de resultados, incluidos los botones cerrar, editar modelo y registros](media/subscription-churn-logsbutton.PNG "Vista de la barra de menú de resultados, incluidos los botones cerrar, editar modelo y registros")
-1. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error para el que no hay suficientes datos para predecir con precisión se resuelve normalmente cargando datos adicionales.
-
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
-
-Las predicciones se actualizarán automáticamente en la misma [programación que actualizan sus datos](system.md#schedule-tab) definida en la configuración.
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-1. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-1. Vaya a la pestaña **Mis predicciones** en **Inteligencia** > **Predicciones**.
-1. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-1. Seleccione **Eliminar**.
-
-> [!NOTE]
-> Eliminar una predicción eliminará su entidad de salida.
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

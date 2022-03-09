@@ -2,21 +2,25 @@
 title: Predicción del valor de la vida del cliente (CLV)
 description: Predecir el potencial de ingresos de los clientes activos en el futuro.
 ms.date: 02/05/2021
-ms.reviewer: wameng
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268615"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355810"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predicción del valor de tiempo de vida del cliente (CLV) (versión preliminar)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predicción del valor de la vida del cliente (CLV)
 
 Predecir el valor potencial (ingresos) que los clientes activos individuales aportarán a su negocio durante un período de tiempo futuro definido. Esta función puede ayudarle a lograr varios objetivos: 
 - Identificar clientes de alto valor y procesar esta información
@@ -38,11 +42,11 @@ Los siguientes datos son obligatorios y, cuando se marcan como opcionales, es qu
 - Identificador de cliente: identificador único para hacer coincidir las transacciones con un cliente individual
 
 - Historial de transacciones: registro de transacciones históricas con el siguiente esquema de datos semánticos
-    - Id. de transacción: identificador único de cada transacción
-    - Fecha de la transacción: fecha, preferiblemente una marca de tiempo de cada transacción
-    - Monto de la transacción: valor monetario (por ejemplo, ingresos o margen de beneficio) de cada transacción
-    - Etiqueta asignada a las devoluciones (opcional): valor booleano que indica si la transacción es una devolución 
-    - Identificador de producto (opcional): identificador de producto del producto involucrado en la transacción
+    - **Id. de transacción**: identificador único de cada transacción
+    - **Fecha de la transacción**: fecha, preferiblemente una marca de tiempo de cada transacción
+    - **Importe de la transacción**: valor monetario (por ejemplo, ingresos o margen de beneficios) de cada transacción
+    - **Etiqueta asignada a las devoluciones** (opcional): valor booleano que indica si la transacción es una devolución 
+    - **Id. de producto** (opcional): id. de producto del producto involucrado en la transacción
 
 - Datos adicionales (opcional), por ejemplo
     - Actividades web: historial de visitas al sitio web, historial de correo electrónico
@@ -53,10 +57,20 @@ Los siguientes datos son obligatorios y, cuando se marcan como opcionales, es qu
     - Identificadores de clientes para asignar actividades a sus clientes
     - Información de actividad que contiene el nombre y la fecha de la actividad
     - El esquema de datos semánticos para actividades incluye: 
-        - Clave principal: identificador único para una actividad
-        - Marca de tiempo: fecha y hora del evento, identificadas mediante la clave principal
-        - Evento (nombre de actividad): nombre del evento que desea usar
-        - Detalles (importe o valor): detalles sobre la actividad del cliente
+        - **Clave principal**: un identificador único de una actividad
+        - **Marca de tiempo**: fecha y hora del evento, identificadas mediante la clave principal
+        - **Evento (nombre de actividad)**: el nombre del evento que desea usar
+        - **Detalles (importe o valor)**: detalles sobre la actividad del cliente
+
+- Características de los datos sugeridos
+    - Datos históricos suficientes: al menos un año de datos transaccionales. Preferiblemente de dos a tres años de datos transaccionales para predecir el CLV durante un año.
+    - Varias compras por cliente: idealmente, al menos dos o tres transacciones por id. de cliente, preferiblemente en varias fechas.
+    - Número de clientes: al menos 100 clientes únicos, preferiblemente más de 10 000 clientes. El modelo no funcionará con menos de 100 clientes y datos históricos insuficientes
+    - Compleción de los datos: menos del 20% de valores ausentes en los campos obligatorios de los datos de entrada   
+
+> [!NOTE]
+> - El modelo requiere el historial de transacciones de sus clientes. Actualmente, solo se puede configurar una entidad del historial de transacciones. Si hay varias entidades de compra/transacción, puede unirlas en Power Query antes de la ingesta de datos.
+> - Sin embargo, para obtener datos adicionales sobre la actividad del cliente (opcional), puede agregar tantas entidades de actividad del cliente como desee para que el modelo las considere.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Crear una predicción del valor de tiempo de vida del cliente
 
@@ -64,7 +78,7 @@ Los siguientes datos son obligatorios y, cuando se marcan como opcionales, es qu
 
 1. Seleccione el icono **Valor de por vida del cliente** y seleccione **Modelo de uso**. 
 
-1. En el panel **Valor de por vida del cliente (vista previa)**, seleccione **Empezar**.
+1. En el panel **Valor de tiempo de vida del cliente**, seleccione **Comenzar**.
 
 1. Asigne un nombre a **este modelo** y a la **entidad de salida** para distinguirlos de otros modelos o entidades.
 
@@ -76,7 +90,7 @@ Los siguientes datos son obligatorios y, cuando se marcan como opcionales, es qu
    De forma predeterminada, la unidad está configurada como meses. Puede cambiarlo a años para avanzar más en el futuro.
 
    > [!TIP]
-   > Para predecir con precisión el CLV para el período de tiempo que establezca, necesita un período comparable de datos históricos. Por ejemplo, si desea predecir para los próximos 12 meses, se recomienda que tenga al menos de 18 a 24 meses de datos históricos.
+   > Para predecir con precisión el CLV para el período de tiempo que establezca, necesita un período comparable de datos históricos. Por ejemplo, si desea predecir el CLV para los próximos 12 meses, se recomienda que tenga al menos de 18 a 24 meses de datos históricos.
 
 1. Especifique qué significa **Clientes activos** para su negocio. Establezca el período de tiempo en el que un cliente debe haber tenido al menos una transacción para ser considerado activo. El modelo solo predecirá CLV para clientes activos. 
    - **Dejar que el modelo calcule el intervalo de compra (recomendado)**: el modelo analiza sus datos y determina un período de tiempo basado en compras históricas.
@@ -139,7 +153,6 @@ Los datos que reflejan las interacciones clave del cliente (como la web, el serv
 
 1. Seleccione **Siguiente**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Revisar y ejecutar la configuración del modelo
 
 1. En el paso **Revisar los detalles de su modelo**, valide la configuración de la predicción. Puede volver a cualquier parte de la configuración de predicción seleccionando **Editar** debajo del valor mostrado. También puede seleccionar un paso de configuración en el indicador del progreso.
@@ -160,11 +173,10 @@ Los datos que reflejan las interacciones clave del cliente (como la web, el serv
 - **Estado**: estado de la ejecución de la predicción.
     - **Puesto en cola**: la predicción está esperando a que se completen otros procesos.
     - **Actualización**: la predicción se está ejecutando actualmente para crear resultados que fluirán hacia la entidad de salida.
-    - **Errores**: la ejecución de la predicción ha presentado errores. [Revise los registros](#troubleshoot-a-failed-prediction) para más detalles.
+    - **Errores**: la ejecución de la predicción ha presentado errores. [Revise los registros](manage-predictions.md#troubleshoot-a-failed-prediction) para más detalles.
     - **Correcta**: la predicción ha tenido éxito. Seleccione **Vista** en los puntos suspensivos verticales para revisar los resultados de la predicción.
 - **Editada**: la fecha en que se modificó la configuración para la predicción.
 - **Última actualización**: la fecha en que la predicción actualizó los resultados en la entidad de salida.
-
 
 ### <a name="review-prediction-results"></a>Revisar los resultados de la predicción
 
@@ -181,24 +193,24 @@ Hay tres secciones de datos principales en la página de resultados.
   Utilizando la definición de clientes de alto valor proporcionada al configurar la predicción, el sistema evalúa el rendimiento del modelo de IA en la predicción de los clientes de alto valor en comparación con un modelo de referencia.    
 
   Las puntuaciones se determinan según las siguientes reglas:
-  - A: cuando el modelo predijo con precisión al menos un 5 % más de clientes de alto valor en comparación con el modelo de referencia.
-  - B: cuando el modelo predijo con precisión entre un 0 % y un 5 % más de clientes de alto valor en comparación con el modelo de referencia.
-  - C: cuando el modelo predijo con precisión menos clientes de alto valor en comparación con el modelo de referencia.
+  - **A** cuando el modelo predijo con precisión al menos un 5 % más de clientes de alto valor en comparación con el modelo de referencia.
+  - **B** cuando el modelo predijo con precisión entre un 0 % y un 5 % más de clientes de alto valor en comparación con el modelo de referencia.
+  - **C** cuando el modelo predijo con precisión menos clientes de alto valor en comparación con el modelo de referencia.
 
   El panel **Calificación del modelo** muestra más detalles sobre el rendimiento del modelo de IA y el modelo de referencia. El modelo de referencia utiliza un enfoque no basado en IA para calcular el valor de vida del cliente basado principalmente en las compras históricas realizadas por los clientes.     
   La fórmula estándar utilizada para calcular el CLV mediante el modelo de referencia:    
 
-  *CLV para cada cliente = Compra mensual promedio realizada por el cliente en la ventana de cliente activo * Número de meses en el período de predicción de CLV * Tasa de retención general de todos los clientes*
+  _**CLV para cada cliente** = Compra mensual promedio realizada por el cliente en la ventana de cliente activo * Número de meses en el período de predicción de CLV * Tasa de retención general de todos los clientes*_
 
   El modelo de IA se compara con el modelo de referencia basado en dos métricas de rendimiento del modelo.
   
   - **Tasa de éxito en la predicción de clientes de alto valor**
 
-  Vea la diferencia en la predicción de clientes de alto valor utilizando el modelo de IA en comparación con el modelo de referencia. Por ejemplo, una tasa de éxito del 84 % significa que de todos los clientes de alto valor en los datos de entrenamiento, el modelo de IA pudo capturar con precisión el 84 %. Luego, comparamos esta tasa de éxito con la tasa de éxito del modelo de referencia para registrar el cambio relativo. Este valor se utiliza para asignar una puntuación al modelo.
+    Vea la diferencia en la predicción de clientes de alto valor utilizando el modelo de IA en comparación con el modelo de referencia. Por ejemplo, una tasa de éxito del 84 % significa que de todos los clientes de alto valor en los datos de entrenamiento, el modelo de IA pudo capturar con precisión el 84 %. Luego, comparamos esta tasa de éxito con la tasa de éxito del modelo de referencia para registrar el cambio relativo. Este valor se utiliza para asignar una puntuación al modelo.
 
   - **Métricas de errores**
     
-  Otra métrica le permite revisar el rendimiento general del modelo en términos de error en la predicción de valores futuros. Usamos la métrica general Root Mean Squared Error (RMSE) para evaluar este error. RMSE es una forma estándar de medir el error de un modelo al predecir datos cuantitativos. El RMSE del modelo de IA se compara con el RMSE del modelo de referencia y se informa la diferencia relativa.
+    Otra métrica le permite revisar el rendimiento general del modelo en términos de error en la predicción de valores futuros. Usamos la métrica general Root Mean Squared Error (RMSE) para evaluar este error. RMSE es una forma estándar de medir el error de un modelo al predecir datos cuantitativos. El RMSE del modelo de IA se compara con el RMSE del modelo de referencia y se informa la diferencia relativa.
 
   El modelo de IA prioriza la clasificación precisa de los clientes de acuerdo con el valor que aportan a su negocio. Por lo tanto, solo se utiliza la tasa de éxito de la predicción de clientes de alto valor para obtener la puntuación final del modelo. La métrica RMSE detecta valores atípicos. En escenarios en los que tiene un pequeño porcentaje de clientes con valores de compra extraordinariamente altos, es posible que la métrica general del RMSE no ofrezca una imagen completa del rendimiento del modelo.   
 
@@ -206,28 +218,8 @@ Hay tres secciones de datos principales en la página de resultados.
 
 - **Factores más influyentes**: se consideran varios factores al crear su predicción de CLV según los datos de entrada proporcionados al modelo de IA. Cada uno de los factores tiene su importancia calculada para las predicciones agregadas que crea un modelo. Puede utilizar estos factores para ayudar a validar los resultados de la predicción. Estos factores también brindan más información sobre los factores más influyentes que contribuyeron a predecir el CLV en todos sus clientes.
 
-## <a name="refresh-a-prediction"></a>Actualizar una predicción
+## <a name="manage-predictions"></a>Administrar predicciones
 
-Las predicciones se actualizan automáticamente en el mismo [programa en que se actualizan sus datos](system.md#schedule-tab) según lo configurado en los ajustes. También puede actualizarlas manualmente.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción que desea actualizar.
-3. Seleccione **Actualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar una predicción
-
-Eliminar un predicción también elimina su entidad de salida.
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción que desea eliminar.
-3. Seleccione **Eliminar**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Solucionar problemas de una predicción con errores
-
-1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
-2. Seleccione los puntos suspensivos verticales junto a la predicción para la que desea ver los registros de errores.
-3. Seleccione **Registros**.
-4. Revisar todos los errores. Hay varios tipos de errores que pueden producirse, y describen qué condición causó el error. Por ejemplo, un error para el que no hay suficientes datos para predecir con precisión se resuelve normalmente cargando datos adicionales en las informaciones de público.
-
+Es posible optimizar, solucionar problemas, actualizar o eliminar predicciones. Revise un informe de usabilidad de datos de entrada para descubrir cómo hacer que un predicción sea más rápido y confiable. Para obtener más información, consulte [Administrar predicciones](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

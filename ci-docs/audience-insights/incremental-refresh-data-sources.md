@@ -1,22 +1,26 @@
 ---
-title: Actualización incremental para fuentes de datos basadas en Power Query
-description: Actualice los datos nuevos y actualizados para grandes fuentes de datos basados en Power Query.
-ms.date: 09/28/2020
+title: Actualización incremental para orígenes de datos basados en Power Query
+description: Actualice los datos nuevos y actualizados de los grandes orígenes de datos basados en Power Query.
+ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596842"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353726"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para fuentes de datos basadas en Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Actualización incremental para orígenes de datos basados en Power Query
+
+Este artículo analiza cómo configurar la actualización incremental para fuentes de datos basadas en Power Query.
 
 La actualización incremental de las fuentes de datos ofrece las siguientes ventajas:
 
@@ -26,13 +30,13 @@ La actualización incremental de las fuentes de datos ofrece las siguientes vent
 
 ## <a name="configure-incremental-refresh"></a>Configurar actualización incremental
 
-Las informaciones de público permiten la actualización incremental de las fuentes de datos importadas a través de Power Query que admiten la ingestión incremental. Por ejemplo, las bases de datos Azure SQL con campos de fecha y hora que indican cuándo se actualizaron por última vez los registros de datos.
+Las conclusiones del público permiten la actualización incremental para los orígenes de datos importados a través de Power Query que admiten la ingestión incremental. Por ejemplo, las bases de datos Azure SQL con campos de fecha y hora que indican cuándo se actualizaron por última vez los registros de datos.
 
-1. [Crea un nuevo origen de datos basado en Power Query](connect-power-query.md).
+1. [Crear un nuevo origen de datos basado en Power Query](connect-power-query.md).
 
-1. Proporcione un nombre para el origen de datos.
+1. Proporcione un **Nombre** para el origen de datos.
 
-1. Seleccione un origen de datos que admita la actualización incremental, como la base de datos de Azure SQL.
+1. Seleccione un origen de datos que admita la actualización incremental, como la [base de datos de Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Seleccione las entidades o tablas para ingerir.
 
@@ -44,8 +48,7 @@ Las informaciones de público permiten la actualización incremental de las fuen
 
 1. En **Configuración de actualización incremental**, configurará la actualización incremental para todas las entidades que seleccionó al crear el origen de datos.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurar entidades en un origen de datos para actualización incremental](media/incremental-refresh-settings.png "Configurar entidades en un origen de datos para actualización incremental")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurar entidades en un origen de datos para actualización incremental.":::
 
 1. Seleccione una entidad y proporcione los siguientes detalles:
 

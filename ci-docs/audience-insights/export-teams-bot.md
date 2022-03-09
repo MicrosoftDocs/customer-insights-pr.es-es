@@ -1,20 +1,19 @@
 ---
 title: Bot para Microsoft Teams
 description: Busque perfiles de clientes unificados en Microsoft Teams con la ayuda de un bot.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032503"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232123"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot de Teams para Dynamics 365 Customer Insights (versión preliminar)
 
@@ -31,7 +30,10 @@ Para preparar y configurar el bot deben cumplirse los siguientes requisitos prev
 - Se ha completado la instancia de [proceso de unificación](data-unification.md).
 - Se han agregado campos a [índice de búsqueda y filtro](search-filter-index.md).
 - Customer Insights y Teams están en la misma organización.
+- Su entorno tiene el público de destino principal configurado para clientes individuales. No se admiten las cuentas empresariales.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurar el bot
 
 1. En las informaciones de público, vaya a **Administrador** > **Destinos de exportación**.
