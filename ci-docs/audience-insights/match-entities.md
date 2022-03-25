@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355174"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376943"
 ---
 # <a name="match-entities"></a>Coincidir entidades
 
@@ -180,7 +180,19 @@ Una entidad de resultado de la desduplicación contiene la siguiente informació
   - Deduplication_WinnerId: este campo contiene el identificador del elemento elegido en los grupos o clústeres identificados. Si Deduplication_WinnerId es el mismo que el valor de la clave principal para un registro, significa que el registro es el elegido.
 - Campos utilizados para definir las reglas de desduplicación.
 - Los campos Regla y Puntuación indican cuál de las reglas de desduplicación se aplicó y la puntuación devuelta por el algoritmo de coincidencia.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versión preliminar)
+
+Si enriqueció entidades en el nivel de origen de datos, selecciónelas antes de ejecutar el proceso de coincidencia. Las entidades enriquecidas pueden mejorar sus resultados de unificación. Para obtener más información, consulte [Enriquecimiento de orígenes de datos](data-sources-enrichment.md). 
+
+La entidad enriquecida contiene los campos de origen de datos originales y los campos enriquecidos. Entonces, si elige trabajar con la entidad enriquecida, la configuración existente no se ve afectada. Sin embargo, es posible que deba actualizar las reglas de coincidencia para usar los campos enriquecidos en su lugar.
+
+1. Vaya a **Datos** > **Unificar** > **Coincidir** y seleccione **Usar entidades enriquecidas** en la parte superior de la página.
+
+1. Desde el panel **Usar entidades enriquecidas**, elija una o más entidades enriquecidas.
+
+1. Seleccione **Listo**. Siempre que se utilice la entidad de origen (como el orden de coincidencia o las reglas), se cambia automáticamente a la entidad enriquecida.
+  
 ## <a name="run-the-match-process"></a>Ejecutar el proceso de comparación
 
 Con las reglas de coincidencia configuradas, incluidas las reglas de desduplicación y coincidencia entre entidades, puede ejecutar el proceso de coincidencia. 

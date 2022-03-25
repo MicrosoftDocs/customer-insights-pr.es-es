@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353932"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455854"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Usar segmentos en Dynamics 365 Marketing (versión preliminar)
 
@@ -28,7 +28,7 @@ Si está usando las nuevas capacidades de Dynamics 365 Marketing para la orquest
 
 ## <a name="prerequisite-for-a-connection"></a>Requisito previo para una conexión
 
-- Los registros de contacto deben estar presentes en Dynamics 365 Marketing antes de poder exportar un segmento de Customer Insights a Marketing. Más información sobre cómo ingerir contactos en [Dynamics 365 Marketing usando Microsoft Dataverse](connect-power-query.md).
+- Los registros de contacto deben estar presentes en Dynamics 365 Marketing antes de poder exportar un segmento de Customer Insights a Marketing. Más información sobre cómo ingerir contactos en [Dynamics 365 Marketing usando Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > La exportación de segmentos de las informaciones de público a Marketing no creará nuevos registros de contactos en las instancias de Marketing. Los registros de contacto de Marketing deben ingerirse en las informaciones de público y usarse como origen de datos. También deben incluirse en la entidad Cliente unificada para asignar los identificadores de cliente a los identificadores de contacto antes de que se puedan exportar los segmentos.

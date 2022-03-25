@@ -1,7 +1,7 @@
 ---
 title: Administrar permisos de usuario
 description: Más información sobre permisos y roles de usuario.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355958"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376759"
 ---
 # <a name="user-permissions"></a>Permisos de usuario
 
@@ -48,7 +48,7 @@ Hay tres tipos de roles:
 - Administre la configuración y enriquezca los perfiles de clientes desde la página **Enriquecimiento** (solo para enriquecimientos de primera parte).
 - Administre y cree exportaciones basadas en conexiones compartidas con colaboradores. [Obtenga más información sobre cómo los administradores permiten que los colaboradores utilicen una conexión para las exportaciones.](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrador
+## <a name="admin"></a>Admin
 
 - Todos los permisos disponibles para el colaborador.
 - Cambie la configuración de la página **Sistema**, incluido el idioma de trabajo y las programaciones de actualización de los procesos del sistema.
@@ -60,6 +60,12 @@ Hay tres tipos de roles:
 - Instale y utilice el **Complemento de tarjeta de cliente**.
 - Agregue y use el conector de **Power Apps**.
 - Habilitar el uso de las [API de Customer Insights](apis.md).
+- [Asignar propiedad del entorno](manage-environments.md#change-the-owner-of-an-environment) a otro administrador.
+
+## <a name="admin-owner"></a>Administrador (propietario)
+
+- Todos los permisos disponibles para el administrador.
+- [Restablecer y eliminar](manage-environments.md#reset-an-existing-environment) el entorno.
 
 ## <a name="assign-roles-and-permissions"></a>Asignar roles y permisos
 

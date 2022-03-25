@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232725"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376483"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novedades de la capacidad de informaciones de público de Dynamics 365 Customer Insights
-
-
 
 ¡Estamos entusiasmados de anunciar nuestras actualizaciones más recientes! Este artículo resume las características de vista previa pública, las mejoras de disponibilidad general y las actualizaciones de características. Para ver los planes de características a largo plazo, eche un vistazo a los [planes de lanzamiento de Dynamics 365 y Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Actualizaciones de febrero de 2022
+
+Las actualizaciones de febrero de 2022 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="general-availability-for-prediction-models"></a>Disponibilidad general para modelos de predicción
+
+Modelos de predicción listos para usar, incluidos **abono de suscripción**, **abono transaccional** y **valor de por vida del cliente (CLV)**, estarán disponibles de forma general como parte de Customer Insights. 
+
+Para obtener más información, consulte [Información general de predicciones](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nuevo origen de datos: Integración con Azure Synapse Analytics (versión preliminar)
+
+Azure Synapse Analytics es un servicio de análisis empresarial que acelera el tiempo de obtención de información en los almacenamientos de datos y los sistemas de macrodatos.
+
+Si su organización ya utiliza capacidades analíticas avanzadas de Azure Synapse Analytics y almacena la salida en las bases de datos de Data Lake, puede ingerir fácilmente esos datos en Customer Insights. Para más información, vea [Conectar un origen de datos de Azure Synapse (versión preliminar)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Enriquecimiento de LiveRamp (versión preliminar)
+
+LiveRamp proporciona resolución de identidad fuera de línea determinista y consolidación de datos de clientes. Puede asignar identificadores personales en sus datos de cliente al gráfico de identidad de AbiliTec y recibir id. de AbiliTec. A continuación, puede utilizar estos id. para una mejor unificación de los datos de sus clientes.
+
+Para más información, vea [Enriquecer los perfiles de los clientes con datos de identidad de LiveRamp (versión preliminar)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Enriquecimiento de orígenes de datos (versión preliminar)
+
+Utilice datos de orígenes como Microsoft y otros socios para enriquecer los datos de sus clientes antes de la unificación de datos. Los enriquecimientos origen de datos ayudan a producir datos más completos y de mayor calidad que pueden ayudar a lograr mejores resultados una vez que unifique sus datos.
+
+Para obtener más información, consulte [Enriquecimiento de orígenes de datos (versión preliminar)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Cambiar propietario del entorno
+
+Si bien varios usuarios pueden tener permisos de administrador en Customer Insights, solo un usuario es el propietario de un entorno. Una experiencia mejorada le permite cambiar los propietarios de un entorno y reclamar la propiedad si un propietario anterior deja la organización. 
+
+Para más información, consulte [Cambiar el propietario de un entorno](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>El proceso de preparación de datos enumera el motivo de corrupción de los registros dañados
+
+El proceso de preparación de datos ahora muestra el motivo de la corrupción de todos los campos con datos corruptos a nivel de registro individual para una fácil identificación. 
+
+Para más información, vea [Orígenes de datos corruptos](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fin de la versión preliminar de las características de generación de informes en la capacidad de información de interacción
+
+La versión preliminar de las conclusiones sobre la interacción de Dynamics 365 Customer Insights finalizaron el 15 de febrero de 2022.  
+Este cambio significa que la experiencia de prueba de Customer Insights ya no incluye la posibilidad de crear embudos ni otras funcionalidades de informes.
+
+Le invitamos a explorar y evaluar las muchas otras características de [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), la plataforma de datos de clientes (CDP) de Microsoft.    
+ 
+Durante un periodo de transición, los participantes actuales de la versión preliminar siguen teniendo acceso a algunas capacidades y funcionalidades de la versión preliminar:
+
+- Obtener el código para instrumentar un sitio web o una aplicación móvil. 
+- Ver eventos y propiedades de los eventos. 
+- Mejorar los perfiles unificados con eventos ingeridos y refinados para beneficiarse de todo el valor de sus datos de clientes.
+  
+Durante el periodo de transición, los eventos capturados se siguen transmitiendo al Data Lake conectado. Una vez desactivada esta funcionalidad, el intercambio de datos entre conclusiones sobre la interacción y conclusiones del público se detendrá y no se enviarán nuevos eventos al almacenamiento conectado.
+Póngase en contacto directamente con el equipo de su cuenta Microsoft si tiene preguntas sobre el fin de la versión preliminar de capacidades. Su equipo de cuentas le mantendrá al tanto de los próximos lanzamientos. 
 
 ## <a name="january-2022-updates"></a>Actualizaciones de enero de 2022
 

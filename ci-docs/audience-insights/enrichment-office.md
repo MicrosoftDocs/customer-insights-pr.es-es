@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228495"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376851"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquezca los perfiles de los clientes con datos de interacciones (vista previa)
 
@@ -28,7 +28,7 @@ Para configurar el enriquecimiento, deben cumplirse los siguientes requisitos pr
 - Tener una licencia activa en la nube para Office 365.
 - Usted tiene [perfiles de clientes unificados](customer-profiles.md) basados en [cuentas empresariales](work-with-business-accounts.md).
 - Su entorno de Customer Insights debe tener una [organización asociada de Microsoft Dataverse](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Tiene permisos de [administrador](permissions.md#administrator).
+- Tiene permisos de [administrador](permissions.md#admin).
 - Tiene, o puede obtener, el consentimiento de su administrador de inquilinos de Office 365 para usar datos de Office 365 para proporcionar **Perspectivas para la organización** dentro de las aplicaciones de Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355912"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376529"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traiga su propia Azure Key Vault (versión preliminar)
 
@@ -31,7 +31,7 @@ Para configurar el almacén de claves en conclusiones del público, se deben cum
 
 - Debe disponer de una suscripción activa de Azure.
 
-- Debe tener un rol de [Administrador](permissions.md#administrator) en los conocimientos del público. Más información acerca de [permisos de usuario en conclusiones del público](permissions.md#assign-roles-and-permissions).
+- Debe tener un rol de [Administrador](permissions.md#admin) en los conocimientos del público. Más información acerca de [permisos de usuario en conclusiones del público](permissions.md#assign-roles-and-permissions).
 
 - Tiene los roles [Colaborador](/azure/role-based-access-control/built-in-roles#contributor) y [Administrador de acceso de usuarios](/azure/role-based-access-control/built-in-roles#user-access-administrator) en el almacén de claves o en el grupo de recursos al que pertenece el almacén de claves. Para obtener más información, vaya a [Agregar o quitar asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal). Si no tiene el rol Administrador de acceso de usuarios en el almacén de claves, debe configurar los permisos de control de acceso basados en roles para la entidad de servicio de Azure para Dynamics 365 Customer Insights por separado. Siga los pasos para [usar una entidad de servicio de Azure](connect-service-principal.md) para el almacén de claves que debería estar vinculada.
 

@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfiles de cliente unificados
 description: Utilice las capacidades para enriquecer los datos de sus clientes.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355404"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372740"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimiento para perfiles de clientes (vista previa)
 
@@ -42,6 +42,7 @@ En la pestaña **Descubrir** encontrará todas las opciones de enriquecimiento c
 - [Datos de cliente](enrichment-SFTP-custom-import.md) a través del protocolo seguro de transferencia de archivos (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) proporcionado por Microsoft
 - [Datos de ubicación](enrichment-here.md) proporcionados por HERE Technologies 
+- [Identidad](enrichment-liveramp.md) proporcionada por LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
@@ -80,6 +81,10 @@ Los enriquecimientos de terceros se configuran mediante [conexiones](connections
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquecimientos del mismo tipo
 
 La entidad que se va a enriquecer se especifica durante la configuración del enriquecimiento, lo que le permite enriquecer solo un subconjunto de sus perfiles. Por ejemplo, enriquezca los datos solo para un segmento específico. Puede configurar varios enriquecimientos del mismo tipo y reutilizar la misma conexión. Algunos enriquecimientos tendrán límites en el número de enriquecimientos del mismo tipo que se pueden crear. Los límites y el uso actual se pueden ver en la página **Enriquecimiento**.
+
+## <a name="enrich-data-sources-before-unification"></a>Enriquecer los orígenes de datos antes de la unificación
+
+Puede enriquecer los datos de sus clientes antes de la unificación de datos para ayudar a aumentar la calidad de una coincidencia de datos. Para obtener más información, consulte [Enriquecer orígenes de datos](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Ver el progreso del proceso de enriquecimiento
 

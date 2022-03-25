@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354429"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376437"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de registros en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)
 
@@ -37,7 +37,7 @@ Customer Insights envía los siguientes registros de eventos:
 Para configurar diagnósticos en Customer Insights, se deben cumplir los siguientes requisitos previos:
 
 - Debe disponer de una [suscripción activa de Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Tiene permisos de [administrador](permissions.md#administrator) en Customer Insights.
+- Tiene permisos de [administrador](permissions.md#admin) en Customer Insights.
 - Tiene el rol de **Colaborador** y **Administrador de acceso de usuario** en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Para obtener más información, vea [Agregar o quitar asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 - Los [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Centro de eventos de Azure o Azure Log Analytics se cumplieron.
 - Tiene al menos el rol **Lector** en el grupo de recursos al que pertenece el recurso.
@@ -132,7 +132,7 @@ Los eventos de API y los eventos de flujo de trabajo tienen una estructura comú
 | `resultSignature` | String    | Opcionales          | Estado del resultado del evento. Si la operación corresponde a una llamada API de REST, es el código de estado HTTP.        | `200`             |
 | `durationMs`      | Largo      | Opcionales          | Duración de la operación en milisegundos.     | `133`     |
 | `callerIpAddress` | String    | Opcionales          | Dirección IP de la persona que llama, si la operación corresponde a una llamada API que proviene de una dirección IP disponible públicamente.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcionales          | Objeto JSON que describe la identidad del usuario o la aplicación que realizó la operación.       | Vea la sección [Identidad](#identity-schema).     |  |
+| `identity`        | String    | Opcionales          | Objeto JSON que describe la identidad del usuario o la aplicación que realizó la operación.       | Vea la sección [Identidad](#identity-schema).     |  
 | `properties`      | String    | Opcionales          | Objeto JSON con más propiedades para la categoría particular de eventos.      | Vea la sección [Propiedades](#api-properties-schema).    |
 | `level`           | String    | Necesario          | El nivel de gravedad del evento.    | `Informational`, `Warning`, `Error` o `Critical`.           |
 | `uri`             | String    | Opcionales          | URI de solicitud absoluta.    |               |
@@ -239,7 +239,7 @@ Los eventos de flujo de trabajo tienen las siguientes propiedades.
 | `properties.startTimestamp`                  | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Sí      | Sí  | `instanceId` de Customer Insights                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Sí      | Sí  | `instanceId` de Customer Insights                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Sí  | - Para OperationType = `Export`, el identificador es la guía de la configuración de exportación. <br> - Para OperationType = `Enrichment`, es la guía del enriquecimiento <br> - Para OperationType `Measures` y `Segmentation`, el identificador es el nombre de la entidad. |
 | `properties.friendlyName`                    | No       | Sí  | Nombre fácil de usar de la exportación o la entidad que se procesa.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Sí  | Opcional. Mensaje de error con más detalles.                                                                                                                                                                                                                  |

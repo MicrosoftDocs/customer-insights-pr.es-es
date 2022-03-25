@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229990"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376713"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriquezca los perfiles de los clientes con datos demográficos de Experian (vista previa)
 
@@ -25,7 +25,7 @@ Para configurar Experian, deben cumplirse los siguientes requisitos previos:
 
 - Tiene una suscripción de Experian activa. Para obtener una suscripción, [póngase en contacto con Experian](https://www.experian.com/marketing-services/contact) directamente. [Más información sobre el enriquecimiento de datos de Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Una conexión Experian ya ha sido configurada por un administrador *o* tiene permisos de [administrador](permissions.md#administrator). También necesita la identificación de usuario, la identificación de parte y el número de modelo para su cuenta de transporte seguro (ST) habilitada para SSH que haya creado Experian por usted.
+- Una conexión Experian ya ha sido configurada por un administrador *o* tiene permisos de [administrador](permissions.md#admin). También necesita la identificación de usuario, la identificación de parte y el número de modelo para su cuenta de transporte seguro (ST) habilitada para SSH que haya creado Experian por usted.
 
 ## <a name="supported-countriesregions"></a>Países/regiones admitidos
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226470"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376667"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquecimiento de perfiles de clientes con Azure Maps (versión preliminar)
 
@@ -25,7 +25,7 @@ Para configurar el enriquecimiento de datos de Azure Maps, se deben cumplir los 
 
 - Tener una suscripción de Azure Maps activa. Para obtener una suscripción, puede [registrarse u obtener una prueba gratis](https://azure.microsoft.com/services/azure-maps/).
 
-- Tiene disponible una [conexión](connections.md) de Azure Maps *o* tiene permisos de [Administrador](permissions.md#administrator) y una clave de API de Azure Maps activa.
+- Tiene disponible una [conexión](connections.md) de Azure Maps *o* tiene permisos de [Administrador](permissions.md#admin) y una clave de API de Azure Maps activa.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
 

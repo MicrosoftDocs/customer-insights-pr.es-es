@@ -1,7 +1,7 @@
 ---
 title: Crear y administrar entornos
 description: Obtenga información sobre cómo registrarse en el servicio y cómo administrar los entornos.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354300"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376897"
 ---
 # <a name="manage-environments"></a>Administrar ambientes
-
-
 
 ## <a name="switch-environments"></a>Cambiar entornos
 
@@ -98,9 +96,29 @@ Después de actualizar los orígenes de datos, vaya a **Datos** > **Unificar**. 
 
 Cuando se haya completado la unificación de datos, vaya a **Medidas** y **Segmentos** para actualizarlos también.
 
+## <a name="change-the-owner-of-an-environment"></a>Cambiar el propietario de un entorno
+
+Si bien varios usuarios pueden tener permisos de administrador en Customer Insights, solo un usuario es el propietario de un entorno. De forma predeterminada, es el administrador el que crea un entorno inicialmente. Como administrador de un entorno, puede asignar la propiedad a otro usuario con permisos de administrador.
+
+1. Seleccione el selector **Entorno** en el encabezado de la aplicación.
+
+1. Seleccione el icono de **Editar**.
+
+1. En el cuadro de diálogo **Editar entorno**, vaya al paso **Información básica**.
+
+1. En el campo **Cambiar propietario del entorno**, elija el nuevo propietario del entorno.  
+
+1. Seleccione **Revisar y terminar**, luego **Actualizar** para aplicar los cambios. 
+
+## <a name="claim-ownership-of-an-environment"></a>Reclamar la propiedad de un entorno
+
+Si el propietario de un entorno deja la organización o se elimina su cuenta de usuario, el entorno no tendrá propietario. Un usuario con permisos de administrador puede reclamar la propiedad y convertirse en el nuevo propietario. Pueden seguir siendo propietarios del entorno o [cambiar la propiedad a otro administrador](#change-the-owner-of-an-environment). 
+
+Para reclamar la propiedad, seleccione el botón **Asumir la propiedad** que se muestra en la parte superior de cada página en Customer Insights cuando el propietario original deja la organización.
+
 ## <a name="reset-an-existing-environment"></a>Restablecimiento de un entorno existente
 
-Como administrador, puede restablecer un entorno a un estado vacío si desea eliminar todas las configuraciones y eliminar los datos ingeridos.
+Como propietario de un entorno, puede restablecer el entorno a un estado vacío si desea eliminar todas las configuraciones y los datos ingeridos.
 
 1.  Seleccione el selector **Entorno** en el encabezado de la aplicación. 
 
@@ -112,7 +130,7 @@ Como administrador, puede restablecer un entorno a un estado vacío si desea eli
 
 ## <a name="delete-an-existing-environment"></a>Eliminar un entorno existente
 
-Como administrador, puede eliminar un entorno que administre.
+Como propietario de un entorno, puede eliminar un entorno que administre.
 
 1.  Seleccione el selector **Entorno** en el encabezado de la aplicación.
 
