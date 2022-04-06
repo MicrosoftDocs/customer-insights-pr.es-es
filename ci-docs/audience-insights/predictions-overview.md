@@ -1,19 +1,19 @@
 ---
 title: Descripción general de los escenarios predicción admitidos
 description: Predicción escenarios y opciones cubiertos por la aplicación Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228265"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487556"
 ---
 # <a name="predictions-overview"></a>Vista preliminar de predicciones
 
@@ -36,6 +36,11 @@ La forma más fácil de comenzar a predecir datos son los modelos predefinidos, 
 - [Abandono transaccional](predict-transactional-churn.md): predice si un cliente ya no comprará sus productos o servicios en un determinado período de tiempo.
 
 ---
+
+> [!TIP]
+> Le recomendamos que actualice regularmente los modelos listos para usar con datos actualizados para asegurarse de que informen con precisión su caso de uso empresarial. Los datos se actualizan ad-hoc cuando el sistema ingiere orígenes de datos nuevos o actualizados. Sin embargo, los modelos solo volverán a puntuar en este caso y seguirán utilizando los datos de entrenamiento existentes.
+> 
+> Puede configurar un **Horario de actualización** estableciendo el programa de reentrenamiento del modelo en la experiencia de configuración. El modelo se volverá a entrenar y puntuar en este horario, que puede cambiar en cualquier momento.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integración con Azure Machine Learning

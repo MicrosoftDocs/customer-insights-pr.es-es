@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfiles de cliente unificados
 description: Utilice las capacidades para enriquecer los datos de sus clientes.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372740"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491980"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimiento para perfiles de clientes (vista previa)
 
@@ -97,5 +97,19 @@ Para ver el estado de un enriquecimiento
 1. En el panel **Detalles de progreso**, expanda la sección **Enriquecimientos**. 
 1. En el enriquecimiento cuyo progreso desea ver, seleccione **Ver detalles**. 
 1. En el panel **Detalles de la tarea**, seleccione **Mostrar detalles** para ver los procesos que intervienen en la actualización del enriquecimiento y su estado. 
+
+## <a name="enrichment-results"></a>Resultados del enriquecimiento
+
+Después de completar una ejecución de enriquecimiento, puede revisar los resultados del enriquecimiento.
+
+1. Vaya a **Datos** > **Enriquecimiento**. 
+1. Seleccione el enriquecimiento sobre el que desea información.
+
+Todos los enriquecimientos muestran información básica, como la cantidad de perfiles enriquecidos, una vista previa de la entidad de enriquecimiento generada y la cantidad de perfiles enriquecidos a lo largo del tiempo. Si está disponible, el **Número de clientes enriquecidos por campo** proporciona un desglose de la cobertura de cada campo enriquecido.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Página de resultados de enriquecimiento.":::
+
+Algunos enriquecimientos también muestran información específica del tipo de enriquecimiento. Consulte la documentación del enriquecimiento correspondiente para obtener más información.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

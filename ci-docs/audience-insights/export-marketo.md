@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232012"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487536"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos a Marketo (versión preliminar)
 
@@ -63,7 +63,7 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. introduzca su **[Id. de lista de Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. El id. de la lista es un valor puramente numérico. Por ejemplo, si su id. de lista de Marketo es ST12345A7, elimine el carácter de antes y después de los números e introduzca `12345`. 
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente. 
+1. En la sección **Coincidencia de datos**, seleccione al menos un campo que represente la dirección de correo electrónico de un cliente o la Id. de Marketo de un cliente. 
 
 1. Opcionalmente, puede exportar el **Nombre de pila**, el **Apellido**, la **Ciudad**, el **Estado** y el **País** para crear correos electrónicos más personalizados. Seleccione **Agregar atributo** para asignar estos campos.
 

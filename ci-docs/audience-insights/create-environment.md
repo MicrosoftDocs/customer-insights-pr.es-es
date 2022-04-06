@@ -1,23 +1,23 @@
 ---
 title: Crear entornos en Customer Insights
 description: Pasos para crear entornos con una suscripción con licencia para Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354116"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491939"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Crear un entorno en conclusiones del público
 
@@ -83,14 +83,16 @@ Proporcione su propio entorno de Microsoft Dataverse para compartir datos (perfi
 La conexión a su entorno de Dataverse también le permite [ingerir datos de los orígenes de datos locales usando flujos de datos de Power Platform y puertas de enlace](data-sources.md#add-data-from-on-premises-data-sources). También puede usar [modelos de predicción predefinidos](predictions-overview.md?tabs=b2c#out-of-box-models) conectando a un entorno de Dataverse.
 
 > [!IMPORTANT]
-> Customer Insights y Dataverse tienen que estar en la misma región para permitir el intercambio de datos.
+> 1. Customer Insights y Dataverse tienen que estar en la misma región para permitir el intercambio de datos.
+> 1. Debe tener un rol de administrador global en el entorno de Dataverse. Compruebe si este entorno de [Dataverse está asociado](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a ciertos grupos de seguridad y asegúrese de que se le agregue a esos grupos.
+> 1. Ningún entorno existente de Customer Insights ya está asociado con ese entorno de Dataverse. Aprenda cómo [quitar una conexión existente a un entorno de Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="intercambio de datos con Microsoft Dataverse habilitado automáticamente para nuevas instancias netas.":::
 
-> [!NOTE]
-> Customer Insights no admite los siguientes escenarios de uso compartido de datos:
-> - Si guarda todos los datos en su propio Azure Data Lake Storage, no podrá habilitar el uso compartido de datos con un lago de datos administrado por Dataverse.
-> - Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
+Para obtener más información sobre cómo habilitar el uso compartido de datos con Microsoft Dataverse desde su propio Azure Data Lake Storage, consulte [Conectar a Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights no admite los siguientes escenarios de uso compartido de datos:
+- Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Paso 4: Finalizar la configuración
 

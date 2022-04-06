@@ -1,7 +1,7 @@
 ---
 title: Usar orígenes de datos para ingerir datos
 description: Aprenda a importar datos desde distintos orígenes.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354070"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464095"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -43,11 +43,22 @@ Puede agregar los siguientes orígenes de datos:
 
 La ingesta de datos de orígenes de datos locales en Audience Insights se admite según los flujos de datos de Microsoft Power Platform. Puede habilitar los flujos de datos en Customer Insights [proporcionando la URL del entorno de Microsoft Dataverse](create-environment.md) al configurar el entorno.
 
-Las fuentes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights usan [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Puede eliminar y volver a crear fuentes de datos que existían antes de asociar un entorno de Dataverse [usando pasarelas de datos locales](/data-integration/gateway/service-gateway-app).
+Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights usan [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Puede eliminar y volver a crear fuentes de datos que existían antes de asociar un entorno de Dataverse [usando pasarelas de datos locales](/data-integration/gateway/service-gateway-app).
 
 Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Microsoft Power Platform donde puede ver y configurar puertas de enlace de datos locales.
 
+> [!IMPORTANT]
+> Asegúrese de que sus puertas de enlace estén actualizadas a la última versión. Puede instalar una actualización y reconfigurar una puerta de enlace desde una solicitud que se muestra en la pantalla de la puerta de enlace directamente o [descargar la última versión](https://powerapps.microsoft.com/downloads/). Si no usa la última versión de la puerta de enlace, la actualización del flujo de datos falla con mensajes de error como **La palabra clave no es compatible: propiedades de configuración. Nombre del parámetro: palabra clave**.
+
 ## <a name="review-ingested-data"></a>Revisar datos ingeridos
+Si su entorno contiene flujos de datos de Power Platform, la página **Orígenes de Datos** enumera tres secciones: 
+- **Compartido**: orígenes de datos que pueden administrar todos los administradores de Customer Insights. Flujos de datos de Power BI, su propia cuenta de almacenamiento y la conexión a un lago de datos gestionado por Dataverse son ejemplos de orígenes de datos compartidos.
+- **Administrado por mi**: flujos de datos de Power Platform creados y que solo usted puede administrar. Otros administradores de Customer Insights solo pueden ver estos flujos de datos, pero no editarlos, actualizarlos ni eliminarlos.
+- **Administrados por otros**: flujos de datos de Power Platform creados por otros administradores. Usted solo puedes verlos. Enumera al propietario del flujo de datos para contactar en caso de necesitar asistencia.
+> [!NOTE]
+> Otros usuarios pueden ver y utilizar todas las entidades. La contextualidad del usuario se aplica solo a los orígenes de datos y no a las entidades que resultan de estos flujos de datos.
+
+Si no se utilizan flujos de datos de Power Platform, no verá ningún grupo ni sección. La página de **Orígenes de Datos** contiene solo una lista de todos los orígenes de datos.
 
 Podrá ver el nombre de cada origen de datos ingeridos, su estado y la última vez que se actualizaron los datos para ese origen. Puede ordenar la lista de orígenes de datos por cada columna.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376437"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523690"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de registros en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)
 
@@ -230,15 +230,15 @@ Los eventos de flujo de trabajo tienen las siguientes propiedades.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Sí      | Sí  | Siempre `WorkflowEvent`, marcando el evento como evento de flujo de trabajo.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Sí      | Sí  | Identificador de la ejecución del flujo de trabajo. Todos los eventos de flujo de trabajo y tareas dentro de la ejecución del flujo de trabajo tienen el mismo `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Sí      | Sí  | Identificador de la operación, consulte [Tipos de operación].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Sí      | Sí  | Identificador de la operación, consulte [Tipos de operación](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Sí      | No   | Solo flujo de trabajo. Número de tareas que desencadena el flujo de trabajo.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Sí      | No   | Opcional. Solo eventos de flujo de trabajo. [objectId del usuario](/azure/marketplace/find-tenant-object-id#find-user-object-id) de Azure Active Directory que activó el flujo de trabajo; consulte también `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Sí      | No   | Actualización `full` o `incremental`.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Sí      | No   | `OnDemand` o `Scheduled`.                                                                                                                                                                                                                                  |
 | `properties.workflowStatus`                  | Sí      | No   | `Running` o  `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Sí      | Sí  | Marca de hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.startTimestamp`                  | Sí      | Sí  | Marca de hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Sí      | Sí  | Marca de hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Sí      | Sí  | Marca de hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Sí      | Sí  | `instanceId` de Customer Insights                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Sí  | - Para OperationType = `Export`, el identificador es la guía de la configuración de exportación. <br> - Para OperationType = `Enrichment`, es la guía del enriquecimiento <br> - Para OperationType `Measures` y `Segmentation`, el identificador es el nombre de la entidad. |
 | `properties.friendlyName`                    | No       | Sí  | Nombre fácil de usar de la exportación o la entidad que se procesa.                                                                                                                                                                                           |

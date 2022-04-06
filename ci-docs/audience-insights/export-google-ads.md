@@ -1,42 +1,37 @@
 ---
 title: Exportar datos de Customer Insights a Google Ads
 description: Aprenda a configurar la conexión y a exportar a Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227031"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523826"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos a Google Ads (versión preliminar)
 
 Exporte segmentos de perfiles de clientes unificados a una lista de público de Google Ads y utilícelos para anunciar en la Google Search, Gmail, YouTube y la Red de Display de Google. 
 
-> [!IMPORTANT]
-> Actualmente, solo puede crear una nueva conexión y exportar datos a Google Ads si ya tiene un token de desarrollador de Google Ads aprobado. Debido a cambios en la política, actualizaremos la exportación de Google Ads en breve y brindaremos una opción de exportación que no requerirá un token de desarrollador para garantizar la continuidad de su experiencia y simplificar la exportación a Google Ads. Recomendamos no configurar más conexiones a Google Ads para facilitar el cambio a la nueva opción de exportación.
 
 ## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
 
 -   Tiene una [cuenta de Google Ads](https://ads.google.com/) y las credenciales de administrador correspondientes.
--   Tiene un [símbolo (token) de desarrollador de Google Ads aprobado](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   Cumple los requisitos de la [Directiva de asignación de clientes](https://support.google.com/adspolicy/answer/6299717).
 -   Cumple los requisitos de los [tamaños de listas de marketing](https://support.google.com/google-ads/answer/7558048).
--   Hay públicos existentes en Google Ads y los id. correspondientes. Para más información, consulte [Audiencias de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Ha [configurado los segmentos](segments.md).
--   Los perfiles de clientes unificados en los segmentos exportados contienen campos que representan una dirección de correo electrónico, un nombre de pila y los apellidos.
+-   Los perfiles de clientes unificados en los segmentos exportados contienen campos que representan una dirección de correo electrónico, teléfono, Id. de anunciante móvil, Id. de usuario de terceros o dirección.
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 1 millón de perfiles de clientes por exportación a Google Ads.
 - La exportación a Google Ads está limitada a segmentos.
-- La exportación de segmentos con un total de 1 millón de perfiles de clientes puede tardar hasta 5 minutos debido a las limitaciones del lado del proveedor. 
+- La exportación de segmentos con un total de 1 millón de perfiles de clientes puede tardar hasta 30 minutos debido a las limitaciones del lado del proveedor. 
 - La coincidencia en Google Ads puede tardar hasta 48 horas.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurar conexión a Google Ads
@@ -50,8 +45,6 @@ Exporte segmentos de perfiles de clientes unificados a una lista de público de 
 1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduzca su **[Id. de cliente de Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Introduzca su **[Token de desarrollador aprobado por Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
 
 1. Seleccione **Acepto** para confirmar **Privacidad y cumplimiento de datos**.
 
@@ -71,11 +64,11 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. En el campo **Conexión para exportación**, elija una conexión de la sección Google Ads. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
 
-1. Introduzca su **[Id. de público de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** y seleccione **Conectar** para inicializar la conexión a Google Ads.
+1. Si desea crear un nuevo público, deje en blanco el campo de Id. de público de Google. Crearemos automáticamente un nuevo público en su cuenta de Google Ads y usaremos el nombre del segmento exportado. Si desea actualizar un público de Google Ads existente, escriba su [Id. de público de Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. En la sección **Coincidencia de datos**, en el campo **Correo electrónico**, seleccione el campo que representa la dirección de correo electrónico de un cliente.
+1. En la sección **Coincidencia de Datos**, seleccione uno o más campos de datos para exportar y seleccione el campo que representa los campos de datos correspondientes en Customer Insights.
 
-1. Seleccione los segmentos que desea exportar. Puede exportar hasta 1 millón de perfiles de clientes en total a Google Ads.
+1. Seleccione los segmentos que desea exportar. 
 
 Guardar una exportación no ejecuta la exportación inmediatamente.
 

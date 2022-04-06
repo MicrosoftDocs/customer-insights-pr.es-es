@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354911"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523758"
 ---
 # <a name="customer-profiles"></a>Perfiles de clientes
 
 La página **Clientes** muestra una vista combinada de sus perfiles de clientes unificados. Los perfiles de clientes están disponibles una vez que [creó la entidad de cliente unificada](data-unification.md). La página le permite buscar clientes y definir el índice para esa búsqueda.
 
-Los clientes pueden ser personas u organizaciones. Cada perfil de cliente se representa con una ventana. Utilice los controles de paginación para obtener más registros. La tarjeta muestra campos de la entidad *Cliente* definida en el **Índice de Buscar y filtrar**. Seleccione una ventana para ver los datos del cliente seleccionado en una página dedicada llamada [Página de detalles del cliente](customer-profiles.md#customer-details-page).
+Los clientes pueden ser personas u organizaciones. Cada perfil de cliente se representa con una ventana. Utilice los controles de paginación para obtener más registros. La tarjeta muestra campos de la entidad *Cliente* definida en el **Índice de Buscar y filtrar**. El sistema selecciona el orden de los campos dentro de cada tarjeta.
+
+Seleccione una ventana para ver los datos del cliente seleccionado en una página dedicada llamada [Página de detalles del cliente](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Página de clientes que muestra ventanas de resultados](media/customers-page-result-tiles-B2C.png "Página de clientes que muestra ventanas de resultados")
