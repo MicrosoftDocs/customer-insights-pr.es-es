@@ -1,19 +1,19 @@
 ---
 title: Exportar datos de Customer Insights a Azure Synapse Analytics
 description: Aprenda a configurar la conexión a Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231333"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560408"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportación de datos a Azure Synapse Analytics (Versión preliminar)
 
@@ -28,21 +28,21 @@ Se deben cumplir los siguientes requisitos previos para configurar la conexión 
 
 ## <a name="prerequisites-in-customer-insights"></a>Requisitos previos en Customer Insights
 
-* Debe tener un rol de **Administrador** en los conocimientos del público. Aprender más sobre [Establecer permisos de usuario en conocimientos del público](permissions.md#assign-roles-and-permissions)
+* Su cuenta de usuario de Azure Active Directory (AD) tiene un rol de **Administrador** en Customer Insights. Aprender más sobre [Establecer permisos de usuario en conocimientos del público](permissions.md#assign-roles-and-permissions)
 
 En Azure: 
 
 - Una suscripción de Azure activa.
 
-- Si usa una nueva cuenta de Azure Data Lake Storage Gen2, la *entidad de servicio para conocimientos del público* necesita permisos de **Contribuyente de datos de Storage Blob**. Más información sobre [conexión a una cuenta de Azure Data Lake Storage Gen2 con la entidad de servicio de Azure para conclusiones del público](connect-service-principal.md). Data Lake Storage Gen2 **debe** tener activado el [espacio de nombres jerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
+- Si usa una nueva cuenta de Azure Data Lake Storage Gen2, la *entidad de servicio para Customer Insights* necesita permisos de **colaborador de datos de Storage Blob**. Más información sobre [conexión a una cuenta de Azure Data Lake Storage Gen2 con la entidad de servicio de Azure para conclusiones del público](connect-service-principal.md). Data Lake Storage Gen2 **debe** tener activado el [espacio de nombres jerárquico](/azure/storage/blobs/data-lake-storage-namespace) activado.
 
-- En el grupo de recursos donde se encuentra el espacio de trabajo de Azure Synapse, la *entidad de servicio* y el *usuario para conclusiones del público* deben tener asignados al menos permisos de **Lector**. Para más información, vea [Asignar roles de Azure mediante el portal de Azure](/azure/role-based-access-control/role-assignments-portal).
+- En el grupo de recursos donde se encuentra Azure Synapse workspace, la *entidad de servicio* y el *usuario de Azure AD con permisos de administrador en Customer Insights* necesitan que se le asignen permisos de **Lector**. Para más información, vea [Asignar roles de Azure mediante el portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- El *usuario* necesita permisos de **Colaborador de datos de Storage Blob** en la cuenta de Azure Data Lake Storage Gen2 donde se ubican los datos y están vinculados al espacio de trabajo de Azure Synapse. Más información sobre [Uso del portal de Azure para asignar un rol de Azure para acceder a datos de blobs y colas](/azure/storage/common/storage-auth-aad-rbac-portal) y [Permisos de colaborador de datos de Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- El *usuario de Azure AD con permisos de administrador en Customer Insights* necesita permisos de **colaborador de datos de Storage Blob** en la cuenta de Azure Data Lake Storage Gen2 donde se encuentran los datos y se vinculan a Azure Synapse workspace. Más información sobre [Uso del portal de Azure para asignar un rol de Azure para acceder a datos de blobs y colas](/azure/storage/common/storage-auth-aad-rbac-portal) y [Permisos de colaborador de datos de Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - La *[identidad administrada del espacio de trabajo de Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* necesita permisos de **Colaborador de datos de Storage Blob** en la cuenta de Azure Data Lake Storage Gen2 donde se ubican los datos y están vinculados al espacio de trabajo de Azure Synapse. Más información sobre [Uso del portal de Azure para asignar un rol de Azure para acceder a datos de blobs y colas](/azure/storage/common/storage-auth-aad-rbac-portal) y [Permisos de colaborador de datos de Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- En el espacio de trabajo de Azure Synapse, la *entidad de servicio para conclusiones del público* necesita tener asignado el rol **Administrador de Synapse**. Para más información, vea [Cómo configurar el control de acceso para su espacio de trabajo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- En Azure Synapse workspace, la *entidad de servicio para Customer Insights* necesita que se le asigne el rol de **Administrador de Synapse**. Para más información, vea [Cómo configurar el control de acceso para su espacio de trabajo de Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurar la conexión y exportar a Azure Synapse
 

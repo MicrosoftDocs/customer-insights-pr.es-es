@@ -1,12 +1,12 @@
 ---
 title: Comprender y gestionar las medidas
 description: Descubra cómo las medidas ayudan a analizar y reflejar el rendimiento de su negocio.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359816"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529698"
 ---
 # <a name="measures-overview"></a>Información general de las medidas
 
@@ -27,7 +27,7 @@ Las medidas le ayudan a comprender mejor los comportamientos de los clientes y e
 
 Las medidas se crean [usando el generador de medidas](measure-builder.md), una plataforma de consulta de datos con varios operadores y opciones de asignación sencillas. Le permite filtrar los datos, agrupar resultados, detectar [rutas de relaciones de entidades](relationships.md) y obtener una vista previa de los resultados. Puede [usar plantillas predefinidas](measure-templates.md) para configurar eficientemente medidas de uso común.
 
-Utilice el generador de medidas para planificar actividades comerciales consultando datos de clientes y extraiga información. Por ejemplo, crear una medida del *gasto total por cliente* y el *retorno total por cliente* ayuda a identificar un grupo de clientes con un alto gasto pero que aporta alto rendimiento. Puede [crear un segmento](segments.md) basado en esas medidas para impulsar las próximas mejores acciones. 
+Utilice el generador de medidas para planificar actividades comerciales consultando datos de clientes y extraiga información. Por ejemplo, crear una medida del *gasto total por cliente* y el *retorno total por cliente* ayuda a identificar un grupo de clientes con un alto gasto pero que aporta alto rendimiento. Puede [crear un segmento](segments.md) basado en esas medidas para impulsar las próximas mejores acciones.
 
 ## <a name="manage-your-measures"></a>Administrar sus medidas
 
@@ -35,18 +35,17 @@ Puede encontrar la lista de medidas en la página **Medidas**.
 
 Encontrará información sobre el tipo de medida, el creador, la fecha de creación y el estado. Cuando selecciona una medida de la lista, puede obtener una vista previa del resultado y descargar un archivo CSV.
 
-Para actualizar todas sus medidas al mismo tiempo, seleccione **Actualizar todo** sin seleccionar una medida específica.
+:::image type="content" source="media/measures-actions.png" alt-text="Acciones para gestionar medidas individuales."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Acciones para gestionar medidas individuales":::.
+Las siguientes acciones están disponibles cuando selecciona una medida:
 
-Seleccione una medida de la lista para las siguientes opciones:
-
-- Seleccione el nombre de la medida para ver sus detalles.
 - **Editar** la configuración de la medida.
-- **Actualizar** la medida en función de los últimos datos.
+- **Duplicar** una medida. Puede elegir editar sus propiedades de inmediato o simplemente guardar el duplicado.
+- **Actualizar** la medida en función de los últimos datos. Para actualizar todas sus medidas al mismo tiempo, seleccione todas las medidas y luego **Actualizar**.
 - **Cambiar nombre** de la medida.
-- **Eliminar** la medida.
 - **Activar** o **Desactivar**. Las medidas inactivas no se actualizarán durante una [actualización programada](system.md#schedule-tab).
+- **Etiqueta** para [administrar etiquetas](work-with-tags-columns.md#manage-tags) para el segmento.
+- **Eliminar** la medida.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

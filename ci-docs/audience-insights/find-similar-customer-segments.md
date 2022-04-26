@@ -1,23 +1,23 @@
 ---
 title: Encuentre clientes similares con IA (contiene vídeo)
 description: Busque segmentos de clientes similares con inteligencia artificial.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355266"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561591"
 ---
 # <a name="similar-customers-preview"></a>Clientes similares (vista previa)
 
@@ -36,6 +36,8 @@ Esta característica le permite buscar clientes similares en su base de clientes
 
 1. Revise el nombre sugerido para su nuevo segmento y cámbielo si es necesario.
 
+1. Opcionalmente, agregue [etiquetas](work-with-tags-columns.md#manage-tags) al nuevo segmento.
+
 1. Revise los campos que definen su nuevo segmento. Estos campos definen la base sobre la cual el sistema intentará encontrar clientes similares a su segmento de origen. El sistema seleccionará los campos recomendados de forma predeterminada.
   Los campos que pueden reducir significativamente el rendimiento del modelo se excluyen automáticamente:
   
@@ -44,9 +46,9 @@ Esta característica le permite buscar clientes similares en su base de clientes
 
 1. Elija si quiere incluir **Todos los clientes** o solo clientes de un **Segmento existente específico** en su nuevo segmento.
 
-1. Excluya a los clientes en su segmento de origen seleccionando la casilla **Excluir a todos del segmento de origen**.
-
 1. Por defecto, el sistema sugiere incluir solo el 20% del tamaño audiencia objetivo en su salida. Edite este umbral según sea necesario. Aumentar el umbral reducirá la precisión.
+
+1. Incluya clientes en su segmento de origen seleccionando la casilla **Incluir miembros del segmento de origen además de los clientes con atributos similares**.
 
 1. Seleccione **Ejecutar** en la parte inferior de la página para iniciar una tarea de clasificación binaria (un método de aprendizaje automático) que analice el conjunto de datos.
 
@@ -67,7 +69,7 @@ Puede [trabajar con la salida de un segmento similar](segments.md) igual que con
 
 Para actualizar un segmento similar, selecciónelo en la página **Segmentos** y seleccione **Actualizar** en la barra de acción.
 
-Editar un segmento similar volverá a procesar sus datos. El segmento creado anteriormente se actualiza con datos actualizados.    
+Editar un segmento similar volverá a procesar sus datos. El segmento creado anteriormente se actualiza con datos actualizados.
 Para editar un segmento similar, selecciónelo en la página **Segmentos** y seleccione **Editar** en la barra de acción. Aplique los cambios y seleccione **Ejecutar** para comenzar el procesamiento.
 
 ## <a name="delete-a-similar-segment"></a>Eliminar un segmento similar
@@ -84,6 +86,5 @@ El modelo de aprendizaje automático de clasificación binaria asigna una puntua
 - Las puntuaciones de similitud entre 0,85 - 1 son clientes que el sistema clasificó como *muy similares*
 
 Los clientes con puntuaciones de similitud inferiores a 0,4 no se incluyen en el resultado del modelo. El sistema no los considera lo suficientemente similares al segmento de origen.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Datos de Customer Insights en Microsoft Dataverse
 description: Utilice entidades de Customer Insights como tablas en Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355450"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547647"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabajar con datos de Customer Insights en Microsoft Dataverse
 
-Customer Insights ofrece la opción de hacer que las entidades de salida estén disponibles en [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Esta integración permite compartir datos fácilmente y el desarrollo personalizado a través de un enfoque de código bajo / sin código. Las entidades de salida estarán disponibles como tablas en Dataverse. Estas tablas permiten escenarios como [flujos de trabajo automatizados a través de Power Automate](/power-automate/getting-started), [aplicaciones basadas en modelos](/powerapps/maker/model-driven-apps/) y [aplicaciones de lienzo](/powerapps/maker/canvas-apps/) mediante Power Apps. Puede utilizar los datos para cualquier otra aplicación basada en tablas de Dataverse. La implementación actual admite principalmente búsquedas en las que los datos de las entidades de información audiencia disponibles se pueden recuperar para un ID de cliente determinado.
+Customer Insights ofrece la opción de hacer que las entidades de salida estén disponibles en [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integración permite compartir datos fácilmente y el desarrollo personalizado a través de un enfoque de código bajo / sin código. Las [entidades de salida](#output-entities) están disponibles como tablas en un entorno de Dataverse. Puede usar los datos para cualquier otra aplicación basada en tablas de Dataverse. Estas tablas permiten escenarios como flujos de trabajo automatizados a través de Power Automate o crear aplicaciones con Power Apps. La implementación actual admite principalmente búsquedas en las que se pueden obtener datos de las entidades de Customer Insights disponibles para un id. de cliente determinado.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Adjuntar un entorno de Dataverse a Customer Insights
 
-**Organizaciones con entornos Dataverse existentes**
+**Organización existente**
 
-Organizaciones que ya usan Dataverse pueden [utilizar uno de sus entornos Dataverse existentes](create-environment.md) cuando un Administrador configura informaciones de público. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Para garantizar el mejor rendimiento posible, los entornos de Customer Insights y Dataverse deben estar alojados en la misma región.
+Los administradores pueden configurar Customer Insights para [utilizar un entorno de Dataverse existente](create-environment.md) cuando crean un entorno de Customer Insights. Al proporcionar la URL al entorno Dataverse, se adjunta a su nuevo entorno de información de público. Los entornos de Customer Insights y Dataverse deben estar alojados en la misma región. 
+
+Si no desea utilizar un entorno de Dataverse existente, el sistema crea un nuevo entorno para los datos de Customer Insights en su inquilino. 
+
+> [!NOTE]
+> Si sus organizaciones ya utilizan Dataverse en su inquilino, es importante recordar que en [Dataverse la creación del entorno está controlada por un administrador](/power-platform/admin/control-environment-creation). Por ejemplo, si está configurando un nuevo entorno de información de público con su cuenta de organización y el administrador ha inhabilitado la creación de entornos Dataverse de prueba para todos, excepto los administradores, no puede crear un nuevo entorno de prueba.
+> 
+> Los entornos de prueba de Dataverse creados en Customer Insights tienen 3 GB de almacenamiento que no contarán para la capacidad general que tiene derecho al inquilino. Las suscripciones de pago de Dataverse obtienen derecho a 15 GB para la base de datos y 20 GB para el almacenamiento de archivos.
 
 **Nueva organización**
 
-Si crea una nueva organización al configurar Customer Insights, obtendrá automáticamente un entorno de Dataverse nuevo.
-
-> [!NOTE]
-> Si sus organizaciones ya utilizan Dataverse en su inquilino, es importante recordar que en [Dataverse la creación del entorno está controlada por un administrador](/power-platform/admin/control-environment-creation.md). Por ejemplo, si está configurando un nuevo entorno de información de público con su cuenta de organización y el administrador ha inhabilitado la creación de entornos Dataverse de prueba para todos, excepto los administradores, no puede crear un nuevo entorno de prueba.
-> 
-> Los entornos de prueba de Dataverse creados en Customer Insights tienen 3 GB de almacenamiento que no contarán para la capacidad general que tiene derecho al inquilino. Las suscripciones de pago de Dataverse obtienen derecho a 15 GB para la base de datos y 20 GB para el almacenamiento de archivos.
+Si crea una nueva organización al configurar Customer Insights, el sistema crea automáticamente un nuevo entorno de Dataverse en su organización para usted.
 
 ## <a name="output-entities"></a>Entidades de salida
 
@@ -129,11 +131,11 @@ Esta tabla contiene el resultado de predicciones de modelo.
 
 Esta tabla contiene información de suscripción de segmento de los perfiles de cliente.
 
-| Column        | Type | Description                        |
+| Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Id. del perfil de cliente        |
-| SegmentProvider      | String       | Aplicación que publica los segmentos. Predeterminado: Información del público         |
-| SegmentMembershipType | String       | Tipo de cliente en el registro de suscripción de este segmento. Admite varios tipos, como cliente, contacto o cuenta. Predeterminado: Cliente  |
-| Segmentos       | Cadena JSON  | Lista de segmentos únicos de los que el perfil del cliente es miembro      |
-| msdynci_identifier  | String   | Identificador único del registro de suscripción de segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | String       | Id. del perfil de cliente        |
+| SegmentProvider      | String       | Aplicación que publica los segmentos. Predeterminado: Información del público         |
+| SegmentMembershipType | String       | Tipo de cliente en el registro de suscripción de este segmento. Admite varios tipos, como cliente, contacto o cuenta. Predeterminado: Cliente  |
+| Segmentos       | Cadena JSON  | Lista de segmentos únicos de los que el perfil del cliente es miembro      |
+| msdynci_identifier  | String   | Identificador único del registro de suscripción de segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID determinista generado por `msdynci_identifier`          |

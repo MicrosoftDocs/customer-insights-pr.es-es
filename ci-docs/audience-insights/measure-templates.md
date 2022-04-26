@@ -1,22 +1,22 @@
 ---
 title: Crear medidas a partir de plantillas
 description: Defina las medidas usando plantillas para casos de uso comunes.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359931"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529422"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Usar una plantilla para construir una medida
 
@@ -51,7 +51,9 @@ Plantillas de medida disponibles:
 
 1. Revise los datos requeridos y seleccione **Comenzar** si tiene todos los datos en su lugar.
 
-1. En el panel **Editar nombre**, establezca el nombre de su medida y la entidad de salida. 
+1. Seleccione **Editar detalles** junto al nombre de la medida. Especifique un nombre para la medida. Opcionalmente, agregue [etiquetas](work-with-tags-columns.md#manage-tags) a la nueva medida.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Editar cuadro de diálogo de detalles":::
 
 1. Seleccione **Listo**.
 

@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Explorar las conclusiones del público
           href: audience-insights/home.md
+        - name: Trabajar con etiquetas y columnas
+          href: audience-insights/work-with-tags-columns.md
         - name: Trabajar con cuentas de negocio
           href: audience-insights/work-with-business-accounts.md
     - name: Orígenes de datos

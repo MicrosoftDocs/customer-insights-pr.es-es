@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508587"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529560"
 ---
 # <a name="segments-overview"></a>Información general de los segmentos
 
@@ -51,20 +51,26 @@ Vaya a la página **Segmentos** para ver todos los segmentos guardados y adminis
 
 Cada segmento está representado por una fila que incluye información adicional sobre el segmento.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento seleccionado con lista desplegable de opciones y opciones disponibles.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento seleccionado con lista desplegable de opciones y opciones disponibles." lightbox="media/segments-selected-segment.png":::
 
 Las siguientes acciones están disponibles cuando selecciona un segmento:
 
 - **Ver** los detalles del segmento, incluida la tendencia del recuento de miembros de una vista previa de los miembros del segmento.
+- **Descargar** la lista de miembros como archivo .CSV.
 - **Editar** el segmento para cambiar sus propiedades.
 - **Crear duplicado** de un segmento. Puede elegir editar sus propiedades de inmediato o simplemente guardar el duplicado.
 - **Actualizar** el segmento para incluir los últimos datos.
-- **Activar** o **Desactivar** el segmento. Los segmentos tienen dos estados posibles: activo o inactivo. Estos estados resultan útiles al editar un segmento. Para los segmentos inactivos, existe la definición de segmento, pero aún no contiene ningún cliente. Cuando activa un segmento, su estado cambia de "inactivo" a "activo" y comienza a buscar clientes que coincidan con la definición del segmento. Si una [actualización programada](system.md#schedule-tab) está configurada, los segmentos inactivos tienen el **Estado** catalogado como **Omitido**, lo que indica que ni siquiera se intentó una actualización. Cuando se activa un segmento inactivo, se actualizará y se incluirá en las actualizaciones programadas.
+- **Activar** o **Desactivar** el segmento. Para los segmentos inactivos, existe la definición de segmento, pero aún no contiene ningún cliente. Un segmento activo busca clientes que coincidan con la definición del segmento. Si una [actualización programada](system.md#schedule-tab) está configurada, los segmentos inactivos tienen el **Estado** catalogado como **Omitido**, lo que indica que ni siquiera se intentó una actualización. Cuando se activa un segmento inactivo, se actualizará y se incluirá en las actualizaciones programadas.
   Alternativamente, puede usar la funcionalidad **Programar más tarde** en el desplegable **Activar/Desactivar** para especificar una fecha y hora futuras para la activación y desactivación de un segmento en particular.
+- **[Encuentre clientes similares](find-similar-customer-segments.md)** del segmento.
 - **Cambiar nombre** de segmento.
+- **Etiqueta** para [administrar etiquetas](work-with-tags-columns.md#manage-tags) para el segmento.
 - **Descargar** la lista de miembros como archivo .CSV.
 - **Gestionar exportaciones** para ver el segmento relacionado con las exportaciones y gestionarlas. [Más información sobre exportaciones.](export-destinations.md)
 - **Eliminar** el segmento.
+- **Columnas** para [personalizar las columnas](work-with-tags-columns.md#customize-columns) de esa pantalla.
+- **Filtro** para [filtrar en etiquetas](work-with-tags-columns.md#filter-on-tags).
+- **Buscar nombre** para buscar por nombre de segmento.
 
 ## <a name="refresh-segments"></a>Actualizar segmentos
 

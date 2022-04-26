@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225546"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552077"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector para Power BI (vista previa)
 
@@ -72,6 +72,6 @@ Después de eliminar las relaciones duplicadas, intente volver a configurar el c
 
 Al cargar entidades que contienen campos con un formato de fecha como MM/DD/AAAA, puede encontrar errores debidos a formatos de configuración regional no coincidentes. Esta discrepancia ocurre cuando el archivo de Power BI Desktop está configurado para otra configuración regional que no sea inglés (Estados Unidos), ya que los campos de fecha las conclusiones del público se guardan con el formato de EE. UU.
 
-El archivo de Power BI Desktop tiene una configuración regional única, que se aplica al recuperar datos. Para que se interpreten correctamente estos campos de fecha, establezca la configuración regional del archivo .BPI en inglés (Estados Unidos). [Aprenda a cambiar la configuración regional de un archivo de Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+El archivo de Power BI Desktop tiene una configuración regional única, que se aplica al recuperar datos. Para que se interpreten correctamente estos campos de fecha, establezca la configuración regional del archivo .BPI en inglés (Estados Unidos). [Aprenda a cambiar la configuración regional de un archivo de Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
