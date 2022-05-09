@@ -35,7 +35,7 @@ Puede encontrar la lista de medidas en la página **Medidas**.
 
 Encontrará información sobre el tipo de medida, el creador, la fecha de creación y el estado. Cuando selecciona una medida de la lista, puede obtener una vista previa del resultado y descargar un archivo CSV.
 
-:::image type="content" source="media/measures-actions.png" alt-text="Acciones para gestionar medidas individuales"lightbox="media/measures-actions.png":::.
+:::image type="content" source="media/measures-actions.png" alt-text="Acciones para gestionar medidas individuales."lightbox="media/measures-actions.png":::
 
 Las siguientes acciones están disponibles cuando selecciona una medida:
 
