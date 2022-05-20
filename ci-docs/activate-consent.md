@@ -1,23 +1,22 @@
 ---
 title: Activar reglas de consentimiento para segmentos
 description: Siga estos pasos para vincular los datos de consentimiento y activar las verificaciones de consentimiento en Dynamics 365 Customer Insights. Un administrador también puede deshabilitar las verificaciones de consentimiento.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647569"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755191"
 ---
 # <a name="activate-consent-rules"></a>Activar reglas de consentimiento
 
-El [Centro de consentimiento (vista previa)](consent-management/overview.md) le ayuda a armonizar los datos de consentimiento de diversas fuentes. Usa la entidad unificada *Consentimiento* para aplicar comprobaciones de consentimiento por defecto. Después de importar los datos de consentimiento en el Centro de consentimiento y configurar las reglas para los datos, la entidad *Consentimiento* se sincroniza automáticamente con Dynamics 365 Customer Insights.
+El [Centro de consentimiento (vista previa)](consent-management/overview.md) le ayuda a armonizar los datos de consentimiento de diversas fuentes. Usa la entidad unificada *Consentimiento* para aplicar comprobaciones de consentimiento por defecto. Después de importar los datos de consentimiento y configurar las reglas de asignación, la entidad *Consentimiento* se sincroniza automáticamente con Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Habilitar comprobaciones de consentimiento
 

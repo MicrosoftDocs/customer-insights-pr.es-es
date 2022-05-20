@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647659"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755519"
 ---
 # <a name="customer-activities"></a>Actividades del cliente
 
-Combine las actividades de los clientes de [varios orígenes de datos](data-sources.md) en Dynamics 365 Customer Insights para crear una escala de tiempo que enumere las actividades cronológicamente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento tarjeta de cliente](customer-card-add-in.md) o en un panel de Power BI.
+Combine las actividades de clientes desde [varios orígenes de datos](data-sources.md) en Dynamics 365 Customer Insights. Cree una línea de tiempo que enumere las actividades cronológicamente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento de tarjeta de cliente](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Definir una actividad
 
@@ -78,7 +78,7 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha** que se debe in
 
 1. Seleccione **Siguiente** para ir al siguiente paso. Puede elegir **Terminar y revisar** para guardar la actividad ahora con el tipo de actividad configurado en **Otros**. 
 
-1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Comentarios*, *Fidelidad*, *SalesOrder*, *SalesOrderLine* y *Subscripción* se pueden asignar semánticamente después de acordar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
+1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Comentario*, *Lealtad*, *SalesOrder*, *SalesOrderLine* y *Suscripción* admiten la semántica después de aceptar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
 
 1. Seleccione **Siguiente** para ir al siguiente paso. 
 
@@ -110,7 +110,7 @@ Después de configurar las actividades del cliente, seleccione **Mostrar en esca
 
 Para abrir la escala de tiempo de un cliente, vaya a **Clientes** y elija el perfil de cliente que desea ver.
 
-Si un cliente ha participado en una actividad que ha configurado, lo encontrará en la sección **Escala de tiempo de actividades**.
+Si un cliente ha participado en una actividad configurada, lo encontrará en la sección **Escala de tiempo de actividades**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Ver actividades configuradas en Perfiles de clientes.":::
 

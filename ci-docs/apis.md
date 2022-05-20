@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647658"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755471"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabajar con las API de Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights proporciona API para crear sus propias aplicacion
 > [!IMPORTANT]
 > Los detalles de estas API se enumeran en la [Referencia de las API de Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Incluyen información adicional sobre operaciones, parámetros y respuestas.
 
-Este artículo describe cómo acceder a las API de Customer Insights, crear un registro de aplicaciones de Azure y comenzar con las bibliotecas de cliente disponibles.
+En este artículo, se describe cómo acceder a las API de Customer Insights, crear un registro de aplicaciones de Azure y comenzar con las bibliotecas de clientes.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Comenzar a probar las API de Customer Insights
 
@@ -83,13 +83,13 @@ Puede utilizar la aplicación/id. de cliente para el registro de esta aplicació
 
 Para obtener más información sobre MSAL, consulte [Descripción general de la biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Para obtener más información sobre el registro de aplicaciones en Azure, consulte [Registrar una aplicación](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Para obtener más información sobre el registro de aplicaciones en Azure, consulte [Registrar una aplicación](/graph/auth-register-app-v2).
 
 Para obtener información sobre el uso de las API en nuestras bibliotecas cliente, consulte [Bibliotecas cliente de Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Permisos de aplicaciones de servidor a servidor
 
-La [sección de registro de aplicaciones](#create-a-new-app-registration-in-the-azure-portal) describe cómo registrar una aplicación que requiere que un usuario inicie sesión para la autenticación. Aprenda a crear un registro de aplicación que no necesite la interacción del usuario y se pueda ejecutar en un servidor.
+La [sección de registro de aplicaciones](#create-a-new-app-registration-in-the-azure-portal) describe cómo registrar una aplicación que requiere que un usuario inicie sesión para la autenticación. Aprenda a crear un registro de aplicación que no necesite la interacción del usuario y que se pueda ejecutar en un servidor.
 
 1. En el registro de su aplicación en Azure Portal, vaya a **Permisos de API**.
 
@@ -112,6 +112,10 @@ La [sección de registro de aplicaciones](#create-a-new-app-registration-in-the-
    Abra Customer Insights, vaya a **Administrador** > **Permisos** y seleccione **Agregar usuario**.
 
 1. Busque el nombre del registro de su aplicación, selecciónelo en los resultados de búsqueda y seleccione **Guardar**.
+
+## <a name="sample-queries"></a>Consultas de ejemplo
+
+Hemos compilado una breve lista de consultas de muestra de OData para trabajar con las API: [Ejemplos de consultas de OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Bibliotecas de cliente de Customer Insights
 
@@ -137,7 +141,7 @@ Obtenga información sobre cómo comenzar a usar las bibliotecas de cliente de C
 
 1. Utilice la [Biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) para obtener un `AccessToken` usando su [Registro de la aplicación de Azure](#create-a-new-app-registration-in-the-azure-portal) existente.
 
-1. Después de autenticar y adquirir correctamente un token, construya uno nuevo o use un `HttpClient` existente con la **"Autorización" DefaultRequestHeaders** adicional ajustada en **Portador "token de acceso"** y **Ocp-Apim-Subscription-Key** establecido en la [**clave de suscripción** de su entorno de Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Después de autenticar y adquirir correctamente un token, construya uno nuevo o use un `HttpClient` existente con la **"Autorización" DefaultRequestHeaders** ajustada en **Portador "token de acceso"** y **Ocp-Apim-Subscription-Key** establecido en la [**clave de suscripción** de su entorno de Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Restablezca el encabezado **Autorización** cuando sea apropiado. Por ejemplo, cuando haya expirado el token.
 
@@ -147,7 +151,7 @@ Obtenga información sobre cómo comenzar a usar las bibliotecas de cliente de C
 
 1. Realice llamadas con el cliente a los "métodos de extensión", por ejemplo, `GetAllInstancesAsync`. Si el acceso al `Microsoft.Rest.HttpOperationResponse` subyacente es preferible, utilice los "métodos de mensaje http", por ejemplo `GetAllInstancesWithHttpMessagesAsync`.
 
-1. La respuesta probablemente será del tipo `object` porque el método puede devolver varios tipos (por ejemplo, `IList<InstanceInfo>` y `ApiErrorResult`). Para comprobar el tipo de retorno, puede convertir de forma segura los objetos en los tipos de respuesta especificados en la [Página de detalles de la API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) para esa operación.    
+1. La respuesta probablemente será del tipo `object` porque el método puede devolver varios tipos (por ejemplo, `IList<InstanceInfo>` y `ApiErrorResult`). Para comprobar el tipo de retorno, utilice los objetos en los tipos de respuesta especificados en la [página de detalles de la API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) para esa operación.    
    
    Si necesita más información sobre la solicitud, utilice los **métodos de mensaje http** para acceder al objeto de respuesta sin procesar.
 

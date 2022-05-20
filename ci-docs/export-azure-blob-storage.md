@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647748"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757407"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar la lista de segmentos y otros datos a Azure Blob Storage (versión preliminar)
 
@@ -44,7 +44,7 @@ Almacene los datos de Customer Insights en Blob Storage o utilícelo para transf
 Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Si activó la configuración de eliminación temporal para la cuenta de Azure Blob Storage, se producirán errores en las exportaciones. Desactive la eliminación temporal para exportar datos a blobs. Para obtener más información, consulte [Habilitar la eliminación temporal de blobs](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Si activó la configuración de eliminación temporal para la cuenta de Azure Blob Storage, se producirán errores en las exportaciones. Desactive la eliminación temporal para exportar datos a blobs. Para obtener más información, consulte [Habilitar la eliminación temporal de blobs](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Vaya a **Datos** > **Exportaciones**.
 

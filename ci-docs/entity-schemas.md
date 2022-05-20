@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647709"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757453"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidad en Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8647709"
 
 Se trata de un modelo de datos compartido que permite que las aplicaciones y los integradores de datos colaboren con más facilidad al proporcionar una definición de datos unificada. Common Data Model incluye un completo sistema de metadatos con entidades estándar, relaciones, jerarquías, características y mucho más. Se originó a partir de aplicaciones de Dynamics 365 y es de código abierto en GitHub con más de 260 entidades estándar. Un gran sistema de partners internos y externos aporta conceptos específicos del sector a Common Data Model.
 
-Varios sistemas y plataformas implementan hoy en día Common Data Model, incluidos flujos de trabajo de Power BI y servicios de datos de Azure. Ya es compatible con Microsoft Dataverse, Dynamics 365, Power Apps, Power BI y los próximos servicios de datos de Azure, que acumulan valor directamente para la [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Varios sistemas y plataformas implementan hoy en día Common Data Model, incluidos flujos de trabajo de Power BI y servicios de datos de Azure. Ya es compatible con Microsoft Dataverse, Dynamics 365, Power Apps, Power BI y los próximos servicios de datos de Azure, que acumulan valor directamente para la [Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Esquemas de entidad de Customer Insights
 

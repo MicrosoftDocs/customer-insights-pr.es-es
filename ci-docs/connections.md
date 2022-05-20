@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647689"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755330"
 ---
 # <a name="connections-preview-overview"></a>Información general sobre conexiones (versión preliminar)
 
@@ -24,15 +24,15 @@ Las conexiones son la clave para permitir el intercambio de datos desde y hacia 
 
 Vaya a **Administración** > **Conexiones** para crear y ver conexiones.
 
-La pestaña **Conexiones** muestra todas las conexiones activas. La lista muestra una fila para cada conexión. 
+La pestaña **Conexiones** muestra todas las conexiones activas. La lista muestra una fila para cada conexión.
 
 Obtenga una descripción general rápida y descubra lo que puede hacer con cada opción de extensibilidad en la pestaña **Descubrir**.
 
-### <a name="exports"></a>Exportaciones
+## <a name="exports"></a>Exportaciones
 
 Solo los administradores pueden configurar nuevas conexiones, pero pueden otorgar acceso a los colaboradores para que usen las conexiones existentes. Los administradores controlan dónde pueden ir los datos, los colaboradores definen la carga útil y la frecuencia según sus necesidades. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Enriquecimientos
+## <a name="enrichments"></a>Enriquecimientos
 
 Solo los administradores pueden configurar nuevas conexiones, pero las conexiones creadas siempre están disponibles tanto para administradores como para colaboradores. Los administradores gestionan las credenciales y dan su consentimiento para las transferencias de datos. Las conexiones pueden ser utilizadas para enriquecimiento tanto por parte de administradores como por parte de colaboradores.
 
@@ -46,9 +46,9 @@ Para agregar conexiones, debe tener [permisos de administrador](permissions.md).
 
 1. Seleccione **Agregar conexión** para crear una nueva conexión. Elija en el menú desplegable qué tipo de conexión desea crear.
 
-1. En el panel **Configurar conexión**, proporcione los detalles requeridos. 
+1. En el panel **Configurar conexión**, proporcione los detalles requeridos.
    1. El **Nombre para mostrar** y el tipo de conexión describe una conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de esta conexión.
-   1. Los campos exactos dependen del servicio al que se esté conectando. Puede obtener información sobre los detalles de un tipo de conexión específico en el artículo sobre el servicio de destino.
+   1. Los campos exactos dependen del servicio al que te estás conectando. Puede obtener información sobre los detalles de un tipo de conexión específico en el artículo sobre el servicio de destino.
    1. Si usted [usa tu propio Key Vault](use-azure-key-vault.md) para almacenar secretos, active **Usar Key Vault** y elija el secreto de la lista.
 
 1. Para crear la conexión, seleccione **Guardar**.
@@ -59,7 +59,7 @@ También puede seleccionar **Configurar** en un icono de la pestaña **Descubrir
 
 Al configurar o editar una conexión de exportación, usted elige qué usuarios pueden usar esta conexión específica para definir [exportaciones](export-destinations.md). De forma predeterminada, una conexión está disponible para los usuarios con un rol de administrador. Puede cambiar esta configuración en **Elegir quién puede usar esta conexión** y permitir que los usuarios con el rol colaborador utilicen esta conexión.
 
-- Los colaboradores no podrán ver ni editar la conexión. Solo verán el nombre para mostrar y su tipo al crear una exportación.
+- Los colaboradores no podrán ver ni editar la conexión. Solo verán el nombre y su tipo al crear una exportación.
 - Al compartir una conexión, permite que los colaboradores usen una conexión. Los colaboradores verán conexiones compartidas cuando configuren exportaciones. Pueden gestionar todas las exportaciones que utilizan esta conexión específica.
 - Puede cambiar esta configuración manteniendo las exportaciones que ya han sido definidas por los colaboradores.
 
@@ -77,7 +77,7 @@ Al configurar o editar una conexión de exportación, usted elige qué usuarios 
 
 ## <a name="remove-a-connection"></a>Quitar una conexión
 
-Si los enriquecimientos o exportaciones utilizan la conexión que está quitando, primero debe desconectarlos o quitarlos. El cuadro de diálogo para quitar le llevará a los enriquecimientos o exportaciones relevantes. 
+Si la conexión que está eliminando es utilizada por enriquecimientos o exportaciones, primero debe separarlos o eliminarlos. El cuadro de diálogo para quitar le llevará a los enriquecimientos o exportaciones relevantes.
 
 Los enriquecimientos y exportaciones que se han desconectado se vuelven inactivos. Se reactivan agregándoles otra conexión en la página [Enriquecimientos](enrichment-hub.md) o [Exportaciones](export-destinations.md).
 
@@ -91,7 +91,7 @@ Los enriquecimientos y exportaciones que se han desconectado se vuelven inactivo
 
    1. Si hay enriquecimientos o exportaciones usando esta conexión, seleccione el botón para ver qué está usando la conexión.
       - **Exportaciones**: puede optar por quitar o desconectar las exportaciones para poder quitar la conexión. Para desconectar una exportación, los administradores pueden utilizar la acción **Desconectar**. Esta acción está disponible para exportaciones seleccionadas individuales y múltiples. Al desconectarse, conserva la configuración de exportación, pero no se ejecutará hasta que se le agregue otra conexión.
-      - **Enriquecimientos**: puede optar por quitar o desactivar los enriquecimientos para poder quitar la conexión. 
+      - **Enriquecimientos**: puede optar por quitar o desactivar los enriquecimientos para poder quitar la conexión.
    1. Cuando la conexión no tenga más dependencias, vuelva a **Administrador** > **Conexiones** e intente quitar la conexión nuevamente.
 
 1. Para confirmar la eliminación, seleccione **Quitar**.

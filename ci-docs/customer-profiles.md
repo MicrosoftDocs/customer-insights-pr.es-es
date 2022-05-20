@@ -1,7 +1,7 @@
 ---
 title: Ver perfiles de clientes
 description: Obtenga una vista combinada de los datos unificados de sus clientes.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646588"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755803"
 ---
 # <a name="customer-profiles"></a>Perfiles de clientes
 
@@ -29,7 +29,7 @@ Los clientes pueden ser personas u organizaciones. Cada perfil de cliente se rep
 
 Seleccione una ventana para ver los datos del cliente seleccionado en una página dedicada llamada [Página de detalles del cliente](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Página de clientes que muestra ventanas de resultados](media/customers-page-result-tiles-B2C.png "Página de clientes que muestra ventanas de resultados")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Seleccione una ventana para ver los datos del cliente seleccionado en una págin
 
 ## <a name="search-for-customers"></a>Buscar clientes
 
-Busque clientes introduciendo un nombre o algún otro atributo en el cuadro de búsqueda. La búsqueda solo funciona dentro de la entidad _Cliente_ creada durante el proceso de unificación de datos.
+Busque clientes introduciendo un nombre o algún otro atributo en el cuadro de búsqueda. La búsqueda solo funciona dentro de la entidad *Cliente* creada durante el proceso de unificación de datos.
 
 Como administrador, puede configurar los atributos que se pueden buscar mediante la página de **Índice de Buscar y filtrar**. Para obtener más información, vaya a [Administrar índice de Buscar y filtrar](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtrar de clientes
 
-Puede filtrar clientes por campos de entidad _Cliente_. Al igual que en la búsqueda, el administrador primero tendrá que definir los campos como filtrables mediante la página **Índice de Buscar y filtrar**.
+Puede filtrar clientes por campos de entidad *Cliente*. Al igual que en la búsqueda, el administrador primero tendrá que definir los campos como filtrables mediante la página **Índice de Buscar y filtrar**.
 
 1. Seleccione **Mostrar filtros** en la página **Clientes**.
 
@@ -55,24 +55,25 @@ Puede filtrar clientes por campos de entidad _Cliente_. Al igual que en la búsq
 
 Seleccione cualquiera de los mosaicos de clientes para abrir la **Página de detalles del cliente**. Esta vista contiene información unificada para el cliente seleccionado. Los detalles del cliente incluyen el siguiente contenido:
 
-**Ventana de perfil de cliente**: Esta ventana muestra los diferentes valores de la entidad _Cliente_ unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará. La ventana está estructurado en secciones:  
-  - La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea si el perfil contiene dichos campos. 
-  - **Contactos para este cliente**: En entornos para cuentas de negocio, verá todos los contactos relacionados para este cliente en la segunda sección. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
-  - **Campos adicionales**: Muestra los campos restantes del cliente seleccionado, excepto los ID. 
-  - **Identificaciones**: Enumera todos los ID bajo su nombre de entidad correspondiente. Los campos se identifican como ID por su semántica, que los clasifica como tales.
+**Ventana de perfil de cliente**: Esta ventana muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará. La ventana está estructurado en secciones:
+
+- La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea si el perfil contiene dichos campos.
+- **Contactos para este cliente**: En entornos para cuentas de negocio, verá todos los contactos relacionados para este cliente en la segunda sección. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
+- **Campos adicionales**: Muestra los campos restantes del cliente seleccionado, excepto los ID.
+- **Identificaciones**: Enumera todos los ID bajo su nombre de entidad correspondiente. Los campos se identifican como ID por su semántica, que los clasifica como tales.
 
 **Escala de tiempo de actividad**: Muestra datos si ha configurado actividades. La vista de escala de tiempo contiene actividades ordenadas cronológicamente del cliente seleccionado, comenzando con la actividad más reciente. Para obtener más información, vaya a [Actividades del cliente](activities.md).
 
-**Información**:  
-  - **Medidas**: Muestra si configuró una o más medidas de atributos del cliente. Incluyen KPI calculados en torno a sus clientes a nivel de cliente individual. Para obtener más información, vaya a [Definir y gestionar medidas](measures.md).
+**Información**:
 
-  - **Intereses potenciales, marcas potenciales**: Muestra si configuró un enriquecimiento de afinidad de marca o de intereses. Representa intereses y afinidades potenciales para las marcas basadas en otros clientes cuyo perfil es similar al perfil de cliente seleccionado. Para obtener más información, vaya a [Enriquecer perfiles de clientes con afinidades de marca e intereses](enrichment-microsoft.md).
+- **Medidas**: Muestra si configuró una o más medidas de atributos del cliente. Incluyen KPI calculados en torno a sus clientes a nivel de cliente individual. Para obtener más información, vaya a [Definir y gestionar medidas](measures.md).
+
+- **Intereses potenciales, marcas potenciales**: Muestra si configuró un enriquecimiento de afinidad de marca o de intereses. Representa intereses y afinidades potenciales para las marcas basadas en otros clientes cuyo perfil es similar al perfil de cliente seleccionado. Para obtener más información, vaya a [Enriquecer perfiles de clientes con afinidades de marca e intereses](enrichment-microsoft.md).
 
 Para volver a la página de búsqueda de clientes, seleccione **Volver a clientes**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Agregar más orígenes de datos](data-sources.md), [enriquecer perfiles unificados](enrichment-hub.md) o [crear segmentos](segments.md) para trabajar con perfiles de clientes unificados en otras aplicaciones.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

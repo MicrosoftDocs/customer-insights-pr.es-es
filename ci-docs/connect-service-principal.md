@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647699"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739183"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar con una cuenta de Azure Data Lake Storage mediante una entidad de servicio de Azure
 
@@ -40,7 +40,7 @@ Antes de crear una nueva entidad de servicio para Customer Insights, verifique s
 
 3. En **Gestionar**, seleccione **Aplicaciones empresariales**.
 
-4. Busque el ID de la aplicación de Microsoft `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` con el nombre `Dynamics 365 AI for Customer Insights`.
+4. Añada un filtro para **El ID de la aplicación comienza con** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` o busque el nombre `Dynamics 365 AI for Customer Insights`.
 
 5. Si encuentra un registro coincidente, significa que la entidad de servicio ya existe. 
    

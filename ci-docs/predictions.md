@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647838"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740740"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete sus datos parciales con predicciones (obsoleto)
 
@@ -37,7 +37,7 @@ Antes de que su organización pueda usar la característica de predicciones, se 
 
 1. Su organización tiene una instancia [configurada en Microsoft Dataverse](/ai-builder/build-model#prerequisites) y está en la misma organización que Customer Insights.
 
-2. Su entorno de conclusiones del público está conectado a su instancia de Dataverse.
+2. El entorno de Customer Insights está asociado a la instancia de Dataverse.
 
 Para obtener más información, consulte [Crear un nuevo entorno](create-environment.md).
 

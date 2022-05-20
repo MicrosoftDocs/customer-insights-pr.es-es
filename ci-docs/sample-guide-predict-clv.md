@@ -1,19 +1,19 @@
 ---
 title: Guía de muestra de la predicción del valor de por vida del cliente
 description: Utilice esta guía de muestra para probar el modelo de valor de vida útil del cliente predicción.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647829"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740832"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de muestra de la predicción (CLV) del valor de por vida del cliente
 
@@ -102,64 +102,7 @@ Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [
 
 ## <a name="task-2---data-unification"></a>Tarea 2: unificación de datos
 
-Después de ingerir los datos, ahora comenzamos el proceso de unificación de datos para crear un perfil de cliente unificado. Para obtener más información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Después de ingerir los datos, mapee los contactos de los datos de comercio electrónico y fidelidad con tipos de datos comunes. Vaya a **Datos** > **Unificar** > **Mapa**.
-
-1. Seleccione las entidades que representan el perfil del cliente: **eCommerceContacts** y **loyCustomers**. Después, seleccione **Aplicar**.
-
-   ![unificar las fuentes de datos de comercio electrónico y fidelización.](media/unify-ecommerce-loyalty.png)
-
-1. Seleccione **ContactId** como la clave principal para **eCommerceContacts** y **LoyaltyID** como la clave principal para **loyCustomers**.
-
-   ![Unifique LoyaltyId como clave principal.](media/unify-loyaltyid.png)
-
-1. Seleccione **Guardar**.
-
-### <a name="match"></a>Coincidir
-
-1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
-
-1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
-
-1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
-
-   ![Unifique la coincidencia de comercio electrónico y fidelización.](media/unify-match-order.png)
-
-1. Seleccione **Agregar regla**
-
-1. Agregue su primera condición con FullName.
-
-   - Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
-   - Para loyCustomers, seleccione **FullName** en el menú desplegable.
-   - Seleccione el menú desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección, ...)**.
-   - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-1. Introduzca el nombre **FullName, Email** para la nueva regla.
-
-   - Agregar una segunda condición para la dirección de correo electrónico seleccionando **Agregar condición**
-   - Para la entidad eCommerceContacts, elija **Correo electrónico** en el menú desplegable.
-   - Para la entidad loyCustomers, elija **Correo electrónico** en el menú desplegable.
-   - Deje Normalizar en blanco.
-   - Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-   ![Unifique la regla de coincidencia para el nombre y el correo electrónico.](media/unify-match-rule.png)
-
-1. Seleccione **Listo**.
-
-1. Seleccione **Guardar** y **Ejecutar**.
-
-### <a name="merge"></a>Combinar
-
-1. Vaya a la pestaña **Fusionar**.
-
-1. En **ContactId** de la entidad **loyCustomers**, cambie el nombre para mostrar a **ContactIdLOYALTY** para diferenciarlo de los otros id. ingeridos.
-
-   ![cambie el nombre de contactid a partir del id. de fidelidad.](media/unify-merge-contactid.png)
-
-1. Seleccione **Guardar** y **Ejecutar fusión y procesos subsiguientes**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarea 3: configurar el valor de vida útil del cliente predicción
 

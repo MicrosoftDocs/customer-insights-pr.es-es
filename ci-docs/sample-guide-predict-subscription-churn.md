@@ -1,8 +1,8 @@
 ---
 title: Guía de ejemplo de predicción de abandono de suscripción
 description: Utilice esta guía de muestra para probar el modelo de predicción de cancelación de suscripción de uso inmediato.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647819"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741432"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Guía de ejemplo de predicción de abandono de suscripción
 
@@ -112,61 +112,7 @@ Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [
 
 ## <a name="task-2---data-unification"></a>Tarea 2: unificación de datos
 
-Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir, Fusionar** para crear un perfil de cliente unificado. Para obtener más información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Después de ingerir los datos, mapee los contactos de los datos de comercio electrónico y fidelidad con tipos de datos comunes. Vaya a **Datos** > **Unificar** > **Mapa**.
-
-1. Seleccione las entidades que representan el perfil del cliente: **eCommerceContacts** y **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificar las fuentes de datos de comercio electrónico y fidelización.":::
-
-1. Seleccione **ContactId** como la clave principal para **eCommerceContacts** y **LoyaltyID** como la clave principal para **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifique LoyaltyId como clave principal.":::
-
-### <a name="match"></a>Coincidir
-
-1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
-
-1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
-
-1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifique la coincidencia de comercio electrónico y fidelización.":::
-
-1. Seleccione **Crear nueva regla**
-
-1. Agregue su primera condición con FullName.
-
-   * Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
-   * Para loyCustomers, seleccione **FullName** en el menú desplegable.
-   * Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
-   * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-1. Introduzca el nombre **FullName, Email** para la nueva regla.
-
-   * Agregar una segunda condición para la dirección de correo electrónico seleccionando **Agregar condición**
-   * Para la entidad eCommerceContacts, elija **Correo electrónico** en el menú desplegable.
-   * Para la entidad loyCustomers, elija **Correo electrónico** en el menú desplegable. 
-   * Deje Normalizar en blanco. 
-   * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifique la regla de coincidencia para el nombre y el correo electrónico.":::
-
-7. Seleccione **Guardar** y **Ejecutar**.
-
-### <a name="merge"></a>Fusionar mediante combinación
-
-1. Vaya a la pestaña **Fusionar**.
-
-1. En **ContactId** de la entidad **loyCustomers**, cambie el nombre para mostrar a **ContactIdLOYALTY** para diferenciarlo de los otros id. ingeridos.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="cambie el nombre de contactid a partir del id. de fidelidad.":::
-
-1. Seleccione **Guardar** y **Ejecutar** para iniciar el proceso de fusión.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarea 3: configurar la predicción de abandono de suscripciones
 

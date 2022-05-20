@@ -1,19 +1,19 @@
 ---
 title: Guía de ejemplo de predicción de abandono de transacción
 description: Utilice esta guía de ejemplo para probar el modelo de predicción de cancelación de transacción de uso inmediato.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647908"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741340"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guía de ejemplo de predicción de abandono de transacción
 
@@ -86,69 +86,13 @@ Revise los artículos [acerca de la ingestión de datos](data-sources.md) y la [
 
 1. Guarde el origen de datos.
 
-
 ## <a name="task-2---data-unification"></a>Tarea 2: unificación de datos
 
-Después de ingerir los datos, ahora comenzamos el proceso **Asignar, Coincidir, Fusionar** para crear un perfil de cliente unificado. Para obtener más información, consulte [Unificación de datos](data-unification.md).
-
-### <a name="map"></a>Asignar
-
-1. Después de ingerir los datos, mapee los contactos de los datos de comercio electrónico y fidelidad con tipos de datos comunes. Vaya a **Datos** > **Unificar** > **Mapa**.
-
-1. Seleccione las entidades que representan el perfil del cliente: **eCommerceContacts** y **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificar las fuentes de datos de comercio electrónico y fidelización.":::
-
-1. Seleccione **ContactId** como la clave principal para **eCommerceContacts** y **LoyaltyID** como la clave principal para **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifique LoyaltyId como clave principal.":::
-
-### <a name="match"></a>Coincidir
-
-1. Vaya a la pestaña **Coincidir** y seleccione **Establecer orden**.
-
-1. En la lista desplegable **Principal**, seleccione **eCommerceContacts: eCommerce** como el origen principal en incluya todos los registros.
-
-1. En la lista desplegable **Entidad 2**, seleccione **loyCustomers: LoyaltyScheme** e incluya todos los registros.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unifique la coincidencia de comercio electrónico y fidelización.":::
-
-1. Seleccione **Crear nueva regla**
-
-1. Agregue su primera condición con FullName.
-
-   * Para eCommerceContacts, seleccione **FullName** en el menú desplegable.
-   * Para loyCustomers, seleccione **FullName** en el menú desplegable.
-   * Seleccione el desplegable **Normalizar** y elija **Tipo (teléfono, nombre, dirección...)**.
-   * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-1. Introduzca el nombre **FullName, Email** para la nueva regla.
-
-   * Agregar una segunda condición para la dirección de correo electrónico seleccionando **Agregar condición**
-   * Para la entidad eCommerceContacts, elija **Correo electrónico** en el menú desplegable.
-   * Para la entidad loyCustomers, elija **Correo electrónico** en el menú desplegable. 
-   * Deje Normalizar en blanco. 
-   * Conjunto **Nivel de precisión**: **Básico**, y **Valor**: **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unifique la regla de coincidencia para el nombre y el correo electrónico.":::
-
-7. Seleccione **Guardar** y **Ejecutar**.
-
-### <a name="merge"></a>Fusionar mediante combinación
-
-1. Vaya a la pestaña **Fusionar**.
-
-1. En **ContactId** de la entidad **loyCustomers**, cambie el nombre para mostrar a **ContactIdLOYALTY** para diferenciarlo de los otros id. ingeridos.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="cambie el nombre de contactid a partir del id. de fidelidad.":::
-
-1. Seleccione **Guardar** y **Ejecutar** para iniciar el proceso de fusión.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarea 3: configurar la predicción de abandono de transacciones
 
-Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la predicción de cancelación de suscripción. Para conocer los pasos detallados, consulte el artículo [Predicción de abandono de suscripciones](predict-subscription-churn.md). 
+Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la rotación de transacciones predicción. Para conocer los pasos detallados, consulte el artículo [Predicción de abandono de transacciones](predict-transactional-churn.md). 
 
 1. Vaya a **Inteligencia** > **Descubrir** y seleccione usar el **Modelo de abandono de clientes**.
 
@@ -180,7 +124,7 @@ Con los perfiles de clientes unificados en su lugar, ahora podemos ejecutar la p
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tarea 4: revisar los resultados y las explicaciones del modelo
 
-Deje que el modelo complete el entrenamiento y la puntuación de los datos. Ahora puede revisar las explicaciones del modelo de cancelación de suscripción. Para más información, consulte [Revisar un estado de predicción y los resultados](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deje que el modelo complete el entrenamiento y la puntuación de los datos. Ahora puede revisar las explicaciones del modelo de abandono. Para más información, consulte [Revisar un estado de predicción y los resultados](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tarea 5: crear un segmento de clientes con alto riesgo de abandono
 
@@ -192,14 +136,12 @@ Puede crear un nuevo segmento basado en la entidad creada por el modelo.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Creación de un segmento con la salida del modelo.":::
 
-1. Seleccione el punto de conexión **OOBSubscriptionChurnPrediction** y defina el segmento: 
+1. Seleccione el punto de conexión **OOBeCommerceChurnPrediction** y defina el segmento: 
    - Campo: ChurnScore
    - Operador: mayor que
    - Valor: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configure el segmento de cancelación de suscripción.":::
 
-Ahora tiene un segmento que se actualiza dinámicamente y que identifica a los clientes con alto riesgo de abandono para este negocio de suscripción.
+Ahora tiene un segmento que se actualiza dinámicamente y que identifica a los clientes con alto riesgo de abandono.
 
 Para obtener más información, vea [Crear y administrar segmentos](segments.md).
 

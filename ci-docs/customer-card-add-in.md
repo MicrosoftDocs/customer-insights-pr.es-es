@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647558"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755657"
 ---
 # <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
-
-
 
 Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones de Dynamics 365. Con el Complemento de tarjeta de cliente instalado en una aplicación de Dynamics 365 compatible, puede optar por mostrar los campos del perfil del cliente, la información y la escala de tiempo de actividad. El complemento recuperará datos de Customer Insights sin afectar los datos en la aplicación de Dynamics 365 conectada.
 
@@ -31,7 +29,7 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
 ## <a name="prerequisites"></a>Requisitos previos
 
 - El complemento solo funciona con aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
-- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de Customer Insights, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que `contactid` (o `accountid`) se establece como el campo [clave principal para ese origen de datos en el paso de asignación del proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de Customer Insights, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que `contactid` (o `accountid`) se establece como el campo [clave principal para ese origen de datos en el paso de asignación del proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en Customer Insights para ver los datos.
 - [Capacidades configuradas de búsqueda y filtrado](search-filter-index.md) en Customer Insights son necesarios para que funcione la búsqueda de datos.
 - Cada control de complemento se basa en datos específicos en Customer Insights. Algunos datos y controles solo están disponibles en entornos de tipos específicos. La configuración del complemento le informará si un control no está disponible debido al tipo de entorno seleccionado. Más información sobre [casos de uso del entorno](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ Incluso con campos de id. configurados correctamente, los controles no pueden en
 
 **Resolución**
 
-1. Asegúrese de haber configurado el complemento de la tarjeta de acuerdo con las instrucciones: [Configurar el complemento de tarjeta de cliente](#configure-the-customer-card-add-in) 
+1. Asegúrese de haber configurado el complemento de la tarjeta de acuerdo con las instrucciones: [Configurar el complemento de tarjeta de cliente](#configure-the-customer-card-add-in)
 
-1. Revise la configuración de ingesta de datos. Edite el origen de datos para el sistema Dynamics 365 que contiene el GUID de id. de contacto. Si el GUID del id. de contacto se muestra con caracteres en mayúsculas en el editor de Power Query, intente lo siguiente: 
+1. Revise la configuración de ingesta de datos. Edite el origen de datos para el sistema Dynamics 365 que contiene el GUID de id. de contacto. Si el GUID del id. de contacto se muestra con caracteres en mayúsculas en el editor de Power Query, intente los pasos siguientes:
     1. Edite el origen de datos para abrir el origen de datos en el editor de Power Query.
     1. Seleccione la columna Id. de contacto.
     1. Seleccione **Transformar** en la barra de encabezado para ver las acciones disponibles.
     1. Seleccione **minúscula**. Valide si los GUID de la tabla ahora están en minúsculas.
     1. Guarde el origen de datos.
-    1. Ejecute la ingesta de datos, la unificación y los procesos posteriores para propagar los cambios en el GUID. 
+    1. Ejecute la ingesta de datos, la unificación y los procesos posteriores para propagar los cambios en el GUID.
 
-Después de completar la actualización completa, los controles del complemento de tarjeta de cliente deberían mostrar los datos esperados. 
+Después de que el sistema ha completado la actualización completa, los controles del complemento de tarjeta de cliente deberían mostrar los datos esperados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
