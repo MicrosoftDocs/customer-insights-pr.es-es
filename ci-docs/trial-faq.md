@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641829"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833789"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas frecuentes sobre la versión de prueba de Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Puede extender la prueba en la aplicación directamente. Puede extender su prueb
 
 Por lo general, recomendamos comenzar de cero con sus propios datos al actualizar a la versión de pago de Customer Insights. 
 
-Opcionalmente, si solo usa Customer Insights, puede copiar sus datos desde un entorno de prueba si compra Customer Insights. Debe ser el administrador de la versión de prueba de Customer Insights y el administrador global de su inquilino de Microsoft 365 o administrador de Dynamics 365 en su organización para migrar la configuración de un entorno de prueba a un entorno de pago. 
+Opcionalmente, si solo usa Customer Insights, puede copiar sus datos desde un entorno de prueba si compra Customer Insights. Debe ser el administrador de la versión de prueba de Customer Insights y el administrador global de su inquilino de Microsoft 365 o administrador de Dynamics 365 en su organización para migrar la configuración de un entorno de prueba a un entorno de pago.
 
-Cuando inicie sesión por primera vez en su instancia de pago de Customer Insights, se le pedirá que cree un entorno nuevo. En este proceso, puede optar por copiar la configuración de un entorno existente y migrar la mayoría de las opciones de configuraciones. Si tiene los permisos mencionados anteriormente, el entorno de prueba se mostrará en esta lista. Para obtener más información, consulte [Copiar la configuración del entorno](manage-environments.md#copy-the-environment-configuration).
+Cuando inicie sesión por primera vez en su instancia de pago de Customer Insights, se le pedirá que cree un entorno nuevo. En este proceso, puede optar por copiar la configuración de un entorno existente y migrar la mayoría de las opciones de configuraciones. Si tiene los permisos mencionados anteriormente, el entorno de prueba se mostrará en esta lista. Para obtener más información, consulte [Copiar la configuración del entorno](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>¿Cuáles son los límites y las cuotas de la versión de prueba?
 
@@ -81,9 +81,10 @@ Después de registrarse para la prueba, llegará a la pantalla principal de la a
 
 La mayoría de las funciones de las capacidades de Customer Insights están disponibles en la versión de prueba.
 
-Las características siguientes **no están disponibles**: 
+Las características siguientes **no están disponibles**:
+
 - No puede crear nuevos entornos que usen su propia cuenta de Azure Data Lake storage.
-- No puede eliminar el entorno de la prueba. 
+- No puede eliminar el entorno de la prueba.
 
 ### <a name="how-long-does-the-trial-last"></a>¿Cuál es la duración de la prueba?
 

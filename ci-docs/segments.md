@@ -1,7 +1,7 @@
 ---
 title: Segmentos en Customer Insights
 description: Descripción general de los segmentos y cómo crearlos y gestionarlos.
-ms.date: 03/30/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 9791e971387eb7db91ed7c4e4fe76552656013ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647808"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800763"
 ---
 # <a name="segments-overview"></a>Información general de los segmentos
 
@@ -58,7 +58,7 @@ Las siguientes acciones están disponibles cuando selecciona un segmento:
 - **Ver** los detalles del segmento, incluida la tendencia del recuento de miembros de una vista previa de los miembros del segmento.
 - **Descargar** la lista de miembros como archivo .CSV.
 - **Editar** el segmento para cambiar sus propiedades.
-- **Crear duplicado** de un segmento. Puede elegir editar sus propiedades de inmediato o simplemente guardar el duplicado.
+- **Crear duplicado** de un segmento. Puede optar por editar sus propiedades de inmediato o guardar el duplicado.
 - **Actualizar** el segmento para incluir los últimos datos.
 - **Activar** o **Desactivar** el segmento. Para los segmentos inactivos, existe la definición de segmento, pero aún no contiene ningún cliente. Un segmento activo busca clientes que coincidan con la definición del segmento. Si una [actualización programada](system.md#schedule-tab) está configurada, los segmentos inactivos tienen el **Estado** catalogado como **Omitido**, lo que indica que ni siquiera se intentó una actualización. Cuando se activa un segmento inactivo, se actualizará y se incluirá en las actualizaciones programadas.
   Alternativamente, puede usar la funcionalidad **Programar más tarde** en el desplegable **Activar/Desactivar** para especificar una fecha y hora futuras para la activación y desactivación de un segmento en particular.
@@ -75,6 +75,7 @@ Las siguientes acciones están disponibles cuando selecciona un segmento:
 ## <a name="refresh-segments"></a>Actualizar segmentos
 
 Puede actualizar todos los segmentos a la vez seleccionando **Actualizar todo** en la página **Segmentos** o puede actualizar uno o varios segmentos cuando los selecciona y elige **Actualizar** desde las opciones. Alternativamente, puede configurar una actualización periódica en **Administración** > **Sistema** > **Programar**. Cuando se configura una actualización periódica, se aplican las siguientes reglas:
+
 - Todos los segmentos con el tipo **Dinámico** o **Expansión** se actualizarán automáticamente a la cadencia establecida. Cuando se completa la actualización, el **Estado** indica si hubo algún problema al actualizar el segmento. La **Última actualización** muestra una marca de tiempo de la última actualización exitosa. Si ocurre un error, seleccione el error para ver detalles sobre lo que sucedió.
 - Segmentos con el tipo **Estático** *no* se actualizarán automáticamente. La **Última actualización** muestra una marca de tiempo de la última vez que se ejecutaron o actualizaron manualmente los segmentos estáticos.
 
@@ -86,7 +87,7 @@ Puede exportar un segmento desde la página de segmentos o la [página de export
 
 1. Vaya a la página **Segmentos**.
 
-1. Seleccione **Mostrar más [...]** para el segmento que desea exportar.
+1. Seleccione los puntos suspensivos verticales (&vellip;) para el segmento que desea exportar.
 
 1. Seleccione **Gestionar exportaciones** de la lista desplegable de acciones.
 
@@ -97,6 +98,26 @@ Puede exportar un segmento desde la página de segmentos o la [página de export
    1. Para crear una nueva exportación con el segmento seleccionado, seleccione **Agregar exportación**. Para obtener más información sobre la creación de exportaciones, consulte [Configurar una nueva exportación](export-destinations.md#set-up-a-new-export).
 
 1. Seleccione **Atrás** para volver a la página principal de los segmentos.
+
+## <a name="track-usage-of-a-segment"></a>Rastrear el uso de un segmento
+
+Si usa segmentos en aplicaciones, que se basan en la misma organización de Microsoft Dataverse que está conectada con Customer Insights, puede realizar un seguimiento del uso de un segmento. Para [Segmentos de Customer Insights utilizados en recorridos de clientes de Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), el sistema le informa sobre el uso de ese segmento.
+
+Al editar un segmento que se está usando dentro del entorno de Customer Insights, o en un recorrido del cliente en Marketing, un banner del [generador de segmentos](segment-builder.md) le informa sobre las dependencias. Puede inspeccionar los detalles de dependencia directamente desde el banner o seleccionando **Uso** en el generador de segmentos.
+
+El panel **Uso de segmento** muestra los detalles sobre el uso de este segmento en aplicaciones basadas en Dataverse. Para los segmentos que se usan en los recorridos del cliente, encontrará un vínculo para inspeccionar el recorrido en Marketing donde se usa este segmento. Si tiene permisos para obtener acceso a la aplicación Marketing, puede tener acceso a más detalles allí.
+
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Panel lateral con detalles del uso del segmento en el generador de segmentos.":::
+
+El sistema le informa sobre el uso de un segmento rastreado cuando intenta eliminarlo. Si el segmento que va a eliminar se utiliza en un recorrido del cliente en Marketing, ese recorrido se detendrá para todos los usuarios del segmento. Si el recorrido forma parte de una campaña de marketing, la supresión afectará a esa misma campaña. Sin embargo, aún puede eliminar el segmento a pesar de las advertencias.
+
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Cuadro de diálogo para confirmar la eliminación del segmento cuando se usa un segmento en una aplicación de Dataverse.":::
+
+### <a name="supported-apps"></a>Aplicaciones admitidas
+
+El uso se rastrea actualmente en las siguientes aplicaciones basadas en Dataverse:
+
+- [Recorridos del cliente en Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Ver el historial de procesamiento y los miembros del segmento
 
@@ -117,6 +138,5 @@ La parte inferior contiene una lista de los miembros del segmento.
 > Los campos que aparecen en esta lista se basan en los atributos de las entidades de su segmento.
 >
 >La lista es una vista previa de los miembros del segmento coincidentes y muestra los primeros 100 registros de su segmento para que pueda evaluarlo rápidamente y revisar sus definiciones si es necesario. Para ver todos los registros coincidentes, debe [exportar el segmento](export-destinations.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

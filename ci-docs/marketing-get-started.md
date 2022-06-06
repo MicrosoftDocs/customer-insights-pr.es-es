@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653752"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833329"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Trabaje con perfiles de clientes unificados en Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Al conectar los datos de Customer Insights con Marketing, puede:
 - Basar contenido dinámico (como tokens personalizados) en correos electrónicos, SMS y notificaciones push en medidas como el estado de fidelización, la fecha de renovación de la suscripción, la cuenta primaria o cualquier otra medida que haya capturado en el perfil de Customer Insights unificado.
 - Cargar los datos de Marketing en Customer Insights y combinarlos con datos de los clientes de otros orígenes.
 - Aplicar limpieza, enriquecimiento y herramientas de coincidencia aproximada de datos de Customer Insights.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Usar perfiles de clientes enriquecidos en marketing en tiempo real
 
@@ -41,4 +40,4 @@ Más información: [Usar segmentos de Dynamics 365 Customer Insights con Dynamic
 
 No está limitado al almacenamiento en la nube si desea utilizar los datos de Customer Insights con Marketing. Si ya tiene su propio Azure Data Lake Storage configurado, puede conectarse con Customer Insights y luego compartir los datos con la aplicación Marketing tal como lo haría con una configuración basada en la nube.
 
-Más información: [Habilitar el intercambio de datos con Dataverse desde su propio Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Más información: [Habilitar el intercambio de datos con Dataverse desde su propio Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

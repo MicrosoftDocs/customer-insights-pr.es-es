@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647918"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800347"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Usar el generador de medidas para crear medidas desde cero
 
@@ -88,7 +88,7 @@ Puede crear medidas a nivel de clientes individuales (atributo de cliente, medid
 
 1. Para agregar más cálculos para la medida, seleccione **Nuevo cálculo**. Solo puede usar entidades en la misma ruta de la entidad para los nuevos cálculos. Aparecerán más cálculos a modo de columnas nuevas en la entidad de los resultados de la medida.
 
-1. Seleccione **...** en el cálculo para **Duplicar**, **Cambiar el nombre**, o **Eliminar** un cálculo de una medida.
+1. Seleccione los puntos suspensivos verticales (&vellip;) en el cálculo para **Duplicar**, **Cambiar el nombre** o **Quitar** un cálculo de una medición.
 
 1. En el área **Vista previa**, verá el esquema de datos de la entidad de los resultados de la medida, incluidos los filtros y las dimensiones. La vista previa reacciona dinámicamente a los cambios en la configuración.
 
@@ -158,7 +158,7 @@ Puede crear medidas a nivel de cuentas individuales (medida de clientes) o a niv
    1. Seleccione **Ruta de relación** y elija la ruta de la entidad que debe usarse para identificar su medida. Si solo hay un camino hacia la entidad *Cliente*, este control no se mostrará.
    1. Seleccione **Listo** para aplicar su selección.
 
-1. Seleccione **...** en el cálculo para **Duplicar**, **Cambiar el nombre**, o **Eliminar** un cálculo de una medida.
+1. Seleccione los puntos suspensivos verticales (&vellip;) en el cálculo para **Duplicar**, **Cambiar el nombre** o **Quitar** un cálculo de una medición.
 
 1. En el área **Vista previa**, verá el esquema de datos de la entidad de los resultados de la medida, incluidos los filtros y las dimensiones. La vista previa reacciona dinámicamente a los cambios en la configuración.
 

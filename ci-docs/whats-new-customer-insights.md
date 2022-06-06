@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700958"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833651"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novedades de Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp proporciona resolución de identidad y consolidación de datos de clien
 Para más información, vea [Enriquecer los perfiles de los clientes con datos de identidad de LiveRamp (versión preliminar)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organice segmentos y medidas con etiquetas y filtros
+
 Si su organización mantiene muchos segmentos o medidas, encontrar el correcto a veces puede ser un desafío. Esta nueva característica le permite organizar listas usando etiquetas y columnas. Ayuda a encontrar datos de forma rápida y sencilla y a personalizar las vistas.
 
 Para obtener más información, consulte [Trabajar con etiquetas y columnas](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Para obtener más información, consulte [Trabajar con etiquetas y columnas](wor
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Habilitar el intercambio de datos con Dataverse al usar su propia cuenta de almacenamiento
 
 Si su entorno usa Azure Data Lake Storage para almacenar datos de Customer Insights, el uso compartido de datos con Microsoft Dataverse requiere alguna configuración extra.
-Antes, solo podía habilitar el uso compartido de datos con Dataverse cuando sus datos se almacenaban en nuestro lago de datos administrado. 
+Antes, solo podía habilitar el uso compartido de datos con Dataverse cuando sus datos se almacenaban en nuestro lago de datos administrado.
 
-Para obtener más información, consulte [Habilitar uso compartido de datos con Dataverse desde su propio Azure Data Lake Storage (versión preliminar)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Para obtener más información, consulte [Habilitar uso compartido de datos con Dataverse desde su propio Azure Data Lake Storage (versión preliminar)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nuevos destinos de exportación: Iterable y Braze
 
@@ -81,7 +82,6 @@ Cambiar las API en los servicios conectados genera actualizaciones para que los 
 
 - Google Ads: la nueva versión del conector de exportación de Google Ads simplifica la experiencia de autenticación y ahora le permite crear nuevas audiencias de Google Ads automáticamente. 
 - Marketo: la nueva versión del conector de exportación de Marketo brinda soporte para el id. de Marketo, lo que le permite evitar la duplicación de datos, actualizar registros existentes y crear nuevos registros en Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Actualizaciones de febrero de 2022
 

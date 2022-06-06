@@ -1,7 +1,7 @@
 ---
 title: Conectar datos de Common Data Model a una cuenta de Azure Data Lake
 description: Trabajar con datos de Common Data Model usando Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647688"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833406"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake
 
@@ -46,16 +46,16 @@ Este artículo proporciona información sobre cómo ingerir datos en Dynamics 36
 
 1. Seleccione **Azure Data Lake Storage**, introduzca un **Nombre** para el origen de datos, luego seleccione **Siguiente**.
 
-   - Si se le solicita, seleccione uno de los conjuntos de datos de muestra que pertenecen a su industria, luego seleccione **Siguiente**. 
+   - Si se le solicita, seleccione uno de los conjuntos de datos de muestra que pertenecen a su industria, luego seleccione **Siguiente**.
 
 1. Puede elegir entre usar una opción basada en recursos y una opción basada en suscripción para la autenticación. Para obtener más información, consulte [Conectarse a una cuenta de Azure Data Lake Storage Gen 2 mediante el uso de una entidad de servicio de Azure](connect-service-principal.md). Introduzca la **Dirección del servidor**, seleccione **Iiniciar sesión** y luego seleccione **Siguiente**.
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo para especificar nuevos detalles de conexión para Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Necesita uno de los siguientes roles, ya sea para el contenedor o la cuenta de almacenamiento mencionada anteriormente, para poder conectarse y crear un origen de datos:
-   >  - Lector de datos de blobs de almacenamiento
-   >  - Propietario de datos de blobs de almacenamiento
-   >  - Colaborador de datos de blob de almacenamiento
+   > Necesita uno de los siguientes roles para el contenedor en la cuenta de almacenamiento y crear el origen de datos:
+   >
+   >  - El Lector de datos de Storage Blob es suficiente para leer desde una cuenta de almacenamiento e incorporar los datos a Customer Insights. 
+   >  - Se requiere el propietario o el colaborador de datos de Storage Blob Storage si desea editar los archivos de manifiesto directamente en Customer Insights.
 
 1. En el diálogo **Seleccionar una carpeta de Common Data Model**, seleccione el archivo model.json o manifest.json del que importar datos y seleccione **Siguiente**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Este artículo proporciona información sobre cómo ingerir datos en Dynamics 36
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo que muestra una lista de entidades de un archivo model.json.](media/review-entities.png)
 
-8. Indique en qué entidades de datos desea habilitar la generación de perfiles de datos y luego seleccione **Guardar**. La generación de perfiles de datos habilita el análisis y otras capacidades. Puede seleccionar la entidad completa, que selecciona todos los atributos de la entidad, o seleccionar ciertos atributos de su elección. De forma predeterminada, ninguna entidad está habilitada para la creación de perfiles de datos.
+1. Indique en qué entidades de datos desea habilitar la generación de perfiles de datos y luego seleccione **Guardar**. La generación de perfiles de datos habilita el análisis y otras capacidades. Puede seleccionar la entidad completa, que selecciona todos los atributos de la entidad, o seleccionar ciertos atributos de su elección. De forma predeterminada, ninguna entidad está habilitada para la creación de perfiles de datos.
    > [!div class="mx-imgBorder"]
    > ![Cuadro de diálogo que muestra un perfil de datos.](media/dataprofiling-entities.png)
 
-9. Después de guardar sus selecciones, se abre la página **Orígenes de datos**. Ahora debería ver la conexión de la carpeta de Common Data Model como origen de datos.
+1. Después de guardar sus selecciones, se abre la página **Orígenes de datos**. Ahora debería ver la conexión de la carpeta de Common Data Model como origen de datos.
 
 > [!NOTE]
 > Un archivo model.json o manifest.json solo se puede asociar con un origen de datos en el mismo entorno. Sin embargo, el mismo archivo model.json o manifest.json se puede utilizar para orígenes de datos en varios entornos.
@@ -80,7 +80,7 @@ Puede actualizar la clave de acceso para la cuenta de almacenamiento que contien
 
 1. Vaya a **Datos** > **Orígenes de datos**.
 
-2. Junto al origen de datos que desea actualizar, seleccione los puntos suspensivos.
+2. Junto al origen de datos que desea actualizar, seleccione los puntos suspensivos verticales (&vellip;).
 
 3. Seleccione la opción **Editar** de la lista.
 
@@ -93,13 +93,6 @@ Puede actualizar la clave de acceso para la cuenta de almacenamiento que contien
 
    > ![Cuadro de diálogo para especificar los detalles de la conexión de Azure Data Lake a una cuenta de almacenamiento existente.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Necesita uno de los siguientes roles, ya sea para el contenedor o la cuenta de almacenamiento mencionada anteriormente, para poder conectarse y crear un origen de datos:
-   >  - Lector de datos de blobs de almacenamiento
-   >  - Propietario de datos de blobs de almacenamiento
-   >  - Colaborador de datos de blob de almacenamiento
-
-
 6. Opcionalmente, elija un archivo model.json o manifest.json diferente con un conjunto diferente de entidades en el contenedor.
 
 7. Opcionalmente, puede seleccionar entidades adicionales para ingerir. También puede quitar cualquier entidad ya seleccionada si no hay dependencias.
@@ -107,7 +100,6 @@ Puede actualizar la clave de acceso para la cuenta de almacenamiento que contien
    > [!IMPORTANT]
    > Si hay dependencias en el archivo model.json o manifest.json existente y el conjunto de entidades, verá un mensaje de error y no podrá seleccionar un archivo model.json o manifest.json diferente. Elimine esas dependencias antes de cambiar el archivo model.json o manifest.json o cree un nuevo origen de datos con el archivo model.json o manifest.json que desea utilizar para evitar eliminar las dependencias.
 
-8. Opcionalmente, puede seleccionar atributos o entidades adicionales para habilitar la creación de perfiles de datos o deshabilitar los ya seleccionados.   
-
+8. Opcionalmente, puede seleccionar atributos o entidades adicionales para habilitar la creación de perfiles de datos o deshabilitar los ya seleccionados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

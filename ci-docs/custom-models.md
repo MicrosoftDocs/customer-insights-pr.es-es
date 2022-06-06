@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647618"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800441"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos personalizados de aprendizaje automático
 
@@ -92,7 +92,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 
 ## <a name="edit-a-workflow"></a>Editar un flujo de trabajo
 
-1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales en la columna **Acciones**, junto a un flujo de trabajo que creó previamente, y seleccione **Editar**.
+1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones**, junto a un flujo de trabajo que creó previamente, y seleccione **Editar**.
 
 1. Puede actualizar el nombre reconocible de su flujo de trabajo en el campo **Nombre para mostrar**, pero no puede cambiar el servicio web o la canalización configurados. Seleccione **Siguiente**.
 
@@ -108,7 +108,7 @@ Las predicciones ofrecen capacidades para crear mejores experiencias para los cl
 
 ## <a name="run-a-workflow"></a>Ejecutar un flujo de trabajo
 
-1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales en la columna **Acciones**, junto a un flujo de trabajo que creó previamente.
+1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones**, junto a un flujo de trabajo que creó previamente.
 
 1. Seleccione **Ejecutar**.
 
@@ -116,7 +116,7 @@ Su flujo de trabajo también se ejecuta automáticamente con cada actualización
 
 ## <a name="delete-a-workflow"></a>Eliminar un flujo de trabajo
 
-1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales en la columna **Acciones**, junto a un flujo de trabajo que creó previamente.
+1. En la página **Modelos personalizados**, seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones**, junto a un flujo de trabajo que creó previamente.
 
 1. Seleccione **Eliminar** y confirme la eliminación.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739229"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800487"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -76,7 +76,7 @@ Para actualizar un origen de datos a petición, siga estos pasos:
 
 1. Vaya a **Datos** > **Orígenes de datos**.
 
-2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea actualizar y seleccione **Actualizar** en la lista desplegable.
+2. Seleccione los puntos suspensivos verticales (&vellip;) junto al origen de datos que desea actualizar y seleccione **Actualizar** en la lista desplegable.
 
 3. El origen de datos ahora se desencadena para una actualización manual. Al actualizar un origen de datos, se actualizará tanto el esquema de la entidad como los datos para todas las entidades especificadas en el origen de datos.
 
@@ -86,7 +86,7 @@ Para actualizar un origen de datos a petición, siga estos pasos:
 
 1. Vaya a **Datos** > **Orígenes de datos**.
 
-2. Seleccione los puntos suspensivos verticales junto al origen de datos que desea quitar y seleccione **Eliminar** en la lista desplegable.
+2. Seleccione los puntos suspensivos verticales (&vellip;) junto al origen de datos que desea quitar y seleccione **Eliminar** en la lista desplegable.
 
 3. Confirme la eliminación.
 

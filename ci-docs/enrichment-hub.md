@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653544"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800626"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimiento para perfiles de clientes (vista previa)
 
@@ -63,7 +63,7 @@ En la pestaña **Mis enriquecimientos** puede ver los enriquecimientos que ha co
 
 Vaya a la pestaña **Mis enriquecimientos** para ver todos los enriquecimientos configurados. Cada enriquecimiento se representa como una fila que incluye información adicional sobre el enriquecimiento.
 
-Seleccione el enriquecimiento para ver las opciones disponibles. También puede seleccionar los puntos suspensivos (...) en un elemento de la lista para ver las opciones. Si configuró varios enriquecimientos, puede usar el cuadro de búsqueda para encontrarlos rápidamente.
+Seleccione el enriquecimiento para ver las opciones disponibles. También puede seleccionar los puntos suspensivos verticales (&vellip;) en un elemento de la lista para ver las opciones. Si configuró varios enriquecimientos, puede usar el cuadro de búsqueda para encontrarlos rápidamente.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opciones para administrar enriquecimientos en la lista de enriquecimientos.":::
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755283"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807602"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de registros en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)
 
@@ -38,7 +38,7 @@ Para configurar diagnósticos en Customer Insights, se deben cumplir los siguien
 
 - Debe disponer de una [suscripción activa de Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Tiene permisos de [administrador](permissions.md#admin) en Customer Insights.
-- Tiene el rol de **Colaborador** y **Administrador de acceso de usuario** en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Para obtener más información, vea [Agregar o quitar asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- Tiene el rol de **Colaborador** y **Administrador de acceso de usuario** en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Data Lake Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Para obtener más información, vea [Agregar o quitar asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal). Este permiso es necesario al configurar los ajustes de diagnóstico en Customer Insights y se puede cambiar después de una instalación correcta.
 - Los [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Centro de eventos de Azure o Azure Log Analytics se cumplieron.
 - Tiene al menos el rol **Lector** en el grupo de recursos al que pertenece el recurso.
 

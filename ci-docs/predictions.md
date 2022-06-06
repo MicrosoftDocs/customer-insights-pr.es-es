@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740740"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800671"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete sus datos parciales con predicciones (obsoleto)
 
@@ -95,7 +95,7 @@ Como parte de este flujo, elegirá un atributo específico en el que basar el se
 
 2. Seleccione la predicción que desea revisar.
 
-3. Seleccione los puntos suspensivos en la columna **Acciones** y elija **Ver**.
+3. Seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones** y elija **Ver**.
 
 4. Verá una serie de puntos de datos en la vista de la predicción.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Después de crear una predicción, puede personalizar el modelo en el AI Builder
 
 2. Seleccione la predicción que desea editar.
 
-3. Seleccione los puntos suspensivos en la columna **Acciones** y elija **Ver**.
+3. Seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones** y elija **Ver**.
 
 4. Seleccione **Personalizar en AI Builder**.
 
@@ -139,7 +139,7 @@ La siguiente ejecución de la predicción usará el modelo actualizado que ha cr
 
 2. Seleccione la predicción que desee eliminar.
 
-3. Seleccione los puntos suspensivos en la columna **Acciones** y elija **Eliminar**.
+3. Seleccione los puntos suspensivos verticales (&vellip;) en la columna **Acciones** y elija **Eliminar**.
 
 4. Confirme la eliminación.
 
@@ -153,7 +153,7 @@ Si no puede completar el proceso de Dataverse de conexión debido a un error, pu
 - No se otorgan permisos de aplicaciones.
     1. Vaya a [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Seleccione **Entornos**.
-    1. Seleccione los puntos suspensivos junto al entorno al que desea agregar el permiso y seleccione **Configuración**.
+    1. Seleccione los puntos suspensivos verticales (&vellip;) junto al entorno al que desea agregar el permiso y seleccione **Ajustes**.
     1. Expanda **Usuarios + permisos** y seleccione **Usuarios**.
     1. Seleccione sucesivamente **+ Nuevo** y **Usuario**.
     1. Seleccione **Usuario de la aplicación** si aún no está seleccionado e introduzca la siguiente información:

@@ -1,110 +1,137 @@
 ---
-title: Crear entornos en Customer Insights
-description: Pasos para crear entornos con una suscripción con licencia para Dynamics 365 Customer Insights.
-ms.date: 04/25/2022
+title: Cómo crear un nuevo entorno
+description: Pasos para crear entornos con Dynamics 365 Customer Insights.
+ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
-ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "8712923"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833605"
 ---
-# <a name="create-an-environment-in-customer-insights"></a>Crear un entorno en Customer Insights
+# <a name="how-to-create-a-new-environment"></a>Cómo crear un nuevo entorno
 
-En este artículo se explica cómo crear un entorno nuevo después de que su organización haya adquirido una suscripción a Dynamics 365 Customer Insights. 
+Después de [comprar una licencia de suscripción para Dynamics 365 Customer Insights](paid-license.md), el administrador global del inquilino de Microsoft 365 recibe un correo electrónico que le invita a crear el entorno. Vaya a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para empezar. En este escenario, puede ir directamente al [Paso 1: Proporcionar información básica](#step-1-provide-basic-information).
 
-Las organizaciones pueden crear varios entornos para cada licencia de Customer Insights. Si su organización adquiere más de una licencia, [póngase en contacto con nuestro equipo de soporte](https://go.microsoft.com/fwlink/?linkid=2079641) para aumentar el número de entornos disponibles. Para obtener más información sobre la capacidad y la capacidad adicional, consulte la [Guía de licencias de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Después de crear el primer entorno, el Administrador global del inquilino de Microsoft 365 puede [agregar usuarios de su organización como administradores](permissions.md). En el futuro, estos administradores podrán administrar usuarios y entornos. Si su organización adquiere más de una licencia de Customer Insights, [póngase en contacto con nuestro equipo de soporte](https://go.microsoft.com/fwlink/?linkid=2079641) para aumentar el número de entornos disponibles. Para obtener más información sobre la capacidad y la capacidad adicional, consulte la [Guía de licencias de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-> [!NOTE]
+> [!TIP]
 > Si desea probar el servicio, consulte [Configurar un entorno de prueba](trial-signup.md).
 
-## <a name="create-a-new-environment"></a>Crear un nuevo entorno
+## <a name="prerequisites"></a>Requisitos previos
 
-Después de comprar una licencia de suscripción para Customer Insights, el administrador global del inquilino de Microsoft 365 recibe un correo electrónico que lo invita a crear el entorno. Vaya a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para empezar. 
+Necesita [permisos de administrador](permissions.md) en Customer Insights para crear o gestionar entornos.
 
-Una experiencia guiada le ayuda a través de los pasos para recopilar toda la información necesaria para un nuevo entorno. Necesita [permisos de administrador](permissions.md) en Customer Insights para crear o gestionar entornos.
+## <a name="start-the-environment-creation-process"></a>Iniciar el proceso de creación del entorno
 
 1. Abra el selector de entorno y seleccione **+ Nuevo**.
   
    :::image type="content" source="media/environment-picker.png" alt-text="Seleccionar el selector de entornos.":::
 
-1. Siga la experiencia guiada que se describe en las siguientes secciones.
+1. Siga la experiencia guiada descrita en las siguientes secciones para proporcionar toda la información necesaria para un nuevo entorno. Si configuró un entorno anteriormente, también puede [copiar la configuración](#copy-the-environment-configuration).
 
-### <a name="step-1-provide-environment-information"></a>Paso 1: proporcione información sobre el entorno
+## <a name="step-1-provide-basic-information"></a>Paso 1: Proporcionar información básica
 
-En el paso **Información básica**, elija si desea crear un entorno desde cero o [copiar datos de otro entorno](manage-environments.md#copy-the-environment-configuration).
+En el paso **Información básica**, elija si desea crear un entorno desde cero o [copiar datos de otro entorno](#copy-the-environment-configuration).
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Cuadro de diálogo para crear un nuevo entorno de Customer Insights.":::
 
 Especifique los detalles siguientes:
-   - **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo.
-   - **Elija su negocio**: Elija el público principal para el nuevo entorno. Puede trabajar con consumidores individuales (B2C) o [cuentas empresariales](work-with-business-accounts.md) (B2B).
-   - **Tipo**: seleccione si desea crear un entorno de producción o de espacio aislado. Los entornos de espacio aislado no permiten la actualización de datos programada y están pensados para la implementación previa y las pruebas. Los entornos de espacio aislado utilizan el mismo público principal que el entorno de producción que está seleccionado actualmente.
-   - **Región**: la región en la que se implementa y hospeda el servicio.
 
-### <a name="step-2-configure-data-storage"></a>Paso 2: Configurar almacenamiento de datos
+- **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo.
+- **Elija su negocio**: Elija el público principal para el nuevo entorno. Puede trabajar con consumidores individuales (B2C) o [cuentas empresariales](work-with-business-accounts.md) (B2B). Si su organización hace negocios principalmente con individuos, como un minorista o una cafetería, elija consumidores individuales. En caso de que su principal público sean otras empresas, como un fabricante de automóviles o una papelera, elija cuentas comerciales.
+- **Tipo**: seleccione si desea crear un entorno de producción o de espacio aislado. Los entornos de espacio aislado no permiten la actualización de datos programada y están pensados para la implementación previa y las pruebas. Los entornos de espacio aislado utilizan el mismo público principal que el entorno de producción que está seleccionado actualmente.
+- **Región**: la región en la que se implementa y hospeda el servicio. Para [usar su propia cuenta de Azure Data Lake Storage](own-data-lake-storage.md) o [conectarse a una organización de Microsoft Dataverse existente](customer-insights-dataverse.md), el entorno de Customer Insights debe estar en la misma región.
+
+## <a name="step-2-configure-data-storage"></a>Paso 2: Configurar almacenamiento de datos
 
 En el paso **Almacenamiento de datos**, elija dónde almacenar los datos de Customer Insights.
 
-Tendrá dos opciones: **Almacenamiento de Customer Insights** (lago de datos de Azure administrado por el equipo de Customer Insights) y **Azure Data Lake Storage** (su propio Azure Data Lake Storage). De forma predeterminada, la opción de almacenamiento de Customer Insights está seleccionada.
+Puede elegir entre dos opciones:
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Elija el Azure Data Lake Storage para almacenar sus datos.":::
+- **Almacenamiento de Customer Insights**: el equipo de Customer Insights administra el almacenamiento de datos. Es la opción predeterminada y, a menos que existan requisitos específicos para almacenar datos en su propia cuenta de almacenamiento, recomendamos usar esta opción.
+- **Azure Data Lake Storage**: Especifique su propia cuenta de Azure Data Lake Storage para almacenar los datos y tener control total sobre dónde se almacenan. Para obtener más información, consulte [Usar su propia cuenta de Azure Data Lake Storage](own-data-lake-storage.md).
 
-Al guardar datos en Azure Data Lake Storage, usted acepta que los datos se transferirán y almacenarán en la ubicación geográfica adecuada para esa cuenta de almacenamiento de Azure. Esta ubicación puede diferir de dónde se almacenan los datos en Dynamics 365 Customer Insights. Obtenga más información en el [Centro de confianza de Microsoft](https://www.microsoft.com/trust-center).
+:::image type="content" source="media/data-storage-environment.png" alt-text="Elija la opción preferida para almacenar sus datos.":::
 
-> [!NOTE]
-> Customer Insights actualmente admite lo siguiente:  
-> - Las cuentas de Azure Data Lake Storage de la misma región de Azure que seleccionó al crear el entorno.
-> - Las cuentas de Azure Data Lake Storage que sean de 2.ª generación y tengan el *espacio de nombres jerárquico* habilitado. Las cuentas de almacenamiento de Azure Data Lake de 1.ª generación no son compatibles.
+## <a name="step-3-connect-to-microsoft-dataverse"></a>Paso 3: Conéctese a Microsoft Dataverse
 
-Para la opción Azure Data Lake Storage, puede elegir entre una opción basada en recursos y una opción basada en suscripción para la autenticación. Para obtener más información, consulte [Conectarse a una cuenta de Azure Data Lake Storage mediante el uso de una entidad de servicio de Azure](connect-service-principal.md). Un contenedor llamado `customerinsights` tiene que existir en la cuenta de almacenamiento.
+El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse. Comparta datos con Dataverse para usarlos con aplicaciones empresariales basadas en Dataverse, como Dynamics 365 Marketing o aplicaciones basadas en modelos en Power Apps.
 
-Cuando se completan procesos del sistema, como ingestión de datos, el sistema crea las carpetas correspondientes en la cuenta de almacenamiento que especificó. Los archivos de datos y los archivos *model.json* se crean y se agregan a carpetas cuyo nombre se basa en el del proceso.
+Deje este campo vacío si no tiene su propio entorno de Dataverse y crearemos uno para usted.
 
-Si crea varios entornos de Customer Insights y elige guardar las entidades de salida de esos entornos en su cuenta de almacenamiento, Customer Insights crea carpetas independientes para cada entorno con `ci_environmentID` en el contenedor.
+Para obtener más información, consulte [Trabajar con datos de Customer Insights en Microsoft Dataverse](customer-insights-dataverse.md).
 
-### <a name="step-3-connect-to-microsoft-dataverse"></a>Paso 3: Conéctese a Microsoft Dataverse
-   
-El paso **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse.
-
-Proporcione su propio entorno de Microsoft Dataverse para compartir datos (perfiles e insights) con aplicaciones empresariales basadas en Dataverse, como Dynamics 365 Marketing o aplicaciones basadas en modelos en Power Apps. Deje este campo vacío si no tiene su propio entorno de Dataverse y le proporcionaremos uno.
-
-La conexión a su entorno de Dataverse también le permite [ingerir datos de los orígenes de datos locales usando flujos de datos de Power Platform y puertas de enlace](data-sources.md#add-data-from-on-premises-data-sources).
-
-> [!IMPORTANT]
-> 1. Customer Insights y Dataverse tienen que estar en la misma región para permitir el intercambio de datos.
-> 1. Debe tener un rol de administrador global en el entorno de Dataverse. Compruebe si este entorno de [Dataverse está asociado](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a ciertos grupos de seguridad y asegúrese de que se le agregue a esos grupos.
-> 1. Ningún entorno existente de Customer Insights ya está asociado con ese entorno de Dataverse. Aprenda cómo [quitar una conexión existente a un entorno de Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="intercambio de datos con Microsoft Dataverse habilitado automáticamente para nuevas instancias netas.":::
-
-Para obtener más información sobre cómo habilitar el uso compartido de datos con Microsoft Dataverse desde su propio Azure Data Lake Storage, consulte [Conectar a Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
-
-Customer Insights no admite los siguientes escenarios de uso compartido de datos:
-- Si habilita el uso compartido de datos con Dataverse, no podrá [crear valores pronosticados o faltantes en una entidad](predictions.md).
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="intercambio de datos con Microsoft Dataverse habilitado automáticamente para nuevos entornos netos.":::
 
 ### <a name="step-4-finalize-the-settings"></a>Paso 4: Finalizar la configuración
 
-En el paso **Revisar**, revise todos los ajustes especificados. Cuando todo parezca completo, seleccione **Crear** para configurar el entorno. 
+En el paso **Revisar**, revise todos los ajustes especificados. Cuando todo parezca completo, seleccione **Crear** para configurar el entorno.
 
-También puede cambiar la mayoría de las configuraciones más tarde. Para más información, consulte [Administrar entornos](manage-environments.md).
+Puede cambiar algunas de las configuraciones más tarde. Para más información, consulte [Administrar entornos](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Trabajar con su nuevo entorno
 
-Revise los siguientes artículos para ayudarle a comenzar a configurar Customer Insights: 
+Revise los siguientes artículos para ayudarle a comenzar a configurar Customer Insights:
 
 - [Agregar más usuarios y asignar permisos](permissions.md).
 - [Ingerir los orígenes de datos](data-sources.md) y ejecutarlos a través del [proceso de unificación de datos](data-unification.md) para obtener [perfiles de cliente unificados](customer-profiles.md).
 - [Enriquecer los perfiles de cliente unificados](enrichment-hub.md) o [ejecutar modelos predictivos](predictions-overview.md).
 - [Crear segmentos](segments.md) para agrupar clientes y [medidas](measures.md) para revisar los KPI.
 - [Configurar conexiones](connections.md) y [exportaciones](export-destinations.md) para procesar subconjuntos de los datos en otras aplicaciones.
+
+## <a name="copy-the-environment-configuration"></a>Copiar el entorno de configuración
+
+Como administrador, puede optar por copiar la configuración de un entorno existente cuando crea uno nuevo.
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Captura de pantalla de las opciones de configuración en la configuración del entorno.":::
+
+Verá una lista de todos los entornos disponibles de su organización desde los que puede copiar datos.
+
+Se copian los siguientes valores de configuración:
+
+- Orígenes de datos importados mediante Power Query
+- Configuración de unificación de datos
+- Segmentos
+- Medidas
+- Relaciones
+- Actividades
+- Índice de Buscar y filtrar
+- Exportaciones
+- Actualizar programación
+- Enriquecimientos
+- Modelos de predicción
+- Asignaciones de roles
+
+## <a name="set-up-a-copied-environment"></a>Configure un entorno copiado
+
+Cuando copia la configuración del entorno, debe realizar algunos pasos adicionales para confirmar las credenciales:
+
+- Perfiles de clientes. Primero, autentique e ingiera sus fuentes de datos y ejecute la unificación de datos para recrear los perfiles de los clientes.
+- Credenciales del origen de datos. Debe proporcionar las credenciales para cada origen de datos para autenticar y actualizar los orígenes de datos manualmente.
+- Orígenes de datos de la carpeta Common Data Model y Dataverse. Debe crear estos orígenes de datos manualmente con el mismo nombre que en el entorno de origen.
+- Secretos de conexión que se utilizan para exportaciones y enriquecimientos. Tiene que volver a autenticar las conexiones y luego reactivar enriquecimientos y exportaciones.
+
+Verá un mensaje de confirmación cuando se haya creado el entorno copiado. Seleccione **Ir a orígenes de datos** para ver la lista de orígenes de datos.
+
+Todos los orígenes de datos mostrarán un estado de **Credenciales necesarias**. Edite los orígenes de datos e introduzca las credenciales para actualizarlas.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Lista de orígenes de datos que se copiaron y necesitan autenticación.":::
+
+Después de actualizar los orígenes de datos, vaya a **Datos** > **Unificar**. Aquí encontrará configuraciones del entorno de origen. Edítelos si es necesario o seleccione **Ejecutar** para iniciar el proceso de unificación de datos y crear la entidad de cliente unificado.
+
+Cuando se haya completado la unificación de datos, vaya a **Medidas** y **Segmentos** para actualizarlos también.
+
+Antes de reactivar exportaciones y enriquecimientos, vaya a **Administración** > **Conexiones** para volver a autenticar las conexiones en su nuevo entorno.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
