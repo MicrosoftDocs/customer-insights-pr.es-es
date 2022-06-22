@@ -1,19 +1,19 @@
 ---
 title: Solicitudes de interesados (DSR) en virtud del RGPD | Microsoft Docs
 description: Responder a las solicitudes de interesados para Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808588"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947389"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitudes del interesado (DSR) en el contexto del RGPD
 
@@ -77,11 +77,5 @@ Un administrador de inquilinos puede seguir estos pasos para exportar datos:
 1. Envíe un correo a D365CI@microsoft.com especificando la dirección de correo electrónico del usuario en la solicitud. El equipo de Customer Insights enviará un correo electrónico a la dirección de correo electrónico del administrador del inquilino registrado, solicitando confirmación para exportar los datos.
 2. Acepte la confirmación para exportar los datos del usuario solicitado.
 3. Reciba los datos exportados a través de la dirección de correo electrónico del administrador del inquilino.
-
-## <a name="consent-management-preview"></a>Administración de consentimientos (vista previa)
-
-La capacidad de gestión del consentimiento no recopila datos del usuario directamente. Solo importa y procesa los datos de consentimiento proporcionados por los usuarios en otras aplicaciones.
-
-Para eliminar datos de consentimiento sobre usuarios específicos, elimínelos en las fuentes de datos ingeridas a la capacidad de gestión de consentimiento. Después de actualizar el origen de datos, los datos eliminados también se eliminarán en el Centro de consentimiento. Las aplicaciones que utilizan la entidad de consentimiento también eliminarán los datos que se eliminaron en la fuente después de una [actualización](system.md#refresh-processes). Recomendamos actualizar las fuentes de datos rápidamente después de responder a una solicitud del interesado para eliminar los datos del usuario de todos los demás procesos y aplicaciones.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

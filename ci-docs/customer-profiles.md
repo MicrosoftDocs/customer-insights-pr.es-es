@@ -1,7 +1,7 @@
 ---
 title: Ver perfiles de clientes
 description: Obtenga una vista combinada de los datos unificados de sus clientes.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755803"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947067"
 ---
 # <a name="customer-profiles"></a>Perfiles de clientes
 
@@ -55,9 +55,9 @@ Puede filtrar clientes por campos de entidad *Cliente*. Al igual que en la búsq
 
 Seleccione cualquiera de los mosaicos de clientes para abrir la **Página de detalles del cliente**. Esta vista contiene información unificada para el cliente seleccionado. Los detalles del cliente incluyen el siguiente contenido:
 
-**Ventana de perfil de cliente**: Esta ventana muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará. La ventana está estructurado en secciones:
+**Ventana de perfil de cliente**: Esta ventana muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará excepto por el campo dirección. La ventana está estructurado en secciones:
 
-- La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea si el perfil contiene dichos campos.
+- La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea, que aparece incluso si el perfil no tiene información de dirección.
 - **Contactos para este cliente**: En entornos para cuentas de negocio, verá todos los contactos relacionados para este cliente en la segunda sección. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
 - **Campos adicionales**: Muestra los campos restantes del cliente seleccionado, excepto los ID.
 - **Identificaciones**: Enumera todos los ID bajo su nombre de entidad correspondiente. Los campos se identifican como ID por su semántica, que los clasifica como tales.

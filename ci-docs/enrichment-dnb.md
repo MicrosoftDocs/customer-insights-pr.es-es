@@ -1,7 +1,7 @@
 ---
 title: Enriquecimiento de perfiles de empresa con Dun & Bradstreet
 description: Información general sobre el enriquecimiento de terceros de Dun & Bradstreet.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755421"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953912"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Enriquecimiento de perfiles de empresa con Dun & Bradstreet (Vista previa)
 
@@ -22,16 +22,14 @@ Dun & Bradstreet proporciona datos comerciales, análisis e información para la
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para configurar un enriquecimiento Dun & Bradstreet, deben cumplirse los siguientes requisitos previos:
+- Una licencia activa de [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
+- [Perfiles de clientes unificados](customer-profiles.md) para compañías.
+- Un [proyecto](#set-up-your-dun--bradstreet-project) de Dun & Bradstreet está configurado.
+- La [conexión](connections.md) Dun & Bradstreet está [configurada](#configure-a-connection-for-dun--bradstreet) por un Administrador.
 
-- Tener una licencia activa de [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
-- Usted tiene [perfiles de clientes unificados](customer-profiles.md) para empresas.
-- La [conexión](connections.md) Dun & Bradstreet está configurado por un Administrador. Puede crearla si tiene permisos de [Administrador](permissions.md#admin) y las credenciales de Dun & Bradstreet Connect.
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Configuración de su proyecto Dun & Bradstreet
+## <a name="set-up-your-dun--bradstreet-project"></a>Configurar su proyecto Dun & Bradstreet
 
 Como usuario con licencia de Dun & Bradstreet, puede configurar un proyecto en [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
-
 
 1. Iniciar sesión en [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Para recuperar credenciales, [restaure su contraseña](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -47,66 +45,69 @@ Como usuario con licencia de Dun & Bradstreet, puede configurar un proyecto en [
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Captura de pantalla de selección de información s3 en un proyecto de Dun & Bradstreet.":::
 
-## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
-
-1. Vaya a **Datos** > **Enriquecimiento**.
-
-1. Seleccione **Enriquecer mis datos** en el mosaico de Dun & Bradstreet y seleccione **Comenzar**.
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captura de pantalla del mosaico de Dun & Bradstreet.":::
-
-1. Seleccione una [conexión](connections.md) en la lista desplegable. Contacte con un administrador si no hay conexión disponible. Si es un Administrador, puede crear una conexión. Seleccione **Añadir conexión** y elija **Dun & Bradstreet**.
-
-1. Seleccione **Conéctese a Dun & Bradstreet** para confirmar la conexión.
-
-1. Seleccione **Siguiente** y elija el **Conjunto de datos de cliente** que desea enriquecer con datos de compañía de Dun & Bradstreet. Puede seleccionar la entidad **Cliente** para enriquecer todos los perfiles de sus clientes o seleccionar una entidad de segmento para enriquecer solo los perfiles de clientes unificados contenidos en ese segmento.
-
-1. Seleccione **Siguiente** y defina qué campos de sus perfiles unificados se usan para buscar datos de empresa coincidentes de Dun & Bradstreet. Los campos **número DUNS** o **Nombre de la compañía** y **País** son obligatorios. El campo del país o región admite [códigos de país de dos o tres letras](https://www.iso.org/iso-3166-country-codes.html), nombre del país o región en inglés, nombre del país o región en idioma nativo y prefijo de teléfono. Algunas variantes comunes de países o regiones incluyen:
-
-- EE. UU.: Estados Unidos de América, Estados Unidos, EE. UU., América.
-- CA: Canadá.
-- GB: Reino Unido, UK, Gran Bretaña, GB, Reino Unido de Gran Bretaña e Irlanda del Norte, Reino Unido de Gran Bretaña.
-- AU: Australia, Commonwealth de Australia.
-- FR: Francia, República francesa.
-- DE: Alemania, alemán, Deutschland, Alemania, República Federal de Alemania, República de Alemania.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel de asignación de campos de Dun & Bradstreet.":::
-
-1. Seleccione **Siguiente** para completar la asignación de campos.
-
-1. Proporcione un nombre para el enriquecimiento y seleccione **Guardar enriquecimiento** después de revisar sus opciones.
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Configurar una conexión para Dun & Bradstreet
 
-Debe ser un administrador para configurar las conexiones. Seleccione **Añadir conexión** al configurar un enriquecimiento *o* vaya a **Administración** > **Conexiones** y seleccione **Configurar** en el icono Dun & Bradstreet.
+Debe ser un [Administrador](permissions.md#admin) en Customer Insights y tener las credenciales de Dun & Bradstreet Connect.
 
-1. Seleccione **Comenzar**.
+1. Seleccione **Añadir conexión** al configurar un enriquecimiento o vaya a **Administración** > **Conexiones** y seleccione **Configurar** en el icono Dun & Bradstreet.
 
-1. Indique un nombre para la conexión el cuadro **Nombre ara mostrar**.
+1. Escriba un nombre para la conexión.
 
-1. Proporcione credenciales válidas de Dun & Bradstreet y detalles del proyecto de Dun & Bradstreet *Región, ruta de la carpeta de entrega y nombre de la carpeta de entrega*. Usted [obtiene esta información](#setting-up-your-dun--bradstreet-project) del proyecto Dun & Bradstreet.
+1. Proporcione credenciales válidas de Dun & Bradstreet y detalles del proyecto de Dun & Bradstreet *Región, ruta de la carpeta de entrega y nombre de la carpeta de entrega*. Usted [obtiene esta información](#set-up-your-dun--bradstreet-project) del proyecto Dun & Bradstreet.
 
-1. Revise y proporcione su consentimiento para **Privacidad y cumplimiento de datos** seleccionando **Estoy de acuerdo**.
+1. Revise y proporcione su consentimiento para [Privacidad y cumplimiento de datos](#data-privacy-and-compliance) seleccionando **Estoy de acuerdo**.
 
-1. Seleccione **Verificar** para validar la configuración.
-
-1. Después de completar la verificación, seleccione **Guardar**.
+1. Seleccione **Verificar** para validar la configuración y luego seleccionar **Guardar**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Página de configuración de conexión Dun & Bradstreet":::
 
+### <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
+
+Cuando habilita Dynamics 365 Customer Insights para transmitir datos a Dun & Bradstreet, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluidos los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que Dun & Bradstreet cumpla con las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimiento en cualquier momento para dejar de usar esta funcionalidad.
+
+## <a name="supported-countries-or-regions"></a>Países o regiones compatibles
+
+Actualmente admitimos las siguientes opciones de país/región: Canadá (inglés) o Estados Unidos (inglés).
+
+## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
+
+1. Vaya a **Datos** > **Enriquecimiento** y seleccione la pestaña **Descubrir**.
+
+1. Seleccione **Enriquecer mis datos** en la ventana **Datos de la empresa** para Dun & Bradstreet.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captura de pantalla del mosaico de Dun & Bradstreet.":::
+
+1. Revise el resumen y luego seleccione **Siguiente**.
+
+1. Seleccione la conexión y confirme. Contacte con un Administrador si no hay uno disponible.
+
+1. Seleccione **Siguiente**.
+
+1. Seleccione el **Conjunto de datos de cliente** y elija el perfil o segmento que desea enriquecer con datos de la empresa de Dun & Bradstreet. La entidad *Cliente* enriquece todos sus perfiles de cliente mientras que un segmento solo enriquece perfiles de cliente contenidos en ese segmento.
+
+1. Defina qué tipos de campos de sus perfiles unificados se usan para buscar datos de empresa de Dun & Bradstreet. Es obligatorio al menos uno de los campos **Nombre y dirección**, **Teléfono**, o **Correo electrónico**.
+
+1. Seleccione **Siguiente**
+
+1. Asigne sus campos a los datos de empresa de Dun & Bradstreet. Los campos **número DUNS** o **Nombre de la compañía** y **País** son obligatorios.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel de asignación de campos de Dun & Bradstreet.":::
+
+1. Seleccione **Siguiente** para completar la asignación de campos.
+
+1. Proporcione un **nombre** para el enriquecimiento y la **Nombre de entidad de salida**.
+
+1. Seleccione **Guardar enriquecimiento** después de revisar sus opciones.
+
+1. Seleccione **Ejecutar** para iniciar el proceso de enriquecimiento o cerrar para volver a la página **Enriquecimientos**.
+
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
 
-Después de actualizar el enriquecimiento, puede revisar los datos de la empresa recién enriquecidos en [Mis enriquecimientos](enrichment-hub.md). Puede encontrar la hora de la última actualización y la cantidad de perfiles enriquecidos.
-
-Puede acceder a una vista detallada de cada perfil enriquecido seleccionando **Ver datos enriquecidos**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
-
-Cuando habilita Dynamics 365 Customer Insights para transmitir datos a Dun & Bradstreet, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluidos los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que Dun & Bradstreet cumpla con las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimiento en cualquier momento para dejar de usar esta funcionalidad.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

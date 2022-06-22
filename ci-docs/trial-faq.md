@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833789"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011908"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Preguntas frecuentes sobre la versión de prueba de Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Opcionalmente, si solo usa Customer Insights, puede copiar sus datos desde un en
 
 Cuando inicie sesión por primera vez en su instancia de pago de Customer Insights, se le pedirá que cree un entorno nuevo. En este proceso, puede optar por copiar la configuración de un entorno existente y migrar la mayoría de las opciones de configuraciones. Si tiene los permisos mencionados anteriormente, el entorno de prueba se mostrará en esta lista. Para obtener más información, consulte [Copiar la configuración del entorno](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>¿Cuáles son los límites y las cuotas de la versión de prueba?
+### <a name="what-are-the-trial-limits-and-quotas"></a>¿Cuáles son los límites y las cuotas de la prueba?
 
-- No puede usar su propia cuenta de Azure Data Lake storage para almacenar datos de salida durante una prueba de Customer Insights. Sin embargo, puede ingerir datos de una cuenta de almacenamiento de Data Lake.
+- No puede usar su propia cuenta de Azure Data Lake Storage para almacenar datos de salida durante una prueba de Customer Insights. Sin embargo, puede ingerir datos de una cuenta de Data Lake Storage.
 - Puede almacenar hasta 3 GB de datos en el entorno de Dataverse que se aprovisiona automáticamente cuando inicia una prueba de Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights: preguntas específicas
@@ -83,7 +83,7 @@ La mayoría de las funciones de las capacidades de Customer Insights están disp
 
 Las características siguientes **no están disponibles**:
 
-- No puede crear nuevos entornos que usen su propia cuenta de Azure Data Lake storage.
+- No puede crear nuevos entornos que usen su propia cuenta de Azure Data Lake Storage.
 - No puede eliminar el entorno de la prueba.
 
 ### <a name="how-long-does-the-trial-last"></a>¿Cuál es la duración de la prueba?

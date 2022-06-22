@@ -1,19 +1,19 @@
 ---
 title: Exportar datos de Customer Insights a hosts SFTP (contiene vídeo)
 description: Aprenda a configurar la conexión y a exportar a una ubicación de SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647638"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947205"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos y otros datos a SFTP (versión preliminar)
 
@@ -28,8 +28,8 @@ Utilice los datos de sus clientes en aplicaciones de terceros exportándolos a u
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
 - Los destinos SFTP detrás de firewalls no son compatibles actualmente. 
-- El tiempo de ejecución de una exportación depende del rendimiento de su sistema. Recomendamos dos núcleos de CPU y 1 Gb de memoria como configuración mínima de su servidor. 
-- Exportar entidades con hasta 100 millones de perfiles de clientes puede prolongarse durante 90 minutos cuando se utiliza la configuración mínima recomendada de dos núcleos de CPU y 1 Gb de memoria. 
+- El tiempo de ejecución de una exportación depende del rendimiento de su sistema. Recomendamos dos núcleos de CPU y 1 Gb de memoria como configuración mínima de su servidor.
+- Exportar entidades con hasta 100 millones de perfiles de clientes puede prolongarse durante 90 minutos cuando se utiliza la configuración mínima recomendada de dos núcleos de CPU y 1 Gb de memoria.
 
 ## <a name="set-up-connection-to-sftp"></a>Configurar conexiones para SFTP
 
@@ -64,13 +64,17 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 1. Seleccione las entidades, por ejemplo segmentos, que desea exportar.
 
    > [!NOTE]
-   > Cada entidad seleccionada se dividirá en hasta cinco archivos de salida cuando se exporten. 
+   > Cada entidad seleccionada se dividirá en hasta cinco archivos de salida cuando se exporten.
 
 1. Seleccione **Guardar**.
 
 Guardar una exportación no ejecuta la exportación inmediatamente.
 
-La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
+La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab).
+Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> La exportación de entidades que contienen una gran cantidad de datos puede generar varios archivos CSV en la misma carpeta para cada exportación. La división de las exportaciones se produce por motivos de rendimiento para minimizar el tiempo que tarda en completarse una exportación.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
 

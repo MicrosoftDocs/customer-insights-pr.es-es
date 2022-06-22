@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800302"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011494"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecimiento de orígenes de datos (versión preliminar)
 
@@ -29,9 +29,11 @@ Debe tener los permisos Colaborador o Administrador para crear o editar enriquec
 
 1. Seleccione los puntos suspensivos verticales (&vellip;) junto al origen de datos que desea enriquecer y seleccione **Enriquecer**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de enriquecimiento de orígenes de datos.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Página de orígenes de datos con Enriquecer resaltado":::
 
    La pestaña **Descubrir** muestra las [opciones de enriquecimiento de origen de datos admitidas](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de enriquecimiento de orígenes de datos.":::
 
 1. Seleccione **Enriquecer mis datos** para configurar un enriquecimiento de origen de datos. El nombre de la entidad resultante se completa automáticamente.
 

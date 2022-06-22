@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833596"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012000"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Introducción a Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ La primera vez que inicie sesión en Customer Insights, configure los ajustes y 
 
 Los perfiles unificados son la base para obtener información y tomar medidas sobre los datos. Traiga datos de diversos orígenes y ejecute el proceso de unificación de datos para combinar perfiles unificados. Especifique las relaciones entre las entidades ingeridas y utilice las funciones de enriquecimiento para agregar información a los perfiles.
 
-1. Ingiera datos creando orígenes de datos a partir de múltiples opciones. Elija entre [Conectores de Power Query](connect-power-query.md), una [carpeta de Common Data Model](connect-common-data-model.md) o [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Ingiera datos creando orígenes de datos a partir de múltiples opciones. Elija entre [Azure Data Lake Storage, incluyendo Common Data Model](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) o [conectores Power Query](connect-power-query.md).
 
 1. Ejecute el [proceso de unificación de datos](data-unification.md) al identificar los [campos fuente](map-entities.md), quitando [duplicados](remove-duplicates.md) , [condiciones coincidentes](match-entities.md) y [campos unificadores](merge-entities.md).
 

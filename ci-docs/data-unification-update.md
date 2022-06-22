@@ -1,7 +1,7 @@
 ---
 title: Actualizar la configuración de unificación
 description: Actualice reglas duplicadas, reglas de coincidencia o campos unificados en la configuración de unificación.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755611"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844061"
 ---
 # <a name="update-the-unification-settings"></a>Actualizar la configuración de unificación
 
@@ -43,8 +43,9 @@ Para revisar o cambiar cualquier configuración de unificación una vez que se h
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de pantalla de la página Unificar datos con las opciones de Unificar resaltadas.":::
 
-   - Para actualizar el perfil de cliente unificado (con o sin dependencias), consulte [Ejecutar actualizaciones en el perfil del cliente](#run-updates-to-the-unified-customer-profile).
-   - Para evaluar la calidad de sus condiciones coincidentes sin actualizar el perfil unificado, consulte [Ejecutar condiciones coincidentes](#run-matching-conditions). La opción **Ejecutar solo condiciones coincidentes** no se muestra para una sola entidad.
+   - [Ejecute condiciones coincidentes](#run-matching-conditions) para evaluar rápidamente la calidad de sus condiciones coincidentes (deduplicación y reglas de coincidencia) sin actualizar el perfil unificado. La opción **Ejecutar solo condiciones coincidentes** no se muestra para una sola entidad.
+   - [Unifique perfiles de clientes](#run-updates-to-the-unified-customer-profile) para ejecutar condiciones de coincidencia y actualizar la entidad Unified Customer Profile sin afectar las dependencias (como enriquecimientos, segmentos o medidas). Los procesos dependientes no se ejecutan, pero se actualizarán a medida que [se definan en el programa de actualización](system.md#schedule-tab).
+   - [Unifique perfiles de clientes y dependencias](#run-updates-to-the-unified-customer-profile) para ejecutar condiciones de coincidencia y actualizar la entidad Unified Customer Profile y todas las dependencias (como enriquecimientos, segmentos o medidas). Todos los procesos se vuelven a ejecutar automáticamente.
 
 ## <a name="edit-source-fields"></a>Editar campos de origen
 
@@ -135,11 +136,13 @@ Puede reconfigurar y ajustar la mayoría de los parámetros de coincidencia. No 
 
 ## <a name="run-matching-conditions"></a>Ejecutar condiciones coincidentes
 
+Ejecutar condiciones coincidentes ejecuta la deduplicación y las reglas coincidentes únicamente y actualiza las entidades *Deduplication_* y *ConflationMatchPair*.
+
 1. En la página **Datos** > **Unificar**, seleccione **Ejecutar solo condiciones coincidentes**.
 
-   Los iconos **Registros duplicados** y **Condiciones coincidentes** muestran **Puesto en cola** o **En actualización**.
+   Los iconos **Registros duplicados** y **Condiciones coincidentes** muestran el estado **Puesto en cola** o **En actualización**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Cuando finalice el proceso de coincidencia, seleccione **Editar** en el icono **Condiciones coincidentes**.
 
@@ -153,10 +156,12 @@ Puede reconfigurar y ajustar la mayoría de los parámetros de coincidencia. No 
 
 1. En la página **Datos** > **Unificar**, seleccione:
 
-   - **Unificar perfiles de clientes**: actualiza la entidad de perfil de cliente unificado sin afectar las dependencias (como enriquecimientos, segmentos o medidas). Los procesos dependientes no se ejecutan, pero se actualizarán a medida que [se definan en el programa de actualización](system.md#schedule-tab).
+   - **Unifique perfiles de clientes**: ejecuta condiciones de coincidencia y actualiza la entidad Unified customer profile sin afectar las dependencias (como enriquecimientos, segmentos o medidas). Los procesos dependientes no se ejecutan, pero se actualizarán a medida que [se definan en el programa de actualización](system.md#schedule-tab).
 
-   - **Unificar los perfiles y las dependencias de los clientes**: actualiza el perfil unificado y todas las dependencias. Todos los procesos se vuelven a ejecutar automáticamente. Una vez que se han completado todos los procesos posteriores, el perfil del cliente refleja los datos actualizados.
+   - **Unifique perfiles de clientes y dependencias**: ejecuta condiciones de coincidencia y actualiza el perfil unificado y todas las dependencias. Todos los procesos se vuelven a ejecutar automáticamente. Una vez que se han completado todos los procesos posteriores, el perfil del cliente refleja los datos actualizados.
 
-   Los iconos **Registros duplicados**, **Condiciones coincidentes** y **Campos de cliente unificados** muestran **Puesto en cola** o **En actualización**.
+   Los iconos **Registros duplicados**, **Condiciones coincidentes** y **Campos de cliente unificados** muestran el estado **Puesto en cola** o **En actualización**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Los resultados de una ejecución exitosa se muestran en la página **Unificar** que muestra el número de perfiles de clientes unificados.

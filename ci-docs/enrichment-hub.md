@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfiles de cliente unificados
 description: Utilice las capacidades para enriquecer los datos de sus clientes.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800626"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954062"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimiento para perfiles de clientes (vista previa)
 
@@ -35,29 +35,29 @@ En la pestaña **Descubrir** encontrará todas las opciones de enriquecimiento c
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
 
+- [Identidad AbiliTec](enrichment-liveramp.md) proporcionada por LiveRamp AbiliTec
 - [Marcas](enrichment-microsoft.md) proporcionadas por Microsoft
-- [Intereses](enrichment-microsoft.md) proporcionados por Microsoft
-- [Direcciones mejoradas](enrichment-enhanced-addresses.md) proporcionadas por Microsoft 
 - [Datos demográficos](enrichment-experian.md) proporcionados por Experian
-- [Datos de cliente](enrichment-SFTP-custom-import.md) a través del protocolo seguro de transferencia de archivos (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) proporcionado por Microsoft
-- [Datos de ubicación](enrichment-here.md) proporcionados por HERE Technologies 
-- [Identidad](enrichment-liveramp.md) proporcionada por LiveRamp AbiliTec
+- [Direcciones mejoradas](enrichment-enhanced-addresses.md) proporcionadas por Microsoft
+- [Intereses](enrichment-microsoft.md) proporcionados por Microsoft
+- [Datos de ubicación](enrichment-azure-maps.md) proporcionados por Microsoft Azure Maps
+- [Datos de ubicación](enrichment-here.md) proporcionados por HERE Technologies
+- [Datos personalizados SFTP](enrichment-SFTP-custom-import.md) a través del protocolo seguro de transferencia de archivos (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
-- [Datos de empresa](enrichment-leadspace.md) proporcionados por Leadspace
-- [Direcciones mejoradas](enrichment-enhanced-addresses.md) proporcionadas por Microsoft 
-- [Datos de la empresa mejorados](enrichment-enhanced-company-data.md) proporcionado por Microsoft
-- [Datos de ubicación](enrichment-here.md) proporcionados por HERE Technologies 
-- [Datos de cliente](enrichment-SFTP-custom-import.md) a través del protocolo seguro de transferencia de archivos (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) proporcionado por Microsoft
-- [Datos de la empresa](enrichment-dnb.md) proporcionados por Dun & Bradstreet
 - [Datos de participación de la cuenta](enrichment-office.md) proporcionados por Microsoft
+- [Datos de la empresa](enrichment-dnb.md) proporcionados por Dun & Bradstreet
+- [Datos de empresa](enrichment-leadspace.md) proporcionados por Leadspace
+- [Direcciones mejoradas](enrichment-enhanced-addresses.md) proporcionadas por Microsoft
+- [Datos de la empresa mejorados](enrichment-enhanced-company-data.md) proporcionado por Microsoft
+- [Datos de ubicación](enrichment-azure-maps.md) proporcionados por Microsoft Azure Maps
+- [Datos de ubicación](enrichment-here.md) proporcionados por HERE Technologies
+- [Datos personalizados SFTP](enrichment-SFTP-custom-import.md) a través del protocolo seguro de transferencia de archivos (SFTP)
 
 ---
 
-En la pestaña **Mis enriquecimientos** puede ver los enriquecimientos que ha configurado y editar sus propiedades.
+En la pestaña **Mis enriquecimientos** puede ver los enriquecimientos que ha configurado y editar sus propiedades. También puede crear [segmentos](segments.md) o [medidas](measures.md) de enriquecimientos.
 
 ## <a name="manage-existing-enrichments"></a>Administrar enriquecimientos existentes
 
@@ -81,36 +81,45 @@ Los enriquecimientos de terceros se configuran mediante [conexiones](connections
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiples enriquecimientos del mismo tipo
 
-La entidad que se va a enriquecer se especifica durante la configuración del enriquecimiento, lo que le permite enriquecer solo un subconjunto de sus perfiles. Por ejemplo, enriquezca los datos solo para un segmento específico. Puede configurar varios enriquecimientos del mismo tipo y reutilizar la misma conexión. Algunos enriquecimientos tendrán límites en el número de enriquecimientos del mismo tipo que se pueden crear. Los límites y el uso actual se pueden ver en la página **Enriquecimiento**.
+La entidad que se va a enriquecer se especifica durante la configuración del enriquecimiento, lo que le permite enriquecer solo un subconjunto de sus perfiles. Por ejemplo, enriquezca los datos solo para un segmento específico. Puede configurar varios enriquecimientos del mismo tipo y reutilizar la misma conexión. Algunos enriquecimientos tendrán límites en el número de enriquecimientos del mismo tipo que se pueden crear. Los límites y el uso actual se pueden ver en cada mosaico en la pestaña **Descubrir** ficha de la página **Enriquecimiento**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Enriquecer los orígenes de datos antes de la unificación
 
 Puede enriquecer los datos de sus clientes antes de la unificación de datos para ayudar a aumentar la calidad de una coincidencia de datos. Para obtener más información, consulte [Enriquecer orígenes de datos](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Ver el progreso del proceso de enriquecimiento
+## <a name="run-or-refresh-enrichments"></a>Ejecutar o actualizar enriquecimientos
+
+1. Para iniciar el proceso de enriquecimiento, seleccione **Ejecutar**. O puede dejar que el sistema ejecute el enriquecimiento automáticamente como parte de una [actualización programada](system.md#schedule-tab). El tiempo de procesamiento depende del tamaño de los datos de sus clientes.
+
+1. Opcionalmente, [vea el progreso del proceso de enriquecimiento](#see-the-progress-of-the-enrichment-process).
+
+1. Una vez finalizado el proceso de enriquecimiento, vaya a **Mis enriquecimientos** para revisar los datos de perfiles de clientes recientemente enriquecidos, la hora de la última actualización y la cantidad de perfiles enriquecidos.
+
+1. Seleccione el enriquecimiento para ver [resultados de enriquecimiento](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Ver el progreso del proceso de enriquecimiento
 
 Puede encontrar detalles sobre el procesamiento de un enriquecimiento, incluido su estado y posibles problemas mientras se actualiza o después de que se completa una actualización. Comprenda qué procesos están involucrados para actualizar un enriquecimiento y cuánto tiempo tomó ejecutar los procesos. El estado de enriquecimiento es compatible con Experian, Leadspace, HERE Technologies, SFTP Import y Azure Maps.
 
-Para ver el estado de un enriquecimiento
-
-1. Vaya a **Datos** > **Enriquecimiento**. 
-1. En la pestaña **Mis enriquecimientos**, seleccione el estado de un enriquecimiento para abrir un panel lateral. 
-1. En el panel **Detalles de progreso**, expanda la sección **Enriquecimientos**. 
-1. En el enriquecimiento cuyo progreso desea ver, seleccione **Ver detalles**. 
-1. En el panel **Detalles de la tarea**, seleccione **Mostrar detalles** para ver los procesos que intervienen en la actualización del enriquecimiento y su estado. 
+1. Vaya a **Datos** > **Enriquecimiento**.
+1. En la pestaña **Mis enriquecimientos**, seleccione el estado del enriquecimiento para abrir un panel lateral.
+1. En el panel **Detalles de progreso**, expanda la sección **Enriquecimientos**.
+1. En el enriquecimiento cuyo progreso desea ver, seleccione **Ver detalles**.
+1. En el panel **Detalles de la tarea**, seleccione **Mostrar detalles** para ver los procesos que intervienen en la actualización del enriquecimiento y su estado.
 
 ## <a name="enrichment-results"></a>Resultados del enriquecimiento
 
 Después de completar una ejecución de enriquecimiento, puede revisar los resultados del enriquecimiento.
 
-1. Vaya a **Datos** > **Enriquecimiento**. 
-1. Seleccione el enriquecimiento sobre el que desea información.
+1. Vaya a **Datos** > **Enriquecimiento**.
+1. En la pestaña **Mis enriquecimientos**, seleccione el enriquecimiento sobre el que desea obtener información.
 
-Todos los enriquecimientos muestran información básica, como la cantidad de perfiles enriquecidos, una vista previa de la entidad de enriquecimiento generada y la cantidad de perfiles enriquecidos a lo largo del tiempo. Si está disponible, el **Número de clientes enriquecidos por campo** proporciona un desglose de la cobertura de cada campo enriquecido.
+Todos los enriquecimientos muestran información básica, como la cantidad de perfiles enriquecidos y la cantidad de perfiles enriquecidos a lo largo del tiempo. El mosaico **Vista previa de clientes enriquecidos** muestra un ejemplo de la entidad de enriquecimiento generada. Para ver una vista detallada, seleccione **Ver más** y seleccione la pestaña **Datos**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Página de resultados de enriquecimiento.":::
 
-Algunos enriquecimientos también muestran información específica del tipo de enriquecimiento. Consulte la documentación del enriquecimiento correspondiente para obtener más información.
+Si está disponible, el **Número de clientes enriquecidos por campo** proporciona un desglose de la cobertura de cada campo enriquecido.
 
+Algunos enriquecimientos también muestran información específica del tipo de enriquecimiento. Para obtener más información, consulte la documentación relacionada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
