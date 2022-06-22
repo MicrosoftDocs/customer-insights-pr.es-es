@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833418"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011862"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectar con una cuenta de Azure Data Lake Storage mediante una entidad de servicio de Azure
 
@@ -51,7 +51,13 @@ Antes de crear una nueva entidad de servicio para Customer Insights, verifique s
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Otorgar permisos a la entidad de servicio para acceder a la cuenta de almacenamiento
 
-Vaya a Azure Portal para otorgar permisos a la entidad de servicio para la cuenta de almacenamiento que desea usar en Customer Insights.
+Vaya a Azure Portal para otorgar permisos a la entidad de servicio para la cuenta de almacenamiento que desea usar en Customer Insights. Se debe asignar uno de los siguientes roles a la cuenta de almacenamiento o al contenedor:
+
+|Credencial|Requisitos|
+|----------|------------|
+|Usuario actualmente conectado|**Rol**: Lector de Datos de Storage Blob, Colaborador de Storage Blob colaborador o Propietario de Storage Blob.<br>**Nivel**: se pueden otorgar permisos en la cuenta de almacenamiento o en el contenedor.</br>|
+|Entidad de servicio Customer Insights -<br>Uso de Azure Data Lake Storage como origen de datos</br>|Opción 1<ul><li>**Rol**: Lector de Datos de Storage Blob, Colaborador de datos de Storage Blob colaborador o Propietario de datos de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en la cuenta de almacenamiento.</li></ul>Opcion 2 *(sin compartir el acceso de la entidad principal de servicio a la cuenta de almacenamiento)*<ul><li>**Rol 1**: Lector de Datos de Storage Blob, Colaborador de datos de Storage Blob colaborador o Propietario de datos de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en el contenedor.</li><li>**Rol 2**: delegador de datos de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en la cuenta de almacenamiento.</li></ul>|
+|Entidad de servicio Customer Insights - <br>Usar Azure Data Lake Storage como salida o destino</br>|Opción 1<ul><li>**Rol**: Colaborador de Storage Blob colaborador o Propietario de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en la cuenta de almacenamiento.</li></ul>Opcion 2 *(sin compartir el acceso de la entidad principal de servicio a la cuenta de almacenamiento)*<ul><li>**Rol**: Colaborador de Storage Blob colaborador o Propietario de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en el contenedor.</li><li>**Rol 2**: delegador de Storage Blob.</li><li>**Nivel**: se deberían otorgar permisos en la cuenta de almacenamiento.</li></ul>|
 
 1. Vaya al [Portal de administración de Azure](https://portal.azure.com) e inicie sesión en su organización.
 
@@ -62,7 +68,7 @@ Vaya a Azure Portal para otorgar permisos a la entidad de servicio para la cuent
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de pantalla que muestra el portal de Azure al agregar una asignación de roles.":::
 
 1. En el panel **Agregar asignación de roles**, establezca las siguientes propiedades:
-   - Rol: **Colaborador de datos de blob de almacenamiento**
+   - Rol: Lector de Datos de Storage Blob, Colaborador de datos de Storage Blob colaborador o Propietario de datos de Storage Blob basado en las credenciales anteriores.
    - Asignar acceso a: **usuario, grupo o entidad de servicio**
    - Seleccionar miembros: **Dynamics 365 AI para Customer Insights** (la [entidad de servicio](#create-a-new-service-principal) que examinó anteriormente en este procedimiento)
 
