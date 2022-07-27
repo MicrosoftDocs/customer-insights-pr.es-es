@@ -1,5 +1,5 @@
 ---
-title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (contiene vídeo)
+title: Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (versión preliminar) (contiene vídeo)
 description: Muestre datos de perfil de cliente de Customer Insights en aplicaciones de Dynamics 365 con este complemento.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755657"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081754"
 ---
-# <a name="customer-card-add-in-preview"></a>Complemento de tarjeta de cliente (versión preliminar)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (versión preliminar)
 
 Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones de Dynamics 365. Con el Complemento de tarjeta de cliente instalado en una aplicación de Dynamics 365 compatible, puede optar por mostrar los campos del perfil del cliente, la información y la escala de tiempo de actividad. El complemento recuperará datos de Customer Insights sin afectar los datos en la aplicación de Dynamics 365 conectada.
 

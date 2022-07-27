@@ -1,5 +1,5 @@
 ---
-title: Enriquecimiento de los perfiles de la empresa con el enriquecimiento de terceros de Leadspace
+title: Enriquecer de perfiles de empresa con Leadspace (vista previa)
 description: Información general sobre el enriquecimiento de terceros de Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954200"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081805"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecimiento de perfiles de empresa con Leadspace (vista previa)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Enriquecer de perfiles de empresa con Leadspace (vista previa)
 
 Leadspace es una empresa de ciencia de datos que proporciona una plataforma de datos del cliente B2B. Permite entornos con perfiles de clientes unificados basados en cuentas para enriquecer sus datos. Enriquezca *Perfiles de clientes* con atributos como tamaño de la empresa, ubicación o sector. Enriquezca *Perfiles de contacto* con atributos como título, persona o verificación de correo electrónico.
 
@@ -82,7 +82,7 @@ Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimi
 
 1. Seleccione **Ejecutar** para iniciar el proceso de enriquecimiento o cerrar para volver a la página **Enriquecimientos**.
 
-## <a name="enrichment-results"></a>Resultados del enriquecimiento
+## <a name="view-enrichment-results"></a>Ver los resultados del enriquecimiento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

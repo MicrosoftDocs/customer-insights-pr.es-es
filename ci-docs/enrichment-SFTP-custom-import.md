@@ -1,5 +1,5 @@
 ---
-title: Enriquecimiento con importación personalizada SFTP
+title: Enriquezca los perfiles de los clientes con FTP custom import (vista previa)
 description: Información general sobre el enriquecimiento de importación personalizada SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953740"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081795"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquezca los perfiles de los clientes con datos personalizados (versión preliminar)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquezca los perfiles de los clientes con FTP custom import (vista previa)
 
 La importación personalizada del Protocolo de transferencia segura de archivos (SFTP) le permite importar datos que no tienen que pasar por el proceso de unificación de datos. Es una forma flexible, segura y fácil de incorporar sus datos. La importación personalizada SFTP se puede utilizar en combinación con la [Exportación SFTP](export-sftp.md) que le permite exportar los datos del perfil del cliente necesarios para el enriquecimiento. Luego, los datos se pueden procesar y enriquecer, y se puede usar la importación personalizada de SFTP para devolver los datos enriquecidos a Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimi
 
 1. Seleccione **Ejecutar** para iniciar el proceso de enriquecimiento o cerrar para volver a la página **Enriquecimientos**.
 
-## <a name="enrichment-results"></a>Resultados del enriquecimiento
+## <a name="view-enrichment-results"></a>Ver los resultados del enriquecimiento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

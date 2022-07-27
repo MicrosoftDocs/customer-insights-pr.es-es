@@ -1,5 +1,5 @@
 ---
-title: Enriquecimiento de mejora de direcciones (contiene vídeo)
+title: Enriquezca los perfiles de los clientes con direcciones mejoradas (contiene video)
 description: Enriquezca y normalice la información de direcciones de los perfiles de los clientes con los modelos de Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953832"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081735"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimiento de perfiles de clientes con direcciones mejoradas
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Enriquezca los perfiles de los clientes con direcciones mejoradas
 
 Las direcciones de sus datos pueden no estar estructuradas, estar incompletas o ser incorrectas. Utilice los modelos de Microsoft para normalizar y enriquecer sus direcciones en el [Formato de Common Data Model](/common-data-model/schema/core/applicationcommon/address) para una mejor precisión y conocimientos.
 
@@ -101,7 +101,7 @@ Actualmente admitimos direcciones mejoradas en estos países o regiones:
 
 1. Seleccione **Guardar enriquecimiento** después de revisar sus opciones.
 
-## <a name="enrichment-results"></a>Resultados del enriquecimiento
+## <a name="view-enrichment-results"></a>Ver los resultados del enriquecimiento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

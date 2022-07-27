@@ -1,5 +1,5 @@
 ---
-title: Crear una vista unificada de sus clientes
+title: Información general de la unificación de datos
 description: Realice el proceso de unificación de datos con sus datos para crear un único conjunto maestro de datos de perfiles de clientes unificados.
 ms.date: 05/10/2022
 ms.reviewer: v-wendysmith
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755755"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081774"
 ---
 # <a name="data-unification-overview"></a>Información general de la unificación de datos
 

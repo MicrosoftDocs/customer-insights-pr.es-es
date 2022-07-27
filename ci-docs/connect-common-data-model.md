@@ -1,5 +1,5 @@
 ---
-title: Conectar datos de Common Data Model a una cuenta de Azure Data Lake
+title: Conectarse a una carpeta de Common Data Model mediante una cuenta de Azure Data Lake
 description: Trabajar con datos de Common Data Model usando Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011594"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081784"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse a los datos en Azure Data Lake Storage
 

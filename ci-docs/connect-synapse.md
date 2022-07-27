@@ -1,5 +1,5 @@
 ---
-title: Ingerir datos de Azure Synapse Analytics
+title: Conectar un origen de datos de Azure Synapse (versión preliminar)
 description: Use una base de datos de Azure Synapse como origen de datos en Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011448"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052720"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar un origen de datos de Azure Synapse Analytics (versión preliminar)
 
@@ -59,7 +59,7 @@ Para obtener más información, consulte [Vista general de Azure Synapse](/azure
 
 1. Elija una [conexión disponible](connections.md) a Azure Synapse Analytics o cree una nueva.
 
-1. Elija una **Base de datos** del espacio de trabajo en la conexión de Azure Synapse Analytics seleccionada y seleccione **Siguiente**.
+1. Elija una **Base de datos** del espacio de trabajo en la conexión de Azure Synapse Analytics seleccionada y seleccione **Siguiente**. Actualmente, solo admitimos el tipo de base de datos *Lake database*.
 
 1. Seleccione las entidades que desea ingerir de la base de datos conectada y seleccione **Siguiente**.
 

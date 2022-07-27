@@ -1,5 +1,5 @@
 ---
-title: Guía de muestra de la predicción del valor de por vida del cliente
+title: Guía de muestra de la predicción (CLV) del valor de por vida del cliente
 description: Utilice esta guía de muestra para probar el modelo de valor de vida útil del cliente predicción.
 ms.date: 03/31/2022
 ms.reviewer: v-wendysmith
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740832"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051658"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guía de muestra de la predicción (CLV) del valor de por vida del cliente
 
