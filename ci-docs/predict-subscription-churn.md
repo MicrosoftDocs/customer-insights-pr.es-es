@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647939"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171070"
 ---
 # <a name="subscription-churn-prediction"></a>Cancelación de predicción de suscripción
 
@@ -121,7 +121,7 @@ La predicción de pérdida de suscripciones ayuda a predecir si un cliente está
    - **Nombre de predicción:** El nombre de la predicción proporcionado al crearla.
    - **Tipo de predicción:** El tipo de modelo utilizado para la predicción
    - **Entidad de salida:** Nombre de la entidad para almacenar la salida de la predicción. Puede encontrar una entidad con este nombre en **Datos** > **Entidades**.    
-     En la entidad de salida, *ChurnScore* es la probabilidad pronosticada de abandono y *IsChurn* es una etiqueta binaria basada en *ChurnScore* con umbral de 0,5. Es posible que el umbral predeterminado no funcione para su escenario. [Cree un nuevo segmento](segments.md#create-a-new-segment) con su umbral preferido.
+     En la entidad de salida, *ChurnScore* es la probabilidad pronosticada de abandono y *IsChurn* es una etiqueta binaria basada en *ChurnScore* con umbral de 0,5. Es posible que el umbral predeterminado no funcione para su escenario. [Cree un nuevo segmento](segments.md#create-a-segment) con su umbral preferido.
    - **Campo de predicción:** Este campo se completa solo para algunos tipos de predicciones, y no se usa en la predicción de pérdida de suscripciones.
    - **Estado:** el estado actual de la ejecución de la predicción.
         - **En cola:** La predicción está esperando que se ejecuten otros procesos.

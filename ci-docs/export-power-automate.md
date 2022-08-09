@@ -1,19 +1,19 @@
 ---
 title: Power Automate conector (vista preliminar) | Microsoft Docs
 description: Crear flujos en Microsoft Power Automate desde Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081825"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196139"
 ---
 # <a name="power-automate-connector-preview"></a>Conector de Power Automate (vista previa)
 
@@ -21,18 +21,18 @@ Desencadene eventos específicos para que se produzcan automáticamente cuando c
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Puede hacer un máximo de 100 llamadas cada 60 segundos. Puede llamar al punto de conexión de API varias veces usando el parámetro $skip. [Obtenga más información sobre el parámetro $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Un máximo de 100 llamadas cada 60 segundos. Use el [parámetro $skip](/connectors/customerinsights/#get-items-from-an-entity) para llamar al punto de conexión de API varias veces.
 
 ## <a name="power-automate-triggers"></a>Desencadenadores de Power Automate
 
-Utilice desencadenadores para crear flujos de nube y automatizar tareas repetitivas, como notificaciones o acciones más avanzadas.
+Utilice desencadenadores para crear flujos de nube y automatizar tareas repetitivas, como notificaciones o acciones más avanzadas. Usar desencadenadores cuando:
 
-- Desencadenador cuando falla una actualización de origen de datos.
-- Desencadenador cuando una actualización de origen de datos se realiza correctamente.
-- Desencadenador cuando se cruza un umbral en un segmento. El desencadenador se limita a cruzar por encima del umbral.
-- Desencadenador cuando se cruza un umbral en una medida empresarial. Solo se admiten medidas empresariales sin dimensión. El desencadenador se limita a cruzar por encima del umbral.
-- Desencadene cuando se completa una actualización (orígenes de datos, segmentos, medidas,...).
-- Desencadenador cuando se completa una actualización del proceso de unificación.
+- La actualización de un origen de datos falla.
+- La actualización de un origen de datos es correcta.
+- Un umbral se rebasa en un segmento. El desencadenador se limita a cruzar por encima del umbral.
+- Un umbral se rebasa en una medida empresarial. Solo se admiten medidas empresariales sin dimensión. El desencadenador se limita a cruzar por encima del umbral.
+- Se completa una actualización completamente programada. Este disparador no funciona para actualizaciones iniciadas manualmente.
+- Se completa una actualización del proceso de unificación.
 
 [Configurar los desencadenadores en Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ El conector Power Automate proporciona otras acciones además de los desencadena
 
 ## <a name="create-a-power-automate-flow"></a>Crea un flujo de Power Automate
 
-1. Vaya a **Administración** > **Destinos de exportación**.
+1. Vaya a **Administrador** > **Conexiones**.
 
 1. En el icono de **Power Automate**, seleccione **Configuración**.
 
@@ -53,7 +53,5 @@ El conector Power Automate proporciona otras acciones además de los desencadena
 Ejemplos de cómo utilizar los flujos: 
 - Publique un mensaje en un canal de Microsoft Teams si falla una actualización origen de datos. 
 - Envíe un correo electrónico a los propietarios de los datos cuando se cruce un umbral en un segmento.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

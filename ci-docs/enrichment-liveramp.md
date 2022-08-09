@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081765"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196369"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquecer los perfiles de los clientes con datos de identidad de LiveRamp (versión preliminar)
 
@@ -59,7 +59,7 @@ Cuando habilita Dynamics 365 Customer Insights para transmitir datos a LiveRamp,
 
 1. Revise el resumen y luego seleccione **Siguiente**.
 
-1. Seleccione la conexión. Contacte con un Administrador si no hay uno disponible.
+1. Seleccione la conexión. Contacte con un administrador si no hay conexión disponible.
 
 1. Seleccione **Siguiente**.
 

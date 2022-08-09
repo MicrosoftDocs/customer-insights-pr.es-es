@@ -1,7 +1,7 @@
 ---
 title: Trabajar con datos de Customer Insights en Microsoft Dataverse
 description: Aprenda a conectar Customer Insights y Microsoft Dataverse y comprenda las entidades de salida que se exportan a Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011574"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153425"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabajar con datos de Customer Insights en Microsoft Dataverse
 
@@ -31,13 +31,25 @@ La conexión a su entorno de Dataverse también le permite [ingerir datos de los
 - Ningún otro entorno de Customer Insights está asociado con ese entorno de Dataverse al que desea conectarse. Aprenda cómo [quitar una conexión existente a un entorno de Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Un entorno de Microsoft Dataverse solo puede conectarse a una única cuenta de almacenamiento. Solo se aplica si configura el entorno para [usar Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Derecho de capacidad de almacenamiento de Dataverse
+
+Una suscripción a Customer Insights le da derecho a capacidad adicional para la [capacidad de almacenamiento de Dataverse](/power-platform/admin/capacity-storage) existente en la organización. La capacidad adicional depende de la cantidad de perfiles que use su suscripción.
+
+**Ejemplo**:
+
+Supóngase que obtiene 15 GB de almacenamiento de base de datos y 20 GB de almacenamiento de archivos por cada 100 000 perfiles de clientes. Si su suscripción incluye 300 000 perfiles de clientes, su capacidad de almacenamiento total sería de 45 GB (3 x 15 GB) de almacenamiento de base de datos y 60 GB de almacenamiento de archivos (3 x 20 GB). Del mismo modo, si tiene una suscripción B2B con 30 000 cuentas, su capacidad de almacenamiento total sería de 45 GB (3 x 15 GB) de almacenamiento de base de datos y 60 GB de almacenamiento de archivos (3 x 20 GB).
+
+La capacidad de registro no es incremental ni fija para su organización.
+
+Para obtener más información sobre los derechos de capacidad detallados, consulte la [Guía de licencias de Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Conectar un entorno de Dataverse a Customer Insights
 
 El paso de **Microsoft Dataverse** le permite conectar Customer Insights con su entorno de Dataverse mientras [crea un entorno de Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="intercambio de datos con Microsoft Dataverse habilitado automáticamente para nuevos entornos netos.":::
 
-Los administradores pueden configurar Customer Insights para conectar un entorno de Dataverse existente. Al proporcionar la URL del entorno de Dataverse, se adjunta a su nuevo entorno de Customer Insights.
+Los administradores pueden configurar Customer Insights para conectar un entorno de Dataverse existente. Al proporcionar la URL del entorno de Dataverse, se conecta a su nuevo entorno de Customer Insights. Después de establecer la conexión entre Customer Insights y Dataverse, no cambie el nombre de la organización para el entorno de Dataverse. El nombre de la organización se utiliza en la URL de Dataverse y un nombre cambiado interrumpe la conexión con Customer Insights.
 
 Si no desea utilizar un entorno de Dataverse existente, el sistema crea un nuevo entorno para los datos de Customer Insights en su inquilino. [Los administradores de Power Platform puede controlar quién puede crear entornos](/power-platform/admin/control-environment-creation). Cuando está configurando un nuevo entorno de Customer Insights y el administrador ha deshabilitado la creación de entornos de Dataverse para todos excepto los administradores, es posible que no pueda crear un nuevo entorno.
 
@@ -84,7 +96,7 @@ Para ejecutar los scripts de PowerShell, primero tiene que configurar PowerShell
 
     2. `ByolSetup.ps1`
         - Necesita permisos de *Propietario de datos de Storage Blob* en el nivel de contenedor/cuenta de almacenamiento para ejecutar este script o este script creará uno para usted. Su asignación de roles se puede eliminar manualmente después de ejecutar con éxito el script.
-        - Este script de PowerShell agrega el control de acceso basado en permisos (RBAC) necesario para el servicio Microsoft Dataverse y cualquier aplicaciones empresarial basada en Dataverse. También actualiza la Lista de control de acceso (ACL) en el contenedor de Customer Insights para los grupos de seguridad creados con el script `CreateSecurityGroups.ps1`. El grupo Colaborador tendrá permiso *rwx* y el grupo Lector tendrá solo permiso *r-x*.
+        - Este script de PowerShell agrega el control de acceso basado en roles para el servicio Microsoft Dataverse y cualquier aplicaciones empresarial basada en Dataverse. También actualiza la Lista de control de acceso (ACL) en el contenedor de Customer Insights para los grupos de seguridad creados con el script `CreateSecurityGroups.ps1`. El grupo Colaborador tendrá permiso *rwx* y el grupo Lector tendrá solo permiso *r-x*.
         - Ejecute este script de PowerShell en Windows PowerShell proporcionando el Id. de suscripción de Azure que contiene su Azure Data Lake Storage, el nombre de la cuenta de almacenamiento, el nombre del grupo de recursos y los valores de Id. del grupo de seguridad Lector y Colaborador. Abra el script de PowerShell en un editor para revisar información adicional y la lógica implementada.
         - Copie la cadena de resultados después de ejecutar correctamente el script. La cadena de resultados deberá tener un aspecto similar al siguiente: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

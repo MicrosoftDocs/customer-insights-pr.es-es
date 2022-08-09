@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081996"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183652"
 ---
 # <a name="semantic-mappings-preview"></a>Asignaciones semánticas (versión preliminar)
 
@@ -32,13 +32,13 @@ Las asignaciones semánticas le permiten asignar sus datos de no actividad a esq
 
 1. En el paso **Datos de la entidad**, establezca los valores para los siguientes campos:
 
-   - **Nombre de asignación de entidad semántica**: Proporcione un nombre para su asignación de entidad semántica.
-   - **Entidad de origen**: seleccione una entidad que incluya datos de contacto.
-   - **Clave principal**: seleccione el campo que identifica de manera única un registro de contacto. No debe contener valores duplicados, valores vacíos ni valores que faltan.
+   - **Nombre de asignación de entidad semántica**: nombre para su asignación de entidad semántica.
+   - **Entidad de origen**: entidad que incluye datos de contacto.
+   - **Clave principal**: campo que identifica de manera única un registro de contacto. No debe contener valores duplicados, valores vacíos ni valores que faltan.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Configure la asignación de entidad semántica con nombre, entidad de origen y clave principal.":::
 
-1. Seleccione **Siguiente** para continuar.
+1. Seleccione **Siguiente**.
 
 1. En el paso **Relaciones**, configure los detalles para conectar sus datos de contacto a sus datos de cuenta correspondiente. Este paso visualiza la conexión entre entidades.  
 
@@ -46,7 +46,7 @@ Las asignaciones semánticas le permiten asignar sus datos de no actividad a esq
 
    1. Seleccione **Agregar relación** para configurar la relación.
    1. Elija el atributo de su entidad de origen que conecta su entidad de contacto con otra entidad.
-   1. Elija la entidad a la que conectará su entidad de contacto. Puede elegir una entidad de la sección **Entidades de cuenta** o **Entidad intermedia**. Si selecciona una entidad intermedia, debe definir una segunda relación para conectarse a la entidad de su cuenta de destino.
+   1. Elija la entidad a la que conectará su entidad de contacto. Elija una entidad de la sección **Entidades de cuenta** o **Entidad intermedia**. Si selecciona una entidad intermedia, defina una segunda relación para conectarse a la entidad de su cuenta de destino.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Seleccione una entidad de cuenta o una entidad intermedia.":::
 
@@ -55,43 +55,38 @@ Las asignaciones semánticas le permiten asignar sus datos de no actividad a esq
 
    > [!NOTE]
    > Puede configurar más relaciones entre la entidad de contacto y otras entidades de cuenta con entidades intermedias.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Visualización de varias relaciones que conectan entidades de contacto con entidades de cuenta.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Visualización de varias relaciones que conectan entidades de contacto con entidades de cuenta.":::
 
-1. Seleccione **Siguiente** cuando haya terminado con la configuración de la relación.
+1. Seleccione **Siguiente**.
 
 1. En el paso **Establecer el tipo semántico**, elija un **Tipo semántico**. Actualmente, hay un **Tipo semántico** llamado *ContactProfile*.
 
-1. Asigne los datos al **Tipo semántico** *ContactProfile* para los campos mostrados.
-   - Campo obligatorio: Id. de contacto
-   - Campos opcionales: Nombre de pila, Apellidos, Fecha de nacimiento, Sexo, Correo electrónico principal y Teléfono principal
+1. Asigne su id. de contacto al **Id. de contacto** de tipo semántico *ContactProfile*. Opcionalmente, asigne otros campos como Nombre de pila, Apellido, Género o Correo electrónico.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Asigne sus atributos de datos de contacto a los campos obligatorios y opcionales proporcionados.":::
 
-1. Seleccione **Siguiente** para continuar.
+1. Seleccione **Siguiente**.
 
-1. En el paso **Revisar**, eche un vistazo a la configuración de la asignación semántica. Seleccione **Editar** para la sección correspondiente para realizar cambios.
+1. En el paso **Revisar**, revise la configuración de la asignación semántica. Para hacer cambios, seleccione **Editar** para la sección correspondiente.
 
-1. Seleccione **Guardar** para guardar su nueva **Asignación semántica**.
+1. Seleccione **Guardar**.
 
-1. Después de guardar, puede seleccionar **Ejecutar** proceso de la asignación semántica o puede seleccionar **Cerrar** para guardar su asignación semántica sin procesarla.
-
-1. Para ejecutar una asignación semántica en un punto posterior, seleccione la asignación semántica y seleccione **Actualizar**.
+1. Para procesar la asignación semántica, seleccione **Ejecutar**. O seleccione **Cerrar** para guardar su asignación semántica sin procesarla. Para ejecutar la más tarde, seleccione la asignación semántica y seleccione **Actualizar**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Administrar asignaciones semánticas existentes
 
-En **Datos** > **Asignaciones semánticas (versión preliminar)**, puede ver todas sus asignaciones semánticas guardadas y administrarlas. Cada asignación semántica está representada por una fila separada. Encontrará detalles sobre la entidad de origen, el tipo semántico, el tipo de asignación y su estado.
+Vaya a **Datos** > **Asignaciones semánticas (versión preliminar)** para ver sus asignaciones semánticas guardadas, su entidad de origen, su tipo semántico, su tipo de asignación y su estado.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Opciones para gestionar asignaciones semánticas.":::
 
-- **Editar**: Abre la configuración de la asignación semántica configurada en el paso de revisión. Puede cambiar la configuración actual. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
-
-- **Actualizar**: Actualiza la asignación semántica seleccionada con los datos más actualizados de las entidades que forman parte de su configuración. Si actualiza cualquier asignación semántica dada se actualizarán todas las asignaciones semánticas del mismo tipo.
-
-- **Cambiar nombre**: Abre un cuadro de diálogo en el que puede introducir un nombre diferente para la asignación semántica seleccionada. Seleccione **Guardar** para aplicar los cambios.
-
-- **Eliminar**: Abre un cuadro de diálogo para confirmar la eliminación de la asignación semántica seleccionada. También puede eliminar más de una asignación semántica a la vez seleccionando las asignaciones semánticas y el icono de eliminación. Seleccione **Eliminar** para confirmar la eliminación.
+Seleccione la asignación semántica para ver las acciones disponibles.
+- **Edite** la configuración actual. Seleccione **Guardar** y **Ejecutar** para procesar los cambios.
+- **Actualice** la asignación semántica para incluir los últimos datos. Si actualiza cualquier asignación semántica dada se actualizarán todas las asignaciones semánticas del mismo tipo.
+- **Cambie el nombre** de la asignación semántica. Seleccione **Guardar**.
+- **Elimine** la asignación semántica. Para eliminar más de una asignación semántica a la vez, seleccione las asignaciones semánticas y el icono de eliminación. Seleccione **Eliminar** para confirmar la eliminación.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilice una asignación de entidad semántica de ContactProfile para crear actividades a nivel de contacto
 
@@ -100,7 +95,7 @@ Después de crear un mapeo de entidades semánticas *ContactProfile*, puede capt
    > [!NOTE]
    > Para que las actividades a nivel de contacto funcionen, debe tener los atributos **AccountID** y **ContactID** para cada registro dentro de los datos de su actividad.
 
-1. [Definir una asignación de entidad semántica de *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Y ejecutar la asignación semántica.
+1. [Defina una asignación de entidades semánticas *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) y ejecute la asignación semántica.
 
 1. Vaya a **Datos** > **Actividades**.
 
@@ -119,14 +114,14 @@ Después de crear un mapeo de entidades semánticas *ContactProfile*, puede capt
 
 1. Ejecute sus asignaciones de actividad.
 
-1. Sus actividades a nivel de contacto ahora serán visibles en la línea de tiempo de su cliente.
+1. Después de ejecutar unaasignación en el nivel de contacto, seleccione **Clientes**. Las actividades en el nivel de contacto se muestran en la escala de tiempo de su cliente.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final después de configurar las actividades de contacto":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtrado de línea de tiempo de actividad a nivel de contacto
 
-Después de configurar un mapeo de actividad a nivel de contacto y ejecutarlo, se actualizará la línea de tiempo de actividad para sus clientes. Incluye sus ID o nombres, según su configuración de *ContactProfile*, para las actividades en las que actuaron. Puede filtrar actividades por contactos en la línea de tiempo para ver contactos específicos que le interesan. Además, puede ver todas las actividades que no están asignadas a un contacto específico seleccionando **Actividades no asignadas a un contacto**.
+La escala de tiempo de actividad para sus clientes incluye sus id. o nombres, según su configuración de *ContactProfile*, para las actividades en las que actuaron. Filtre actividades por contactos en la escala de tiempo para ver contactos específicos que le interesan. Para ver todas las actividades que no están asignadas a un contacto específico, seleccione **Actividades no asignadas a un contacto**.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opciones de filtrado disponibles para actividades a nivel de contacto.":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Opciones de filtrado disponibles para actividades a nivel de contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

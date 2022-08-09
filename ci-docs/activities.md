@@ -1,7 +1,7 @@
 ---
 title: Actividades del cliente
 description: Defina las actividades de los clientes y visualícelas en una línea de tiempo en los perfiles de los clientes.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755519"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188160"
 ---
 # <a name="customer-activities"></a>Actividades del cliente
 
-Combine las actividades de clientes desde [varios orígenes de datos](data-sources.md) en Dynamics 365 Customer Insights. Cree una línea de tiempo que enumere las actividades cronológicamente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento de tarjeta de cliente](customer-card-add-in.md).
+Las actividades del cliente son acciones o eventos realizados por los clientes. Por ejemplo, las transacciones, la duración de las llamadas de asistencia, las reseñas de sitios web, las compras o las devoluciones. Estas actividades están contenidas en uno o más orígenes de datos. Con Customers Insights, consolide las actividades de sus clientes a partir de estos [orígenes de datos](data-sources.md) y asócielas con perfiles de clientes. Estas actividades aparecen cronológicamente en una escala de tiempo del perfil de cliente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento de tarjeta de cliente](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Definir una actividad
 
-Sus orígenes de datos pueden incluir entidades con datos transaccionales y de actividad procedentes de varios orígenes de datos. Identifique estas entidades y seleccione las actividades que desea ver en la escala de tiempo del cliente. Elija la entidad que incluye las actividades de destino.
-
-Una entidad debe tener como mínimo un atributo de tipo **Fecha** que se debe incluir en una escala de tiempo de cliente, y no se pueden agregar entidades sin campos de **Fecha**. El control **Agregar actividad** está deshabilitado si no se encuentra esa entidad.
+Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe incluir en una escala de tiempo del cliente. El control **Agregar actividad** está deshabilitado si no se encuentra esa entidad.
 
 1. Vaya a **Datos** > **Actividades**.
 
-1. Seleccione **Agregar actividad** para iniciar la experiencia guiada para el proceso de configuración de la actividad.
+1. Seleccione **Agregar actividad** para iniciar la experiencia guiada.
 
-1. En el paso **Datos de actividad**, establezca los valores para los siguientes campos:
+1. En el paso **Datos de actividad**, introduzca la siguiente información:
 
-   - **Nombre de la actividad**: seleccione un nombre para su actividad.
-   - **Entidad**: seleccione una entidad que incluya datos transaccionales o de actividad.
-   - **Clave principal**: seleccione el campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
+   - **Nombre de la actividad**: nombre de su actividad.
+   - **Entidad de la actividad**: una entidad que incluye datos transaccionales o de actividad.
+   - **Clave principal**: campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure los datos de la actividad con un nombre, entidad y clave principal.":::
 
-1. Seleccione **Siguiente** para ir al siguiente paso.
+1. Seleccione **Siguiente**.
 
-1. En el paso **Relación**, configure los detalles para conectar sus datos de actividad a su registro de cliente correspondiente. Este paso visualiza la conexión entre entidades.  
+1. En el paso **Relación**, seleccione **Agregar relación** para conectar sus datos de actividad a su registro de cliente correspondiente. Este paso visualiza la conexión entre entidades.  
 
-   - **Primero**: campo externo de su entidad Actividad que se utilizará para establecer una relación con otra entidad.
-   - **Segundo**: entidad de cliente de origen correspondiente con la que estará relacionada la entidad Actividad. Solo puede relacionar entidades de clientes de origen que se utilizan en el proceso de unificación de datos.
-   - **Tercero**: si ya existe una relación entre esta entidad Actividad y la entidad de cliente de origen seleccionada, el nombre de la relación estará en modo de solo lectura. Si no existe tal relación, se creará una nueva relación con el nombre que proporcione en este cuadro.
+   - **Clave externa de entidad**: campo de su entidad de actividad que se utilizará para establecer una relación con otra entidad.
+   - **Nombre de entidad de destino**: entidad de cliente de origen correspondiente con la que estará relacionada la entidad de actividad. Solo puede relacionar entidades de clientes de origen que se utilizan en el proceso de unificación de datos.
+   - **Nombre de la relación**: nombre que identifica la relación entre entidades. Si ya existe una relación entre esta entidad de actividad y la entidad de cliente de origen seleccionada, el nombre de la relación es de solo lectura.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina la relación de entidad.":::
 
    > [!TIP]
    > En entornos B2B, puede seleccionar entre entidades de cuenta y otras entidades. Si selecciona una entidad de cuenta, la ruta de relación se establece automáticamente. Para otras entidades, debe definir la ruta de relación sobre una o más entidades intermedias hasta llegar a una entidad de cuenta.
 
-1. Seleccione **Siguiente** para ir al siguiente paso. 
+1. Seleccione **Aplicar** para crear la relación.
 
-1. En el paso **Unificación de actividades**, elija el evento de la actividad y la hora de inicio de su actividad. 
+1. Seleccione **Siguiente**.
+
+1. En el paso **Unificación de actividades**, elija el evento de la actividad y la hora de inicio de su actividad.
    - **Campos obligatorios**
       - **Actividad del evento**: campo que es el evento para esta actividad.
       - **Marca de tiempo**: campo que representa la hora de inicio de su actividad.
@@ -76,61 +76,49 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha** que se debe in
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique los datos de la actividad del cliente en una entidad Actividad unificada.":::
 
-1. Seleccione **Siguiente** para ir al siguiente paso. Puede elegir **Terminar y revisar** para guardar la actividad ahora con el tipo de actividad configurado en **Otros**. 
+1. Seleccione **Siguiente** para elegir el tipo de actividad, o seleccione **Terminar y revisar** para guardar la actividad con el tipo de actividad configurado en **Otros**.
 
 1. En el paso **Tipo de actividad**, elija el tipo de actividad y, opcionalmente, seleccione si desea asignar semánticamente algunos de los tipos de actividad para su uso en otras áreas de Customer Insights. Actualmente, los tipos de actividad *Comentario*, *Lealtad*, *SalesOrder*, *SalesOrderLine* y *Suscripción* admiten la semántica después de aceptar asignar los campos. Si un tipo de actividad no es relevante para la nueva actividad, puede elegir *Otros* o *Crear nuevo* para un tipo de actividad personalizada.
 
-1. Seleccione **Siguiente** para ir al siguiente paso. 
+1. Seleccione **Siguiente**.
 
 1. En el paso **Revisar**, verifique sus selecciones. Vuelva a cualquiera de los pasos anteriores y actualice la información si es necesario.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Revise los campos especificados para una actividad.":::
-   
-1. Seleccione **Guardar actividad** para aplicar sus cambios y seleccionar **Listo** para volver a **Datos** > **Actividades**. Aquí puede ver qué actividades están configuradas para mostrarse en la escala de tiempo. 
+1. Seleccione **Guardar actividad** para aplicar sus cambios y seleccionar **Listo** para volver a **Datos** > **Actividades**. Se muestra la actividad creada.
 
-1. En la página **Actividades**, seleccione **Ejecutar** para procesar la actividad. 
+1. Después de crear todas sus actividades, seleccione **Ejecutar** para procesarlas.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Administrar actividades existentes
 
-En **Datos** > **Actividades**, puede ver todas sus actividades guardadas y administrarlas. Cada actividad está representada por una fila que también incluye detalles sobre el origen, la entidad y el tipo de actividad.
+Vaya a **Datos** > **Actividades** para ver sus actividades guardadas, su entidad de origen, el tipo de actividad y si están incluidas en la escala de tiempo del cliente. Puede ordenar la lista de actividades por cualquier columna o usar el cuadro de búsqueda para encontrar la actividad que desea administrar.
 
-Las siguientes acciones están disponibles cuando selecciona una actividad. 
+Seleccione una actividad para ver las acciones disponibles.
 
-- **Editar**: abre la configuración de la actividad en el paso de revisión. Puede cambiar parte o toda la configuración actual desde este paso. Después de cambiar la configuración, seleccione **Guardar actividad** y luego seleccione **Ejecutar** para procesar los cambios.
-
-- **Cambiar nombre**: abre un cuadro de diálogo en el que puede introducir un nombre diferente para la actividad seleccionada. Seleccione **Guardar** para aplicar los cambios.
-
-- **Eliminar**: abre un cuadro de diálogo para confirmar la eliminación de la actividad seleccionada. También puede eliminar más de una actividad a la vez seleccionando las actividades y luego seleccionando el icono de eliminar. Seleccione **Eliminar** para confirmar la eliminación.
+- **Edite** la actividad para cambiar su configuración. La configuración se abre en el paso de revisión. Después de cambiar la configuración, seleccione **Guardar actividad** y luego seleccione **Ejecutar** para procesar los cambios.
+- **Cambie el nombre** de la actividad. Seleccione **Guardar** para aplicar los cambios.
+- **Elimine** la actividad. Para eliminar más de una actividad a la vez, seleccione las actividades y luego **Eliminar**. Confirme la eliminación.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Ver escalas de tiempo de actividades en perfiles de clientes
 
-Después de configurar las actividades del cliente, seleccione **Mostrar en escala de tiempo de actividades** en la configuración de actividad para encontrar todas las actividades de su cliente en su perfil de cliente.
+1. Si ha seleccionado **Mostrar en escala de tiempo de actividades** en la configuración de actividad, vaya a **Clientes** y seleccione un perfil de cliente para ver las actividades del cliente en la sección **Escala de tiempo de actividades**.
 
-Para abrir la escala de tiempo de un cliente, vaya a **Clientes** y elija el perfil de cliente que desea ver.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Ver actividades configuradas en Perfiles de clientes.":::
 
-Si un cliente ha participado en una actividad configurada, lo encontrará en la sección **Escala de tiempo de actividades**.
+1. Para filtrar actividades en la escala de tiempo:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Ver actividades configuradas en Perfiles de clientes.":::
+   - Seleccione uno o más iconos de actividad para refinar sus resultados e incluir solo los tipos seleccionados.
 
-Hay varias formas de filtrar actividades en la escala de tiempo de actividades:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtra actividades por tipo usando los iconos.":::
 
-- Puede seleccionar uno o varios de los iconos de actividad para refinar sus resultados e incluir solo los tipos seleccionados.
+   - Seleccione **Filtrar** para abrir un panel de filtro para configurar los filtros de la escala de tiempo. Puede filtrar por *ActivityType* y/o *Fecha*. Seleccione **Aplicar**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtra actividades por tipo usando los iconos.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilice el panel de filtro para configurar las condiciones del filtro.":::
 
-- Puede elegir **Filtrar** para abrir un panel de filtro para configurar los filtros de la escala de tiempo.
-
-   1. Puede filtrar por *Tipo de actividad* y *Fecha*
-   1. Seleccione **Aplicar** para usar los filtros en la escala de tiempo de actividades.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilice el panel de filtro para configurar las condiciones del filtro.":::
-
-Para quitar filtros, seleccione la **x** junto a cada filtro aplicado a la escala de tiempo o seleccione **Borrar filtros**.
-
+1. Para quitar filtros, seleccione **Borrar filtros** o seleccione **Filtro** y borre la casilla del filtro.
 
 > [!NOTE]
-> Los filtros de actividad se eliminan cuando abandona un perfil de cliente. Tiene que aplicarlos cada vez que abre un perfil de cliente.
+> Los filtros de actividad se eliminan cuando abandona un perfil de cliente. Tiene que aplicarlos cada vez que abra un perfil de cliente.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

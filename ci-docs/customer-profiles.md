@@ -1,5 +1,5 @@
 ---
-title: Perfiles de clientes
+title: Ver perfiles de clientes
 description: Vea sus datos de clientes unificados, incluido el uso de búsqueda y filtro
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -14,63 +14,83 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052210"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188114"
 ---
-# <a name="customer-profiles"></a>Perfiles de clientes
+# <a name="view-customer-profiles"></a>Ver perfiles de clientes
 
-La página **Clientes** muestra una vista combinada de sus perfiles de clientes unificados. Los perfiles de clientes están disponibles una vez que [creó la entidad de cliente unificada](data-unification.md). La página le permite buscar clientes y definir el índice para esa búsqueda.
+Los perfiles de cliente están disponibles una vez [cree la entidad *Cliente* unificada](data-unification.md). La página **Clientes** muestra una vista combinada de sus perfiles unificados de clientes. Los clientes pueden ser personas u organizaciones.
 
-Los clientes pueden ser personas u organizaciones. Cada perfil de cliente se representa con una ventana. Utilice los controles de paginación para obtener más registros. La tarjeta muestra campos de la entidad *Cliente* definida en el **Índice de Buscar y filtrar**. El sistema selecciona el orden de los campos dentro de cada tarjeta.
-
-Seleccione una ventana para ver los datos del cliente seleccionado en una página dedicada llamada [Página de detalles del cliente](customer-profiles.md#customer-details-page).
-
-> [!div class="mx-imgBorder"]
-> ![Página de clientes que muestra ventanas de resultados](media/customers-page-result-tiles-B2C.png "Página de clientes que muestra ventanas de resultados")
+Vaya a la página **Clientes** para ver sus clientes y sus perfiles. Cada perfil de cliente se representa con un mosaico. Utilice los controles de paginación para obtener más registros. La tarjeta muestra campos de la entidad *Cliente* definida en el **Índice de Buscar y filtrar**. El sistema selecciona el orden de los campos dentro de cada tarjeta.
 
 > [!NOTE]
-> Si no puede ver las ventanas cuando selecciona **Clientes** en la navegación, su administrador debe [definir al menos un atributo de búsqueda](search-filter-index.md) en el **Índice de Buscar y filtrar**.
+> Si no puede ver los mosaicos cuando selecciona **Clientes**, su administrador debe [definir al menos un atributo de búsqueda](search-filter-index.md) en el **Índice de Buscar y filtrar**.
+
+:::image type="content" source="media/customers-page-result-tiles-B2C.png" alt-text="Página de clientes que muestra mosaicos de resultados.":::
+
+Seleccione cualquiera de las siguientes acciones:
+- [Ver detalles del cliente](#view-customer-details)
+- [Administrar el índice de búsqueda y filtro](search-filter-index.md) (solo administradores)
+- [Filtrar de clientes](#filter-customers)
+- **Expandir tarjetas** o **Contraer tarjetas** para expandir o contraer la información que se muestra en el mosaico del cliente
+- **Ordenar por** un atributo particular
+- [Buscar clientes](#search-for-customers)
+
+  > [!NOTE]
+  > Para usar la búsqueda y el filtro, un administrador debe configurar los atributos de búsqueda y definir los campos filtrables usando el índice de búsqueda y filtro.
 
 ## <a name="search-for-customers"></a>Buscar clientes
 
-Busque clientes introduciendo un nombre o algún otro atributo en el cuadro de búsqueda. La búsqueda solo funciona dentro de la entidad *Cliente* creada durante el proceso de unificación de datos.
+Busque clientes introduciendo un nombre o algún otro atributo en **Buscar clientes**. Los atributos de búsqueda están definidos por el administrador y provienen de la entidad *Cliente* unificada.
 
-Como administrador, puede configurar los atributos que se pueden buscar mediante la página de **Índice de Buscar y filtrar**. Para obtener más información, vaya a [Administrar índice de Buscar y filtrar](search-filter-index.md).
+> [!NOTE]
+> **Cadena** es el único tipo de datos que se incluye en la búsqueda. Úselo en el campo **Buscar clientes** de la página Clientes para buscar clientes.
 
 ## <a name="filter-customers"></a>Filtrar de clientes
 
-Puede filtrar clientes por campos de entidad *Cliente*. Al igual que en la búsqueda, el administrador primero tendrá que definir los campos como filtrables mediante la página **Índice de Buscar y filtrar**.
+Puede filtrar clientes por campos de entidad *Cliente*. Los campos filtrables son definidos por el administrador.
 
-1. Seleccione **Mostrar filtros** en la página **Clientes**.
+1. En la página **Clientes**, seleccione **Mostrar filtros**. Se muestra el panel de filtro.
 
 1. Active las casillas situadas junto a los atributos por los que desea filtrar clientes.
 
-1. Elimine sus filtros seleccionando **Limpiar filtros** en la página **Clientes**.
+1. Quite todos los filtros seleccionando **Borrar filtros** o borre una casilla junto a un atributo seleccionado.
 
-## <a name="customer-details-page"></a>Panel de detalles del cliente
+1. Seleccione **Ocultar filtros** para cerrar el panel de filtro.
 
-Seleccione cualquiera de los mosaicos de clientes para abrir la **Página de detalles del cliente**. Esta vista contiene información unificada para el cliente seleccionado. Los detalles del cliente incluyen el siguiente contenido:
+1. Para guardar los resultados del filtro como un [segmento](segments.md), seleccione **Guardar filtros como segmento**.
+   1. Escriba un nombre para el segmento.
+   1. Seleccione **Guardar** para guardar el segmento.
+   1. Elija si desea ejecutar el segmento ahora seleccionando **Activar** o ejecútelo **Más tarde**.
 
-**Ventana de perfil de cliente**: Esta ventana muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará excepto por el campo dirección. La ventana está estructurado en secciones:
+## <a name="view-customer-details"></a>Ver detalles del cliente
+
+En la página **Clientes**, seleccione un mosaico de cliente para ver los detalles del cliente seleccionado.
+
+:::image type="content" source="media/customers-details-B2C.png" alt-text="Panel de detalles del cliente.":::
+
+Los detalles del cliente incluyen:
+
+**Mosaico de perfil de cliente**: muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará excepto por el campo dirección. El mosaico está estructurado en secciones:
 
 - La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea, que aparece incluso si el perfil no tiene información de dirección.
-- **Contactos para este cliente**: En entornos para cuentas de negocio, verá todos los contactos relacionados para este cliente en la segunda sección. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
-- **Campos adicionales**: Muestra los campos restantes del cliente seleccionado, excepto los ID.
-- **Identificaciones**: Enumera todos los ID bajo su nombre de entidad correspondiente. Los campos se identifican como ID por su semántica, que los clasifica como tales.
+- **Contactos para este cliente** aparece en entornos para cuentas comerciales. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
+- **Campos adicionales** muestra los campos restantes del cliente seleccionado, excepto los id.
+- **Id.** enumera todos los id. por su nombre de entidad correspondiente. Los campos se identifican como id. por su semántica.
 
-**Escala de tiempo de actividad**: Muestra datos si ha configurado actividades. La vista de escala de tiempo contiene actividades ordenadas cronológicamente del cliente seleccionado, comenzando con la actividad más reciente. Para obtener más información, vaya a [Actividades del cliente](activities.md).
+**Escala de tiempo de actividad** muestra datos si ha configurado [actividades](activities.md). La vista de escala de tiempo contiene actividades ordenadas cronológicamente del cliente seleccionado, comenzando con la actividad más reciente.
 
 **Información**:
 
-- **Medidas**: Muestra si configuró una o más medidas de atributos del cliente. Incluyen KPI calculados en torno a sus clientes a nivel de cliente individual. Para obtener más información, vaya a [Definir y gestionar medidas](measures.md).
+- **Medidas**: aparece si ha configurado [medidas de atributos de cliente](measures.md). Incluyen KPI calculados en torno a sus clientes a nivel de cliente individual.
 
-- **Intereses potenciales, marcas potenciales**: Muestra si configuró un enriquecimiento de afinidad de marca o de intereses. Representa intereses y afinidades potenciales para las marcas basadas en otros clientes cuyo perfil es similar al perfil de cliente seleccionado. Para obtener más información, vaya a [Enriquecer perfiles de clientes con afinidades de marca e intereses](enrichment-microsoft.md).
+- **Intereses potenciales, marcas potenciales** aparece si configuró un [enriquecimiento de afinidad de marca o de intereses](enrichment-microsoft.md). Representa intereses y afinidades potenciales para las marcas basadas en otros clientes cuyo perfil es similar al perfil de cliente seleccionado.
 
-Para volver a la página de búsqueda de clientes, seleccione **Volver a clientes**.
+Seleccione **Volver a Clientes** para volver a la página **Clientes**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

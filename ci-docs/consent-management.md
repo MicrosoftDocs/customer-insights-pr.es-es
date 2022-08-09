@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947508"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188069"
 ---
 # <a name="use-customer-consent"></a>Usar consentimiento del cliente
 
@@ -50,13 +50,13 @@ Tabla de ejemplo de una base de datos de consentimiento simple con múltiples op
 
 ## <a name="import-and-unify-consent-data"></a>Importar y unificar datos de consentimiento
 
-Puede importar datos de consentimiento de la misma manera que ingiere otras fuentes de datos a Customer Insights. Para obtener más información sobre las fuentes de datos admitidas y cómo importarlas, consulte [Descripción general de los orígenes de datos](data-sources.md).
+Puede importar datos de consentimiento de la misma manera que ingiere otros orígenes de datos a Customer Insights. Para obtener más información sobre los orígenes de datos admitidos y cómo importarlos, consulte [Descripción general de los orígenes de datos](data-sources.md).
 
 Para obtener más información sobre cómo unificar sus orígenes de datos, consulte [Descripción general de la unificación de datos](data-unification.md).
 
 ## <a name="use-consent-data"></a>Usar datos de consentimiento
 
-Una vez que sus datos de consentimiento sean parte de sus perfiles de cliente unificados, puede usarlos en Customer Insights. Por ejemplo, cree un segmento con una regla para asegurarse de respetar las preferencias de privacidad y protección de datos de sus clientes. Las reglas que respaldan las preferencias de consentimiento se utilizan para excluir a los usuarios de un segmento en función de los atributos del perfil. Agregar una regla a un segmento que excluya los perfiles de clientes que no dieron su consentimiento para contactar.
+Una vez que sus datos de consentimiento sean parte de sus perfiles de cliente unificados, puede usarlos en Customer Insights. Por ejemplo, cree un segmento con una regla para asegurarse de respetar las preferencias de privacidad y protección de datos de sus clientes. Las reglas que respaldan las preferencias de consentimiento se utilizan para excluir a los usuarios de un segmento en función de los atributos del perfil. Agregue una regla a un segmento que excluya los perfiles de clientes que no dieron su consentimiento para contactar.
 
 Con referencia a la tabla de muestra anterior, un segmento podría contener esta regla: `Consent option=Newsletter & Consent value=True`. Esta configuración da como resultado un segmento que respeta las preferencias de contacto para enviar un boletín.
 
@@ -66,8 +66,10 @@ Una vez que se crea el segmento, puede usar una de las muchas [opciones de expor
 
 ## <a name="ensure-updated-consent-status"></a>Garantizar el estado de consentimiento actualizado
 
-Es importante mantener actualizado el estado de consentimiento de sus clientes. La actualización programada en Customer Insights siempre importa el estado más reciente de sus fuentes de datos. Esta información luego se procesa a través de la unificación de datos y da como resultado perfiles de clientes actualizados. Estos perfiles actualizados luego se usan para actualizar segmentos para asegurarse de que trabaja con la información más actualizada.
+Es importante mantener actualizado el estado de consentimiento de sus clientes. La actualización programada en Customer Insights siempre importa el estado más reciente de sus orígenes de datos. Esta información luego se procesa a través de la unificación de datos y da como resultado perfiles de clientes actualizados. Estos perfiles actualizados luego se usan para actualizar segmentos para asegurarse de que trabaja con la información más actualizada.
 
 En otras palabras, asegúrese de que los datos de origen que se importan a Customer Insights siempre tengan la información más reciente.
 
 Para más información, vea [Actualizar segmentos manualmente](segments.md#refresh-segments) o [Configurar una actualización programada](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

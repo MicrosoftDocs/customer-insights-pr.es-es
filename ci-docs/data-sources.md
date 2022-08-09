@@ -1,7 +1,7 @@
 ---
 title: Información general de los orígenes de datos
 description: Aprenda a importar o ingerir datos de varias fuentes.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051474"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207112"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
 Dynamics 365 Customer Insights proporciona conexiones para traer datos de una amplia gama de orígenes. Conectarse a un origen de datos a menudo se conoce como el proceso de *ingesta de datos*. Después de ingerir los datos, puede [unificar](data-unification.md), generar conocimientos y activar los datos para crear experiencias personalizadas.
 
-## <a name="add-data-sources"></a>Agregar orígenes de datos
+## <a name="add-or-edit-data-sources"></a>Agregar o editar orígenes de datos
 
-Puede adjuntar o importar fuentes de datos en Customer Insights. Los enlaces a continuación proporcionan instrucciones sobre cómo agregar orígenes de datos.
+Puede adjuntar o importar orígenes de datos en Customer Insights. Los enlaces a continuación proporcionan instrucciones sobre cómo agregar y editar orígenes de datos.
 
 **Adjuntar un origen de datos**
 
@@ -41,46 +41,40 @@ Si usa orígenes de datos locales, Microsoft o datos de terceros, importe y tran
 
 ## <a name="review-data-sources"></a>Revisar orígenes de datos
 
-Si su entorno se configuró para utilizar el almacenamiento de Customer Insights y utiliza orígenes de datos locales, puede usar flujos de datos de Power Platform. Con flujos de datos de Power Platform, puede ver las fuentes de datos compartidas y las fuentes de datos administradas por otros. La página **Orígenes de datos** enumera las fuentes de datos en tres secciones:
+Si su entorno se configuró para utilizar el almacenamiento de Customer Insights y utiliza orígenes de datos locales, puede usar flujos de datos de Power Platform. Con flujos de datos de Power Platform, puede ver los orígenes de datos compartidos y los orígenes de datos administrados por otros. La página **Orígenes de datos** enumera los orígenes de datos en tres secciones:
 - **Compartido**: orígenes de datos que pueden administrar todos los administradores de Customer Insights. Flujos de datos de Power Platform, su propia cuenta de almacenamiento y la conexión a un lago de datos gestionado por Dataverse son ejemplos de orígenes de datos compartidos.
 - **Administrado por mi**: flujos de datos de Power Platform creados y que solo usted puede administrar. Otros administradores de Customer Insights solo pueden ver estos flujos de datos, pero no editarlos, actualizarlos ni eliminarlos.
 - **Administrados por otros**: flujos de datos de Power Platform creados por otros administradores. Usted solo puedes verlos. Enumera al propietario del flujo de datos para contactar en caso de necesitar asistencia.
 > [!NOTE]
-> Otros usuarios pueden ver y utilizar todas las entidades. Si bien las fuentes de datos son propiedad del usuario que las creó, las entidades resultantes de la ingesta de datos pueden ser utilizadas por todos los usuarios de Customer Insights.
+> Otros usuarios pueden ver y utilizar todas las entidades. Si bien los orígenes de datos son propiedad del usuario que los creó, las entidades resultantes de la ingesta de datos pueden ser utilizadas por todos los usuarios de Customer Insights.
 
-Si su entorno no utiliza flujos de datos Power Platform, la página **Orígenes de datos** contiene solo una lista de todas las fuentes de datos. No se muestran secciones.
+Si su entorno no utiliza flujos de datos Power Platform, la página **Orígenes de datos** contiene solo una lista de todos los orígenes de datos. No se muestran secciones.
 
-Vaya a **Datos** > **Orígenes de datos** para ver el nombre de cada origen de datos ingestado, su estado y la última vez que se actualizaron datos para esa fuente. Puede ordenar la lista de orígenes de datos por cada columna.
+## <a name="manage-existing-data-sources"></a>Administrar orígenes de datos existentes
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Origen de datos agregado.":::
+Vaya a **Datos** > **Orígenes de datos** para ver el nombre de cada origen de datos ingestado, su estado y la última vez que se actualizaron datos para esa fuente. Puede ordenar la lista de orígenes de datos por cualquier columna o usar el cuadro de búsqueda para encontrar el origen de datos que desea administrar.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Seleccione un origen de datos para ver las acciones disponibles.
 
-La carga de datos puede llevar tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página **Entidades**. Para obtener más información, consulte [Entidades](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Origen de datos agregado.":::
+
+- [**Edite**](#add-or-edit-data-sources) el origen de datos para cambiar sus propiedades.
+- [**Actualice**](#refresh-data-sources) el origen de datos para incluir los últimos datos.
+- [**Enriquezca**](data-sources-enrichment.md) el origen de datos antes de la unificación.
+- **Elimine** el origen de datos. Un origen de datos se puede eliminar solo si los datos no se usan en ningún procesamiento, como unificación, información, activaciones o exportaciones.
 
 ## <a name="refresh-data-sources"></a>Actualizar orígenes de datos
 
-Los orígenes de datos se pueden actualizar de forma automática o manualmente, a petición. [Orígenes de datos locales](connect-power-query.md#add-data-from-on-premises-data-sources) actualice en sus propios horarios que se configuran durante la ingesta de datos. Para las fuentes de datos adjuntas, la ingestión de datos consume los últimos datos disponibles de ese origen de datos.
+Los orígenes de datos se pueden actualizar de forma automática o manualmente, a petición. [Orígenes de datos locales](connect-power-query.md#add-data-from-on-premises-data-sources) actualice en sus propios horarios que se configuran durante la ingesta de datos. Para los orígenes de datos adjuntos, la ingestión de datos consume los últimos datos disponibles de ese origen de datos.
 
-Vaya a **Administración** > **Sistema** > [**Calendario**](system.md#schedule-tab) para configurar actualizaciones programadas por el sistema de sus fuentes de datos ingeridas.
+Vaya a **Administración** > **Sistema** > [**Calendario**](system.md#schedule-tab) para configurar actualizaciones programadas por el sistema de sus orígenes de datos ingeridos.
 
-Para actualizar un origen de datos a petición, siga estos pasos:
-
-1. Vaya a **Datos** > **Orígenes de datos**.
-
-1. Seleccione los puntos suspensivos verticales (&vellip;) junto al origen de datos que desea actualizar y seleccione **Actualizar** en la lista desplegable. El origen de datos ahora se desencadena para una actualización manual. Al actualizar un origen de datos, se actualizará tanto el esquema de la entidad como los datos para todas las entidades especificadas en el origen de datos.
-
-1. Seleccione **Dejar de actualizar** si desea cancelar una actualización existente y el origen de datos volverá a su último estado de actualización.
-
-## <a name="delete-a-data-source"></a>Eliminar un origen de datos
-
-Un origen de datos se puede eliminar solo si los datos no se usan en ningún procesamiento, como unificación, información, activaciones o exportaciones.
+Para actualizar un origen de datos a petición:
 
 1. Vaya a **Datos** > **Orígenes de datos**.
 
-2. Seleccione los puntos suspensivos verticales (&vellip;) junto al origen de datos que desea quitar y seleccione **Eliminar** en la lista desplegable.
+1. Seleccione el origen de datos que desea actualizar y seleccione **Actualizar**. El origen de datos ahora se desencadena para una actualización manual. Al actualizar un origen de datos, se actualizará tanto el esquema de la entidad como los datos para todas las entidades especificadas en el origen de datos.
 
-3. Confirme la eliminación.
-
+1. Seleccione el estado para abrir el panel **Detalles de progreso** y vea el progreso. Para cancelar el trabajo, seleccione **Cancelar trabajo** en la parte inferior del panel.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

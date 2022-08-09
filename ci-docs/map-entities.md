@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a75218c996b277e00924f2b7b38ea686a1f4dc38
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741016"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139803"
 ---
 # <a name="select-source-fields-for-data-unification"></a>Seleccionar campos de origen para la unificación de datos
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 El primer paso en la unificación es seleccionar las entidades y campos dentro de sus conjuntos de datos que desea unificar. Seleccione entidades que contengan detalles relacionados con el cliente, como nombre, dirección, número de teléfono y correo electrónico. Puede seleccionar una o más entidades.
 

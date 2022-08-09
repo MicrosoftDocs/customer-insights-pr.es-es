@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081745"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207204"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecimiento de orígenes de datos (versión preliminar)
 
@@ -21,9 +21,9 @@ Utilice datos de orígenes como Microsoft y otros socios para enriquecer los dat
 
 ## <a name="enrich-a-data-source"></a>Enriquecer un origen de datos
 
-Debe tener los permisos Colaborador o Administrador para crear o editar enriquecimientos. Para obtener más información, vea [Permisos](permissions.md).  
+Debe tener los [permisos](permissions.md) Colaborador o Administrador para crear o editar enriquecimientos.  
 
-1. Vaya a **Datos** > **Unificar**. Seleccione la entidad que desea enriquecer y seleccione un atributo como clave principal para la entidad. Para obtener más información, consulte [Seleccionar clave principal](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Vaya a **Datos** > **Unificar**. Seleccione la entidad que desea enriquecer y seleccione un atributo como [clave principal](map-entities.md#select-primary-key-and-semantic-type-for-attributes) para la entidad.
 
 1. Vaya a **Datos** > **Orígenes de datos**.
 
@@ -47,8 +47,8 @@ Los siguientes enriquecimientos están disponibles para los orígenes de datos. 
 
 ## <a name="manage-existing-data-source-enrichments"></a>Administrar enriquecimientos de origen de datos existentes
 
-Vaya a la pestaña **Mis enriquecimientos** para ver todos los enriquecimientos configurados.
+Vaya a **Datos** > **Enriquecimiento**. En la pestaña **Mis enriquecimientos** vea los enriquecimientos configurados, su estado, el número de clientes enriquecidos y la última vez que se actualizaron los datos. Puede ordenar la lista de enriquecimientos por cualquier columna o usar el cuadro de búsqueda para encontrar el enriquecimiento que desea administrar.
 
-Seleccione el enriquecimiento para ver las opciones disponibles. También puede seleccionar los puntos suspensivos verticales (&vellip;) en un elemento de la lista para ver las opciones. Si configuró varios enriquecimientos, puede usar el cuadro de búsqueda para encontrarlos rápidamente.
+Seleccione el enriquecimiento para ver las opciones disponibles. También puede seleccionar los puntos suspensivos verticales (&vellip;) en un elemento de la lista para ver las opciones.
 
-Puede ver, editar, ejecutar o eliminar un enriquecimiento de origen de datos. Para obtener más información, consulte [Administrar enriquecimientos existentes](enrichment-hub.md).
+Puede ver, editar, ejecutar o eliminar un enriquecimiento de origen de datos. Para obtener más información, consulte [Administrar enriquecimientos existentes](enrichment-hub.md#manage-existing-enrichments).

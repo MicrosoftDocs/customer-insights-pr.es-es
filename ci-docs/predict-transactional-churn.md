@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8648019"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171116"
 ---
 # <a name="transaction-churn-prediction"></a>Predicción de abandono de transacciones
 
@@ -240,7 +240,7 @@ Agregue una lista de sus clientes y cuentas comerciales que desea utilizar como 
    - **Nombre de predicción**: nombre de la predicción proporcionada al crearlo.
    - **Tipo de predicción**: tipo de modelo utilizado para la predicción
    - **Entidad de salida**: nombre de la entidad para guardar la salida de la predicción. Puede encontrar una entidad con este nombre en **Datos** > **Entidades**.
-     En la entidad de salida, *ChurnScore* es la probabilidad pronosticada de abandono y *IsChurn* es una etiqueta binaria basada en *ChurnScore* con umbral de 0,5. Es posible que el umbral predeterminado no funcione para su escenario. [Cree un nuevo segmento](segments.md#create-a-new-segment) con su umbral preferido.
+     En la entidad de salida, *ChurnScore* es la probabilidad pronosticada de abandono y *IsChurn* es una etiqueta binaria basada en *ChurnScore* con umbral de 0,5. Es posible que el umbral predeterminado no funcione para su escenario. [Cree un nuevo segmento](segments.md#create-a-segment) con su umbral preferido.
      No todos los clientes son necesariamente clientes activos. Es posible que algunos de ellos no hayan tenido ninguna actividad durante mucho tiempo y ya se considera que han abandonado, según su definición de abandono. Predecir el riesgo de abandono de los clientes que ya han abandonado no es útil porque no son el público de interés.
    - **Campo previsto**: este campo se rellena solo para algunos tipos de predicciones y no se usa en la predicción de abandono.
    - **Estado**: estado de la ejecución de la predicción.

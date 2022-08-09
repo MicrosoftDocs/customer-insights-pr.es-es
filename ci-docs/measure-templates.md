@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051705"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170794"
 ---
 # <a name="create-measures-from-templates"></a>Crear medidas a partir de plantillas
 
-Puede utilizar plantillas predefinidas de [medidas](measures.md) de uso común para crearlas. Las descripciones detalladas de las plantillas y una experiencia guiada le ayudan a crear medidas de manera eficiente. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
+Utilice plantillas predefinidas de [medidas](measures.md) de uso común para crearlas. Las plantillas se basan en datos asignados de la entidad *Actividad unificada*. Así que asegúrese de haber configurado [actividades del cliente](activities.md) antes de crear una medida a partir de una plantilla.
 
-Para crear medidas personalizadas, consulte [Usar el generador de medidas para crear medidas desde cero](measure-builder.md).
+Las plantillas de medidas solo se admiten en entornos para **clientes individuales**. Para crear medidas personalizadas o crear medidas para B2B, consulte [Usar el generador de medidas](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Consumidores individuales (B2C)](#tab/b2c)
-
-Plantillas de medida disponibles: 
+Plantillas de medida disponibles:
 - Valor medio de transacción (ATV)
 - Valor total de la transacción
 - Ingresos medios diarios
+- Ingresos medios mensuales
 - Ingresos medios anuales
 - Recuento de transacciones
 - Puntos de fidelización ganados
@@ -57,21 +56,22 @@ Plantillas de medida disponibles:
 
 1. Seleccione **Listo**.
 
-1. En la sección **Establecer período de tiempo**, defina el período de tiempo de los datos a utilizar. Elija si desea que la nueva medida cubra todo el conjunto de datos seleccionando **Todo el tiempo** o si desea que la medida se centre en un **Período de tiempo específico**.
+1. En la sección **Establecer período de tiempo**, defina el plazo de tiempo de los datos. Elija si desea que la nueva medida cubra todo el conjunto de datos seleccionando **Todo el tiempo** o si desea que la medida se centre en un **Período de tiempo específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de pantalla que muestra la sección del período de tiempo al configurar una medida a partir de una plantilla.":::
 
 1. En la siguiente sección, seleccione **Agregar datos** para elegir las actividades y asignar los datos correspondientes a partir de su entidad *Actividad unificada*.
 
-    1. Paso 1 de 2: En **Tipo de actividad**, elija el tipo de entidad que desea utilizar. Para **Actividades**, seleccione las entidades que desea asignar.
-    1. Paso 2 de 2: Elija el atributo de la entidad *Actividad unificada* para el componente requerido por la fórmula. Por ejemplo, para el valor de transacción promedio, es el atributo que representa el valor de la transacción. Para **Marca de tiempo de la actividad**, elija el atributo de la entidad Actividad unificada que representa la fecha y hora de la actividad.
-   
-1. Una vez que la asignación de datos se haya realizado correctamente, puede ver el estado como **Completo** y el nombre de las actividades y atributos asignadas.
+    1. Paso 1 de 2: En **Tipo de actividad**, elija el tipo de entidad que desea utilizar. Para **Actividades**, seleccione las entidades que desea asignar, y luego elija **Siguiente**.
+    1. Paso 2 de 2: Elija el atributo de la entidad *Actividad unificada* para el componente requerido por la fórmula. Por ejemplo, para el valor de transacción promedio, es el atributo que representa el valor de la transacción. Para **Marca de tiempo de la actividad**, elija el atributo de la entidad *Actividad unificada* que representa la fecha y hora de la actividad.
+    1. Seleccione **Guardar**.
 
-1. Ahora puede seleccionar **Ejecutar** para calcular los resultados de la medida. Para refinarlo más tarde, seleccione **Guardar borrador**.
+    Una vez que la asignación de datos se haya realizado correctamente, el estado se muestra como **Completo** y aparece el nombre de las actividades y los atributos asignadas.
 
-# <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
+1. Seleccione **Ejecutar** para calcular los resultados de la medida. Seleccione **Guardar borrador** si desea mantener la configuración actual y ejecutar la medida más tarde. Se muestra la página **Medidas**.
 
-Esta función solo está disponible para medidas creadas en entornos con clientes individuales como público de destino principal.
+## <a name="next-step"></a>Siguiente paso
 
----
+Utilice medidas existentes para crear [un segmento de clientes](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

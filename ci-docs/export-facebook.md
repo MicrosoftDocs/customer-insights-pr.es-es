@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos a Facebook Administrador de anuncios (vista previa) (contiene video)
 description: Aprenda a configurar la conexión y a exportar a el administrador de anuncios de Facebook.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081954"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195035"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos a Facebook Administrador de anuncios (vista previa)
 
@@ -21,31 +21,32 @@ Exportar segmentos de perfiles de clientes unificados a Administrador de anuncio
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Requisitos previos para una conexión
+## <a name="prerequisites"></a>Requisitos previos
 
-- Debe tener una [**Cuenta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account)que incluya una [**Cuenta empresarial de Facebook**](https://business.facebook.com/).
-- Debe ser un administrador en la [**Cuenta de anuncios de Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Una [Cuenta de anuncios de Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que incluya una [Cuenta empresarial de Facebook](https://business.facebook.com/).
+- Privilegios de administrador en la [Cuenta de Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-- Hasta 10 millones de perfiles de clientes por exportación al administrador de anuncios de Facebook.
-- La exportación al administrador de anuncios de Facebook está limitada a segmentos.
-- Cree o actualice audiencias personalizadas en Facebook solo de tipo *lista de clientes*.
-- La exportación de segmentos con un total de 10 millones de perfiles de clientes puede tardar hasta 90 minutos en completarse.
+- Hasta 10 millones de perfiles de clientes por exportación a Facebook Ads Manager, lo que puede tardar hasta 90 minutos.
+- Solo segmentos.
+- Escriba *lista de clientes* de Facebook en [públicos personalizados](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) solamente.
+  > [!NOTE]
+  > En algunos casos, podrían aparecer públicos personalizados de diferentes tipos en la lista desplegable. Si selecciona un tipo diferente de *lista de clientes*, la exportación tendrá errores.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar una conexión al administrador de anuncios de Facebook
 
-Antes de que los usuarios puedan crear una exportación, un administrador debe configurar la conexión al servicio y permitir que los colaboradores usen la conexión.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Vaya a **Administrador** > **Conexiones**.
 
-1. Seleccione **Agregar conexión** y elija **Administrador de anuncios de Facebook** para configurar la conexión.
+1. Seleccione **Añadir conexión** y elija **Facebook Ads Manager**.
 
 1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**. El nombre y el tipo de conexión describe esta conexión. Recomendamos elegir un nombre que explique el propósito y el objetivo de la conexión.
 
-1. Elija quién puede utilizar esta conexión. Si no realiza ninguna acción, el valor predeterminado será Administradores. Para obtener más información, vea [Permitir que los colaboradores utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Permitir que los contribuyentes utilicen una conexión para las exportaciones](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autenticación con anuncios de Facebook: 
+1. Autenticación con anuncios de Facebook:
 
    1. Seleccione **Continuar con Facebook** para iniciar sesión en su cuenta de Facebook.
 
@@ -53,27 +54,25 @@ Antes de que los usuarios puedan crear una exportación, un administrador debe c
 
    1. Seleccione la **Cuenta de anuncios de Facebook** con la que desea trabajar.
 
-   1. Seleccione una **Público personalizado existente** en la lista desplegable o cree un **Nuevo público personalizado**. Para más información, vea [**Audiencias en Administrador de anuncios de Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Solo puede crear o actualizar audiencias personalizadas en Facebook del tipo *lista de clientes* con esta exportación. En algunos casos, verá públicos personalizadas de diferentes tipos en la lista desplegable. Si selecciona un tipo diferente a la *lista de clientes*, dará como resultado una exportación fallida. 
+   1. Seleccione una **Público personalizado existente** en la lista desplegable o cree un **Nuevo público personalizado**.
 
-1. Revise **Privacidad y cumplimiento de datos** y seleccione **Acepto**.
+1. Revise [Privacidad y cumplimiento de datos](connections.md#data-privacy-and-compliance) y seleccione **Acepto**.
 
 1. Seleccione **Guardar** para completar la conexión.
 
 ## <a name="configure-an-export"></a>Configurar una exportación
 
-Puede configurar esta exportación si tiene acceso a una conexión de este tipo. Para obtener más información, vea [Permisos necesarios para configurar una exportación](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vaya a **Datos** > **Exportaciones**.
 
-1. Para crear una exportación nueva, seleccione **Agregar destino**. 
+1. Seleccione **Agregar exportación**.
 
-1. En el campo **Conexión para exportación**, elija una conexión en la sección **Administrador de anuncios de Facebook**. Si no ve el nombre de esta sección, es porque no tiene disponibles conexiones de este tipo.
+1. En el campo **Conexión para exportación**, elija una conexión de la sección Facebook Ads Manager. Contacte con un administrador si no hay conexión disponible.
 
-1. En **Elija su campo de identificador de clave**, seleccione **Correo electrónico**, **Nombre y dirección** o **Teléfono** para enviar a Administrador de anuncios de Facebook. 
+1. Escriba un nombre para la exportación.
 
-1. Asigne a su conexión un nombre reconocible en el campo **Nombre para mostrar**.
+1. En el campo **Datos de conexión**, seleccione **Correo electrónico**, **Nombre y dirección** o **Teléfono** para enviar a Facebook Ads Manager.
 
 1. Asigne los atributos correspondientes de su entidad de cliente unificado para el identificador clave seleccionado.
    > [!TIP]
@@ -85,16 +84,6 @@ Puede configurar esta exportación si tiene acceso a una conexión de este tipo.
 
 1. Seleccione **Guardar**.
 
-Guardar una exportación no ejecuta la exportación inmediatamente.
-
-La exportación se ejecuta con cada [actualización programada](system.md#schedule-tab). 
-
-Tú también puede [exportar datos según las necesidades](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
-
-Cuando habilita Dynamics 365 Customer Insights para transmitir datos al Administrador de anuncios de Facebook, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluidos los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que los anuncios de Facebook cumplan con las obligaciones de privacidad o seguridad que pueda tener. Para más información, consulte la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Su administrador de Dynamics 365 Customer Insights puede quitar este destino de exportación en cualquier momento para dejar de usar esta funcionalidad.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

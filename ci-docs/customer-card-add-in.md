@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081754"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194944"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (versión preliminar)
 
@@ -28,21 +28,25 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- El complemento solo funciona con aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
-- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de Customer Insights, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que `contactid` (o `accountid`) se establece como el campo [clave principal para ese origen de datos en el paso de asignación del proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Las aplicaciones basadas en modelos de Dynamics 365, como Ventas o Servicio al cliente, versión 9.0 y posteriores.
+- Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de Customer Insights, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que el campo `contactid` (o `accountid`) se establece como [clave principal para ese origen de datos durante el proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en Customer Insights para ver los datos.
-- [Capacidades configuradas de búsqueda y filtrado](search-filter-index.md) en Customer Insights son necesarios para que funcione la búsqueda de datos.
+- [Funciones configuradas de búsqueda y de filtro ](search-filter-index.md) en Customer Insights.
 - Cada control de complemento se basa en datos específicos en Customer Insights. Algunos datos y controles solo están disponibles en entornos de tipos específicos. La configuración del complemento le informará si un control no está disponible debido al tipo de entorno seleccionado. Más información sobre [casos de uso del entorno](work-with-business-accounts.md).
-  - **Control de medidas**: Requiere [medidas configuradas](measures.md) de atributos de tipo de cliente.
+  - **Control de medidas**: requiere [medidas de atributos de cliente configuradas](measures.md).
   - **Control de inteligencia**: requiere datos generados usando [predicciones o modelos personalizados](predictions-overview.md).
-  - **Control de detalles del cliente**: Todos los campos del perfil están disponibles en el perfil de cliente unificado.
+  - **Control de detalles del cliente**: muestra todos los campos del perfil disponibles en el perfil de cliente unificado.
   - **Control de enriquecimiento**: requiere [enriquecimientos](enrichment-hub.md) activos aplicados a perfiles de clientes. El complemento de la tarjeta admite estos enriquecimientos: [Marcas](enrichment-microsoft.md) proporcionadas por Microsoft, [Intereses](enrichment-microsoft.md) proporcionadas por Microsoft y [Datos de interacción con la oficina](enrichment-office.md) proporcionados por Microsoft.
-  - **Control de contactos**: Requiere definición de entidad semántica de tipo contactos.
+  - **Control de contactos**: requiere un tipo de entidad semántica de contacto.
   - **Control de escala de tiempo**: requiere [actividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar el complemento de tarjeta de cliente
 
-El complemento de tarjeta de cliente es una solución para aplicaciones Customer Engagement en Dynamics 365. Para instalar la solución, vaya a AppSource y busque **Tarjeta de cliente de Dynamics**. Seleccione el [Complemento de tarjeta de cliente en AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) y seleccione **Obtenerlo ahora**.
+El complemento de tarjeta de cliente es una solución para aplicaciones Customer Engagement en Dynamics 365. Para instalar la solución:
+
+1. Vaya a AppSource y busque **Tarjeta de cliente de Dynamics**.
+
+1. Seleccione el [Complemento de tarjeta de cliente en AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) y seleccione **Obtenerlo ahora**.
 
 Es posible que deba iniciar sesión con sus credenciales de administrador para que la aplicación Dynamics 365 instale la solución. La solución puede tardar un tiempo en instalarse en su entorno.
 

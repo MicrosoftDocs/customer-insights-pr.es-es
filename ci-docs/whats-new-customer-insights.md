@@ -1,28 +1,56 @@
 ---
 title: Novedades de Dynamics 365 Customer Insights
 description: Información sobre nuevas funciones, mejoras y correcciones de errores.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054039"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114267"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novedades de Dynamics 365 Customer Insights
 
 ¡Estamos entusiasmados de anunciar nuestras actualizaciones más recientes! Este artículo resume las características de vista previa pública, las mejoras de disponibilidad general y las actualizaciones de características. Para ver los planes de características a largo plazo, eche un vistazo a los [planes de lanzamiento de Dynamics 365 y Power Platform](/dynamics365/release-plans/).
 
-Implementamos actualizaciones región por región. Por tanto, algunas regiones pueden tener las características antes que otras. A menos que se especifique lo contrario, no es necesario que realice ninguna acción y actualizaremos la aplicación automáticamente sin tiempo de inactividad.
+Implementamos actualizaciones región por región. Por tanto, algunas regiones pueden tener las características antes que otras. A menos que se especifique lo contrario, no es necesario que realice ninguna acción, actualizaremos la aplicación automáticamente sin tiempo de inactividad.
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Actualizaciones de junio de 2022
+
+Las actualizaciones de junio de 2022 incluyen nuevas características, mejoras de rendimiento y correcciones de errores.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Experiencia de usuario actualizada para orígenes de datos e ingesta de datos
+
+La importación de datos de una amplia gama de orígenes de datos es la base para consolidar los datos de sus clientes en Dynamics 365 Customer Insights. Hemos revisado la experiencia del usuario para la importación y conexión de orígenes de datos. Esta actualización tiene como objetivo facilitarle la ingesta de datos en Customer Insights.
+
+Para obtener más información, consulte [Información general de orígenes de datos](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Exportar a InMobi
+
+InMobi ayuda a las marcas a comprender, identificar, atraer y adquirir consumidores. Puede exportar segmentos y otros datos al servicio InMobi a través de cuentas de Azure Blob Storage.
+
+Para obtener más información, consulte [Exportar segmentos a InMobi (versión preliminar)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Compatibilidad con Lockbox en Customer Insights
+
+La Caja de seguridad del cliente proporciona una interfaz para revisar y aprobar (o rechazar) solicitudes de acceso a datos. Estas solicitudes ocurren cuando se necesita acceso a los datos del cliente para resolver un caso de soporte.
+
+Para obtener más información, consulte [Acceder de forma segura a los datos del cliente con Caja de seguridad del cliente (versión preliminar)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Conectarse a sus datos mediante Azure Private Link
+
+Azure Private Link permite a Customer Insights conectarse con su cuenta de Azure Data Lake Storage a través de un punto de conexión privado de su red virtual. Para los datos en una cuenta de almacenamiento, que no está expuesta a la Internet pública, Private Link permite la conexión a esa red restringida.
+
+Para obtener más información, consulte [Usar Private Link en Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Actualizaciones de mayo de 2022
 
@@ -30,7 +58,7 @@ Las actualizaciones de mayo de 2022 incluyen nuevas funciones, mejoras de rendim
 
 ### <a name="updated-data-unification-experience"></a>Experiencia de unificación de datos actualizada
 
- La unificación de datos le permite unificar fuentes de datos que alguna vez fueron dispares en un solo maestro conjunto de datos que proporciona una vista unificada de esos datos. Los datos se pueden unificar en una sola entidad o en varias entidades. Primero, debe [seleccionar entidades y campos de origen](map-entities.md), [eliminar registros duplicados](remove-duplicates.md), especificar reglas para [condiciones coincidentes](match-entities.md) y definir los [campos a incluir en los perfiles de clientes unificados](merge-entities.md).
+ La unificación de datos le permite unificar orígenes de datos que alguna vez fueron dispares en un solo maestro conjunto de datos que proporciona una vista unificada de esos datos. Los datos se pueden unificar en una sola entidad o en varias entidades. Primero, debe [seleccionar entidades y campos de origen](map-entities.md), [eliminar registros duplicados](remove-duplicates.md), especificar reglas para [condiciones coincidentes](match-entities.md) y definir los [campos a incluir en los perfiles de clientes unificados](merge-entities.md).
 
 Para obtener más información, consulte [Información general de unificación de datos](data-unification.md).
 
@@ -74,7 +102,7 @@ Para más información, vea [Usar el generador de medidas para crear medidas des
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Consolidación de la documentación de Customer Insights
 
-Revisamos nuestros artículos de documentación y eliminamos las menciones de información de participación y capacidades de información de audiencia. En el futuro, nos referiremos constantemente al nombre del producto Customer Insights cuando escribamos sobre las funciones principales de la aplicación. Este cambio también conduce a una reestructuración significativa de la tabla de contenido, la estructura de URL y las rutas de archivo en el depósito de documentación subyacente. Todos sus marcadores o enlaces existentes continúan funcionando y redirigen a las URL actualizadas.
+Revisamos nuestros artículos de documentación y eliminamos las menciones de información de participación y capacidades de información de público. En el futuro, nos referiremos constantemente al nombre del producto Customer Insights cuando escribamos sobre las funciones principales de la aplicación. Este cambio también conduce a una reestructuración significativa de la tabla de contenido, la estructura de URL y las rutas de archivo en el depósito de documentación subyacente. Todos sus marcadores o enlaces existentes continúan funcionando y redirigen a las URL actualizadas.
 
 Si desea hacernos saber cómo percibe ese cambio o detecta algo que no funciona como se esperaba, díganoslo [enviando comentarios para esta página](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
@@ -111,7 +139,7 @@ Para obtener más información, consulte [Exportar segmentos a Iterable (versió
 
 Cambiar las API en los servicios conectados genera actualizaciones para que los conectores funcionen de manera fiable y sin problemas. Hemos publicado algunas actualizaciones para las exportaciones a los servicios de Marketo y Google Ads:
 
-- Google Ads: la nueva versión del conector de exportación de Google Ads simplifica la experiencia de autenticación y ahora le permite crear nuevas audiencias de Google Ads automáticamente. 
+- Google Ads: la nueva versión del conector de exportación de Google Ads simplifica la experiencia de autenticación y ahora le permite crear nuevos públicos de Google Ads automáticamente. 
 - Marketo: la nueva versión del conector de exportación de Marketo brinda soporte para el id. de Marketo, lo que le permite evitar la duplicación de datos, actualizar registros existentes y crear nuevos registros en Marketo. 
 
 ## <a name="february-2022-updates"></a>Actualizaciones de febrero de 2022
