@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207112"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245670"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -67,7 +67,7 @@ Seleccione un origen de datos para ver las acciones disponibles.
 
 Los orígenes de datos se pueden actualizar de forma automática o manualmente, a petición. [Orígenes de datos locales](connect-power-query.md#add-data-from-on-premises-data-sources) actualice en sus propios horarios que se configuran durante la ingesta de datos. Para los orígenes de datos adjuntos, la ingestión de datos consume los últimos datos disponibles de ese origen de datos.
 
-Vaya a **Administración** > **Sistema** > [**Calendario**](system.md#schedule-tab) para configurar actualizaciones programadas por el sistema de sus orígenes de datos ingeridos.
+Vaya a **Administración** > **Sistema** > [**Calendario**](schedule-refresh.md) para configurar actualizaciones programadas por el sistema de sus orígenes de datos ingeridos.
 
 Para actualizar un origen de datos a petición:
 

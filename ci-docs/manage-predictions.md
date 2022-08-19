@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081924"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245486"
 ---
 # <a name="manage-predictions"></a>Administrar predicciones
 
@@ -58,7 +58,7 @@ Las siguientes columnas del informe contienen información útil para mejorar lo
 
 ## <a name="refresh-a-prediction"></a>Actualizar una predicción
 
-Las predicciones se actualizarán automáticamente en la misma [programación que actualizan sus datos](system.md#schedule-tab) definida en la configuración. También puede actualizarlas manualmente.
+Las predicciones se actualizarán automáticamente en la misma [programación que actualizan sus datos](schedule-refresh.md) definida en la configuración. También puede actualizarlas manualmente.
 
 1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
 

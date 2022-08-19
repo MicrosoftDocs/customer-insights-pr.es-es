@@ -1,19 +1,19 @@
 ---
 title: Enriquecer los perfiles de los clientes con datos de ubicación de Azure Maps (versión preliminar)
 description: Información general sobre el enriquecimiento propio con Azure Maps.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052628"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238063"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Enriquecer los perfiles de los clientes con datos de ubicación de Azure Maps (versión preliminar)
 
@@ -35,14 +35,9 @@ Debe ser un [Administrador](permissions.md#admin) en Customer Insights y tener u
 
 1. Introduzca un nombre para la conexión y una clave de API de Azure Maps válida.
 
-1. Revise y proporcione su consentimiento para [Privacidad y cumplimiento de datos](#data-privacy-and-compliance) seleccionando **Estoy de acuerdo**.
+1. Revise [Privacidad y cumplimiento de datos](connections.md#data-privacy-and-compliance) y seleccione **Acepto**.
 
 1. Seleccione **Verificar** para validar la configuración y luego seleccionar **Guardar**.
-
-### <a name="data-privacy-and-compliance"></a>Privacidad y cumplimiento de datos
-
-Al habilitar Dynamics 365 Customer Insights para transmitir datos a Azure Maps, permite la transferencia de datos fuera del límite de cumplimiento para Dynamics 365 Customer Insights, incluyendo los datos potencialmente confidenciales, como los datos personales. Microsoft transferirá dichos datos según sus instrucciones, pero usted es responsable de garantizar que Azure Maps cumpla con las obligaciones de privacidad o seguridad que pueda tener. Para obtener más información, vaya a [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Su administrador de Dynamics 365 Customer Insights puede quitar este enriquecimiento en cualquier momento para dejar de usar esta funcionalidad.
 
 ## <a name="configure-the-enrichment"></a>Configurar el enriquecimiento
 

@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administración
   items:
-    - name: Definir la configuración del sistema
-      href: system.md
-    - name: Configurar ajustes de seguridad
-      href: security-overview.md
     - name: Asignar permisos de usuario
       href: permissions.md
     - name: Traiga su propia Key Vault
       href: use-azure-key-vault.md
+    - name: Configurar ajustes de seguridad
+      href: security-overview.md
     - name: Exportar registros de diagnóstico
       href: diagnostics.md
-    - name: Información general sobre conexiones
+    - name: Administrar conexiones
       href: connections.md
+    - name: Programar actualización del sistema
+      href: schedule-refresh.md
+    - name: Ver configuración del sistema
+      href: system.md
 - name: API
   items:
     - name: Trabajar con API

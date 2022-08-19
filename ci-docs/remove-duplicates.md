@@ -2,7 +2,7 @@
 title: Eliminar duplicados antes de unificar datos
 description: El segundo paso en el proceso de unificación es seleccionar qué registro guardar cuando se encuentran duplicados.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139450"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213648"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Eliminar duplicados antes de unificar datos
 
-Este paso en la unificación le permite configurar reglas para manejar registros duplicados dentro de una entidad. *Desduplicación*: Identifica registros duplicados y los combina en un solo registro. Los registros de origen se vinculan al registro combinado con id. alternativos. Si no se configuran esas reglas, se aplican las reglas definidas por el sistema.
+Este paso opcional en la unificación le permite configurar reglas para eliminar registros duplicados **dentro** de una entidad. La desduplicación identifica múltiples registros para un cliente y selecciona el mejor registro para conservar (según las preferencias básicas de combinación) o combina los registros en uno (según las preferencias avanzadas de combinación). Los registros de origen se vinculan al registro combinado con id. alternativos. Si no se configuran esas reglas, se aplican las reglas definidas por el sistema.
+
+## <a name="default-deduplication"></a>Desduplicación predeterminada
+
+Las reglas definidas por el sistema se aplican si no se han agregado reglas de desduplicación.
+
+- La clave principal es la desduplicación.
+  Para cualquier registro con la misma clave principal, el registro **Más lleno** (el que tiene menos valores nulos) es el ganador.
+- Cualquier regla de coincidencia entre entidades se aplica a la entidad.
+  Por ejemplo: en el paso de coincidencia, si la entidad A se compara con la entidad B en *FullName* y *DateofBirth*, entonces la entidad A también se desduplica por *FullName* y *DateofBirth*. Como *FullName* y *DateofBirth* son claves válidas para identificar un cliente en la entidad A, estas claves también son válidas para identificar clientes duplicados en la entidad A.
 
 ## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versión preliminar)
 

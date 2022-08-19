@@ -1,7 +1,7 @@
 ---
-title: Reenvío de registros en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)
+title: Exportar registros de diagnóstico (versión preliminar)
 description: Aprenda a enviar registros a Microsoft Azure Monitor.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052674"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245946"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Reenvío de registros en Dynamics 365 Customer Insights con Azure Monitor (versión preliminar)
+# <a name="export-diagnostic-logs-preview"></a>Exportar registros de diagnóstico (versión preliminar)
 
-Dynamics 365 Customer Insights proporciona una integración directa con Azure Monitor. Los registros de recursos de Azure Monitor le permiten supervisar y enviar registros a [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) o transmitirlos a [centros de eventos de Azure](https://azure.microsoft.com/services/event-hubs/).
+Reenviar registros de Customer Insights con Azure Monitor. Los registros de recursos de Azure Monitor le permiten supervisar y enviar registros a [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) o transmitirlos a [centros de eventos de Azure](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights envía los siguientes registros de eventos:
 
 - **Eventos de auditoría**
-  - **APIEvent** - permite el seguimiento de cambios realizado a través de la IU de Dynamics 365 Customer Insights.
+  - **APIEvent**: permite el seguimiento de cambios realizado a través de la IU de Dynamics 365 Customer Insights.
 - **Eventos operativos**
-  - **WorkflowEvent** - El flujo de trabajo le permite configurar [Fuentes de datos](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) y finalmente [exportar](export-destinations.md) datos en otros sistemas. Todos esos pasos se pueden realizar individualmente (por ejemplo, desencadenar una única exportación). También se puede ejecutar orquestado (por ejemplo, actualización de datos de fuentes de datos que activa el proceso de unificación, que generará enriquecimientos y, una vez hecho esto, exportará los datos a otro sistema). Para obtener más información, vea el [esquema WorkflowEvent](#workflow-event-schema)..
-  - **APIEvent** - todas las llamadas API a la instancia del cliente para Dynamics 365 Customer Insights. Para obtener más información, vea el [esquema APIEvent](#api-event-schema)..
+  - **WorkflowEvent**: le permite configurar [orígenes de datos](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) y [exportar](export-destinations.md) datos en otros sistemas. Estos pasos se pueden realizar individualmente (por ejemplo, desencadenar una única exportación). También se puede ejecutar orquestado (por ejemplo, actualización de datos de orígenes de datos que activa el proceso de unificación, que generará enriquecimientos y, una vez hecho esto, exportará los datos a otro sistema). Para obtener más información, vea el [esquema WorkflowEvent](#workflow-event-schema)..
+  - **APIEvent**: envía todas las llamadas API a la instancia del cliente para Dynamics 365 Customer Insights. Para obtener más información, vea el [esquema APIEvent](#api-event-schema)..
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configurar los valores de diagnóstico
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-Para configurar diagnósticos en Customer Insights, se deben cumplir los siguientes requisitos previos:
-
-- Debe disponer de una [suscripción activa de Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Tiene permisos de [administrador](permissions.md#admin) en Customer Insights.
-- Tiene el rol de **Colaborador** y **Administrador de acceso de usuario** en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Data Lake Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Para obtener más información, vea [Agregar o quitar asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal). Este permiso es necesario al configurar los ajustes de diagnóstico en Customer Insights y se puede cambiar después de una instalación correcta.
+- Una [suscripción de Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) activa.
+- Permisos de [administrador](permissions.md#admin) en Customer Insights.
+- Tiene el rol de [Colaborador y Administrador de acceso de usuario](/azure/role-based-access-control/role-assignments-portal) en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Data Lake Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Este permiso es necesario al configurar los ajustes de diagnóstico en Customer Insights, pero se puede cambiar después de una instalación correcta.
 - Los [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Centro de eventos de Azure o Azure Log Analytics se cumplieron.
-- Tiene al menos el rol **Lector** en el grupo de recursos al que pertenece el recurso.
+- Al menos el rol **Lector** en el grupo de recursos al que pertenece el recurso.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configurar diagnósticos con Azure Monitor
 
-1. En Customer Insights, seleccione **Sistema** > **Diagnóstico** para ver los destinos de diagnóstico configurados en esta instancia.
+1. En Customer Insights, vaya a **Administración** > **Sistema** y seleccione la pestaña **Diagnósticos**.
 
 1. Seleccione **Agregar destino**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Conexión de diagnóstico](media/diagnostics-pane.png "Conexión de diagnóstico")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Conexión de diagnóstico":::
 
 1. Proporcione un nombre en el campo **Nombre del destino de los diagnósticos**.
 
-1. Elija el **Inquilino** de la suscripción de Azure con el recurso de destino y seleccione **Iniciar sesión**.
-
 1. Seleccione el **Tipo de recurso** (Cuenta de almacenamiento, Centro de eventos o análisis de registros).
 
-1. Seleccione la **Suscripción** para el recurso de destino.
+1. Seleccione **Suscripción**, **grupo de recursos** y **Recurso** para el recurso de destino. Consulte [Configuración en el recurso de destino](#configuration-on-the-destination-resource) para obtener permisos e información de registro.
 
-1. Seleccione el **grupo de recursos** para el recurso de destino.
-
-1. Seleccione el **recurso**.
-
-1. Confirme la declaración de **Privacidad y cumplimiento de datos**.
+1. Revise [Privacidad y cumplimiento de datos](connections.md#data-privacy-and-compliance) y seleccione **Acepto**.
 
 1. Seleccione **Conectarse al sistema** para conectarse al recurso de destino. Los registros comienzan a aparecer en el destino después de 15 minutos, si la API está en uso y genera eventos.
 
-### <a name="remove-a-destination"></a>Quitar un destino
+## <a name="configuration-on-the-destination-resource"></a>Configuración en el recurso de destino
 
-1. Vaya a **Sistema** > **Diagnóstico**.
+Según su elección del tipo de recurso, se aplicarán automáticamente los siguientes cambios:
+
+### <a name="storage-account"></a>Storage account
+
+El director de servicio Customer Insights obtiene el permiso **Cuenta de almacenamiento colaborador** sobre el recurso seleccionado y crea dos contenedores bajo el espacio de nombres seleccionado:
+
+- `insight-logs-audit` que contiene **eventos de auditoría**
+- `insight-logs-operational` que contiene **eventos operativos**
+
+### <a name="event-hub"></a>Centro de eventos
+
+El director de servicio Customer Insights obtiene el permiso **Propietario de datos de centros de eventos de Azure** sobre el recurso seleccionado y crea dos centros de eventos bajo el espacio de nombres seleccionado:
+
+- `insight-logs-audit` que contiene **eventos de auditoría**
+- `insight-logs-operational` que contiene **eventos operativos**
+
+### <a name="log-analytics"></a>Log Analytics
+
+El director de servicio Customer Insights obtiene el permiso **Log Analytics colaborador** sobre el recurso. Los registros están disponibles en **Registros** > **Tablas** > **Gestión de registros** en el espacio de trabajo de Log Analytics seleccionado. Amplíe la solución **Gestión de registros** y localice las tablas `CIEventsAudit` y `CIEventsOperational`.
+
+- `CIEventsAudit` que contiene **eventos de auditoría**
+- `CIEventsOperational` que contiene **eventos operativos**
+
+Bajo la ventana **Consultas**, expanda la solución **Auditoría** y localice las consultas de ejemplo proporcionadas al buscar `CIEvents`.
+
+## <a name="remove-a-diagnostics-destination"></a>Eliminar un destino de diagnóstico
+
+1. Vaya a **Administración** > **Sistema** y seleccione la pestaña **Diagnósticos**.
 
 1. Seleccione el destino de diagnóstico en la lista.
 
+   > [!TIP]
+   > Eliminar el destino detiene el reenvío de registros, pero no elimina el recurso en la suscripción de Azure. Para eliminar el recurso en Azure, seleccione el enlace en la columna **Comportamiento** para abrir el portal de Azure para el recurso seleccionado y eliminarlo allí. Después elimine el destino de diagnóstico.
+
 1. En la columna **Acciones**, seleccion el icono **Eliminar**.
 
-1. Confirme la eliminación para detener el reenvío de registros. El recurso de la suscripción de Azure no se eliminará. Puede seleccionar el enlace en la columna **Comportamiento** para abrir el portal de Azure para el recurso seleccionado y eliminarlo allí.
+1. Confirme la eliminación para eliminar el destino y detener el reenvío de registros.
 
 ## <a name="log-categories-and-event-schemas"></a>Categorías de registro y esquemas de eventos
 
@@ -89,36 +110,9 @@ Customer Insights proporciona dos categorías:
 - **Eventos de auditoría**: [Eventos de API](#api-event-schema) para rastrear los cambios de configuración en el servicio. Las operaciones `POST|PUT|DELETE|PATCH` entran en esta categoría.
 - **Eventos operativos**: [eventos de API](#api-event-schema) o [eventos de flujo de trabajo](#workflow-event-schema) generado durante el uso del servicio.  Por ejemplo, las solicitudes `GET` o los eventos de ejecución de un flujo de trabajo.
 
-## <a name="configuration-on-the-destination-resource"></a>Configuración en el recurso de destino
-
-Según su elección del tipo de recurso, se aplicarán automáticamente los siguientes pasos:
-
-### <a name="storage-account"></a>Storage account
-
-El director de servicio Customer Insights obtiene el permiso **Cuenta de almacenamiento colaborador** sobre el recurso seleccionado y crea dos contenedores bajo el espacio de nombres seleccionado:
-
-- `insight-logs-audit` que contiene **eventos de auditoría**
-- `insight-logs-operational` que contiene **eventos operativos**
-
-### <a name="event-hub"></a>Centro de eventos
-
-El director de servicio Customer Insights obtiene el permiso **Propietario de datos de centros de eventos de Azure** sobre el recurso seleccionado y creará dos centros de eventos bajo el espacio de nombres seleccionado:
-
-- `insight-logs-audit` que contiene **eventos de auditoría**
-- `insight-logs-operational` que contiene **eventos operativos**
-
-### <a name="log-analytics"></a>Log Analytics
-
-El director de servicio Customer Insights obtiene el permiso **Log Analytics colaborador** sobre el recurso. Los registros estarán disponibles en **Registros** > **Tablas** > **Gestión de registros** en el espacio de trabajo de Log Analytics seleccionado. Amplíe la solución **Gestión de registros** y localice las tablas `CIEventsAudit` y `CIEventsOperational`.
-
-- `CIEventsAudit` que contiene **eventos de auditoría**
-- `CIEventsOperational` que contiene **eventos operativos**
-
-Bajo la ventana **Consultas**, expanda la solución **Auditoría** y localice las consultas de ejemplo proporcionadas al buscar `CIEvents`.
-
 ## <a name="event-schemas"></a>Esquemas de eventos
 
-Los eventos de API y los eventos de flujo de trabajo tienen una estructura común y detalles en los que difieren, consulte [Esquema de eventos de API](#api-event-schema) o [esquema de eventos de flujo de trabajo](#workflow-event-schema).
+Los eventos de API y los eventos de flujo de trabajo tienen una estructura común, pero con algunas diferencias. Para obtener más información, consulte [esquema de eventos de API](#api-event-schema) o [esquema de eventos de flujo de trabajo](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Esquema de eventos de API
 
@@ -220,7 +214,6 @@ El flujo de trabajo contiene varios pasos. [Ingerir orígenes de datos](data-sou
 | `durationMs`    | Largo      | Opcionales          | Duración de la operación en milisegundos.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opcionales          | Objeto JSON con más propiedades para la categoría particular de eventos.                                                                                        | Vea la subsección [Propiedades del flujo de trabajo](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Necesario          | El nivel de gravedad del evento.                                                                                                                                  | `Informational`, `Warning` o `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Esquema de propiedades de flujo de trabajo
 
@@ -247,3 +240,5 @@ Los eventos de flujo de trabajo tienen las siguientes propiedades.
 | `properties.additionalInfo.AffectedEntities` | No       | Sí  | Opcional. Para OperationType `Export` solo. Contiene una lista de entidades configuradas en la exportación.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Sí  | Opcional. Para OperationType `Export` solo. Mensaje detallado para la exportación.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Sí  | Opcional. Para OperationType `Segmentation` solo. Indica el número total de miembros que tiene el segmento.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

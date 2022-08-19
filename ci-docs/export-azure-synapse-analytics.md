@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196415"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259865"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportación de datos a Azure Synapse Analytics (versión preliminar)
 
@@ -24,7 +24,7 @@ Azure Synapse es un servicio de análisis que acelera el tiempo para obtener con
 > [!NOTE]
 > Asegúrese de configurar todas las **asignaciones de roles** como se describe.
 
-- En Customer Insights, su cuenta de usuario de Azure Active Directory (AD) debe tener un [rol de administrador](permissions.md#assign-roles-and-permissions).
+- En Customer Insights, su cuenta de usuario de Azure Active Directory (AD) debe tener un [rol de administrador](permissions.md#add-users).
 
 En Azure:
 
@@ -39,6 +39,8 @@ En Azure:
 - La *[identidad administrada del Azure Synapse workspace](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* tiene permisos de **Colaborador de datos de Storage Blob** en la cuenta de Azure Data Lake Storage Gen2 donde se ubican los datos y están vinculados al espacio de trabajo de Azure Synapse. Más información sobre [Uso del portal de Azure para asignar un rol de Azure para acceder a datos de blobs y colas](/azure/storage/common/storage-auth-aad-rbac-portal) y [Permisos de colaborador de datos de Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - En Azure Synapse workspace, la *entidad de servicio para Customer Insights* tiene [rol asignado](/azure/synapse-analytics/security/how-to-set-up-access-control) de **Administrador de Synapse**.
+
+- Si su entorno de Customer Insights almacena datos en su [propio Azure Data Lake Storage](own-data-lake-storage.md), el usuario que establece la conexión a Azure Synapse Analytics necesita al menos el rol de **Lector** incorporado en la cuenta de Data Lake Storage. Para más información, vea [Asignar roles de Azure mediante el portal de Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Configurar conexiones para Azure Synapse
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194989"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245348"
 ---
 # <a name="exports-preview-overview"></a>Información general del exportaciones (versión preliminar)
 
@@ -79,7 +79,7 @@ Seleccione una exportación para ver las acciones disponibles.
 
 ## <a name="schedule-and-run-exports"></a>Programar y ejecutar exportaciones
 
-Cada exportación que configure tiene un programa de actualización. Durante una actualización, el sistema busca datos nuevos o actualizados para incluirlos en una exportación. De forma predeterminada, las exportaciones se ejecutan como parte de cada [actualización programada del sistema](system.md#schedule-tab). Puede personalizar el programa de actualización o desactivarlo para ejecutar exportaciones manualmente.
+Cada exportación que configure tiene un programa de actualización. Durante una actualización, el sistema busca datos nuevos o actualizados para incluirlos en una exportación. De forma predeterminada, las exportaciones se ejecutan como parte de cada [actualización programada del sistema](schedule-refresh.md). Puede personalizar el programa de actualización o desactivarlo para ejecutar exportaciones manualmente.
 
 Los programas de exportación dependen del estado de su entorno. Si hay actualizaciones en curso en [dependencias](system.md#refresh-processes) cuando debe comenzar una exportación programada, el sistema primero completará las actualizaciones y luego ejecutará la exportación. La columna **Actualizado** muestra cuándo se actualizó por última vez una exportación.
 

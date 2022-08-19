@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142840"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245624"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cómo crear un nuevo entorno
 
@@ -48,7 +48,7 @@ En el paso **Información básica**, elija si desea crear un entorno desde cero 
 
 Especifique los detalles siguientes:
 
-- **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo.
+- **Nombre**: el nombre para este entorno. Este campo ya se ha cumplimentado si ha copiado un entorno existente, pero puede modificarlo. Si tiene más de un entorno de trabajo, proporcione a cada uno un nombre fácilmente identificable.
 - **Elija su negocio**: Elija el público principal para el nuevo entorno. Puede trabajar con consumidores individuales (B2C) o [cuentas empresariales](work-with-business-accounts.md) (B2B). Si su organización hace negocios principalmente con individuos, como un minorista o una cafetería, elija consumidores individuales. En caso de que su principal público sean otras empresas, como un fabricante de automóviles o una papelera, elija cuentas comerciales.
 - **Tipo**: seleccione si desea crear un entorno de producción o de espacio aislado. Los entornos de espacio aislado no permiten la actualización de datos programada y están pensados para la implementación previa y las pruebas. Los entornos de espacio aislado utilizan el mismo público principal que el entorno de producción que está seleccionado actualmente.
 - **Región**: la región en la que se implementa y hospeda el servicio. Para [usar su propia cuenta de Azure Data Lake Storage](own-data-lake-storage.md) o [conectarse a una organización de Microsoft Dataverse existente](customer-insights-dataverse.md), el entorno de Customer Insights debe estar en la misma región.

@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053901"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245900"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visión general del enriquecimiento de datos (vista previa)
 
@@ -76,7 +76,7 @@ Seleccione el enriquecimiento para ver las acciones disponibles.
 - **Vea** los detalles de enriquecimiento con el número de perfiles de clientes enriquecidos.
 - **Edite** la configuración de enriquecimiento.
 - [**Ejecutar**](#run-or-refresh-enrichments) el enriquecimiento para actualizar los perfiles de los clientes con los datos más recientes. Ejecute o desactive varios enriquecimientos a la vez seleccionándolos en la lista.
-- **Activar** o **Desactivar** un enriquecimiento. Los enriquecimientos inactivos no se actualizarán durante una [actualización programada](system.md#schedule-tab).
+- **Activar** o **Desactivar** un enriquecimiento. Los enriquecimientos inactivos no se actualizarán durante una [actualización programada](schedule-refresh.md).
 - **Eliminar** el enriquecimiento.
 
 También puede crear [segmentos](segments.md) o [medidas](measures.md) de enriquecimientos.
@@ -85,7 +85,7 @@ También puede crear [segmentos](segments.md) o [medidas](measures.md) de enriqu
 
 Una vez que se ejecutan, los enriquecimientos se pueden actualizar en un programa automático o actualizarse manualmente a pedido.
 
-1. Para actualizar manualmente uno o más enriquecimientos, selecciónelos y elija **Ejecutar**. A [programar una actualización automática](system.md#schedule-tab), vaya a **Administración** > **Sistema** > **Programar**. El tiempo de procesamiento depende del tamaño de los datos de sus clientes.
+1. Para actualizar manualmente uno o más enriquecimientos, selecciónelos y elija **Ejecutar**. A [programar una actualización automática](schedule-refresh.md), vaya a **Administración** > **Sistema** > **Programar**. El tiempo de procesamiento depende del tamaño de los datos de sus clientes.
 
 1. Opcionalmente, [vea el progreso del proceso de enriquecimiento](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Puede encontrar detalles sobre el procesamiento de un enriquecimiento, incluido 
 1. En el panel **Detalles de progreso**, expanda la sección **Enriquecimientos**.
 1. En el enriquecimiento cuyo progreso desea ver, seleccione **Ver detalles**.
 1. En el panel **Detalles de la tarea**, seleccione **Mostrar detalles** para ver los procesos que intervienen en la actualización del enriquecimiento y su estado.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Ver los resultados del enriquecimiento
 

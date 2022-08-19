@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011954"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246222"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Usar la propia cuenta de Azure Data Lake Storage Gen2
 
@@ -37,7 +37,7 @@ Cuando cree un nuevo entorno, asegúrese de que exista la cuenta de Data Lake St
 1. Seleccione cómo **Conectarse al almacenamiento**. Puede elegir entre una opción basada en recursos y una opción basada en suscripción para la autenticación. Para obtener más información, consulte [Conectarse a una cuenta de Azure Data Lake Storage mediante el uso de una entidad de servicio de Azure](connect-service-principal.md).
    - Para la **Suscripción a Azure**, elija **Suscripción**, **Grupo de recursos** y **Cuenta de almacenamiento** que contiene el contenedor de `customerinsights`.
    - Para la **Clave de cuenta**, proporcione el **Nombre de cuenta** y la **Clave de cuenta** para la cuenta de Data Lake Storage. El uso de este método de autenticación implica que se le informe si su organización rota las claves. Debe [actualizar la configuración del entorno](manage-environments.md#edit-an-existing-environment) con la nueva clave cuando se gira.
-1. Elija si desea usar Azure Private Link para conectarse a la cuenta de almacenamiento y [crear la conexión a Private Link](security-overview.md#private-links-tab) con un proceso de dos pasos.
+1. Elija si desea usar Azure Private Link para conectarse a la cuenta de almacenamiento y [crear la conexión a Private Link](security-overview.md#set-up-an-azure-private-link) con un proceso de dos pasos.
 
 Cuando se completan procesos del sistema, como ingestión de datos, el sistema crea las carpetas correspondientes en la cuenta de almacenamiento. Los archivos de datos y los archivos *model.json* se crean y se agregan a carpetas cuyo nombre se basa en el del proceso.
 
