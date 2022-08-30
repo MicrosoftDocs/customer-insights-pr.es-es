@@ -1,7 +1,7 @@
 ---
 title: Información general de los segmentos
 description: Descripción general de los segmentos y cómo crearlos y gestionarlos.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246314"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304816"
 ---
 # <a name="segments-overview"></a>Información general de los segmentos
 
 Los segmentos le permite agrupar a los clientes según los atributos demográficos, transaccionales o de comportamiento. Puede usar segmentos para dirigir a los clientes campañas promocionales, actividades de ventas y acciones de atención al cliente con el fin de lograr sus objetivos empresariales.
 
-Los perfiles de clientes que coinciden con los filtros de una definición de segmento se denominan *miembros* de un segmento. Se aplican algunos [límites de servicio](/dynamics365/customer-insights/service-limits).
+Los perfiles de clientes o contactos que coinciden con los filtros de una definición de segmento se denominan *miembros* de un segmento. Se aplican algunos [límites de servicio](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Crear un segmento
 
@@ -41,13 +41,19 @@ Elija cómo crear una un segmento según su objetivo de público.
 
 # <a name="business-accounts-b-to-b"></a>[Cuentas empresariales (B2B)](#tab/b2b)
 
-- Segmentos sencillos o complejos con el generador de segmentos: [Crear el suyo propio](segment-builder.md)
+Segmento de cuentas o segmento de contactos (vista previa) con generador de segmentos: [Crear el suyo propio](segment-builder.md)
+
+> [!NOTE]
+> La mayoría de los destinos de exportación requieren información de contacto para fines de marketing. Por lo tanto, cree segmentos de contactos para usar en esas exportaciones.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Administrar segmentos existentes
 
-Vaya a la página **Segmentos** para ver los segmentos que creó, su estado, el número de miembros y la última vez que se actualizaron los datos. Puede ordenar la lista de segmentos por cualquier columna o use el cuadro de búsqueda para encontrar el segmento que desea administrar.
+Vaya a la página **Segmentos** para ver los segmentos que creó, su estado y estado, y la última vez que se actualizaron los datos. Puede ordenar la lista de segmentos por cualquier columna o use el cuadro de búsqueda para encontrar el segmento que desea administrar.
+
+> [!TIP]
+> En entornos B a B, la columna **Tipo de audiencia** identifica si un segmento se basa en cuentas o contactos.
 
 Seleccione un segmento para ver las acciones disponibles.
 
@@ -82,7 +88,7 @@ La parte inferior contiene una lista de los miembros del segmento.
 > [!NOTE]
 > Los campos que aparecen en esta lista se basan en los atributos de las entidades de su segmento.
 >
->La lista es una vista previa de los miembros del segmento coincidentes y muestra los primeros 100 registros de su segmento para que pueda evaluarlo rápidamente y revisar sus definiciones si es necesario. Para ver todos los registros coincidentes, [exporte el segmento](export-destinations.md).
+> La lista es una vista previa de los miembros del segmento coincidentes y muestra los primeros 100 registros de su segmento para que pueda evaluarlo rápidamente y revisar sus definiciones si es necesario. Para ver todos los registros coincidentes, seleccione **Ver más**, que abre la página [**Entidades**](entities.md) o [exporte el segmento](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Actualizar segmentos
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188114"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303804"
 ---
 # <a name="view-customer-profiles"></a>Ver perfiles de clientes
 
@@ -78,7 +78,7 @@ Los detalles del cliente incluyen:
 **Mosaico de perfil de cliente**: muestra los diferentes valores de la entidad *Cliente* unificada. Si un campo no tiene ningún valor para el perfil de cliente seleccionado, no se mostrará excepto por el campo dirección. El mosaico está estructurado en secciones:
 
 - La primera sección muestra un conjunto predefinido de campos seguidos de todos los campos que forman parte del índice de Buscar y filtrar. Todos los campos relacionados con la dirección se combinan en una sola línea, que aparece incluso si el perfil no tiene información de dirección.
-- **Contactos para este cliente** aparece en entornos para cuentas comerciales. Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
+- **Contactos para este cliente** visualización en entornos para cuentas comerciales (B-to-B). Cada contacto se muestra con sus campos. Los campos vacíos están ocultos.
 - **Campos adicionales** muestra los campos restantes del cliente seleccionado, excepto los id.
 - **Id.** enumera todos los id. por su nombre de entidad correspondiente. Los campos se identifican como id. por su semántica.
 

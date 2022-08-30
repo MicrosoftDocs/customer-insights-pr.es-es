@@ -1,9 +1,9 @@
 ---
-title: Actividades del cliente
-description: Defina las actividades de los clientes y visualícelas en una línea de tiempo en los perfiles de los clientes.
-ms.date: 07/22/2022
+title: Actividades de contacto comercial o de clientes
+description: Defina las actividades de los clientes o contacto comercial y visualícelas en una línea de tiempo en los perfiles de los clientes.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188160"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304126"
 ---
-# <a name="customer-activities"></a>Actividades del cliente
+# <a name="customer-or-business-contact-activities"></a>Actividades de contacto comercial o de clientes
 
-Las actividades del cliente son acciones o eventos realizados por los clientes. Por ejemplo, las transacciones, la duración de las llamadas de asistencia, las reseñas de sitios web, las compras o las devoluciones. Estas actividades están contenidas en uno o más orígenes de datos. Con Customers Insights, consolide las actividades de sus clientes a partir de estos [orígenes de datos](data-sources.md) y asócielas con perfiles de clientes. Estas actividades aparecen cronológicamente en una escala de tiempo del perfil de cliente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento de tarjeta de cliente](customer-card-add-in.md).
+Las actividades del cliente son acciones o eventos realizados por clientes o contactos comerciales. Por ejemplo, las transacciones, la duración de las llamadas de asistencia, las reseñas de sitios web, las compras o las devoluciones. Estas actividades están contenidas en uno o más orígenes de datos. Con Customers Insights, consolide las actividades de sus clientes a partir de estos [orígenes de datos](data-sources.md) y asócielas con perfiles de clientes. Estas actividades aparecen cronológicamente en una escala de tiempo del perfil de cliente. Incluya la escala de tiempo en las aplicaciones de Dynamics 365 con la solución [Complemento de tarjeta de cliente](customer-card-add-in.md).
 
-## <a name="define-an-activity"></a>Definir una actividad
+## <a name="define-a-customer-activity"></a>Defina una actividad de cliente
 
 Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe incluir en una escala de tiempo del cliente. El control **Agregar actividad** está deshabilitado si no se encuentra esa entidad.
 
@@ -38,9 +38,9 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe i
 
 1. En el paso **Datos de actividad**, introduzca la siguiente información:
 
-   - **Nombre de la actividad**: nombre de su actividad.
-   - **Entidad de la actividad**: una entidad que incluye datos transaccionales o de actividad.
-   - **Clave principal**: campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
+   - **Nombre de la actividad**: seleccione un nombre para su actividad.
+   - **Entidad de actividad**: seleccione una entidad que incluya datos transaccionales o de actividad.
+   - **Clave principal**: seleccione el campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure los datos de la actividad con un nombre, entidad y clave principal.":::
 
@@ -48,9 +48,9 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe i
 
 1. En el paso **Relación**, seleccione **Agregar relación** para conectar sus datos de actividad a su registro de cliente correspondiente. Este paso visualiza la conexión entre entidades.  
 
-   - **Clave externa de entidad**: campo de su entidad de actividad que se utilizará para establecer una relación con otra entidad.
+   - **Clave externa**: campo externo de su entidad Actividad que se utilizará para establecer una relación con otra entidad.
    - **Nombre de entidad de destino**: entidad de cliente de origen correspondiente con la que estará relacionada la entidad de actividad. Solo puede relacionar entidades de clientes de origen que se utilizan en el proceso de unificación de datos.
-   - **Nombre de la relación**: nombre que identifica la relación entre entidades. Si ya existe una relación entre esta entidad de actividad y la entidad de cliente de origen seleccionada, el nombre de la relación es de solo lectura.
+   - **Nombre de la relación**: si ya existe una relación entre esta entidad de actividad y la entidad de cliente de origen seleccionada, el nombre de la relación estará en modo de solo lectura. Si no existe tal relación, se creará una nueva relación con el nombre que proporcione en este cuadro.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina la relación de entidad.":::
 
@@ -90,7 +90,7 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe i
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Administrar actividades existentes
+## <a name="manage-existing-customer-activities"></a>Administrar actividades de cliente existentes
 
 Vaya a **Datos** > **Actividades** para ver sus actividades guardadas, su entidad de origen, el tipo de actividad y si están incluidas en la escala de tiempo del cliente. Puede ordenar la lista de actividades por cualquier columna o usar el cuadro de búsqueda para encontrar la actividad que desea administrar.
 
@@ -116,9 +116,43 @@ Seleccione una actividad para ver las acciones disponibles.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilice el panel de filtro para configurar las condiciones del filtro.":::
 
-1. Para quitar filtros, seleccione **Borrar filtros** o seleccione **Filtro** y borre la casilla del filtro.
-
 > [!NOTE]
 > Los filtros de actividad se eliminan cuando abandona un perfil de cliente. Tiene que aplicarlos cada vez que abra un perfil de cliente.
+
+## <a name="define-a-contact-activity"></a>Defina una actividad de contacto
+
+Para cuentas comerciales (B-to-B), utilice una entidad *ContactProfile* para capturar las actividades de los contactos. Puede ver en el cronograma de actividad de una cuenta qué contacto fue responsable de cada actividad. La mayoría de los pasos siguen la configuración de mapeo de actividades de cliente.
+
+   > [!NOTE]
+   > Para definir una actividad a nivel de contacto, una entidad *ContactProfile* debe ser creada, ya sea como un [perfil de contacto unificado](data-unification-contacts.md) o a través de [mapeo semántico](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Debe tener los atributos **AccountID** y **ContactID** para cada registro dentro de los datos de su actividad.
+  
+1. Vaya a **Datos** > **Actividades**.
+
+1. Seleccione **Agregar actividad**.
+
+1. Nombre la actividad, seleccione la entidad de actividad de origen y seleccione la clave principal de la entidad de actividad.
+
+1. En el paso **Relaciones**, cree una relación indirecta entre los datos de la fuente de su actividad y las cuentas, utilizando sus datos de contacto como una entidad intermediaria. Para obtener más información, vea [rutas de relaciones directas e indirectas](relationships.md#relationship-paths).
+   - Relación de ejemplo para una actividad llamada *Compras*:
+      - **Datos de actividad de origen de compras** > **Datos de contacto** en el atributo **ContactID**
+      - **Datos de contacto** > **Datos de cuenta** en el atributo **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ejemplo de configuración de relaciones.":::
+
+1. Después de configurar Relaciones, seleccione **Siguiente** y complete la configuración de su mapeo de actividades. Para conocer los pasos detallados sobre la creación de actividades, consulte [definir una actividad de cliente](#define-a-customer-activity).
+
+1. Ejecute sus asignaciones de actividad.
+
+1. Sus actividades a nivel de contacto ahora serán visibles en la línea de tiempo de su cliente.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final después de configurar las actividades de contacto":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtrado de línea de tiempo de actividad a nivel de contacto
+
+Después de configurar un mapeo de actividad a nivel de contacto y ejecutarlo, se actualizará la línea de tiempo de actividad para sus clientes. Incluye sus ID o nombres, según su configuración de *ContactProfile*, para las actividades en las que actuaron. Puede filtrar actividades por contactos en la línea de tiempo para ver contactos específicos que le interesan. Además, puede ver todas las actividades que no están asignadas a un contacto específico seleccionando **Actividades no asignadas a un contacto**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opciones de filtrado disponibles para actividades a nivel de contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

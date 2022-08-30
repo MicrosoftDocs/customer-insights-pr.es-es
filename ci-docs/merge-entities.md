@@ -2,7 +2,7 @@
 title: Unificar campos de clientes para la unificación de datos
 description: Fusionar entidades para crear perfiles de cliente unificados.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213603"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304034"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Unificar campos de clientes para la unificación de datos
+# <a name="unify-customer-fields"></a>Unificar campos de cliente
 
-En este paso del proceso de unificación, elija y excluya atributos para fusionarlos dentro de su entidad de perfil unificado. Por ejemplo, si tres entidades tenían datos de correo electrónico, es posible que desee mantener los tres campos de correo electrónico separados o fusionarlos en un solo campo de correo electrónico para el perfil unificado. El sistema combina automáticamente algunos atributos. Puede crear identificaciones de clientes únicas y estables y agrupar perfiles relacionados en un clúster.
+En este paso del proceso de unificación, elija y excluya atributos para fusionarlos dentro de su entidad de perfil unificado. Por ejemplo, si tres entidades tenían datos de correo electrónico, es posible que desee mantener los tres campos de correo electrónico separados o fusionarlos en un solo campo de correo electrónico para el perfil unificado. El sistema combina automáticamente algunos atributos. Puede crear identificaciones de clientes estables y únicas. Para clientes individuales, puede agrupar perfiles relacionados en un clúster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Página de combinación en el proceso de unificación de datos que muestra una tabla con campos combinados que definen el perfil de cliente unificado.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Página de campos de unificación de clientes en el proceso de unificación de datos que muestra una tabla con campos combinados que definen el perfil de cliente unificado.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Revisar y actualizar los campos de cliente
 
@@ -47,7 +47,7 @@ En este paso del proceso de unificación, elija y excluya atributos para fusiona
 
 1. Opcionalmente, [generar la configuración de identificación del cliente](#configure-customer-id-generation).
 
-1. Opcionalmente, [agrupar perfiles en hogares o clústeres](#group-profiles-into-households-or-clusters).
+1. Opcionalmente para B a C, [agrupe los perfiles en hogares o clústeres](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Siguiente paso: Revisar la unificación](review-unification.md)
@@ -161,7 +161,7 @@ La configuración de un Id. de cliente estable le permite evitar ese comportamie
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfiles en hogares o clústeres
 
-Puede definir reglas para agrupar perfiles relacionados en un clúster. Actualmente, hay dos tipos de clústeres disponibles: clústeres de hogar y personalizados. El sistema elige automáticamente un hogar con reglas predefinidas si la entidad *Cliente* contiene los campos semánticos *Person.LastName* y *Location.Address*. También puede crear un clúster con sus propias reglas y condiciones, similares a las [reglas de coincidencia](match-entities.md#define-rules-for-match-pairs).
+Para clientes individuales, puede definir reglas para agrupar perfiles relacionados en un clúster. Actualmente, hay dos tipos de clústeres disponibles: clústeres de hogar y personalizados. El sistema elige automáticamente un hogar con reglas predefinidas si la entidad *Cliente* contiene los campos semánticos *Person.LastName* y *Location.Address*. También puede crear un clúster con sus propias reglas y condiciones, similares a las [reglas de coincidencia](match-entities.md#define-rules-for-match-pairs).
 
 1. Seleccione **Avanzado** > **Crear clúster**.
 

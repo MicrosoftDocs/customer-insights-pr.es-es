@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213648"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304494"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Eliminar duplicados antes de unificar datos
 
@@ -47,7 +47,7 @@ Si enriqueció entidades en el nivel origen de datos para ayudar a mejorar sus r
 
 1. En la página **Registros duplicados**, seleccione una entidad y seleccione **Agregar regla** para definir las reglas de deduplicación.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de pantalla de páginas de registros duplicados con Mostrar más resaltado":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de pantalla de la página de registros duplicados con la entidad resaltada y se muestra Agregar regla"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. En el panel **Agregar regla**, introduzca la siguiente información:
       - **Seleccionar campo**: elija de la lista de campos disponibles de la entidad que desea verificar si hay duplicados. Elija campos que probablemente sean únicos para cada cliente. Por ejemplo, una dirección de correo electrónico o la combinación de nombre, ciudad y número de teléfono.
@@ -80,9 +80,9 @@ Si enriqueció entidades en el nivel origen de datos para ayudar a mejorar sus r
       - **Más lleno**: identifica el registro con la más campos de atributo rellenados como el registro ganador. Es la opción de combinación predeterminada.
       - **Más reciente**: identifica el registro ganador basado en el más reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
       - **Menos reciente**: identifica el registro ganador basado en el menos reciente. Requiere una fecha o un campo numérico para definir la antigüedad.
-      
+
       En caso de empate, el registro ganador es el que tiene el valor de clave principal MAX(PK) o mayor.
-      
+
    1. Opcionalmente, para definir preferencias de combinación en atributos individuales de una entidad, seleccione **Avanzado** en la parte inferior del panel. Por ejemplo, puede optar por mantener el correo electrónico más reciente Y la dirección más completa de diferentes registros. Expanda la entidad para ver todos sus atributos y defina qué opción usar para atributos individuales. Si elige una opción basada en la antigüedad, también debe especificar un campo de fecha/hora que defina la antigüedad.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Panel de preferencias de combinación avanzadas con el correo electrónico más reciente y la dirección completa":::
@@ -96,18 +96,5 @@ Si enriqueció entidades en el nivel origen de datos para ayudar a mejorar sus r
 
 > [!div class="nextstepaction"]
 > [Siguiente paso para varias entidades: condiciones coincidentes](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Resultado de la desduplicación como entidad
-
-El proceso de desduplicación crea una nueva entidad desduplicada para cada una de las entidades de origen. Estas entidades se pueden encontrar junto con **ConflationMatchPairs:CustomerInsights** en la sección **Sistema** en la página **Entidades**, con el nombre **Deduplication_DataSource_Entity**.
-
-Una entidad de resultado de la desduplicación contiene la siguiente información:
-
-- Identificadores y claves
-  - Campos de clave principal e ID alternativa. El campo ID alternativo consta de todos los ID alternativos identificados para un registro.
-  - El campo Deduplication_GroupId muestra el grupo o clúster identificado dentro de una entidad que agrupa todos los registros similares según los campos de desduplicación especificados. Se utiliza para fines de procesamiento del sistema. Si no hay reglas de desduplicación manual especificadas y se aplican reglas de desduplicación definidas por el sistema, es posible que no encuentre este campo en la entidad de resultados de la desduplicación.
-  - Deduplication_WinnerId: este campo contiene el identificador del elemento elegido en los grupos o clústeres identificados. Si Deduplication_WinnerId es el mismo que el valor de la clave principal para un registro, significa que el registro es el elegido.
-- Campos utilizados para definir las reglas de desduplicación.
-- Los campos Regla y Puntuación indican cuál de las reglas de desduplicación se aplicó y la puntuación devuelta por el algoritmo de coincidencia.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

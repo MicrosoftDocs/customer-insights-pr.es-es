@@ -2,7 +2,7 @@
 title: Condiciones de coincidencia para la unificación de datos
 description: Asignar entidades para crear perfiles de cliente unificados.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139724"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304678"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condiciones de coincidencia para la unificación de datos
 
@@ -27,6 +27,8 @@ Este paso en la unificación define el orden de coincidencia y las reglas para l
 
 > [!NOTE]
 > Una vez que cree sus condiciones de coincidencia y seleccione **Siguiente**, no puede eliminar una entidad o atributo seleccionado. Si es necesario, seleccione **Atrás** para revisar las entidades y atributos seleccionados antes de continuar.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versión preliminar)
 
@@ -43,14 +45,14 @@ Si enriqueció entidades en el nivel origen de datos para ayudar a mejorar sus r
 Cada coincidencia unifica dos o más entidades en una sola entidad consolidada. Al mismo tiempo, mantiene registros de clientes únicos. El orden de coincidencia indica el orden en que el sistema intenta hacer coincidir los registros.
 
 > [!IMPORTANT]
-> La primera entidad de la lista se llama entidad principal. La entidad principal sirve como base para su conjunto de datos de perfiles unificado. Las entidades adicionales que se seleccionen se agregarán a esta entidad.
+> La primera entidad se llama entidad principal y sirve de base para los perfiles unificados. Las entidades adicionales que se seleccionen se agregarán a esta entidad.
 >
 > Consideraciones importantes:
 >
 > - Elija la entidad con los datos de perfil más completos y confiables sobre sus clientes como entidad principal.
 > - Elija la entidad que tiene varios atributos en común con otras entidades (por ejemplo, nombre, número de teléfono o dirección de correo electrónico) como la entidad principal.
 
-1. En la página **Condiciones coincidentes**, use las flechas hacia arriba y hacia abajo para mover las entidades en el orden que desee, o arrástrelas y suéltelas. Por ejemplo, seleccione **Contacts:eCommerce** como entidad principal y **CustomerLoyalty:Loyalty** como entidad secundaria.
+1. En la página **Condiciones coincidentes**, use las flechas hacia arriba y hacia abajo para mover las entidades en el orden que desee, o arrástrelas y suéltelas. Por ejemplo, seleccione **eCommerceCustomers** como entidad principal y **loyCustomers** como entidad secundaria.
 
 1. Para tener cada registro en la entidad como un cliente único independientemente de si se encuentra una coincidencia, seleccione **Incluir todos los registros**. Todos los registros de esta entidad que no coincidan con los registros de otras entidades se incluyen en el perfil unificado. Los registros que no tienen una coincidencia se denominan singletons.
   
@@ -70,7 +72,7 @@ La advertencia junto al nombre de una entidad significa que no se ha definido ni
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Captura de pantalla del panel Agregar regla.":::
 
-   - **Seleccione Entidad/Campo (primera fila)**: elija una entidad relacionada y un atributo para especificar una propiedad de registro que probablemente sea única para un cliente. Por ejemplo, un número de teléfono o una dirección de correo electrónico. Evite las coincidencias por atributos de tipo de actividad. Por ejemplo, es probable que un identificador de compra no coincida con otros tipos de registro.
+   - **Seleccione Entidad/Campo (primera fila)**: elija una entidad y un atributo que probablemente sea único para un cliente. Por ejemplo, un número de teléfono o una dirección de correo electrónico. Evite las coincidencias por atributos de tipo de actividad. Por ejemplo, es probable que un identificador de compra no coincida con otros tipos de registro.
 
    - **Seleccione Entidad/Campo (segunda fila)**: elija un atributo que se relacione con el atributo de la entidad especificada en la primera fila.
 
@@ -116,7 +118,7 @@ Las reglas de coincidencia representan conjuntos de condiciones. Para hacer coin
 
 ### <a name="add-exceptions-to-a-rule"></a>Agregar excepciones a una regla
 
-En la mayoría de los casos, la coincidencia de entidades conduce a perfiles de cliente únicos con datos consolidados. Para abordar dinámicamente los casos excepcionales de falsos positivos y falsos negativos, puede definir excepciones para una regla de coincidencia. Las excepciones se aplican después de procesar las reglas de coincidencia y evitan la coincidencia de todos los registros que cumplen los criterios de excepción.
+En la mayoría de los casos, la coincidencia de entidades conduce a perfiles de cliente únicos con datos consolidados. Para abordar los casos excepcionales de falsos positivos y falsos negativos, puede definir excepciones para una regla de coincidencia. Las excepciones se aplican después de procesar las reglas de coincidencia y evitan la coincidencia de todos los registros que cumplen los criterios de excepción.
 
 Por ejemplo, si su regla de coincidencia combina apellido, ciudad y fecha de nacimiento, el sistema identificaría a los gemelos con el mismo apellido que viven en la misma ciudad que el mismo perfil. Puede especificar una excepción que no coincida con los perfiles si nombre de pila en las entidades que combina no son iguales.
 
@@ -134,7 +136,7 @@ Puede especificar condiciones que anulen la lógica de coincidencia predetermina
 |---------|---------|---------|
 |Coincidir siempre     | Define valores que siempre coinciden.         |  Siempre coincidir *Mike* y *MikeR*.       |
 |No coincidir nunca     | Define valores que nunca coinciden.        | Nunca coincidir *John* y *Jonathan*.        |
-|Omisión personalizada     | Define valores que el sistema siempre debe ignorar en la fase de coincidencia. |  Ignora los valores *11111* y *Desconocido* durante la coincidencia.        |
+|Omitir            | Define valores que el sistema siempre debe ignorar en la fase de coincidencia. |  Ignora los valores *11111* y *Desconocido* durante la coincidencia.        |
 |Asignación de alias    | Definición de valores que el sistema debe considerar como un mismo valor.         | Considerar *Joe* igual a *Joseph*.        |
 
 1. Seleccione **Personalizada**.
