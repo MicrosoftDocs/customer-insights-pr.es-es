@@ -1,19 +1,19 @@
 ---
 title: Novedades de Dynamics 365 Customer Insights
 description: Información sobre nuevas funciones, mejoras y correcciones de errores.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246032"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387315"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novedades de Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Implementamos actualizaciones región por región. Por tanto, algunas regiones p
 
 > [!TIP]
 > Para enviar y votar en solicitudes de características y sugerencias de productos, vaya a [Portal de ideas de aplicaciones de Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Actualizaciones de agosto de 2022
+
+Las actualizaciones de agosto de 2022 incluyen nuevas funciones, mejoras de rendimiento y correcciones de errores.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Unificación de contactos en entornos B-to-B
+
+Los entornos B-to-B en Customer Insights ahora admiten una experiencia de unificación de datos mejorada.
+
+Ahora puede unificar contactos además de cuentas para obtener una vista completa de sus contactos comerciales. Los contactos unificados están asociados con cuentas unificadas y ahora aparecen en las tarjetas de los clientes. 
+
+Para más información, consulte [Crear un perfil de contactos unificado](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Crear y exportar segmentos basados en contactos unificados
+
+Gracias a la nueva unificación de contactos, puede crear segmentos de contactos utilizando criterios de contactos, cuentas o ambos. Estos segmentos se pueden exportar para su activación en otros servicios.
+
+Para obtener más información, consulte [Información general de exportación](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Actualizaciones de julio de 2022
 

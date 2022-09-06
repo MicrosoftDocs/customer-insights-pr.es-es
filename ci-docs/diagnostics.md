@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245946"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352822"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Exportar registros de diagnóstico (versión preliminar)
 
@@ -36,8 +36,8 @@ Customer Insights envía los siguientes registros de eventos:
 
 - Una [suscripción de Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) activa.
 - Permisos de [administrador](permissions.md#admin) en Customer Insights.
+- Un recurso válido en Azure que sigue los [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Centro de eventos de Azure o Azure Log Analytics.
 - Tiene el rol de [Colaborador y Administrador de acceso de usuario](/azure/role-based-access-control/role-assignments-portal) en el recurso de destino en Azure. El recurso puede ser una cuenta de Azure Data Lake Storage, un Centro de eventos de Azure o un área de trabajo de Azure Log Analytics. Este permiso es necesario al configurar los ajustes de diagnóstico en Customer Insights, pero se puede cambiar después de una instalación correcta.
-- Los [requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para Azure Storage, Centro de eventos de Azure o Azure Log Analytics se cumplieron.
 - Al menos el rol **Lector** en el grupo de recursos al que pertenece el recurso.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configurar diagnósticos con Azure Monitor
