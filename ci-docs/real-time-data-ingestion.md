@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246129"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396090"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingesta de datos en tiempo real (vista previa)
 
@@ -82,10 +82,5 @@ Puede utilizar las capacidades en tiempo real creando su propia canalización y 
 Puede publicar una actividad en el formato de su sistema de origen o en el formato UnifiedActivity. Obtenga el formato haciendo una llamada API a /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Los detalles de esta API, incluidos los parámetros y las respuestas, se pueden encontrar en la sección **EntityData** de la [referencia de las API de Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Para obtener más información, consulte [Trabajar con la API de Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendar el uso en tiempo real con telemetría
-
-Obtenga una descripción general del volumen de solicitudes a la API de tiempo real e información sobre los problemas que puede encontrar el sistema. Puede [acceder a la telemetría en tiempo real](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

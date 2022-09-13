@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081984"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411852"
 ---
 # <a name="predictions-overview"></a>Vista preliminar de predicciones
 
@@ -39,14 +39,11 @@ La forma más fácil de comenzar a predecir datos son los modelos predefinidos, 
 
 > [!TIP]
 > Le recomendamos que actualice regularmente los modelos listos para usar con datos actualizados para asegurarse de que informen con precisión su caso de uso empresarial. Los datos se actualizan ad-hoc cuando el sistema ingiere orígenes de datos nuevos o actualizados. Sin embargo, los modelos solo volverán a puntuar en este caso y seguirán utilizando los datos de entrenamiento existentes.
-> 
+>
 > Puede configurar un **Horario de actualización** estableciendo el programa de reentrenamiento del modelo en la experiencia de configuración. El modelo se volverá a entrenar y puntuar en este horario, que puede cambiar en cualquier momento.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integración con Azure Machine Learning
 
 Si una organización ya usa escenarios Aprendizaje automático basados en experimentos Azure Machine Learning, la característica de modelos personalizados en Customer Insights ayuda a conectar los puntos. Cree flujos de trabajo que le ayudan a elegir los datos de los que desea generar información y asignar los resultados a sus perfiles de cliente unificado. Para más información, ver [Modelos personalizados de aprendizaje automático](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predicción de AI Builder
-
-A veces, los conjuntos de datos están incompletos y faltan algunos valores. Customer Insights puede ayudar a predecir los valores perdidos para la entidad y los segmentos del Cliente. Para obtener más información, consulte [Complete sus datos parciales con predicciones](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245854"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396112"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarse a los datos en Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Ingerir datos en Dynamics 365 Customer Insights usando su cuenta Azure Data Lake
   - Lector de datos de blobs de almacenamiento
   - Propietario de datos de blobs de almacenamiento
   - Colaborador de datos de blob de almacenamiento
+
+- El usuario que configura la conexión de origen de datos necesita menos permisos de colaborador de datos de blob de almacenamiento en la cuenta de almacenamiento.
 
 - Los datos en su Data Lake Storage deben seguir el estándar de Common Data Model para el almacenamiento de sus datos y tener el manifiesto de modelo de datos común para representar el esquema de los archivos de datos (*.csv o *.parquet). El manifiesto debe proporcionar los detalles de las entidades, como columnas de entidad y tipos de datos, y la ubicación del archivo de datos y el tipo de archivo. Para obtener más información, consulte [El manifiesto de Common Data Model](/common-data-model/sdk/manifest). Si el manifiesto no está presente, los usuarios administradores con acceso Storage Blob Data Owner o Storage Blob Data colaborador pueden definir el esquema al ingerir los datos.
 
@@ -62,7 +64,7 @@ Ingerir datos en Dynamics 365 Customer Insights usando su cuenta Azure Data Lake
    > [!NOTE]
    > Necesita uno de los siguientes roles para el contenedor o la cuenta de almacenamiento para crear el origen de datos:
    >
-   >  - El Lector de datos de Storage Blob es suficiente para leer desde una cuenta de almacenamiento e incorporar los datos a Customer Insights. 
+   >  - El Lector de datos de Storage Blob es suficiente para leer desde una cuenta de almacenamiento e incorporar los datos a Customer Insights.
    >  - Se requiere el propietario o el colaborador de datos de Storage Blob Storage si desea editar los archivos de manifiesto directamente en Customer Insights.  
   
 1. Elige el nombre del **Contenedor** que contiene los datos y el esquema (archivo model.json o manifest.json) para importar datos y seleccione **Siguiente**.

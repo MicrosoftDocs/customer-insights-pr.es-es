@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246349"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395977"
 ---
 # <a name="schedule-system-refresh"></a>Programar actualización del sistema
 
@@ -36,7 +36,7 @@ Programe actualizaciones automáticas de todos sus [orígenes de datos ingeridos
 
 1. Elija entre actualizaciones **Semanales** (predeterminado) y **Diarias**. Si tiene la intención de programar actualizaciones semanales, seleccione uno o más días en los que desea ejecutar la actualización.
 
-1. Establezca su **Zona horaria**, luego use el desplegable **Hora** para establecer su calendario de actualización. Si desea programar varias actualizaciones en un solo día, seleccione **Agregar otra hora**.
+1. Establezca su **Zona horaria**, luego use el desplegable **Hora** para establecer su calendario de actualización. Si desea programar varias actualizaciones en un solo día, seleccione **Agregar otra hora**. Puede agregar hasta cuatro actualizaciones.
 
 1. Seleccione **Guardar** para aplicar los cambios.
 

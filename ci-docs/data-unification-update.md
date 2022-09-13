@@ -1,7 +1,7 @@
 ---
 title: Actualizar la configuración de unificación de clientes, cuentas o contactos
 description: Actualice reglas duplicadas, reglas de coincidencia o campos unificados en la configuración de unificación de clientes o cuentas.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304356"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392492"
 ---
 # <a name="update-unification-settings"></a>Actualizar la configuración de unificación
 
@@ -38,7 +38,7 @@ Para revisar o cambiar cualquier configuración de unificación una vez que se h
    > El icono **Condiciones coincidentes** se muestra solo si se seleccionaron varias entidades.
 
 1. Elija lo que desea actualizar:
-   - [Campos de origen](#edit-source-fields) para agregar entidades o atributos o cambiar los tipos de atributos.
+   - [Campos de origen](#edit-source-fields) para agregar entidades o atributos o cambiar los tipos de atributos. Para eliminar un atributo, consulte [Eliminar un campo unificado](#remove-a-unified-field). Para eliminar una entidad, consulte [Eliminar una entidad unificada](#remove-a-unified-entity).
    - [Registros duplicados](#manage-deduplication-rules) para administrar reglas de deduplicación o fusionar preferencias.
    - [Condiciones coincidentes](#manage-match-rules) para actualizar las reglas de coincidencia entre dos o más entidades.
    - [Campos de clientes unificados](#manage-unified-fields) para combinar o excluir campos. También puede agrupar perfiles relacionados en clústeres.
@@ -53,8 +53,6 @@ Para revisar o cambiar cualquier configuración de unificación una vez que se h
 
 ## <a name="edit-source-fields"></a>Editar campos de origen
 
-No puede eliminar un atributo o una entidad si ya se han unificado.
-
 1. Seleccione **Editar** en el icono **Campos de origen**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Captura de pantalla de la página de campos de origen que muestra el número de claves principales, campos asignados y no asignados":::
@@ -66,6 +64,80 @@ No puede eliminar un atributo o una entidad si ya se han unificado.
 1. Opcionalmente, puede cambiar la clave principal de una entidad, los tipos de atributos y alternar entre **Mapeo inteligente** activado o desactivado. Para obtener más información, consulte [Unificar campos de origen](map-entities.md).
 
 1. Seleccione **Siguiente** para realizar cambios en las reglas de deduplicación, o seleccione **Guardar y cerrar**, y vuelva a [Actualizar la configuración de unificación](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Eliminar un campo unificado
+
+Para eliminar un campo que se ha unificado, el campo debe eliminarse de cualquier dependencia, como segmentos, medidas, enriquecimientos o relaciones.
+
+1. Una vez que se hayan eliminado todas las dependencias del campo, vaya a **Datos** > **Unificar**.
+
+1. Seleccione **Editar** en el icono **Campos de cliente unificados**.
+
+1. Seleccione todas las ocurrencias del campo y luego seleccione **Excluir**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Captura de pantalla de la página de campos unificados que muestra los campos seleccionados y el botón Excluir":::
+
+1. Seleccione **Listo** para confirmar y, después, **Guardar y cerrar**.
+
+   > [!TIP]
+   > Si ve el mensaje "No se pudo guardar unificar. El recurso especificado no se puede modificar ni eliminar debido a dependencias descendentes", el campo aún se usa en una dependencia descendente.
+
+1. Si el campo se usa en una regla para registros duplicados o condiciones coincidentes, realice los siguientes pasos. De lo contrario, vaya al paso siguiente.
+   1. Seleccione **Editar** en el icono **Registros duplicados**.
+   1. Elimine el campo de todas las reglas en las que se usa, si corresponde, y luego seleccione **Siguiente**.
+   1. En la página **Condiciones coincidentes**, elimine el campo de todas las reglas en las que se usa, si las hay, y luego seleccione **Guardar y cerrar**.
+   1. Seleccione **Unificar** > **Unificar perfiles de cliente y dependencias**. Espere a que se complete la unificación antes de continuar con el siguiente paso.
+
+1. Seleccione **Editar** en el icono **Campos de origen**.
+
+1. Seleccione **Seleccionar entidades y campos** y borre la casilla junto a cada aparición del campo.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Captura de pantalla del cuadro de diálogo Seleccionar entidades y campos que muestra las casillas desactivadas":::
+
+1. Seleccione **Aplicar**.
+
+1. Seleccione **Guardar y cerrar**.
+
+1. Seleccione **Unificar** > **Unificar los perfiles y las dependencias de los clientes** para actualizar el perfil unificado.
+
+### <a name="remove-a-unified-entity"></a>Eliminar una entidad unificada
+
+Para eliminar una entidad que se ha unificado, la entidad debe eliminarse de cualquier dependencia, como segmentos, medidas, enriquecimientos o relaciones.
+
+1. Una vez que se hayan eliminado todas las dependencias de la entidad, vaya a **Datos** > **Unificar**.
+
+1. Seleccione **Editar** en el icono **Campos de cliente unificados**.
+
+1. Seleccione todos los campos para la entidad y luego seleccione **Excluir**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Captura de pantalla de los campos unificados con todos los campos para una entidad seleccionados y el botón Excluir":::
+
+1. Seleccione **Listo** para confirmar y, después, **Guardar y cerrar**.
+
+   > [!TIP]
+   > Si ve el mensaje "No se pudo guardar unificar. El recurso especificado no se puede modificar ni eliminar debido a dependencias descendentes", la entidad aún se usa en una dependencia descendente.
+
+1. Seleccione **Editar** en el icono **Registros duplicados**.
+
+1. Elimine todas las reglas de la entidad, si las hay, y luego seleccione **Siguiente**.
+
+1. En la página **Condiciones coincidentes**, seleccione la entidad y luego **Eliminar**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Captura de pantalla de las condiciones coincidentes con la entidad seleccionada y el botón Eliminar":::
+
+1. Seleccione **Guardar y cerrar**.
+
+1. Seleccione **Editar** en el icono **Campos de origen**.
+
+1. Seleccione **Seleccionar entidades y campos** y borre la casilla junto a la entidad.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Captura de pantalla del cuadro de diálogo Seleccionar entidades y campos con la casilla entidad no seleccionada":::
+
+1. Seleccione **Aplicar**.
+
+1. Seleccione **Guardar y cerrar**.
+
+1. Seleccione **Unificar** > **Unificar los perfiles y las dependencias de los clientes** para actualizar el perfil unificado.
 
 ## <a name="manage-deduplication-rules"></a>Administrar reglas de desduplicación
 
