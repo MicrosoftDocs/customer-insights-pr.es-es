@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194944"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473663"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Complemento de tarjeta de cliente para aplicaciones de Dynamics 365 (versión preliminar)
 
@@ -32,7 +32,8 @@ Obtenga una vista de 360 grados de sus clientes directamente en las aplicaciones
 - Para que sus datos de Dynamics 365 se asignen a los perfiles de clientes de Customer Insights, recomendamos que deben [ingerirse desde la aplicación Dynamics 365, utilizando el conector Microsoft Dataverse](connect-power-query.md). Si usa un método diferente para ingerir contactos (o cuentas) de Dynamics 365, debe asegurarse de que el campo `contactid` (o `accountid`) se establece como [clave principal para ese origen de datos durante el proceso de unificación de datos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos los usuarios de Dynamics 365 del complemento de tarjeta de cliente deben ser [agregados como usuarios](permissions.md) en Customer Insights para ver los datos.
 - [Funciones configuradas de búsqueda y de filtro ](search-filter-index.md) en Customer Insights.
-- Cada control de complemento se basa en datos específicos en Customer Insights. Algunos datos y controles solo están disponibles en entornos de tipos específicos. La configuración del complemento le informará si un control no está disponible debido al tipo de entorno seleccionado. Más información sobre [casos de uso del entorno](work-with-business-accounts.md).
+- Algunos datos y controles solo están disponibles en entornos de tipos específicos. La configuración del complemento le informará si un control no está disponible debido al tipo de entorno seleccionado. Este error se mostrará dentro del control al representarlo. Más información sobre [casos de uso del entorno](work-with-business-accounts.md).
+- Cada control de complemento se basa en datos específicos en Customer Insights.
   - **Control de medidas**: requiere [medidas de atributos de cliente configuradas](measures.md).
   - **Control de inteligencia**: requiere datos generados usando [predicciones o modelos personalizados](predictions-overview.md).
   - **Control de detalles del cliente**: muestra todos los campos del perfil disponibles en el perfil de cliente unificado.

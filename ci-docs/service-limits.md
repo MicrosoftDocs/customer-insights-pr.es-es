@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411761"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463240"
 ---
 # <a name="service-limits-in-customer-insights"></a>Límites de servicio en Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411761"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmentos, medidas y predicciones | 300  | El numero total de [segmentos](segments.md), [medidas](measures.md), y [predicciones](predictions-overview.md) combinadas no pueden pasar de 300.  |
 | Relaciones | 20 niveles de profundidad en relaciones de rutas de entidad. | Al crear [segmentos](segments.md) o [medidas](measures.md) mediante la interfaz del generador, las rutas de las entidades pueden tener hasta 20 saltos de relación entre la entidad de inicio y la entidad de destino.  |
+|Ingesta de datos| Las evaluaciones simultáneas para los orígenes de datos de Power Query son limitadas. | Customer Insights tiene los mismos [límites de actualización que flujos de datos en PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Programación justa de trabajos
 

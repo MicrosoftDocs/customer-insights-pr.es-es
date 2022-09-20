@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304080"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460211"
 ---
 # <a name="exports-preview-overview"></a>Información general del exportaciones (versión preliminar)
 
@@ -81,6 +81,11 @@ Seleccione una exportación para ver las acciones disponibles.
 ## <a name="schedule-and-run-exports"></a>Programar y ejecutar exportaciones
 
 Cada exportación que configure tiene un programa de actualización. Durante una actualización, el sistema busca datos nuevos o actualizados para incluirlos en una exportación. De forma predeterminada, las exportaciones se ejecutan como parte de cada [actualización programada del sistema](schedule-refresh.md). Puede personalizar el programa de actualización o desactivarlo para ejecutar exportaciones manualmente.
+
+> [!TIP]
+> Minimice el tiempo de procesamiento de las exportaciones de segmentos con los siguientes procedimientos recomendados:
+> - Distribuya entidades de segmento a través de múltiples exportaciones.
+> - Evite programar todas las exportaciones al mismo tiempo. Deje 30 minutos o una hora entre la hora programada de cada exportación.
 
 Los programas de exportación dependen del estado de su entorno. Si hay actualizaciones en curso en [dependencias](system.md#refresh-processes) cuando debe comenzar una exportación programada, el sistema primero completará las actualizaciones y luego ejecutará la exportación. La columna **Actualizado** muestra cuándo se actualizó por última vez una exportación.
 

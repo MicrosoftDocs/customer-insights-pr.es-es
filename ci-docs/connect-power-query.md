@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207066"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463286"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectarse a un origen de datos en Power Query
 
@@ -63,7 +63,9 @@ Agregar orígenes de datos basadas en conectores de Power Query generalmente sig
 La carga de datos puede llevar tiempo. Una vez completada una actualización, se pueden revisar los datos ingeridos en la página [**Entidades**](entities.md).
 
 > [!CAUTION]
-> Un origen de datos basado en Power Query crea un [flujo de datos en Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). No cambie el nombre de un flujo de datos del Centro de administración Power Platform que se use en Customer Insights. Cambiar el nombre de un flujo de datos provoca problemas con las referencias entre el origen de datos de Customer Insights y el flujo de datos de Dataverse.
+>
+> - Un origen de datos basado en Power Query crea un [flujo de datos en Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). No cambie el nombre de un flujo de datos del Centro de administración Power Platform que se use en Customer Insights. Cambiar el nombre de un flujo de datos provoca problemas con las referencias entre el origen de datos de Customer Insights y el flujo de datos de Dataverse.
+> - Las evaluaciones simultáneas para los orígenes de datos de Power Query en Customer Insights tienen los mismos [límites de actualización como flujos de datos en PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Si una actualización de datos resulta errónea porque ha alcanzado el límite de evaluación, le recomendamos que ajuste el programa de actualización de cada flujo de datos para asegurarse de que los orígenes de datos no se procesan al mismo tiempo.
 
 ### <a name="available-power-query-data-sources"></a>Orígenes de datos Power Query disponibles
 
@@ -77,7 +79,7 @@ Se admite la ingesta de datos de orígenes de datos local en función de flujos 
 
 Los orígenes de datos que se crean después de asociar un entorno de Dataverse con Customer Insights usan [flujos de datos de Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por defecto. Los flujos de datos admiten conectividad local mediante la puerta de enlace. Puede eliminar y volver a crear orígenes de datos que existían antes de asociar un entorno de Dataverse [usando pasarelas de datos locales](/data-integration/gateway/service-gateway-app).
 
-Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights. La página de orígenes de datos muestra enlaces para ir al entorno de Microsoft Power Platform donde puede ver y configurar puertas de enlace de datos locales.
+Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente serán visibles y podrá reutilizarlas en Customer Insights si la puerta de enlace de datos y el entorno de Customer Insights están en la misma región de Azure. La página de orígenes de datos muestra enlaces para ir al entorno de Microsoft Power Platform donde puede ver y configurar puertas de enlace de datos locales.
 
 > [!IMPORTANT]
 > Asegúrese de que sus puertas de enlace estén actualizadas a la última versión. Puede instalar una actualización y reconfigurar una puerta de enlace desde una solicitud que se muestra en la pantalla de la puerta de enlace directamente o [descargar la última versión](https://powerapps.microsoft.com/downloads/). Si no usa la última versión de la puerta de enlace, la actualización del flujo de datos falla con mensajes de error como **La palabra clave no es compatible: propiedades de configuración. Nombre del parámetro: palabra clave**.
