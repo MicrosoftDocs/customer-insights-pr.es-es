@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
-ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
+ms.openlocfilehash: 13e0b22d40d909abdbea8e77c9b4795ee42271c8
+ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "9305625"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "9544330"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registrarse para obtener una versión de prueba gratuita de Dynamics 365 Customer Insights
 
@@ -40,6 +40,6 @@ Su entorno de prueba incluye las mismas funciones que la versión de pago. Los e
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Explore las rutas de aprendizaje y los módulos de Customer Insights](/learn/browse/?products=dynamics-cust-insights)
+- [Explore las rutas de aprendizaje y los módulos de Customer Insights](/training/browse/?products=dynamics-cust-insights)
 - [Preguntas más frecuentes de la prueba](trial-faq.md)
 - [Detalles del producto de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)
