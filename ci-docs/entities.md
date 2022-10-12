@@ -1,7 +1,7 @@
 ---
 title: Entidades en Customer Insights
 description: Ver los datos en la página Entidades.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183606"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610119"
 ---
 # <a name="entities-in-customer-insights"></a>Entidades en Customer Insights
 
@@ -61,27 +61,5 @@ Vaya a **Datos** > **Entidades** para ver una lista de entidades. La siguiente i
   - **Creado**: Fecha y hora de creación de la entidad.
   - **Editada por**: Nombre de la persona que modificó la entidad.
   - **Editada**: Fecha y hora de modificación de la entidad.
-
-## <a name="entity-specific-information"></a>Información específica de la entidad
-
-La siguiente sección proporciona información sobre algunas entidades creadas por el sistema.
-
-### <a name="corrupted-data-sources"></a>Orígenes de datos dañados
-
-Los campos de un origen de datos ingerido pueden contener datos dañados. Los registros con campos dañados se exponen en entidades creadas por el sistema. Saber cuáles son los registros dañados ayuda a identificar qué datos hay que revisar y actualizar en el sistema de origen. Después de la siguiente actualización del origen de datos, los registros corregidos se transfieren a Customer Insights y se pasan a los procesos posteriores. 
-
-Por ejemplo, una columna 'cumpleaños' tendrá el tipo de datos establecido como 'fecha'. El registro de un cliente tiene la fecha de nacimiento establecida como '01/01/19777'. El sistema marcará este registro como dañado. Ahora, alguien puede cambiar la fecha de nacimiento en el sistema de origen a '1977'. Después de una actualización automática de los orígenes de datos, el campo tiene un formato válido y el registro se eliminará de la entidad dañada.
-
-Vaya a **Datos** > **Entidades** y busque las entidades dañadas en la sección **Sistema**. Esquema de nomenclatura de entidades dañadas: 'DataSourceName_EntityName_corrupt'. Seleccione una entidad dañada para identificar todos los campos dañados y la razón a nivel de registro individual.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo de los daños.":::
-
-Customer Insights aún procesa registros dañados. Sin embargo, esto puede causar problemas al trabajar con datos unificados.
-
-Las siguientes comprobaciones se ejecutan en los datos ingeridos para exponer registros dañados:
-
-- El valor de un campo no coincide con el tipo de datos de su columna.
-- Los campos contienen caracteres que hacen que las columnas no coincidan con el esquema esperado. Por ejemplo: comillas con formato incorrecto, comillas sin escape o caracteres de nueva línea.
-- Si hay columnas datetime/date/datetimeoffset, su formato debe especificarse en el modelo si no sigue el formato ISO estándar.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

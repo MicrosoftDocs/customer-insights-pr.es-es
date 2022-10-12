@@ -1,7 +1,7 @@
 ---
 title: Información general de los orígenes de datos
 description: Aprenda a importar o ingerir datos de varias fuentes.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245670"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610073"
 ---
 # <a name="data-sources-overview"></a>Información general de los orígenes de datos
 
@@ -65,7 +65,9 @@ Seleccione un origen de datos para ver las acciones disponibles.
 
 ## <a name="refresh-data-sources"></a>Actualizar orígenes de datos
 
-Los orígenes de datos se pueden actualizar de forma automática o manualmente, a petición. [Orígenes de datos locales](connect-power-query.md#add-data-from-on-premises-data-sources) actualice en sus propios horarios que se configuran durante la ingesta de datos. Para los orígenes de datos adjuntos, la ingestión de datos consume los últimos datos disponibles de ese origen de datos.
+Los orígenes de datos se pueden actualizar de forma automática o manualmente, a petición. [Orígenes de datos locales](connect-power-query.md#add-data-from-on-premises-data-sources) actualice en sus propios horarios que se configuran durante la ingesta de datos. Para obtener sugerencias para la resolución de problemas, consulte [Solucionar problemas de actualización de origen de datos basados en PPDF Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Para los orígenes de datos adjuntos, la ingestión de datos consume los últimos datos disponibles de ese origen de datos.
 
 Vaya a **Administración** > **Sistema** > [**Calendario**](schedule-refresh.md) para configurar actualizaciones programadas por el sistema de sus orígenes de datos ingeridos.
 
@@ -76,5 +78,37 @@ Para actualizar un origen de datos a petición:
 1. Seleccione el origen de datos que desea actualizar y seleccione **Actualizar**. El origen de datos ahora se desencadena para una actualización manual. Al actualizar un origen de datos, se actualizará tanto el esquema de la entidad como los datos para todas las entidades especificadas en el origen de datos.
 
 1. Seleccione el estado para abrir el panel **Detalles de progreso** y vea el progreso. Para cancelar el trabajo, seleccione **Cancelar trabajo** en la parte inferior del panel.
+
+## <a name="corrupt-data-sources"></a>Orígenes de datos dañados
+
+Los datos que se ingieren pueden tener registros corruptos que pueden hacer que el proceso de ingestión de datos se complete con errores o advertencias.
+
+> [!NOTE]
+> Si la ingesta de datos se completa con errores, se omitirá el procesamiento posterior (como la unificación o la creación de actividades) que aproveche este origen de datos. Si la ingestión se completó con advertencias, el procesamiento posterior continúa, pero es posible que algunos de los registros no se incluyan.
+
+Estos errores se pueden ver en los detalles de la tarea.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detalle de la tarea que muestra un error de datos corruptos.":::
+
+Los registros dañados se exponen en entidades creadas por el sistema.
+
+### <a name="fix-corrupt-data"></a>Arreglar datos corruptos
+
+1. Para ver los datos dañados, vaya a **Datos** > **Entidades** y busque las entidades dañadas en la sección **Sistema**. Esquema de nomenclatura de entidades dañadas: 'DataSourceName_EntityName_corrupt'.
+
+1. Seleccione una entidad dañada y luego la pestaña **Datos**.
+
+1. Identifique los campos dañados en un registro y el motivo.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo de los daños." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Datos** > **Entidades** solo muestra una parte de los registros corruptos. Para ver todos los registros dañados, exporte los archivos a un contenedor en la cuenta de almacenamiento mediante el [Proceso de exportación de Customer Insights](export-destinations.md). Si usó su propia cuenta de almacenamiento, también puede consultar la carpeta Customer Insights en su cuenta de almacenamiento.
+
+1. Corrija los datos dañados. Por ejemplo, para las fuentes de datos de Azure Data Lake, [corrija los datos en Data Lake Storage o actualice los tipos de datos en el archivo manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Para fuentes de datos de Power Query, corregir los datos en el archivo de origen y [corregir el tipo de datos el paso de transformación](connect-power-query.md#data-type-does-not-match-data) en la página **Power Query - Editar consultas**.
+
+Después de la siguiente actualización del origen de datos, los registros corregidos se transfieren a Customer Insights y se pasan a los procesos posteriores.
+
+Por ejemplo, una columna 'cumpleaños' tendrá el tipo de datos establecido como 'fecha'. El registro de un cliente tiene la fecha de nacimiento establecida como '01/01/19777'. El sistema marca este registro como dañado. Cambie la fecha de nacimiento en el sistema de origen a '1977'. Después de una actualización automática de los orígenes de datos, el campo tiene un formato válido y el registro se elimina de la entidad dañada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

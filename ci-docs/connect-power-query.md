@@ -1,7 +1,7 @@
 ---
 title: Conectarse a un origen de datos de Power Query (contiene vídeo)
 description: Ingerir datos a través de un conector de Power Query (contiene vídeo).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463286"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609917"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectarse a un origen de datos en Power Query
 
@@ -43,16 +43,17 @@ Agregar orígenes de datos basadas en conectores de Power Query generalmente sig
 
 1. Seleccione **Transformar datos**.
 
-1. El cuadro de diálogo **Power Query - Editar consultas** le permite revisar y refinar los datos. Las entidades que los sistemas identificaron en el origen de datos seleccionado se muestran en el panel izquierdo.
+1. Revise y refine los datos en la página **Power Query - Editar consultas**. Las entidades que los sistemas identificaron en el origen de datos seleccionado se muestran en el panel izquierdo.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Diálogo Editar consultas":::
 
-1. También puede transformar los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones en la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de [transformación preparadas](/power-query/power-query-what-is-power-query#transformations).
+1. Transforme los datos. Seleccione una entidad para editarla o transformarla. Utilice las opciones en la ventana Power Query para aplicar transformaciones. Cada transformación se enumera en **Pasos aplicados**. Power Query proporciona numerosas opciones de [transformación preparadas](/power-query/power-query-what-is-power-query#transformations).
 
-   Recomendamos que use las siguientes transformaciones:
-
-   - Si está ingiriendo datos de un archivo CSV, la primera fila suele contener encabezados. Vaya a **Transformar** y seleccione **Usar la primera fila como encabezados**.
-   - Asegúrese de que el tipo de datos esté configurado correctamente. Por ejemplo, para los campos de fecha, seleccione un tipo de fecha.
+   > [!IMPORTANT]
+   > Recomendamos que use las siguientes transformaciones:
+   >
+   > - Si está ingiriendo datos de un archivo CSV, la primera fila suele contener encabezados. Vaya a **Transformar** y seleccione **Usar la primera fila como encabezados**.
+   > - Asegúrese de que el tipo de datos esté configurado correctamente y coincide con los datos. Por ejemplo, para los campos de fecha, seleccione un tipo de fecha.
 
 1. Para agregar entidades adicionales a su origen de datos en el cuadro de diálogo **Editar consultas**, vaya a **Inicio** y seleccione **Obtener datos**. Repita los pasos 5 a 10 hasta que haya agregado todas las entidades para este origen de datos. Si tiene una base de datos que incluye múltiples conjuntos de datos, cada conjunto de datos es su propia entidad.
 
@@ -102,5 +103,51 @@ Las puertas de enlace de datos de un entorno de Power BI o Power Apps existente 
 1. Seleccione **Guardar** para aplicar los cambios y volver a la página **Orígenes de datos**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motivos comunes de errores de ingestión o datos dañados
+
+### <a name="data-type-does-not-match-data"></a>El tipo de datos no coincide con los datos
+
+La discrepancia de tipo de datos más común ocurre cuando un campo de fecha no se establece en el formato de fecha correcto.
+
+Los datos se pueden corregir en la fuente y volver a ingerir. O arregle la transformación dentro de Customer Insights. Para corregir la transformación:
+
+1. Vaya a **Datos** > **Orígenes de datos**.
+
+1. Junto al origen de datos con los datos dañados, seleccione **Editar**.
+
+1. Seleccione **Siguiente**.
+
+1. Seleccione cada una de las consultas y busque transformaciones aplicadas dentro de "Pasos aplicados" que sean incorrectas o columnas de fecha que no se hayan transformado con un formato de fecha.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - Editar mostrando formato de fecha incorrecto":::
+
+1. Cambie el tipo de datos para que coincida correctamente con los datos.
+
+1. Seleccione **Guardar**. El origen de datos se actualiza.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Solucionar problemas de actualización de origen de datos basados en PPDF Power Query
+
+Si los datos están obsoletos o recibe errores después de una actualización origen de datos, realice los siguientes pasos:
+
+1. Navegue hasta [Power Platform](https://make.powerapps.com).
+
+1. Seleccione el **entorno** de la instancia de Customer Insights.
+
+1. Navegue a **Flujos de datos**.
+
+1. Para el flujo de datos que corresponde a origen de datos en Customer Insights, seleccione los puntos suspensivos verticales (&vellip;) y luego seleccione **Mostrar historial de actualización**.
+
+1. Si el **Estado** del flujo de datos es **Éxito**, la propiedad del origen de datos basado en Power Query podría haber cambiado:
+
+   1. Revise el programa de actualización del historial de actualización.
+   1. Configure el horario del nuevo propietario y guarde la configuración.
+
+1. Si el **estado** del flujo de datos es **Con errores**:
+
+   1. Descargue el archivo de historial de actualización.
+   1. Revise el archivo descargado para conocer el motivo de la falla.
+   1. Si no se puede resolver el error, seleccione **?** para abrir una solicitud de soporte. Incluya el archivo de historial de actualización descargado.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

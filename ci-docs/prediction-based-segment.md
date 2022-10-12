@@ -1,23 +1,23 @@
 ---
 title: Crear un segmento basado en un modelo de predicción
 description: Cree segmentos basados en la entidad de salida de un modelo predicción.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081824"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610448"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Cree un segmento basado en un modelo de predicción (versión preliminar)
 
-Los resultados de las predicciones a veces solo se aplican a un subconjunto de sus clientes. Aumente la personalización de las recomendaciones creando segmentos a partir de los resultados de los modelos de predicción. Por ejemplo, es posible que desee dar recomendaciones específicas a los clientes que prefieren un determinado tipo de servicio. 
+Los resultados de las predicciones a veces solo se aplican a un subconjunto de sus clientes. Aumente la personalización de las recomendaciones creando segmentos a partir de los resultados de los modelos de predicción. Por ejemplo, es posible que desee dar recomendaciones específicas a los clientes que prefieren un determinado tipo de servicio.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -34,10 +34,15 @@ Los resultados de las predicciones a veces solo se aplican a un subconjunto de s
 
 1. Vaya a **Inteligencia** > **Predicciones** y seleccione la pestaña **Mis predicciones**.
 
-1. Seleccione los puntos suspensivos verticales junto al modelo que desea revisar y seleccione **Ver**.
+1. Seleccione el modelo que desea revisar y seleccione **Ver**.
 
 1. En la página de resultados, seleccione **Crear segmento**. Para obtener más información sobre la página de resultados, revise el artículo sobre el modelo.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Captura de pantalla de la página de resultados predicción con la acción Crear segmento resaltada.":::
 
-1. Cree un nuevo segmento basado en la entidad del modelo seleccionado. Para obtener más información, vea [Crear y administrar segmentos](segments.md).
+1. Cree un nuevo segmento usanod atributos de la entidad de salida del modelo seleccionado. Para obtener más información, vea [Crear y administrar segmentos](segments.md).
+
+> [!TIP]
+> También puede crear un segmento para un modelo predicción desde la página **Segmentos** seleccionando **Nuevo** y eligiendo **Crear desde** > **Inteligencia**. Para obtener más información, consulte [Crear un nuevo segmento con segmentos rápidos](segment-quick.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
