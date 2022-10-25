@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424330"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671272"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabajar con datos de Customer Insights en Microsoft Dataverse
 
@@ -63,6 +63,9 @@ El paso de **Microsoft Dataverse** le permite conectar Customer Insights con su 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Habilitar el intercambio de datos con Dataverse desde su propio Azure Data Lake Storage (vista previa)
 
 En [su propia cuenta de Azure Data Lake Storage](own-data-lake-storage.md), verifique que el usuario que configura el entorno de Customer Insights tiene como mínimo permisos de **Lector de datos de Storage Blob** en el contenedor `customerinsights` de la cuenta de almacenamiento.
+
+> [!NOTE]
+> El uso compartido de datos es aplicable solo si usa su propia cuenta de Azure Data Lake Storage. Esta configuración no está disponible si el entorno de Customer Insights usa el almacenamiento de Dataverse predeterminado.
 
 ### <a name="limitations"></a>Limitaciones
 
