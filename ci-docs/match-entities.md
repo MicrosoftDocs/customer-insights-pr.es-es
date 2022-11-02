@@ -2,7 +2,7 @@
 title: Condiciones de coincidencia para la unificación de datos
 description: Asignar entidades para crear perfiles de cliente unificados.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304678"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721542"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condiciones de coincidencia para la unificación de datos
 
@@ -130,12 +130,12 @@ Por ejemplo, si su regla de coincidencia combina apellido, ciudad y fecha de nac
 
 ### <a name="specify-custom-match-conditions"></a>Especificar condiciones de coincidencia personalizadas
 
-Puede especificar condiciones que anulen la lógica de coincidencia predeterminada. Existen cuatro opciones disponibles:
+Especifique condiciones que anulen la lógica de coincidencia predeterminada. Existen cuatro opciones disponibles:
 
 |Opción  |Description |Ejemplo  |
 |---------|---------|---------|
-|Coincidir siempre     | Define valores que siempre coinciden.         |  Siempre coincidir *Mike* y *MikeR*.       |
-|No coincidir nunca     | Define valores que nunca coinciden.        | Nunca coincidir *John* y *Jonathan*.        |
+|Coincidir siempre     | Define valores para las claves principales que siempre coinciden.         |  Siempre haga coincidir la fila con la clave principal *12345* a la fila con clave principal *54321*.       |
+|No coincidir nunca     | Define valores para las claves principales nunca coinciden.        | Nuca haga coincidir la fila con la clave principal *12345* a la fila con clave principal *54321*.        |
 |Omitir            | Define valores que el sistema siempre debe ignorar en la fase de coincidencia. |  Ignora los valores *11111* y *Desconocido* durante la coincidencia.        |
 |Asignación de alias    | Definición de valores que el sistema debe considerar como un mismo valor.         | Considerar *Joe* igual a *Joseph*.        |
 
@@ -143,17 +143,18 @@ Puede especificar condiciones que anulen la lógica de coincidencia predetermina
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Botón personalizado":::
 
-1. Elija el **Tipo personalizado** y seleccione **Descargar plantilla**. Necesita una plantilla separada para cada opción de coincidencia.
+1. Elija el **Tipo personalizado** y seleccione **Descargar plantilla**. Cambie el nombre de la plantilla sin usar espacios. Use una plantilla separada para cada opción de coincidencia.
 
-1. Abra el archivo de plantilla descargado y complete los detalles. La plantilla contiene campos para especificar los valores de entidad y clave principal de la entidad que se utilizarán en la coincidencia personalizada. Por ejemplo, si desea una clave principal *12345* de la entidad *Ventas* para que siempre coincida con la clave principal *34567* de la entidad *Contacto*, complete la plantilla:
-    - Entidad 1: Ventas
-    - Entity1Key: 12345
-    - Entity2: Contacto
-    - Entity2Key: 34567
+1. Abra el archivo de plantilla descargado y complete los detalles. La plantilla contiene campos para especificar los valores de entidad y clave principal de la entidad que se utilizarán en la coincidencia personalizada. Los nombres de entidad distinguen entre mayúsculas y minúsculas. Por ejemplo, si desea una clave principal *12345* de la entidad *Ventas* para que siempre coincida con la clave principal *34567* de la entidad *Contacto*, complete la plantilla:
+   - Entidad 1: Ventas
+   - Entity1Key: 12345
+   - Entity2: Contacto
+   - Entity2Key: 34567
 
    El mismo archivo de plantilla puede especificar registros de coincidencia personalizados de múltiples entidades.
 
-   Si desea especificar una coincidencia personalizada para la desduplicación en una entidad, proporcione la misma entidad como Entity1 y Entity2 y configure los diferentes valores de clave principal.
+   > [!NOTE]
+   > Si desea especificar una coincidencia personalizada para la desduplicación en una entidad, proporcione la misma entidad como Entity1 y Entity2 y configure los diferentes valores de clave principal. Debe definir al menos una regla de eliminación de datos duplicados para la entidad para usar la coincidencia personalizada.
 
 1. Después de agregar todas las modificaciones, guarde el archivo de plantilla.
 
@@ -169,6 +170,8 @@ Puede especificar condiciones que anulen la lógica de coincidencia predetermina
    - Para **Omitir** o **Asignación de alias**, seleccione **Editar** en una regla de coincidencia existente o cree una nueva regla. En el menú desplegable Normalizaciones, elija la opción **Bypass personalizado** o **Asignación de alias** y seleccione **Hecho**.
 
 1. Seleccione **Hecho** en el panel **Personalizado** para aplicar la configuración de coincidencia personalizada.
+
+   Cada archivo de plantilla ingerido es su propio origen de datos. Si se descubren registros que necesitan un tratamiento de coincidencia especial, actualice el origen de datos correspondiente. La actualización se utilizará durante el próximo proceso de unificación. Por ejemplo, identifica gemelos con casi el mismo nombre que viven en la misma dirección que se fusionó como una sola persona. Actualice el origen de datos para identificar los gemelos como registros únicos e independientes.
 
 > [!div class="nextstepaction"]
 > [Siguiente paso: unificar campos](merge-entities.md)
