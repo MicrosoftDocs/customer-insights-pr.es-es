@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588915"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725375"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Exportar segmentos a HubSpot (versión preliminar)
 
@@ -27,6 +27,7 @@ Exporte segmentos de perfiles de clientes unificados a HubSpot y utilícelos par
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
+- No se admite el enlace privado en combinación con Traiga su propio almacenamiento (BYOS).
 - Hasta 100 000 perfiles de clientes por exportación a HubSpot, que puede tardar hasta 15 minutos en completarse. La cantidad de perfiles de clientes que puede exportar a HubSpot depende y está limitada por su contrato con HubSpot.
 - Solo segmentos.
 

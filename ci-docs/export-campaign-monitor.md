@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196323"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724705"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Exportar segmentos a Campaign Monitor (versión preliminar)
 
@@ -29,6 +29,7 @@ Exporte segmentos de perfiles de clientes unificados a Campaign Monitor y utilí
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
+- No se admite el enlace privado en combinación con Traiga su propio almacenamiento (BYOS).
 - Hasta 1 millón de perfiles de clientes por exportación a Campaign Monitor, lo que puede tardar hasta 20 minutos en completarse. La cantidad de perfiles de clientes que puede exportar a Campaign Monitor depende de su contrato con Campaign Monitor.
 - Solo segmentos.
 

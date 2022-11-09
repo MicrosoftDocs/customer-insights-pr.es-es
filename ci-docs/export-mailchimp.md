@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196875"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725053"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos a Mailchimp (versión preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfiles de clientes unificados a Mailchimp para crear bole
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
+- No se admite el enlace privado en combinación con Traiga su propio almacenamiento (BYOS).
 - Hasta 1 millón de perfiles de clientes por exportación a Mailchimp, lo que puede tardar hasta tres horas. La cantidad de perfiles de clientes que puede exportar a Mailchimp depende de su contrato con Mailchimp.
 - Solo segmentos.
 

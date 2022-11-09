@@ -1,12 +1,12 @@
 ---
 title: Actividades de contacto comercial o de clientes
 description: Defina las actividades de los clientes o contacto comercial y visualícelas en una línea de tiempo en los perfiles de los clientes.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304126"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723802"
 ---
 # <a name="customer-or-business-contact-activities"></a>Actividades de contacto comercial o de clientes
 
@@ -41,6 +41,9 @@ Una entidad debe tener como mínimo un atributo de tipo **Fecha**, que se debe i
    - **Nombre de la actividad**: seleccione un nombre para su actividad.
    - **Entidad de actividad**: seleccione una entidad que incluya datos transaccionales o de actividad.
    - **Clave principal**: seleccione el campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
+
+     > [!NOTE]
+     > La clave principal de cada fila debe permanecer constante en las actualizaciones de origen de datos. Si la clave principal de una fila se actualiza en una actualización origen de datos, crea duplicados en la entidad Actividad de salida. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure los datos de la actividad con un nombre, entidad y clave principal.":::
 
@@ -132,7 +135,15 @@ Para cuentas comerciales (B-to-B), utilice una entidad *ContactProfile* para cap
 
 1. Seleccione **Agregar actividad**.
 
-1. Nombre la actividad, seleccione la entidad de actividad de origen y seleccione la clave principal de la entidad de actividad.
+1. En el paso **Datos de actividad**, introduzca la siguiente información:
+
+   - **Nombre de la actividad**: seleccione un nombre para su actividad.
+   - **Entidad de actividad**: seleccione una entidad que incluya datos transaccionales o de actividad.
+   - **Clave principal**: seleccione el campo que identifica de manera única un registro. No debe contener valores duplicados, valores vacíos ni valores que faltan.
+
+     > [!NOTE]
+     > La clave principal de cada fila debe permanecer constante en las actualizaciones de origen de datos. Si la clave principal de una fila se actualiza en una actualización origen de datos, crea duplicados en la entidad Actividad de salida. 
+
 
 1. En el paso **Relaciones**, cree una relación indirecta entre los datos de la fuente de su actividad y las cuentas, utilizando sus datos de contacto como una entidad intermediaria. Para obtener más información, vea [rutas de relaciones directas e indirectas](relationships.md#relationship-paths).
    - Relación de ejemplo para una actividad llamada *Compras*:

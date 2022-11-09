@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195035"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724637"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos a Facebook Administrador de anuncios (vista previa)
 
@@ -25,11 +25,13 @@ Exportar segmentos de perfiles de clientes unificados a Administrador de anuncio
 
 - Una [Cuenta de anuncios de Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que incluya una [Cuenta empresarial de Facebook](https://business.facebook.com/).
 - Privilegios de administrador en la [Cuenta de Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- El usuario que configura la conexión en Customer Insights debe aceptar los términos personalizados audiencia.
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
 - Hasta 10 millones de perfiles de clientes por exportación a Facebook Ads Manager, lo que puede tardar hasta 90 minutos.
 - Solo segmentos.
+- La integración de Facebook Ads no admite usuarios con más de 25 cuentas de anuncios.
 - Escriba *lista de clientes* de Facebook en [públicos personalizados](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) solamente.
   > [!NOTE]
   > En algunos casos, podrían aparecer públicos personalizados de diferentes tipos en la lista desplegable. Si selecciona un tipo diferente de *lista de clientes*, la exportación tendrá errores.

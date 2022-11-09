@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195588"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725421"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exportar segmentos a ActiveCampaign (versión preliminar)
 
@@ -29,6 +29,7 @@ Exporte segmentos de perfiles de clientes unificados a ActiveCampaign y utilíce
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
+- No se admite el enlace privado en combinación con Traiga su propio almacenamiento (BYOS).
 - Hasta 1 millón de perfiles de clientes por exportación a ActiveCampaign, lo que puede tardar hasta 90 minutos en completarse. La cantidad de perfiles de clientes que puede exportar a ActiveCampaign depende de su contrato con ActiveCampaign.
 - Solo segmentos.
 
